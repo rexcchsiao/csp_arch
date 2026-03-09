@@ -1,474 +1,384 @@
 import React, { useState } from 'react';
 import { 
-  Cpu, 
-  Terminal, 
-  Layers, 
-  Activity, 
-  ShieldCheck, 
-  ChevronRight, 
-  Database, 
-  Network, 
-  Box, 
-  Zap,
-  LayoutGrid,
-  Cloud,
-  Settings,
-  Shield,
-  Gauge,
-  Info,
-  X,
-  ExternalLink,
-  BookOpen,
-  Split,
-  Target,
-  Trophy
+  Cpu, Terminal, Layers, Activity, ShieldCheck, ChevronRight, Database, 
+  Network, Box, Zap, LayoutGrid, Cloud, Settings, Shield, Gauge, Info, 
+  X, ExternalLink, BookOpen, Split, Target, Trophy, Calendar, Briefcase,
+  TrendingUp, ClipboardCheck, Factory, Truck, Code, Boxes, FileText, Settings2,
+  Rocket, Binary, Microscope, MonitorCheck, HardDrive, Thermometer, Radio,
+  Lock, Award, Users
 } from 'lucide-react';
 
 const App = () => {
-  const [activeDept, setActiveDept] = useState('firmware');
-  const [selectedDetail, setSelectedDetail] = useState(null);
+  const [activeTab, setActiveTab] = useState('levels');
+  const [activeLevel, setActiveLevel] = useState('L1');
+  const [selectedSubTask, setSelectedSubTask] = useState(null);
 
-  const lLevels = [
-    { 
-      id: 'L9', 
-      label: 'L9 System', 
-      desc: '系統整合階段：完成主機板與核心組件組裝，重點在於 BIOS/BMC 韌體燒錄與單機硬體功能驗證。' 
+  // Certification Data
+  const certCategories = [
+    {
+      title: "產品技術認證 (Product Certs)",
+      icon: <Award className="w-6 h-6 text-amber-500" />,
+      items: [
+        { name: "NVIDIA-Certified Systems (NCS)", level: "L10", desc: "驗證硬體效能、管理能力、擴充性與安全性，代表能運行全套 NVIDIA AI Enterprise。", value: "進入 Tier-1 客戶採購清單的門票。" },
+        { name: "OCP (Open Compute Project) Acceptance", level: "L11", desc: "符合開放計算標準的機櫃設計，強調高效能與節能效率。", value: "針對 Hyper-scale 客戶 (Meta/MSFT) 的標準。" },
+        { name: "VMware Ready / Red Hat Certified", level: "L9", desc: "確保虛擬化與作業系統層級的驅動相容性。", value: "針對企業級私有雲市場的基礎。" }
+      ]
     },
-    { 
-      id: 'L10', 
-      label: 'L10 Assembly', 
-      desc: '整機組裝階段：安裝所有外設元件（如 GPU 加速卡、網路卡），並載入 OS 與執行系統級應力測試。' 
+    {
+      title: "資安與治理認證 (Security & Compliance)",
+      icon: <Lock className="w-6 h-6 text-blue-500" />,
+      items: [
+        { name: "NIST 800-193 (PFR)", level: "L6", desc: "韌體彈性回復標準 (Platform Firmware Resiliency)，防止 BIOS/BMC 被篡改。", value: "數據中心硬體安全的國際標準。" },
+        { name: "ISO 27001 / SOC 2", level: "L1-L12", desc: "軟體開發生命週期 (SDLC) 與數據中心運維的資訊安全管理系統。", value: "大型企業對軟體服務商的合規門檻。" },
+        { name: "IEC 62443", level: "L10", desc: "工業自動化與控制系統的網路安全，適用於 OT 整合環境。", value: "進入邊緣計算或工業 AI 的關鍵。" }
+      ]
     },
-    { 
-      id: 'L11', 
-      label: 'L11 Rack', 
-      desc: '機架集成階段：將多台伺服器整合至機櫃，完成 PDU 布線、網路切換器設定與集群軟體初步部署。' 
-    },
-    { 
-      id: 'L12', 
-      label: 'L12 Solution', 
-      desc: '解決方案交付：根據客戶特定需求進行軟體堆疊優化、安全性修補，並完成數據中心現場部署準備。' 
+    {
+      title: "團隊技術認證 (Personnel Skills)",
+      icon: <Users className="w-6 h-6 text-indigo-500" />,
+      items: [
+        { name: "NVIDIA Certified Associate / Professional", level: "L12", desc: "證明團隊具備 GPU 算力調配、Triton 部署與 NCCL 優化能力。", value: "提升客戶對技術支援 (FAE) 的信任度。" },
+        { name: "CNCF CKA / CKAD (Kubernetes)", level: "L11", desc: "Kubernetes 管理員認證，處理 AI 容器編排的核心技術。", value: "實現軟體定義數據中心 (SDDC) 的關鍵人力。" },
+        { name: "Red Hat RHCE / LPIC", level: "L9", desc: "資深 Linux 系統工程師認證，確保 OS 調優與核心穩定度。", value: "底層 BSP 與系統整合的質量保證。" }
+      ]
     }
   ];
 
-  const responsibilityDetails = {
-    "NVIDIA BlueField DPU 韌體客製化與整合": {
-      what: "針對 NVIDIA 平台的 DPU 進行 DOCA 開發。若換成 AMD 平台，則需對接 Pensando DPU。這屬於平台高度相關工作。",
-      why: "DPU 卸載邏輯需深度結合硬體架構，影響數據處理吞吐量。",
-      platform: "NVIDIA / AMD Pensando",
-      links: [{ name: "NVIDIA DOCA SDK", url: "https://developer.nvidia.com/networking/doca" }]
+  // Sub-task Workflow Knowledge Base
+  const subTaskWorkflows = {
+    "ATE 腳本與微控制器 (MCU) 測試代碼開發": {
+      context: "在 L1-L5 階段，軟體需支援生產線的自動化測試 (ATE)，確保電路板上的數千個焊點連通性。",
+      workflow: [
+        "腳本開發：撰寫 Python 或 C 測試腳本，透過 JTAG 介面執行邊界掃描。",
+        "通訊驗證：測試 I2C、SMBus 與 GPIO 引腳電位，確認零件正確連通。",
+        "資料上傳：將測試 Log 格式化並串接上傳至 MES 生產資料庫。"
+      ],
+      links: [{ name: "JTAG 邊界掃描標準", url: "https://www.xjtag.com/" }]
     },
-    "IOC/PCIe Switch 韌體設定與 CXL 新技術導入": {
-      what: "設定 PCIe 拓撲。此部分邏輯通用（依據 PCIe 規範），但暫存器設定隨晶片供應商（Broadcom/Microchip）而異。",
-      why: "這是系統穩定通訊的基石，影響 GPU P2P 傳輸效能。",
-      platform: "晶片商通用 (Standard PCIe)",
-      links: [{ name: "PCI-SIG", url: "https://pcisig.com/" }]
+    "PLDM/MCTP 實作：獲取加速器健康數據": {
+      context: "這是管理高效能加速器（GPU/NPU）的核心。透過標準協定實作帶外 (Out-of-band) 監控。",
+      workflow: [
+        "建立通訊鏈路：在 BMC 配置 PCIe-VDM 或 SMBus 傳輸通道。",
+        "實作 MCTP Stack：處理封包的分段與重組邏輯。",
+        "PLDM 指標映射：將功耗、溫度數據映射至 Redfish 資源樹。"
+      ],
+      links: [{ name: "DMTF PLDM 規範", url: "https://www.dmtf.org/standards/pldm" }]
     },
-    "BIOS/BMC 整合開發與客戶特定散熱/電源控制韌體": {
-      what: "BIOS 需分別為 Intel (Sapphire Rapids+) 與 AMD (Genoa+) 進行開發；BMC 透過 OpenBMC 實現跨平台架構整合。",
-      why: "不同 CPU 的記憶體訓練與初始化邏輯完全不同，散熱控制直接影響機器壽命。",
-      platform: "Intel / AMD (CPU 相關)",
-      links: [{ name: "OpenBMC", url: "https://openbmc.org/" }]
-    },
-    "Ubuntu/RHEL for Server 客製化載入與 Kernel Patch 應用": {
-      what: "基礎 OS 可通用。但針對不同 GPU 需掛載不同 Kernel Module（NVIDIA 為 nvidia.ko，AMD 為 amdgpu）。",
-      why: "提供一致的環境給上層應用，確保系統安全性與資源排程效率。",
-      platform: "OS 層通用",
-      links: []
-    },
-    "Kubernetes 叢集部署與 Helm Charts 客製化管理": {
-      what: "這是最強大的抽象層。透過 Device Plugin 讓 K8s 同時管理不同平台的 GPU 資源，實現混合部署。",
-      why: "客戶不需要知道底層是哪家顯卡，只需透過標準 API 呼叫算力。",
-      platform: "平台無關 (Agnostic)",
-      links: [{ name: "K8s Device Plugins", url: "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-resource-device-plugins/" }]
-    },
-    "NVIDIA CUDA/cuDNN/TensorRT 運行時驗證與安裝腳本": {
-      what: "NVIDIA 專屬工具鏈。若為 AMD，則需安裝 ROCm 堆疊與 MIOpen。團隊需具備兩套技術棧的維護能力。",
-      why: "軟體棧的完整度決定了 AI 模型的執行成功率。",
-      platform: "NVIDIA (CUDA) / AMD (ROCm)",
-      links: [{ name: "NVIDIA TensorRT", url: "https://developer.nvidia.com/tensorrt" }, { name: "AMD ROCm", url: "https://www.amd.com/en/developer/rocm-hub.html" }]
-    },
-    "GPU/Server/Networking 效能 Profiling (Nsight, perf)": {
-      what: "效能診斷工具高度依賴廠商。NVIDIA 使用 Nsight，AMD 使用 RGP (Radeon GPU Profiler)。",
-      why: "要壓榨出最後 10% 效能，必須使用原廠專屬工具。",
-      platform: "平台高度相關",
-      links: [{ name: "Nsight Systems", url: "https://developer.nvidia.com/nsight-systems" }]
+    "MLPerf 基準測試運行與系統極限調優": {
+      context: "MLPerf 為全球公認 AI 效能標竿，團隊需針對測試結果優化系統內核與編譯參數。",
+      workflow: [
+        "環境對齊：依照 Submission Rule 部署標準化容器環境。",
+        "NCCL 調優：針對 NVLink 拓樸生成最優化通訊路徑圖。",
+        "瓶頸偵測：使用 Nsight Systems 追蹤 GPU 與記憶體間的通訊延遲。"
+      ],
+      links: [{ name: "MLPerf Submission Guide", url: "https://mlcommons.org/" }]
     }
   };
 
-  const departments = {
-    firmware: {
-      title: "韌體與驅動團隊 (Firmware & Drivers)",
-      stage: "L9 - System Level",
-      icon: <Cpu className="w-6 h-6" />,
-      description: "底層硬體管理的核心，受 CPU (Intel/AMD) 與 GPU 品牌直接影響。",
-      responsibilities: [
-        "NVIDIA BlueField DPU 韌體客製化與整合",
-        "IOC/PCIe Switch 韌體設定與 CXL 新技術導入",
-        "BIOS/BMC 整合開發與客戶特定散熱/電源控制韌體",
-        "Python/Bash 韌體燒錄與診斷小工具開發"
-      ],
-      techStack: ["C/C++", "OpenBMC", "PCIe Gen5/6", "DPU SDK"],
-      strategy: "需依平台(Intel/AMD)分設 BIOS 小組，但 BMC 應統一架構。",
-      outcomes: "穩定的硬體基底，通過 L9 全系統壓力測試，具備 99.9% 啟動成功率。"
-    },
-    system: {
-      title: "系統軟體團隊 (System SW)",
-      stage: "L10 - Assembly Level",
-      icon: <Terminal className="w-6 h-6" />,
-      description: "整合不同廠商的驅動程式，將零碎的硬體轉化為穩定的作業系統環境。",
-      responsibilities: [
-        "Ubuntu/RHEL for Server 客製化載入與 Kernel Patch 應用",
-        "儲存堆疊 (NVMe-oF) 與高速網路 (RoCE/InfiniBand) 驅動適配",
-        "生產診斷 (Diag) 工具開發，支援工廠量產燒錄",
-        "高密度 GPU 配置下的 Kernel 效能調優"
-      ],
-      techStack: ["Linux Kernel", "NVMe-oF", "RoCE", "Mellanox Drivers"],
-      strategy: "建立「通用核心 (Core)」與「平台插件 (Plugin)」機制。",
-      outcomes: "完成 L10 整機組裝驗證，交付最佳化的 OS 與量產測試自動化套件。"
-    },
-    orchestration: {
-      title: "容器與編排團隊 (Container & Orchestration)",
-      stage: "L11 - Rack Level",
-      icon: <Cloud className="w-6 h-6" />,
-      description: "這是整套架構中最能做到「平台無關」的部分，也是最具價值的兼容層。",
-      responsibilities: [
-        "Kubernetes 叢集部署與 Helm Charts 客製化管理",
-        "雲端 OS (OpenStack) 載入與虛擬網路驗證",
-        "L11 機架級電纜連接驗證與叢集測試軟體",
-        "客戶特定 Docker 鏡像預載，確保交貨即用"
-      ],
-      techStack: ["Kubernetes", "Docker", "Helm", "Ansible"],
-      strategy: "100% 統一團隊，透過 K8s Operators 屏蔽底層差異。",
-      outcomes: "可即時上線的 L11 機架級環境，支援多租戶 GPU 資源隔離。"
-    },
-    framework: {
-      title: "AI/ML 框架團隊 (AI Frameworks)",
-      stage: "L12 - Solution Level",
-      icon: <Layers className="w-6 h-6" />,
-      description: "對應不同算力平台的軟體棧 (CUDA vs ROCm)，直接服務 AI 應用開發者。",
-      responsibilities: [
-        "NVIDIA CUDA/cuDNN/TensorRT 運行時驗證與安裝腳本",
-        "GPU 虛擬化管理 (MIG, Multi-instance GPU) 整合",
-        "生成式 AI (GenAI) 工具與 OS 安全性修補驗證",
-        "私有雲 AI 服務部署驗證與計費系統整合"
-      ],
-      techStack: ["CUDA", "ROCm", "TensorRT", "MIG/vGPU"],
-      strategy: "需具備跨廠商 SDK 整合能力，或分為 NVIDIA 與 AMD 專項驗證。",
-      outcomes: "通過 L12 客戶模型驗證，交付 Ready-to-use 的 AI 推論與訓練環境。"
-    },
-    performance: {
-      title: "效能優化團隊 (Performance Tuning)",
-      stage: "L12+ Optimization",
-      icon: <Gauge className="w-6 h-6" />,
-      description: "壓榨硬體極限，需精通不同晶片架構的底層通訊邏輯。",
-      responsibilities: [
-        "GPU/Server/Networking 效能 Profiling (Nsight, perf)",
-        "Power/Thermal 瓶頸分析與韌體參數調校",
-        "L12 階段系統優化，提升叢集吞吐量 (Throughput)",
-        "客戶 On-site 除錯與硬體配置軟體參數優化"
-      ],
-      techStack: ["Nsight", "RGP", "NCCL", "RCCL"],
-      strategy: "高度依賴原廠專家與工具，建議按專案 (Project) 性質組隊。",
-      outcomes: "超越公版 15-20% 的運算效能，解決客戶端的極端效能瓶頸。"
-    },
-    qa_devops: {
-      title: "測試與運維團隊 (QA & DevOps)",
-      stage: "Full Lifecycle",
-      icon: <ShieldCheck className="w-6 h-6" />,
-      description: "自動化流程建立，不論平台如何更迭，流程必須標準化。",
-      responsibilities: [
-        "CI/CD Pipeline 建置與自動化燒錄測試測試",
-        "機架/多機架級故障注入測試與網絡模擬",
-        "Prometheus/Grafana 監控工具部署與日誌整合",
-        "客戶 POC 支援與技術文件交付 (Manuals)"
-      ],
-      techStack: ["Jenkins", "Prometheus", "Terraform", "Security Scanners"],
-      strategy: "全平台通用，是公司的流程標準制定者。",
-      outcomes: "零故障的交付品質與 24/7 自動化監控解決方案。"
+  const lLevels = [
+    { id: 'L1', name: '零件製造', group: 'MFG/FW', tasks: ["定義零件識別資料規格 (PN/SN)", "定義 FRU 與 EEPROM 欄位規格", "建立 Traceability 追溯資料 Schema"], tech: ["PLM", "I2C Spec"], deliverable: ["零件識別 Schema"] },
+    { id: 'L2', name: '零件子組裝', group: 'MFG/FW', tasks: ["模組級版本管理規則建立", "子模組燒錄與校驗工具介面開發", "定義模組與整機關聯規範"], tech: ["Python", "Git"], deliverable: ["模組管理規範"] },
+    { id: 'L3', name: '機構件整合', group: 'FW/SYS', tasks: ["定義插槽與 Fan Zone 命名規範", "建立 Inventory 拓樸與 Thermal Zone 對應", "確保 WebUI 命名與實體標籤一致"], tech: ["Redfish", "IPMI"], deliverable: ["命名規範書"] },
+    { id: 'L4', name: '套件組裝', group: 'FW/QA', tasks: ["準備 Sensor Map 與 I2C 位址表", "開發板級早期診斷與 Log 擷取工具", "建立 Bring-up Checklist 初版"], tech: ["ASPEED SDK", "Serial"], deliverable: ["Bring-up 手冊"] },
+    { id: 'L5', name: '機構完整組裝', group: 'MFG/FW', tasks: ["I/O 測試腳本與前面板 LED 驗證", "ATE 腳本與微控制器 (MCU) 測試代碼開發", "定義 Fail Code 分類與上傳邏輯"], tech: ["Bash", "JTAG"], deliverable: ["站測 SOP v1"] },
+    { id: 'L6', name: '主機板整合', group: 'FW/QA', tasks: ["執行單機 Bring-up (BIOS/BMC)", "硬體抽象層 (HAL) 與 Device Tree 撰寫", "Firmware Update Path 與 Recovery 實作"], tech: ["UEFI", "OpenBMC"], deliverable: ["BIOS/BMC Working Build"] },
+    { id: 'L7', name: '擴充卡整合', group: 'SYS/FW', tasks: ["完成 GPU/NIC PCIe Enablement", "PLDM/MCTP 實作：獲取加速器健康數據", "管理 Driver 與 Firmware 相容性矩陣"], tech: ["MCTP", "PCIe Gen6"], deliverable: ["相容性矩陣報告"] },
+    { id: 'L8', name: '儲存裝置整合', group: 'SYS/FW', tasks: ["整合 NVMe 驅動與 Boot Device Policy", "SNAP (儲存網路加速) 與遠端存取開發", "Smart PSU 整合與電源負載平衡 (PMBus)"], tech: ["NVMe-oF", "PMBus"], deliverable: ["Storage Matrix"] },
+    { id: 'L9', name: 'CPU與記憶體整合', group: 'SYS/FW', tasks: ["Memory Training 插槽頻率優化", "驗證 NUMA 拓樸與 ACPI 資訊正確性", "建立 Golden OS Image 基礎鏡像"], tech: ["Microcode", "Kernel Tuning"], deliverable: ["Golden Image v1"] },
+    { id: 'L10', name: '整機完整測試', group: 'MFG/SYS', tasks: ["建立 MP-ready 韌體與軟體 BOM", "PID 控制演算法：動態流速與風扇管理", "開發全自動化 Acceptance Test Suite (ATS)"], tech: ["Ansible", "PID Control"], deliverable: ["MP Release PKG"] },
+    { id: 'L11', name: '機架級整合', group: 'SOL/SYS', tasks: ["Rack Inventory 自動發現與對齊", "液冷系統通訊 (CDU Integration) 與 Modbus 整合", "機架級網絡擁塞控制 (Congestion Control)"], tech: ["MAAS", "Modbus TCP"], deliverable: ["Rack Dashboard"] },
+    { id: 'L12', name: '叢集級整合', group: 'SOL/SVC', tasks: ["部署 K8s/Slurm 叢集與 GPU Plugin 整合", "MLPerf 基準測試運行與系統極限調優", "預測性維護 (Predictive Maintenance) 實作"], tech: ["Kubernetes", "MLPerf"], deliverable: ["效能白皮書"] }
+  ];
+
+  const handleSubTaskClick = (taskName) => {
+    const workflow = subTaskWorkflows[taskName];
+    if (workflow) {
+      setSelectedSubTask({ name: taskName, ...workflow });
+    } else {
+      setSelectedSubTask({ 
+        name: taskName, 
+        context: "此工程項目涉及該階段的核心研發或生產驗證，目前正在細化標準化步驟。",
+        workflow: ["分析規格需求與通訊協定", "準備測試開發環境", "撰寫原型代碼並執行初步驗證", "進行跨設備兼容性測試", "產出技術手冊與自動化部署包"],
+        links: []
+      });
     }
   };
 
-  const handleRespClick = (resp) => {
-    const detail = responsibilityDetails[resp];
-    if (detail) {
-      setSelectedDetail({ name: resp, ...detail });
-    }
-  };
+  const renderTabContent = () => {
+    switch(activeTab) {
+      case 'levels':
+        const activeLevelData = lLevels.find(l => l.id === activeLevel) || lLevels[0];
+        return (
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="lg:col-span-4 space-y-2 max-h-[650px] overflow-y-auto pr-2 custom-scrollbar">
+              {lLevels.map((lvl) => (
+                <button
+                  key={lvl.id}
+                  onClick={() => setActiveLevel(lvl.id)}
+                  className={`w-full text-left p-4 rounded-xl border transition-all ${
+                    activeLevel === lvl.id ? 'bg-white border-blue-500 shadow-lg ring-1 ring-blue-500' : 'bg-white/60 border-slate-200 hover:bg-white'
+                  }`}
+                >
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase tracking-widest">{lvl.id}</span>
+                    <span className="text-[9px] text-slate-400 font-bold uppercase">{lvl.group}</span>
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">{lvl.name}</h4>
+                </button>
+              ))}
+            </div>
+            <div className="lg:col-span-8">
+              <div className="bg-white rounded-3xl p-8 border border-slate-200 h-full flex flex-col shadow-sm">
+                <div className="flex justify-between items-start mb-8">
+                  <div>
+                    <h2 className="text-3xl font-black text-slate-900">{activeLevelData.name}</h2>
+                    <p className="text-sm text-slate-500 font-medium mt-1 uppercase tracking-wider">{activeLevelData.group} 分級工程</p>
+                  </div>
+                  <div className="p-3 bg-slate-50 rounded-2xl border border-slate-100"><Code className="w-6 h-6 text-slate-400" /></div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow">
+                   <div className="space-y-6">
+                        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2"><ClipboardCheck className="w-4 h-4" /> 工程項目 (點擊詳解)</h3>
+                        <ul className="space-y-3">
+                          {activeLevelData.tasks.map((task, idx) => (
+                            <li key={idx} onClick={() => handleSubTaskClick(task)} className="flex items-center justify-between p-3 rounded-xl border border-transparent hover:border-blue-100 hover:bg-blue-50/50 transition-all cursor-pointer group active:scale-95">
+                              <div className="flex items-start gap-3">
+                                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                <span className="text-sm font-bold text-slate-700 group-hover:text-blue-700 leading-snug">{task}</span>
+                              </div>
+                              <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-blue-500" />
+                            </li>
+                          ))}
+                        </ul>
+                   </div>
+                   <div className="space-y-8">
+                      <div>
+                        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2"><Database className="w-4 h-4" /> 此分級技術棧</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {activeLevelData.tech.map((tech, idx) => (
+                            <span key={idx} className="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-[10px] font-black uppercase tracking-wider">{tech}</span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="p-6 bg-blue-600 rounded-3xl text-white shadow-xl relative overflow-hidden">
+                        <div className="absolute -right-4 -bottom-4 opacity-10"><Trophy className="w-24 h-24 text-white" /></div>
+                        <h3 className="text-xs font-black uppercase mb-4 tracking-widest">核心交付指標</h3>
+                        <div className="space-y-2 relative z-10">
+                          {activeLevelData.deliverable.map((d, i) => (
+                            <div key={i} className="flex items-center gap-2 text-sm font-bold"><ShieldCheck className="w-4 h-4 text-blue-200" /> {d}</div>
+                          ))}
+                        </div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      case 'compliance':
+        return (
+          <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-gradient-to-r from-slate-900 to-indigo-900 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-12 opacity-10"><Shield className="w-32 h-32" /></div>
+              <h2 className="text-3xl font-black mb-4 flex items-center gap-3"><Award className="w-8 h-8 text-amber-400" /> 合規與技術認證體系</h2>
+              <p className="text-slate-300 font-medium max-w-3xl leading-relaxed">建立從「產品」至「團隊」的信任矩陣。針對高效能 AI 集群環境，完成 NVIDIA NCS 與 NIST 800-193 認證是事業部進入國際市場的技術門檻。</p>
+            </div>
 
-  const getActiveIndex = () => {
-    return Object.keys(departments).indexOf(activeDept);
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {certCategories.map((cat, idx) => (
+                <div key={idx} className="space-y-4">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 bg-white rounded-xl shadow-sm border border-slate-200">{cat.icon}</div>
+                    <h3 className="font-black text-slate-800 uppercase tracking-widest text-sm">{cat.title}</h3>
+                  </div>
+                  <div className="space-y-4">
+                    {cat.items.map((item, i) => (
+                      <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex justify-between items-start mb-3">
+                          <h4 className="font-black text-slate-900 text-sm group-hover:text-blue-600 transition-colors">{item.name}</h4>
+                          <span className="text-[10px] font-black bg-blue-50 text-blue-600 px-2 py-0.5 rounded">{item.level}</span>
+                        </div>
+                        <p className="text-xs text-slate-500 leading-relaxed mb-3">{item.desc}</p>
+                        <div className="pt-3 border-t border-slate-50 flex items-start gap-2">
+                           <Zap className="w-3 h-3 text-amber-500 flex-shrink-0 mt-0.5" />
+                           <p className="text-[10px] font-bold text-slate-700 leading-tight">商業價值：{item.value}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-amber-50 border border-amber-200 p-6 rounded-3xl flex flex-col md:flex-row gap-6 items-center">
+               <div className="p-3 bg-white rounded-full shadow-sm"><Info className="w-6 h-6 text-amber-600" /></div>
+               <div>
+                  <h4 className="font-black text-amber-900 mb-1">合規性建議：NCS 認證先行</h4>
+                  <p className="text-xs text-amber-800 leading-relaxed font-medium">對於剛起步的 BU，建議優先啟動 <b>NVIDIA-Certified Systems (NCS)</b> 的測試流程。這不僅能驗證 L6-L10 的研發成果，更能確保在 NVIDIA AI Enterprise 生態系中的優先支援權。</p>
+               </div>
+            </div>
+          </div>
+        );
+      case 'devJourney':
+        const devJourneyPhases = [
+          { phase: 'Phase 0', title: '選平台與規格定義', target: '鎖定晶片與通訊架構。', actions: ["研讀電氣規範", "定義軟體版本支援矩陣", "評估機櫃液冷上限"] },
+          { phase: 'Phase 1', title: '系統設計開發', target: '規劃主板引腳與通訊拓樸。', actions: ["撰寫 BMC 溫控演算法", "定義 DPU Offloading 目標", "設計機櫃級聯動邏輯"] },
+          { phase: 'Phase 2', title: 'Bring-up 與 BSP', target: '單機啟動與驅動適配。', actions: ["UEFI 與 BIOS 初始化優化", "MCTP/PLDM 健康指標監測", "Golden Image 鏡像製作"] },
+          { phase: 'Phase 3', title: '機架級整合優化', target: '完成網路與儲存加速。', actions: ["SNAP 遠端儲存掛載測試", "IB 擁塞控制參數調優", "液冷壓力測試驗收"] },
+          { phase: 'Phase 4', title: 'AI 平台與方案', target: '解決方案層級交付。', actions: ["K8s GPU Operator 部署", "LLM 基準模型加載", "MLPerf 基準調優"] },
+          { phase: 'Phase 5', title: '量產認證與運維', target: '數據中心級持續服務。', actions: ["與 MES 整合 L10 站測", "遙測看板 (Telemetry) 建立", "NVIDIA NCS 認證通過"] }
+        ];
+        return (
+          <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-slate-900 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-12 opacity-10"><Rocket className="w-32 h-32 rotate-12" /></div>
+              <h2 className="text-3xl font-black mb-4 flex items-center gap-3"><Binary className="w-8 h-8 text-blue-400" /> AI Server 軟體開發實戰路徑</h2>
+              <p className="text-slate-400 font-medium max-w-3xl leading-relaxed">整合零件、單機、機櫃、至叢集的開發路徑。將複雜的 AI 基礎設施轉化為標準化的工程週期。</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {devJourneyPhases.map((p, idx) => (
+                <div key={idx} className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all flex flex-col group">
+                  <div className="flex items-center justify-between mb-4"><span className="text-xs font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">{p.phase}</span><Info className="w-4 h-4 text-slate-300" /></div>
+                  <h3 className="text-xl font-black text-slate-900 mb-2">{p.title}</h3>
+                  <div className="flex-grow space-y-3 mb-6">
+                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">核心工程任務</h4>
+                    {p.actions.map((act, i) => (
+                      <div key={i} className="flex items-start gap-2"><div className="mt-1.5 w-1 h-1 rounded-full bg-blue-400 flex-shrink-0" /><span className="text-xs font-bold text-slate-700 leading-snug">{act}</span></div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 'roadmap':
+        return (
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="relative pl-8 space-y-12 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-1 before:bg-slate-200">
+              {[
+                { phase: '0–6 月', title: '地基建設', goal: 'L1-L6 Bring-up 與基礎 ATE 建設', milestone: '首板穩定啟動' },
+                { phase: '6–18 月', title: '系統產品化', goal: 'L7-L10 整合、MCTP 監控與量產測試', milestone: '首機 MP 通過' },
+                { phase: '18–36 月', title: '解決方案交付', goal: 'L11-L12 叢集部署、MLPerf 優化與維運平台', milestone: '具備叢集級競爭力' }
+              ].map((step, idx) => (
+                <div key={idx} className="relative">
+                  <div className="absolute -left-[2.35rem] top-1 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-md z-10" />
+                  <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <span className="px-3 py-1 bg-slate-900 text-white rounded-lg text-xs font-black uppercase">{step.phase}</span>
+                    <h3 className="text-xl font-black text-slate-900 mt-2">{step.title}</h3>
+                    <p className="text-sm text-slate-600 mt-2 font-medium">{step.goal}</p>
+                    <p className="text-xs text-blue-600 font-bold mt-2 tracking-tight flex items-center gap-2"><Trophy className="w-3 h-3" /> 目標里程碑：{step.milestone}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 'governance':
+        const kpiData = [
+          { label: '開發效率', kpi: 'Bring-up Cycle', trend: '-25% 時間', icon: <Cpu className="w-5 h-5" /> },
+          { label: '量產良率', kpi: 'Flashing Success', trend: '99.9% 成功', icon: <MonitorCheck className="w-5 h-5" /> },
+          { label: '解決方案', kpi: 'MLPerf Rank', trend: '業界前茅', icon: <TrendingUp className="w-5 h-5" /> }
+        ];
+        return (
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {kpiData.map((k, i) => (
+                <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
+                  <div className="p-2 bg-blue-50 text-blue-600 rounded-xl mb-3 inline-block">{k.icon}</div>
+                  <h5 className="text-sm font-bold text-slate-800 mb-1">{k.label}</h5>
+                  <span className="text-xs font-black text-green-600 bg-green-50 px-2 py-0.5 rounded-full">{k.trend}</span>
+                </div>
+              ))}
+            </div>
+            <div className="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">
+                <Shield className="absolute -right-8 -bottom-8 w-48 h-48 opacity-10 rotate-12" />
+                <h3 className="text-xl font-black mb-6 flex items-center gap-2 text-blue-400 uppercase"><ClipboardCheck className="w-6 h-6" /> 治理與 Build vs Buy 戰略</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                   <div className="space-y-4">
+                      <p className="text-sm text-slate-400 leading-relaxed font-medium">針對新成立事業部，建議集中精力自研具備競爭力的核心軟體模組。</p>
+                      <div className="bg-white/10 p-4 rounded-xl border border-white/10">
+                         <h4 className="text-xs font-black uppercase mb-2 text-blue-400">自研核心 (In-house)</h4>
+                         <p className="text-xs text-slate-200">MCTP 遙測棧、PID 溫控邏輯、量產測試 ATE 腳本、效能基準優化套件。</p>
+                      </div>
+                   </div>
+                   <div className="space-y-4">
+                      <div className="bg-white/5 p-4 rounded-xl border border-white/5">
+                         <h4 className="text-xs font-black uppercase mb-2 text-slate-400">合作引進 (Partner)</h4>
+                         <p className="text-xs text-slate-300">BIOS 底層核心、K8s 標準發行版、商業資安掃描平台。</p>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans p-4 md:p-8">
+    <div className="min-h-screen bg-[#f1f5f9] font-sans p-4 md:p-8 text-slate-900">
       <div className="max-w-7xl mx-auto">
-        {/* Detail Modal Overlay */}
-        {selectedDetail && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-            <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 duration-200">
-              <div className="p-6 border-b border-slate-100 flex justify-between items-start">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-100 rounded-lg">
-                    <Split className="w-5 h-5 text-blue-600" />
+        {selectedSubTask && (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-md animate-in fade-in duration-300">
+            <div className="bg-white rounded-[2.5rem] shadow-2xl w-full max-w-2xl overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-8 duration-500 border border-white/20">
+              <div className="p-8 border-b border-slate-100 bg-gradient-to-br from-white to-slate-50 flex justify-between items-start">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-200"><Settings2 className="w-6 h-6" /></div>
+                  <div><span className="text-[10px] font-black text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-0.5 rounded">工程實戰指南</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight">{selectedSubTask.name}</h3></div>
+                </div>
+                <button onClick={() => setSelectedSubTask(null)} className="p-2.5 hover:bg-slate-100 rounded-full transition-all active:scale-90"><X className="w-6 h-6 text-slate-400" /></button>
+              </div>
+              <div className="p-8 max-h-[60vh] overflow-y-auto custom-scrollbar space-y-8">
+                <section>
+                  <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2"><FileText className="w-3.5 h-3.5" /> 工作背景描述</h4>
+                  <p className="text-slate-700 leading-relaxed font-medium bg-slate-50 p-4 rounded-2xl border border-slate-100 italic">"{selectedSubTask.context}"</p>
+                </section>
+                <section>
+                  <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2"><TrendingUp className="w-3.5 h-3.5" /> 標準作業流程 (SOP)</h4>
+                  <div className="space-y-4">
+                    {selectedSubTask.workflow.map((step, idx) => (
+                      <div key={idx} className="flex gap-4 group">
+                        <div className="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-sm font-black shadow-lg shadow-slate-200 group-hover:bg-blue-600 transition-colors">{idx + 1}</div>
+                        <div className="pt-1.5 border-b border-slate-100 pb-3 flex-grow group-last:border-0"><p className="text-sm font-bold text-slate-800 leading-relaxed">{step}</p></div>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="text-xl font-black text-slate-900 leading-tight pr-4">{selectedDetail.name}</h3>
-                </div>
-                <button onClick={() => setSelectedDetail(null)} className="p-2 hover:bg-slate-100 rounded-full transition-colors">
-                  <X className="w-5 h-5 text-slate-400" />
-                </button>
+                </section>
               </div>
-              <div className="p-6 space-y-6">
-                <div className="flex items-center gap-2 px-3 py-1 bg-amber-50 text-amber-700 rounded-md text-xs font-bold border border-amber-100">
-                  <Info className="w-3 h-3" /> 平台適配建議：{selectedDetail.platform}
-                </div>
-                <div>
-                  <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">實戰工作內容 (How-to)</h4>
-                  <p className="text-slate-700 leading-relaxed text-sm">{selectedDetail.what}</p>
-                </div>
-                <div>
-                  <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">為什麼重要 (Value)</h4>
-                  <p className="text-slate-700 leading-relaxed text-sm font-medium">{selectedDetail.why}</p>
-                </div>
-                {selectedDetail.links.length > 0 && (
-                  <div>
-                    <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-2 text-blue-600">參考權威資源</h4>
-                    <div className="flex flex-col gap-2">
-                      {selectedDetail.links.map((link, idx) => (
-                        <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-blue-600 font-bold hover:underline">
-                          <ExternalLink className="w-3 h-3" /> {link.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="p-6 bg-slate-50 border-t border-slate-100">
-                <button onClick={() => setSelectedDetail(null)} className="w-full py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors">
-                  我知道了
-                </button>
-              </div>
+              <div className="p-8 bg-slate-50 border-t border-slate-100 flex justify-end"><button onClick={() => setSelectedSubTask(null)} className="px-8 py-3 bg-slate-900 text-white font-black rounded-2xl hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 active:scale-95">確認並關閉指南</button></div>
             </div>
           </div>
         )}
 
-        {/* Header */}
-        <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <h1 className="text-4xl font-black text-slate-900 mb-3 tracking-tight flex items-center gap-4">
-              <div className="p-2 bg-blue-600 rounded-lg shadow-lg">
-                <LayoutGrid className="text-white w-8 h-8" />
-              </div>
-              Foxconn EBG AI Server SW 研發架構
-            </h1>
-            <p className="text-slate-500 text-lg max-w-2xl font-medium">
-              整合跨平台兼容、職能詳解、交付目標與戰略佈局，提供 L9 - L12 端到端解決方案。
-            </p>
+        <header className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-blue-200"><ShieldCheck className="w-3 h-3" /> Division Blueprint v5.1</div>
+            <h1 className="text-4xl font-black tracking-tighter text-slate-900">AI 伺服器軟體事業部營運藍圖</h1>
+            <p className="text-slate-500 font-medium max-w-2xl text-lg leading-relaxed italic">「去品牌化、邁向產業標準化：整合 L1-L12 研發、合規與認證體系。」</p>
           </div>
-          <div className="flex gap-2">
-            <span className="px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-bold text-slate-700 shadow-sm flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-green-500" /> Full-Stack Unit
-            </span>
-          </div>
-        </div>
-
-        {/* L-Level Progress Bar with Tooltips */}
-        <div className="mb-16 grid grid-cols-4 gap-4">
-          {lLevels.map((level, i) => (
-            <div key={i} className="relative group">
-              {/* Tooltip Popup */}
-              <div className="invisible group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-slate-900 text-white text-xs rounded-xl shadow-xl z-50 transition-all duration-200 opacity-0 group-hover:opacity-100">
-                <p className="font-bold text-blue-400 mb-1 flex items-center gap-1">
-                  <Info className="w-3 h-3" /> {level.id} 階段定義
-                </p>
-                <p className="leading-relaxed text-slate-300">{level.desc}</p>
-                <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900" />
-              </div>
-
-              <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
-                <div 
-                  className={`h-full bg-blue-500 transition-all duration-1000`} 
-                  style={{ width: getActiveIndex() >= i ? '100%' : '0%' }}
-                />
-              </div>
-              <span className="mt-3 flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-tighter cursor-help hover:text-blue-600 transition-colors">
-                {level.label}
-                <Info className="w-3 h-3 opacity-50" />
-              </span>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-          {/* Navigation Sidebar */}
-          <div className="lg:col-span-4 space-y-4">
-            {Object.entries(departments).map(([key, dept]) => (
-              <button
-                key={key}
-                onClick={() => setActiveDept(key)}
-                className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden group ${
-                  activeDept === key 
-                  ? 'bg-white border-blue-500 shadow-xl shadow-blue-100 ring-2 ring-blue-500/10' 
-                  : 'bg-white/80 border-slate-200 hover:border-blue-300 hover:bg-white'
-                }`}
-              >
-                <div className="flex items-center gap-4 relative z-10">
-                  <div className={`p-3 rounded-xl transition-colors ${
-                    activeDept === key ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-blue-50'
-                  }`}>
-                    {dept.icon}
-                  </div>
-                  <div>
-                    <h3 className={`font-bold leading-tight ${activeDept === key ? 'text-slate-900' : 'text-slate-600'}`}>
-                      {dept.title.split(' (')[0]}
-                    </h3>
-                    <p className={`text-[10px] font-bold uppercase mt-1 tracking-widest ${activeDept === key ? 'text-blue-600' : 'text-slate-400'}`}>
-                      {dept.stage}
-                    </p>
-                  </div>
-                </div>
-              </button>
+          <div className="flex flex-wrap gap-1 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm">
+            {[
+              { id: 'levels', label: '職能地圖', icon: <LayoutGrid className="w-4 h-4" /> },
+              { id: 'devJourney', label: '開發 SOP', icon: <Rocket className="w-4 h-4" /> },
+              { id: 'compliance', label: '合規與認證', icon: <Award className="w-4 h-4" /> },
+              { id: 'roadmap', label: '建設路線', icon: <Calendar className="w-4 h-4" /> },
+              { id: 'governance', label: '治理 KPI', icon: <ClipboardCheck className="w-4 h-4" /> }
+            ].map((t) => (
+              <button key={t.id} onClick={() => setActiveTab(t.id)} className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeTab === t.id ? 'bg-slate-900 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}>{t.icon} {t.label}</button>
             ))}
-            
-            {/* Strategy Sidebar Box */}
-            <div className="p-5 bg-slate-900 rounded-3xl text-white shadow-lg">
-              <h4 className="font-black mb-3 flex items-center gap-2 text-sm uppercase text-blue-400">
-                <Split className="w-4 h-4" /> 跨平台核心策略
-              </h4>
-              <p className="text-xs text-slate-400 leading-relaxed mb-4">
-                針對無經驗團隊，採 <b>"70/30 法則"</b>：70% 投入通用層 (K8s/Linux)，30% 深入平台專項 (CUDA/BIOS)。
-              </p>
-              <div className="bg-slate-800 rounded-xl p-3 border border-slate-700">
-                <p className="text-[10px] font-bold text-slate-500 mb-1">當前技術焦點</p>
-                <p className="text-xs text-slate-200">NVLink 通訊優化、OpenBMC 跨平台適配、L12 推論延遲壓減。</p>
-              </div>
-            </div>
           </div>
+        </header>
 
-          {/* Detail Content */}
-          <div className="lg:col-span-8">
-            <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden min-h-[600px] flex flex-col">
-              {/* Dept Header */}
-              <div className="p-8 border-b border-slate-100 bg-slate-50/50">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="bg-blue-100 text-blue-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                    {departments[activeDept].stage}
-                  </span>
-                  <div className="flex items-center gap-1.5 text-blue-600">
-                    <Zap className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Strategy: {departments[activeDept].strategy}</span>
-                  </div>
-                </div>
-                <h2 className="text-3xl font-black text-slate-900 mb-4">{departments[activeDept].title}</h2>
-                <p className="text-slate-600 font-medium leading-relaxed">{departments[activeDept].description}</p>
-              </div>
+        <main>{renderTabContent()}</main>
 
-              {/* Dept Content Body */}
-              <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow">
-                {/* Responsibilities */}
-                <div>
-                  <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <Settings className="w-4 h-4" /> 核心工作職能 (點擊詳解)
-                  </h3>
-                  <ul className="space-y-3">
-                    {departments[activeDept].responsibilities.map((item, idx) => (
-                      <li 
-                        key={idx} 
-                        onClick={() => handleRespClick(item)}
-                        className="p-3 rounded-xl border border-transparent hover:border-blue-100 hover:bg-blue-50/50 transition-all cursor-pointer flex justify-between items-center group active:scale-95"
-                      >
-                        <div className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-                          <span className="text-sm font-bold text-slate-700 group-hover:text-blue-700 transition-colors">{item}</span>
-                        </div>
-                        <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-blue-500 transition-colors" />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Outcomes & Tech */}
-                <div className="space-y-8">
-                  {/* Outcomes Section */}
-                  <div className="p-6 bg-blue-600 rounded-3xl text-white shadow-lg shadow-blue-100 border border-blue-500 relative overflow-hidden">
-                    <div className="absolute -right-4 -bottom-4 opacity-10">
-                      <Target className="w-24 h-24 text-white" />
-                    </div>
-                    <h3 className="text-xs font-black uppercase tracking-widest mb-3 flex items-center gap-2">
-                      <Trophy className="w-4 h-4" /> 關鍵交付產出 (Deliverables)
-                    </h3>
-                    <p className="text-sm font-bold leading-relaxed relative z-10">
-                      {departments[activeDept].outcomes}
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                      <Database className="w-4 h-4" /> 推薦技術棧 (Tech Stack)
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {departments[activeDept].techStack.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-[10px] font-bold uppercase tracking-wider">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Bar */}
-              <div className="p-6 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
-                <div className="text-xs font-bold text-slate-400 italic flex items-center gap-2">
-                  <Info className="w-4 h-4 text-blue-500" /> 各組成員需包含資深架構師與研發工程師
-                </div>
-                <button className="px-6 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-slate-800 transition-all hover:shadow-lg active:scale-95">
-                  下載完整組織手冊
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Strategic Footer Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-blue-600 rounded-3xl p-7 text-white shadow-xl shadow-blue-200 group hover:-translate-y-1 transition-transform">
-            <h4 className="font-black text-xl mb-3 flex items-center gap-2">
-              <Shield className="w-6 h-6" /> L9-L10: 關鍵穩定性
-            </h4>
-            <p className="text-blue-100 text-sm leading-relaxed">
-              這是產品的「生命線」。重點在於<b>韌體穩定度</b>與<b>硬體相容性</b>。若底層驅動或 PCIe 切換不穩，後續 L12 的效能再好也無法順利出貨。
-            </p>
-            <div className="mt-4 pt-4 border-t border-blue-500/50 text-[10px] font-bold uppercase tracking-widest text-blue-200">
-              Focus: Zero-Error Firmware
-            </div>
-          </div>
-
-          <div className="bg-indigo-600 rounded-3xl p-7 text-white shadow-xl shadow-indigo-200 group hover:-translate-y-1 transition-transform">
-            <h4 className="font-black text-xl mb-3 flex items-center gap-2">
-              <Cloud className="w-6 h-6" /> L11-L12: 核心價值
-            </h4>
-            <p className="text-indigo-100 text-sm leading-relaxed">
-              這是產品的「差異化」。透過<b>容器編排</b>與<b>GPU 虛擬化</b>，將冷冰冰的硬體轉化為可立即營收的 AI 服務環境，這是大型 CSP 客戶最看重的部分。
-            </p>
-            <div className="mt-4 pt-4 border-t border-indigo-500/50 text-[10px] font-bold uppercase tracking-widest text-indigo-200">
-              Value: AI-Ready Solution
-            </div>
-          </div>
-
-          <div className="bg-slate-900 rounded-3xl p-7 text-white shadow-xl shadow-slate-200 group hover:-translate-y-1 transition-transform">
-            <h4 className="font-black text-xl mb-3 flex items-center gap-2">
-              <Gauge className="w-6 h-6" /> L12+: 極限優化
-            </h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              AI 技術迭代極快。<b>效能優化團隊</b>必須與 NVIDIA/AMD 保持同步，不斷更新軟體堆疊（如引入 TensorRT-LLM），才能確保產品具備領先競爭力。
-            </p>
-            <div className="mt-4 pt-4 border-t border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-              Goal: Peak Performance
-            </div>
-          </div>
-        </div>
+        <footer className="mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-slate-400 font-black uppercase tracking-widest">
+           <div className="flex items-center gap-4"><MonitorCheck className="w-4 h-4" /><span>核心認證：NVIDIA NCS, OCP, NIST 800-193, CNCF</span></div>
+           <div className="flex items-center gap-4"><span>Industry Standard Compliant</span><Shield className="w-4 h-4" /></div>
+        </footer>
       </div>
+      <style dangerouslySetInnerHTML={{ __html: `.custom-scrollbar::-webkit-scrollbar { width: 6px; } .custom-scrollbar::-webkit-scrollbar-track { background: transparent; } .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; } .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }`}} />
     </div>
   );
 };
