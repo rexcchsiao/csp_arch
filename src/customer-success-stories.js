@@ -29,7 +29,19 @@ export const customerSuccessScenarios = [
 export const executiveSummary = {
   oneLiner: '軟體不是成本，是讓硬體價值最大化的必要槓桿。沒有軟體，GPU 只是昂貴的金屬；有了軟體，才能變成可持續營收的 AI 服務。',
   elevator30s: '我們的競爭對手不是賣伺服器，是賣「AI 就緒的基礎設施」。客戶要的不是硬體規格，是「多久能開始用 AI 創造營收」。軟體部門的價值，就是把 2-4 週的部署時間壓縮到 2 小時，把 40% 的 GPU 閒置率降到 15% 以下，把 8 小時的故障停機縮短到 2 小時內修復。這不是成本，是讓硬體溢價 15-20% 的關鍵。',
-  ask: '投資軟體部門 NT$ 65M/年（人力 + 預算），換取的是每年 NT$ 500M+ 的軟體加值訂單與 60% 客戶回購率。'
+  ask: '投資軟體部門 NT$ 65M/年（人力 + 預算），換取的是每年 NT$ 500M+ 的軟體加值訂單與 60% 客戶回購率。',
+  // 2026 Q2 Inflection Point - Why this matters NOW
+  whyNow: {
+    headline: '2026 Q2：AI 基礎建設的轉折點',
+    context: 'GPU 供應正常化，競爭從「誰有 GPU」轉向「誰能用得最好」。軟體是用戶體驗的最後一哩路，也是溢價的關鍵。',
+    marketShifts: [
+      { trend: 'GPU 供應正常化', implication: 'NVIDIA H200/B200 2026 Q3 供貨穩定，「有 GPU 就能賣」的時代結束', foxconnMove: '以軟體加值提升性價比——同樣的 GPU，我們的客戶可提升 20% 利用率' },
+      { trend: '主權 AI 浪潮', implication: 'EU AI Act、中東/東南亞資料主權政策，創造 $50B+ 合規市場', foxconnMove: 'RAG 一體機 + 本地部署 = Sovereign AI-in-a-Box，符合資料不出境要求' },
+      { trend: '能源成本危機', implication: 'AI 資料中心用電量 2027 年前將翻倍，電力占 TCO 40%+', foxconnMove: '遠端運維 + 用電優化 = 15-25% 能耗節省，直接轉化為客戶利潤' },
+      { trend: 'AMD ROCm 成熟', implication: 'MI350/MI400 + ROCm 6.x 縮小 CUDA 差距，多 GPU 策略首次可行', foxconnMove: '統一管理層支援 NVIDIA+AMD，避免客戶被單一廠商鎖定' }
+    ],
+    riskOfDelay: '2026-2027 是關鍵窗口期。若不及早佈局，Hyperscaler 與一線 ODM（廣達、緯穎）將率先建立軟體護城河，屆時追趕成本將提高 3-5 倍。'
+  }
 };
 
 export default { customerSuccessScenarios, executiveSummary };

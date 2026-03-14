@@ -37,6 +37,34 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Why Now - 2026 Q2 Inflection Point */}
+      {executiveSummary.whyNow && (
+        <div className="bg-amber-50 border-2 border-amber-200 rounded-3xl p-8">
+          <h3 className="text-lg font-black text-amber-900 mb-4 flex items-center gap-2">
+            <Clock className="w-5 h-5 text-amber-600" />
+            {executiveSummary.whyNow.headline}
+          </h3>
+          <p className="text-sm text-amber-800 mb-6">{executiveSummary.whyNow.context}</p>
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {executiveSummary.whyNow.marketShifts.map((shift, idx) => (
+              <div key={idx} className="bg-white rounded-xl p-4 border border-amber-100">
+                <p className="text-xs font-black text-amber-900 mb-2">{shift.trend}</p>
+                <p className="text-xs text-slate-600 mb-2">
+                  <span className="font-bold">市場變化：</span>{shift.implication}
+                </p>
+                <p className="text-xs text-amber-700">
+                  <span className="font-bold">Foxconn 策略：</span>{shift.foxconnMove}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-red-100 rounded-xl p-4 border border-red-200">
+            <p className="text-xs font-black text-red-900 mb-1">延遲代價</p>
+            <p className="text-sm text-red-800">{executiveSummary.whyNow.riskOfDelay}</p>
+          </div>
+        </div>
+      )}
+
       {/* Key Metrics Grid */}
       <div>
         <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-2">
