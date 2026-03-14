@@ -329,7 +329,32 @@ export const softwareDifferentiation = {
 		}
 	},
 
-	// Leadership Decision Matrix - Executive summary for quick decision-making
+	// Leadership Quick Reference Card - Distilled talking points for executive conversations
+	leadershipQuickRef: {
+		headline: '給管理層的快速參考卡 (Quick Reference Card)',
+		purpose: '30 秒內說清軟體價值，適用於電梯簡報、客戶會議、投資人問答',
+		elevator30s: {
+		  problem: '客戶花數千萬買 GPU，但 40-60% 閒置，部署要花 2-4 週，故障要等 8 小時修復。',
+		  solution: '我們的軟體讓 GPU 利用率從 40% 提升到 85%，部署從 2 週縮短到 2 小時，70% 故障遠端修復。',
+		  impact: '同樣的硬體，客戶用我們的軟體，投資回報週期縮短 50%，毛利率提升 10-15 個百分點。'
+		},
+		keyMetrics: [
+		  { metric: 'GPU 利用率', before: '40-60%', after: '85%+', delta: '+42%', businessImpact: '同樣投資，產出翻倍' },
+		  { metric: '部署時間', before: '2-4 週', after: '2 小時', delta: '-99%', businessImpact: '提早 2 週產生營收' },
+		  { metric: '故障修復', before: '8 小時', after: '2 小時', delta: '-75%', businessImpact: '減少 75% 停機損失' },
+		  { metric: '運維人力', before: '100%', after: '30%', delta: '-70%', businessImpact: '70% 現場工作可遠端完成' },
+		  { metric: '訂單毛利率', before: '10-15%', after: '20-25%', delta: '+10pp', businessImpact: '軟體加值帶來溢價能力' },
+		],
+		competitiveOneLiners: [
+		  { competitor: 'NVIDIA', ourEdge: 'NVIDIA 只支援自家 GPU，我們支援 NVIDIA + AMD，避免客戶被單一廠商鎖定。' },
+		  { competitor: '廣達/緯穎', ourEdge: '他們賣硬體，我們賣「AI 就緒的基礎設施」—— 2 天上線 vs. 他們的 2-4 週。' },
+		  { competitor: 'AWS/Azure', ourEdge: '雲端廠商會鎖定客戶，我們提供中立平台，支援混合雲與本地部署，客戶掌握主導權。' },
+		],
+		riskOfInaction: '若不投資軟體，2027 年前我們將淪為 commodity 供應商，毛利率被壓縮至 5-8%，且無法參與 AI 價值鏈中毛利 60-80% 的軟體服務環節。',
+		ask: '投資 NT$ 65M/年建立 50-80 人軟體團隊，換取 Year 3 每年 NT$ 750M 軟體加值營收與 20-25% 毛利率。ROI 約 11.5 倍。',
+	},
+
+// Leadership Decision Matrix - Executive summary for quick decision-making
 	leadershipDecisionMatrix: {
 		headline: '關鍵決策：軟體投資與否的戰略選擇',
 		context: '2026 Q2 是 AI 基礎建設的轉折點：競爭從「GPU 取得」轉向「部署效率」。以下為決策框架：',
