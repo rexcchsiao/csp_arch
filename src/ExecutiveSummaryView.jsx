@@ -1,9 +1,10 @@
 // Executive Summary View - Leadership Decision Dashboard
 // Surfaces key metrics, decisions, and value propositions for C-level executives
 import React from 'react';
-import { TrendingUp, DollarSign, Clock, Shield, Target, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import { TrendingUp, DollarSign, Clock, Target, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import { customerSuccessScenarios, executiveSummary } from './customer-success-stories';
 import { softwareDifferentiation } from './software-differentiation';
+import { Lock, Layers, TrendingUp as TrendingUpIcon, BarChart3, Zap, Shield as ShieldIcon, Award } from 'lucide-react';
 
 const ExecutiveSummaryView = () => {
   const metrics = [
@@ -119,7 +120,7 @@ const ExecutiveSummaryView = () => {
       {softwareDifferentiation.leadershipDecisionMatrix && (
         <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
           <h3 className="text-lg font-black text-slate-900 mb-6 flex items-center gap-2">
-            <Shield className="w-5 h-5 text-blue-600" /> 關鍵決策：投資軟體與否的戰略選擇
+            <ShieldIcon className="w-5 h-5 text-blue-600" /> 關鍵決策：投資軟體與否的戰略選擇
           </h3>
           
           <div className="space-y-4 mb-6">
