@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; import { BarChart3 } from 'lucide-react'; import CompetitiveLandscapeView from './CompetitiveLandscapeView'; import SoftwareDifferentiationView from './SoftwareDifferentiationView'; import SovereignAIOpportunityView from './SovereignAIOpportunityView';
+import React, { useState } from 'react'; import { BarChart3 } from 'lucide-react'; import CompetitiveLandscapeView from './CompetitiveLandscapeView'; import SoftwareDifferentiationView from './SoftwareDifferentiationView'; import SovereignAIOpportunityView from './SovereignAIOpportunityView'; import ExecutiveSummaryView from './ExecutiveSummaryView';
 import { 
   Cpu, 
   Terminal, 
@@ -474,6 +474,7 @@ const App = () => {
           CoCo 分析報告
         </h2>
         <div className="space-y-12">
+          <ExecutiveSummaryView />
           <CompetitiveLandscapeView />
           <SoftwareDifferentiationView />
           <SovereignAIOpportunityView />

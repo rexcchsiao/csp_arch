@@ -264,6 +264,45 @@ export const softwareDifferentiation = {
 			assumption: '假設 2026-2028 年 AI 伺服器營收為 NT$ 1.5B, 2B, 3.5B，軟體服務滲透率逐年提升至 20%'
 		}
 	},
+
+	// Leadership Decision Matrix - Executive summary for quick decision-making
+	leadershipDecisionMatrix: {
+		headline: '關鍵決策：軟體投資與否的戰略選擇',
+		context: '2026 Q2 是 AI 基礎建設的轉折點：競爭從「GPU 取得」轉向「部署效率」。以下為決策框架：',
+		decisionCriteria: [
+			{
+				criterion: '毛利率',
+				option1: { name: '不投資軟體', outcome: '維持 10-15%（硬體 commodity 競爭）', risk: '價格戰壓力大，2027 年前可能降至 8-12%' },
+				option2: { name: '投資軟體', outcome: '提升至 20-25%（軟體加值訂單）', upside: '3 年後軟體營收佔比達 20%，總毛利提升 NT$ 400M+/年' },
+			},
+			{
+				criterion: '客戶黏著度',
+				option1: { name: '不投資軟體', outcome: '訂單導向，客戶流失率 30-40%/年', risk: '客戶易被 hyperscaler 一站式方案吸引' },
+				option2: { name: '投資軟體', outcome: '訂閱制 + 服務合約，續約率 85%+', upside: '建立長期經常性收入（ARR），估值倍數提升' },
+			},
+			{
+				criterion: '市場定位',
+				option1: { name: '不投資軟體', outcome: 'OEM/ODM 代工廠，可替換性高', risk: '議價能力弱，易受上下游擠壓' },
+				option2: { name: '投資軟體', outcome: '解決方案合作夥伴，差異化明顯', upside: '成為 CSP 企業 AI 轉型的戰略合作對象' },
+			},
+			{
+				criterion: '人才與技術累積',
+				option1: { name: '不投資軟體', outcome: '依賴供應商（NVIDIA/AMD）技術路線', risk: '技術主權不足，無法快速回應客戶需求' },
+				option2: { name: '投資軟體', outcome: '建立自主 L9-L12 全棧能力', upside: '形成技術護城河，吸引高階人才加入' },
+			},
+			{
+				criterion: '投資規模',
+				option1: { name: '不投資軟體', outcome: '維持現狀，無額外資本支出', risk: '機會成本：錯失 NT$ 750M/年軟體服務市場（2028 預測）' },
+				option2: { name: '投資軟體', outcome: 'NT$ 65M/年（50-80 人團隊 + 實驗室）', upside: 'ROI 約 11.5 倍（以 Year 3 軟體營收 NT$ 750M 計）' },
+			},
+		],
+		recommendation: {
+			choice: 'Option 2: 投資軟體',
+			rationale: '軟體投資 NT$ 65M/年，可創造 NT$ 750M/年（Year 3）的軟體加值營收，並提升整體訂單毛利率 10-15 個百分點。更重要的是，這是避免淪為 commodity 供應商的唯一路徑。',
+			timeline: '2026 Q2: 組織設計完成 → Q3: 團隊招募 50% → Q4: 首個標竿案例上線 → 2027: 規模化複製',
+			riskIfNotActed: '2026-2027 是關鍵窗口期。若不及早佈局，Hyperscaler 與一線 ODM（廣達、緯穎）將率先建立軟體護城河，屆時追趕成本將提高 3-5 倍。',
+		},
+	},
 };
 
 export default softwareDifferentiation;
