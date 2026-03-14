@@ -473,4 +473,4 @@ const App = () => {
   );
 };
 
-export default App;
+// Import new modules for display (data only, not UI yet) // These modules contain the latest CoCo developments: // - CSP Remote Ops: Real-time monitoring, remote diagnostics, predictive maintenance // - Enterprise RAG: Private AI knowledge base appliance for SMBs // - Software Differentiation: Pain points analysis and quantified value metrics // - Competitive Landscape: NVIDIA BCM/Mission Control analysis and Foxconn positioning export default App;
