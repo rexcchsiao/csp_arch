@@ -96,6 +96,74 @@ export const softwareDifferentiation = {
     ],
     callToAction: '投資軟體部門，不是成本，是讓硬體價值最大化的必要槓桿。',
   },
+  // Risk of inaction - what happens if we don't invest in software
+  riskOfInaction: [
+    {
+      risk: '沦为 commodity 供應商',
+      impact: '若只提供硬體，將與廣達、緯創、華碩等廠商進行價格競爭，毛利率被壓縮至 5-8%',
+      mitigation: '透過軟體加值，將毛利率提升至 15-25%，建立差異化護城河',
+    },
+    {
+      risk: '客戶流失至 hyperscaler 解決方案',
+      impact: 'AWS/Azure/GCP 提供一站式 AI 基礎建設，若無軟體整合能力，CSP 客戶將傾向選擇垂直整合方案',
+      mitigation: '提供中立、多供應商支援的軟體層，避免客戶被單一雲廠商鎖定',
+    },
+    {
+      risk: '無法參與 AI 价值链高毛利環節',
+      impact: 'AI 伺服器硬體毛利約 10-15%，但軟體/服務毛利可達 60-80%，放棄軟體等於放棄高價值環節',
+      mitigation: '以 RAG 一體機、Remote Ops 為切入點，逐步建立軟體營收占比',
+    },
+    {
+      risk: '技術依賴風險',
+      impact: '若完全依賴 NVIDIA CUDA 生態，將失去議價能力，且無法支援 AMD/自研晶片客戶',
+      mitigation: '建立跨平台 (CUDA + ROCm) 能力，保持技術中立性與供應鏈韌性',
+    },
+  ],
+  // Strategic ask - what we need from leadership
+  strategicAsk: {
+    headline: '對公司管理層的戰略要求',
+    items: [
+      {
+        what: '建立專職軟體產品線 (Software Product Line)',
+        rationale: '將軟體從「附贈服務」提升為「獨立產品」，建立專屬定價、交付、維運團隊',
+        timeline: '2026 Q2 前完成組織設計',
+      },
+      {
+        what: '投資 50-80 人軟體團隊 (L9-L12 全棧)',
+        rationale: '對標 NVIDIA Base Command 團隊規模 (200+ FTE)，初期以精實團隊聚焦高價值模塊',
+        timeline: '2026 年 Q3 前完成招募 50%',
+      },
+      {
+        what: '建立軟體驗證實驗實 (AI Workload Lab)',
+        rationale: '需實際運行 Llama、Qwen、Mistral 等主流模型進行效能驗證與最佳化',
+        timeline: '2026 Q2 前完成 H100/H200 測試環境',
+      },
+      {
+        what: '與關鍵客戶共建聯合解決方案 (Joint Solution)',
+        rationale: '選擇 2-3 家標竿 CSP 客戶，共同開發客製化 Remote Ops 與 RAG 方案',
+        timeline: '2026 年底前完成 2 個成功案例',
+      },
+    ],
+  },
+  // Success metrics - how we measure progress
+  successMetrics: {
+    '軟體營收佔比': {
+      definition: '軟體/服務收入佔整體 AI 伺服器解決方案的比例',
+      target: '2026 年底達 15%，2027 年底達 25%',
+    },
+    '毛利率提升': {
+      definition: '含軟體解決方案的訂單毛利率 vs. 純硬體訂單',
+      target: '軟體加值訂單毛利率達 20-25% (純硬體約 10-15%)',
+    },
+    '客戶續約率': {
+      definition: '軟體訂閱/維運服務的年度續約比例',
+      target: '首年 70%，第二年 85%+',
+    },
+    '交付週期': {
+      definition: '從 L9-L12 完整交付時間',
+      target: '標準配置 2 週內，含 RAG 部署 4 週內',
+    },
+  },
 };
 
 export default softwareDifferentiation;
