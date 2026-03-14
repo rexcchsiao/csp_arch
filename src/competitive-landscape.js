@@ -199,6 +199,24 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       mitigation: 'RAG Appliance + Local DC = Sovereign AI-in-a-Box. First-mover advantage in compliance-driven markets',
     },
   ],
+
+// Hyperscaler AI Infrastructure Threat - Specific counter-positioning (added 2026-03-15)
+hyperscalerThreat: {
+  headline: 'Hyperscaler 自有 AI 基礎建設的威脅與反制',
+  context: 'AWS、Azure、GCP 紛紛推出自有 AI 晶片與一站式解決方案，Foxconn 如何應對？',
+  offerings: [
+    { provider: 'AWS', offering: 'Trainium/Inferentia + SageMaker + EC2 P5', threat: '垂直整合，從晶片到雲端一次提供，價格競爭力強', foxconnCounter: '中立性：Foxconn 支援 NVIDIA/AMD/自研晶片，避免客戶被單一雲廠商鎖定。混合雲部署能力，讓客戶保留本地部署選項。', differentiation: 'Multi-cloud + On-prem flexibility vs. AWS-only' },
+    { provider: 'Azure', offering: 'NDv5/NDI instances + Azure AI Studio', threat: '與 NVIDIA 深度綁定，提供 DGX Cloud 整合方案', foxconnCounter: '彈性：Foxconn 可提供 AMD ROCm 選項，降低對 NVIDIA 依賴。主權 AI 部署符合資料在地化要求。', differentiation: 'Sovereign AI compliance + AMD option vs. NVIDIA lock-in' },
+    { provider: 'GCP', offering: 'TPU v5e/v5p + Vertex AI', threat: 'TPU 效能優勢明顯，尤其對特定 AI 工作負載', foxconnCounter: '多樣性：Foxconn 不強迫客戶選擇特定架構，支援 TPU/NVIDIA/AMD 混合部署。', differentiation: 'Architecture agnostic vs. TPU-only optimization' },
+    { provider: 'Oracle Cloud', offering: 'OCI + NVIDIA DGX Cloud integration', threat: '低價策略 + NVIDIA 深度合作，吸引新創公司', foxconnCounter: '客製化：Foxconn 可針對特定產業需求提供客製化解決方案，非一體化方案。', differentiation: 'Custom solutions vs. one-size-fits-all' },
+  ],
+  strategicResponse: [
+    '強調「中立基礎設施」定位：不與 Hyperscaler 競爭，而是提供他們不做的客製化與本地部署',
+    '聚焦主權 AI 市場：Hyperscaler 無法滿足資料在地化要求，這是 Foxconn 的戰略機會',
+    '提供「逃脫路線」：協助不願被單一雲廠商鎖定的客戶建立混合雲/混合架構能力',
+    '發揮供應鏈優勢：Hyperscaler 依賴 ODM，Foxconn 可直接控制供應鏈與交付時程',
+  ],
+},
   // Strategic ask - what we need from leadership
   strategicAsk: {
     headline: 'Strategic Investment Required',
