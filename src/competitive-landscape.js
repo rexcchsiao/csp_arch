@@ -39,7 +39,7 @@ export const competitiveLandscape = {
   foxconnOpportunity: {
     headline: 'Foxconn Software: The Neutral Infrastructure Layer',
     coreInsight: 'NVIDIA\'s tools optimize for NVIDIA hardware. Foxconn\'s software optimizes for customer choice.',
-    
+
     differentiation: [
       {
         area: 'Multi-Vendor GPU Support',
@@ -118,7 +118,7 @@ Foxconn's value is enabling customer choice and reducing vendor dependency.
   // Messaging for leadership
   executiveSummary: {
     thesis: 'Software is the differentiator that turns commodity hardware into premium solutions.',
-    
+
     proofPoints: [
       'NVIDIA charges premium prices because of software (CUDA moat), not hardware margins',
       'Dell AI Factory and HPE Private Cloud AI are competing on software integration, not server specs',
@@ -127,6 +127,38 @@ Foxconn's value is enabling customer choice and reducing vendor dependency.
     ],
 
     callToAction: 'Invest in software not as a cost center, but as the primary value driver that justifies premium pricing and customer loyalty.',
+  },
+
+  // Why Hyperscalers Care - The CSP Perspective
+  hyperscalerWhyItMatters: {
+    context: 'Hyperscalers (AWS, Azure, GCP, Meta) already have strong internal software teams. Why would they need Foxconn software?',
+    reasons: [
+      {
+        reason: 'Speed to Market',
+        explanation: 'Building custom software takes 12-18 months. Foxconn\'s pre-integrated stack gets them to production in 2-4 weeks.',
+        impact: 'Faster revenue generation, earlier customer deployments',
+      },
+      {
+        reason: 'Focus on Core Differentiation',
+        explanation: 'Hyperscalers want to invest engineering in their unique value (AI services, customer experience), not undifferentiated infrastructure management.',
+        impact: 'Foxconn handles the "plumbing" so they can focus on revenue-generating features',
+      },
+      {
+        reason: 'Risk Mitigation',
+        explanation: 'Single-vendor accountability for hardware + software reduces finger-pointing and accelerates issue resolution.',
+        impact: 'Faster time-to-resolution, reduced operational risk',
+      },
+      {
+        reason: 'Cost Efficiency',
+        explanation: 'Building and maintaining custom software requires 20-50 FTEs. Foxconn\'s shared platform amortizes this cost across customers.',
+        impact: '10-30% reduction in total cost of ownership for infrastructure management',
+      },
+      {
+        reason: 'Brownfield Integration',
+        explanation: 'Existing datacenters have legacy systems. Foxconn\'s custom firmware integration avoids costly rip-and-replace.',
+        impact: 'Protects existing investments while enabling AI upgrade path',
+      },
+    ],
   },
 };
 
