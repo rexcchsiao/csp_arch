@@ -95,6 +95,7 @@ export const softwareDifferentiation = {
       'RAG 一體機開創新增收 (市場擴張)',
     ],
     callToAction: '投資軟體部門，不是成本，是讓硬體價值最大化的必要槓桿。',
+    why2026: '2026 是轉折點：GPU 供應正常化，競爭從「誰有 GPU」轉向「誰能用得最好」。軟體是用戶體驗的最後一哩路，也是溢價的關鍵。',
   },
   // Risk of inaction - what happens if we don't invest in software
   riskOfInaction: [
@@ -148,7 +149,7 @@ export const softwareDifferentiation = {
   // Success metrics - how we measure progress
   successMetrics: {
     '軟體營收佔比': {
-      definition: '軟體/服務收入佔整體 AI 伺服器解決方案的比例',
+      definition: '軟體/服務收入佔整體 AI 伺服器解決方案比例',
       target: '2026 年底達 15%，2027 年底達 25%',
     },
     '毛利率提升': {
@@ -163,6 +164,42 @@ export const softwareDifferentiation = {
       definition: '從 L9-L12 完整交付時間',
       target: '標準配置 2 週內，含 RAG 部署 4 週內',
     },
+    'Remote Ops 採用率': {
+      definition: '已部署伺服器使用遠端監控與預測性維護的比例',
+      target: '部署後 12 個月內達 60%',
+    },
+  },
+
+  // Hyperscaler/CSP perspective - why they need Foxconn software even with internal teams
+  hyperscalerPerspective: {
+    context: '大型 CSP (AWS, Azure, GCP, Meta) 已有強大軟體團隊，為什麼還需要 Foxconn？',
+    reasons: [
+      {
+        reason: '加速上市時程',
+        explanation: '自建軟體需 12-18 個月，Foxconn 預整合棧只需 2-4 週即可上線。',
+        impact: '提早 10-14 個月產生營收，搶佔市場先機',
+      },
+      {
+        reason: '聚焦核心差異化',
+        explanation: 'CSP 希望將工程資源投入 AI 服務與用戶體驗，而非底層基礎設施管理。',
+        impact: 'Foxconn 負責「水管」，客戶專注於營收功能',
+      },
+      {
+        reason: '風險分散',
+        explanation: '單一廠商負責硬體 + 軟體，減少推諉責任，加速問題解決。',
+        impact: '故障排除時間縮短 50%，運營風險降低',
+      },
+      {
+        reason: '成本效益',
+        explanation: '自建維護團隊需 20-50 人，Foxconn 平台攤平跨客戶成本。',
+        impact: '基礎設施管理 TCO 降低 10-30%',
+      },
+      {
+        reason: '既有投資保護',
+        explanation: '舊資料中心有 legacy 系統，Foxconn 可整合既有 BMC/監控工具，避免全面更換。',
+        impact: '保護既有投資，同時實現 AI 升級路徑',
+      },
+    ],
   },
 };
 
