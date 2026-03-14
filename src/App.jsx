@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; import { BarChart3 } from 'lucide-react'; import CompetitiveLandscapeView from './CompetitiveLandscapeView'; import SoftwareDifferentiationView from './SoftwareDifferentiationView'; import SovereignAIOpportunityView from './SovereignAIOpportunityView';
 import { 
   Cpu, 
   Terminal, 
@@ -476,6 +476,7 @@ const App = () => {
         <div className="space-y-12">
           <CompetitiveLandscapeView />
           <SoftwareDifferentiationView />
+          <SovereignAIOpportunityView />
         </div>
       </div>
           </div>
