@@ -466,6 +466,18 @@ const App = () => {
             <div className="mt-4 pt-4 border-t border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-500">
               Goal: Peak Performance
             </div>
+
+      {/* CoCo Analysis Sections */}
+      <div className="mt-16 mb-12 max-w-7xl mx-auto px-4 md:px-8">
+        <h2 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
+          <BarChart3 className="w-8 h-8 text-blue-600" />
+          CoCo 分析報告
+        </h2>
+        <div className="space-y-12">
+          <CompetitiveLandscapeView />
+          <SoftwareDifferentiationView />
+        </div>
+      </div>
           </div>
         </div>
       </div>
