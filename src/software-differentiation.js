@@ -201,6 +201,69 @@ export const softwareDifferentiation = {
       },
     ],
   },
+
+	// Concrete service offerings - what we actually sell (not just features, but services)
+	serviceOfferings: {
+		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
+		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
+		offerings: [
+			{
+				name: 'Remote Ops 遠端運維服務',
+				description: '7×24 小時全球機房監控、預測性維護、遠端診斷與修復',
+				pricing: 'NT$ 50K-200K/月（依節點數）',
+				margin: '60-70%',
+				differentiation: '競爭對手僅提供基礎監控，我們提供主動式維護與修復',
+				targetCustomer: 'CSP 客戶、多據點企業'
+			},
+			{
+				name: 'RAG 一體機部署服務',
+				description: '私有 AI 知識庫端到端部署，含文件處理、權限治理、系統整合',
+				pricing: 'NT$ 500K-2M/案（一次性）+ 15-20% 年維運費',
+				margin: '50-60%',
+				differentiation: '交钥匙方案，客戶無需懂 AI 即可使用',
+				targetCustomer: '金融、醫療、政府、製造業'
+			},
+			{
+				name: 'GPU 虛擬化與資源調度',
+				description: 'MIG/vGPU 配置、多租戶隔離、用量計費系統整合',
+				pricing: 'NT$ 300K-1M/案 + 10% 授權費',
+				margin: '70-80%',
+				differentiation: '將 GPU 利用率從 40% 提升至 85%，客戶 ROI 明確',
+				targetCustomer: 'AI 新創、研究機構、雲端服務商'
+			},
+			{
+				name: 'AI 軟體棧預整合服務',
+				description: 'CUDA/ROCm、K8s、Helm Charts 預先驗證與客製化',
+				pricing: 'NT$ 200K-800K/案',
+				margin: '60-70%',
+				differentiation: '從 4 週部署時間縮短至 2 天，加速客戶營收產生',
+				targetCustomer: '企業客戶、系統整合商'
+			},
+			{
+				name: '效能優化與調校服務',
+				description: '針對客戶工作負載進行 GPU/網路/儲存效能調校',
+				pricing: 'NT$ 100K-500K/次 或 年約制',
+				margin: '70-80%',
+				differentiation: '提升 15-20% 效能，直接轉化為客戶營收增長',
+				targetCustomer: '高效能運算、AI 訓練集群'
+			},
+			{
+				name: '合規與審計支援服務',
+				description: '協助通過金管會、個資法、ISO 等合規要求',
+				pricing: 'NT$ 300K-1M/案',
+				margin: '60-70%',
+				differentiation: '內建審計軌跡、權限治理、合規報告功能',
+				targetCustomer: '金融、醫療、政府機構'
+			}
+		],
+		// Revenue projection - conservative estimate
+		revenueProjection: {
+			year1: { software: 'NT$ 50M', services: 'NT$ 30M', total: 'NT$ 80M', percentOfTotal: '~5% of total AI server revenue' },
+			year2: { software: 'NT$ 150M', services: 'NT$ 100M', total: 'NT$ 250M', percentOfTotal: '~12% of total AI server revenue' },
+			year3: { software: 'NT$ 400M', services: 'NT$ 350M', total: 'NT$ 750M', percentOfTotal: '~20% of total AI server revenue' },
+			assumption: '假設 2026-2028 年 AI 伺服器營收為 NT$ 1.5B, 2B, 3.5B，軟體服務滲透率逐年提升至 20%'
+		}
+	},
 };
 
 export default softwareDifferentiation;
