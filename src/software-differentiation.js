@@ -494,4 +494,112 @@ points: [
 	},
 };
 
+// 90-Day Action Plan - Immediate next steps for leadership approval
+export const ninetyDayPlan = {
+	headline: '軟體投資 90 天啟動計畫',
+	purpose: '從決策到執行的具體路徑圖，確保 Q2 完成組織設計，Q3 開始交付價值',
+	phases: [
+		{
+			phase: 'Phase 1: 組織與招募 (Day 1-30)',
+			activities: [
+				'完成軟體產品線組織設計（職位輪廓、技能矩陣、匯報架構）',
+				'確認首波招募 15-20 人之 JD 與面試流程',
+				'選定 AI Workload Lab 場地與硬體規格（H100/H200 測試機）',
+				'與 2-3 家關鍵 CSP 客戶初步接觸，了解 Remote Ops 需求',
+				'啟動首波招募（Firmware 2 人、System 2 人、Orchestration 3 人、AI Framework 2 人）',
+				'完成 Lab 硬體採購下單（預算 NT$ 8M）',
+				'建立 software-differentiation.js 與 competitive-landscape.js 持續更新機制',
+				'與 HR 確認軟體人才薪資帶與股權激勵方案',
+			],
+			deliverables: ['組織設計報告', '首波面試名單 10+ 人', 'Lab 硬體訂單', '客戶需求訪談報告 2 份'],
+			budget: 'NT$ 10M (Lab 硬體 + 招募成本)',
+		},
+		{
+			phase: 'Phase 2: 基礎建設與首個用例 (Day 31-60)',
+			activities: [
+				'首批人員到職，進行 L9-L12 技術棧培訓',
+				'完成 H100 測試環境架設與基準測試',
+				'啟動 Remote Ops MVP 開發（監控 + 通知 + 基礎診斷）',
+				'與第一家 CSP 客戶簽訂聯合開發備忘錄（MOU）',
+				'完成 RAG 一體機範例部署流程（文件匯入 → 權限設定 → 問答）',
+				'建立 software moat 驗證報告（與純硬體方案比較）',
+				'啟動第二波招募（QA/DevOps 2 人、Performance 2 人）',
+				'完成第一版銷售簡報與客戶案例腳本',
+			],
+			deliverables: ['Remote Ops MVP', 'RAG 一體機範例', '軟體驗證報告 v1', '銷售簡報 v1'],
+			budget: 'NT$ 15M (人力 + 開發工具)',
+		},
+		{
+			phase: 'Phase 3: 客戶驗證與規模化準備 (Day 61-90)',
+			activities: [
+				'於 CSP 客戶現場部署 Remote Ops beta（50-100 台伺服器規模）',
+				'完成 RAG 一體機 POC（金融或醫療產業客戶）',
+				'建立軟體服務定價模型（Remote Ops 月費制、RAG 專案制）',
+				'啟動第三波招募（PM 1 人、Sales Engineer 2 人）',
+				'收集客戶反饋，優化 Remote Ops 與 RAG 流程',
+				'完成首份客戶成功案例（Case Study）',
+				'建立軟體服務交付 SOP 與維運流程',
+				'向管理層提交 Q3 擴展計畫（50-80 人團隊）',
+			],
+			deliverables: ['Remote Ops 客戶上線', 'RAG POC 成功案例', '服務定價單', 'Q3 擴展計畫書'],
+			budget: 'NT$ 20M (人力 + 客戶 POC 成本)',
+		},
+	],
+	total90DayBudget: 'NT$ 45M (約 90 天總投入，含人力、硬體、工具、客戶 POC)',
+	expectedOutcomes: [
+		'完成 15-20 人核心團隊組建',
+		'Remote Ops 與 RAG 各 1 個客戶成功案例',
+		'建立軟體服務定價與交付流程',
+		'取得管理層對 Q3 擴展至 50-80 人的承諾',
+	],
+	riskMitigation: [
+		'招募延遲：預留 20% 人力緩衝，優先確保核心職位（Firmware Lead、Orchestration Lead）',
+		'客戶 POC 不順利：準備 2-3 家備用客戶，避免單一客戶依賴',
+		'技術瓶頸：與 NVIDIA/AMD 建立技術支援管道，必要時引入顧問',
+		'預算超支：每月檢視預算執行率，若偏離 >10% 立即調整',
+	],
+};
+
+// Executive One-Pager - Printable summary for leadership meetings
+export const executiveOnePager = {
+	headline: '軟體投資簡報：為什麼現在是關鍵時刻？',
+	date: '2026 Q2',
+	problem: {
+		title: '客戶面臨的痛點',
+		points: [
+			'GPU 閒置率 40-60%，投資回報週期長達 18 個月',
+			'部署 AI 集群需 2-4 週，延誤客戶營收產生',
+			'故障依賴現場支援，平均修復時間 8 小時',
+			'企業想導入 AI 但受限於合規與資料隱私',
+		],
+	},
+	solution: {
+		title: 'Foxconn 軟體解決方案',
+		points: [
+			'Remote Ops：70% 故障遠端修復，停機時間減少 60%',
+			'RAG 一體機：3 天完成部署，資料不出機房',
+			'GPU 調度平台：利用率從 40% 提升至 85%',
+			'預整合 AI 軟體棧：部署時間從 2 週縮短至 2 小時',
+		],
+	},
+	financials: {
+		investment: 'NT$ 65M/年（50-80 人團隊 + 實驗室）',
+		year1Revenue: 'NT$ 80M（軟體 + 服務）',
+		year3Revenue: 'NT$ 750M（軟體 + 服務）',
+		grossMargin: '軟體訂單毛利率 20-25% vs. 硬體 10-15%',
+		roi: 'Year 3 年營收 NT$ 750M，ROI 約 11.5 倍',
+	},
+	competitiveEdge: [
+		'中立性：支援 NVIDIA + AMD，避免客戶被單一廠商鎖定',
+		'速度：2 天上線 vs. 競爭對手 2-4 週',
+		'完整棧：L9-L12 端到端軟體能力',
+		'合規：主權 AI 與資料在地化解決方案',
+	],
+	ask: {
+		what: '投資 NT$ 65M/年建立軟體產品線',
+		timeline: '2026 Q2 組織設計 → Q3 團隊招募 50% → Q4 首個標竿案例',
+		impact: '避免淪為 commodity 供應商，建立可持續溢價能力',
+	},
+};
+
 export default softwareDifferentiation;
