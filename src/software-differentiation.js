@@ -778,3 +778,104 @@ export const competitivePricing = {
     }
   }
 };
+
+// Partner Ecosystem Strategy - Building alliances to scale software offerings
+export const partnerEcosystem = {
+  headline: '合作夥伴生態系：為什麼我們需要盟友？',
+  coreInsight: '軟體生態系的建立不能只靠內部團隊。策略性合作可以加速市場滲透、填補技術空缺、並提供客戶更完整的解決方案。',
+  whyPartner: [
+    { reason: '加速市場覆蓋', explanation: 'SI 合作夥伴已有客戶關係與交付能力，可快速擴大觸角', impact: '透過 SI 接觸中小企業市場，降低直接銷售成本' },
+    { reason: '填補技術空缺', explanation: '特定產業（如醫療影像、金融風控）需要領域知識', impact: '與 ISV 合作，避免自行開發垂直應用的高成本' },
+    { reason: '降低客戶疑慮', explanation: '客戶信任既有供應商（如 Red Hat、Canonical）', impact: '借助合作夥伴信譽，降低採用門檻' },
+    { reason: '生態系效應', explanation: '合作夥伴越多，解決方案越完整，形成正向循環', impact: '提高客戶轉換成本，建立護城河' }
+  ],
+  partnerTypes: [
+    {
+      type: '技術合作夥伴 (Technology Partners)',
+      examples: ['Red Hat (OpenShift)', 'Canonical (Kubernetes)', 'NVIDIA (CUDA/ROCm)', 'AMD (ROCm)', 'Intel (oneAPI)'],
+      value: '確保技術棧的互通性與認證',
+      foxconnAsk: '取得技術認證、聯合解決方案驗證、共同市場推廣',
+      status: '優先建立中'
+    },
+    {
+      type: '系統整合商 (SI Partners)',
+      examples: ['中華電訊、台積電系統整合部門、資策會、工研院'],
+      value: '協助交付、客製化、在地支援',
+      foxconnAsk: '聯合交付專案、技術移轉、聯合行銷',
+      status: '潛在洽談中'
+    },
+    {
+      type: '獨立軟體供應商 (ISV Partners)',
+      examples: ['AI 模型公司（如 Llama 微調專家）、資料標註公司、RAG 解決方案商'],
+      value: '提供垂直領域解決方案，補足 Foxconn 較弱的應用層',
+      foxconnAsk: '預整合至 RAG 一體機、聯合定價、收益分潤',
+      status: '評估中'
+    },
+    {
+      type: '學術研究合作 (Research Partners)',
+      examples: ['台大、清大、交大、中研院'],
+      value: '取得前沿研究洞察、聯合發表、人才培育',
+      foxconnAsk: '聯合實驗室、產學合作計畫、實習管道',
+      status: '初步接觸'
+    }
+  ],
+  ecosystemMetrics: {
+    '合作夥伴數量': { target2026: '5-8 家', target2027: '20+ 家', target2028: '50+ 家' },
+    '聯合解決方案數量': { target2026: '2-3 個', target2027: '10 個', target2028: '25 個' },
+    '合作夥伴貢獻營收': { target2026: '<5%', target2027: '15-20%', target2028: '30-35%' }
+  },
+  riskMitigation: [
+    '避免過度依賴單一合作夥伴（如 Red Hat 被 IBM 收購的風險）',
+    '確保合作協議包含技術移轉條款，避免被供应商鎖定',
+    '維持核心能力自主，合作僅為加速而非取代'
+  ]
+};
+
+// Talent Strategy - Attracting and retaining software talent
+export const talentStrategy = {
+  headline: '人才策略：如何與 Hyperscaler 爭奪頂尖軟體人才？',
+  challenge: 'Google、Meta、NVIDIA 提供高薪、名聲、技術挑戰。Foxconn 如何吸引頂尖人才？',
+  valueProposition: [
+    { what: '實際影響力和產品所有權', explanation: '在 Hyperscaler 只是螺絲釘，在 Foxconn 可以定義產品方向', appeal: '「這是我的產品」vs. 「這是我的代碼」' },
+    { what: '硬體 + 軟體的獨特挑戰', explanation: '純軟體公司碰不到硬體深度，Foxconn 提供 L9-L12 全棧挑戰', appeal: '「只有這裡能同時優化 BMC 和 K8s」' },
+    { what: '從 0 到 1 的建立過程', explanation: '參與建立軟體部門，留下個人職涯里程碑', appeal: '「我是創始團隊成員」' },
+    { what: '產業轉折點的參與感', explanation: '2026 是 AI 基礎建設的關鍵轉折點，參與歷史', appeal: '「我在定義 AI 基礎建設的未來」' },
+    { what: '台灣在地的全球影響力', explanation: '不用矽谷，在台灣就能影響全球 AI 基礎建設', appeal: '「根留台灣，影響全球」' }
+  ],
+  retentionStrategy: [
+    { strategy: '技術成長路徑', detail: '明確的 L9-L12 技術晉升管道，鼓勵參與開源專案與技術社群', metric: '每年至少 1 次技術會議發表、20% 時間投入創新專案' },
+    { strategy: '產品所有權', detail: '每個工程師負責特定模組，從設計到運維端到端負責', metric: '產品負責人制度，季度產品回顧' },
+    { strategy: '持續學習預算', detail: '每人每年 NT$ 100K 學習預算（課程、證照、會議）', metric: '100% 使用率，平均每人每年 2 張證照' },
+    { strategy: '彈性工作模式', detail: '混合辦公、彈性工時、遠端協作工具', metric: '員工滿意度 >80%' },
+    { strategy: '績效導向的股權激勵', detail: '軟體部門獨立績效評估，股權與軟體營收掛鉤', metric: 'Top performer 總包薪酬对标一線大廠 80-90%' }
+  ],
+  recruitmentChannels: [
+    { channel: '校園徵才', target: '台大、清大、交大、成大的資工/電研所', approach: '產學合作、專題競賽、實習轉正' },
+    { channel: '技術社群', target: 'K8s Taiwan、Open Source Summit、AI/ML Meetup', approach: '技術分享、開源貢獻、主辦活動' },
+    { channel: '獵才與推薦', target: '有 Hyperscaler/一線大廠經驗的台灣籍工程師', approach: '內部推薦獎金（NT$ 100K/人）、獵才合作' },
+    { channel: '國際人才', target: '東南亞、印度、中國籍軟體工程師', approach: '工作簽證協助、台灣生活適應支援' }
+  ],
+  organizationalDesign: {
+    principle: '精實團隊、快速迭代、產品導向',
+    structure: [
+      { team: 'Firmware Team (L9-L10)', size: '8-12 人', focus: 'BMC、BIOS、驅動程式' },
+      { team: 'Platform Team (L11)', size: '10-15 人', focus: 'K8s、容器編排、資源調度' },
+      { team: 'AI Framework Team (L12)', size: '8-12 人', focus: 'RAG、模型部署、效能優化' },
+      { team: 'Remote Ops Team', size: '6-10 人', focus: '監控、診斷、預測性維護' },
+      { team: 'QA/DevOps', size: '5-8 人', focus: '自動化測試、CI/CD、基礎設施' }
+    ],
+    culture: [
+      '工程師文化：技術決策由工程師主導，非管理層',
+      '失敗寬容：鼓勵嘗試，快速失敗，快速學習',
+      '透明溝通：週度全员會議、季度產品回顧、年度技術峰會'
+    ]
+  },
+  successMetrics: {
+    '人才留存率': { target: '年留存率 >85%', benchmark: '矽谷一線大廠約 85-90%' },
+    '招募週期': { target: '關鍵職位 <60 天', benchmark: '業界平均 90-120 天' },
+    '員工滿意度': { target: 'eNPS >50', benchmark: '矽谷頂尖公司約 60-70' },
+    '技術產出': { target: '每人每年 2-3 個主要功能上線', benchmark: '取決於專案複雜度' }
+  },
+  riskIfFail: '若無法吸引頂尖軟體人才，軟體部門將淪為二線團隊，無法建立真正的差異化。人才是軟體成功的唯一瓶頸。'
+};
+
