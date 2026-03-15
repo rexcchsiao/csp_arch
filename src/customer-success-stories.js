@@ -30,6 +30,31 @@ export const executiveSummary = {
   oneLiner: '軟體不是成本，是讓硬體價值最大化的必要槓桿。沒有軟體，GPU 只是昂貴的金屬；有了軟體，才能變成可持續營收的 AI 服務。',
   elevator30s: '我們的競爭對手不是賣伺服器，是賣「AI 就緒的基礎設施」。客戶要的不是硬體規格，是「多久能開始用 AI 創造營收」。軟體部門的價值，就是把 2-4 週的部署時間壓縮到 2 小時，把 40% 的 GPU 閒置率降到 15% 以下，把 8 小時的故障停機縮短到 2 小時內修復。這不是成本，是讓硬體溢價 15-20% 的關鍵。',
   ask: '投資軟體部門 NT$ 65M/年（人力 + 預算），換取的是每年 NT$ 500M+ 的軟體加值訂單與 60% 客戶回購率。',
+  
+  // CFO-Focused Financial Impact Summary (Added 2026-03-15)
+  cfoFinancialSummary: {
+    headline: '財務視角：軟體投資的量化回報',
+    investmentRequired: 'NT$ 65M/年 (50-80 人團隊 + 實驗室 + 工具)',
+    returns: {
+      year1: { revenue: 'NT$ 80M', margin: 'NT$ 48M (60%)', penetration: '5% of total', status: '標竿案例建立' },
+      year2: { revenue: 'NT$ 250M', margin: 'NT$ 150M (60%)', penetration: '12% of total', status: '規模化複製' },
+      year3: { revenue: 'NT$ 750M', margin: 'NT$ 450M (60%)', penetration: '20% of total', status: '成熟變現' },
+    },
+    keyMetrics: {
+      roi: '11.5x by Year 3',
+      paybackPeriod: '18-24 個月',
+      grossMarginExpansion: '+10pp (軟體加值訂單 vs. 純硬體)',
+      customerLifetimeValue: '提升 3-5 倍 (訂閱制 vs. 單次採購)',
+      recurringRevenueRatio: 'Year 3 達 20% (可預測性高)',
+    },
+    riskAdjustedView: {
+      bestCase: 'Year 3 軟體營收 NT$ 1B+ (若主權 AI 市場滲透率達 5%)',
+      baseCase: 'Year 3 軟體營收 NT$ 750M (基準情境)',
+      worstCase: 'Year 3 軟體營收 NT$ 400M (若市場接受度低於預期)',
+      mitigation: '分階段投入，每季驗證成果，若 Q4 未達標可調整策略',
+    },
+    opportunityCost: '若不行動：2028 年前可能喪失 NT$ 300-500M/年軟體加值營收，且毛利率被壓縮至 8-12%',
+  },
   // 2026 Q2 Inflection Point - Why this matters NOW
   whyNow: {
     headline: '2026 Q2：AI 基礎建設的轉折點',
