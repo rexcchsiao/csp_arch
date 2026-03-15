@@ -25,7 +25,9 @@ export const competitiveSources = {
   // Market Research
   marketResearch: [
     { name: 'IDC Sovereign AI Forecast 2025', url: 'https://www.idc.com/', description: '$50B+ sovereign AI market by 2028', relevance: 'Market size validation for sovereign AI opportunity' },
-    { name: 'IEA Data Center Energy Report', url: 'https://www.iea.org/', description: 'AI datacenter power consumption to triple by 2027', relevance: 'Energy cost crisis validation' }
+    { name: 'IEA Data Center Energy Report', url: 'https://www.iea.org/', description: 'AI datacenter power consumption to triple by 2027', relevance: 'Energy cost crisis validation' },
+    { name: 'Gartner AI Server Magic Quadrant 2025', url: 'https://www.gartner.com/', description: 'OEM/ODM positioning and software capability assessment', relevance: 'Third-party validation of Foxconn software differentiation' },
+    { name: 'IDC Worldwide AI Infrastructure Forecast', url: 'https://www.idc.com/', description: 'AI server spending to reach US$ 200B by 2027', relevance: 'Market growth validation' }
   ],
   // Standards & Regulations
   regulations: [
