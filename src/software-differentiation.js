@@ -1,5 +1,16 @@
 // Software Differentiation & Pain Points Analysis
 // For strengthening the argument: "Without software, hardware value cannot be fully amplified"
+// 
+// === EXECUTIVE PROBLEM BRIEF (30-Second Read) ===
+// PROBLEM: Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle. Deployment takes 2-4 weeks.
+//          When GPUs fail, 8-hour downtime. No software = stranded capital + delayed revenue.
+// SOLUTION: Foxconn software stack turns idle GPUs into 85%+ utilization, 2-hour deployment,
+//           70% remote fix rate. Same hardware, 2x business output.
+// ASK: Invest NT$ 65M/year for 50-80 person software team.
+// RETURN: Year 3: NT$ 750M software revenue, 20-25% gross margin (vs. 10-15% hardware-only).
+//         ROI: 11.5x. Payback: 18-24 months.
+// RISK OF INACTION: By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity.
+// ===========================================
 
 export const softwareDifferentiation = {
   // Key pain points in AI server deployment that software solves
