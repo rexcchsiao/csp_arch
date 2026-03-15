@@ -354,6 +354,106 @@ export const softwareDifferentiation = {
 		ask: '投資 NT$ 65M/年建立 50-80 人軟體團隊，換取 Year 3 每年 NT$ 750M 軟體加值營收與 20-25% 毛利率。ROI 約 11.5 倍。',
 	},
 
+// Customer Scenario Comparison - Before/After showing tangible software impact
+customerScenarios: {
+headline: '客戶真實場景：有軟體 vs. 沒有軟體的差異',
+purpose: '讓管理層從客戶視角理解軟體價值，而非抽象指標',
+scenarios: [
+{
+  title: '情境一：GPU 故障處理',
+  timeline: '週三凌晨 3:15，生產環境 GPU 異常',
+  withoutSoftware: {
+    timeline: [
+      '03:15 - 監控系統偵測到 GPU 溫度異常，但無法自動診斷',
+      '03:17 - 自動發送 email 給運維團隊（但值班人員已讀不回）',
+      '08:30 - 值班人員上班後看到通知，開始遠端登入檢查',
+      '09:15 - 確認需要重設 BMC，但無法遠端執行，需現場操作',
+      '10:30 - 運維人員抵達機房，進行重啟',
+      '11:00 - 恢復運作',
+    ],
+    outcome: '停機 7.75 小時，影響 3 個訓練任務，損失約 NT$ 2.5M 產值',
+    customerQuote: '我們花錢買了高階 GPU，卻因為無法遠端修復，停機快 8 小時...',
+  },
+  withSoftware: {
+    timeline: [
+      '03:15 - 監控系統偵測到 GPU 溫度異常，AI 預測模型判斷 85% 機率為風扇異常',
+      '03:16 - 自動發送 LINE/Telegram 通知給值班人員，附上診斷報告與建議操作',
+      '03:22 - 值班人員於手機一鍵執行「安全重啟 BMC」指令',
+      '03:25 - 系統自動切換至備用 GPU，訓練任務無縫轉移',
+      '03:30 - 恢復正常運作，排程隔日進行風扇更換',
+    ],
+    outcome: '停機 0.25 小時（15 分鐘），零任務中斷，客戶無感知',
+    customerQuote: '那天凌晨收到通知時，問題已經解決了 80%。這就是我們需要的。',
+  },
+  impact: '停機時間減少 97%，客戶業務零中斷',
+},
+{
+  title: '情境二：新客戶部署 AI 集群',
+  timeline: 'Q3 新購 20 台 H200 伺服器，需於 Q4 上線產生營收',
+  withoutSoftware: {
+    timeline: [
+      'Day 1 - 硬體到貨，開始安裝作業系統',
+      'Day 3 - 安裝 NVIDIA 驅動、CUDA、cuDNN',
+      'Day 7 - 設定 K8s 叢集，遇到 GPU 直通問題',
+      'Day 10 - 聯絡 NVIDIA 支援，等待回覆',
+      'Day 14 - 完成基礎環境，但客戶的 Llama 模型無法正常運行',
+      'Day 18 - 調整 CUDA 版本、TensorRT 設定',
+      'Day 21 - 客戶開始進行問責測試（POC）',
+      'Day 25 - POC 通過，正式上線',
+    ],
+    outcome: '耗時 25 天，期間客戶無法產生任何營收，且可能因延誤影響其對終端客戶的承諾',
+    customerQuote: '我們買了最好的硬體，但花了快一個月才能開始賺錢。',
+  },
+  withSoftware: {
+    timeline: [
+      'Day 1 - 硬體到貨，出廠前已預先安裝並驗證 Foxconn 預整合軟體棧',
+      'Day 1 - 客戶開箱後，掃描 QR Code 進入部署流程',
+      'Day 1 - 選擇「Llama 3.1 + RAG」範本，自動完成 K8s、CUDA、模型載入',
+      'Day 2 - 客戶匯入自身資料，設定權限',
+      'Day 3 - 完成 POC，正式上線',
+    ],
+    outcome: '耗時 3 天，客戶第 4 天即可開始產生營收',
+    customerQuote: '早上開箱，下午就在跑我們的模型了。這跟我們之前經驗差太多。',
+  },
+  impact: '部署時間從 25 天縮短至 3 天，客戶提早 22 天產生營收',
+},
+{
+  title: '情境三：混合 GPU 調度',
+  timeline: '研究機構擁有 H100（8 張）+ A100（16 張），需同時支援 3 個團隊',
+  withoutSoftware: {
+    problem: '傳統靜態配置：Team A 固定使用 H100，Team B/C 使用 A100',
+    issues: [
+      'Team A 夜間離峰時段，H100 閒置率 70%',
+      'Team B 需要更多算力，但無法借用 Team A 的閒置資源',
+      '每月需手動調整配置，常因溝通不良導致衝突',
+      '年底檢視：H100 實際利用率 35%，A100 利用率 85%',
+    ],
+    outcome: 'NT$ 50M 投資的 H100，實際產出只有預期的 35%，投資回報週期從 18 個月延長至 36 個月',
+  },
+  withSoftware: {
+    solution: 'Foxconn K8s-native GPU 調度平台：動態分配 + 優先級隊列',
+    improvements: [
+      '建立優先級隊列：緊急任務優先調度 H100',
+      '離峰時段自動將 A100 任務調度至 H100',
+      '支援 MIG 切分，將 H100 切成 7 個實例供小任務使用',
+      '即時儀表板顯示各團隊用量與成本分攤',
+    ],
+    outcome: 'H100 利用率提升至 82%，整體集群產能提升 45%，投資回報週期縮短至 14 個月',
+  },
+  impact: 'GPU 利用率從 35% 提升至 82%，相同投資產出 2.3 倍效能',
+},
+],
+leadershipTakeaway: {
+headline: '給管理層的啟示',
+points: [
+'軟體不是「加分功能」，是決定客戶成敗的關鍵差異',
+'客戶買的不是 GPU，是「能按時產生營收的 AI 基礎建設」',
+'上述三個情境，若無軟體支援，客戶將面臨停機損失、延誤上線、資源浪費',
+'Foxconn 的軟體價值，是讓客戶的硬體投資「真正發揮預期效益」',
+],
+},
+},
+
 // Leadership Decision Matrix - Executive summary for quick decision-making
 	leadershipDecisionMatrix: {
 		headline: '關鍵決策：軟體投資與否的戰略選擇',
