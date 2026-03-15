@@ -7,6 +7,47 @@ export const investmentThesis = {
   context: '2026 Q2 是 AI 基礎建設的轉折點：GPU 供應正常化，競爭從「誰有 GPU」轉向「誰能用得最好」。',
   coreArgument: '軟體不是成本中心，是讓硬體溢價 15-20% 的必要槓桿。沒有軟體，硬體只是商品；有了軟體，才能建立持續性競爭優勢。',
   
+  // Board-Ready Executive One-Pager (Added 2026-03-15)
+  boardOnePager: {
+    title: '軟體戰略投資提案',
+    subtitle: '從商品供應商到解決方案合作夥伴的轉型',
+    date: '2026 Q2',
+    sections: {
+      problem: {
+        title: '核心問題',
+        content: '客戶採購 NT$ 10M+ GPU 伺服器，但 40-60% 閒置，部署需 2-4 週，故障停機 8 小時。純硬體競爭導致毛利率被壓縮至 10-15%，2027 年前可能降至 8-12%。'
+      },
+      solution: {
+        title: 'Foxconn 軟體方案',
+        content: 'Remote Ops（70% 遠端修復）、RAG 一體機（3 天部署）、GPU 調度平台（85%+ 利用率）、能源優化（15-25% TCO 節省）'
+      },
+      financials: {
+        title: '財務亮點',
+        metrics: [
+          { label: '投資需求', value: 'NT$ 65M/年' },
+          { label: 'Year 3 營收', value: 'NT$ 750M' },
+          { label: 'ROI', value: '11.5x' },
+          { label: '回收期', value: '18-24 個月' },
+          { label: '毛利率提升', value: '+10pp' }
+        ]
+      },
+      strategicValue: {
+        title: '戰略價值',
+        points: [
+          '避免淪為 commodity 供應商（毛利率 5-8%）',
+          '建立客戶鎖定與經常性收入（續約率 85%+）',
+          '參與 AI 價值鏈高毛利環節（軟體 60-80% vs. 硬體 10-15%）',
+          '掌握技術主權，避免單一供應商依賴'
+        ]
+      },
+      ask: {
+        title: '決策要求',
+        content: '批准 NT$ 65M/年預算，組建 50-80 人軟體團隊。2026 Q2 組織設計 → Q3 團隊招募 → Q4 首案上線。',
+        riskOfInaction: '不投資的隱含成本：3 年累計 NT$ 1.5B+ 機會損失（客戶流失 + 毛利侵蝕 + 人才斷層）'
+      }
+    }
+  },
+  
   // TCO Comparison: 3-Year Total Cost of Ownership (Added 2026-03-15)
   tcoComparison: {
     headline: '三年總持有成本 (TCO) 比較：100 台 H200 集群',

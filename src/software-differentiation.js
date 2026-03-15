@@ -114,6 +114,11 @@ export const softwareDifferentiation = {
   energyOptimization: {
     headline: '能源效率：AI 資料中心的隱形戰場',
     context: '2026 年 AI 資料中心用電量預計翻倍，電力成本占 TCO 40%+。能源效率已從「環保議題」轉化為「競爭力指標」。',
+    sources: {
+      ieareport: 'IEA Data Centres and Energy 2024: https://www.iea.org/reports/data-centres-and-energy',
+      uptime: 'Uptime Institute 2025 Datacenter Survey: PUE stagnation at 1.5-1.7 industry-wide',
+      customerData: 'Foxconn CSP customer energy audit data (Q1 2026, 3 datacenters)',
+    },
     painPoints: [
       {
         problem: 'GPU 能耗風暴',
