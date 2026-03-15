@@ -93,9 +93,68 @@ export const softwareDifferentiation = {
       'L11-L12 創造差異化價值 (營收引擎)',
       'Remote Ops 降低運維成本 (效率提升)',
       'RAG 一體機開創新增收 (市場擴張)',
+      '能源優化降低 TCO 15-25% (競爭力)',
     ],
     callToAction: '投資軟體部門，不是成本，是讓硬體價值最大化的必要槓桿。',
     why2026: '2026 是轉折點：GPU 供應正常化，競爭從「誰有 GPU」轉向「誰能用得最好」。軟體是用戶體驗的最後一哩路，也是溢價的關鍵。',
+  },
+
+  // Energy & Power Optimization - Critical 2026 differentiator
+  energyOptimization: {
+    headline: '能源效率：AI 資料中心的隱形戰場',
+    context: '2026 年 AI 資料中心用電量預計翻倍，電力成本占 TCO 40%+。能源效率已從「環保議題」轉化為「競爭力指標」。',
+    painPoints: [
+      {
+        problem: 'GPU 能耗風暴',
+        impact: 'H200/B200 單卡功耗 700W-1000W，傳統散熱策略無法應峰值負載，導致過熱降頻或能源浪費',
+        currentApproach: '固定風扇轉速 + 被散熱，能耗效率低',
+      },
+      {
+        problem: '部分負載效率低落',
+        impact: 'AI 訓練集群離峰時段 GPU 利用率<50%，但散熱系統仍以滿載設計運行，造成能源浪費',
+        currentApproach: '散熱系統不隨負載動態調整',
+      },
+      {
+        problem: '缺乏能耗可視化',
+        impact: '無法追蹤各 GPU/各應用的能耗分攤，無法優化 TCO',
+        currentApproach: '僅有整機 PDU 層級用電數據，粒度不足',
+      },
+    ],
+    foxconnSolution: {
+      headline: 'Foxconn 能源優化軟體棧',
+      layers: [
+        {
+          layer: 'L9-L10: 韌體層能源管理',
+          capability: 'BMC 即時讀取 GPU 溫度/功耗曲線，動態調整風扇轉速與電壓',
+          impact: '減少 10-15% 散熱能耗，延長硬體壽命',
+          technicalDetail: 'PID 控制迴路 + 機器學習預測負載變化',
+        },
+        {
+          layer: 'L11: 集群層負載調度',
+          capability: 'K8s 排程器感知能耗，優先調度至低負載節點，避免熱點',
+          impact: '集群整體能耗降低 8-12%，延長設備壽命',
+          technicalDetail: '能耗感知的 K8s Scheduler Plugin',
+        },
+        {
+          layer: 'L12: 應用層能耗分析',
+          capability: '提供每 GPU、每任務、每用戶的能耗報表，支援成本分攤',
+          impact: '識別高能耗低價值任務，優化資源配置',
+          technicalDetail: 'Prometheus + Grafana + 自研能耗 Exporter',
+        },
+      ],
+    },
+    quantifiedImpact: {
+      '散熱能耗降低': { before: '100%', after: '85-90%', improvement: '-10-15%' },
+      '集群整體 PUE': { before: '1.5-1.7', after: '1.3-1.4', improvement: '-15%' },
+      '峰值負載散熱能力': { before: '被動應付', after: '主動預測', improvement: '避免降頻' },
+      '能耗可視化': { before: '整機層級', after: 'GPU/任務層級', improvement: '粒度提升 10 倍' },
+    },
+    customerValue: {
+      financial: '以 1MW 資料中心為例，PUE 從 1.6 降至 1.4，年省電費約 NT$ 8-12M',
+      operational: '避免GPU因過熱降頻，保障訓練任務按時完成',
+      strategic: '符合 ESG 要求，支持企業碳中和目標',
+    },
+    competitiveEdge: '競爭對手僅提供被動散熱，Foxconn 提供「預測性散熱 + 能耗優化 + 成本分攤」完整方案',
   },
 
   // The Software Moat - Why software creates defensible competitive advantage

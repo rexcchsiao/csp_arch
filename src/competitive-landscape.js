@@ -133,6 +133,12 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       foxconnSolution: 'Remote Ops toolchain: monitoring, diagnostics, predictive maintenance, remote repair',
       evidence: '70% reduction in on-site visits; centralized management of global deployments',
     },
+    {
+      problem: 'Energy Cost Crisis',
+      description: 'AI datacenter power consumption tripled by 2027 (IEA). Electricity now 40% of TCO. Traditional cooling strategies waste 15-25% energy.',
+      foxconnSolution: 'Energy-optimized software stack: predictive cooling + workload-aware scheduling + per-GPU power metering',
+      evidence: 'BMC-based PID control + K8s energy-aware scheduler = 10-15% reduction in cooling energy, PUE improvement from 1.6 to 1.4',
+    },
   ],
   // Messaging for leadership
   executiveSummary: {
