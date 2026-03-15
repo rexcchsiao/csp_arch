@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; import { BarChart3 } from 'lucide-react'; import CompetitiveLandscapeView from './CompetitiveLandscapeView'; import SoftwareDifferentiationView from './SoftwareDifferentiationView'; import SovereignAIOpportunityView from './SovereignAIOpportunityView'; import ExecutiveSummaryView from './ExecutiveSummaryView'; import SoftwareRoadmapView from './SoftwareRoadmapView'; import NinetyDayPlanView from './NinetyDayPlanView';
+import React, { useState } from 'react'; import { BarChart3 } from 'lucide-react'; import CompetitiveLandscapeView from './CompetitiveLandscapeView'; import SoftwareDifferentiationView from './SoftwareDifferentiationView'; import SovereignAIOpportunityView from './SovereignAIOpportunityView'; import ExecutiveSummaryView from './ExecutiveSummaryView'; import SoftwareRoadmapView from './SoftwareRoadmapView'; import NinetyDayPlanView from './NinetyDayPlanView'; import BuildVsBuyView from './BuildVsBuyView';
 import { 
   Cpu, 
   Terminal, 
