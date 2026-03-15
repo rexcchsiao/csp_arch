@@ -5,6 +5,37 @@
 export const softwareRoadmap = {
   headline: '軟體發展路線圖：從現在到 2027 年的具體里程碑',
   philosophy: '採「小步快跑」策略：每季交付可驗證成果，快速累積動能與客戶反饋',
+  // Strategic context: Why 2026 is the inflection point
+  strategicContext: {
+    headline: '為什麼 2026 是軟體投資的關鍵轉折點？',
+    marketShifts: [
+      {
+        trend: 'GPU 供應正常化',
+        timing: '2026 Q2-Q3',
+        impact: 'H200/B200 供應滿足需求，競爭從「誰有 GPU」轉向「誰能用得最好」',
+        foxconnMove: '以軟體作為差異化武器，同樣的 GPU，我們的客戶產出高 20-30%'
+      },
+      {
+        trend: '主權 AI 法規生效',
+        timing: '2026 年 2 月 EU AI Act 全面生效',
+        impact: '歐盟、中東、東南亞資料主權要求創造 $50B+ 合規市場',
+        foxconnMove: 'Sovereign AI-in-a-Box 方案，一站式符合 GDPR/EU AI Act/PDPA 要求'
+      },
+      {
+        trend: '能源成本危機',
+        timing: '2026-2027 資料中心用電量翻倍',
+        impact: '電力成本占 TCO 40%+，PUE 從環保議題轉為競爭力指標',
+        foxconnMove: '能源優化軟體棧，降低 15-25% 散熱能耗，PUE 從 1.6 降至 1.4'
+      },
+      {
+        trend: 'Hyperscaler 垂直整合壓力',
+        timing: 'AWS/Azure/GCP 加強一站式 AI 基礎建設',
+        impact: 'CSP 客戶面臨被鎖定風險，需要中立替代方案',
+        foxconnMove: '提供中立、多供應商支援的軟體層，避免客戶被單一雲廠商鎖定'
+      }
+    ],
+    windowOfOpportunity: '2026-2027 是關鍵 18 個月窗口期。若不及早佈局，Hyperscaler 與一線 ODM 將率先建立軟體護城河，屆時追趕成本將提高 3-5 倍。'
+  },
   
   // Phase 1: Foundation (2026 Q2-Q3)
   phase1: {
