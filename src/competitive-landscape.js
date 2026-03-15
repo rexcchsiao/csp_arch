@@ -28,10 +28,10 @@ export const competitiveLandscape = {
         'Energy-optimized power profiles',
         'Autonomous job recovery',
         'Proactive monitoring with 10x faster time to recovery',
-        'Building management integration (cooling, power)',
+        'Building management integration (cooling, power) - optimized for NVIDIA DGX datacenters',
       ],
       target: 'Large enterprises running AI factories at scale',
-      limitation: 'Designed for NVIDIA DGX Cloud and NVIDIA-certified infrastructure; vendor lock-in',
+      limitation: 'Designed for NVIDIA DGX Cloud and NVIDIA-certified infrastructure; vendor lock-in; building integration only works with NVIDIA-validated facilities',
     },
   },
   // Where Foxconn fits - the strategic gap
