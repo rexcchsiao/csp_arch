@@ -662,3 +662,119 @@ export const executiveOnePager = {
 };
 
 export default softwareDifferentiation;
+
+// Competitive Software Pricing Intelligence - Added 2026-03-15
+// Sources: Public pricing pages, customer reports, industry benchmarks
+export const competitivePricing = {
+  headline: '競爭對手軟體定價策略分析',
+  context: '了解競爭對手的軟體定價，幫助我們制定具競爭力且可獲利的價格策略',
+  sources: '根據 2025-2026 公開資訊與客戶反饋整理',
+  
+  competitorPricing: [
+    {
+      vendor: 'NVIDIA',
+      product: 'Base Command Manager',
+      model: 'Free tier + Enterprise support',
+      pricing: '免費（基礎版）; Enterprise support: ~15-20% of hardware value/year',
+      catch: 'Requires NVIDIA-only infrastructure; lock-in cost is high',
+      ourAdvantage: '我們提供多供應商支援，避免客戶被鎖定'
+    },
+    {
+      vendor: 'NVIDIA',
+      product: 'Mission Control',
+      model: 'Subscription',
+      pricing: 'US$ 5,000-15,000/node/month (estimated for AI Factory scale)',
+      catch: 'Designed for DGX Cloud and NVIDIA-certified infrastructure',
+      ourAdvantage: '中立架構 + 本地部署選項'
+    },
+    {
+      vendor: 'Dell',
+      product: 'AI Factory Software',
+      model: 'Bundled with hardware',
+      pricing: '隱含於硬體價格，約占整體 10-15%',
+      catch: 'Must purchase Dell hardware; limited customization',
+      ourAdvantage: '可獨立訂閱，不綁硬體採購'
+    },
+    {
+      vendor: 'HPE',
+      product: 'Ezmeral / Private Cloud AI',
+      model: 'Subscription + Support',
+      pricing: 'US$ 3,000-8,000/node/month + 18-22% annual support',
+      catch: 'HPE ecosystem lock-in',
+      ourAdvantage: '開放架構，可與既有系統整合'
+    },
+    {
+      vendor: 'AWS',
+      product: 'SageMaker + EC2 P5',
+      model: 'Pay-as-you-go',
+      pricing: 'US$ 2-5 per GPU-hour + data transfer fees',
+      catch: 'Data must go to cloud; long-term cost higher than on-prem',
+      ourAdvantage: '本地部署，資料不出機房，3 年 TCO 低 30-40%'
+    },
+    {
+      vendor: 'Azure',
+      product: 'Azure AI Studio + NDv5',
+      model: 'Consumption-based',
+      pricing: 'US$ 2.5-6 per GPU-hour + storage + networking',
+      catch: 'Vendor lock-in; data residency concerns',
+      ourAdvantage: '主權 AI 合規 + 混合雲彈性'
+    }
+  ],
+  
+  foxconnPricingStrategy: {
+    headline: 'Foxconn 軟體定價建議',
+    rationale: '定價策略應反映價值（GPU 利用率提升、部署加速、運維成本降低），而非僅是成本加成',
+    
+    offerings: [
+      {
+        name: 'Remote Ops 遠端運維',
+        pricing: 'NT$ 50K-200K/月（依節點數分級）',
+        model: 'Subscription (1-3 year contracts)',
+        margin: '60-70%',
+        justification: '競爭對手同級方案約 US$ 3,000-8,000/node/month，我們提供更具競爭力價格',
+        targetCustomer: 'CSP 客戶、多據點企業'
+      },
+      {
+        name: 'RAG 一體機部署',
+        pricing: 'NT$ 500K-2M/案（一次性）+ 15-20% 年維運費',
+        model: 'Project-based + recurring maintenance',
+        margin: '50-60%',
+        justification: 'Dell/HPE 類似方案約 NT$ 2M-5M，我們提供 30-40% 價格優勢',
+        targetCustomer: '金融、醫療、政府、製造業'
+      },
+      {
+        name: 'GPU 虛擬化與調度',
+        pricing: 'NT$ 300K-1M/案 + 10% 授權費',
+        model: 'License + annual fee',
+        margin: '70-80%',
+        justification: 'NVIDIA Base Command 等級方案需 US$ 5,000+/node，我們提供 50% 價格',
+        targetCustomer: 'AI 新創、研究機構、雲端服務商'
+      },
+      {
+        name: '能源優化套件',
+        pricing: 'NT$ 200K-800K/案 + 節能分潤模式',
+        model: 'Performance-based (share 20-30% of energy savings)',
+        margin: '70-80%',
+        justification: '以實際節能效果計費，客戶零風險',
+        targetCustomer: '大型資料中心、CSP 客戶'
+      }
+    ],
+    
+    valueBasedPricing: {
+      headline: '價值導向定價法',
+      rationale: '不與競爭對手比價格，而是比 ROI',
+      customerROI: {
+        investment: 'NT$ 2M/年（Remote Ops + RAG）',
+        savings: [
+          'GPU 利用率提升 42% → 延緩擴充投資 NT$ 10M+',
+          '部署時間縮短 99% → 提早 2 週產生營收 NT$ 5M+',
+          '運維人力減少 70% → 年省 NT$ 3M',
+          '停機時間減少 60% → 避免損失 NT$ 8M',
+          '能源成本降低 15% → 年省 NT$ 2M',
+        ],
+        totalValue: 'NT$ 28M+/year',
+        roi: '14x return on software investment'
+      }
+    }
+  }
+};
