@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { softwareDifferentiation } from './software-differentiation.js';
-import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink } from 'lucide-react';
+import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
   const [activeTab, setActiveTab] = useState('pain-points');
