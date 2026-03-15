@@ -42,6 +42,47 @@ export const investmentThesis = {
   
   decisionCriteria: '若認同「AI 基礎建設競爭將從硬體轉向軟體」，則應立即投資；若認為「硬體規格仍是唯一差異化」，則可延遲但需承擔商品化風險',
   finalAsk: '批准 NT$ 65M/年預算，組建 50-80 人軟體團隊，2026 Q2 啟動，2027 Q4 前達成 NT$ 750M/年軟體加值營收',
+  // Cost of Inaction - Concrete 3-year financial scenario (added 2026-03-15)
+  costOfInaction: {
+    headline: '不投資的代價：三年財務影響分析',
+    context: '若選擇不投資軟體，維持現狀的隱含成本與機會損失',
+    scenario: {
+      year1: {
+        year: '2026',
+        revenueImpact: 'NT$ 0M（無軟體加值，純硬體定價）',
+        marginImpact: '毛利率 10-12%（價格戰壓力）',
+        opportunityCost: 'NT$ 15M（錯失 Remote Ops 與 RAG 早期採用者）',
+        customerLoss: '2-3 家 CSP 客戶轉單至提供軟體加值的競爭對手',
+        talentImpact: '軟體人才流失至新創與 Hyperscaler',
+      },
+      year2: {
+        year: '2027',
+        revenueImpact: 'NT$ -50M（營收增長放緩，市場份額下降）',
+        marginImpact: '毛利率 8-10%（商品化壓力加劇）',
+        opportunityCost: 'NT$ 100M（主權 AI 市場被廣達/緯穎搶佔）',
+        customerLoss: '5-8 家企業客戶選擇 Hyperscaler 一站式方案',
+        talentImpact: '關鍵技術崗位空缺率 20-30%',
+      },
+      year3: {
+        year: '2028',
+        revenueImpact: 'NT$ -200M（營收絕對值下降）',
+        marginImpact: '毛利率 5-8%（淪為 commodity 供應商）',
+        opportunityCost: 'NT$ 500M+（錯失 NT$ 750M 軟體營收與生態系）',
+        customerLoss: '10-15 家標竿客戶流失，包含 2-3 家 CSP 大客戶',
+        talentImpact: '軟體團隊解散或整併，技術能力斷層',
+      },
+      cumulative3Year: {
+        totalOpportunityCost: 'NT$ 615M+（直接營收損失）',
+        marginErosion: 'NT$ 300M-400M（10pp 毛利率差異 × NT$ 3.5B 年營收）',
+        customerChurn: 'NT$ 500M+（客戶流失造成的長期營收損失）',
+        talentRebuild: 'NT$ 50M+（重新招募與培訓成本）',
+        totalImpact: 'NT$ 1.5B+（3 年累計影響）',
+        summary: '不投資軟體的 3 年累計影響約 NT$ 1.5B+，相當於軟體投資成本（NT$ 195M）的 7.7 倍',
+      },
+    },
+    keyInsight: '不投資軟體不是「節省成本」，而是「放棄未來」。NT$ 65M/年的軟體投資，換取的是 NT$ 750M/年的軟體加值營收與 NT$ 1.5B+ 的損失避免。',
+    cfoMessage: '從 CFO 角度：軟體投資 NT$ 195M（3 年），避免 NT$ 1.5B+ 的損失，ROI 約 770%。這不是成本，是風險對沖與價值保護。',
+  },
 };
 
 export default investmentThesis;
