@@ -8,11 +8,12 @@ This presentation covers:
 
 1. **Software Differentiation** - Pain points in AI server deployment and how software solves them
 2. **Competitive Landscape** - Comparison with NVIDIA Base Command Manager, Mission Control, and other OEM/ODM solutions
-3. **Remote Ops Capabilities** - For CSP/Hyperscaler customers (monitoring, predictive maintenance, remote diagnosis)
-4. **Enterprise RAG Appliance** - For SMB/Private AI deployment (turnkey private AI knowledge base)
-5. **Investment Thesis** - Financial logic, ROI analysis, and cost of inaction
-6. **Customer Scenarios** - Before/after comparisons showing tangible software impact
-7. **Leadership Quick Reference** - Elevator pitch, key metrics, and strategic asks
+3. **Hyperscaler Gap Analysis** - Why CSPs with internal teams still need Foxconn software
+4. **Remote Ops Capabilities** - For CSP/Hyperscaler customers (monitoring, predictive maintenance, remote diagnosis)
+5. **Enterprise RAG Appliance** - For SMB/Private AI deployment (turnkey private AI knowledge base)
+6. **Investment Thesis** - Financial logic, ROI analysis, and cost of inaction
+7. **Customer Scenarios** - Before/after comparisons showing tangible software impact
+8. **Leadership Quick Reference** - Elevator pitch, key metrics, and strategic asks
 
 ## 🎯 Key Messages
 
@@ -39,15 +40,21 @@ npm run build
 
 - `src/software-differentiation.js` - Core pain points, competitive advantages, value metrics
 - `src/competitive-landscape.js` - NVIDIA/Hyperscaler comparison and strategic positioning
+- `src/hyperscaler-gap-analysis.js` - Why hyperscalers with internal teams still need Foxconn
 - `src/csp-remote-ops.js` - Remote operations capabilities for CSP customers
 - `src/enterprise-rag.js` - Private AI appliance offering
 - `src/investment-thesis.js` - Financial case and ROI analysis
 - `src/customer-success-stories.js` - Real-world scenarios and testimonials
 - `src/leadership-decision-matrix.js` - Strategic decision framework for executives
+- `src/software-maturity-model.js` - Self-assessment framework for leadership
+- `src/build-vs-buy.js` - TCO analysis: build in-house vs. buy Foxconn
+- `src/customer-segmentation.js` - Target customer prioritization
+- `src/sovereign-ai.js` - Global data residency market opportunity
+- `src/software-roadmap.js` - L9-L12 development timeline
 
 ## 📈 Target Audience
 
-- **C-Level Executives**: CEO, CFO, COO evaluating software investment
+- **C-Level Execututes**: CEO, CFO, COO evaluating software investment
 - **Product Leaders**: Understanding competitive positioning and market opportunities
 - **Sales Teams**: Customer-facing materials for software value proposition
 - **Engineering Teams**: Technical depth on software architecture and capabilities
@@ -84,5 +91,6 @@ npm run build
 
 ---
 
-**Last Updated**: 2026-03-15  
+**Last Updated**: 2026-03-16
+
 **Maintained by**: CoCo (Proactive Agent for csp-arch)
