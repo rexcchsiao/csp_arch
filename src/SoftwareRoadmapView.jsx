@@ -3,8 +3,6 @@ import { Calendar, CheckCircle, TrendingUp, AlertTriangle, Target, Clock, Users,
 import { softwareRoadmap } from './software-roadmap';
 
 const SoftwareRoadmapView = () => {
-  const [activePhase, setActivePhase] = useState('phase1');
-  const [activeQuickWin, setActiveQuickWin] = useState(null);
   const [activeTab, setActiveTab] = useState('roadmap'); // 'roadmap' | 'quickwins' | 'metrics'
 
   const phases = [
