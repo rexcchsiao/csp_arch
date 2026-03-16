@@ -175,7 +175,8 @@ export const executiveBrief = {
     "IDC Sovereign AI Forecast 2025: https://www.idc.com/",
     "IEA Data Center Energy Report 2024: https://www.iea.org/reports/data-centres-and-energy",
     "EU AI Act: https://artificialintelligenceact.eu/",
-    "Customer data: Foxconn CSP customer energy audits (Q1 2026, 3 datacenters)",
+    "Foxconn CSP customer energy audits (Q1 2026, 3 datacenters) - NT$ 1.5B risk calculation basis",
+    "Customer deployment logs & support ticket analysis (2025-2026)",
     "Competitor analysis: Public information, customer reports, industry benchmarks (Q1 2026)"
   ]
 };
