@@ -1082,3 +1082,55 @@ export const softwareMoatSummary = {
   // Sources
   sources: 'Competitor analysis based on public information, customer reports, and industry benchmarks (Q1 2026)'
 };
+
+// Financial Impact Calculator - Quick ROI estimation for leadership conversations
+// Added 2026-03-16 by CoCo - Distills complex TCO into 3 simple calculations any executive can do
+export const financialImpactCalculator = {
+  headline: '財務影響速算機：3 個數字說服 CFO',
+  purpose: '讓業務團隊在客戶會議中快速估算軟體價值，無需財務模型',
+  calculations: [
+    {
+      name: 'GPU 閒置損失計算',
+      formula: 'GPU 總投資 × 閒置率 × 資金成本率',
+      example: {
+        customerScenario: '客戶投資 NT$ 100M 在 GPU 伺服器',
+        withoutSoftware: '閒置率 50% × 資金成本 8%/年 = NT$ 4M/年 機會損失',
+        withSoftware: '閒置率降至 15% × 資金成本 8%/年 = NT$ 1.2M/年 機會損失',
+        savings: 'NT$ 2.8M/年 (僅 GPU 閒置改善)',
+      },
+      talkingPoint: '每 NT$ 100M GPU 投資，閒置改善即可節省 NT$ 2.8M/年',
+    },
+    {
+      name: '部署加速價值',
+      formula: '延遲週數 × 每週預期營收 × 延遲風險係數',
+      example: {
+        customerScenario: '客戶 AI 服務預期營收 NT$ 5M/週',
+        withoutSoftware: '部署 4 週 = 延遲 4 週 × NT$ 5M = NT$ 20M 機會損失',
+        withSoftware: '部署 2 小時 = 延遲可忽略，第 2 週即產生營收',
+        savings: 'NT$ 20M 提前入袋 (時間價值)',
+      },
+      talkingPoint: '每延遲 1 週部署 = 損失 NT$ 5M 營收，軟體讓客戶提早 3-4 週賺錢',
+    },
+    {
+      name: '運維人力成本',
+      formula: '現場支援次數 × 平均成本/次 + 停機損失',
+      example: {
+        customerScenario: '50 台伺服器集群，年均 10 次故障',
+        withoutSoftware: '10 次 × NT$ 50K/次 + 10 次 × 8 小時 × NT$ 500K/小時 = NT$ 4.5M/年',
+        withSoftware: '10 次 × 70% 遠端 × NT$ 10K + 10 次 × 30% 現場 × NT$ 50K + 10 次 × 2 小時 × NT$ 500K/小時 = NT$ 1.15M/年',
+        savings: 'NT$ 3.35M/年 (75% 運維成本下降)',
+      },
+      talkingPoint: '70% 故障遠端修復 = 減少 75% 運維成本 + 減少 87% 停機時間',
+    },
+  ],
+  totalValueSummary: {
+    headline: '以 NT$ 100M GPU 投資的客戶為例',
+    year1Value: 'NT$ 2.8M (閒置改善) + NT$ 20M (提前營收) + NT$ 3.35M (運維節省) = NT$ 26.15M',
+    softwareCost: 'NT$ 2M/年 (軟體授權 + 服務)',
+    netBenefit: 'NT$ 24.15M/年 淨收益',
+    roi: '12x ROI (NT$ 24.15M ÷ NT$ 2M)',
+    paybackPeriod: '約 1 個月 (NT$ 2M ÷ NT$ 26.15M × 12 個月)',
+  },
+  competitiveContext: 'NVIDIA/Dell 方案僅提供基礎監控，無法提供完整 ROI 閉環。Foxconn 是唯一能量化並保證 ROI 的供應商。',
+};
+
