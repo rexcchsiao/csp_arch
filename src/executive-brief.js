@@ -210,3 +210,27 @@ export const executiveBrief = {
 };
 
 export default executiveBrief;
+
+// Risk Timeline - Quarterly Milestones of Inaction (Added 2026-03-17 by CoCo)
+// Makes the cost of delay concrete and time-bound for leadership
+export const riskTimelineDetailed = {
+  headline: "Risk Timeline: What Happens If We Delay Software Investment",
+  context: "Each quarter of delay increases catch-up cost by 2-3x and reduces addressable market by 10-15%",
+  milestones: [
+    { quarter: "2026 Q2", foxconnIfInvest: "Org design complete, first 15-20 hires, lab setup begins", foxconnIfDelay: "Status quo: no software roadmap, talent recruitment frozen", competitiveMove: "Quanta announces partnership with software vendor for Remote Ops", marketImpact: "First signal: ODM competitors recognize software as battleground" },
+    { quarter: "2026 Q3", foxconnIfInvest: "Remote Ops MVP deployed at pilot customer, RAG Appliance alpha ready", foxconnIfDelay: "No software deliverables, sales team lacks differentiation story", competitiveMove: "Wistron launches cloud management platform (basic monitoring only)", marketImpact: "Customers begin asking Foxconn: 'What's your software roadmap?'" },
+    { quarter: "2026 Q4", foxconnIfInvest: "First customer case study published, 5% software attachment rate", foxconnIfDelay: "Lost first competitive bid to software-enabled competitor", marketImpact: "First customer loss: NT$ 500M order goes to Dell/HPE with software bundle", financialImpact: "NT$ 75M software revenue opportunity lost (Year 1 target)" },
+    { quarter: "2027 Q1", foxconnIfInvest: "Remote Ops expanded to 5 customers, RAG productized (S/M/L SKUs)", foxconnIfDelay: "Talent gap widens: 3-5 key software engineers leave for competitors", competitiveMove: "GIGABYTE announces AI software stack with RAG integration", marketImpact: "Margin pressure begins: customers demand price concessions without software value" },
+    { quarter: "2027 Q2", foxconnIfInvest: "NT$ 250M ARR, 12% attachment rate, first sovereign AI case", foxconnIfDelay: "Second customer loss: strategic account migrates to NVIDIA Base Command", marketImpact: "Industry perception shifts: Foxconn seen as 'hardware-only vendor'", financialImpact: "NT$ 125M software revenue opportunity lost (Year 2 target)" },
+    { quarter: "2027 Q3", foxconnIfInvest: "20% gross margin achieved, customer retention 85%+", foxconnIfDelay: "Margin compression visible: gross margin drops to 12-15% on key accounts", competitiveMove: "Quanta/Wistron software partnerships mature, feature parity approaching", marketImpact: "Foxconn relegated to 'budget option' - competing on price, not value" },
+    { quarter: "2027 Q4", foxconnIfInvest: "NT$ 750M annual software revenue run-rate, 20% attachment rate", foxconnIfDelay: "Talent crisis: unable to recruit software leadership, team at 30% of plan", marketImpact: "Hyperscaler customers begin insourcing: 'If Foxconn can't do software, we build ourselves'", financialImpact: "NT$ 375M software revenue opportunity lost (Year 3 target)" },
+    { quarter: "2028 Q1", foxconnIfInvest: "Market leadership: 20-25% gross margin, 11.5x ROI delivered", foxconnIfDelay: "Commodity supplier status confirmed: 5-8% margin, no differentiation", marketImpact: "Foxconn positioned as contract manufacturer for hyperscaler brands", strategicOutcome: "NT$ 1.5B+ cumulative opportunity loss, 10-15 year recovery timeline" }
+  ],
+  cumulativeImpact: {
+    revenueLoss: "NT$ 1.5B+ (3-year software revenue foregone)",
+    marginErosion: "10-15pp gross margin compression (from 20% to 5-8%)",
+    customerChurn: "15-20% of strategic accounts lost to software-enabled competitors",
+    talentGap: "5-7 years to rebuild software capability and market credibility",
+    brandDamage: "Perception shift from 'strategic partner' to 'commodity supplier' - difficult to reverse"
+  }
+};
