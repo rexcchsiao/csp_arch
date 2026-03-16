@@ -188,6 +188,35 @@
 
 ---
 
+## Risk Mitigation: Addressing Leadership Concerns
+
+### Risk 1: "What if we can't recruit 50-80 qualified people?"
+- **Mitigation:** Start with 15-20 person core team (L9-L12 architects), then scale. Partner with system integrators for initial delivery capacity.
+- **Fallback:** If recruitment lags, prioritize Remote Ops (higher margin, clearer ROI) over RAG.
+- **Timeline Impact:** +3-6 months delay, but core value proposition remains intact.
+
+### Risk 2: "What if CSP customers don't adopt?"
+- **Mitigation:** Co-development model with 2-3 lighthouse customers (MOU before full build). Customer pays reduced rate in exchange for feedback and case study rights.
+- **Fallback:** Pivot to SMB/Enterprise RAG market (lower complexity, faster sales cycle).
+- **Timeline Impact:** Minimal; RAG POC already planned for Day 61-90.
+
+### Risk 3: "What if NVIDIA changes their software strategy?"
+- **Mitigation:** Neutral architecture (NVIDIA + AMD support) prevents single-vendor lock-in. Focus on integration layer (L11-L12) where NVIDIA has less incentive to compete.
+- **Fallback:** Become NVIDIA partner (Base Command Manager reseller) while building differentiation in Remote Ops + RAG.
+- **Timeline Impact:** None; multi-vendor strategy already baked into architecture.
+
+### Risk 4: "What if the NT$ 65M/year investment doesn't yield expected ROI?"
+- **Mitigation:** Phase-gate funding model. Q3 2026: 15-20 person team (NT$ 20M). Q4 2026: Review customer traction before scaling to 50-80 person (NT$ 65M).
+- **Fallback:** If Year 1 doesn't hit 50% of targets (1 customer case, Remote Ops MVP), pause expansion and pivot to hardware-attached software (lower investment).
+- **Financial Impact:** Maximum exposure NT$ 20M (Year 1), vs. NT$ 1.5B opportunity loss from inaction.
+
+### Risk 5: "What if hyperscalers decide to compete directly?"
+- **Mitigation:** Focus on markets hyperscalers can't/won't serve: sovereign AI, air-gapped deployment, brownfield integration.
+- **Fallback:** Become hyperscaler partner (resell their software + Foxconn integration services).
+- **Strategic Impact:** Low probability; hyperscalers focused on cloud, not on-premise. Foxconn's neutral positioning is the moat.
+
+---
+
 ## Appendix: Sources & References
 
 ### Primary Sources (Verified 2026-03-16)
