@@ -469,6 +469,35 @@ export const softwareDifferentiation = {
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
+	// Quick Win Services: Prioritized by time-to-market and development effort (Added 2026-03-16 by CoCo)
+	quickWins: {
+		headline: '快速變現服務：3 個月內可上線',
+		description: '這些服務技術成熟、開發成本低、客戶需求明確，建議優先投入',
+		services: [
+			{
+				name: 'GPU 效能調校服務',
+				why: '利用現有工具鏈，無需額外開發，1 人天即可完成',
+				revenue: 'NT$ 100K-500K/案',
+				margin: '80%+',
+				timeToMarket: '立即',
+			},
+			{
+				name: 'AI 軟體棧預整合（標準版）',
+				why: '基於現有 Helm Charts，標準化交付流程',
+				revenue: 'NT$ 200K-500K/案',
+				margin: '70%+',
+				timeToMarket: '2-4 週',
+			},
+			{
+				name: 'Remote Ops 基礎監控',
+				why: '整合現有 BMC + Grafana，無需從頭開發',
+				revenue: 'NT$ 50K-100K/月',
+				margin: '60%+',
+				timeToMarket: '4-8 週',
+			},
+		],
+		totalPotential: '首年可貢獻 NT$ 20-30M 營收，毛利率 70%+',
+	},
 		offerings: [
 			{
 				name: 'Remote Ops 遠端運維服務',
