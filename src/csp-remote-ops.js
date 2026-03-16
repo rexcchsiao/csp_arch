@@ -1,5 +1,7 @@
 // CSP Remote Ops Capabilities - For Hyperscaler/CSP Customers
 // Enhanced 2026-03-16: Added quantified metrics, competitive differentiation, and specific technical capabilities
+// Enhanced 2026-03-17: Added air-gap deployment capability for sovereign/regulated customers
+export const cspRemoteOps_old, competitive differentiation, and specific technical capabilities
 export const cspRemoteOps = [
   {
     title: '即時資源與環境監控',
@@ -100,6 +102,35 @@ export const cspRemoteOps = [
       'Step 6: 驗證修復結果並記錄案例',
     ],
     customerQuote: '以前凌晨 3 點 GPU 故障，我們要 2 小時內趕到機房。現在系統自動調度工作負載，隔天上班再處理，業務完全不受影響。',
+  },
+  {
+    title: '離線部署與更新能力 (Air-Gap Deployment)',
+    capability: '針對主權 AI、國防、金融等合規要求，提供完整的離線部署方案。包含離線套件打包、本地产線驗證、安全傳輸、離線更新等完整流程。',
+    value: '讓高合規要求客戶無需連接網際網路，即可完成部署、更新、修補，符合最嚴格的資安要求。',
+    metrics: {
+      deploymentTime: '離線環境 4 小時內完成部署',
+      updateSize: '完整更新包 <500MB，增量更新 <50MB',
+      securityLevel: '符合 ISO 27001、SOC 2、EU AI Act 要求',
+      customerImpact: '100% 符合資料主權要求，零雲端依賴',
+    },
+    technicalDetails: {
+      offlineComponents: [
+        '完整 OS 與驅動程式離線套件',
+        'K8s/容器鏡像本地产線',
+        'AI 模型與 RAG 索引離線打包',
+        '韌體/BIOS/BMC 離線更新檔',
+        '合規報告與審計軌跡本地产線',
+      ],
+      securityFeatures: [
+        '數位簽章驗證 (GPG/SHA-256)',
+        '離線授權管理',
+        '更新包完整性檢查',
+        '回滾機制與備份',
+        '審計軌跡完整記錄',
+      ],
+    },
+    customerQuote: '我們的機房完全不能聯網。Foxconn 是唯一能提供完整離線部署、更新、維護的供應商。',
+    competitiveEdge: 'NVIDIA/HPE 方案假設雲端連接；Foxconn 提供完整離線能力，符合主權 AI 與國防要求',
   },
 ];
 
