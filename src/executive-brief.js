@@ -234,3 +234,61 @@ export const riskTimelineDetailed = {
     brandDamage: "Perception shift from 'strategic partner' to 'commodity supplier' - difficult to reverse"
   }
 };
+
+// Investment Decision Card - Printable one-pager for CFO/CEO quick decisions (Added 2026-03-17 by CoCo)
+// Purpose: Distills entire investment case into 30-second read for time-constrained executives
+export const investmentDecisionCard = {
+  headline: "Software Investment Decision Card",
+  subtitle: "NT$ 65M/year investment → NT$ 750M/year return (Year 3)",
+  theAsk: {
+    what: "Build 50-80 person software team (L9-L12 full-stack)",
+    budget: "NT$ 65M/year",
+    timeline: "Q2 2026: Org design → Q3: Team build → Q4: First case"
+  },
+  whyNow: [
+    "GPU supply normalizing → competition shifts to utilization efficiency",
+    "Sovereign AI regulations → $50B+ compliance market opening",
+    "Energy crisis → Power = 40% of TCO, Foxconn saves 15-25%",
+    "Window closing → 12-18 months before competitors lock in customers"
+  ],
+  quantifiedBenefits: {
+    customerValue: [
+      "GPU utilization: 40% → 85% (+42%)",
+      "Deployment: 2-4 weeks → 2 hours (-99%)",
+      "Downtime: 8 hours → 2 hours (-75%)",
+      "Energy cost: -15-25% (PUE 1.6 → 1.4)"
+    ],
+    foxconnValue: [
+      "Gross margin: 10-15% → 20-25% (+10pp)",
+      "Revenue: NT$ 750M/year (Year 3)",
+      "Customer retention: 60% → 85%+",
+      "Valuation multiple: 8-12x → 20-30x P/E"
+    ]
+  },
+  financials: {
+    investment: "NT$ 65M/year",
+    year1Return: "NT$ 80M revenue, 5% attachment",
+    year2Return: "NT$ 250M revenue, 12% attachment",
+    year3Return: "NT$ 750M revenue, 20% attachment, 11.5x ROI",
+    payback: "18-24 months",
+    irr: "68%"
+  },
+  riskOfInaction: {
+    financial: "NT$ 1.5B+ opportunity loss by 2028",
+    strategic: "Commodity supplier status (5-8% margin)",
+    timeline: "Q4 2027: Margin compression visible → Q1 2028: Commodity status confirmed",
+    customerLoss: "15-20% strategic accounts lost to software-enabled competitors"
+  },
+  competitiveContext: {
+    odm: "Quanta/Wistron: 10-30 person teams, hardware-focused, 10-15% margin",
+    foxconn: "50-80 person vision, L9-L12 full-stack, 20-25% margin",
+    moat: "Neutral (NVIDIA+AMD) + Sovereign AI + Remote Ops = 40% of market hyperscalers cannot serve"
+  },
+  decision: {
+    approve: "NT$ 65M/year budget, 50-80 FTE software team",
+    successMetrics: "Year 1: 5% attachment, Year 2: 12%, Year 3: 20% attachment, 20-25% GM",
+    goNoGo: "If Year 1 <2.5% attachment by Q4 2026, reassess strategy",
+    riskMitigation: "Stage-gate funding, pilot customers before scale, pivot if targets missed"
+  },
+  oneLiner: "Software is the difference between strategic partner (20-25% margin) and commodity supplier (5-8% margin). NT$ 65M investment → NT$ 750M return, 11.5x ROI."
+};

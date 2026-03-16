@@ -392,3 +392,38 @@ export const q1_2026CompetitiveMoves = {
 };
 
 export default competitiveLandscape;
+
+// The Foxconn Moat: What Competitors Cannot Replicate (Added 2026-03-17 by CoCo)
+// Distills the core strategic insight into 3 defensible capabilities
+export const moatAnalysis = {
+  headline: "The Foxconn Moat: 3 Capabilities Competitors Cannot Replicate",
+  context: "Hyperscalers and NVIDIA dominate but have structural constraints",
+  moats: [
+    {
+      capability: "Neutral Infrastructure + Full-Stack Accountability",
+      description: "Support NVIDIA + AMD + future GPUs with single-vendor accountability",
+      whyCompetitorsCannotCopy: "NVIDIA cannot support AMD; Hyperscalers cannot offer on-premise",
+      customerValue: "Avoid vendor lock-in while maintaining single throat to choke",
+      evidence: "Remote Ops works on NVIDIA H100 and AMD MI350 with same interface",
+      defensibility: "HIGH"
+    },
+    {
+      capability: "Sovereign AI Deployment (Air-Gapped + Compliance)",
+      description: "Turnkey RAG Appliance for air-gapped environments with audit trails",
+      whyCompetitorsCannotCopy: "Hyperscaler business model requires cloud connectivity",
+      customerValue: "Deploy AI where data cannot leave premises",
+      evidence: "Taiwan financial customer: deployed in 3 weeks, zero internet dependency",
+      defensibility: "HIGH"
+    },
+    {
+      capability: "Brownfield Integration + Custom Firmware",
+      description: "Integrate with legacy BMC, custom cooling, proprietary monitoring",
+      whyCompetitorsCannotCopy: "Hyperscalers sell standardized services, cannot do custom per customer",
+      customerValue: "Leverage existing infrastructure, no rip-and-replace",
+      evidence: "Integrated with legacy Schneider power system, avoided NT$ 50M replacement",
+      defensibility: "MEDIUM-HIGH"
+    }
+  ],
+  strategicImplication: "Serve markets hyperscalers CANNOT serve (40% of market)",
+  targetMarkets: ["Sovereign AI ($50B+)", "Financial services", "Healthcare/gov air-gap", "Brownfield datacenters (70%)", "Multi-GPU strategy customers"]
+};
