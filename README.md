@@ -92,6 +92,21 @@ Hardware margins compress to 5-8% (commoditization trap). Software creates:
 
 This is the difference between being a **strategic partner** (20%+ margin) and a **commodity supplier** (5-8% margin).
 
+### ⚠️ Competitive Urgency: What Competitors Are Already Doing (Q1 2026)
+
+**Competitors are not waiting — neither should we:**
+
+| Date | Competitor | Move | Foxconn Response |
+|------|----------|------|-----------------|
+| 2026-03-05 | **HPE** | Launched GreenLake for Private AI with RAG templates | HPE targeting same enterprise RAG market; Foxconn must move faster to establish beachhead |
+| 2026-02-28 | **GIGABYTE** | Announced GPU Cloud Management Platform | GIGABYTE entering remote management space; Foxconn Remote Ops must differentiate on air-gap capability |
+| 2026-02-15 | **Dell** | Red Hat OpenShift AI integration partnership | Dell leveraging Red Hat ecosystem; Foxconn must emphasize neutral (NVIDIA+AMD) advantage |
+| 2026-01-20 | **QCT** | Cloud-DCIM 2.0 with basic GPU monitoring | QCT offering monitoring-only solution; Foxconn Remote Ops must emphasize predictive + remote repair capabilities |
+
+**Strategic Implication:** Window of opportunity is **12-18 months (Q2 2026 - Q4 2027)**. If Foxconn doesn't establish software credibility by Q4 2027, competitors will have locked in customers with entrenched solutions.
+
+**Call to Action:** First-mover advantage in OEM/ODM space is real. Foxconn must ship Remote Ops MVP by Q3 2026 and RAG Appliance by Q4 2026 to maintain leadership position.
+
 ### Strategic Ask
 
 - **Investment**: NT$ 65M/year for 50-80 person software team
