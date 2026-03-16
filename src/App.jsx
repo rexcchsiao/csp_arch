@@ -263,6 +263,7 @@ const App = () => {
             <SourceReferencesView />
             <CompetitiveComparisonChart />
             <OdmComparisonChart />
+            
             <BuildVsBuyView />
           </div>
         )}
