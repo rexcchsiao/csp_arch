@@ -6,6 +6,8 @@ import SovereignAIOpportunityView from './SovereignAIOpportunityView';
 import ExecutiveSummaryView from './ExecutiveSummaryView';
 import SoftwareRoadmapView from './SoftwareRoadmapView';
 import NinetyDayPlanView from './NinetyDayPlanView';
+import SourceReferencesView from './SourceReferencesView';
+import CompetitiveComparisonChart from './CompetitiveComparisonChart';
 import BuildVsBuyView from './BuildVsBuyView';
 import { Cpu, Terminal, Layers, Activity, ShieldCheck, ChevronRight, Database, Network, Box, Zap, Cloud, Settings, Shield, Gauge, Info, X, ExternalLink, BookOpen, Split, Target, Trophy } from 'lucide-react';
 
