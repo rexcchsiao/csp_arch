@@ -1,5 +1,5 @@
 # Competitive Intelligence Brief: AI Server Software Landscape
-**Last Updated:** 2026-03-16  
+**Last Updated:** 2026-03-17  
 **Prepared by:** CoCo (Proactive Agent)  
 **Purpose:** Traceable, actionable intelligence for leadership decision-making
 
@@ -39,11 +39,11 @@
 
 ### NVIDIA GTC 2026 Announcements (March 17-20, 2026)
 - **Mission Control GA** (2026-03-17): Full AI factory operations platform  
-  → *Foxconn Response:* Mission Control optimized for DGX Cloud; Foxconn provides neutral layer for on-premise + multi-vendor
+  → *Foxconn Response:* Mission Control optimized for DGX Cloud; Foxconn provides neutral layer for on-premise + multi-vendor (NVIDIA+AMD)
 - **NVIDIA NIM for RAG** (2026-03-18): Pre-built microservices for RAG deployment  
-  → *Foxconn Response:* NIM requires separate vector DB + app layer; Foxconn provides end-to-end appliance
+  → *Foxconn Response:* NIM requires separate vector DB + app layer; Foxconn provides end-to-end appliance with permission governance
 - **Blackwell B200 Supply Ramp** (2026-03-19): Production scaling in H2 2026  
-  → *Foxconn Response:* GPU scarcity ending; competition shifts to utilization efficiency
+  → *Foxconn Response:* GPU scarcity ending; competition shifts from "who has GPUs" to "who uses them best" (utilization efficiency)
 
 ### Competitor Moves
 | Date | Competitor | Move | Foxconn Counter |
