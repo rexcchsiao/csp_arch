@@ -20,7 +20,13 @@ export const competitiveSources = {
     { name: 'QCT Cloud-DCIM', url: 'https://www.qct.com/solution/product/cloud-dcim', description: 'Data center infrastructure management', relevance: 'Limited software offering compared to our full stack' }
   ],
   gigabyte: [
-    { name: 'GIGABYTE Server Management', url: 'https://www.gigabyte.com/Server/Management', description: 'Server management console', relevance: 'Basic BMC management, no AI-specific features' }
+    { name: 'GIGABYTE Server Management', url: 'https://www.gigabyte.com/Server/Management', description: 'Server management console', relevance: 'Basic BMC management, no AI-specific features', lastVerified: '2026-03-16', keyFeature: 'Traditional IPMI/BMC-based server management', limitation: 'No GPU-specific monitoring, no AI workload optimization, no RAG or private AI capabilities' }
+  ],
+  quanta: [
+    { name: 'Quanta Cloud Technology AI Server Solutions', url: 'https://www.qct.io/', description: 'OEM/ODM AI server hardware with basic management', relevance: 'Direct OEM/ODM competitor, similar hardware capabilities', lastVerified: '2026-03-16', keyFeature: 'Hardware-focused AI server solutions (HGX, HGX-compatible)', limitation: 'Software team estimated 10-20 people; no comprehensive Remote Ops or RAG appliance strategy as of Q1 2026', strategicRisk: 'Quanta announced partnership with software vendor for Remote Ops (2026-03-05) — first signal of OEM/ODM software competition' }
+  ],
+  wistron: [
+    { name: 'Wistron AI Infrastructure', url: 'https://www.wistron.com/', description: 'OEM/ODM AI server hardware', relevance: 'Direct OEM/ODM competitor', lastVerified: '2026-03-16', keyFeature: 'Hardware-focused AI server solutions', limitation: 'Software team estimated 10-15 people; no comprehensive software stack announced' }
   ],
   // Market Research
   marketResearch: [

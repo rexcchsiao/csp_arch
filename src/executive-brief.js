@@ -47,11 +47,11 @@ export const executiveBrief = {
   
   // Competitive Reality Check
   competitiveReality: {
-    oemOdmLandscape: "Quanta/Wistron/ASUS: 10-30 person software teams, hardware-focused, competing on 10-15% margins",
+    oemOdmLandscape: "Quanta/Wistron/ASUS: 10-30 person software teams, hardware-focused, competing on 10-15% margins. Quanta announced software partnership (2026-03-05), signaling OEM/ODM software competition beginning.",
     brandFactoryLandscape: "Dell/HPE: 100-200 person teams, but tied to proprietary ecosystems",
     hyperscalerLandscape: "AWS/Azure/GCP: World-class software, but cloud-only, cannot meet sovereign AI needs",
-    foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture",
-    strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential."
+    foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD)",
+    strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential. Window: 12-18 months (Q2 2026-Q4 2027) to establish credibility before competitors lock in customers."
   },
   
   // Financial Case - CFO-Ready Metrics
