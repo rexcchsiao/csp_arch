@@ -8,8 +8,9 @@ import SoftwareRoadmapView from './SoftwareRoadmapView';
 import NinetyDayPlanView from './NinetyDayPlanView';
 import SourceReferencesView from './SourceReferencesView';
 import CompetitiveComparisonChart from './CompetitiveComparisonChart';
+import OdmComparisonChart from './OdmComparisonChart';
 import BuildVsBuyView from './BuildVsBuyView';
-import { Cpu, Terminal, Layers, Activity, ShieldCheck, ChevronRight, Database, Network, Box, Zap, Cloud, Settings, Shield, Gauge, Info, X, ExternalLink, BookOpen, Split, Target, Trophy } from 'lucide-react';
+import { Cpu, Terminal, Layers, Activity, ShieldCheck, ChevronRight, Database, Network, Box, Zap, Cloud, Settings, Shield, Gauge, Info, X, ExternalLink, BookOpen, Split, Target, Trophy, TrendingUp } from 'lucide-react';
 
 const App = () => {
   const [activeDept, _setActiveDept] = useState('firmware');
@@ -259,6 +260,10 @@ const App = () => {
             <SovereignAIOpportunityView />
             <SoftwareRoadmapView />
             <NinetyDayPlanView />
+            <SourceReferencesView />
+            <CompetitiveComparisonChart />
+            <OdmComparisonChart />
+            <BuildVsBuyView />
           </div>
         )}
       </div>

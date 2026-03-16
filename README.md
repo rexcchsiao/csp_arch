@@ -76,6 +76,22 @@ npm run build
 - **Custom Integration**: L9-L10 firmware tailored to customer requirements
 - **Faster Time-to-Market**: 2-4 weeks vs. 12-18 months for in-house development
 
+### 💡 The Software Moat (Critical Insight)
+
+**Without software, Foxconn becomes a contract manufacturer for hyperscalers' own brands.**
+
+Hardware margins compress to 5-8% (commoditization trap). Software creates:
+- **20-25% gross margin** (vs. 10-15% hardware-only)
+- **Recurring revenue** (subscription/subscription-like models)
+- **Customer lock-in** (switching costs increase retention)
+
+**OEM/ODM Competitive Reality:**
+- Quanta/Wistron/Gigabyte: 10-20 person software teams, hardware-focused
+- ASUS: 15-25 person team, consumer-focused
+- **Foxconn**: Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability
+
+This is the difference between being a **strategic partner** (20%+ margin) and a **commodity supplier** (5-8% margin).
+
 ### Strategic Ask
 
 - **Investment**: NT$ 65M/year for 50-80 person software team
