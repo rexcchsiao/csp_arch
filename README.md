@@ -107,6 +107,8 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 **Call to Action:** First-mover advantage in OEM/ODM space is real. Foxconn must ship Remote Ops MVP by Q3 2026 and RAG Appliance by Q4 2026 to maintain leadership position.
 
+**Sources:** Competitive moves verified from company press releases, product pages, and GTC 2026 announcements (March 2026). See `src/competitive-intelligence-brief.md` for detailed citations.
+
 ### Strategic Ask
 
 - **Investment**: NT$ 65M/year for 50-80 person software team
