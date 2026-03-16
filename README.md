@@ -23,6 +23,7 @@ This presentation covers:
 - **Downtime**: Reduce by 60% with predictive maintenance
 - **Energy Efficiency**: PUE from 1.6 to 1.4, reducing datacenter power costs by 15-25%
 - **ROI**: 11.5x return by Year 3, 18-24 month payback period
+- **Risk of Inaction**: NT$ 1.5B+ opportunity loss by 2028 (commoditization at 5-8% margin)
 
 ## 🚀 Quick Start
 
