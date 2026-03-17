@@ -200,6 +200,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         monetization: '按節點訂閱 + SLA 等級收費'
       },
       {
+        name: 'Factory-to-Operations Handoff',
+        customerTrigger: '客戶最怕的是硬體交機後，還要再花 2-4 週把韌體、叢集、驗收、權限與上線 runbook 一段段重新拼起來',
+        whyFoxconnWins: 'Foxconn 天然站在製造、出廠預載、現場驗收與 Day-2 維運交界，最有機會把 burn-in、golden image、site acceptance 與後續 lifecycle baseline 串成同一條服務鏈',
+        whyOthersAvoid: '純軟體商碰不到工廠與出貨流程；品牌廠雖強調 validated system，但多半把價值停在平台交付，不會深入客戶現場的驗收/交接治理',
+        monetization: '交付附加服務費 + 年度 baseline / acceptance refresh 續約'
+      },
+      {
         name: 'Tenant Governance & GPU Showback',
         customerTrigger: 'AI 平台一旦被多個 BU / 團隊共用，管理層就會追問：誰在吃掉 GPU、誰該優先、成本該算到哪裡',
         whyFoxconnWins: 'Foxconn 可把 GPU / 功耗 / 任務 / 配額 / 權限整合成同一個治理層，讓平台工程、財務與 BU 都看得懂、算得清、控得住',
@@ -241,6 +248,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       painSolved: '降低半夜派人到場與跨國維修成本，把問題在現場前就預警並遠端診斷。',
       whyUnique: 'Foxconn 同時握有硬體遙測、BMC 控制、叢集事件與料件知識，可把監控延伸到可操作的遠端修復與預測性維護，而不只是一個 dashboard。',
       evidence: 'HPE Private Cloud AI 官方強調 built-in observability 與 full stack visibility，代表市場已把持續可觀測與服務可用性視為核心能力。',
+      source: 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      name: 'Factory-to-Operations Handoff Assurance',
+      targetCustomer: '需要快速交機、快速驗收、且不想讓工廠交付與營運團隊斷線的大型 CSP / Enterprise AI 專案',
+      monetization: '交付附加服務費 + 年度 baseline refresh / acceptance 顧問費',
+      budgetOwner: 'Program Management Office / Infrastructure Delivery / Platform Operations',
+      renewalDriver: '每次新場域上線、新機型導入、golden image 更新與 site acceptance 演練都會重複觸發同一套治理需求',
+      painSolved: '把出廠預載、burn-in 驗證、site acceptance、帳號/權限移交、初始觀測與 Day-2 baseline 串成同一條交付服務，避免客戶在「硬體已到、軟體還沒接好」的灰色地帶浪費 2-4 週。',
+      whyUnique: 'Foxconn 同時位在工廠、硬體、韌體與現場交付交界，能把 golden image、驗收 runbook、初始版本基線與後續 lifecycle 治理接成同一個產品化服務。這種跨 factory-to-field 的 handoff，不是純軟體商也不是只賣平台的品牌廠容易長期承接的。',
+      evidence: 'HPE Private Cloud AI 官方已把 pre-configured validated platform、deploy AI in days, not months 當成賣點；Dell AI Factory 也以 end-to-end AI factory delivery 為定位。這代表市場已在購買「可驗收、可快速進入營運」的交付結果，而不只是硬體 BOM。Foxconn 的差異化空間在於把這個結果進一步延伸到現場驗收與 Day-2 交接治理。',
       source: 'https://www.hpe.com/us/en/private-cloud-ai.html',
     },
     {
@@ -312,6 +330,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         trigger: '跨站點運維、夜間故障、缺工與 SLA 需求',
         recurringReason: '值班、監控、模型更新與 SLA 報告天然適合年約',
         boardOutcome: '從一次性交機，變成可續約的服務收入'
+      },
+      {
+        service: 'Factory-to-Operations Handoff Assurance',
+        budgetOwner: 'PMO / Infrastructure Delivery / Platform Operations',
+        trigger: '新 AI 叢集交機後，需要把工廠預載、現場驗收、權限移交與 Day-2 baseline 接成一致流程',
+        recurringReason: '每次新場域上線、新機型導入與 golden image 更新，都會重複需要這套驗收與交接治理',
+        boardOutcome: '把交機速度直接轉成 time-to-revenue 與更低的部署風險，讓軟體部門站上交付成敗的關鍵位置'
       },
       {
         service: 'Sovereign RAG / Air-Gap Services',
