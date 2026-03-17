@@ -323,6 +323,13 @@ structuralAdvantages: {
         takeaway: '這代表「設施可視化」正快速變成硬體廠的基本盤。Foxconn 若只停在監控，就很難拉開差距；更高價值的位置，是把這些訊號接成 power / cooling event governance、容量保證與 brownfield 營運服務。',
         sourceLabel: 'Supermicro SuperCloud Composer',
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
+      },
+      {
+        company: 'Lenovo Hybrid AI Solutions',
+        proof: 'Lenovo 官方把 Hybrid AI 直接包成 productivity、agility、trust，並強調 modern hybrid AI platforms、validated solutions 與 services。',
+        takeaway: '這說明連硬體大廠都已經在賣「部署速度 + 信任 + 服務交付」，不是只賣 AI 伺服器規格。Foxconn 若要被看見，就必須把自己的軟體部門定位成把這些結果真正落地到 L9-L12、brownfield 與 Day-2 營運的人。',
+        sourceLabel: 'Lenovo Hybrid AI Solutions',
+        source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
@@ -779,6 +786,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 應把 Tenant Governance、GPU showback、air-gap governance 與審計證據輸出，包成治理層服務，對應 CIO / FinOps / Compliance 預算。',
 				sourceLabel: 'Red Hat OpenShift AI',
 				source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+			},
+			{
+				company: 'Lenovo Hybrid AI Solutions',
+				proof: 'Lenovo 官方強調 productivity、agility、trust，並把 validated solutions、AI platforms 與 services 一起包進 Hybrid AI 敘事。',
+				buyerTranslation: '這代表採購核准的語言，已經是「更快導入、更少技術債、更可信與可治理」，而不是只比較 BOM 或節點規格。',
+				foxconnPlay: 'Foxconn 應順勢把 software department 定位成 deployment assurance + lifecycle governance + brownfield service owner，讓管理層看見：我們賣的是可交付結果，不是把軟體當配件。',
+				sourceLabel: 'Lenovo Hybrid AI Solutions',
+				source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'

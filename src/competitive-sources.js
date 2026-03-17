@@ -90,6 +90,16 @@ export const competitiveSources = {
       limitation: 'Even with a strong platform, customers still need infrastructure-specific integration, offline operations discipline, and hardware-to-cluster lifecycle control.',
       ourAdvantage: 'Foxconn can pair similar enterprise-operability messaging with deeper L9-L12 integration, Remote Ops, and factory-to-datacenter delivery ownership.'
     },
+    {
+      name: 'Lenovo Hybrid AI Solutions',
+      url: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/',
+      description: 'Lenovo official hybrid AI positioning built with NVIDIA building blocks and services',
+      relevance: 'Useful proof that another hardware vendor is selling hybrid AI around productivity, agility, trust, validated solutions, and services—not bare server specs alone',
+      lastVerified: '2026-03-18',
+      keyFeature: 'Lenovo positions hybrid AI around faster deployment, modern platforms, validated solutions, services, and trusted / compliant operations across enterprise environments.',
+      limitation: 'The messaging is broad and ecosystem-led; it does not clearly own the brownfield Day-2 operating layer, lifecycle governance, or air-gapped service discipline.',
+      ourAdvantage: 'Foxconn can use this as market validation, then differentiate lower in the stack: L9-L12 deployment assurance, lifecycle governance, remote ops, and brownfield integration as accountable services.'
+    },
     { name: 'Red Hat OpenShift AI (Disconnected Environments)', url: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index', description: 'Official documentation for deploying and operating OpenShift AI Self-Managed in disconnected environments', relevance: 'Validates that disconnected / air-gapped AI environments are a real enterprise operating requirement, not a niche edge case', lastVerified: '2026-03-17', keyFeature: 'Dedicated install and lifecycle documentation for disconnected environments', limitation: 'Disconnected deployment still requires customers to manage mirrored content, update discipline, and ongoing software lifecycle in offline environments', ourAdvantage: 'Foxconn can turn this operational burden into a productized service: offline content sync, upgrade governance, rollback, and field delivery for sovereign AI customers.' }
   ],
   // Standards & Regulations
