@@ -376,6 +376,47 @@ structuralAdvantages: {
     boardMessage: '董事會該記住的一句話：硬體讓客戶「買得到 AI」，軟體部門的 Day-2 Assurance 讓客戶「敢長期把營運風險交給我們」。'
   },
 
+  // Market white space - where the software team creates value competitors still under-serve (Added 2026-03-18 by CoCo)
+  marketWhiteSpace: {
+    headline: '市場還沒被好好解決的 4 個缺口：這正是軟體部門該站上的位置',
+    coreInsight: '外部產品頁已經證明，大家都開始賣 AI operations、observability 與 validated deployment；但真正還缺的，是誰願意對 brownfield、air-gapped、facility-constrained 與跨團隊責任切割的 Day-2 風險負責。這些缺口，不是再加一個 dashboard 就能補起來。',
+    gaps: [
+      {
+        title: 'Mixed-vendor brownfield operations 仍缺 accountable owner',
+        evidence: 'HPE、Dell、Lenovo 都在賣 validated AI platforms，但官方敘事多半圍繞自家或合作夥伴生態，較少正面處理「新 AI 叢集要怎麼接進客戶既有 BMC / DCIM / 維護窗口流程」這種 brownfield reality。',
+        whyStillOpen: '大型客戶真正卡住的常常不是買不買節點，而是誰來承接跨新舊設備、跨團隊流程、跨權限模型的整合責任。',
+        foxconnPlay: '把 Brownfield Integration & Fleet Baseline 做成 attach service，主張我們賣的是「不用打掉重練也能把 AI 納入現場營運體系」。',
+        sourceLabel: 'Dell AI Factory / HPE Private Cloud AI / Lenovo Hybrid AI Solutions',
+        source: 'https://www.dell.com/en-us/ai-factory'
+      },
+      {
+        title: 'Air-gapped AI 真正難的是 Day-2 content lifecycle，不是第一次安裝',
+        evidence: 'Red Hat 已為 disconnected environments 提供專門文件，這反而說明：離線場景不是特例，而是需要獨立的內容同步、升級治理與版本紀律。',
+        whyStillOpen: '多數方案證明「可部署」，但沒有把離線鏡像、升級證據、rollback discipline 與稽核包做成可續約服務。',
+        foxconnPlay: '把 Air-Gap Content Lifecycle 做成主權 AI 標準交付，直接占住金融 / 政府 / 國防最在意的治理與稽核預算。',
+        sourceLabel: 'Red Hat OpenShift AI (Disconnected Environments)',
+        source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index'
+      },
+      {
+        title: 'Facility telemetry 有人做，但 facility-aware workload governance 還很少人敢接',
+        evidence: 'Supermicro 已把液冷與設施遙測放進 SuperCloud Composer，NVIDIA Mission Control 也明講 building management integration、power / cooling control。',
+        whyStillOpen: '市場開始看到設施訊號，但還缺少把這些訊號轉成容量保證、排程調整、maintenance workflow 與 SLA 保護的軟體 owner。',
+        foxconnPlay: '把 Capacity Assurance / Power-Cooling Governance 從「監控」往上推成「事件治理與容量保證」服務，讓軟體部門直接影響擴容節奏與 outage 風險。',
+        sourceLabel: 'Supermicro SuperCloud Composer / NVIDIA Mission Control',
+        source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
+      },
+      {
+        title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
+        evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery，這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
+        whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險留給客戶自己承擔。',
+        foxconnPlay: '用 Remote Ops + Lifecycle Assurance + 工廠預整合，把「誰半夜接電話、誰對恢復時間負責」這件事商品化。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      }
+    ],
+    boardMessage: '董事會該記住的一句話：真正還沒被滿足的市場空位，不是 another platform，而是有人願意對 brownfield、air-gap、facility event 與 remote-ops 結果負責；這正是軟體部門可以被定價、被續約、也最不容易被取代的位置。'
+  },
+
   // Why standards still need a software team - sourced bridge from hardware API to business value (Added 2026-03-17 by CoCo)
   standardsGap: {
     headline: '有了 Redfish / OpenBMC，為什麼還是需要軟體部門？',
