@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { softwareDifferentiation } from './software-differentiation.js';
-import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy } from 'lucide-react';
+import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
   const [activeTab, setActiveTab] = useState('pain-points');
@@ -9,6 +9,8 @@ const SoftwareDifferentiationView = () => {
   const tabs = [
     { id: 'pain-points', label: '痛點分析', icon: <AlertTriangle className="w-4 h-4" /> },
     { id: 'competitive', label: '競爭優勢', icon: <Trophy className="w-4 h-4" /> },
+    { id: 'technical-moat', label: '技術護城河', icon: <Cpu className="w-4 h-4" /> },
+    { id: 'structural-advantages', label: '結構優勢', icon: <Factory className="w-4 h-4" /> },
     { id: 'services', label: '可定價服務', icon: <Users className="w-4 h-4" /> },
     { id: 'metrics', label: '價值指標', icon: <BarChart3 className="w-4 h-4" /> },
     { id: 'risk', label: '風險分析', icon: <Shield className="w-4 h-4" /> },
@@ -136,6 +138,109 @@ const SoftwareDifferentiationView = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'technical-moat' && (
+          <div className="space-y-6">
+            <div className="p-6 bg-gradient-to-r from-sky-50 to-indigo-50 rounded-2xl border border-sky-200">
+              <div className="flex items-start gap-3">
+                <Cpu className="w-6 h-6 text-sky-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-sky-900">{softwareDifferentiation.technicalDepth.headline}</h3>
+                  <p className="text-sm text-sky-800 mt-2 font-medium">{softwareDifferentiation.technicalDepth.coreInsight}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {softwareDifferentiation.technicalDepth.capabilities.map((item, idx) => (
+                <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h4 className="text-sm font-black text-sky-800">{item.area}</h4>
+                    <Gauge className="w-4 h-4 text-sky-500 flex-shrink-0 mt-0.5" />
+                  </div>
+                  <p className="text-sm text-slate-800 font-medium mb-3">{item.capability}</p>
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <p className="font-bold text-slate-500 mb-1">技術細節</p>
+                      <p className="text-slate-700">{item.technicalDetail}</p>
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-500 mb-1">競品缺口</p>
+                      <p className="text-slate-700">{item.competitorGap}</p>
+                    </div>
+                    <div className="p-3 bg-green-50 rounded-xl border border-green-200">
+                      <p className="font-bold text-green-700 mb-1">商業影響</p>
+                      <p className="text-slate-700">{item.businessImpact}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
+              <h4 className="text-lg font-black text-sky-900 mb-4">驗證與複製門檻</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                  <p className="font-bold text-sky-700 mb-1">客戶驗證</p>
+                  <p className="text-slate-700">{softwareDifferentiation.technicalDepth.validation.customerProof}</p>
+                </div>
+                <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                  <p className="font-bold text-sky-700 mb-1">技術審查</p>
+                  <p className="text-slate-700">{softwareDifferentiation.technicalDepth.validation.technicalReview}</p>
+                </div>
+                <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                  <p className="font-bold text-sky-700 mb-1">專利狀態</p>
+                  <p className="text-slate-700">{softwareDifferentiation.technicalDepth.validation.patentStatus}</p>
+                </div>
+                <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                  <p className="font-bold text-sky-700 mb-1">複製障礙</p>
+                  <p className="text-slate-700">{softwareDifferentiation.technicalDepth.validation.replicationBarrier}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'structural-advantages' && (
+          <div className="space-y-6">
+            <div className="p-6 bg-gradient-to-r from-violet-50 to-fuchsia-50 rounded-2xl border border-violet-200">
+              <div className="flex items-start gap-3">
+                <Factory className="w-6 h-6 text-violet-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-violet-900">{softwareDifferentiation.structuralAdvantages.headline}</h3>
+                  <p className="text-sm text-violet-800 mt-2 font-medium">{softwareDifferentiation.structuralAdvantages.coreInsight}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {softwareDifferentiation.structuralAdvantages.advantages.map((item, idx) => (
+                <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                  <h4 className="text-sm font-black text-violet-800 mb-3">{item.area}</h4>
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <p className="font-bold text-slate-500 mb-1">Foxconn 優勢</p>
+                      <p className="text-slate-700">{item.advantage}</p>
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-500 mb-1">競品做不到的地方</p>
+                      <p className="text-slate-700">{item.competitorGap}</p>
+                    </div>
+                    <div className="p-3 bg-green-50 rounded-xl border border-green-200">
+                      <p className="font-bold text-green-700 mb-1">商業影響</p>
+                      <p className="text-slate-700">{item.businessImpact}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-6 bg-violet-50 rounded-2xl border border-violet-200">
+              <h4 className="text-lg font-black text-violet-900 mb-2">管理層該記住的一句話</h4>
+              <p className="text-sm text-violet-800 font-medium">{softwareDifferentiation.structuralAdvantages.strategicImplication}</p>
             </div>
           </div>
         )}
