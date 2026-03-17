@@ -316,6 +316,26 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
+              <h3 className="text-xl font-black text-sky-900 mb-2">大型 CSP / Hyperscaler 為什麼還是會買我們的軟體？</h3>
+              <p className="text-sm text-slate-700 mb-4">即使客戶有自己的平台團隊，他們仍然會為「更快上線、更少風險、更低 TCO、更能保護既有投資」付錢。這一段很重要，因為它直接回答了管理層最常問的問題：<span className="font-semibold text-sky-700">既然大客戶也會寫軟體，為什麼還需要我們？</span></p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.hyperscalerPerspective.reasons.map((reason, idx) => (
+                  <div key={idx} className="p-5 bg-sky-50 rounded-2xl border border-sky-100">
+                    <h4 className="text-sm font-black text-sky-800 mb-2">{reason.reason}</h4>
+                    <p className="text-xs text-slate-700 mb-3">{reason.explanation}</p>
+                    <div className="p-3 bg-white rounded-xl border border-sky-100">
+                      <p className="text-xs font-bold text-sky-700 mb-1">對客戶的直接結果</p>
+                      <p className="text-xs text-slate-700">{reason.impact}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-sky-50 rounded-xl border border-sky-100">
+                <p className="text-sm font-semibold text-sky-800">管理層該記住的一句話：<span className="text-slate-700">客戶不是在買另一個 dashboard，而是在買「少養 20-50 人基礎設施團隊、少走 12-18 個月彎路、還能把風險留給單一 accountable vendor」的結果。</span></p>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-xl font-black text-slate-800 mb-4">可直接賣給客戶的軟體/服務組合</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
