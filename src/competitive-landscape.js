@@ -201,6 +201,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Brownfield Integration & Fleet Baseline',
       targetCustomer: '已有既有機房、DCIM、BMC、維護窗口流程的大型 CSP / Enterprise',
       monetization: '一次性整合專案 + 年度平台維護 / 擴充費',
+      budgetOwner: 'Infrastructure / Data Center Operations',
+      renewalDriver: '新機櫃、新機房、新設備世代接入時，版本基線與整合維護會持續發生',
       painSolved: '讓新 AI 叢集不用打掉重練，就能接入既有 Redfish / OpenBMC / DCIM / 告警 / 權限與維護流程，降低跨部門整合阻力。',
       whyUnique: 'Hyperscaler 與 GPU 廠商多半提供標準化平台，不會替每個客戶做 brownfield 對接；純硬體廠通常也只停在硬體交付。Foxconn 同時懂 BMC/韌體、叢集軟體與現場交付流程，才能把「可管理性」做成真正可落地的服務。',
       evidence: 'DMTF Redfish 強調以現代 API 暴露標準化硬體管理能力；OpenBMC 提供可延伸的 BMC 基礎，但真正把它接進既有營運體系、版本治理與維護流程的是上層軟體整合能力。',
@@ -210,6 +212,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Lifecycle Control Tower',
       targetCustomer: '大型 CSP / Hyperscaler 私有叢集',
       monetization: '年度訂閱 + 升級事件顧問服務',
+      budgetOwner: 'Platform Engineering / SRE / Change Advisory Board',
+      renewalDriver: '每季升級、版本驗證、maintenance window 與 rollback 演練都需要持續服務',
       painSolved: '把驅動、韌體、CUDA、Kubernetes 升級從高風險停機事件，變成可排程、可回滾、可稽核的標準流程。',
       whyUnique: '結合 BMC / BIOS / GPU 韌體與上層叢集編排，能做版本矩陣驗證、canary、maintenance window、rollback。純雲平台不做客戶現場韌體深度整合，純硬體廠又通常不做軟體流程產品化。',
       evidence: 'NVIDIA Mission Control 官方強調 cluster life cycle、continuous health checks、autonomous recovery。',
@@ -219,6 +223,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Remote Ops & Predictive Maintenance',
       targetCustomer: '跨站點部署的 CSP、代管機房、海外據點',
       monetization: '節點數授權 + 遠端維運 SLA',
+      budgetOwner: 'Operations / Customer Support / Service Delivery',
+      renewalDriver: 'SLA 承諾、夜間值班、全球站點覆蓋與故障趨勢模型會讓客戶傾向年約續訂',
       painSolved: '降低半夜派人到場與跨國維修成本，把問題在現場前就預警並遠端診斷。',
       whyUnique: 'Foxconn 同時握有硬體遙測、BMC 控制、叢集事件與料件知識，可把監控延伸到可操作的遠端修復與預測性維護，而不只是一個 dashboard。',
       evidence: 'HPE Private Cloud AI 官方強調 built-in observability 與 full stack visibility，代表市場已把持續可觀測與服務可用性視為核心能力。',
@@ -228,6 +234,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Sovereign RAG Appliance',
       targetCustomer: '金融、醫療、政府、製造等不能把資料送上公雲的企業',
       monetization: '一體機專案 + 年度軟體維護 + 權限治理加值模組',
+      budgetOwner: 'Business Unit / CIO Office / Compliance-driven AI program',
+      renewalDriver: '知識庫擴充、權限治理、模型/向量庫更新與稽核需求都會把一次性案子變成年維護',
       painSolved: '讓沒有 AI 平台團隊的企業，也能在本地或 air-gapped 環境快速上線文件問答與知識庫檢索。',
       whyUnique: '不是只賣模型 endpoint，而是把資料匯入、權限、向量化、模型 serving、觀測與本地部署交付整合在一起。',
       evidence: 'Red Hat OpenShift AI 官方強調 model lifecycle、model monitoring、hybrid cloud flexibility，代表企業需要的是完整生命週期平台，而不是單一模型工具。',
@@ -237,6 +245,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Air-Gap Update Factory',
       targetCustomer: '主權 AI、政府、金融與任何禁止外網連線的 AI 叢集',
       monetization: '年度訂閱 + 每次大版本升級/安全修補服務費',
+      budgetOwner: 'Security / Compliance / Platform Operations',
+      renewalDriver: '每次 CVE 修補、模型更新、容器鏡像同步與離線版本簽核都需要持續交付',
       painSolved: '解決 air-gapped 環境上線後的 Day-2 營運痛點：離線容器鏡像、模型/套件同步、修補節奏、變更審計與回滾，不再讓客戶自己用人工腳本維持離線環境。',
       whyUnique: '這不是單純賣硬體，也不是單純賣平台，而是把離線內容供應、版本治理、維護窗口與現場交付包成可續約服務。Foxconn 同時懂機房交付、叢集軟體與版本相依，最有機會把這件麻煩但高價值的工作產品化。',
       evidence: 'Red Hat 針對 OpenShift AI Self-Managed 提供獨立的 disconnected environment 文件，顯示企業級 AI 平台在斷網環境下需要專門的安裝與後續營運方法。',
@@ -246,12 +256,56 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       name: 'Facility-Aware Capacity Assurance',
       targetCustomer: '已有既有機電/BMS/DCIM、且 AI 負載會受電力與散熱上限牽制的大型資料中心',
       monetization: '年度訂閱 + 容量擴充/事件演練顧問服務',
+      budgetOwner: 'Data Center Operations / Facilities / Capacity Planning',
+      renewalDriver: '容量規劃、演練、季節性負載變化與新機櫃上線會讓客戶持續需要事件協調能力',
       painSolved: '把 power cap、cooling event、leakage / thermal alarm 這些原本分散在機房與 IT 團隊之間的訊號，變成可執行的 AI 叢集營運流程，避免局部設施事件拖垮整個訓練或推論服務。',
       whyUnique: 'GPU 廠商多半只優化自家 reference stack，純 DCIM/BMS 廠又看不到 GPU 作業與工作負載排程。Foxconn 站在伺服器、韌體、叢集與現場交付之間，才有機會把「設施事件」轉成「工作負載保護與 SLA 保證」。',
       evidence: 'NVIDIA Mission Control 官方已把 building management integration、power and cooling control、rapid leakage detection 放進 AI factory operations 範疇，代表這是高價值且被驗證的軟體層戰場。Foxconn 的機會在於把這種能力帶進 mixed-vendor、brownfield 環境。',
       source: 'https://www.nvidia.com/en-us/data-center/mission-control/',
     },
   ],
+  serviceValueCaptureMatrix: {
+    headline: '不是功能清單，而是可持續拿預算的服務地圖',
+    summary: '老闆在意的不只是「我們能做什麼」，而是「誰會為這些東西付錢、為什麼明年還會繼續付」。這張表把軟體部門的價值直接翻成預算 owner、續約理由與 board-level outcome。',
+    rows: [
+      {
+        service: 'Brownfield Integration & Fleet Baseline',
+        budgetOwner: 'Infrastructure / DC Operations',
+        trigger: '新 AI 叢集要接入既有機房治理流程',
+        recurringReason: '每新增場域、機櫃、設備世代都要延續版本基線與整合維護',
+        boardOutcome: '降低導入阻力，讓硬體訂單更容易落地'
+      },
+      {
+        service: 'Lifecycle Control Tower',
+        budgetOwner: 'Platform Engineering / SRE',
+        trigger: '季度升級、driver/CUDA/K8s 變更、SLA 壓力',
+        recurringReason: '升級不是一次性事件，而是每季都會發生的治理工作',
+        boardOutcome: '把停機風險變成可控流程，保護毛利與客戶信任'
+      },
+      {
+        service: 'Remote Ops & Predictive Maintenance',
+        budgetOwner: 'Operations / Service Delivery',
+        trigger: '跨站點運維、夜間故障、缺工與 SLA 需求',
+        recurringReason: '值班、監控、模型更新與 SLA 報告天然適合年約',
+        boardOutcome: '從一次性交機，變成可續約的服務收入'
+      },
+      {
+        service: 'Sovereign RAG / Air-Gap Services',
+        budgetOwner: 'CIO Office / Compliance-driven AI Program',
+        trigger: '資料不能上雲、需在地化與審計',
+        recurringReason: '知識庫擴充、權限治理、離線更新與稽核需求持續存在',
+        boardOutcome: '切入雲廠不擅長服務的高附加價值市場'
+      },
+      {
+        service: 'Facility-Aware Capacity Assurance',
+        budgetOwner: 'Facilities / Capacity Planning',
+        trigger: 'AI 負載撞上 power/cooling 上限，需跨 IT 與機電協調',
+        recurringReason: '容量規劃、事件演練與季節性負載管理都需要持續服務',
+        boardOutcome: '把設施瓶頸變成可管理能力，延後昂貴擴建'
+      }
+    ],
+    boardMessage: '一旦軟體部門能對應到不同預算 owner，Foxconn 賣的就不只是 server BOM，而是跨部門、跨年度、可續約的營運能力。'
+  },
   // Messaging for leadership
   executiveSummary: {
     thesis: 'Software is the differentiator that turns commodity hardware into premium solutions.',
