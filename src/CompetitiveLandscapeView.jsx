@@ -335,6 +335,30 @@ const CompetitiveLandscapeView = () => {
               </div>
             </div>
 
+            {/* Risk Timeline */}
+            <div className="p-6 bg-amber-50 rounded-2xl border border-amber-200">
+              <h4 className="text-lg font-black text-amber-900 mb-2 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5" />
+                {competitiveLandscape.riskTimeline?.headline}
+              </h4>
+              <p className="text-sm text-amber-800 mb-4">{competitiveLandscape.riskTimeline?.summary}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {competitiveLandscape.riskTimeline?.milestones.map((milestone, idx) => (
+                  <div key={idx} className="p-4 bg-white rounded-xl border border-amber-100">
+                    <p className="text-sm font-black text-amber-800 mb-3">{milestone.quarter}</p>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-green-600">若現在投資：</span>{milestone.ifInvest}</p>
+                      <p><span className="font-bold text-red-600">若繼續拖延：</span>{milestone.ifDelay}</p>
+                      <p><span className="font-bold text-slate-500">市場結果：</span>{milestone.marketImpact}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-amber-100">
+                <p className="text-sm font-semibold text-amber-900">{competitiveLandscape.riskTimeline?.boardMessage}</p>
+              </div>
+            </div>
+
             {/* Success Metrics */}
             <div className="p-6 bg-green-50 rounded-2xl border border-green-200">
               <h4 className="text-lg font-black text-green-800 mb-4 flex items-center gap-2">

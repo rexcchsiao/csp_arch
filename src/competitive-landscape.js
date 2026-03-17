@@ -317,6 +317,37 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       mitigation: 'RAG Appliance + Local DC = Sovereign AI-in-a-Box. First-mover advantage in compliance-driven markets',
     },
   ],
+  riskTimeline: {
+    headline: '拖延的季度代價：從錯失窗口到商品化',
+    summary: '風險不是「總有一天」才發生，而是每延一季，客戶認知、人才吸引力與毛利結構都會同步惡化。這也是為什麼軟體投資必須是現在，而不是明年。',
+    milestones: [
+      {
+        quarter: '2026 Q2',
+        ifInvest: '完成組織設計、啟動 15-20 人首波招募、Lab 建置開始',
+        ifDelay: '仍停留在硬體敘事，沒有清楚軟體 roadmap',
+        marketImpact: '競品開始用「軟體能力」重新包裝 AI 伺服器提案，Foxconn 在比較表上先失一分'
+      },
+      {
+        quarter: '2026 Q4',
+        ifInvest: '拿出第一個 Remote Ops / RAG 案例，建立 attach rate 起點',
+        ifDelay: '第一個大型標案更容易被 Dell / HPE / NVIDIA 軟體敘事吃掉',
+        marketImpact: '損失的不只是單筆訂單，而是市場開始把 Foxconn 歸類為「硬體-only vendor」'
+      },
+      {
+        quarter: '2027 Q2',
+        ifInvest: '形成 12% 軟體 attach rate，開始有續約與 ARR 能見度',
+        ifDelay: '關鍵人才更難招，客戶要求更多折價來彌補軟體缺口',
+        marketImpact: '毛利結構開始被壓平，品牌定位從 solution partner 退回 price-based supplier'
+      },
+      {
+        quarter: '2028 Q1',
+        ifInvest: '可望站上 20-25% 解決方案毛利與 NT$ 750M run-rate',
+        ifDelay: '進入 5-8% commodity margin 區間，追趕成本倍增',
+        marketImpact: '累積機會損失超過 NT$ 1.5B，且市場認知修復至少需要數年'
+      }
+    ],
+    boardMessage: '這條時間軸的重點不是恐嚇，而是提醒管理層：軟體投資的真正成本，不在預算表上，而在每一季被錯過的 attach rate、續約收入與定價權。'
+  },
 
 // Hyperscaler AI Infrastructure Threat - Specific counter-positioning (added 2026-03-15)
 hyperscalerThreat: {
