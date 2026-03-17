@@ -16,6 +16,14 @@ const ExecutiveSummaryView = () => {
   ];
 
   const revenueProjection = softwareDifferentiation.serviceOfferings?.revenueProjection;
+  const revenueProjectionEntries = revenueProjection
+    ? Object.entries(revenueProjection).filter(([key]) => key !== 'assumption')
+    : [];
+  const revenueProjectionLabels = {
+    year1: '2026 年（首年）',
+    year2: '2027 年',
+    year3: '2028 年',
+  };
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
   const standardsSources = competitiveSources.standards || [];
 
@@ -174,10 +182,10 @@ const ExecutiveSummaryView = () => {
             <DollarSign className="w-5 h-5 text-green-400" /> 軟體服務營收預測（保守估計）
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {Object.entries(revenueProjection).map(([year, data]) => (
+            {revenueProjectionEntries.map(([year, data]) => (
               <div key={year} className="bg-white/10 rounded-2xl p-5">
                 <p className="text-xs font-bold uppercase tracking-widest mb-2 text-slate-400">
-                  {year === 'year1_2026' ? '2026 年（首年）' : year === 'year2_2027' ? '2027 年' : '2028 年'}
+                  {revenueProjectionLabels[year] || year}
                 </p>
                 <div className="mb-4">
                   <p className="text-3xl font-black text-green-400">{data.total}</p>
@@ -188,7 +196,7 @@ const ExecutiveSummaryView = () => {
             ))}
           </div>
           <p className="text-xs text-slate-400 mt-4">
-            假設條件：2026-2028 年 AI 伺服器營收為 NT$ 1.5B, 2B, 3.5B，軟體服務滲透率逐年提升至 20%
+            假設條件：{revenueProjection.assumption}
           </p>
         </div>
       )}
