@@ -154,6 +154,12 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       foxconnSolution: 'Foxconn lifecycle orchestration: version matrix validation, rolling firmware/driver updates, canary nodes, automatic rollback, and maintenance-window reporting.',
       evidence: 'NVIDIA Mission Control emphasizes orchestration and autonomous recovery, while HPE Private Cloud AI emphasizes turnkey deployment speed—both validate that operations discipline, not raw hardware, determines sustained ROI.',
     },
+    {
+      problem: 'Power / Cooling Event Coordination in Existing Facilities',
+      description: 'AI clusters increasingly hit facility-level constraints first: rack power caps, cooling anomalies, and leakage or thermal events. Brownfield datacenters need software that coordinates server, cluster, and building responses without forcing a full facility redesign.',
+      foxconnSolution: 'Facility-aware control plane: correlate BMC telemetry, Redfish events, scheduler policies, and existing BMS/DCIM workflows so Foxconn can throttle, drain, rebalance, or stage maintenance before a local infrastructure issue becomes a cluster outage.',
+      evidence: 'NVIDIA Mission Control explicitly positions building management integration, power and cooling control, and rapid leakage detection as AI-factory operations needs. That validates the problem; Foxconn differentiates by bringing the same outcome to mixed-vendor, brownfield facilities instead of only NVIDIA-validated environments.',
+    },
   ],
   softwareDepartmentWedge: {
     headline: '軟體部門真正可守住、可定價的價值楔子',
@@ -235,6 +241,15 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       whyUnique: '這不是單純賣硬體，也不是單純賣平台，而是把離線內容供應、版本治理、維護窗口與現場交付包成可續約服務。Foxconn 同時懂機房交付、叢集軟體與版本相依，最有機會把這件麻煩但高價值的工作產品化。',
       evidence: 'Red Hat 針對 OpenShift AI Self-Managed 提供獨立的 disconnected environment 文件，顯示企業級 AI 平台在斷網環境下需要專門的安裝與後續營運方法。',
       source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index',
+    },
+    {
+      name: 'Facility-Aware Capacity Assurance',
+      targetCustomer: '已有既有機電/BMS/DCIM、且 AI 負載會受電力與散熱上限牽制的大型資料中心',
+      monetization: '年度訂閱 + 容量擴充/事件演練顧問服務',
+      painSolved: '把 power cap、cooling event、leakage / thermal alarm 這些原本分散在機房與 IT 團隊之間的訊號，變成可執行的 AI 叢集營運流程，避免局部設施事件拖垮整個訓練或推論服務。',
+      whyUnique: 'GPU 廠商多半只優化自家 reference stack，純 DCIM/BMS 廠又看不到 GPU 作業與工作負載排程。Foxconn 站在伺服器、韌體、叢集與現場交付之間，才有機會把「設施事件」轉成「工作負載保護與 SLA 保證」。',
+      evidence: 'NVIDIA Mission Control 官方已把 building management integration、power and cooling control、rapid leakage detection 放進 AI factory operations 範疇，代表這是高價值且被驗證的軟體層戰場。Foxconn 的機會在於把這種能力帶進 mixed-vendor、brownfield 環境。',
+      source: 'https://www.nvidia.com/en-us/data-center/mission-control/',
     },
   ],
   // Messaging for leadership
