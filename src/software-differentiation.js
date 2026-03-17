@@ -316,6 +316,13 @@ structuralAdvantages: {
         takeaway: '企業客戶已經把 AI 平台需求往治理、成本、監控與自助化移動。Foxconn 若要說服管理層，就該把自己定位成把這些能力延伸到 L9-L12 與機房營運現場的人。',
         sourceLabel: 'Red Hat OpenShift AI',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
+        company: 'Supermicro SuperCloud Composer',
+        proof: 'Supermicro 已把液冷與設施層遙測放進官方軟體敘事，強調可管理 CDU / cooling tower sensor、pressure、humidity、temperature、pump status 與 component health。',
+        takeaway: '這代表「設施可視化」正快速變成硬體廠的基本盤。Foxconn 若只停在監控，就很難拉開差距；更高價值的位置，是把這些訊號接成 power / cooling event governance、容量保證與 brownfield 營運服務。',
+        sourceLabel: 'Supermicro SuperCloud Composer',
+        source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
@@ -349,6 +356,14 @@ structuralAdvantages: {
         boardWhyItMatters: '這把軟體部門從交付配角變成合規、續約與主權 AI 方案的 owner。',
         sourceLabel: 'Red Hat OpenShift AI + Disconnected Environments',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
+        title: 'Facility Assurance',
+        marketSignal: 'Supermicro 已開始把液冷與設施層遙測納入官方軟體敘事；NVIDIA Mission Control 也直接主打 building management integration、power / cooling control。',
+        foxconnPlay: 'Foxconn 不該只賣 facility monitoring，而要把 BMC、scheduler、DCIM / BMS、power cap 與 cooling event 串成 facility assurance：遇到設施事件時，能排空、降載、重平衡、保住 SLA，並保留 brownfield 機房的既有流程。',
+        boardWhyItMatters: '這把軟體價值從「看得到告警」提升成「能延後擴建、減少 outage、形成年度容量治理收入」；也更符合大型 CSP / 企業真正會編列預算的語言。',
+        sourceLabel: 'Supermicro SuperCloud Composer + NVIDIA Mission Control',
+        source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       }
     ],
     boardMessage: '董事會該記住的一句話：硬體讓客戶「買得到 AI」，軟體部門的 Day-2 Assurance 讓客戶「敢長期把營運風險交給我們」。'
