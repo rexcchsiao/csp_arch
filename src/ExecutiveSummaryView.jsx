@@ -28,6 +28,38 @@ const ExecutiveSummaryView = () => {
   const standardsSources = competitiveSources.standards || [];
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
+  const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
+  const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
+  const buyerScorecardSignals = [
+    {
+      criterion: 'Deployment speed now appears in the buying language',
+      marketSignal: 'HPE explicitly sells deploy-in-days, validated stack, and built-in observability instead of just server specifications.',
+      whyItChangesProcurement: 'Once the market talks in time-to-value language, software stops looking optional and starts affecting RFQ scoring.',
+      foxconnMove: 'Package factory pre-load, site acceptance, and standardized runbooks as Deployment Assurance rather than “integration support.”',
+      source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+    },
+    {
+      criterion: 'Lifecycle and recovery are becoming first-class requirements',
+      marketSignal: 'NVIDIA Mission Control positions cluster life cycle, autonomous recovery, and building-management integration as product value.',
+      whyItChangesProcurement: 'This shifts buyer attention from “can it be installed?” to “who owns Day-2 risk when the cluster is live?”.',
+      foxconnMove: 'Sell Lifecycle Control Tower and Facility-Aware Capacity Assurance as accountable operating outcomes.',
+      source: missionControlSource?.name || 'NVIDIA Mission Control',
+    },
+    {
+      criterion: 'Governance and cost visibility are now platform requirements',
+      marketSignal: 'Red Hat OpenShift AI emphasizes monitoring, cost control, self-service access, and hybrid operations.',
+      whyItChangesProcurement: 'Once multiple teams share an AI cluster, quota, showback, and policy enforcement become budget-owner issues—not engineering nice-to-haves.',
+      foxconnMove: 'Push tenant governance, GPU showback, and quota policy as the layer that makes shared AI infrastructure financially governable.',
+      source: openshiftAISource?.name || 'Red Hat OpenShift AI',
+    },
+    {
+      criterion: 'Neutral integration becomes a board-level differentiator',
+      marketSignal: 'Dell, HPE, and NVIDIA all package outcomes around their own infrastructure and ecosystem choices.',
+      whyItChangesProcurement: 'That makes mixed-vendor freedom, brownfield fit, and single-accountability integration more valuable for customers protecting existing assets.',
+      foxconnMove: 'Position Foxconn software as the neutral operations layer across mixed infrastructure, not another closed stack.',
+      source: dellAIFactorySource?.name || 'Dell AI Factory / broader OEM ecosystem pattern',
+    },
+  ];
   const marketWhitespace = [
     {
       title: 'Day-2 Lifecycle Governance 仍然是痛點',
@@ -278,6 +310,34 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-violet-100 bg-white p-4">
           <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">Hyperscaler 不是不會寫軟體，而是不想把最難規模化、最靠近設施現場、最容易出事又最難續命的那一層，全部自己做完。那一層正是 Foxconn 軟體部門最能創造 attach rate 與年約收入的地方。</span></p>
+        </div>
+      </div>
+
+      {/* Buyer scorecard shift */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Award className="w-5 h-5 text-amber-600" /> 採購評分表其實已經開始偏向軟體了
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          老闆最容易低估的一點是：市場不是只有「大家都有平台」而已，連官方產品語言都已經在偷偷改評分標準。
+          當競爭對手開始用部署速度、生命週期、治理、成本與設施整合來賣方案時，代表客戶採購看的不再只是規格表，而是誰能把 AI 叢集變成可持續營運的資產。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {buyerScorecardSignals.map((item) => (
+            <div key={item.criterion} className="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-amber-600 mb-2">Buyer Scorecard Shift</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.criterion}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                <p><span className="font-bold text-amber-700">為什麼這會改變採購：</span>{item.whyItChangesProcurement}</p>
+                <p><span className="font-bold text-emerald-700">Foxconn 應該怎麼卡位：</span>{item.foxconnMove}</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-4">Source anchor: {item.source}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-amber-100 bg-white p-4">
+          <p className="text-sm font-semibold text-amber-900">給管理層的翻譯版：<span className="text-slate-700">如果採購評分表已經開始看 deployment speed、Day-2 lifecycle、governance 與 mixed-vendor fit，那軟體部門就不是成本附屬，而是最直接影響勝率、attach rate 與後續續約的主戰場。</span></p>
         </div>
       </div>
 
