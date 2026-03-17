@@ -14,7 +14,9 @@ const SourceReferencesView = () => {
     { id: 'standards', label: '管理標準', icon: <CheckCircle className="w-4 h-4" />, color: 'emerald' },
   ];
 
-  const sources = competitiveSources[activeCategory] || [];
+  const sources = activeCategory === 'dell'
+    ? [...(competitiveSources.dell || []), ...(competitiveSources.hpe || [])]
+    : (competitiveSources[activeCategory] || []);
 
   return (
     <div className="bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden">
