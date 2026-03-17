@@ -883,6 +883,14 @@ structuralAdvantages: {
 				targetCustomer: '國防、政府、金融、主權雲與需 air-gap 的企業'
 			},
 			{
+				name: 'Capacity Assurance / Power-Cooling Governance 服務',
+				description: '把 BMC 遙測、rack power cap、cooling event、漏液/熱點告警、building management workflow 與工作負載排程串成可執行的容量治理與事件應對流程，先做 readiness assessment，再延伸到持續性治理',
+				pricing: 'NT$ 400K-1.5M/案 + 年度容量治理/SLA 顧問費',
+				margin: '65-75%',
+				differentiation: '不是只給監控畫面，而是把 AI 機房最容易卡住的 power / cooling / facility coordination 問題做成可量化、可續約的服務；這正好對應 NVIDIA Mission Control 已公開強調的 building management integration、power optimization 與 power/cooling event control 需求',
+				targetCustomer: '大型 CSP、電信商、液冷導入中的 AI 資料中心、既有 brownfield 機房'
+			},
+			{
 				name: 'RAG 一體機部署服務',
 				description: '私有 AI 知識庫端到端部署，含文件處理、權限治理、系統整合',
 				pricing: 'NT$ 500K-2M/案（一次性）+ 15-20% 年維運費',
