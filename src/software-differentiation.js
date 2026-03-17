@@ -71,6 +71,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Air-Gap Content Pipeline：離線 registry / chart mirror、版本簽章、更新包驗證、升級 runbook 與稽核證據包自動產出',
       valueAmplification: '把「斷網環境無法規模化維運」變成可續約服務，讓主權 AI / 國防 / 金融客戶願意長期把營運治理交給我們',
     },
+    {
+      id: 'pp9',
+      problem: 'AI 機房先撞到的是 power / cooling 上限，不是 GPU 不夠',
+      impact: '很多 brownfield 機房不是不能再買 GPU，而是 rack power cap、冷卻事件、漏液/熱點風險讓新叢集無法穩定擴容；若缺少軟體協調，局部設施事件就可能拖垮整個 AI 服務',
+      softwareSolution: 'Facility-Aware Capacity Assurance：把 BMC 遙測、排程策略、power cap、cooling event 與 building management workflow 串成可執行的容量與事件治理流程',
+      valueAmplification: '把「要不要先花大錢擴建機房」改成「先用軟體把既有設施吃滿、把 outage 風險降下來」；軟體部門因此直接影響擴容速度、SLA 與資本支出節奏',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -116,6 +123,12 @@ export const softwareDifferentiation = {
       foxconn: '提供離線內容同步、升級包驗證、版本簽章與稽核證據輸出，把 disconnected operation 做成標準服務',
       competitors: '多數方案只證明「可安裝」，但缺乏離線更新治理、證據留存與長期維運方法論',
       whyItMatters: '主權 AI 客戶買的不只是可部署，而是 12-36 個月都能持續更新、可被稽核、且不必每次叫原廠現場救火',
+    },
+    {
+      category: '設施感知容量治理',
+      foxconn: '把 BMC / 叢集 / building management 訊號接成 Facility-Aware Capacity Assurance，遇到 power cap、cooling event、thermal / leakage alarm 時能保住工作負載與 SLA',
+      competitors: '多數 OEM/ODM 不是只看到伺服器，就是只做到 DCIM 告警，缺乏把設施事件轉成 AI 工作負載治理的軟體層',
+      whyItMatters: '在 power-constrained datacenter，客戶買的不是更多監控，而是更少擴建衝動、更少意外降載與更可預測的容量使用',
     },
   ],
 
@@ -730,9 +743,9 @@ structuralAdvantages: {
 		cards: [
 			{
 				company: 'NVIDIA Mission Control',
-				proof: '官方直接把 cluster life cycle、autonomous recovery、building management integration、power / cooling control 放進 AI factory operations 敘事。',
-				buyerTranslation: '客戶買的不是監控畫面，而是「出事時不用自己把 IT、機電、SRE 全部叫醒」的營運保證。',
-				foxconnPlay: 'Foxconn 應把 Lifecycle Control Tower 與 Facility-Aware Capacity Assurance 打包成 SLA / 風險轉移服務，而不是只講監控功能。',
+				proof: '官方直接把 cluster life cycle、autonomous recovery、building management integration、power / cooling control 放進 AI factory operations 敘事，甚至強調在 power-constrained 環境可用 validated power optimization 達到 85% power、93% performance throughput。',
+				buyerTranslation: '客戶買的不是監控畫面，而是「就算機房電力/散熱受限，也不用立刻擴建，還能把 IT、機電、SRE 的協調風險一起轉出去」的營運保證。',
+				foxconnPlay: 'Foxconn 應把 Lifecycle Control Tower 與 Facility-Aware Capacity Assurance 打包成 SLA / 風險轉移服務，主張我們賣的是 power-aware operations 與 capacity assurance，而不是只講監控功能。',
 				sourceLabel: 'NVIDIA Mission Control',
 				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
 			},
