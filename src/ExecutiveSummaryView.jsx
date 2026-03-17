@@ -26,6 +26,26 @@ const ExecutiveSummaryView = () => {
   };
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
   const standardsSources = competitiveSources.standards || [];
+  const hyperscalerKeepInHouseVsBuy = [
+    {
+      title: 'Change Safety / Lifecycle Control',
+      summary: '大型 CSP 當然能自己寫平台，但最不想自己背的是跨 BMC、BIOS、GPU 韌體、CUDA、K8s 的升級風險與 maintenance window 治理。',
+      foxconnEdge: 'Foxconn 能把版本矩陣、canary、rollback、稽核報表做成可交付服務，讓客戶少養一支專門處理變更事故的團隊。',
+      source: 'NVIDIA Mission Control / Lifecycle orchestration positioning',
+    },
+    {
+      title: 'Brownfield Integration',
+      summary: 'Hyperscaler 的內部軟體通常偏向標準化，最耗時的反而是把新 AI 叢集接回既有機房、DCIM、權限與告警流程。',
+      foxconnEdge: 'Foxconn 站在硬體、韌體、系統整合與現場交付交界，最有資格承接這種「髒但值錢」的導入工作。',
+      source: 'DMTF Redfish / OpenBMC foundations + existing-facility integration thesis',
+    },
+    {
+      title: 'Facility-Aware Capacity Assurance',
+      summary: '真正讓 AI 專案爆掉的常不是模型，而是 rack power cap、cooling event、thermal / leakage alarm 這些跨 IT 與機電的協調問題。',
+      foxconnEdge: 'Foxconn 可把 BMC 遙測、排程策略與既有 BMS/DCIM 流程串起來，賣的是「避免設施事件變成叢集 outage」的結果。',
+      source: 'NVIDIA Mission Control building management / power-cooling integration',
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -175,6 +195,34 @@ const ExecutiveSummaryView = () => {
           <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
             <p className="text-sm font-semibold text-blue-900">{competitiveLandscape.serviceValueCaptureMatrix?.boardMessage}</p>
           </div>
+        </div>
+      </div>
+
+      {/* What hyperscalers still prefer to buy instead of build */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Zap className="w-5 h-5 text-violet-600" /> 即使 CSP / Hyperscaler 很強，也不想自己扛的 3 個軟體層
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一頁最重要的作用，是回答管理層那句常見質疑：<span className="font-semibold text-slate-900">「大客戶自己就有平台團隊了，為什麼還需要 Foxconn？」</span>
+          真正答案不是「他們不會做」，而是<span className="font-semibold text-violet-700">有些事情他們會做，但不值得自己從 0 開始做；有些事情則是太靠近現場、太跨部門、太髒太長尾，反而更適合交給同時懂硬體、韌體、交付與 Day-2 營運的供應商。</span>
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {hyperscalerKeepInHouseVsBuy.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-violet-100 bg-violet-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-2">Why they still buy</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+              <p className="text-xs text-slate-700 mb-3 leading-relaxed">{item.summary}</p>
+              <div className="rounded-xl border border-white/80 bg-white p-3 mb-3">
+                <p className="text-xs font-bold text-violet-700 mb-1">Foxconn 可收費的理由</p>
+                <p className="text-xs text-slate-700 leading-relaxed">{item.foxconnEdge}</p>
+              </div>
+              <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-violet-100 bg-white p-4">
+          <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">Hyperscaler 不是不會寫軟體，而是不想把最難規模化、最靠近設施現場、最容易出事又最難續命的那一層，全部自己做完。那一層正是 Foxconn 軟體部門最能創造 attach rate 與年約收入的地方。</span></p>
         </div>
       </div>
 
