@@ -64,6 +64,23 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
+              <h4 className="text-lg font-black text-indigo-900 mb-2">{softwareDifferentiation.standardsGap.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.standardsGap.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.standardsGap.evidence.map((item, idx) => (
+                  <div key={idx} className="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <p className="text-xs font-bold text-slate-800 mb-2">{item.point}</p>
+                    <p className="text-xs text-slate-600">{item.implication}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                <p className="text-sm font-semibold text-indigo-800">{softwareDifferentiation.standardsGap.boardMessage}</p>
+                <p className="text-xs text-slate-500 mt-2">Sources: DMTF Redfish, OpenBMC Project, NVIDIA Mission Control</p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 gap-4">
               {softwareDifferentiation.painPoints.map((point) => (
                 <div 

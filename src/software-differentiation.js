@@ -265,6 +265,27 @@ structuralAdvantages: {
 },
 
 
+  // Why standards still need a software team - sourced bridge from hardware API to business value (Added 2026-03-17 by CoCo)
+  standardsGap: {
+    headline: '有了 Redfish / OpenBMC，為什麼還是需要軟體部門？',
+    coreInsight: '標準化管理介面解決的是「能不能讀寫設備」，不是「怎麼把升級、回滾、權限、SLA、跨機房流程做成可規模化營運」。真正的差異化，發生在標準之上的工作流、治理與自動化。',
+    evidence: [
+      {
+        point: 'DMTF Redfish 提供的是 secure、machine-readable 的硬體管理標準與 interoperability profiles。',
+        implication: '這證明硬體管理 API 正在標準化，但也代表 OEM 若只停在 API 層，就很容易被視為可替換供應商。'
+      },
+      {
+        point: 'OpenBMC 提供的是 standard baseboard management controller firmware stack。',
+        implication: 'BMC 本身只是地基；客戶真正付費的是跨機種一致操作、升級治理、遠端修復、審計與 fleet policy。'
+      },
+      {
+        point: 'NVIDIA Mission Control 已把 cluster deployment、workload orchestration、building management integration、autonomous recovery 包成產品。',
+        implication: '市場已證明價值不在「有沒有標準 API」，而在誰能把這些能力做成可持續運營的 control plane。'
+      }
+    ],
+    boardMessage: '這正是軟體部門的不可替代性：把標準介面，變成可交付、可治理、可續約的營運能力。'
+  },
+
   // Value metrics - quantifiable impact of software
   valueMetrics: {
     'GPU 利用率提升': { before: '40-60%', after: '85%+', improvement: '+42%' },
