@@ -336,6 +336,27 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
+              <h3 className="text-xl font-black text-indigo-900 mb-2">董事會更在意的其實是：誰會付錢、為什麼明年還會再付</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把軟體部門的價值，從「功能很多」翻譯成「可對應預算 owner、可形成續約理由、可跨年度放大硬體 attach rate」的收入地圖。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {softwareDifferentiation.serviceOfferings.budgetMap.rows.map((row, idx) => (
+                  <div key={idx} className="p-5 bg-indigo-50 rounded-2xl border border-indigo-100">
+                    <h4 className="text-sm font-black text-indigo-800 mb-3">{row.service}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">預算 owner：</span>{row.budgetOwner}</p>
+                      <p><span className="font-bold text-slate-500">為什麼現在會買：</span>{row.whyNow}</p>
+                      <p><span className="font-bold text-blue-600">為什麼明年還會續：</span>{row.renewalDriver}</p>
+                      <p><span className="font-bold text-green-600">董事會看見的結果：</span>{row.boardOutcome}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                <p className="text-sm font-semibold text-indigo-800">{softwareDifferentiation.serviceOfferings.budgetMap.boardMessage}</p>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-xl font-black text-slate-800 mb-4">可直接賣給客戶的軟體/服務組合</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

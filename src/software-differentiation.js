@@ -664,6 +664,41 @@ structuralAdvantages: {
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
+		budgetMap: {
+			headline: '這些服務不是誰都能賣：軟體部門如何對應不同預算 owner',
+			summary: '要讓管理層真的看見軟體價值，不能只列功能，而要說清楚：誰會買、為什麼每年還會繼續買、以及這筆收入為何不會只停在一次性交付。',
+			rows: [
+				{
+					service: 'Brownfield Integration & Fleet Baseline',
+					budgetOwner: 'Infrastructure / DC Operations',
+					whyNow: '新 AI 叢集要接入既有機房、資產、告警與維護窗口流程',
+					renewalDriver: '每新增場域、機櫃或設備世代，都需要延續版本基線與整合維護',
+					boardOutcome: '降低導入阻力，讓硬體訂單更容易真正落地'
+				},
+				{
+					service: 'Lifecycle Control Tower',
+					budgetOwner: 'Platform Engineering / SRE / CAB',
+					whyNow: '季度升級、驅動/CUDA/K8s 變更、SLA 壓力都會觸發治理需求',
+					renewalDriver: '升級不是一次性事件，而是每季都會發生的風險管理工作',
+					boardOutcome: '把停機風險變成可控流程，保護毛利與客戶信任'
+				},
+				{
+					service: 'Remote Ops & Predictive Maintenance',
+					budgetOwner: 'Operations / Service Delivery',
+					whyNow: '跨站點運維、夜間故障、缺工與 SLA 需求持續升高',
+					renewalDriver: '值班、監控模型、備品策略與 SLA 報告天然適合年約',
+					boardOutcome: '把一次性交機，轉成可續約的年度服務收入'
+				},
+				{
+					service: 'Sovereign RAG / Air-Gap Services',
+					budgetOwner: 'CIO Office / Compliance-driven AI Program',
+					whyNow: '資料不能上雲、需在地化與稽核的 AI 專案快速增加',
+					renewalDriver: '知識庫擴充、權限治理、離線更新與稽核證據會持續發生',
+					boardOutcome: '切入雲廠不擅長服務的高附加價值市場'
+				},
+			],
+			boardMessage: '軟體部門最值得投資的地方，是它能把同一套硬體 attach 到不同部門預算，並把收入型態從一次性 BOM 變成跨年度續約。'
+		},
 	// Quick Win Services: Prioritized by time-to-market and development effort (Added 2026-03-16 by CoCo)
 	quickWins: {
 		headline: '快速變現服務：3 個月內可上線',
