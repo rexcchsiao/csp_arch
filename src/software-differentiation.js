@@ -772,9 +772,9 @@ structuralAdvantages: {
 			{
 				stage: 'Stage 1｜低阻力切入',
 				focus: '用短週期、低風險服務先進場',
-				offerings: ['GPU 效能調校服務', 'Lifecycle 升級健檢服務', 'AI 軟體棧預整合（標準版）'],
-				whyItWins: '客戶不用先承諾大規模平台投資，就能先看到部署速度、效能與升級風險改善。',
-				revenueLogic: '一次性專案收入，負責打開軟體 attach rate。'
+				offerings: ['GPU 效能調校服務', 'Factory-to-Operations 驗收與 Baseline 服務', 'Lifecycle 升級健檢服務', 'AI 軟體棧預整合（標準版）'],
+				whyItWins: '客戶不用先承諾大規模平台投資，就能先看到部署速度、驗收效率、效能與升級風險改善。',
+				revenueLogic: '一次性專案收入，負責打開軟體 attach rate，並把出廠交付提前接到 Day-2 治理。'
 			},
 			{
 				stage: 'Stage 2｜營運治理綁定',
@@ -861,6 +861,13 @@ structuralAdvantages: {
 					boardOutcome: '把停機風險變成可控流程，保護毛利與客戶信任'
 				},
 				{
+					service: 'Factory-to-Operations Handoff Assurance',
+					budgetOwner: 'PMO / Infrastructure Delivery / Platform Operations',
+					whyNow: '大型 AI 專案最容易卡在「硬體已到、軟體 baseline 與驗收流程還沒接好」的灰色地帶',
+					renewalDriver: '每次新場域上線、新機型導入、golden image 更新與 site acceptance 演練，都會重複需要同一套交接治理',
+					boardOutcome: '把交機速度直接翻成 time-to-revenue，並讓軟體部門站上交付成敗的關鍵位置'
+				},
+				{
 					service: 'Remote Ops & Predictive Maintenance',
 					budgetOwner: 'Operations / Service Delivery',
 					whyNow: '跨站點運維、夜間故障、缺工與 SLA 需求持續升高',
@@ -888,6 +895,13 @@ structuralAdvantages: {
 				revenue: 'NT$ 100K-500K/案',
 				margin: '80%+',
 				timeToMarket: '立即',
+			},
+			{
+				name: 'Factory-to-Operations 驗收與 Baseline 服務',
+				why: '直接利用 Foxconn 的工廠預載、burn-in、golden image 與 site acceptance 能力，把交機與 Day-2 baseline 接成同一條服務鏈',
+				revenue: 'NT$ 250K-800K/案 + baseline refresh 年費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
 			},
 			{
 				name: 'Lifecycle 升級健檢服務',
@@ -921,6 +935,14 @@ structuralAdvantages: {
 		totalPotential: '首年可貢獻 NT$ 25-35M 營收，毛利率 70%+',
 	},
 		offerings: [
+			{
+				name: 'Factory-to-Operations Handoff Assurance',
+				description: '把出廠預載、burn-in 驗證、site acceptance、帳號/權限移交、初始觀測與 Day-2 baseline 串成同一條交付服務，避免硬體交機後還要多花 2-4 週重新拼接軟體與驗收流程',
+				pricing: 'NT$ 300K-1.2M/案 + baseline refresh / acceptance 顧問年費',
+				margin: '65-75%',
+				differentiation: '這不是單純賣安裝工時，而是把 Foxconn 最難被複製的工廠預載、golden image、現場驗收與 Day-2 交接治理串成可收費的交付結果',
+				targetCustomer: '大型 CSP、企業 AI 專案、需要快速交機與快速驗收的資料中心團隊'
+			},
 			{
 				name: 'Brownfield Integration & Fleet Baseline 服務',
 				description: '將新 AI 叢集接入既有 Redfish / OpenBMC / DCIM / 告警流程，建立跨新舊設備的一致資產、版本、權限與維護基線',
