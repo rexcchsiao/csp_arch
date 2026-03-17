@@ -65,6 +65,27 @@ const SoftwareDifferentiationView = () => {
             </div>
 
             <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
+              <h4 className="text-lg font-black text-indigo-900 mb-2">{softwareDifferentiation.marketProof.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.marketProof.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.marketProof.cards.map((item, idx) => (
+                  <div key={idx} className="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <p className="text-xs font-black text-indigo-800 mb-2">{item.company}</p>
+                    <p className="text-xs text-slate-700 mb-3">{item.proof}</p>
+                    <p className="text-xs text-indigo-700 font-medium mb-3">{item.takeaway}</p>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                <p className="text-sm font-semibold text-indigo-800">{softwareDifferentiation.marketProof.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
               <h4 className="text-lg font-black text-indigo-900 mb-2">{softwareDifferentiation.standardsGap.headline}</h4>
               <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.standardsGap.coreInsight}</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

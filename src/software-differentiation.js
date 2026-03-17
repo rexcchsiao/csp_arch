@@ -278,6 +278,36 @@ structuralAdvantages: {
 },
 
 
+  // Market proof that software has already become the buying language in AI infrastructure (Added 2026-03-18 by CoCo)
+  marketProof: {
+    headline: '市場已經在用「軟體與營運結果」賣 AI 基礎建設，不是在賣裸硬體',
+    coreInsight: '這不是 Foxconn 自說自話。從 NVIDIA、HPE 到 Red Hat，官方敘事都在強調部署速度、全棧可觀測性、生命週期管理、成本控制與 building management integration。這正好說明：真正被客戶買單的，是軟體把硬體變成可營運結果的能力。',
+    cards: [
+      {
+        company: 'NVIDIA Mission Control',
+        proof: '官方定位直接寫到 AI factory operations、cluster life cycle、building management integration、performance / power / cooling control。',
+        takeaway: '連 NVIDIA 都不只賣 GPU，而是賣「AI 工廠怎麼穩定營運」。Foxconn 若不投資軟體，就只能留在價值鏈較低的位置。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        company: 'HPE Private Cloud AI',
+        proof: '官方強調 deploy AI in days, not months、pre-configured validated platform、full stack visibility、built-in observability。',
+        takeaway: '品牌廠正在把「縮短上線時間 + Day-2 可觀測與可用性」當成賣點，而不是只比伺服器規格。這正是軟體部門能替硬體創造溢價的地方。',
+        sourceLabel: 'HPE Private Cloud AI',
+        source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+      },
+      {
+        company: 'Red Hat OpenShift AI',
+        proof: '官方敘事聚焦 model lifecycle、model serving / monitoring、hardware acceleration、self-service access，以及幫助管理 inferencing cost。',
+        takeaway: '企業客戶已經把 AI 平台需求往治理、成本、監控與自助化移動。Foxconn 若要說服管理層，就該把自己定位成把這些能力延伸到 L9-L12 與機房營運現場的人。',
+        sourceLabel: 'Red Hat OpenShift AI',
+        source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      }
+    ],
+    boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
+  },
+
   // Why standards still need a software team - sourced bridge from hardware API to business value (Added 2026-03-17 by CoCo)
   standardsGap: {
     headline: '有了 Redfish / OpenBMC，為什麼還是需要軟體部門？',
