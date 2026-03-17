@@ -225,10 +225,10 @@ technicalDepth: {
     }
   ],
   validation: {
-    customerProof: 'All capabilities validated with pilot customers (Q1 2026)',
-    technicalReview: 'Architecture reviewed by NVIDIA engineering team (2026-03-10)',
-    patentStatus: '2 patents pending: BMC thermal optimization, GPU topology-aware scheduling',
-    replicationBarrier: 'Estimated 12-18 months for competitors to replicate full stack without infringing'
+    customerProof: 'These capabilities should be validated through lighthouse customer pilots and Foxconn AI workload lab testing before being stated as delivered outcomes.',
+    technicalReview: 'Architecture direction is consistent with publicly documented industry needs: lifecycle orchestration, observability, topology-aware scheduling, and disconnected operations.',
+    patentStatus: 'Potential IP candidates include BMC thermal optimization, topology-aware scheduling, and lifecycle orchestration workflows; treat as future patent strategy until formally filed.',
+    replicationBarrier: 'Replication is difficult because competitors must align firmware, cluster orchestration, facility telemetry, and service delivery workflows—not because of a single feature alone.'
   }
 },
  // Foxconn's Structural Advantages - Why We Specifically Win (Added 2026-03-17)

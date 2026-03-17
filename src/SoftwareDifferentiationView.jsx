@@ -198,7 +198,7 @@ const SoftwareDifferentiationView = () => {
             </div>
 
             <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
-              <h4 className="text-lg font-black text-sky-900 mb-4">驗證與複製門檻</h4>
+              <h4 className="text-lg font-black text-sky-900 mb-4">可信度與落地門檻</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
                   <p className="font-bold text-sky-700 mb-1">客戶驗證</p>
