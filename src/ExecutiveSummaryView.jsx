@@ -25,6 +25,7 @@ const ExecutiveSummaryView = () => {
     year3: '2028 年',
   };
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
+  const recurringValueWedgeCount = competitiveLandscape.softwareDepartmentWedge?.wedges?.length || 0;
   const standardsSources = competitiveSources.standards || [];
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
@@ -204,7 +205,7 @@ const ExecutiveSummaryView = () => {
         <div className="mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
           <h4 className="text-base font-black text-indigo-900 mb-2 flex items-center gap-2">
             <Award className="w-4 h-4 text-indigo-600" />
-            軟體部門最值得投資的 4 個續約楔子
+            軟體部門最值得投資的 {recurringValueWedgeCount} 個續約楔子
           </h4>
           <p className="text-sm text-indigo-800 mb-4 leading-relaxed">
             真正能讓硬體訂單長成 3-5 年服務收入的，不是多一個 dashboard，而是把客戶最怕、最麻煩、最不想自己承接的 Day-2 營運風險做成可定價服務。
