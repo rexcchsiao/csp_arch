@@ -132,6 +132,47 @@ const CompetitiveLandscapeView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <Layers className="w-6 h-6 text-indigo-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-indigo-900">Foxconn 最獨特、也最該被放大的牌：Factory-to-Operations Handoff</h3>
+                  <p className="text-sm text-indigo-800 mt-1 font-medium">別人多半在賣平台或硬體，但 Foxconn 天然站在工廠預載、硬體驗收、韌體基線與 Day-2 維運交界。這讓軟體部門能把「交機」直接翻成「更快進營運、更少灰色地帶、更容易續約」的價值主張。</p>
+                </div>
+              </div>
+
+              {competitiveLandscape.uniqueServices
+                ?.filter((service) => service.name === 'Factory-to-Operations Handoff Assurance')
+                .map((service, idx) => (
+                  <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-5 bg-indigo-50 rounded-2xl border border-indigo-100">
+                      <h4 className="text-sm font-black text-indigo-800 mb-3">為什麼這一張牌只有 Foxconn 特別有說服力</h4>
+                      <div className="space-y-2 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">客戶痛點：</span>{service.painSolved}</p>
+                        <p><span className="font-bold text-indigo-600">Foxconn 獨特性：</span>{service.whyUnique}</p>
+                        <p><span className="font-bold text-green-600">怎麼收費：</span>{service.monetization}</p>
+                      </div>
+                    </div>
+                    <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                      <h4 className="text-sm font-black text-slate-900 mb-3">為什麼這能強化軟體部門價值</h4>
+                      <div className="space-y-2 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">預算 owner：</span>{service.budgetOwner}</p>
+                        <p><span className="font-bold text-slate-500">續約驅動：</span>{service.renewalDriver}</p>
+                        <p><span className="font-bold text-slate-500">市場佐證：</span>{service.evidence}</p>
+                      </div>
+                      <a href={service.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                        <ExternalLink className="w-3 h-3" />
+                        來源連結
+                      </a>
+                    </div>
+                  </div>
+                ))}
+
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                <p className="text-sm font-semibold text-indigo-900">管理層該記住的一句話：<span className="text-slate-700">如果軟體部門能把工廠預載、驗收、版本基線與 Day-2 接成同一條服務鏈，Foxconn 賣的就不只是 AI 伺服器，而是更快投產、風險更低、而且可續約的交付結果。</span></p>
+              </div>
+            </div>
+
             <div className="p-6 bg-sky-50 rounded-2xl border border-sky-200">
               <div className="flex items-start gap-3 mb-4">
                 <Users className="w-6 h-6 text-sky-600 mt-1" />
