@@ -50,6 +50,13 @@ export const softwareDifferentiation = {
       softwareSolution: '私有 AI 知識庫一體機 (RAG Appliance)',
       valueAmplification: '資料不出機房，同時享受 AI 效率，合規零風險',
     },
+    {
+      id: 'pp6',
+      problem: '升級與變更窗口風險高',
+      impact: '驅動、韌體、CUDA、K8s 任一版本升級失敗，都可能造成 AI 叢集停機與 SLA 失約',
+      softwareSolution: 'Lifecycle Control Tower：版本矩陣驗證 + Canary 升級 + 自動回滾 + 維運報表',
+      valueAmplification: '把高風險升級事件變成可排程、可回滾、可稽核的標準流程，縮短維護窗口 70%+',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -584,6 +591,13 @@ structuralAdvantages: {
 				timeToMarket: '立即',
 			},
 			{
+				name: 'Lifecycle 升級健檢服務',
+				why: '以現有 BMC / 韌體 / K8s 經驗，快速產出版本矩陣、maintenance window 與 rollback 設計',
+				revenue: 'NT$ 150K-400K/案',
+				margin: '75%+',
+				timeToMarket: '2-6 週',
+			},
+			{
 				name: 'AI 軟體棧預整合（標準版）',
 				why: '基於現有 Helm Charts，標準化交付流程',
 				revenue: 'NT$ 200K-500K/案',
@@ -608,6 +622,14 @@ structuralAdvantages: {
 				margin: '60-70%',
 				differentiation: '競爭對手僅提供基礎監控，我們提供主動式維護與修復',
 				targetCustomer: 'CSP 客戶、多據點企業'
+			},
+			{
+				name: 'Lifecycle Control Tower 升級治理服務',
+				description: '針對驅動、韌體、CUDA、Kubernetes 的版本矩陣驗證、canary 升級、自動回滾與 maintenance window 治理',
+				pricing: 'NT$ 300K-1.2M/案 + 年度訂閱/升級顧問費',
+				margin: '65-75%',
+				differentiation: '把高風險變更事件產品化，從「人海維運」變成「可排程、可回滾、可稽核」的治理能力',
+				targetCustomer: '大型 CSP、金融企業、主權 AI 專案'
 			},
 			{
 				name: 'RAG 一體機部署服務',
