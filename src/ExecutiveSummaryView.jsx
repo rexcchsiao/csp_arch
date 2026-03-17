@@ -48,6 +48,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'This shifts buyer attention from “can it be installed?” to “who owns Day-2 risk when the cluster is live?”.',
       foxconnMove: 'Sell Lifecycle Control Tower and Facility-Aware Capacity Assurance as accountable operating outcomes.',
       source: missionControlSource?.name || 'NVIDIA Mission Control',
+      sourceUrl: missionControlSource?.url,
     },
     {
       criterion: 'Governance and cost visibility are now platform requirements',
@@ -55,6 +56,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'Once multiple teams share an AI cluster, quota, showback, and policy enforcement become budget-owner issues—not engineering nice-to-haves.',
       foxconnMove: 'Push tenant governance, GPU showback, and quota policy as the layer that makes shared AI infrastructure financially governable.',
       source: openshiftAISource?.name || 'Red Hat OpenShift AI',
+      sourceUrl: openshiftAISource?.url,
     },
     {
       criterion: 'Neutral integration becomes a board-level differentiator',
@@ -62,6 +64,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'That makes mixed-vendor freedom, brownfield fit, and single-accountability integration more valuable for customers protecting existing assets.',
       foxconnMove: 'Position Foxconn software as the neutral operations layer across mixed infrastructure, not another closed stack.',
       source: dellAIFactorySource?.name || 'Dell AI Factory / broader OEM ecosystem pattern',
+      sourceUrl: dellAIFactorySource?.url,
     },
     {
       criterion: 'Facility telemetry is becoming table stakes—governance is the real differentiator',
@@ -69,6 +72,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'This shows customers increasingly expect AI server vendors to extend into operations software. Once visibility becomes standard, the higher-value budget shifts to who can turn that telemetry into actionable capacity policy, SLA workflows, and brownfield operating discipline.',
       foxconnMove: 'Use facility telemetry as the entry point, then sell Facility-Aware Capacity Assurance and lifecycle governance as the premium layer competitors still do not clearly own.',
       source: supermicroComposerSource?.name || 'Supermicro SuperCloud Composer',
+      sourceUrl: supermicroComposerSource?.url,
     },
     {
       criterion: 'Even hardware-led vendors now sell outcomes, services, and trust—not bare boxes',
@@ -378,7 +382,20 @@ const ExecutiveSummaryView = () => {
                 <p><span className="font-bold text-amber-700">為什麼這會改變採購：</span>{item.whyItChangesProcurement}</p>
                 <p><span className="font-bold text-emerald-700">Foxconn 應該怎麼卡位：</span>{item.foxconnMove}</p>
               </div>
-              <p className="text-[11px] text-slate-500 mt-4">Source anchor: {item.source}</p>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

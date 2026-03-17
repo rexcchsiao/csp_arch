@@ -192,6 +192,14 @@ export const executiveBrief = {
       "Year 2: NT$ 250M software revenue, 12% attachment rate",
       "Year 3: NT$ 750M software revenue, 20% attachment rate, 20-25% gross margin"
     ],
+    // First 30 Days - Immediate Actions if Approved Today (Added 2026-03-18 by CoCo)
+    first30Days: [
+      "Week 1: Appoint software product lead, finalize org design (50-80 FTE target)",
+      "Week 2: Begin recruitment for L9-L10 firmware team (5-8 hires), initiate Red Hat/Canonical partnership discussions",
+      "Week 3: Setup AI workload lab (H100/H200 test environment), define Remote Ops MVP scope with pilot customer",
+      "Week 4: Complete hiring plan for Q3 (L11-L12 team 10-15 FTE), finalize RAG appliance architecture (vector DB + permission governance)"
+    ],
+    thirtyDayDeliverables: "Org chart filled, lab operational, pilot customer identified, partnership LOIs signed",
     goNoGoCriteria: "If Year 1 software penetration <2.5% by Q4 2026, reassess strategy",
     riskOfInaction: "NT$ 1.5B+ opportunity loss by 2028 (customer churn + margin erosion + talent gap)", riskTimeline: "Q3 2026: Quanta/Wistron announce software partnerships → Q1 2027: First customer loses bid to software-enabled competitor → Q3 2027: Margin compression to 12-15% → Q1 2028: Commodity supplier status (5-8% margin)"
   },
