@@ -295,6 +295,27 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-blue-200 shadow-sm">
+              <h3 className="text-xl font-black text-blue-900 mb-2">{softwareDifferentiation.serviceLadder.headline}</h3>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.serviceLadder.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.serviceLadder.stages.map((stage, idx) => (
+                  <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 className="text-sm font-black text-blue-800 mb-2">{stage.stage}</h4>
+                    <p className="text-xs font-bold text-slate-500 mb-2">重點：{stage.focus}</p>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">對應服務：</span>{stage.offerings.join('、')}</p>
+                      <p><span className="font-bold text-blue-600">為什麼客戶會買：</span>{stage.whyItWins}</p>
+                      <p><span className="font-bold text-green-600">收入邏輯：</span>{stage.revenueLogic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <p className="text-sm font-semibold text-blue-800">{softwareDifferentiation.serviceLadder.boardMessage}</p>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-xl font-black text-slate-800 mb-4">可直接賣給客戶的軟體/服務組合</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

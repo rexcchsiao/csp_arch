@@ -609,6 +609,41 @@ structuralAdvantages: {
   },
 
 	// Concrete service offerings - what we actually sell (not just features, but services)
+	serviceLadder: {
+		headline: '軟體部門的續約飛輪：如何從一次性交付變成年度收入',
+		coreInsight: '老闆真正該投資的不是「多一套工具」，而是能從交付起點一路延伸到年度續約的服務鏈。一次性專案證明價值，年度治理與維運才是毛利與黏著度來源。',
+		stages: [
+			{
+				stage: 'Stage 1｜低阻力切入',
+				focus: '用短週期、低風險服務先進場',
+				offerings: ['GPU 效能調校服務', 'Lifecycle 升級健檢服務', 'AI 軟體棧預整合（標準版）'],
+				whyItWins: '客戶不用先承諾大規模平台投資，就能先看到部署速度、效能與升級風險改善。',
+				revenueLogic: '一次性專案收入，負責打開軟體 attach rate。'
+			},
+			{
+				stage: 'Stage 2｜營運治理綁定',
+				focus: '把 AI 叢集接進既有機房與變更流程',
+				offerings: ['Brownfield Integration & Fleet Baseline 服務', 'Lifecycle Control Tower 升級治理服務'],
+				whyItWins: '一旦接入客戶的資產、權限、維護窗口與版本基線，Foxconn 就從設備供應商升級成營運治理夥伴。',
+				revenueLogic: '專案費 + 年度維護 / 擴充費，開始形成續約基礎。'
+			},
+			{
+				stage: 'Stage 3｜年度 SLA 收入',
+				focus: '把日常風險管理做成可被續約的服務',
+				offerings: ['Remote Ops 遠端運維服務', '合規與審計支援服務'],
+				whyItWins: '客戶買的不是 dashboard，而是半夜不用派人去機房、升級不會出事、稽核時拿得出報告。',
+				revenueLogic: '按節點 / 按 SLA / 按年收費，建立 ARR 與高毛利服務收入。'
+			},
+			{
+				stage: 'Stage 4｜平台擴張',
+				focus: '把單點服務升級為可複製的平台型收入',
+				offerings: ['RAG 一體機部署服務', 'GPU 虛擬化與資源調度'],
+				whyItWins: '當客戶已接受 Foxconn 的治理與維運能力，更容易加買新叢集、新場域與新 AI 工作負載。',
+				revenueLogic: '硬體 attach + 軟體授權 + 維運續約，擴大客戶終身價值（LTV）。'
+			}
+		],
+		boardMessage: '這條飛輪的重點不是賣更多功能，而是讓每一筆硬體訂單，都有機會變成長達 3-5 年的軟體與服務收入。'
+	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
