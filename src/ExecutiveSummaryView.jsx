@@ -40,6 +40,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'Once the market talks in time-to-value language, software stops looking optional and starts affecting RFQ scoring.',
       foxconnMove: 'Package factory pre-load, site acceptance, and standardized runbooks as Deployment Assurance rather than “integration support.”',
       source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      sourceUrl: hpePrivateCloudAISource?.url,
     },
     {
       criterion: 'Lifecycle and recovery are becoming first-class requirements',
@@ -75,6 +76,7 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'When another major hardware vendor sells AI around deployment confidence and operating trust, it confirms that software-and-services language is now mainstream in boardroom buying criteria.',
       foxconnMove: 'Frame Foxconn software as the accountable layer that converts factory delivery into ongoing operating outcomes: deployment assurance, lifecycle governance, and sovereign-ready operations.',
       source: lenovoHybridAISource?.name || 'Lenovo Hybrid AI Solutions',
+      sourceUrl: lenovoHybridAISource?.url,
     },
   ];
   const marketWhitespace = [
@@ -106,6 +108,7 @@ const ExecutiveSummaryView = () => {
       summary: '大型 CSP 當然能自己寫平台，但最不想自己背的是跨 BMC、BIOS、GPU 韌體、CUDA、K8s 的升級風險與 maintenance window 治理。',
       foxconnEdge: 'Foxconn 能把版本矩陣、canary、rollback、稽核報表做成可交付服務，讓客戶少養一支專門處理變更事故的團隊。',
       source: 'NVIDIA Mission Control / Lifecycle orchestration positioning',
+      sourceUrl: missionControlSource?.url,
     },
     {
       title: 'Brownfield Integration',
@@ -291,7 +294,20 @@ const ExecutiveSummaryView = () => {
                 <p><span className="font-bold text-amber-700">還沒被補滿的空白：</span>{item.whitespace}</p>
                 <p><span className="font-bold text-emerald-700">Foxconn 應該賣什麼：</span>{item.foxconnPlay}</p>
               </div>
-              <p className="text-[11px] text-slate-500 mt-4">Source anchor: {item.source}</p>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -321,7 +337,20 @@ const ExecutiveSummaryView = () => {
                 <p className="text-xs font-bold text-violet-700 mb-1">Foxconn 可收費的理由</p>
                 <p className="text-xs text-slate-700 leading-relaxed">{item.foxconnEdge}</p>
               </div>
-              <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+              <div className="space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
