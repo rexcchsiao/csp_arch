@@ -9,11 +9,38 @@ export const competitiveSources = {
   ],
   // Dell/HPE Sources
   dell: [
-    { name: 'Dell AI Factory', url: 'https://www.dell.com/en-us/ai-factory', description: 'End-to-end AI infrastructure with NVIDIA', relevance: 'Direct competitor in AI infrastructure' }
+    {
+      name: 'Dell AI Factory',
+      url: 'https://www.dell.com/en-us/ai-factory',
+      description: 'End-to-end AI infrastructure positioning from Dell Technologies',
+      relevance: 'Direct competitor in AI infrastructure and turnkey enterprise AI messaging',
+      lastVerified: '2026-03-17',
+      keyFeature: 'Official positioning centers on an end-to-end AI factory approach spanning infrastructure, data, and lifecycle support with Dell-managed enterprise delivery.',
+      limitation: 'Dell bundles the outcome around Dell-led infrastructure and partner ecosystem choices, which weakens the neutral, mixed-vendor story for customers trying to preserve existing datacenter standards.',
+      ourAdvantage: 'Foxconn can frame software as the neutral operations layer across mixed infrastructure, brownfield environments, and customer-specific firmware / lifecycle requirements instead of requiring a Dell-centered stack.'
+    }
   ],
   hpe: [
-    { name: 'HPE Ezmeral', url: 'https://www.hpe.com/us/en/software/ezmeral.html', description: 'Hybrid cloud and AI platform', relevance: 'Competes in enterprise AI deployment' },
-    { name: 'HPE Private Cloud AI', url: 'https://www.hpe.com/us/en/private-cloud-ai.html', description: 'Private AI infrastructure solution', relevance: 'Direct competitor for private AI deployments' }
+    {
+      name: 'HPE Ezmeral',
+      url: 'https://www.hpe.com/us/en/software/ezmeral.html',
+      description: 'Hybrid cloud and data/AI platform from HPE',
+      relevance: 'Competes in enterprise AI deployment and data platform framing',
+      lastVerified: '2026-03-17',
+      keyFeature: 'HPE positions Ezmeral around enterprise data, MLOps, and hybrid-cloud operations.',
+      limitation: 'The value proposition is strongest inside the broader HPE software and infrastructure estate, reinforcing ecosystem dependency for customers.',
+      ourAdvantage: 'Foxconn can focus on the operational layer customers must still solve in mixed environments: brownfield integration, lifecycle governance, and remote SLA outcomes.'
+    },
+    {
+      name: 'HPE Private Cloud AI',
+      url: 'https://www.hpe.com/us/en/private-cloud-ai.html',
+      description: 'Turnkey private AI platform co-engineered with NVIDIA',
+      relevance: 'Direct competitor for private AI deployments and strongest external validation that software + operations matter more than bare hardware',
+      lastVerified: '2026-03-17',
+      keyFeature: 'HPE explicitly markets a pre-configured, validated AI stack that deploys in days, includes full-stack visibility, built-in observability, unified data foundation, and repeatable production outcomes.',
+      limitation: 'Co-engineered NVIDIA positioning and HPE platform framing make the offer less attractive for customers prioritizing mixed-vendor freedom, brownfield fit, or custom lifecycle control.',
+      ourAdvantage: 'This validates Foxconn\'s thesis that the real value is not server metal alone but the software layer for deployment speed, observability, and Day-2 operations—while Foxconn differentiates on neutral architecture, air-gapped delivery, and brownfield integration.'
+    }
   ],
   // Competitor Server Vendors
   qct: [
@@ -41,7 +68,17 @@ export const competitiveSources = {
     { name: 'OpenBMC Project', url: 'https://openbmc.org/', description: 'Open-source standard baseboard management controller firmware stack', relevance: 'Validates Foxconn can build differentiated lifecycle and remote-ops features on an open firmware foundation', lastVerified: '2026-03-17', keyFeature: 'Community-maintained BMC firmware stack with release cadence and extensibility for platform-specific controls', limitation: 'OpenBMC is the foundation layer; customer-visible value still requires Foxconn software for workflow, rollback, policy, and fleet operations' }
   ],
   enterprisePlatforms: [
-    { name: 'Red Hat OpenShift AI (Disconnected Environments)', url: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index', description: 'Official documentation for deploying and operating OpenShift AI Self-Managed in disconnected environments', relevance: 'Validates that disconnected / air-gapped AI environments are a real enterprise operating requirement, not a niche edge case', lastVerified: '2026-03-17', keyFeature: 'Dedicated install and lifecycle documentation for disconnected environments', limitation: 'Disconnected deployment still requires customers to manage mirrored content, update discipline, and ongoing software lifecycle in offline environments' }
+    {
+      name: 'Red Hat OpenShift AI',
+      url: 'https://www.redhat.com/en/products/ai/openshift-ai',
+      description: 'Enterprise AI platform for managing model lifecycle across hybrid cloud environments',
+      relevance: 'Validates that enterprise buyers increasingly value lifecycle management, monitoring, and hybrid deployment software above raw server specs alone',
+      lastVerified: '2026-03-17',
+      keyFeature: 'Red Hat positions OpenShift AI around data preparation, training, fine-tuning, serving, monitoring, cost control, and hybrid-cloud flexibility.',
+      limitation: 'Even with a strong platform, customers still need infrastructure-specific integration, offline operations discipline, and hardware-to-cluster lifecycle control.',
+      ourAdvantage: 'Foxconn can pair similar enterprise-operability messaging with deeper L9-L12 integration, Remote Ops, and factory-to-datacenter delivery ownership.'
+    },
+    { name: 'Red Hat OpenShift AI (Disconnected Environments)', url: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index', description: 'Official documentation for deploying and operating OpenShift AI Self-Managed in disconnected environments', relevance: 'Validates that disconnected / air-gapped AI environments are a real enterprise operating requirement, not a niche edge case', lastVerified: '2026-03-17', keyFeature: 'Dedicated install and lifecycle documentation for disconnected environments', limitation: 'Disconnected deployment still requires customers to manage mirrored content, update discipline, and ongoing software lifecycle in offline environments', ourAdvantage: 'Foxconn can turn this operational burden into a productized service: offline content sync, upgrade governance, rollback, and field delivery for sovereign AI customers.' }
   ],
   // Standards & Regulations
   regulations: [
