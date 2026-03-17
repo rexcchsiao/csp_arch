@@ -225,6 +225,29 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-violet-200 shadow-sm">
+              <h4 className="text-lg font-black text-violet-900 mb-2">真正還沒被滿足的切入點：Foxconn 不該去追另一個平台，而要去接最痛的 Day-2 缺口</h4>
+              <p className="text-sm text-slate-700 mb-4">這一段把市場缺口濃縮成管理層可直接拿去講的攻擊面：不是問「我們有沒有更多功能」，而是問「哪一些風險現在還沒有被誰真正接住」。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.marketWhiteSpace.gaps.map((gap, idx) => (
+                  <div key={idx} className="p-5 bg-violet-50 rounded-2xl border border-violet-100">
+                    <h5 className="text-sm font-black text-violet-800 mb-2">{gap.title}</h5>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">為什麼這一格還空著：</span>{gap.whyStillOpen}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 的進攻方式：</span>{gap.foxconnPlay}</p>
+                    </div>
+                    <a href={gap.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {gap.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+                <p className="text-sm font-semibold text-violet-900">管理層該記住的一句話：<span className="text-slate-700">最值得投資的不是 another dashboard，而是願意對 brownfield、air-gap、facility event、remote-ops 結果負責的軟體能力。</span></p>
+              </div>
+            </div>
+
             <div className="space-y-4">
               {softwareDifferentiation.competitiveAdvantage.map((advantage, idx) => (
                 <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
