@@ -131,6 +131,31 @@ const CompetitiveLandscapeView = () => {
                 ))}
               </div>
             </div>
+
+            <div className="p-6 bg-sky-50 rounded-2xl border border-sky-200">
+              <div className="flex items-start gap-3 mb-4">
+                <Users className="w-6 h-6 text-sky-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-sky-900">大型 CSP / Hyperscaler 為什麼還是會買 Foxconn 軟體？</h3>
+                  <p className="text-sm text-sky-800 mt-1 font-medium">就算客戶有很強的內部平台團隊，他們也不想把每一個基礎設施髒活都自己扛。真正會外包的，是那些不差異化、但失敗代價很高的 Day-2 工作。</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {competitiveLandscape.hyperscalerWhyItMatters.reasons.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-sky-100">
+                    <h4 className="text-sm font-black text-sky-800 mb-2">{item.reason}</h4>
+                    <p className="text-xs text-slate-700 mb-3">{item.explanation}</p>
+                    <div className="p-3 bg-sky-50 rounded-xl border border-sky-100">
+                      <p className="text-xs font-bold text-sky-700 mb-1">對客戶的直接結果</p>
+                      <p className="text-xs text-slate-700">{item.impact}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-sky-100">
+                <p className="text-sm font-semibold text-sky-900">管理層該記住的一句話：<span className="text-slate-700">CSP 不是缺寫軟體的人，而是不想再養一支 20-50 人團隊去接 brownfield integration、firmware / lifecycle 風險與 24×7 remote ops。這些剛好就是軟體部門最能被定價的價值。</span></p>
+              </div>
+            </div>
           </div>
         )}
 
