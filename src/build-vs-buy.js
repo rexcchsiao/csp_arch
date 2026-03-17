@@ -10,8 +10,8 @@ export const buildVsBuyAnalysis = {
   // Executive Summary: The 30-Second Answer
   executiveSummary: {
     question: '我們有軟體團隊，為什麼要買 Foxconn 的軟體？',
-    answer: '因為「能自己做」不等於「應該自己做」。Foxconn 軟體的本質是「用 2-4 週取得別人 12-18 個月的成果」，讓您的團隊專注在業務差異化功能，而非重複造輪子。',
-    math: '自建成本：NT$ 120M/年 × 18 個月 = NT$ 216M + 機會成本（延誤上市 12-18 個月）vs. Foxconn 方案：NT$ 50M/年，2-4 週上線，立即見效',
+    answer: '因為「能自己做」不等於「應該自己做」。Foxconn 軟體的本質是「用 2-4 週取得別人 12-18 個月的成果」，更重要的是把最難複製的 Day-2 運營——觀測、升級、回滾、斷網內容同步、SLA 治理——一起交付，讓您的團隊專注在業務差異化功能，而非重複造輪子。',
+    math: '自建成本：NT$ 120M/年 × 18 個月 = NT$ 216M + 機會成本（延誤上市 12-18 個月）vs. Foxconn 方案：NT$ 50M/年，2-4 週上線，並直接帶入 Day-2 lifecycle/observability 能力',
   },
 
   // Detailed TCO: Build vs. Buy (5-Year View)
@@ -81,6 +81,7 @@ export const buildVsBuyAnalysis = {
       '市場上有成熟方案，且已驗證可行性',
       '您需要快速上市（<3 個月）',
       '您希望聚焦在業務邏輯而非基礎設施',
+      '您真正的痛點在 Day-2：升級、觀測、回滾、air-gapped/disconnected 維運，而不是 Day-0 安裝本身',
     ],
 
     foxconnPositioning: 'Foxconn 軟體定位在「必要但非差異化」的基礎設施層，讓客戶專注在業務差異化功能',
@@ -107,6 +108,11 @@ export const buildVsBuyAnalysis = {
       objection: '我們需要評估多家供應商，包含 NVIDIA Base Command',
       response: '完全支持多方評估。但請注意：NVIDIA 方案僅支援 NVIDIA GPU，若您未來想引入 AMD 或其他架構，將面臨轉換成本。Foxconn 提供中立的多供應商支援，避免鎖定風險。',
       evidence: 'Foxconn 軟體棧支援 NVIDIA + AMD GPU，統一管理層抽象化底層差異。參考 competitive-landscape.js 中的比較分析。',
+    },
+    {
+      objection: '我們只需要 reference architecture 或顧問服務，不一定要買產品化軟體',
+      response: '這個想法最容易低估 Day-2 的成本。現在連 HPE 都把「build-your-own、reference architecture + services、turnkey」拿來做正式比較，主打的是 full-stack visibility、預先驗證與可重複交付；Red Hat 也為 disconnected environments 提供獨立安裝/維運文件，代表真正困難的是後續觀測、升級、內容同步與營運治理。Foxconn 要賣的不是一次性安裝，而是把 brownfield、air-gap、lifecycle control 與 Remote Ops 一起產品化。',
+      evidence: '外部驗證線索：HPE Private Cloud AI 官方頁面明確強調 full stack visibility、pre-configured/validated、turnkey；Red Hat OpenShift AI 官方文件另設 disconnected environment 安裝與維運指南；NVIDIA Mission Control 也把 cluster lifecycle、building management integration、autonomous recovery 當成產品核心。',
     },
   ],
 
