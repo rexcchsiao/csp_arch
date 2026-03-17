@@ -35,6 +35,11 @@ export const competitiveSources = {
     { name: 'Gartner AI Server Magic Quadrant 2025', url: 'https://www.gartner.com/', description: 'OEM/ODM positioning and software capability assessment', relevance: 'Third-party validation of Foxconn software differentiation' },
     { name: 'IDC Worldwide AI Infrastructure Forecast', url: 'https://www.idc.com/', description: 'AI server spending to reach US$ 200B by 2027', relevance: 'Market growth validation' }
   ],
+  // Standards & Management Foundations
+  standards: [
+    { name: 'DMTF Redfish', url: 'https://www.dmtf.org/standards/redfish', description: 'Open standard for secure, machine-readable hardware management and interoperability profiles', relevance: 'Supports our argument that lifecycle governance depends on software layered on top of standardized hardware management APIs', lastVerified: '2026-03-17', keyFeature: 'Redfish exposes simple, secure management through modern web standards and publishes interoperability profiles, telemetry, and recovery-related specifications', limitation: 'A standard API alone does not provide canary rollout policy, maintenance-window orchestration, or business-level SLA reporting' },
+    { name: 'OpenBMC Project', url: 'https://openbmc.org/', description: 'Open-source standard baseboard management controller firmware stack', relevance: 'Validates Foxconn can build differentiated lifecycle and remote-ops features on an open firmware foundation', lastVerified: '2026-03-17', keyFeature: 'Community-maintained BMC firmware stack with release cadence and extensibility for platform-specific controls', limitation: 'OpenBMC is the foundation layer; customer-visible value still requires Foxconn software for workflow, rollback, policy, and fleet operations' }
+  ],
   // Standards & Regulations
   regulations: [
     { name: 'EU AI Act', url: 'https://artificialintelligenceact.eu/', description: 'EU AI regulation framework', relevance: 'Effective 2026, drives sovereign AI demand' },

@@ -108,6 +108,15 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
     },
   },
   // Pain points that Foxconn software addresses (that NVIDIA doesn't)
+  day2OperationsThesis: {
+    headline: '真正決勝點不是 Day-1 部署，而是 Day-2 營運治理',
+    summary: 'AI 伺服器真正拖垮 ROI 的，往往不是第一次上線，而是之後每一次驅動、韌體、Kubernetes、CUDA 與模型版本變更。能把變更風險產品化、流程化、可回滾化，才是軟體部門最不可替代的價值。',
+    proofPoints: [
+      'NVIDIA Mission Control 官方強調 cluster life cycle、continuous health checks、autonomous recovery，代表市場已從「能不能部署」轉向「能不能穩定營運」。',
+      'HPE Private Cloud AI 官方強調 deploy AI in days, not months 與 built-in observability，代表 turnkey 只是入場券，長期可觀測與維運能力才是續約關鍵。',
+      'Redfish 與 OpenBMC 提供標準化管理與韌體控制基礎，但真正把它們變成 maintenance window、canary、rollback、SLA 報表的是上層軟體產品能力。',
+    ],
+  },
   unsolvedPainPoints: [
     {
       problem: 'Multi-GPU Vendor Strategy',

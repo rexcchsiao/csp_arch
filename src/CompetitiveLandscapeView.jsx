@@ -147,6 +147,24 @@ const CompetitiveLandscapeView = () => {
 
         {activeTab === 'pain-points' && (
           <div className="space-y-6">
+            <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200">
+              <div className="flex items-start gap-3 mb-4">
+                <HelpCircle className="w-6 h-6 text-amber-600 mt-1" />
+                <div>
+                  <h3 className="text-xl font-black text-amber-900 mb-2">{competitiveLandscape.day2OperationsThesis.headline}</h3>
+                  <p className="text-sm text-amber-800 font-medium">{competitiveLandscape.day2OperationsThesis.summary}</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                {competitiveLandscape.day2OperationsThesis.proofPoints.map((point, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-amber-900">
+                    <CheckCircle className="w-3 h-3 mt-0.5 flex-shrink-0 text-amber-600" />
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <h3 className="text-xl font-black text-slate-800 mb-4">未解決的痛點與 Foxconn 方案</h3>
             {competitiveLandscape.unsolvedPainPoints.map((point, idx) => (
               <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
