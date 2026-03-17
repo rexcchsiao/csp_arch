@@ -26,6 +26,31 @@ const ExecutiveSummaryView = () => {
   };
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
   const standardsSources = competitiveSources.standards || [];
+  const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
+  const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
+  const marketWhitespace = [
+    {
+      title: 'Day-2 Lifecycle Governance 仍然是痛點',
+      marketSignal: 'HPE 已把「pre-configured、validated、full-stack visibility、built-in observability」當成主賣點，代表企業客戶真正怕的是上線後的持續營運，而不是第一次安裝。',
+      whitespace: '多數 OEM/ODM 還停留在交機與基本管理，沒有把版本矩陣、maintenance window、rollback 與稽核輸出做成可續約服務。',
+      foxconnPlay: '把 Lifecycle Control Tower 做成標準 attach：從硬體驗證延伸到季度升級治理與年度顧問收入。',
+      source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+    },
+    {
+      title: 'Air-gapped / Sovereign AI 的 Day-2 內容生命週期沒人想接',
+      marketSignal: 'Red Hat 甚至為 disconnected environments 提供獨立文件，說明這不是 niche case，而是正式的企業運營場景。',
+      whitespace: '真正麻煩的是離線 registry、chart mirror、內容簽章、更新包驗證、升級 runbook 與稽核證據，這些通常不會被伺服器廠完整承接。',
+      foxconnPlay: '把 Air-Gap Content Lifecycle 做成高毛利服務，鎖定國防、金融、主權雲等不能只買硬體的客戶。',
+      source: disconnectedSource?.name || 'Red Hat OpenShift AI (Disconnected Environments)',
+    },
+    {
+      title: 'Facility-aware brownfield integration 仍缺真正 owner',
+      marketSignal: 'NVIDIA Mission Control 已把 building management integration、power / cooling control、autonomous recovery 放進產品敘事，證明 AI 機房的價值正在往 IT + facilities 協同移動。',
+      whitespace: '客戶最常卡住的不是 GPU 規格，而是新叢集能不能不打掉重練就接回既有 DCIM、告警、權限與維護窗口。這一層通常又髒又長尾，所以最容易被忽略。',
+      foxconnPlay: '用 Brownfield Integration Hub 承接現場導入，讓軟體部門變成訂單真正落地的關鍵人。',
+      source: missionControlSource?.name || 'NVIDIA Mission Control',
+    },
+  ];
   const hyperscalerKeepInHouseVsBuy = [
     {
       title: 'Change Safety / Lifecycle Control',
@@ -195,6 +220,36 @@ const ExecutiveSummaryView = () => {
           <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
             <p className="text-sm font-semibold text-blue-900">{competitiveLandscape.serviceValueCaptureMatrix?.boardMessage}</p>
           </div>
+        </div>
+      </div>
+
+      {/* Market whitespace - where software earns its keep */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 3 個高價值空白
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。
+          下面這三個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {marketWhitespace.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-2">Market White Space</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                <p><span className="font-bold text-amber-700">還沒被補滿的空白：</span>{item.whitespace}</p>
+                <p><span className="font-bold text-emerald-700">Foxconn 應該賣什麼：</span>{item.foxconnPlay}</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-4">Source anchor: {item.source}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-rose-100 bg-white p-4">
+          <p className="text-sm font-semibold text-rose-900">
+            給管理層的翻譯版：<span className="text-slate-700">軟體部門不是去做一個「也有 dashboard」的平台，而是去接住競爭對手最容易留下空洞的 Day-2 運營責任。誰能接住這些責任，誰就能把硬體價值放大成可續約收入。</span>
+          </p>
         </div>
       </div>
 
