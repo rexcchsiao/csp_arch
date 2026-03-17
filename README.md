@@ -148,7 +148,9 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 | Date | Change | Rationale |
 |------|--------|---------|
-| 2026-03-17 | Added GTC 2026 post-event strategic context (Mission Control GA, NIM for RAG, Blackwell B200 ramp) | Captures inflection point: GPU supply normalization → software differentiation battleground | | 2026-03-17 | Added Supermicro competitive analysis to OEM/ODM comparison | Supermicro is a major AI server competitor gaining share; adding them strengthens the argument that Foxconn differentiates on software depth vs. hardware-centric rivals |
+| 2026-03-17 | Fixed competitive landscape view bindings so unsolved pain points, strategic asks, and success metrics render correctly | Restores several leadership-critical arguments that were present in data but not visible in the UI |
+| 2026-03-17 | Added GTC 2026 post-event strategic context (Mission Control GA, NIM for RAG, Blackwell B200 ramp) | Captures inflection point: GPU supply normalization → software differentiation battleground |
+| 2026-03-17 | Added Supermicro competitive analysis to OEM/ODM comparison | Supermicro is a major AI server competitor gaining share; adding them strengthens the argument that Foxconn differentiates on software depth vs. hardware-centric rivals |
 | 2026-03-17 | Added risk timeline with quarterly milestones of inaction (Q2 2026-Q1 2028) | Makes cost of delay concrete: NT$ 1.5B+ cumulative opportunity loss |
 | 2026-03-16 | Added competitive urgency section with Q1 2026 competitor moves (HPE, GIGABYTE, Dell, QCT) | Validates Foxconn strategy; window of opportunity is 12-18 months |
 | 2026-03-16 | Added customer voices section with real CSP pain point quotes | Humanizes the data; shows we're solving actual problems, not theoretical ones |

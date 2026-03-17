@@ -148,7 +148,7 @@ const CompetitiveLandscapeView = () => {
         {activeTab === 'pain-points' && (
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">未解決的痛點與 Foxconn 方案</h3>
-            {competitiveLandscape.foxconnOpportunity.unsolvedPainPoints.map((point, idx) => (
+            {competitiveLandscape.unsolvedPainPoints.map((point, idx) => (
               <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
@@ -273,7 +273,7 @@ const CompetitiveLandscapeView = () => {
                 成功指標
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.entries(competitiveLandscape.foxconnOpportunity.successMetrics || {}).map(([metric, data]) => (
+                {Object.entries(competitiveLandscape.successMetrics || {}).map(([metric, data]) => (
                   <div key={metric} className="p-4 bg-white rounded-xl border border-green-100">
                     <p className="text-sm font-bold text-green-700 mb-2">{metric}</p>
                     <p className="text-xs text-slate-600">{data.definition}</p>
