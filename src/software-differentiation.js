@@ -64,6 +64,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Brownfield Integration Hub：以 Redfish / OpenBMC 為基礎，對接既有監控、告警、維護流程與權限模型',
       valueAmplification: '避免 AI 專案因「必須整場重做」而延宕，讓新叢集可逐步接入既有營運體系，軟體部門因此成為導入成敗關鍵',
     },
+    {
+      id: 'pp8',
+      problem: 'Air-gapped / sovereign AI 環境上線後，最痛的是內容與版本生命週期',
+      impact: '真正困難的不只是第一次安裝，而是後續離線映像、Helm chart、模型、修補程式與稽核證據如何持續更新；沒有軟體團隊，客戶每次升級都像重做一次專案',
+      softwareSolution: 'Air-Gap Content Pipeline：離線 registry / chart mirror、版本簽章、更新包驗證、升級 runbook 與稽核證據包自動產出',
+      valueAmplification: '把「斷網環境無法規模化維運」變成可續約服務，讓主權 AI / 國防 / 金融客戶願意長期把營運治理交給我們',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -103,6 +110,12 @@ export const softwareDifferentiation = {
       foxconn: '可把新 AI 叢集接入既有 BMC / DCIM / 告警 / 維護窗口流程，支援混合世代設備共管',
       competitors: '多數方案假設客戶採用全新標準化堆疊，對既有機房整合著墨不足',
       whyItMatters: '大型客戶真正採購阻力不是硬體規格，而是能否不打掉重練就把 AI 納入現有營運體系',
+    },
+    {
+      category: '斷網 / 主權 AI 運營',
+      foxconn: '提供離線內容同步、升級包驗證、版本簽章與稽核證據輸出，把 disconnected operation 做成標準服務',
+      competitors: '多數方案只證明「可安裝」，但缺乏離線更新治理、證據留存與長期維運方法論',
+      whyItMatters: '主權 AI 客戶買的不只是可部署，而是 12-36 個月都能持續更新、可被稽核、且不必每次叫原廠現場救火',
     },
   ],
 
@@ -281,9 +294,13 @@ structuralAdvantages: {
       {
         point: 'NVIDIA Mission Control 已把 cluster deployment、workload orchestration、building management integration、autonomous recovery 包成產品。',
         implication: '市場已證明價值不在「有沒有標準 API」，而在誰能把這些能力做成可持續運營的 control plane。'
+      },
+      {
+        point: 'Red Hat 甚至為 disconnected environments 提供專門的 OpenShift AI 安裝 / 維運文件。',
+        implication: '這代表 air-gapped / sovereign AI 不是特例，而是需要獨立內容同步、升級治理與 runbook discipline 的正式營運場景。'
       }
     ],
-    boardMessage: '這正是軟體部門的不可替代性：把標準介面，變成可交付、可治理、可續約的營運能力。'
+    boardMessage: '這正是軟體部門的不可替代性：把標準介面，變成可交付、可治理、可續約的營運能力；在斷網環境更進一步，還要把內容生命週期與稽核證據一起產品化。'
   },
 
   // Value metrics - quantifiable impact of software
@@ -630,8 +647,8 @@ structuralAdvantages: {
 			{
 				stage: 'Stage 3｜年度 SLA 收入',
 				focus: '把日常風險管理做成可被續約的服務',
-				offerings: ['Remote Ops 遠端運維服務', '合規與審計支援服務'],
-				whyItWins: '客戶買的不是 dashboard，而是半夜不用派人去機房、升級不會出事、稽核時拿得出報告。',
+				offerings: ['Remote Ops 遠端運維服務', 'Air-Gap Content Lifecycle 服務', '合規與審計支援服務'],
+				whyItWins: '客戶買的不是 dashboard，而是半夜不用派人去機房、升級不會出事、離線環境也能安全更新、稽核時拿得出報告。',
 				revenueLogic: '按節點 / 按 SLA / 按年收費，建立 ARR 與高毛利服務收入。'
 			},
 			{
@@ -680,8 +697,15 @@ structuralAdvantages: {
 				margin: '60%+',
 				timeToMarket: '4-8 週',
 			},
+			{
+				name: 'Air-Gap 內容同步與升級證據包服務',
+				why: '可直接利用既有 registry / mirror / runbook 能力，率先切入主權 AI 客戶最常被忽略的 Day-2 運營痛點',
+				revenue: 'NT$ 200K-600K/案 + 年度維護費',
+				margin: '70%+',
+				timeToMarket: '4-8 週',
+			},
 		],
-		totalPotential: '首年可貢獻 NT$ 20-30M 營收，毛利率 70%+',
+		totalPotential: '首年可貢獻 NT$ 25-35M 營收，毛利率 70%+',
 	},
 		offerings: [
 			{
@@ -707,6 +731,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '把高風險變更事件產品化，從「人海維運」變成「可排程、可回滾、可稽核」的治理能力',
 				targetCustomer: '大型 CSP、金融企業、主權 AI 專案'
+			},
+			{
+				name: 'Air-Gap Content Lifecycle 服務',
+				description: '為斷網 / 主權 AI 環境提供離線鏡像同步、版本簽章、更新包驗證、升級 runbook 與稽核證據包',
+				pricing: 'NT$ 250K-900K/案 + 年度內容維護/稽核續約費',
+				margin: '65-75%',
+				differentiation: '競爭對手多半只處理第一次安裝；我們把 disconnected 環境最麻煩的 Day-2 內容生命週期做成可交付、可續約服務',
+				targetCustomer: '國防、政府、金融、主權雲與需 air-gap 的企業'
 			},
 			{
 				name: 'RAG 一體機部署服務',
