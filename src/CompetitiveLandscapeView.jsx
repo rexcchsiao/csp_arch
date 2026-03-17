@@ -193,6 +193,31 @@ const CompetitiveLandscapeView = () => {
                 </div>
               </div>
             ))}
+
+            <div className="pt-2">
+              <h3 className="text-xl font-black text-slate-800 mb-4">可被客戶感知、可被定價的獨特服務</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {competitiveLandscape.uniqueServices?.map((service, idx) => (
+                  <div key={idx} className="p-5 bg-blue-50 rounded-2xl border border-blue-200">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h4 className="text-sm font-black text-blue-900">{service.name}</h4>
+                      <Layers className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    </div>
+                    <div className="space-y-2 text-xs">
+                      <p><span className="font-bold text-slate-500">客群：</span><span className="text-slate-700">{service.targetCustomer}</span></p>
+                      <p><span className="font-bold text-slate-500">收費方式：</span><span className="text-slate-700">{service.monetization}</span></p>
+                      <p><span className="font-bold text-slate-500">解決什麼：</span><span className="text-slate-700">{service.painSolved}</span></p>
+                      <p><span className="font-bold text-blue-600">為什麼只有我們比較有機會做成：</span><span className="text-slate-700">{service.whyUnique}</span></p>
+                      <p><span className="font-bold text-slate-500">佐證：</span><span className="text-slate-700">{service.evidence}</span></p>
+                      <a href={service.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-blue-600 font-bold hover:underline">
+                        <ExternalLink className="w-3 h-3" />
+                        來源連結
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
@@ -254,7 +279,7 @@ const CompetitiveLandscapeView = () => {
                 不行動的風險
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {competitiveLandscape.foxconnOpportunity.riskOfInaction?.map((risk, idx) => (
+                {competitiveLandscape.riskOfInaction?.map((risk, idx) => (
                   <div key={idx} className="p-4 bg-white rounded-xl border border-red-100">
                     <h5 className="text-sm font-bold text-red-700 mb-2">{risk.risk}</h5>
                     <p className="text-xs text-slate-600 mb-2">{risk.impact}</p>
@@ -274,7 +299,7 @@ const CompetitiveLandscapeView = () => {
                 {competitiveLandscape.strategicAsk?.headline}
               </h4>
               <div className="space-y-3">
-                {competitiveLandscape.foxconnOpportunity.strategicAsk?.items.map((item, idx) => (
+                {competitiveLandscape.strategicAsk?.items.map((item, idx) => (
                   <div key={idx} className="p-4 bg-white rounded-xl border border-blue-100">
                     <p className="text-sm font-bold text-blue-700 mb-1">{item.what}</p>
                     <p className="text-xs text-slate-600">{item.rationale}</p>

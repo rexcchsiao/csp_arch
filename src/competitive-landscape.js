@@ -155,6 +155,35 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'NVIDIA Mission Control emphasizes orchestration and autonomous recovery, while HPE Private Cloud AI emphasizes turnkey deployment speed—both validate that operations discipline, not raw hardware, determines sustained ROI.',
     },
   ],
+  uniqueServices: [
+    {
+      name: 'Lifecycle Control Tower',
+      targetCustomer: '大型 CSP / Hyperscaler 私有叢集',
+      monetization: '年度訂閱 + 升級事件顧問服務',
+      painSolved: '把驅動、韌體、CUDA、Kubernetes 升級從高風險停機事件，變成可排程、可回滾、可稽核的標準流程。',
+      whyUnique: '結合 BMC / BIOS / GPU 韌體與上層叢集編排，能做版本矩陣驗證、canary、maintenance window、rollback。純雲平台不做客戶現場韌體深度整合，純硬體廠又通常不做軟體流程產品化。',
+      evidence: 'NVIDIA Mission Control 官方強調 cluster life cycle、continuous health checks、autonomous recovery。',
+      source: 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      name: 'Remote Ops & Predictive Maintenance',
+      targetCustomer: '跨站點部署的 CSP、代管機房、海外據點',
+      monetization: '節點數授權 + 遠端維運 SLA',
+      painSolved: '降低半夜派人到場與跨國維修成本，把問題在現場前就預警並遠端診斷。',
+      whyUnique: 'Foxconn 同時握有硬體遙測、BMC 控制、叢集事件與料件知識，可把監控延伸到可操作的遠端修復與預測性維護，而不只是一個 dashboard。',
+      evidence: 'HPE Private Cloud AI 官方強調 built-in observability 與 full stack visibility，代表市場已把持續可觀測與服務可用性視為核心能力。',
+      source: 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      name: 'Sovereign RAG Appliance',
+      targetCustomer: '金融、醫療、政府、製造等不能把資料送上公雲的企業',
+      monetization: '一體機專案 + 年度軟體維護 + 權限治理加值模組',
+      painSolved: '讓沒有 AI 平台團隊的企業，也能在本地或 air-gapped 環境快速上線文件問答與知識庫檢索。',
+      whyUnique: '不是只賣模型 endpoint，而是把資料匯入、權限、向量化、模型 serving、觀測與本地部署交付整合在一起。',
+      evidence: 'Red Hat OpenShift AI 官方強調 model lifecycle、model monitoring、hybrid cloud flexibility，代表企業需要的是完整生命週期平台，而不是單一模型工具。',
+      source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
+  ],
   // Messaging for leadership
   executiveSummary: {
     thesis: 'Software is the differentiator that turns commodity hardware into premium solutions.',
