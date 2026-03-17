@@ -227,6 +227,15 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'Red Hat OpenShift AI 官方強調 model lifecycle、model monitoring、hybrid cloud flexibility，代表企業需要的是完整生命週期平台，而不是單一模型工具。',
       source: 'https://www.redhat.com/en/products/ai/openshift-ai',
     },
+    {
+      name: 'Air-Gap Update Factory',
+      targetCustomer: '主權 AI、政府、金融與任何禁止外網連線的 AI 叢集',
+      monetization: '年度訂閱 + 每次大版本升級/安全修補服務費',
+      painSolved: '解決 air-gapped 環境上線後的 Day-2 營運痛點：離線容器鏡像、模型/套件同步、修補節奏、變更審計與回滾，不再讓客戶自己用人工腳本維持離線環境。',
+      whyUnique: '這不是單純賣硬體，也不是單純賣平台，而是把離線內容供應、版本治理、維護窗口與現場交付包成可續約服務。Foxconn 同時懂機房交付、叢集軟體與版本相依，最有機會把這件麻煩但高價值的工作產品化。',
+      evidence: 'Red Hat 針對 OpenShift AI Self-Managed 提供獨立的 disconnected environment 文件，顯示企業級 AI 平台在斷網環境下需要專門的安裝與後續營運方法。',
+      source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index',
+    },
   ],
   // Messaging for leadership
   executiveSummary: {
