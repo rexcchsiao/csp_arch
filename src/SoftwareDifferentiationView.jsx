@@ -177,6 +177,30 @@ const SoftwareDifferentiationView = () => {
         {activeTab === 'competitive' && (
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">競爭優勢分析</h3>
+
+            <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200 shadow-sm">
+              <h4 className="text-lg font-black text-amber-900 mb-2">競爭現實：市場已經在為「營運結果」付錢，不是只為硬體規格付錢</h4>
+              <p className="text-sm text-slate-700 mb-4">
+                這不是我們自己想像的敘事。從 NVIDIA、HPE 到 Supermicro 的官方產品語言，都已經把 cluster lifecycle、deployment speed、observability、building management integration、power / cooling control 放到前台。這代表真正影響採購勝率的，已經是誰能把硬體變成可穩定營運、可治理、可續約的服務。
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.marketProof.cards.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="p-4 bg-white rounded-xl border border-amber-100">
+                    <p className="text-xs font-black text-amber-800 mb-2">{item.company}</p>
+                    <p className="text-xs text-slate-700 mb-3">{item.proof}</p>
+                    <p className="text-xs font-medium text-amber-700">{item.takeaway}</p>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-amber-100">
+                <p className="text-sm font-semibold text-amber-900">管理層該記住的一句話：<span className="text-slate-700">競爭對手已經在賣 Day-2 operations。Foxconn 若只賣 server BOM，就會留在價值鏈較低的位置；若把軟體部門定位成 lifecycle / governance / facility-aware operations owner，才有機會拿到溢價與續約收入。</span></p>
+              </div>
+            </div>
+
             <div className="space-y-4">
               {softwareDifferentiation.competitiveAdvantage.map((advantage, idx) => (
                 <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
