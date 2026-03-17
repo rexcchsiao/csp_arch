@@ -4,6 +4,7 @@ import React from 'react';
 import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock } from 'lucide-react';
 import { customerSuccessScenarios, executiveSummary } from './customer-success-stories';
 import { softwareDifferentiation } from './software-differentiation';
+import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
 
 const ExecutiveSummaryView = () => {
@@ -113,6 +114,32 @@ const ExecutiveSummaryView = () => {
               <p className="text-xs text-amber-700 mt-3">所以真正的溢價點不是標準本身，而是建在標準之上的治理、流程與服務。</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
+          <h4 className="text-base font-black text-indigo-900 mb-2 flex items-center gap-2">
+            <Award className="w-4 h-4 text-indigo-600" />
+            軟體部門最值得投資的 4 個續約楔子
+          </h4>
+          <p className="text-sm text-indigo-800 mb-4 leading-relaxed">
+            真正能讓硬體訂單長成 3-5 年服務收入的，不是多一個 dashboard，而是把客戶最怕、最麻煩、最不想自己承接的 Day-2 營運風險做成可定價服務。
+          </p>
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {competitiveLandscape.softwareDepartmentWedge.wedges.map((wedge) => (
+              <div key={wedge.name} className="rounded-2xl border border-indigo-100 bg-white p-4">
+                <p className="text-xs font-black uppercase tracking-widest text-indigo-500 mb-2">Recurring Value Wedge</p>
+                <p className="text-sm font-black text-slate-900 mb-3">{wedge.name}</p>
+                <div className="space-y-2 text-xs text-slate-700">
+                  <p><span className="font-bold text-slate-500">客戶痛點：</span>{wedge.customerTrigger}</p>
+                  <p><span className="font-bold text-indigo-600">Foxconn 為何能做：</span>{wedge.whyFoxconnWins}</p>
+                  <p><span className="font-bold text-green-600">收入模式：</span>{wedge.monetization}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-indigo-900">{competitiveLandscape.softwareDepartmentWedge.boardMessage}</p>
+          </div>
         </div>
       </div>
 
