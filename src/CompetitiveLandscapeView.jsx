@@ -253,7 +253,7 @@ const CompetitiveLandscapeView = () => {
             <div className="p-6 bg-blue-50 rounded-2xl border border-blue-200">
               <h4 className="text-lg font-black text-blue-800 mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
-                {competitiveLandscape.foxconnOpportunity.strategicAsk?.headline}
+                {competitiveLandscape.strategicAsk?.headline}
               </h4>
               <div className="space-y-3">
                 {competitiveLandscape.foxconnOpportunity.strategicAsk?.items.map((item, idx) => (
