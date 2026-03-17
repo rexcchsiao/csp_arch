@@ -32,6 +32,7 @@ const ExecutiveSummaryView = () => {
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
   const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
+  const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
   const buyerScorecardSignals = [
     {
       criterion: 'Deployment speed now appears in the buying language',
@@ -67,6 +68,13 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'This shows customers increasingly expect AI server vendors to extend into operations software. Once visibility becomes standard, the higher-value budget shifts to who can turn that telemetry into actionable capacity policy, SLA workflows, and brownfield operating discipline.',
       foxconnMove: 'Use facility telemetry as the entry point, then sell Facility-Aware Capacity Assurance and lifecycle governance as the premium layer competitors still do not clearly own.',
       source: supermicroComposerSource?.name || 'Supermicro SuperCloud Composer',
+    },
+    {
+      criterion: 'Even hardware-led vendors now sell outcomes, services, and trust—not bare boxes',
+      marketSignal: 'Lenovo frames hybrid AI around validated solutions, services, productivity, agility, and trusted / compliant operations rather than only server specifications.',
+      whyItChangesProcurement: 'When another major hardware vendor sells AI around deployment confidence and operating trust, it confirms that software-and-services language is now mainstream in boardroom buying criteria.',
+      foxconnMove: 'Frame Foxconn software as the accountable layer that converts factory delivery into ongoing operating outcomes: deployment assurance, lifecycle governance, and sovereign-ready operations.',
+      source: lenovoHybridAISource?.name || 'Lenovo Hybrid AI Solutions',
     },
   ];
   const marketWhitespace = [
