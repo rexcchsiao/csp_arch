@@ -194,6 +194,32 @@ const CompetitiveLandscapeView = () => {
               </div>
             ))}
 
+            <div className="p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
+              <div className="flex items-start gap-3 mb-4">
+                <Target className="w-6 h-6 text-indigo-600 mt-1" />
+                <div>
+                  <h3 className="text-xl font-black text-indigo-900 mb-2">{competitiveLandscape.softwareDepartmentWedge.headline}</h3>
+                  <p className="text-sm text-indigo-800 font-medium">{competitiveLandscape.softwareDepartmentWedge.summary}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {competitiveLandscape.softwareDepartmentWedge.wedges.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-indigo-100">
+                    <h4 className="text-sm font-black text-indigo-800 mb-3">{item.name}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">客戶為何買：</span>{item.customerTrigger}</p>
+                      <p><span className="font-bold text-indigo-600">為什麼是 Foxconn：</span>{item.whyFoxconnWins}</p>
+                      <p><span className="font-bold text-slate-500">別人為何不想做：</span>{item.whyOthersAvoid}</p>
+                      <p><span className="font-bold text-slate-500">如何收費：</span>{item.monetization}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-indigo-100">
+                <p className="text-sm font-semibold text-indigo-800">{competitiveLandscape.softwareDepartmentWedge.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="pt-2">
               <h3 className="text-xl font-black text-slate-800 mb-4">可被客戶感知、可被定價的獨特服務</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

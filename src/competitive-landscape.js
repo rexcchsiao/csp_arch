@@ -155,6 +155,41 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'NVIDIA Mission Control emphasizes orchestration and autonomous recovery, while HPE Private Cloud AI emphasizes turnkey deployment speed—both validate that operations discipline, not raw hardware, determines sustained ROI.',
     },
   ],
+  softwareDepartmentWedge: {
+    headline: '軟體部門真正可守住、可定價的價值楔子',
+    summary: '老闆真正該投資的，不是「再多做一個 dashboard」，而是那些 GPU 廠、Hyperscaler、純硬體 ODM 都不願意或不擅長承接的髒活、重活、長尾活。這些工作最貼近客戶營運，最容易形成續約與高毛利。',
+    wedges: [
+      {
+        name: '變更安全 (Change Safety)',
+        customerTrigger: '每次驅動、韌體、CUDA、K8s 升級前，客戶都怕停機與 SLA 失約',
+        whyFoxconnWins: '只有同時理解 BMC / BIOS / GPU 韌體 / 叢集編排的人，才做得出版本矩陣、canary、rollback、maintenance window 治理',
+        whyOthersAvoid: 'Hyperscaler 偏標準化；GPU 廠重 reference stack；ODM 常止於硬體交付，沒人願意為客戶現場變更風險背書',
+        monetization: '年度訂閱 + 升級事件顧問服務'
+      },
+      {
+        name: 'Brownfield 導入',
+        customerTrigger: '客戶已有既有機房、DCIM、權限流程、告警系統，不可能為 AI 專案整場重做',
+        whyFoxconnWins: 'Foxconn 橫跨硬體、韌體、系統整合與現場交付，最有機會把新 AI 叢集接進既有營運體系',
+        whyOthersAvoid: '標準化平台通常不做深度客製；純軟體商又碰不到現場硬體與 BMC 細節',
+        monetization: '一次性整合案 + 年度維護擴充'
+      },
+      {
+        name: 'Air-gapped / Sovereign 運營',
+        customerTrigger: '金融、政府、醫療不能把資料與營運流程交給公有雲',
+        whyFoxconnWins: 'Foxconn 可把模型、權限、向量庫、監控、離線套件管理與機房交付整成一包',
+        whyOthersAvoid: 'Hyperscaler 的商業模式偏向雲連線；很多 OEM 軟體也預設持續聯網更新',
+        monetization: '專案交付 + 年維護 + 合規/審計加值模組'
+      },
+      {
+        name: 'Remote SLA Outcomes',
+        customerTrigger: '客戶不想買 dashboard，而是想買「半夜不用派人去機房」',
+        whyFoxconnWins: 'Foxconn 同時掌握料件、遙測、BMC 控制與現場支援流程，能從監控走到診斷、修復、備品策略',
+        whyOthersAvoid: '多數競品停在監控可視化，缺乏把資料轉成遠端修復與 SLA 承諾的能力',
+        monetization: '按節點訂閱 + SLA 等級收費'
+      }
+    ],
+    boardMessage: '這四個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
+  },
   uniqueServices: [
     {
       name: 'Brownfield Integration & Fleet Baseline',
