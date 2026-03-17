@@ -157,6 +157,15 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
   ],
   uniqueServices: [
     {
+      name: 'Brownfield Integration & Fleet Baseline',
+      targetCustomer: '已有既有機房、DCIM、BMC、維護窗口流程的大型 CSP / Enterprise',
+      monetization: '一次性整合專案 + 年度平台維護 / 擴充費',
+      painSolved: '讓新 AI 叢集不用打掉重練，就能接入既有 Redfish / OpenBMC / DCIM / 告警 / 權限與維護流程，降低跨部門整合阻力。',
+      whyUnique: 'Hyperscaler 與 GPU 廠商多半提供標準化平台，不會替每個客戶做 brownfield 對接；純硬體廠通常也只停在硬體交付。Foxconn 同時懂 BMC/韌體、叢集軟體與現場交付流程，才能把「可管理性」做成真正可落地的服務。',
+      evidence: 'DMTF Redfish 強調以現代 API 暴露標準化硬體管理能力；OpenBMC 提供可延伸的 BMC 基礎，但真正把它接進既有營運體系、版本治理與維護流程的是上層軟體整合能力。',
+      source: 'https://www.dmtf.org/standards/redfish',
+    },
+    {
       name: 'Lifecycle Control Tower',
       targetCustomer: '大型 CSP / Hyperscaler 私有叢集',
       monetization: '年度訂閱 + 升級事件顧問服務',
