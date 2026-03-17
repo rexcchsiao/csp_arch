@@ -4,6 +4,7 @@ import React from 'react';
 import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock } from 'lucide-react';
 import { customerSuccessScenarios, executiveSummary } from './customer-success-stories';
 import { softwareDifferentiation } from './software-differentiation';
+import { competitiveSources } from './competitive-sources.js';
 
 const ExecutiveSummaryView = () => {
   const metrics = [
@@ -14,6 +15,8 @@ const ExecutiveSummaryView = () => {
   ];
 
   const revenueProjection = softwareDifferentiation.serviceOfferings?.revenueProjection;
+  const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
+  const standardsSources = competitiveSources.standards || [];
 
   return (
     <div className="space-y-8">
@@ -64,6 +67,54 @@ const ExecutiveSummaryView = () => {
           </div>
         </div>
       )}
+
+      {/* Why the software team owns the value layer */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-2">
+          <Layers className="w-5 h-5 text-indigo-600" /> 為什麼軟體部門不是配角，而是價值控制層
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          市場訊號已經很明確：NVIDIA Mission Control 把 AI factory 的工作負載編排、監控、autonomous recovery、power / cooling control 與 building management integration 都包成軟體；
+          Redfish 與 OpenBMC 則證明底層管理能力正快速標準化。真正能被客戶感知、也真正值得付費的，不是「有沒有 BMC API」，而是誰能把這些基礎能力變成可治理、可回滾、可稽核、可大規模運營的服務。
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-3">如果沒有軟體產品層</p>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li>• Redfish / OpenBMC 只會停留在「可管理」，無法變成「可營運」</li>
+              <li>• 每次升級都變成高風險專案，仍依賴人海與現場經驗</li>
+              <li>• 新 AI 叢集難以接回既有 DCIM、告警、維護窗口與權限流程</li>
+              <li>• 客戶會把硬體視為可替換零件，而非長期服務平台</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-green-700 mb-3">軟體部門真正賣的是什麼</p>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li>• Lifecycle Control Tower：版本矩陣、canary 升級、自動回滾、稽核報表</li>
+              <li>• Brownfield Integration Hub：把新 AI 叢集接進既有機房流程，不必整場重做</li>
+              <li>• Remote Ops 閉環：監控 → 診斷 → 預警 → 遠端修復</li>
+              <li>• 可被管理層理解的 KPI：縮短維護窗口、降低停機、保護既有投資</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-black text-slate-500 mb-2">外部訊號 1</p>
+            <p className="text-sm font-bold text-slate-900 mb-2">NVIDIA 已把 AI factory 營運包成軟體</p>
+            <p className="text-xs text-slate-600 leading-relaxed">{missionControlSource?.keyFeature || 'Mission Control 將部署、編排、監控、autonomous recovery 與 power / cooling control 整合為 AI factory operations software。'}</p>
+          </div>
+          {standardsSources.slice(0, 2).map((source) => (
+            <div key={source.name} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <p className="text-xs font-black text-slate-500 mb-2">外部訊號</p>
+              <p className="text-sm font-bold text-slate-900 mb-2">{source.name}</p>
+              <p className="text-xs text-slate-600 leading-relaxed">{source.keyFeature}</p>
+              <p className="text-xs text-amber-700 mt-3">所以真正的溢價點不是標準本身，而是建在標準之上的治理、流程與服務。</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Key Metrics Grid */}
       <div>
