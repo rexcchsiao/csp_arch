@@ -46,6 +46,18 @@ export const competitiveSources = {
   qct: [
     { name: 'QCT Cloud-DCIM', url: 'https://www.qct.com/solution/product/cloud-dcim', description: 'Data center infrastructure management', relevance: 'Limited software offering compared to our full stack' }
   ],
+  supermicro: [
+    {
+      name: 'Supermicro SuperCloud Composer',
+      url: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer',
+      description: 'Infrastructure and liquid-cooling management software from Supermicro',
+      relevance: 'Useful signal that even hardware-first AI server vendors are expanding software around facility telemetry and operations',
+      lastVerified: '2026-03-18',
+      keyFeature: 'Supermicro highlights real-time management of physical assets and CDU / cooling-tower sensor data including pressure, humidity, temperature, pump status, and component health through its LCCM interface.',
+      limitation: 'The messaging emphasizes monitoring and efficiency visibility; it does not clearly position lifecycle governance, brownfield integration, or mixed-vendor Day-2 service ownership.',
+      ourAdvantage: 'This validates Foxconn should not stop at monitoring. Foxconn can differentiate by turning facility telemetry into capacity governance, SLA workflows, and brownfield operational services across mixed environments.'
+    }
+  ],
   gigabyte: [
     { name: 'GIGABYTE Server Management', url: 'https://www.gigabyte.com/Server/Management', description: 'Server management console', relevance: 'Basic BMC management, no AI-specific features', lastVerified: '2026-03-16', keyFeature: 'Traditional IPMI/BMC-based server management', limitation: 'No GPU-specific monitoring, no AI workload optimization, no RAG or private AI capabilities' }
   ],

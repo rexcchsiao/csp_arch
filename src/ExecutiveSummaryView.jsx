@@ -31,6 +31,7 @@ const ExecutiveSummaryView = () => {
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
   const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
+  const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
   const buyerScorecardSignals = [
     {
       criterion: 'Deployment speed now appears in the buying language',
@@ -59,6 +60,13 @@ const ExecutiveSummaryView = () => {
       whyItChangesProcurement: 'That makes mixed-vendor freedom, brownfield fit, and single-accountability integration more valuable for customers protecting existing assets.',
       foxconnMove: 'Position Foxconn software as the neutral operations layer across mixed infrastructure, not another closed stack.',
       source: dellAIFactorySource?.name || 'Dell AI Factory / broader OEM ecosystem pattern',
+    },
+    {
+      criterion: 'Facility telemetry is becoming table stakes—governance is the real differentiator',
+      marketSignal: 'Even Supermicro now promotes management software that surfaces real-time CDU / cooling-tower telemetry, physical asset data, and liquid-cooling sensor health.',
+      whyItChangesProcurement: 'This shows customers increasingly expect AI server vendors to extend into operations software. Once visibility becomes standard, the higher-value budget shifts to who can turn that telemetry into actionable capacity policy, SLA workflows, and brownfield operating discipline.',
+      foxconnMove: 'Use facility telemetry as the entry point, then sell Facility-Aware Capacity Assurance and lifecycle governance as the premium layer competitors still do not clearly own.',
+      source: supermicroComposerSource?.name || 'Supermicro SuperCloud Composer',
     },
   ];
   const marketWhitespace = [
