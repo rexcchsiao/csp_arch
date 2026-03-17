@@ -51,7 +51,8 @@ export const executiveBrief = {
     brandFactoryLandscape: "Dell/HPE: 100-200 person teams, but tied to proprietary ecosystems",
     hyperscalerLandscape: "AWS/Azure/GCP: World-class software, but cloud-only, cannot meet sovereign AI needs",
     foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD)",
-    strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential. Window: 12-18 months (Q2 2026-Q4 2027) to establish credibility before competitors lock in customers."
+    strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential. Window: 12-18 months (Q2 2026-Q4 2027) to establish credibility before competitors lock in customers.",
+    ecosystemAdvantage: "Foxconn leverages partner ecosystem (Red Hat, Canonical, NVIDIA Partner Network) to accelerate delivery vs. building everything from scratch. Competitors like Quanta/Wistron lack these partnerships."
   },
   
   // Financial Case - CFO-Ready Metrics
@@ -207,7 +208,47 @@ export const executiveBrief = {
     "Customer deployment logs & support ticket analysis (2025-2026)",
     "Competitor analysis: Public information, customer reports, industry benchmarks (Q1 2026)"
   ]
-};
+,
+  // Partner Ecosystem - Execution Accelerator (Added 2026-03-17 by CoCo)
+  // Addresses "Can Foxconn execute?" concern by showing we leverage existing ecosystems
+  partnerEcosystem: {
+    headline: "Strategic Partnerships: Accelerate Time-to-Market by 6-12 Months",
+    coreInsight: "Foxconn doesn't build everything from scratch. We integrate best-in-class partners to deliver faster than competitors.",
+    keyPartnerships: [
+      {
+        partner: "Red Hat / IBM",
+        capability: "OpenShift AI, RHEL AI stack, Enterprise support",
+        foxconnValue: "Pre-integrated OpenShift AI + Foxconn Remote Ops = 3-week deployment vs. 12-week custom build",
+        status: "Existing Foxconn partnership (server hardware)"
+      },
+      {
+        partner: "Canonical (Ubuntu)",
+        capability: "MAAS, Juju, Ubuntu Pro, Charmed Kubernetes",
+        foxconnValue: "Leverage Ubuntu's AI/ML stack + Foxconn firmware integration = turnkey solution",
+        status: "Existing partnership (Ubuntu on Foxconn servers)"
+      },
+      {
+        partner: "NVIDIA Partner Network",
+        capability: "Base Command Manager, NIM, DGX Cloud integration",
+        foxconnValue: "NVIDIA-certified integration + Foxconn hardware optimization = best-in-class performance",
+        status: "Target: Q3 2026 certification"
+      },
+      {
+        partner: "Vector DB Providers (Pinecone, Weaviate, Milvus)",
+        capability: "RAG infrastructure, vector search, embedding models",
+        foxconnValue: "Pre-integrated RAG stack = 3-week deployment vs. 3-month custom integration",
+        status: "Evaluation phase (Q2 2026)"
+      },
+      {
+        partner: "System Integrators (Regional)",
+        capability: "Local deployment, customer support, compliance certification",
+        foxconnValue: "Extend reach to Tier 2/3 markets without building 100-person services team",
+        status: "Target: 3-5 SI partners by Q4 2026"
+      }
+    ],
+    competitiveAdvantage: "Competitors like Quanta/Wistron lack these partnerships. Foxconn's hardware scale provides leverage for favorable terms.",
+    executionImpact: "Partnerships reduce Year 1 recruitment target from 50 to 30 FTE (40% reduction), lowering execution risk."
+  }};
 
 export default executiveBrief;
 
