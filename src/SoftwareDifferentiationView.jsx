@@ -361,6 +361,30 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-cyan-200 shadow-sm">
+              <h3 className="text-xl font-black text-cyan-900 mb-2">市場其實在賣的是風險轉移，不是 feature list</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段幫管理層把外部產品語言翻譯成採購語言：客戶真正核准的，通常不是「功能很多」，而是誰能接住上線速度、SLA、治理與跨團隊協調風險。這正是軟體部門最該主張的價值層。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.procurementProof.cards.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100">
+                    <h4 className="text-sm font-black text-cyan-800 mb-3">{item.company}</h4>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">外部訊號：</span>{item.proof}</p>
+                      <p><span className="font-bold text-amber-700">採購翻譯：</span>{item.buyerTranslation}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該怎麼賣：</span>{item.foxconnPlay}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100">
+                <p className="text-sm font-semibold text-cyan-900">{softwareDifferentiation.procurementProof.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
               <h3 className="text-xl font-black text-sky-900 mb-2">大型 CSP / Hyperscaler 為什麼還是會買我們的軟體？</h3>
               <p className="text-sm text-slate-700 mb-4">即使客戶有自己的平台團隊，他們仍然會為「更快上線、更少風險、更低 TCO、更能保護既有投資」付錢。這一段很重要，因為它直接回答了管理層最常問的問題：<span className="font-semibold text-sky-700">既然大客戶也會寫軟體，為什麼還需要我們？</span></p>

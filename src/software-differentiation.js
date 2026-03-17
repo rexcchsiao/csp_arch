@@ -724,6 +724,37 @@ structuralAdvantages: {
 		],
 		boardMessage: '這條飛輪的重點不是賣更多功能，而是讓每一筆硬體訂單，都有機會變成長達 3-5 年的軟體與服務收入。'
 	},
+	procurementProof: {
+		headline: '客戶真正核准的不是功能，而是風險轉移與可交付結果',
+		coreInsight: '從 NVIDIA、HPE 到 Red Hat 的官方語言來看，市場領先者都不是在賣「我們有很多功能」，而是在賣更快上線、更少營運中斷、更容易治理。這正是軟體部門最該搶下的採購敘事。',
+		cards: [
+			{
+				company: 'NVIDIA Mission Control',
+				proof: '官方直接把 cluster life cycle、autonomous recovery、building management integration、power / cooling control 放進 AI factory operations 敘事。',
+				buyerTranslation: '客戶買的不是監控畫面，而是「出事時不用自己把 IT、機電、SRE 全部叫醒」的營運保證。',
+				foxconnPlay: 'Foxconn 應把 Lifecycle Control Tower 與 Facility-Aware Capacity Assurance 打包成 SLA / 風險轉移服務，而不是只講監控功能。',
+				sourceLabel: 'NVIDIA Mission Control',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
+				company: 'HPE Private Cloud AI',
+				proof: 'HPE 官方主打 deploy AI in days, not months、pre-configured validated platform、full stack visibility、built-in observability。',
+				buyerTranslation: '採購真正想核准的是「把 time-to-revenue 與 deployment risk 從內部團隊轉出去」，不是再買一套要自己慢慢拼的軟體。',
+				foxconnPlay: 'Foxconn 應把 Deployment Assurance 與標準化上線 runbook 做成 attach service，讓業務賣的是提早營收，不是安裝工時。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				company: 'Red Hat OpenShift AI',
+				proof: 'Red Hat 官方聚焦 model lifecycle、model monitoring、self-service access、cost control 與 hybrid operations。',
+				buyerTranslation: '客戶要的是「模型能被管、成本能被看、團隊能自助、合規能交代」；這些都是治理預算，不只是平台預算。',
+				foxconnPlay: 'Foxconn 應把 Tenant Governance、GPU showback、air-gap governance 與審計證據輸出，包成治理層服務，對應 CIO / FinOps / Compliance 預算。',
+				sourceLabel: 'Red Hat OpenShift AI',
+				source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+			}
+		],
+		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
+	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
