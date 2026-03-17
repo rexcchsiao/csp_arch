@@ -251,6 +251,29 @@ const CompetitiveLandscapeView = () => {
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                 <h3 className="text-xl font-black text-slate-900 mb-2">{competitiveLandscape.serviceValueCaptureMatrix?.headline}</h3>
                 <p className="text-sm text-slate-700 mb-4">{competitiveLandscape.serviceValueCaptureMatrix?.summary}</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                  <div className="p-4 bg-white rounded-2xl border border-slate-200">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">可對應預算 owner</p>
+                    <p className="text-3xl font-black text-slate-900">5</p>
+                    <p className="text-xs text-slate-600 mt-2">Infra、SRE、Ops、CIO/Compliance、Facilities 都能成為買單單位。</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-2xl border border-slate-200">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">可續約服務主軸</p>
+                    <p className="text-3xl font-black text-blue-700">4</p>
+                    <p className="text-xs text-slate-600 mt-2">變更安全、brownfield、主權 AI、Remote SLA outcomes。</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-2xl border border-slate-200">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">收入型態</p>
+                    <p className="text-3xl font-black text-green-700">3</p>
+                    <p className="text-xs text-slate-600 mt-2">一次性整合、年度訂閱、SLA / 升級事件顧問費可以疊加。</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-2xl border border-slate-200">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">董事會關鍵句</p>
+                    <p className="text-sm font-black text-indigo-800 leading-snug">軟體部門不是成本中心，是把單次交機變成跨部門、跨年度收入的 attach engine。</p>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {competitiveLandscape.serviceValueCaptureMatrix?.rows.map((row, idx) => (
                     <div key={idx} className="p-5 bg-white rounded-2xl border border-slate-200">
