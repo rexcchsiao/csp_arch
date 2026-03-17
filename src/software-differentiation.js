@@ -57,6 +57,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Lifecycle Control Tower：版本矩陣驗證 + Canary 升級 + 自動回滾 + 維運報表',
       valueAmplification: '把高風險升級事件變成可排程、可回滾、可稽核的標準流程，縮短維護窗口 70%+',
     },
+    {
+      id: 'pp7',
+      problem: '既有機房混用新舊設備，AI 叢集難以整合',
+      impact: '多數 CSP 與大型企業已有既有 BMC、DCIM、機電、告警流程；若新 AI 叢集只能獨立運作，導入就會卡在跨團隊整合與現場改造',
+      softwareSolution: 'Brownfield Integration Hub：以 Redfish / OpenBMC 為基礎，對接既有監控、告警、維護流程與權限模型',
+      valueAmplification: '避免 AI 專案因「必須整場重做」而延宕，讓新叢集可逐步接入既有營運體系，軟體部門因此成為導入成敗關鍵',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -90,6 +97,12 @@ export const softwareDifferentiation = {
       foxconn: 'RAG 一體機，支援權限治理與合規審計',
       competitors: '極少廠商提供端到端私有 AI 解決方案',
       whyItMatters: '填補 SMB/企業市場空白，開創新增收來源',
+    },
+    {
+      category: 'Brownfield 整合',
+      foxconn: '可把新 AI 叢集接入既有 BMC / DCIM / 告警 / 維護窗口流程，支援混合世代設備共管',
+      competitors: '多數方案假設客戶採用全新標準化堆疊，對既有機房整合著墨不足',
+      whyItMatters: '大型客戶真正採購阻力不是硬體規格，而是能否不打掉重練就把 AI 納入現有營運體系',
     },
   ],
 
@@ -615,6 +628,14 @@ structuralAdvantages: {
 		totalPotential: '首年可貢獻 NT$ 20-30M 營收，毛利率 70%+',
 	},
 		offerings: [
+			{
+				name: 'Brownfield Integration & Fleet Baseline 服務',
+				description: '將新 AI 叢集接入既有 Redfish / OpenBMC / DCIM / 告警流程，建立跨新舊設備的一致資產、版本、權限與維護基線',
+				pricing: 'NT$ 300K-1.5M/案 + 年度維護/擴充費',
+				margin: '60-70%',
+				differentiation: '不是賣一套孤島式新平台，而是降低既有機房導入 AI 的阻力，讓客戶不用為了上 AI 先做整場重建',
+				targetCustomer: '大型 CSP、金融企業、既有資料中心營運團隊'
+			},
 			{
 				name: 'Remote Ops 遠端運維服務',
 				description: '7×24 小時全球機房監控、預測性維護、遠端診斷與修復',
