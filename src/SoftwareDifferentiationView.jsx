@@ -456,6 +456,30 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
+              <h3 className="text-xl font-black text-emerald-900 mb-2">市場真正核准預算的 4 種語言</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把外部官方頁面的產品語言，翻成管理層真正會點頭的預算語言：速度、控制、信任，以及單一 accountable owner。這比再多一個功能列表更能證明軟體部門的不可替代性。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.marketBuyingLanguage.vectors.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <h4 className="text-sm font-black text-emerald-800 mb-3">{item.label}</h4>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                      <p><span className="font-bold text-amber-700">採購會問：</span>{item.buyerQuestion}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該怎麼翻譯：</span>{item.foxconnTranslation}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                <p className="text-sm font-semibold text-emerald-900">{softwareDifferentiation.marketBuyingLanguage.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
               <h3 className="text-xl font-black text-sky-900 mb-2">大型 CSP / Hyperscaler 為什麼還是會買我們的軟體？</h3>
               <p className="text-sm text-slate-700 mb-4">即使客戶有自己的平台團隊，他們仍然會為「更快上線、更少風險、更低 TCO、更能保護既有投資」付錢。這一段很重要，因為它直接回答了管理層最常問的問題：<span className="font-semibold text-sky-700">既然大客戶也會寫軟體，為什麼還需要我們？</span></p>

@@ -839,6 +839,45 @@ structuralAdvantages: {
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
 	},
+	marketBuyingLanguage: {
+		headline: '市場現在在用什麼語言買單：不是功能清單，而是 4 種可核准的結果',
+		coreInsight: '外部官方頁面已經很一致：HPE 賣 deploy AI in days、full stack visibility；Red Hat 賣 lifecycle、monitoring、self-service、cost control；Lenovo 賣 productivity、agility、trust。這些都不是功能名詞，而是管理層會核准預算的結果語言。Foxconn 若要凸顯軟體部門價值，就該把自己的論述也翻成這種採購語言。',
+		vectors: [
+			{
+				label: 'Speed-to-Value',
+				marketSignal: 'HPE 直接用 deploy AI in days, not months、production deployment in hours 來賣。',
+				buyerQuestion: '這套方案能不能讓我的 AI 服務更早開始產生營收？',
+				foxconnTranslation: '把出廠預整合、site acceptance、baseline 驗證與標準 runbook 包成 Deployment Assurance，賣 time-to-revenue，而不是安裝工時。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				label: 'Operational Control',
+				marketSignal: 'Red Hat 官方強調 model lifecycle、model monitoring、self-service access、cost control。',
+				buyerQuestion: '這套方案上線後，誰負責把模型、成本、權限與服務穩定性管好？',
+				foxconnTranslation: '把 Lifecycle Control Tower、Tenant Governance、showback 與 observability 做成治理層服務，讓軟體部門直接對 Day-2 運營結果負責。',
+				sourceLabel: 'Red Hat OpenShift AI',
+				source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+			},
+			{
+				label: 'Trust & Compliance',
+				marketSignal: 'Lenovo 官方把 hybrid AI 的價值寫成 productivity、agility、trust，並強調 validated solutions 與 compliant operations。',
+				buyerQuestion: '這套 AI 基礎設施能不能被安全、合規、可治理地長期營運？',
+				foxconnTranslation: '把 air-gap content lifecycle、權限治理、稽核證據與 brownfield operating discipline 包成可續約服務，去對接合規與主權 AI 預算。',
+				sourceLabel: 'Lenovo Hybrid AI Solutions',
+				source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
+			},
+			{
+				label: 'Single Accountable Owner',
+				marketSignal: 'HPE 與 NVIDIA 都在把 turnkey、validated、observability、continuous service availability 當成核心賣點。',
+				buyerQuestion: '出問題時，到底誰對 deployment risk、upgrade risk 與 SLA 負責？',
+				foxconnTranslation: 'Foxconn 不該只賣平台，而該主張自己是 Factory-to-Operations 的 accountable owner：從出廠、上線、升級到遠端運維都由軟體部門把風險接起來。',
+				sourceLabel: 'HPE Private Cloud AI + NVIDIA Mission Control',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			}
+		],
+		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust 與 accountable ownership，軟體部門就不該被描述成「支援功能」，而是這四種結果的 owner。'
+	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
