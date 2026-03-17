@@ -149,6 +149,33 @@ const ExecutiveSummaryView = () => {
             <p className="text-sm font-semibold text-indigo-900">{competitiveLandscape.softwareDepartmentWedge.boardMessage}</p>
           </div>
         </div>
+
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h4 className="text-base font-black text-slate-900 mb-2 flex items-center gap-2">
+            <BarChart3 className="w-4 h-4 text-blue-600" />
+            軟體部門不是成本中心，而是跨預算 owner 的續約收入層
+          </h4>
+          <p className="text-sm text-slate-700 mb-4 leading-relaxed">
+            真正讓管理層看見價值的，不只是功能清單，而是誰會為這些能力編列預算、什麼事件會觸發採購、以及為什麼明年還會繼續付錢。
+            當 Foxconn 的軟體能同時對應 Infrastructure、SRE、Operations、Compliance 與 Facilities 的需求時，硬體訂單就有機會長成多部門、多年度的服務收入。
+          </p>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {competitiveLandscape.serviceValueCaptureMatrix?.rows.map((row) => (
+              <div key={row.service} className="rounded-2xl border border-slate-200 bg-white p-4">
+                <p className="text-sm font-black text-slate-900 mb-3">{row.service}</p>
+                <div className="space-y-2 text-xs text-slate-700">
+                  <p><span className="font-bold text-slate-500">預算 owner：</span>{row.budgetOwner}</p>
+                  <p><span className="font-bold text-slate-500">採購觸發：</span>{row.trigger}</p>
+                  <p><span className="font-bold text-blue-600">續約理由：</span>{row.recurringReason}</p>
+                  <p><span className="font-bold text-green-600">董事會看到的結果：</span>{row.boardOutcome}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
+            <p className="text-sm font-semibold text-blue-900">{competitiveLandscape.serviceValueCaptureMatrix?.boardMessage}</p>
+          </div>
+        </div>
       </div>
 
       {/* Key Metrics Grid */}
