@@ -2,6 +2,24 @@
 
 This project presents the strategic case for Foxconn's software department value in the AI server space. It demonstrates why **"without software, hardware value cannot be fully amplified."**
 
+---
+
+## ⚡ 30-Second Briefing (For Time-Constrained Leaders)
+
+**The Problem:** Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle. Deployment takes 2-4 weeks. No software = stranded capital + delayed revenue.
+
+**The Solution:** Foxconn software transforms idle GPUs into 85%+ utilization, 2-hour deployment, 70% remote fix rate. Same hardware, 2x business output.
+
+**The Ask:** Invest NT$ 65M/year for 50-80 person software team.
+
+**The Return:** Year 3: NT$ 750M software revenue, 20-25% gross margin (vs. 10-15% hardware-only). ROI: 11.5x. Payback: 18-24 months.
+
+**The Risk:** By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity.
+
+**The Window:** 12-18 months (Q2 2026-Q4 2027) to establish software credibility before competitors lock in customers.
+
+---
+
 ## 📊 What's Inside
 
 This presentation covers:
