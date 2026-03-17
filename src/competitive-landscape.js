@@ -207,7 +207,7 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         monetization: '平台訂閱 + 進階報表 / 治理模組授權'
       }
     ],
-    boardMessage: '這四個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
+    boardMessage: '這五個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
   },
   uniqueServices: [
     {

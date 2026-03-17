@@ -255,13 +255,13 @@ const CompetitiveLandscapeView = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                   <div className="p-4 bg-white rounded-2xl border border-slate-200">
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">可對應預算 owner</p>
-                    <p className="text-3xl font-black text-slate-900">5</p>
-                    <p className="text-xs text-slate-600 mt-2">Infra、SRE、Ops、CIO/Compliance、Facilities 都能成為買單單位。</p>
+                    <p className="text-3xl font-black text-slate-900">6</p>
+                    <p className="text-xs text-slate-600 mt-2">Infra、SRE、Ops、CIO/Compliance、FinOps/Platform、Facilities 都能成為買單單位。</p>
                   </div>
                   <div className="p-4 bg-white rounded-2xl border border-slate-200">
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">可續約服務主軸</p>
-                    <p className="text-3xl font-black text-blue-700">4</p>
-                    <p className="text-xs text-slate-600 mt-2">變更安全、brownfield、主權 AI、Remote SLA outcomes。</p>
+                    <p className="text-3xl font-black text-blue-700">6</p>
+                    <p className="text-xs text-slate-600 mt-2">Brownfield、Lifecycle、Remote Ops、Sovereign/Air-Gap、Tenant Governance、Facility Assurance。</p>
                   </div>
                   <div className="p-4 bg-white rounded-2xl border border-slate-200">
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">收入型態</p>
