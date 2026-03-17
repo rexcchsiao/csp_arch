@@ -149,6 +149,12 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'BMC-based PID control + K8s energy-aware scheduler = 10-15% reduction in cooling energy, PUE improvement from 1.6 to 1.4',
     },
     {
+      problem: 'Tenant Governance, Quota & GPU Showback',
+      description: 'As AI clusters spread across business units, the real bottleneck becomes governance: who gets priority, how quota is enforced, and how usage/cost are shown back to each team. Without this, GPUs become politically allocated shared assets instead of economically optimized infrastructure.',
+      foxconnSolution: 'Foxconn tenant governance layer: quota policies, priority tiers, approval workflow, per-tenant GPU/power usage reporting, and showback/export into customer finance or ITSM workflows.',
+      evidence: 'Enterprise AI platforms such as Red Hat OpenShift AI already emphasize cost control, monitoring, and hybrid operations. Foxconn can differentiate by tying tenant policy to mixed-vendor GPU pools, power telemetry, and brownfield operations workflows.',
+    },
+    {
       problem: 'Lifecycle Governance & Change Window Risk',
       description: 'Enterprise AI clusters do not fail only at deployment; they fail during driver, firmware, CUDA, and Kubernetes upgrades. Most competitors emphasize day-1 provisioning but leave day-2 change management to the customer.',
       foxconnSolution: 'Foxconn lifecycle orchestration: version matrix validation, rolling firmware/driver updates, canary nodes, automatic rollback, and maintenance-window reporting.',
@@ -192,6 +198,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         whyFoxconnWins: 'Foxconn 同時掌握料件、遙測、BMC 控制與現場支援流程，能從監控走到診斷、修復、備品策略',
         whyOthersAvoid: '多數競品停在監控可視化，缺乏把資料轉成遠端修復與 SLA 承諾的能力',
         monetization: '按節點訂閱 + SLA 等級收費'
+      },
+      {
+        name: 'Tenant Governance & GPU Showback',
+        customerTrigger: 'AI 平台一旦被多個 BU / 團隊共用，管理層就會追問：誰在吃掉 GPU、誰該優先、成本該算到哪裡',
+        whyFoxconnWins: 'Foxconn 可把 GPU / 功耗 / 任務 / 配額 / 權限整合成同一個治理層，讓平台工程、財務與 BU 都看得懂、算得清、控得住',
+        whyOthersAvoid: 'GPU 廠與純硬體 ODM 多半停在設備管理；雲平台雖有帳單能力，但不會深入客戶本地 mixed-vendor GPU pool、維護窗口與權限流程',
+        monetization: '平台訂閱 + 進階報表 / 治理模組授權'
       }
     ],
     boardMessage: '這四個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
@@ -253,6 +266,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index',
     },
     {
+      name: 'Tenant Governance & GPU Showback',
+      targetCustomer: '多 BU / 多租戶共用 AI 叢集的 CSP、電信商、大型企業與內部 AI 平台團隊',
+      monetization: '平台訂閱 + 治理模組授權 + 顧問導入費',
+      budgetOwner: 'Platform Engineering / FinOps / CIO Office',
+      renewalDriver: '配額政策、優先級規則、showback / chargeback 報表、年度預算檢討都會持續驅動續約',
+      painSolved: '把「誰拿多少 GPU、誰有優先權、功耗與成本怎麼算回去」做成正式治理能力，避免 AI 平台從共享資產變成內部搶資源與成本黑箱。',
+      whyUnique: 'Foxconn 不只看到 K8s 工作負載，還看得到 BMC / 功耗 / 機櫃層訊號與 brownfield 權限流程，因此能把 quota、排程優先級、功耗視角與 showback 串成真正可執行的管理機制，而不是只做帳單後台。',
+      evidence: 'Red Hat OpenShift AI 官方已把 cost control、monitoring 與 hybrid operations 納入平台敘事，代表企業 AI 平台已從「能不能跑模型」走向「能不能治理成本與資源」。Foxconn 可把這個需求進一步下探到 mixed-vendor GPU 與機房營運層。',
+      source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
+    {
       name: 'Facility-Aware Capacity Assurance',
       targetCustomer: '已有既有機電/BMS/DCIM、且 AI 負載會受電力與散熱上限牽制的大型資料中心',
       monetization: '年度訂閱 + 容量擴充/事件演練顧問服務',
@@ -295,6 +319,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         trigger: '資料不能上雲、需在地化與審計',
         recurringReason: '知識庫擴充、權限治理、離線更新與稽核需求持續存在',
         boardOutcome: '切入雲廠不擅長服務的高附加價值市場'
+      },
+      {
+        service: 'Tenant Governance & GPU Showback',
+        budgetOwner: 'Platform Engineering / FinOps / CIO Office',
+        trigger: 'AI 平台被多個 BU / 團隊共用，管理層開始追問配額、公平性與成本分攤',
+        recurringReason: '每季預算檢討、配額調整、chargeback / showback 與優先級治理都會持續發生',
+        boardOutcome: '把 GPU 共享平台從成本黑箱變成可治理、可擴張、可被財務接受的基礎設施'
       },
       {
         service: 'Facility-Aware Capacity Assurance',
