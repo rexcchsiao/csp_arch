@@ -178,6 +178,35 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Procurement Logic - Why software budget gets approved */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Lock className="w-5 h-5 text-emerald-600" /> 為什麼軟體預算比較容易被核准
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          老闆最後看的不是 feature list，而是：<span className="font-semibold text-slate-900">這筆錢是不是在解決某個部門現在就很痛的營運問題</span>。
+          當軟體能力能對應到明確的預算 owner、採購觸發事件與續約理由，它就不再像附贈支援，而是可獨立成立的營運能力。
+        </p>
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+          {competitiveLandscape.uniqueServices.slice(0, 4).map((service) => (
+            <div key={service.name} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Budgetable Service</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{service.name}</p>
+              <div className="space-y-2 text-xs text-slate-700">
+                <p><span className="font-bold text-slate-500">誰會買：</span>{service.budgetOwner}</p>
+                <p><span className="font-bold text-slate-500">什麼時候會買：</span>{service.painSolved}</p>
+                <p><span className="font-bold text-blue-600">為何會續約：</span>{service.renewalDriver}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">
+            這段論述對管理層最關鍵的意義是：軟體部門不是要跟硬體搶預算，而是把原本一次性交機的收入，延伸成 Infrastructure、SRE、Operations、Compliance 都願意持續編列的年度支出。
+          </p>
+        </div>
+      </div>
+
       {/* Key Metrics Grid */}
       <div>
         <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-2">
