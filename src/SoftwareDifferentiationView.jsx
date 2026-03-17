@@ -85,6 +85,30 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-rose-200 shadow-sm">
+              <h4 className="text-lg font-black text-rose-900 mb-2">{softwareDifferentiation.softwareDepartmentValueBridge.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.softwareDepartmentValueBridge.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.softwareDepartmentValueBridge.pillars.map((item, idx) => (
+                  <div key={idx} className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                    <p className="text-xs font-black text-rose-800 mb-2">{item.title}</p>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                      <p><span className="font-bold text-rose-700">Foxconn 該怎麼賣：</span>{item.foxconnPlay}</p>
+                      <p><span className="font-bold text-emerald-700">為什麼董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-rose-50 rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">{softwareDifferentiation.softwareDepartmentValueBridge.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
               <h4 className="text-lg font-black text-indigo-900 mb-2">{softwareDifferentiation.standardsGap.headline}</h4>
               <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.standardsGap.coreInsight}</p>

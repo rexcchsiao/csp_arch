@@ -308,6 +308,39 @@ structuralAdvantages: {
     boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
   },
 
+  // Software department positioning - translating market signals into a board-level value claim (Added 2026-03-18 by CoCo)
+  softwareDepartmentValueBridge: {
+    headline: '真正該賣的是 Day-2 Assurance，不是再多一個 dashboard',
+    coreInsight: '從 HPE、NVIDIA、Red Hat 的官方敘事來看，市場已經把價值重心從「第一次裝得起來」移到「之後能不能穩定營運、升級、稽核、擴容」。Foxconn 軟體部門最該主張的，不是也做一套平台，而是把這些 Day-2 風險接成可定價、可續約、可被管理層理解的服務。',
+    pillars: [
+      {
+        title: 'Deployment Assurance',
+        marketSignal: 'HPE Private Cloud AI 用 deploy AI in days, not months、pre-configured validated platform、full stack visibility 來賣價值。',
+        foxconnPlay: 'Foxconn 應把「出廠預整合 + 到站快速驗證 + 標準化上線 runbook」包成 deployment assurance，賣的是客戶提早開始產生營收，而不是只賣安裝工時。',
+        boardWhyItMatters: '這讓軟體部門直接影響 time-to-revenue，成為硬體 attach rate 的放大器。',
+        sourceLabel: 'HPE Private Cloud AI',
+        source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+      },
+      {
+        title: 'Lifecycle Assurance',
+        marketSignal: 'NVIDIA Mission Control 已把 cluster life cycle、autonomous recovery、power / cooling control、building management integration 放進產品定位。',
+        foxconnPlay: 'Foxconn 應把版本矩陣、maintenance window、rollback、設施事件聯動與 SLA 報表做成 lifecycle assurance，主張「不是幫客戶裝好，而是幫客戶把升級與故障風險接住」。',
+        boardWhyItMatters: '這是最容易形成年約與續約收入的軟體層，也是 OEM/ODM 最不該缺席的價值位階。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Governance Assurance',
+        marketSignal: 'Red Hat OpenShift AI 的官方敘事聚焦 model lifecycle、monitoring、self-service access、inferencing cost；Disconnected Environments 甚至有獨立安裝/維運文件。',
+        foxconnPlay: 'Foxconn 應把 air-gap 內容同步、權限治理、稽核證據、離線更新與成本可視化包成 governance assurance，讓主權 AI / 金融 / 國防客戶買到的是可治理，不只是可部署。',
+        boardWhyItMatters: '這把軟體部門從交付配角變成合規、續約與主權 AI 方案的 owner。',
+        sourceLabel: 'Red Hat OpenShift AI + Disconnected Environments',
+        source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      }
+    ],
+    boardMessage: '董事會該記住的一句話：硬體讓客戶「買得到 AI」，軟體部門的 Day-2 Assurance 讓客戶「敢長期把營運風險交給我們」。'
+  },
+
   // Why standards still need a software team - sourced bridge from hardware API to business value (Added 2026-03-17 by CoCo)
   standardsGap: {
     headline: '有了 Redfish / OpenBMC，為什麼還是需要軟體部門？',
