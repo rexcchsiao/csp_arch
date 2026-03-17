@@ -9,6 +9,7 @@ const SoftwareDifferentiationView = () => {
   const tabs = [
     { id: 'pain-points', label: '痛點分析', icon: <AlertTriangle className="w-4 h-4" /> },
     { id: 'competitive', label: '競爭優勢', icon: <Trophy className="w-4 h-4" /> },
+    { id: 'services', label: '可定價服務', icon: <Users className="w-4 h-4" /> },
     { id: 'metrics', label: '價值指標', icon: <BarChart3 className="w-4 h-4" /> },
     { id: 'risk', label: '風險分析', icon: <Shield className="w-4 h-4" /> },
     { id: 'ask', label: '戰略要求', icon: <Target className="w-4 h-4" /> },
@@ -135,6 +136,82 @@ const SoftwareDifferentiationView = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'services' && (
+          <div className="space-y-6">
+            <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl border border-blue-200">
+              <div className="flex items-start gap-3">
+                <Users className="w-6 h-6 text-blue-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-blue-800">{softwareDifferentiation.serviceOfferings.headline}</h3>
+                  <p className="text-sm text-blue-700 mt-2 font-medium">{softwareDifferentiation.serviceOfferings.rationale}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-amber-50 rounded-2xl border border-amber-200">
+              <h3 className="text-xl font-black text-amber-900 mb-2">{softwareDifferentiation.serviceOfferings.quickWins.headline}</h3>
+              <p className="text-sm text-amber-800 mb-4">{softwareDifferentiation.serviceOfferings.quickWins.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.serviceOfferings.quickWins.services.map((service, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-amber-100">
+                    <h4 className="text-sm font-black text-amber-800 mb-3">{service.name}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">為何先做：</span>{service.why}</p>
+                      <p><span className="font-bold text-slate-500">營收：</span>{service.revenue}</p>
+                      <p><span className="font-bold text-slate-500">毛利：</span>{service.margin}</p>
+                      <p><span className="font-bold text-slate-500">上市時間：</span>{service.timeToMarket}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-amber-100">
+                <p className="text-sm font-bold text-amber-800">首年潛力：<span className="text-slate-700">{softwareDifferentiation.serviceOfferings.quickWins.totalPotential}</span></p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-black text-slate-800 mb-4">可直接賣給客戶的軟體/服務組合</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.serviceOfferings.offerings.map((offering, idx) => (
+                  <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 className="text-sm font-black text-indigo-700 mb-3">{offering.name}</h4>
+                    <p className="text-xs text-slate-600 mb-4">{offering.description}</p>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">收費：</span>{offering.pricing}</p>
+                      <p><span className="font-bold text-slate-500">毛利：</span>{offering.margin}</p>
+                      <p><span className="font-bold text-slate-500">目標客群：</span>{offering.targetCustomer}</p>
+                      <p><span className="font-bold text-indigo-600">差異化：</span>{offering.differentiation}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-6 bg-green-50 rounded-2xl border border-green-200">
+              <h4 className="text-lg font-black text-green-800 mb-4 flex items-center gap-2">
+                <TrendingUp className="w-5 h-5" />
+                軟體營收爬坡路徑
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {Object.entries(softwareDifferentiation.serviceOfferings.revenueProjection)
+                  .filter(([key]) => key !== 'assumption')
+                  .map(([year, data]) => (
+                    <div key={year} className="p-4 bg-white rounded-xl border border-green-100">
+                      <h5 className="text-sm font-black text-green-700 mb-2 uppercase">{year}</h5>
+                      <div className="space-y-1 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">Software：</span>{data.software}</p>
+                        <p><span className="font-bold text-slate-500">Services：</span>{data.services}</p>
+                        <p><span className="font-bold text-slate-500">Total：</span>{data.total}</p>
+                        <p><span className="font-bold text-green-600">營收占比：</span>{data.percentOfTotal}</p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              <p className="text-xs text-slate-600 mt-4">假設：{softwareDifferentiation.serviceOfferings.revenueProjection.assumption}</p>
             </div>
           </div>
         )}
