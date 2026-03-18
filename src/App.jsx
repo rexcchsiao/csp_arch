@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
-import { BarChart3, LayoutGrid } from 'lucide-react';
+import { LayoutGrid, Cpu, Terminal, Database, Zap, ChevronRight, Info, X, Split } from 'lucide-react';
 import CompetitiveLandscapeView from './CompetitiveLandscapeView';
 import SoftwareDifferentiationView from './SoftwareDifferentiationView';
-import SovereignAIOpportunityView from './SovereignAIOpportunityView';
 import ExecutiveSummaryView from './ExecutiveSummaryView';
-import SoftwareRoadmapView from './SoftwareRoadmapView';
-import NinetyDayPlanView from './NinetyDayPlanView';
-import SourceReferencesView from './SourceReferencesView';
-import CompetitiveComparisonChart from './CompetitiveComparisonChart';
-import OdmComparisonChart from './OdmComparisonChart';
-import BuildVsBuyView from './BuildVsBuyView';
-import { Cpu, Terminal, Layers, Activity, ShieldCheck, ChevronRight, Database, Network, Box, Zap, Cloud, Settings, Shield, Gauge, Info, X, ExternalLink, BookOpen, Split, Target, Trophy, TrendingUp } from 'lucide-react';
 
 const App = () => {
   const [activeDept, _setActiveDept] = useState('firmware');
@@ -175,7 +167,9 @@ const App = () => {
 
         {/* Content by Tab */}
         {activeTab === 'overview' && (
-          <div>
+          <div className="space-y-8">
+            <ExecutiveSummaryView />
+
             <div className="mb-12">
               <h2 className="text-2xl font-black text-slate-900 mb-6">L9-L12 架構</h2>
               {/* L-Level Progress */}
@@ -252,21 +246,12 @@ const App = () => {
           </div>
         )}
 
-        {activeTab === 'coco' && (
-          <div className="space-y-12">
-            <ExecutiveSummaryView />
-            <CompetitiveLandscapeView />
-            <SoftwareDifferentiationView />
-            <SovereignAIOpportunityView />
-            <SoftwareRoadmapView />
-            <NinetyDayPlanView />
-            <SourceReferencesView />
-            <CompetitiveComparisonChart />
-            <OdmComparisonChart />
-            
-            <BuildVsBuyView />
-          </div>
-        )}
+{activeTab === 'coco' && (
+<div className="space-y-8">
+  <CompetitiveLandscapeView />
+  <SoftwareDifferentiationView />
+</div>
+)}
       </div>
     </div>
   );
