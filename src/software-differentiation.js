@@ -413,6 +413,14 @@ structuralAdvantages: {
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       },
       {
+        title: 'Shared GPU cluster 的 tenant / quota / SLA 治理仍常落在客戶自己補洞',
+        evidence: 'Red Hat OpenShift AI 官方已把 self-service access、cost control、model lifecycle 與 monitoring 放到產品核心敘事；這代表企業已經把 AI 平台需求往多團隊共享、治理與成本責任移動。',
+        whyStillOpen: '很多基礎設施方案能把叢集建起來，卻沒有把「誰能用多少 GPU、哪些任務可搶占、quota 怎麼調整、showback / chargeback 怎麼對帳、SLA 失約誰負責」做成能被平台團隊與財務一起接受的治理層。',
+        foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：包含 quota policy、priority queue、showback / chargeback、approval workflow 與 SLA policy，讓 Foxconn 從賣叢集升級成 shared AI capacity 的治理 owner。',
+        sourceLabel: 'Red Hat OpenShift AI',
+        source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
         title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
         evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery，這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
         whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險留給客戶自己承擔。',
@@ -946,6 +954,12 @@ structuralAdvantages: {
 					gap: '很多方案證明可在斷網環境安裝，但沒有把離線內容同步、升級證據、遠端診斷與持續服務 availability 做成長期服務。',
 					whyItWins: '這塊最容易形成高毛利續約，且直接對應主權 AI、國防、金融等高門檻預算。',
 					revenueLogic: '導入費 + 年度內容維護 / SLA 續約費'
+				},
+				{
+					name: 'Tenant Governance & GPU Service Guardrails',
+					gap: '共享 GPU 叢集最容易失控的，不是 scheduler 有沒有跑，而是 quota、priority、showback、approval workflow 與 SLA 例外處理沒被產品化。',
+					whyItWins: '這直接對應平台團隊、FinOps、部門主管之間最常吵的治理問題，也最容易從附加功能變成年約服務。',
+					revenueLogic: '治理專案費 + 年度 quota / policy / showback 維運費'
 				}
 			]
 		},
@@ -1023,6 +1037,13 @@ structuralAdvantages: {
 					whyNow: '跨站點運維、夜間故障、缺工與 SLA 需求持續升高',
 					renewalDriver: '值班、監控模型、備品策略與 SLA 報告天然適合年約',
 					boardOutcome: '把一次性交機，轉成可續約的年度服務收入'
+				},
+				{
+					service: 'Tenant Governance & GPU Service Guardrails',
+					budgetOwner: 'Platform Engineering / FinOps / AI Center of Excellence',
+					whyNow: '共享 GPU 叢集快速增加後，部門之間最常卡的不是有沒有節點，而是 quota、priority、showback / chargeback 與 SLA 例外責任誰來管',
+					renewalDriver: '每新增團隊、模型、預算 owner 或服務等級，就要持續調整 policy、配額與對帳規則',
+					boardOutcome: '把「GPU 不夠用」的抱怨，轉成可被治理、可被定價、可降低內耗的共享容量服務'
 				},
 				{
 					service: 'Sovereign RAG / Air-Gap Services',
@@ -1132,6 +1153,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '不是只給監控畫面，而是把 AI 機房最容易卡住的 power / cooling / facility coordination 問題做成可量化、可續約的服務；這正好對應 NVIDIA Mission Control 已公開強調的 building management integration、power optimization 與 power/cooling event control 需求',
 				targetCustomer: '大型 CSP、電信商、液冷導入中的 AI 資料中心、既有 brownfield 機房'
+			},
+			{
+				name: 'Tenant Governance & GPU Service Guardrails',
+				description: '為共享 GPU 叢集提供 quota policy、priority queue、approval workflow、showback / chargeback、SLA 分級與例外處理流程，讓多部門共用算力時不再靠人工協調與 Excel 對帳',
+				pricing: 'NT$ 250K-900K/案 + 年度 policy / showback 維運費',
+				margin: '65-75%',
+				differentiation: '把很多供應商只做到「能排程」的 shared cluster，往上做成「可治理、可對帳、可對外承諾 SLA」的服務；這會讓 Foxconn 更像 shared AI capacity 的營運 owner，而不是只賣叢集',
+				targetCustomer: '大型企業 AI 平台團隊、研究機構、內部多 BU 共用 GPU 的 CSP / 製造業'
 			},
 			{
 				name: 'RAG 一體機部署服務',
