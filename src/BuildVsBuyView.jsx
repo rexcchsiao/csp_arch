@@ -1,6 +1,6 @@
 import React from 'react';
 import { buildVsBuyAnalysis } from './build-vs-buy';
-import { Target, TrendingUp, Clock, DollarSign, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { Target, TrendingUp, Clock, DollarSign, CheckCircle, XCircle, AlertCircle, Trophy } from 'lucide-react';
 
 const BuildVsBuyView = () => {
   const { headline, context, coreArgument, executiveSummary, tcoComparison, decisionFramework, objections, caseStudy } = buildVsBuyAnalysis;

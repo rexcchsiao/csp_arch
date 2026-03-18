@@ -11,6 +11,7 @@ import ExecutiveSummaryView from './ExecutiveSummaryView'
 import SourceReferencesView from './SourceReferencesView'
 import CompetitiveComparisonChart from './CompetitiveComparisonChart'
 import OdmComparisonChart from './OdmComparisonChart'
+import BuildVsBuyView from './BuildVsBuyView'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
@@ -48,6 +49,16 @@ const App = () => {
               }`}
             >
               CoCo 分析報告
+            </button>
+            <button
+              onClick={() => setActiveTab('build-vs-buy')}
+              className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${
+                activeTab === 'build-vs-buy'
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              自建 vs 採購
             </button>
           </div>
         </div>
@@ -110,6 +121,10 @@ const App = () => {
             {/* 9. 90 天計畫 */}
             <NinetyDayPlanView />
           </div>
+        )}
+
+        {activeTab === 'build-vs-buy' && (
+          <BuildVsBuyView />
         )}
       </div>
     </div>
