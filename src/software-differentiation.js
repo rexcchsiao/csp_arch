@@ -987,9 +987,17 @@ structuralAdvantages: {
 				foxconnTranslation: 'Foxconn 不該只賣平台，而該主張自己是 Factory-to-Operations 的 accountable owner：從出廠、上線、升級到遠端運維都由軟體部門把風險接起來。',
 				sourceLabel: 'HPE Private Cloud AI + NVIDIA Mission Control',
 				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
+				label: 'Capacity Deferral',
+				marketSignal: 'NVIDIA Mission Control 已把 power optimization、power / cooling control、building management integration 拉進 AI factory operations；Schneider Electric 也把 AI datacenter 定義成 end-to-end physical and digital infrastructure。',
+				buyerQuestion: '在 power / cooling 已經吃緊的機房裡，我能不能先把既有容量吃滿，而不是立刻再花 CAPEX 擴建？',
+				foxconnTranslation: '把 Facility-Aware Capacity Assurance 說成「延後擴建、降低 outage 風險、讓 IT / 機電 / SRE 用同一套事件治理語言協作」；這樣軟體部門賣的就不是監控，而是更可預測的容量與資本支出節奏。',
+				sourceLabel: 'NVIDIA Mission Control + Schneider Electric AI Data Center Solutions',
+				source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
 			}
 		],
-		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust 與 accountable ownership，軟體部門就不該被描述成「支援功能」，而是這四種結果的 owner。'
+		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership 與 capacity deferral，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
 	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
