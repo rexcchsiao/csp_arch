@@ -34,6 +34,35 @@ const ExecutiveSummaryView = () => {
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'));
   const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
+  const quantaSource = competitiveSources.quanta?.[0];
+  const wistronSource = competitiveSources.wistron?.[0];
+  const gigabyteSource = competitiveSources.gigabyte?.[0];
+  const odmPeerPressure = [
+    {
+      company: 'Quanta / QCT',
+      signal: quantaSource?.strategicRisk || 'Quanta 已開始透過軟體合作補強 Remote Ops 能力，代表 OEM/ODM 競爭已經從純硬體比較轉向軟體敘事。',
+      implication: '這不是遙遠威脅，而是直接同業已經開始補軟體短板。Foxconn 若不提早把軟體部門做成可見的產品與服務，就容易被市場歸類成同樣的硬體供應商。',
+      whyFoxconnMustAct: '現在最該做的不是再講一次規格，而是把 Day-2 operations、brownfield integration、remote accountability 先卡成 Foxconn 的標籤。',
+      source: quantaSource?.name || 'Quanta Cloud Technology AI Server Solutions',
+      sourceUrl: quantaSource?.url,
+    },
+    {
+      company: 'Wistron',
+      signal: wistronSource?.limitation || 'Wistron 目前仍以硬體為主、尚未形成完整軟體棧，這反而證明 OEM/ODM 市場還沒出現明確的軟體領先者。',
+      implication: '窗口還在，但不會一直開著。誰先把 software department 從附屬支援做成 board-level value story，誰就比較有機會先占住市場認知。',
+      whyFoxconnMustAct: 'Foxconn 有機會先把「Factory-to-Operations + Lifecycle + Remote Ops」講成 OEM/ODM 中最完整、最可續約的軟體定位。',
+      source: wistronSource?.name || 'Wistron AI Infrastructure',
+      sourceUrl: wistronSource?.url,
+    },
+    {
+      company: 'GIGABYTE',
+      signal: gigabyteSource?.limitation || 'GIGABYTE 已有管理平台，但仍偏傳統 BMC/伺服器管理，對主權 AI、mixed-vendor、brownfield Day-2 運營的著力有限。',
+      implication: '這說明「有管理介面」已經不夠了。真正能讓管理層願意投資軟體部門的，是把治理、責任與續約收入講清楚。',
+      whyFoxconnMustAct: 'Foxconn 不該追 another console，而該往更高價值的位置：營運責任轉移、生命周期治理與 mixed-facility integration。',
+      source: gigabyteSource?.name || 'GIGABYTE Server Management',
+      sourceUrl: gigabyteSource?.url,
+    },
+  ];
   const buyerScorecardSignals = [
     {
       criterion: 'Deployment speed now appears in the buying language',
@@ -383,6 +412,47 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
           <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">別人也能說自己有平台，但只有站在 factory-to-operations、brownfield 與 facility-aware operations 交界的人，才比較有資格把 AI 交付風險、Day-2 風險與續約服務一起接起來。這就是 Foxconn 軟體部門最該被放大的理由。</span></p>
+        </div>
+      </div>
+
+      {/* Direct OEM/ODM peer pressure */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <AlertTriangle className="w-5 h-5 text-orange-600" /> 這不是抽象趨勢，是 OEM/ODM 同業已經開始往軟體靠
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          如果只講 NVIDIA、HPE、Red Hat，老闆可能會覺得那是大廠玩法，離 OEM/ODM 太遠。其實不是喔～ 直接同業也已經開始補軟體敘事，這代表 Foxconn 面對的不只是市場機會，還有同業重新包裝價值主張的時間壓力。
+          真正該做的，不是跟著做一個管理平台，而是更快把 <span className="font-semibold text-slate-900">Day-2 operations、Factory-to-Operations handoff、brownfield integration、remote accountability</span> 做成 Foxconn 軟體部門的招牌。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {odmPeerPressure.map((item) => (
+            <div key={item.company} className="rounded-2xl border border-orange-100 bg-orange-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-orange-600 mb-2">OEM / ODM pressure</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.company}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">市場訊號：</span>{item.signal}</p>
+                <p><span className="font-bold text-amber-700">這代表什麼：</span>{item.implication}</p>
+                <p><span className="font-bold text-emerald-700">Foxconn 現在該怎麼搶位：</span>{item.whyFoxconnMustAct}</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-orange-100 bg-white p-4">
+          <p className="text-sm font-semibold text-orange-900">給管理層的一句話：<span className="text-slate-700">Foxconn 現在不是在決定「要不要也做一點軟體」，而是在決定要不要搶先把 OEM/ODM 軟體價值的定義權握在自己手上。</span></p>
         </div>
       </div>
 
