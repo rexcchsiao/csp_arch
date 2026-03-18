@@ -21,6 +21,7 @@ const App = () => {
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
+  const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
 
   const foxconnCredibilityCards = [
     {
@@ -229,6 +230,40 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">管理層該記住的一句話：Foxconn 若把這 3 段責任鏈講清楚，軟體部門就不是支援單位，而是把硬體 attach 成 time-to-revenue、SLA 保護與年度續約收入的價值 owner。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-600 mb-2">Why even hyperscalers still buy help</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">大型 CSP 不是不會做，而是不想自己長期背這 4 類 Day-2 責任</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段如果不講清楚，管理層很容易把軟體部門誤解成「替客戶代工一些他們本來就會做的事」。但外部市場訊號剛好相反：真正容易被外包、也最能形成 attach rate 與年約收入的，是 handoff、change-window、brownfield / facility coordination 與 air-gap governance 這些高責任、跨團隊、出錯代價又高的 Day-2 工作。
+                  </p>
+                </div>
+                <div className="bg-violet-50 border border-violet-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-violet-900">一句話版本：大型客戶買 Foxconn 軟體，不是因為他們不會寫平台，而是因為他們不想自己對半夜出事、升級失敗、設施協調與斷網治理長期背責。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {hyperscalerBuyPatterns.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">客戶通常不想自己扛：</span>{item.whatHyperscalersAvoid}</p>
+                      <p><span className="font-bold text-violet-700">Foxconn 可被定價的地方：</span>{item.foxconnValue}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：Hyperscaler 真正願意外包的，不是差異化平台體驗，而是那些最靠近交機、升級、設施事件與 on-call 責任的 Day-2 風險；這正是軟體部門最能被定價的位置。</p>
               </div>
             </div>
 
