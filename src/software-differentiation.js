@@ -318,8 +318,8 @@ structuralAdvantages: {
       },
       {
         company: 'HPE Private Cloud AI',
-        proof: '官方強調 deploy AI in days, not months、pre-configured validated platform、full stack visibility、built-in observability。',
-        takeaway: '品牌廠正在把「縮短上線時間 + Day-2 可觀測與可用性」當成賣點，而不是只比伺服器規格。這正是軟體部門能替硬體創造溢價的地方。',
+        proof: '官方直接寫出 deploy AI in days, not months、production deployment in hours、pre-configured validated platform，並把 built-in observability、predict problems、continuous service availability 放進同一頁價值敘事。',
+        takeaway: '品牌廠已經在賣「更快上線 + 持續可用性 + 問題預測」，不是只比伺服器規格。這剛好把軟體部門推到更高價值的位置：替硬體背書 Day-2 營運結果。',
         sourceLabel: 'HPE Private Cloud AI',
         source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
       },
@@ -362,9 +362,9 @@ structuralAdvantages: {
     pillars: [
       {
         title: 'Deployment Assurance',
-        marketSignal: 'HPE Private Cloud AI 用 deploy AI in days, not months、pre-configured validated platform、full stack visibility 來賣價值。',
-        foxconnPlay: 'Foxconn 應把「出廠預整合 + 到站快速驗證 + 標準化上線 runbook」包成 deployment assurance，賣的是客戶提早開始產生營收，而不是只賣安裝工時。',
-        boardWhyItMatters: '這讓軟體部門直接影響 time-to-revenue，成為硬體 attach rate 的放大器。',
+        marketSignal: 'HPE Private Cloud AI 用 deploy AI in days, not months、production deployment in hours、pre-configured validated platform 來賣價值，並把 built-in observability / predict problems / continuous service availability 放到同一條敘事中。',
+        foxconnPlay: 'Foxconn 應把「出廠預整合 + 到站快速驗證 + 標準化上線 runbook + 初始可觀測性 baseline」包成 deployment assurance，賣的是客戶提早開始產生營收，且交機後不是把可用性風險丟回客戶內部。',
+        boardWhyItMatters: '這讓軟體部門同時影響 time-to-revenue 與 service availability，從硬體 attach 功能升級成營運結果的 owner。',
         sourceLabel: 'HPE Private Cloud AI',
         source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
       },
