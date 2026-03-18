@@ -632,10 +632,26 @@ const ExecutiveSummaryView = () => {
           老闆最後看的不是 feature list，而是：<span className="font-semibold text-slate-900">這筆錢是不是在解決某個部門現在就很痛的營運問題</span>。
           當軟體能力能對應到明確的預算 owner、採購觸發事件與續約理由，它就不再像附贈支援，而是可獨立成立的營運能力。
         </p>
+
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 4).map((row) => (
+            <div key={row.service} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Budget approval map</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{row.service}</p>
+              <div className="space-y-2 text-xs text-slate-700">
+                <p><span className="font-bold text-slate-500">預算 owner：</span>{row.budgetOwner}</p>
+                <p><span className="font-bold text-amber-700">為什麼現在會買：</span>{row.whyNow}</p>
+                <p><span className="font-bold text-blue-600">為什麼明年還會續：</span>{row.renewalDriver}</p>
+                <p><span className="font-bold text-emerald-700">董事會看到的結果：</span>{row.boardOutcome}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           {competitiveLandscape.uniqueServices.slice(0, 4).map((service) => (
-            <div key={service.name} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
-              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Budgetable Service</p>
+            <div key={service.name} className="rounded-2xl border border-slate-200 bg-white p-4">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Budgetable Service</p>
               <p className="text-sm font-black text-slate-900 mb-3">{service.name}</p>
               <div className="space-y-2 text-xs text-slate-700">
                 <p><span className="font-bold text-slate-500">誰會買：</span>{service.budgetOwner}</p>
