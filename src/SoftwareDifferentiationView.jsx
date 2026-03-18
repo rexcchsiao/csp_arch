@@ -533,7 +533,7 @@ const SoftwareDifferentiationView = () => {
             <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
               <h3 className="text-xl font-black text-sky-900 mb-2">大型 CSP / Hyperscaler 為什麼還是會買我們的軟體？</h3>
               <p className="text-sm text-slate-700 mb-4">即使客戶有自己的平台團隊，他們仍然會為「更快上線、更少風險、更低 TCO、更能保護既有投資」付錢。這一段很重要，因為它直接回答了管理層最常問的問題：<span className="font-semibold text-sky-700">既然大客戶也會寫軟體，為什麼還需要我們？</span></p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {softwareDifferentiation.hyperscalerPerspective.reasons.map((reason, idx) => (
                   <div key={idx} className="p-5 bg-sky-50 rounded-2xl border border-sky-100">
                     <h4 className="text-sm font-black text-sky-800 mb-2">{reason.reason}</h4>
@@ -544,6 +544,29 @@ const SoftwareDifferentiationView = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="p-5 bg-cyan-50 rounded-2xl border border-cyan-200">
+                <h4 className="text-sm font-black text-cyan-900 mb-2">{softwareDifferentiation.hyperscalerBuyTriggers.headline}</h4>
+                <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.hyperscalerBuyTriggers.summary}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {softwareDifferentiation.hyperscalerBuyTriggers.patterns.map((item, idx) => (
+                    <div key={idx} className="p-4 bg-white rounded-2xl border border-cyan-100">
+                      <h5 className="text-sm font-black text-cyan-800 mb-3">{item.title}</h5>
+                      <div className="space-y-2 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">客戶不想自己扛：</span>{item.whatHyperscalersAvoid}</p>
+                        <p><span className="font-bold text-cyan-700">Foxconn 可接住：</span>{item.foxconnValue}</p>
+                        <p><span className="font-bold text-amber-700">市場訊號：</span>{item.marketSignal}</p>
+                      </div>
+                      <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                        <ExternalLink className="w-3 h-3" />
+                        {item.sourceLabel}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 p-4 bg-white rounded-xl border border-cyan-100">
+                  <p className="text-sm font-semibold text-cyan-900">{softwareDifferentiation.hyperscalerBuyTriggers.boardMessage}</p>
+                </div>
               </div>
               <div className="mt-4 p-4 bg-sky-50 rounded-xl border border-sky-100">
                 <p className="text-sm font-semibold text-sky-800">管理層該記住的一句話：<span className="text-slate-700">客戶不是在買另一個 dashboard，而是在買「少養 20-50 人基礎設施團隊、少走 12-18 個月彎路、還能把風險留給單一 accountable vendor」的結果。</span></p>

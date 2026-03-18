@@ -778,6 +778,45 @@ structuralAdvantages: {
       },
     ],
   },
+  hyperscalerBuyTriggers: {
+    headline: 'Hyperscaler 不是不會做，而是不想自己扛這 4 類責任',
+    summary: '真正容易外包、也最能證明軟體部門價值的，不是 AI 平台上層體驗，而是那些離營收很近、離設施很近、失敗代價又很高的 Day-2 營運責任。把這幾類責任講清楚，管理層才看得見：Foxconn 賣的是風險轉移，不是又一套工具。',
+    patterns: [
+      {
+        title: 'Factory-to-Operations handoff',
+        whatHyperscalersAvoid: '大客戶通常不想自己接住工廠預載、現場驗收、baseline 建立、權限移交與 Day-2 runbook 這段灰色地帶。',
+        foxconnValue: 'Foxconn 天然站在製造、韌體、交機與維運交界，最適合把 handoff 做成可定價服務。',
+        marketSignal: 'HPE Private Cloud AI 已把 pre-configured validated platform、deploy AI in days, not months 當成核心賣點。',
+        sourceLabel: 'HPE Private Cloud AI',
+        source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+      },
+      {
+        title: 'Lifecycle / change-window accountability',
+        whatHyperscalersAvoid: '就算客戶會寫平台，也未必想自己對每次 driver / firmware / CUDA / K8s 升級的 maintenance window、rollback 與 SLA 失約風險負全責。',
+        foxconnValue: 'Foxconn 可以把版本矩陣、canary、rollback 與升級報表產品化，從工具供應商升級成變更風險 owner。',
+        marketSignal: 'NVIDIA Mission Control 官方已把 cluster life cycle、autonomous recovery、power / cooling control 放進 AI factory operations。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Brownfield + facility coordination',
+        whatHyperscalersAvoid: '大型客戶最常卡住的是新 AI 叢集怎麼接回既有 BMC / DCIM / BMS / 維護窗口流程，而不是再做一套漂亮 control plane。',
+        foxconnValue: 'Foxconn 可把伺服器、韌體、排程與設施訊號串起來，讓 AI 專案不用先打掉既有機房治理。',
+        marketSignal: 'Supermicro 與 Schneider Electric 都已把 facility telemetry、digital operations、liquid cooling / optimized operations 拉進官方 AI 敘事。',
+        sourceLabel: 'Supermicro + Schneider Electric',
+        source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
+      },
+      {
+        title: 'Air-gap governance & evidence',
+        whatHyperscalersAvoid: '主權 AI / 金融 / 國防客戶不是只要離線安裝，而是要後續內容同步、更新證據、權限與稽核流程都能持續被管理。',
+        foxconnValue: 'Foxconn 能把 Air-Gap Content Lifecycle 做成可續約治理服務，接住 disconnected 環境最麻煩的 Day-2 工作。',
+        marketSignal: 'Red Hat 針對 disconnected environments 提供獨立安裝 / 維運文件，代表這已是正式營運場景。',
+        sourceLabel: 'Red Hat OpenShift AI (Disconnected Environments)',
+        source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index'
+      }
+    ],
+    boardMessage: '董事會該記住的一句話：Hyperscaler 不是不會做，而是不想自己對 handoff、升級、brownfield 設施協調與 air-gap 治理長期背責；這正是 Foxconn 軟體部門最能被定價、也最容易形成年約的空位。'
+  },
 
 	// Concrete service offerings - what we actually sell (not just features, but services)
 	segmentSpecificServiceMotions: {
