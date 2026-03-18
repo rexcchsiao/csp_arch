@@ -271,6 +271,62 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Software value chain - board-level translation from technical work to commercial outcomes */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <BarChart3 className="w-5 h-5 text-blue-600" /> 董事會最該記住的 4 段價值鏈：軟體工作如何直接變成毛利與續約
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這段不是再講一次功能，而是把軟體部門每天做的事情翻成老闆真正會看的商業語言：<span className="font-semibold text-slate-900">更快上線、較少推責、較低擴建壓力、更多可續約服務</span>。
+          如果管理層要判斷軟體部門是不是值得投資，最實用的方式就是看這 4 段價值鏈有沒有被建立起來。
+        </p>
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Value chain 01</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Factory-to-Operations Handoff</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">軟體工作：</span>工廠預載、site acceptance、baseline、observability、Day-2 handoff runbook。</p>
+              <p><span className="font-bold text-blue-700">商業結果：</span>把「交機」翻成「可營運」，直接縮短 time-to-revenue。</p>
+              <p><span className="font-bold text-emerald-700">毛利 / 收入效果：</span>更容易把安裝支援升級成 Deployment Assurance attach service。</p>
+              <p><span className="font-bold text-amber-700">外部錨點：</span>{hpePrivateCloudAISource?.name || 'HPE Private Cloud AI'} 已直接用 deploy AI in days, not months 與 validated platform 來賣結果。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-violet-100 bg-violet-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-2">Value chain 02</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Lifecycle Control</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">軟體工作：</span>版本矩陣、canary 升級、自動回滾、maintenance window 與 upgrade reporting。</p>
+              <p><span className="font-bold text-violet-700">商業結果：</span>把最容易出事的變更窗口，從高風險專案變成可治理流程。</p>
+              <p><span className="font-bold text-emerald-700">毛利 / 收入效果：</span>最容易形成季度顧問、年約治理與續約收入。</p>
+              <p><span className="font-bold text-amber-700">外部錨點：</span>{missionControlSource?.name || 'NVIDIA Mission Control'} 已把 cluster life cycle 與 autonomous recovery 放到產品前台。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Value chain 03</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Tenant Governance / Showback</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">軟體工作：</span>quota、priority、approval workflow、showback / chargeback、SLA policy。</p>
+              <p><span className="font-bold text-emerald-700">商業結果：</span>把共享 GPU 叢集從「大家搶資源」變成「可管理、可對帳、可內部定價」的服務。</p>
+              <p><span className="font-bold text-blue-700">毛利 / 收入效果：</span>讓平台治理費、共享容量服務費與跨部門預算更容易成立。</p>
+              <p><span className="font-bold text-amber-700">外部錨點：</span>{openshiftAISource?.name || 'Red Hat OpenShift AI'} 已把 monitoring、cost control、self-service access 放進核心敘事。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-orange-100 bg-orange-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-orange-600 mb-2">Value chain 04</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Facility-Aware Capacity Assurance</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">軟體工作：</span>把 BMC、scheduler、DCIM / BMS、power cap 與 cooling event workflow 接成容量治理。</p>
+              <p><span className="font-bold text-orange-700">商業結果：</span>減少因設施限制造成的 outage、降載與過早擴建壓力。</p>
+              <p><span className="font-bold text-emerald-700">毛利 / 收入效果：</span>把監控升級成高價值的 capacity governance 與年度 SLA 服務。</p>
+              <p><span className="font-bold text-amber-700">外部錨點：</span>{schneiderAISource?.name || supermicroComposerSource?.name || 'Schneider / Supermicro / NVIDIA'} 已證明 AI 機房價值正往 physical + digital operations 移動。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-blue-100 bg-slate-50 p-4">
+          <p className="text-sm font-semibold text-slate-900">一句話總結：<span className="text-slate-700">軟體部門不是在做更多功能，而是在把交機、升級、共享治理與設施事件這些原本會吃掉毛利的風險，轉成 Foxconn 可以被定價、被續約、也能保護硬體價格帶的服務。</span></p>
+        </div>
+      </div>
+
       {/* Why Now - 2026 Q2 Inflection Point */}
       {executiveSummary.whyNow && (
         <div className="bg-amber-50 border-2 border-amber-200 rounded-3xl p-8">
