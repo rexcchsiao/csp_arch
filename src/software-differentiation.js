@@ -925,6 +925,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 應把 software department 清楚定位成 Factory-to-Operations 的 accountable owner：從工廠預整合、site acceptance、baseline 建立，到 lifecycle / remote ops 服務都由軟體部門把責任接住。',
 				sourceLabel: 'Dell AI Factory',
 				source: 'https://www.dell.com/en-us/ai-factory'
+			},
+			{
+				company: 'Dell Cyber Resilience for AI',
+				proof: 'Dell 在同一個 AI solutions 敘事中，直接把 Cyber Resilience 拉進 AI workloads，強調 protection against data loss, corruption, and cyber threats。',
+				buyerTranslation: '這代表管理層核准的已經不只是「把 AI 跑起來」，而是「當資料、模型與推論服務出事時，誰能負責恢復、保留證據、把停機與信任損失降到最低」。',
+				foxconnPlay: 'Foxconn 可把 recovery runbook、artifact / registry 備援、向量資料保護、golden image rollback 與稽核證據打包成 AI resilience service，讓軟體部門切進安全、治理與年度演練預算。',
+				sourceLabel: 'Dell AI Solutions',
+				source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
@@ -995,6 +1003,14 @@ structuralAdvantages: {
 				foxconnTranslation: '把 Facility-Aware Capacity Assurance 說成「延後擴建、降低 outage 風險、讓 IT / 機電 / SRE 用同一套事件治理語言協作」；這樣軟體部門賣的就不是監控，而是更可預測的容量與資本支出節奏。',
 				sourceLabel: 'NVIDIA Mission Control + Schneider Electric AI Data Center Solutions',
 				source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
+			},
+			{
+				label: 'Resilience & Recoverability',
+				marketSignal: 'Dell AI Factory 的官方 AI 頁面已把 Cyber Resilience 與 data protection 一起包進 AI 敘事，強調保護 AI workloads against data loss, corruption, and cyber threats。',
+				buyerQuestion: '如果模型映像、向量資料庫、訓練資料與推論服務出現毀損或勒索事件，誰能把恢復流程、證據與責任接起來？',
+				foxconnTranslation: '把軟體部門定位成 AI Recovery & Evidence owner：不是只賣備份，而是把 model artifact、registry、向量資料、設定基線與復原 runbook 做成可稽核、可演練、可續約的恢復治理服務。',
+				sourceLabel: 'Dell AI Factory',
+				source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership 與 capacity deferral，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
