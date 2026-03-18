@@ -432,6 +432,32 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-teal-200 shadow-sm">
+              <h3 className="text-xl font-black text-teal-900 mb-2">先把兩條戰線講清楚：CSP 要的是營運責任，企業要的是私有 AI 可交付結果</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把最常被混在一起講的兩種客戶拆開。這樣老闆比較容易看懂：軟體部門不是做同一套平台賣所有人，而是把同一批硬體轉成兩種不同、但都可被定價的服務語言。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.segmentSpecificServiceMotions.motions.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-teal-50 rounded-2xl border border-teal-100">
+                    <h4 className="text-sm font-black text-teal-800 mb-3">{item.segment}</h4>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">購買觸發：</span>{item.buyingTrigger}</p>
+                      <p><span className="font-bold text-amber-700">客戶其實在買：</span>{item.whatTheyActuallyBuy}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 軟體切口：</span>{item.softwareWedge}</p>
+                      <p><span className="font-bold text-blue-700">為什麼 Foxconn 有機會贏：</span>{item.whyFoxconnWins}</p>
+                      <p><span className="font-bold text-slate-500">外部證據：</span>{item.proof}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-teal-50 rounded-xl border border-teal-100">
+                <p className="text-sm font-semibold text-teal-900">{softwareDifferentiation.segmentSpecificServiceMotions.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-cyan-200 shadow-sm">
               <h3 className="text-xl font-black text-cyan-900 mb-2">市場其實在賣的是風險轉移，不是 feature list</h3>
               <p className="text-sm text-slate-700 mb-4">這一段幫管理層把外部產品語言翻譯成採購語言：客戶真正核准的，通常不是「功能很多」，而是誰能接住上線速度、SLA、治理與跨團隊協調風險。這正是軟體部門最該主張的價值層。</p>

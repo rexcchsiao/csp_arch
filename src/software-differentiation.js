@@ -780,6 +780,34 @@ structuralAdvantages: {
   },
 
 	// Concrete service offerings - what we actually sell (not just features, but services)
+	segmentSpecificServiceMotions: {
+		headline: '先把兩條戰線講清楚：大型 CSP 與一般企業，其實在買不同的軟體價值',
+		coreInsight: '如果把所有客戶都用同一套平台語言去賣，論點會變虛。真正更有說服力的講法，是承認不同客群買的是不同風險轉移：大型 CSP / Hyperscaler 要的是 remote-ops accountability、brownfield fit 與 capacity assurance；一般企業 / 主權 AI 客戶要的是 deployment assurance、governance、air-gap content lifecycle 與可直接上線的私有 AI。這正好說明軟體部門不是附屬品，而是把硬體翻成不同市場可成交服務的轉譯層。',
+		motions: [
+			{
+				segment: '大型 CSP / Hyperscaler',
+				buyingTrigger: '客戶已有平台團隊，但不想自己承接 12-18 個月的整合、升級、power / cooling 事件與跨站點 on-call 風險。',
+				whatTheyActuallyBuy: '買的是 single accountable owner：當 AI 叢集遇到 brownfield 整合、設施事件、版本變更與遠端故障時，有人能把風險接住。',
+				softwareWedge: 'Remote Ops、Lifecycle Control Tower、Brownfield Integration & Fleet Baseline、Capacity Assurance / Power-Cooling Governance。',
+				whyFoxconnWins: 'Foxconn 最有機會贏的不是 another control plane，而是把工廠預整合、L9-L10 韌體接觸點、現場維護與 Day-2 營運責任串成一條服務鏈。',
+				proof: 'NVIDIA Mission Control 與 Dell AI Factory 都已把 lifecycle operations、building management integration 與 end-to-end support 拉到產品前台，這代表市場已承認大型客戶會為 Day-2 營運結果付錢。',
+				sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
+				segment: '一般企業 / SMB / 主權 AI',
+				buyingTrigger: '客戶沒有大型平台團隊，也沒有時間自己拼 RAG、權限治理、離線內容同步與維運流程；他們要的是可快速上線、可合規、可被內部 IT 接手的私有 AI。',
+				whatTheyActuallyBuy: '買的是 deployment assurance + governance assurance：資料不出機房、權限講得清楚、版本能更新、稽核有證據、而且能在短時間內真的用起來。',
+				softwareWedge: 'RAG 一體機部署、Air-Gap Content Lifecycle、Tenant Governance & GPU Service Guardrails、Factory-to-Operations Handoff Assurance。',
+				whyFoxconnWins: 'Foxconn 可以把硬體、預整合軟體棧、權限 / 稽核流程與現場交付包成 turnkey 方案，降低企業第一次導入私有 AI 的失敗率。',
+				proof: 'HPE Private Cloud AI 強調 deploy AI in days, not months；Red Hat OpenShift AI 與 disconnected environments 文件則證明企業真正會買的是 lifecycle、monitoring、cost / access control 與離線營運能力。',
+				sourceLabel: 'HPE Private Cloud AI + Red Hat OpenShift AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			}
+		],
+		boardMessage: '董事會該記住的一句話：同一台伺服器，面對 CSP 賣的是營運責任轉移，面對企業賣的是私有 AI 可交付結果；把這兩種價值翻出來的，就是軟體部門。 '
+	},
+
 	serviceLadder: {
 		headline: '軟體部門的續約飛輪：如何從一次性交付變成年度收入',
 		coreInsight: '老闆真正該投資的不是「多一套工具」，而是能從交付起點一路延伸到年度續約的服務鏈。一次性專案證明價值，年度治理與維運才是毛利與黏著度來源。',
