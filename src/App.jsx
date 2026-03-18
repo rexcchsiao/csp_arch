@@ -133,6 +133,29 @@ const App = () => {
       earlySignal: '只要 pilot 客戶開始用 upgrade governance，就代表軟體已進入真正可續約區。',
     },
   ]
+  const rfqTieBreakerCards = [
+    {
+      title: 'Deployment confidence',
+      buyerQuestion: '如果兩家硬體規格差不多，誰能讓我更快驗收、上線，而且比較不容易在最後一哩卡住？',
+      foxconnPlay: '把 factory pre-load、site acceptance、baseline 與 runbook 包成 Deployment Assurance，讓採購看到的是 time-to-revenue，而不是安裝人天。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      title: 'Change-risk accountability',
+      buyerQuestion: '季度升級、driver / firmware / CUDA / K8s 變更出事時，誰真的願意背 maintenance window 與 rollback 風險？',
+      foxconnPlay: '把 Lifecycle Control Tower 講成單一 accountable owner，賣的是 upgrade safety、rollback discipline 與 SLA 保護。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      title: 'Brownfield fit',
+      buyerQuestion: '新 AI 叢集能不能接進我現有的 BMC / DCIM / 維護窗口 / 權限流程，而不是逼我重做整個機房治理？',
+      foxconnPlay: '把 Brownfield Integration & Fleet Baseline 放進 RFQ 回答，讓 Foxconn 看起來像營運整合 owner，而不只是伺服器供應商。',
+      sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -251,6 +274,40 @@ const App = () => {
                     建議閱讀順序：先看總覽抓主張，再進 CoCo 分析報告看證據鏈，最後用自建 vs 採購回答管理層反對意見。
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">How software wins the RFQ when specs look similar</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">當硬體規格差不多時，最後把標案拉開差距的通常不是規格，而是 3 個 software tie-breakers</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段是專門替老闆翻譯 RFQ 現場會發生的事：很多時候最後不是誰多一個 feature，而是誰更能回答 deployment 風險、升級責任，以及 brownfield 導入阻力。把這 3 個 tie-breakers 直接講清楚，軟體部門的價值就不再像加分題，而是直接進入勝率與報價能力。
+                  </p>
+                </div>
+                <div className="bg-rose-50 border border-rose-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-rose-900">一句話版本：規格決定有沒有入場券，軟體部門決定最後 RFQ 是不是敢把分數與責任交給 Foxconn。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {rfqTieBreakerCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-rose-100 bg-rose-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-rose-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">採購最後會問：</span>{item.buyerQuestion}</p>
+                      <p><span className="font-bold text-rose-700">Foxconn 應該這樣回答：</span>{item.foxconnPlay}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：當市場不再只比 GPU 與節點規格，軟體部門最值錢的角色，就是把 deployment confidence、change accountability 與 brownfield fit 變成 Foxconn 在 RFQ 上的最後勝負手。</p>
               </div>
             </div>
 
