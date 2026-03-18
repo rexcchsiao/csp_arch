@@ -932,6 +932,14 @@ structuralAdvantages: {
 				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
 			},
 			{
+				company: 'HPE Private Cloud AI（Service Availability）',
+				proof: '同一頁官方文案還把 built-in observability、predict problems 與 continuous service availability 放進核心價值，明講客戶買的是持續營運結果，而不是部署完成就結案。',
+				buyerTranslation: '這等於在採購語言上承認：可用性與中斷風險已經是正式預算項，不再只是維運團隊自己吸收。',
+				foxconnPlay: 'Foxconn 應把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 baseline refresh 打包成 Service Availability Assurance，讓軟體部門直接對 uptime、恢復速度與持續可用性負責。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
 				company: 'Red Hat OpenShift AI',
 				proof: 'Red Hat 官方聚焦 model lifecycle、model monitoring、self-service access、cost control 與 hybrid operations。',
 				buyerTranslation: '客戶要的是「模型能被管、成本能被看、團隊能自助、合規能交代」；這些都是治理預算，不只是平台預算。',
@@ -1048,9 +1056,17 @@ structuralAdvantages: {
 				foxconnTranslation: '把軟體部門定位成 AI Recovery & Evidence owner：不是只賣備份，而是把 model artifact、registry、向量資料、設定基線與復原 runbook 做成可稽核、可演練、可續約的恢復治理服務。',
 				sourceLabel: 'Dell AI Factory',
 				source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
+			},
+			{
+				label: 'Continuous Service Availability',
+				marketSignal: 'HPE Private Cloud AI 官方直接把 built-in observability、predict problems 與 continuous service availability 放進產品價值敘事，代表客戶買的已經不只是「看得到」，而是「服務不要中斷」。',
+				buyerQuestion: '這套方案上線後，誰能持續保住可用性，而不是等出事後再靠人力救火？',
+				foxconnTranslation: '把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 Factory-to-Operations baseline 串成 Service Availability Assurance：賣的是更少中斷、更快恢復與更穩定的 AI 服務，而不是監控畫面本身。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
 			}
 		],
-		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership 與 capacity deferral，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
+		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership、capacity deferral 與 continuous service availability，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
 	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
