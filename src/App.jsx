@@ -22,6 +22,36 @@ const App = () => {
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
+  const painToServiceMap = [
+    {
+      pain: 'Brownfield AI 導入卡在既有機房流程',
+      whyItStaysUnsolved: '客戶不是缺 control plane，而是缺能把新 AI 叢集接回既有 BMC / DCIM / 維護窗口 / 權限模型的人。',
+      service: 'Brownfield Integration & Fleet Baseline',
+      budgetOwner: 'Infrastructure / DC Operations',
+      boardOutcome: '降低導入阻力，讓硬體訂單更容易真正落地。',
+    },
+    {
+      pain: '季度升級與變更窗口沒人敢背責',
+      whyItStaysUnsolved: 'driver / firmware / CUDA / K8s 任一變更失誤，都可能讓 AI 叢集停機與 SLA 失約。',
+      service: 'Lifecycle Control Tower',
+      budgetOwner: 'Platform Engineering / SRE / CAB',
+      boardOutcome: '把停機風險變成可治理、可續約的年約服務。',
+    },
+    {
+      pain: 'Air-gapped / 主權 AI 第一次裝得起來，Day-2 卻很難維持',
+      whyItStaysUnsolved: '真正困難的是離線內容同步、版本證據、rollback discipline 與稽核流程，而不是第一次安裝。',
+      service: 'Air-Gap Content Lifecycle + compliance evidence service',
+      budgetOwner: 'CIO Office / Compliance-driven AI Program',
+      boardOutcome: '切入高門檻主權 AI 預算，形成續約與治理收入。',
+    },
+    {
+      pain: '共享 GPU 叢集最後卡在 quota / priority / showback',
+      whyItStaysUnsolved: '很多方案能把叢集建起來，但沒有把多團隊共用算力的治理與責任邊界產品化。',
+      service: 'Tenant Governance & GPU Service Guardrails',
+      budgetOwner: 'Platform Engineering / FinOps / AI Center of Excellence',
+      boardOutcome: '把「GPU 不夠用」翻成可治理、可定價的共享容量服務。',
+    },
+  ]
 
   const foxconnCredibilityCards = [
     {
@@ -230,6 +260,39 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">管理層該記住的一句話：Foxconn 若把這 3 段責任鏈講清楚，軟體部門就不是支援單位，而是把硬體 attach 成 time-to-revenue、SLA 保護與年度續約收入的價值 owner。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">Where the software department becomes the revenue owner</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">4 個還沒被好好解的痛點，剛好對應 4 個最容易 attach 成年約的服務</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一段把「市場白地」直接翻成董事會更在意的語言：哪些問題現在還讓客戶卡住、誰會為了解決它編預算、以及軟體部門怎麼把這些痛點接成可定價、可續約的服務邊界。這能更直接證明：軟體部門不是做 support，而是在接住硬體最難變現的那段價值。
+                  </p>
+                </div>
+                <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-sky-900">一句話版本：客戶真正會編預算的，不是 another dashboard，而是有人願意把 brownfield、升級、air-gap 與共享 GPU 治理長期接住。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {painToServiceMap.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-sky-100 bg-sky-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-700 mb-2">{item.service}</p>
+                    <p className="text-sm font-bold text-slate-900 mb-3">{item.pain}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼還痛：</span>{item.whyItStaysUnsolved}</p>
+                      <p><span className="font-bold text-sky-700">預算 owner：</span>{item.budgetOwner}</p>
+                      <p><span className="font-bold text-emerald-700">董事會結果：</span>{item.boardOutcome}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：白地之所以值錢，不是因為別人沒看到，而是因為那些痛點跨部門、跨機房、跨生命周期，最後一定要有一個 owner；這個 owner 最合理就是軟體部門。</p>
               </div>
             </div>
 
