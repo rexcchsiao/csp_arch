@@ -23,6 +23,7 @@ const App = () => {
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
+  const budgetOwnerRows = softwareDifferentiation.serviceOfferings?.budgetMap?.rows || []
   const softwareValueChain = [
     {
       stage: '硬體部門交付',
@@ -695,6 +696,39 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：白地之所以值錢，不是因為別人沒看到，而是因為那些痛點跨部門、跨機房、跨生命周期，最後一定要有一個 owner；這個 owner 最合理就是軟體部門。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-600 mb-2">Why software deserves its own budget conversation</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">同一套軟體服務，實際上在打 6 種不同預算：這就是它不能只被算進硬體附屬功能的原因</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一段故意把軟體部門的價值翻成 CFO / BU head 聽得懂的語言：它不只是在一張 BOM 裡加點軟體，而是在不同場景裡，同時對 Infrastructure、Platform、Operations、Compliance、FinOps 與 Delivery 團隊創造可核准的結果。當同一台 AI server 能被 attach 到這麼多預算 owner，軟體部門就不該再被看成硬體附屬支援，而是應該被管理成獨立的收入與續約引擎。
+                  </p>
+                </div>
+                <div className="bg-cyan-50 border border-cyan-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-cyan-900">一句話版本：硬體主要吃一筆採購預算，軟體部門卻能把同一套設備接進交付、營運、治理、合規與續約預算。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {budgetOwnerRows.slice(0, 6).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-cyan-100 bg-cyan-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-cyan-700 mb-2">{item.budgetOwner}</p>
+                    <p className="text-sm font-bold text-slate-900 mb-3">{item.service}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼現在會編：</span>{item.whyNow}</p>
+                      <p><span className="font-bold text-cyan-700">為什麼明年還會續：</span>{item.renewalDriver}</p>
+                      <p><span className="font-bold text-emerald-700">董事會結果：</span>{item.boardOutcome}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：當軟體部門能同時對接交付、SRE、機房、合規與 FinOps 預算，它就不只是附屬功能，而是 Foxconn 把一次性 AI server 訂單放大成多年度收入組合的關鍵控制層。</p>
               </div>
             </div>
 
