@@ -82,6 +82,13 @@ const App = () => {
       budgetOwner: 'Platform Engineering / FinOps / AI Center of Excellence',
       boardOutcome: '把「GPU 不夠用」翻成可治理、可定價的共享容量服務。',
     },
+    {
+      pain: 'AI 事故發生後，最貴的是 recoverability 與證據責任，不只是告警本身',
+      whyItStaysUnsolved: '多數供應商即使談 resilience，也偏向通用備份，較少真正承接模型 artifact、向量資料、registry、golden image 與 incident evidence 這些 AI-specific Day-2 責任。',
+      service: 'AI Recovery & Evidence Assurance',
+      budgetOwner: 'CISO / Infrastructure Operations / Compliance',
+      boardOutcome: '把 AI 事故後的恢復時間、稽核證據與服務信任保全，翻成可續約的治理收入。',
+    },
   ]
 
   const foxconnCredibilityCards = [
