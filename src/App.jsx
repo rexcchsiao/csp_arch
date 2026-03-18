@@ -12,6 +12,7 @@ import SourceReferencesView from './SourceReferencesView'
 import CompetitiveComparisonChart from './CompetitiveComparisonChart'
 import OdmComparisonChart from './OdmComparisonChart'
 import BuildVsBuyView from './BuildVsBuyView'
+import { softwareDifferentiation } from './software-differentiation'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
@@ -133,6 +134,38 @@ const App = () => {
                     建議閱讀順序：先看總覽抓主張，再進 CoCo 分析報告看證據鏈，最後用自建 vs 採購回答管理層反對意見。
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">Market-approved buying language</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">市場真正核准預算的 4 種語言</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    從 HPE、NVIDIA、Red Hat 到 Lenovo 的官方產品敘事來看，客戶現在核准的不是功能清單，而是四種能被管理層理解的結果：速度、控制、信任，以及單一 accountable owner。把這四種語言直接放進總覽，能更快說清楚軟體部門不是支援角色，而是預算與續約的 owner。
+                  </p>
+                </div>
+                <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-emerald-900">一句話版本：硬體讓客戶買到算力，軟體部門讓客戶敢核准上線速度、SLA、治理與長期營運責任。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                {softwareDifferentiation.marketBuyingLanguage.vectors.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/60">
+                    <p className="text-xs font-black uppercase tracking-wider text-emerald-700 mb-2">{item.label}</p>
+                    <p className="text-sm font-bold text-slate-900 mb-3">{item.buyerQuestion}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 翻譯：</span>{item.foxconnTranslation}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">{softwareDifferentiation.marketBuyingLanguage.boardMessage}</p>
               </div>
             </div>
           </div>
