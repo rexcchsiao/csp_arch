@@ -222,6 +222,32 @@ const ExecutiveSummaryView = () => {
       sourceUrl: standardsSources[0]?.url,
     },
   ];
+  const boardProofChecklist = [
+    {
+      metric: 'Software attachment rate on shipped AI deals',
+      whyItProvesValue: '如果軟體部門真的在放大硬體價值，就不該只存在於 demo，而要開始出現在實際報價、交付與續約結構裡。',
+      target: 'Q1 pilot 先達到 1-2 個標竿案；Q2 追到 5% attach rate 作為最早期市場接受度訊號。',
+      boardQuestion: '有多少硬體訂單，已經不再只是 BOM，而是帶著 deployment / lifecycle / remote-ops 服務一起成交？'
+    },
+    {
+      metric: 'Factory-to-Operations handoff time',
+      whyItProvesValue: '這直接驗證軟體部門有沒有把工廠交機、site acceptance、baseline 與 Day-2 handoff 接成一條責任鏈。',
+      target: '把「交機到可營運 baseline」從數週壓到數天，並讓流程可重複、可驗收。',
+      boardQuestion: '交機後多久，客戶能進入可監控、可升級、可接手營運的狀態？'
+    },
+    {
+      metric: 'Remote resolution coverage',
+      whyItProvesValue: '若 7x24 運營仍主要靠現場人海，就代表軟體部門還沒真正把硬體轉成可規模化服務。',
+      target: '先把高頻事件中的遠端診斷/處理覆蓋做出可見提升，逐步逼近 70% remote-fix 論述。',
+      boardQuestion: '有多少故障與變更，不需要派人到現場就能被接住？'
+    },
+    {
+      metric: 'Lifecycle governance adoption',
+      whyItProvesValue: '真正高毛利、最容易續約的不是 Day-0 安裝，而是之後每一次升級、回滾、維護窗口與稽核證據。',
+      target: '至少讓 pilot 客戶開始用版本矩陣、maintenance window、rollback 與 upgrade reporting。',
+      boardQuestion: '客戶是否已經把最怕出事的升級與變更窗口，交給 Foxconn 軟體部門來管？'
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -689,6 +715,32 @@ const ExecutiveSummaryView = () => {
               <p className="text-xs text-slate-400 mt-2">原：{metric.before}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Board proof checklist */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <CheckCircle className="w-5 h-5 text-emerald-600" /> 董事會怎麼判斷：軟體部門到底是不是在放大硬體價值？
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一頁不是再加更多願景，而是把「軟體部門有沒有真的創造價值」翻成前兩季就能追的驗證指標。對管理層來說，最好的論證不是功能清單，而是看 attach、handoff、remote resolution 與 lifecycle governance 有沒有開始進入真實交付與客戶流程。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {boardProofChecklist.map((item) => (
+            <div key={item.metric} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Board proof point</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.metric}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">為什麼這能證明價值：</span>{item.whyItProvesValue}</p>
+                <p><span className="font-bold text-emerald-700">前兩季應看到什麼：</span>{item.target}</p>
+                <p><span className="font-bold text-blue-700">董事會該追問：</span>{item.boardQuestion}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">如果軟體部門真的有價值，它會很早就反映在 attach rate、交機到營運的縮時、遠端處理覆蓋率，以及升級治理被客戶正式採用這四件事上。</span></p>
         </div>
       </div>
 
