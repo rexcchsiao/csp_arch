@@ -155,6 +155,14 @@ const ExecutiveSummaryView = () => {
       source: missionControlSource?.name || 'NVIDIA Mission Control',
       sourceUrl: missionControlSource?.url,
     },
+    {
+      title: 'AI recoverability 與 incident evidence 幾乎還沒被 OEM/ODM 產品化',
+      marketSignal: 'Dell 已把 Cyber Resilience for AI 直接放進 AI solutions 官方敘事，強調要保護 AI workloads against data loss, corruption, and cyber threats。',
+      whitespace: '市場已開始把 recoverability 視為 AI 預算語言，但多數伺服器供應商仍停留在告警、備份或通用資安層，沒有真正承接模型 artifact、vector data、golden image、registry 與 incident evidence 的恢復責任。',
+      foxconnPlay: '把 AI Recovery & Evidence Assurance 包成 attach service：賣的是 golden-image rollback、artifact / registry backup、vector-data protection、recovery runbook 與可稽核 incident evidence，而不只是 another backup feature。',
+      source: dellCyberResilienceSource?.name || 'Dell AI Solutions – Cyber Resilience for AI',
+      sourceUrl: dellCyberResilienceSource?.url,
+    },
   ];
   const hyperscalerKeepInHouseVsBuy = [
     {
