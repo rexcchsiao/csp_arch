@@ -124,8 +124,8 @@ const ExecutiveSummaryView = () => {
     {
       criterion: 'Even facilities vendors now package AI infrastructure as physical + digital operations',
       marketSignal: 'Schneider Electric officially frames AI datacenter solutions as end-to-end physical and digital AI infrastructure, combining resilient electrical infrastructure, advanced liquid cooling, and optimized operations.',
-      whyItChangesProcurement: 'This is a strong signal that software-and-operations value is not just an AI server vendor story. When the facilities layer itself is sold with digital-operations language, customers become more willing to budget for cross-layer orchestration instead of treating servers as isolated hardware purchases.',
-      foxconnMove: 'Position Foxconn software as the control layer that connects AI server fleets with facility constraints: power cap, cooling events, rollout discipline, and brownfield operating workflows.',
+      whyItChangesProcurement: 'This is a strong signal that software-and-operations value is not just an AI server vendor story. When the facilities layer itself is sold with digital-operations language, customers become more willing to budget for cross-layer orchestration instead of treating servers as isolated hardware purchases. NVIDIA now even frames power-constrained optimization in business terms—run at 85% power with 93% performance throughput—so the buying conversation shifts from "more monitoring" to "how much CAPEX and outage risk can we defer?"',
+      foxconnMove: 'Position Foxconn software as the control layer that connects AI server fleets with facility constraints: power cap, cooling events, rollout discipline, and brownfield operating workflows. Sell it as capacity deferral and outage-risk control, not just facility telemetry.',
       source: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
       sourceUrl: schneiderAISource?.url,
     },
@@ -332,9 +332,9 @@ const ExecutiveSummaryView = () => {
             <p className="text-sm font-black text-slate-900 mb-3">Facility-Aware Capacity Assurance</p>
             <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
               <p><span className="font-bold text-slate-500">軟體工作：</span>把 BMC、scheduler、DCIM / BMS、power cap 與 cooling event workflow 接成容量治理。</p>
-              <p><span className="font-bold text-orange-700">商業結果：</span>減少因設施限制造成的 outage、降載與過早擴建壓力。</p>
-              <p><span className="font-bold text-emerald-700">毛利 / 收入效果：</span>把監控升級成高價值的 capacity governance 與年度 SLA 服務。</p>
-              <p><span className="font-bold text-amber-700">外部錨點：</span>{schneiderAISource?.name || supermicroComposerSource?.name || 'Schneider / Supermicro / NVIDIA'} 已證明 AI 機房價值正往 physical + digital operations 移動。</p>
+              <p><span className="font-bold text-orange-700">商業結果：</span>減少因設施限制造成的 outage、降載與過早擴建壓力，甚至把部分擴建需求往後延。</p>
+              <p><span className="font-bold text-emerald-700">毛利 / 收入效果：</span>把監控升級成高價值的 capacity governance 與年度 SLA 服務，對應更容易被批准的容量治理預算。</p>
+              <p><span className="font-bold text-amber-700">外部錨點：</span>{schneiderAISource?.name || supermicroComposerSource?.name || 'Schneider / Supermicro / NVIDIA'} 已證明 AI 機房價值正往 physical + digital operations 移動；NVIDIA 甚至直接把 power-constrained ROI 講成「85% power、93% performance throughput」。</p>
             </div>
           </div>
         </div>
