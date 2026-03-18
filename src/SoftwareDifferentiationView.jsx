@@ -730,6 +730,35 @@ const SoftwareDifferentiationView = () => {
         {activeTab === 'ask' && (
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">戰略要求</h3>
+
+            <div className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl border border-amber-200 shadow-sm">
+              <h4 className="text-lg font-black text-amber-900 mb-2">給管理層的 30 秒決策卡</h4>
+              <p className="text-sm text-slate-700 mb-4">這一塊不是再加資訊量，而是把整份論述濃縮成老闆在會議上真的講得出口的版本：問題、解法、結果、風險、以及最後要拍板的投資要求。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="p-4 bg-white rounded-xl border border-amber-100">
+                  <p className="text-xs font-black text-amber-800 mb-2">Problem</p>
+                  <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.elevator30s.problem}</p>
+                </div>
+                <div className="p-4 bg-white rounded-xl border border-amber-100">
+                  <p className="text-xs font-black text-amber-800 mb-2">Solution</p>
+                  <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.elevator30s.solution}</p>
+                </div>
+                <div className="p-4 bg-white rounded-xl border border-amber-100">
+                  <p className="text-xs font-black text-amber-800 mb-2">Impact</p>
+                  <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.elevator30s.impact}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                  <p className="text-xs font-black text-rose-800 mb-2">如果不做</p>
+                  <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.riskOfInaction}</p>
+                </div>
+                <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-xs font-black text-emerald-800 mb-2">現在要拍板什麼</p>
+                  <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.ask}</p>
+                </div>
+              </div>
+            </div>
             
             <div className="p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
               <div className="space-y-4">
