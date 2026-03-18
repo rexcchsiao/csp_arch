@@ -1216,6 +1216,13 @@ structuralAdvantages: {
 					boardOutcome: '把一次性交機，轉成可續約的年度服務收入'
 				},
 				{
+					service: 'Service Availability Assurance',
+					budgetOwner: 'COO / SRE / Platform Operations',
+					whyNow: 'HPE 已把 built-in observability、predict problems 與 continuous service availability 直接寫成 Private Cloud AI 的採購語言，代表客戶已開始用「持續可用性」而不是「監控功能」核准預算',
+					renewalDriver: 'availability review、baseline refresh、故障回顧、季度健康檢查與升級風險收斂都會持續發生，天然適合年約',
+					boardOutcome: '把軟體部門從 dashboard 供應商升級成 uptime / 恢復速度 / 持續服務可用性的責任 owner'
+				},
+				{
 					service: 'AI Recovery & Evidence Assurance',
 					budgetOwner: 'CISO / Infrastructure Operations / Compliance',
 					whyNow: 'AI workloads 已開始被要求同時滿足 recoverability、稽核證據與營運信任，不再只是傳統備份議題',
@@ -1280,6 +1287,13 @@ structuralAdvantages: {
 				timeToMarket: '4-8 週',
 			},
 			{
+				name: 'Service Availability 健檢包',
+				why: '直接把 observability、predict problems、availability review 與季度健康檢查包成高層聽得懂的服務語言，對應 HPE 已公開使用的 continuous service availability 採購敘事',
+				revenue: 'NT$ 180K-500K/案 + 季度健康檢查年費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
 				name: 'Air-Gap 內容同步與升級證據包服務',
 				why: '可直接利用既有 registry / mirror / runbook 能力，率先切入主權 AI 客戶最常被忽略的 Day-2 運營痛點',
 				revenue: 'NT$ 200K-600K/案 + 年度維護費',
@@ -1328,6 +1342,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '把高風險變更事件產品化，從「人海維運」變成「可排程、可回滾、可稽核」的治理能力',
 				targetCustomer: '大型 CSP、金融企業、主權 AI 專案'
+			},
+			{
+				name: 'Service Availability Assurance',
+				description: '把 built-in observability、predict problems、季度健康檢查、故障回顧、baseline refresh 與 SLA 例外收斂包成持續可用性服務，讓客戶買到的是 uptime 與恢復速度，而不是另一套監控畫面',
+				pricing: 'NT$ 250K-900K/案 + 年度 availability review / health-check 訂閱費',
+				margin: '65-75%',
+				differentiation: '直接對應 HPE 已公開使用的 continuous service availability 採購語言，把 Remote Ops 與 Lifecycle Control Tower 往上包成管理層更願意核准的營運結果',
+				targetCustomer: '大型企業 AI 平台團隊、主權 AI 專案、需要對內承諾 AI 服務可用性的 CSP / 金融 / 製造業'
 			},
 			{
 				name: 'Air-Gap Content Lifecycle 服務',
