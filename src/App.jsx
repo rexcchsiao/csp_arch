@@ -270,6 +270,40 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-2">Why the white space is still open</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">真正還沒被解決的，不是 another platform，而是 4 個沒人想長期背責的缺口</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一段的目的，是把「市場還有空位」說得更具體。HPE、Dell、NVIDIA、Red Hat 都已經在賣平台、可觀測性與部署速度；但真正還常被留給客戶自己收尾的，是 brownfield 接軌、air-gap 內容生命週期、facility-aware workload governance，以及 shared GPU cluster 的 tenant / quota / SLA 治理。這些缺口如果不補，硬體再強也很難變成可穩定營運的 AI 服務。
+                  </p>
+                </div>
+                <div className="bg-fuchsia-50 border border-fuchsia-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-fuchsia-900">一句話版本：市場不是缺功能，而是缺有人願意對 brownfield、air-gap、facility event 與 shared GPU 治理的結果長期負責。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.marketWhiteSpace.gaps.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-fuchsia-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼還沒被好好解：</span>{item.whyStillOpen}</p>
+                      <p><span className="font-bold text-fuchsia-700">Foxconn 可站上的位置：</span>{item.foxconnPlay}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">{softwareDifferentiation.marketWhiteSpace.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">Recurring revenue logic</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">客戶為什麼會每年續約：不是因為介面存在，而是因為 4 種風險每年都還在</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
