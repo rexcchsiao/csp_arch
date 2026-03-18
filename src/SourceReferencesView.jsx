@@ -10,6 +10,7 @@ const SourceReferencesView = () => {
     { id: 'dell', label: 'Dell/HPE', icon: <BarChart3 className="w-4 h-4" />, color: 'blue' },
     { id: 'enterprisePlatforms', label: '企業平台', icon: <Shield className="w-4 h-4" />, color: 'purple' },
     { id: 'supermicro', label: 'Supermicro', icon: <TrendingUp className="w-4 h-4" />, color: 'teal' },
+    { id: 'schneider', label: 'Schneider', icon: <TrendingUp className="w-4 h-4" />, color: 'cyan' },
     { id: 'gigabyte', label: 'GIGABYTE', icon: <TrendingUp className="w-4 h-4" />, color: 'orange' },
     { id: 'marketResearch', label: '市場研究', icon: <Info className="w-4 h-4" />, color: 'indigo' },
     { id: 'standards', label: '管理標準', icon: <CheckCircle className="w-4 h-4" />, color: 'emerald' },

@@ -58,6 +58,18 @@ export const competitiveSources = {
       ourAdvantage: 'This validates Foxconn should not stop at monitoring. Foxconn can differentiate by turning facility telemetry into capacity governance, SLA workflows, and brownfield operational services across mixed environments.'
     }
   ],
+  schneider: [
+    {
+      name: 'Schneider Electric AI Data Center Solutions',
+      url: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+      description: 'Official Schneider Electric AI data center positioning around physical and digital infrastructure',
+      relevance: 'Useful proof that even electrical and facilities infrastructure leaders now frame AI datacenter value as end-to-end physical + digital operations, not just hardware capacity alone',
+      lastVerified: '2026-03-18',
+      keyFeature: 'Schneider describes AI datacenter solutions as end-to-end physical and digital AI infrastructure, pairing resilient electrical infrastructure and advanced liquid cooling with optimized operations.',
+      limitation: 'The positioning validates the importance of digital operations, but it does not clearly own server-fleet lifecycle governance, brownfield AI cluster integration, or application-aware Remote Ops across mixed compute environments.',
+      ourAdvantage: 'Foxconn can bridge the gap between facility infrastructure and AI server operations by turning power/cooling signals into lifecycle governance, capacity assurance, and remote service outcomes tied directly to the server fleet.'
+    }
+  ],
   gigabyte: [
     { name: 'GIGABYTE Server Management', url: 'https://www.gigabyte.com/Server/Management', description: 'Server management console', relevance: 'Basic BMC management, no AI-specific features', lastVerified: '2026-03-16', keyFeature: 'Traditional IPMI/BMC-based server management', limitation: 'No GPU-specific monitoring, no AI workload optimization, no RAG or private AI capabilities' }
   ],

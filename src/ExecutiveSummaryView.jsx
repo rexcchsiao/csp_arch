@@ -32,6 +32,7 @@ const ExecutiveSummaryView = () => {
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
   const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
+  const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'));
   const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
   const buyerScorecardSignals = [
     {
@@ -81,6 +82,14 @@ const ExecutiveSummaryView = () => {
       foxconnMove: 'Frame Foxconn software as the accountable layer that converts factory delivery into ongoing operating outcomes: deployment assurance, lifecycle governance, and sovereign-ready operations.',
       source: lenovoHybridAISource?.name || 'Lenovo Hybrid AI Solutions',
       sourceUrl: lenovoHybridAISource?.url,
+    },
+    {
+      criterion: 'Even facilities vendors now package AI infrastructure as physical + digital operations',
+      marketSignal: 'Schneider Electric officially frames AI datacenter solutions as end-to-end physical and digital AI infrastructure, combining resilient electrical infrastructure, advanced liquid cooling, and optimized operations.',
+      whyItChangesProcurement: 'This is a strong signal that software-and-operations value is not just an AI server vendor story. When the facilities layer itself is sold with digital-operations language, customers become more willing to budget for cross-layer orchestration instead of treating servers as isolated hardware purchases.',
+      foxconnMove: 'Position Foxconn software as the control layer that connects AI server fleets with facility constraints: power cap, cooling events, rollout discipline, and brownfield operating workflows.',
+      source: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      sourceUrl: schneiderAISource?.url,
     },
   ];
   const marketWhitespace = [
@@ -330,6 +339,7 @@ const ExecutiveSummaryView = () => {
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           這一頁最重要的作用，是回答管理層那句常見質疑：<span className="font-semibold text-slate-900">「大客戶自己就有平台團隊了，為什麼還需要 Foxconn？」</span>
           真正答案不是「他們不會做」，而是<span className="font-semibold text-violet-700">有些事情他們會做，但不值得自己從 0 開始做；有些事情則是太靠近現場、太跨部門、太髒太長尾，反而更適合交給同時懂硬體、韌體、交付與 Day-2 營運的供應商。</span>
+          連 Schneider 這類設施基礎建設供應商都開始用「physical + digital AI infrastructure」去講 AI datacenter，這更說明：真正有價值的不是單點硬體，而是能把伺服器、電力、冷卻與營運流程接起來的軟體層。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {hyperscalerKeepInHouseVsBuy.map((item) => (
