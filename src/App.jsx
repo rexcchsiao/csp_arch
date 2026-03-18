@@ -13,9 +13,37 @@ import CompetitiveComparisonChart from './CompetitiveComparisonChart'
 import OdmComparisonChart from './OdmComparisonChart'
 import BuildVsBuyView from './BuildVsBuyView'
 import { softwareDifferentiation } from './software-differentiation'
+import { competitiveSources } from './competitive-sources'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
+  const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'))
+  const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
+  const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
+
+  const foxconnCredibilityCards = [
+    {
+      title: 'Factory-to-Operations handoff',
+      whyFoxconn: 'Foxconn 同時碰得到工廠預載、burn-in、site acceptance、韌體基線與 Day-2 handoff，最有資格把「交機」翻成「可立即營運」。',
+      boardImpact: '軟體部門因此不只是做平台，而是直接縮短 time-to-revenue。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      title: 'Lifecycle / change-window accountability',
+      whyFoxconn: '客戶不缺會寫平台的人，缺的是願意對 driver / firmware / CUDA / K8s 升級風險負責的人。Foxconn 更適合把這段做成可治理服務。',
+      boardImpact: '這是最容易形成年約與續約收入的軟體層。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      title: 'Facility-aware operations',
+      whyFoxconn: '當 AI 機房開始受到 power cap、cooling event 與 brownfield 流程限制，Foxconn 有空間把伺服器、設施與營運流程接成容量治理服務。',
+      boardImpact: '這會把軟體價值從監控拉高成 outage 風險控制與延後擴建的能力。',
+      sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -166,6 +194,40 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">{softwareDifferentiation.marketBuyingLanguage.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-600 mb-2">Why Foxconn is specifically credible</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">不是誰都能接這層價值：Foxconn 特別站得住的 3 個理由</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    市場已經證明 AI 基礎建設買的是 deployment、lifecycle、governance 與 operations，但真正還需要一句讓老闆秒懂的話：為什麼這個價值層偏偏該由 Foxconn 軟體部門來接？答案就在 factory handoff、change-window accountability 與 facility-aware operations 這三段最容易延誤、也最容易形成續約的責任鏈。
+                  </p>
+                </div>
+                <div className="bg-cyan-50 border border-cyan-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-cyan-900">一句話版本：Foxconn 最值得投資的，不是 another dashboard，而是把工廠、硬體、韌體與 Day-2 營運風險接成可定價服務的能力。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {foxconnCredibilityCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-cyan-100 bg-cyan-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-cyan-700 mb-2">{item.title}</p>
+                    <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼是 Foxconn：</span>{item.whyFoxconn}</p>
+                      <p><span className="font-bold text-cyan-700">董事會該在意：</span>{item.boardImpact}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">管理層該記住的一句話：Foxconn 若把這 3 段責任鏈講清楚，軟體部門就不是支援單位，而是把硬體 attach 成 time-to-revenue、SLA 保護與年度續約收入的價值 owner。</p>
               </div>
             </div>
           </div>
