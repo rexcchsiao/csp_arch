@@ -30,6 +30,7 @@ const ExecutiveSummaryView = () => {
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
+  const dellCyberResilienceSource = competitiveSources.dell?.find((source) => source.name.includes('Cyber Resilience'));
   const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'));
@@ -95,6 +96,14 @@ const ExecutiveSummaryView = () => {
       foxconnMove: 'Position Foxconn software as the neutral operations layer across mixed infrastructure, not another closed stack.',
       source: dellAIFactorySource?.name || 'Dell AI Factory / broader OEM ecosystem pattern',
       sourceUrl: dellAIFactorySource?.url,
+    },
+    {
+      criterion: 'Recoverability is entering AI budget language, not just security language',
+      marketSignal: 'Dell now places Cyber Resilience for AI directly inside its AI solutions story, emphasizing protection against data loss, corruption, and cyber threats for AI workloads.',
+      whyItChangesProcurement: 'This expands the buyer scorecard from deployment and observability into recoverability: who can restore model artifacts, vector data, configurations, and service trust after an incident.',
+      foxconnMove: 'Frame Foxconn software as the AI recovery and evidence owner: golden-image rollback, artifact / registry backup, vector-data protection, recovery runbooks, and auditable incident evidence across AI server fleets.',
+      source: dellCyberResilienceSource?.name || 'Dell AI Solutions – Cyber Resilience for AI',
+      sourceUrl: dellCyberResilienceSource?.url,
     },
     {
       criterion: 'Facility telemetry is becoming table stakes—governance is the real differentiator',

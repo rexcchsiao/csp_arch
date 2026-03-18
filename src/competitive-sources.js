@@ -18,6 +18,16 @@ export const competitiveSources = {
       keyFeature: 'Official positioning centers on an end-to-end AI factory approach spanning infrastructure, data, and lifecycle support with Dell-managed enterprise delivery.',
       limitation: 'Dell bundles the outcome around Dell-led infrastructure and partner ecosystem choices, which weakens the neutral, mixed-vendor story for customers trying to preserve existing datacenter standards.',
       ourAdvantage: 'Foxconn can frame software as the neutral operations layer across mixed infrastructure, brownfield environments, and customer-specific firmware / lifecycle requirements instead of requiring a Dell-centered stack.'
+    },
+    {
+      name: 'Dell AI Solutions – Cyber Resilience for AI',
+      url: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence',
+      description: 'Dell AI solutions page explicitly pulls cyber resilience into the AI infrastructure buying story',
+      relevance: 'Useful proof that AI infrastructure buyers are now asked to fund recoverability, data protection, and evidence-oriented operations—not only deployment speed or raw performance',
+      lastVerified: '2026-03-18',
+      keyFeature: 'Dell states that Cyber Resilience for AI secures AI and applications against data loss, corruption, and cyber threats, with resilient protection for AI workloads.',
+      limitation: 'The messaging validates resilience as part of the AI budget, but it does not clearly extend into mixed-vendor recovery workflows, offline artifact lifecycle governance, or brownfield evidence collection across heterogeneous fleets.',
+      ourAdvantage: 'Foxconn can turn this signal into a sharper software-service claim: recovery runbooks, golden-image rollback, vector / artifact protection, registry backup, and auditable evidence handling tied directly to AI server operations instead of a Dell-only protection stack.'
     }
   ],
   hpe: [
