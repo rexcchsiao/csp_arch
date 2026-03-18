@@ -333,6 +333,60 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 mb-2">Why the software department is not a support team</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">真正不可替代的，不是功能數量，而是 4 個必須有人 owning 的責任邊界</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這裡把軟體部門的價值從「做了哪些功能」翻成「哪 4 種責任如果沒人長期 owning，硬體價值就無法真正放大」。這種講法對董事會特別重要，因為它會把軟體部門從支援角色拉高成 attach rate、續約率與 SLA 信任的 owner。
+                  </p>
+                </div>
+                <div className="bg-indigo-50 border border-indigo-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-indigo-900">一句話版本：硬體部門交付設備，軟體部門交付可被接手的營運基線、可被管理的風險，與可被續約的服務結果。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <div className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">1. Deployment owner</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Factory-to-Operations handoff</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">沒人接會怎樣：</span>硬體交機後，baseline、驗收、權限與 Day-2 runbook 仍是灰色地帶，time-to-revenue 被拖長。</p>
+                    <p><span className="font-bold text-indigo-700">軟體部門在賣：</span>把「能出貨」升級成「可立即接手營運」。</p>
+                  </div>
+                </div>
+                <div className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">2. Change-risk owner</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Lifecycle / upgrade accountability</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">沒人接會怎樣：</span>driver、firmware、CUDA、K8s 每次升級都像一次小型賭局，出事就互相推責。</p>
+                    <p><span className="font-bold text-indigo-700">軟體部門在賣：</span>把 maintenance window、rollback discipline 與 SLA 保護做成標準服務。</p>
+                  </div>
+                </div>
+                <div className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">3. Brownfield owner</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Existing datacenter fit</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">沒人接會怎樣：</span>新 AI 叢集很容易卡在既有 BMC、DCIM、權限與維護窗口流程，最後不是延誤就是縮小導入範圍。</p>
+                    <p><span className="font-bold text-indigo-700">軟體部門在賣：</span>把「不用打掉重練也能接進現場營運體系」做成可收費能力。</p>
+                  </div>
+                </div>
+                <div className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">4. Remote accountability owner</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Day-2 ops / air-gap / facility event response</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">沒人接會怎樣：</span>半夜故障、斷網更新、power / cooling event 一來，客戶仍得自己召集多團隊救火。</p>
+                    <p><span className="font-bold text-indigo-700">軟體部門在賣：</span>把 on-call 壓力、治理風險與恢復責任轉成可續約的年約服務。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門最不可替代的地方，不是又做出一套平台，而是把 deployment、change risk、brownfield fit 與 remote accountability 這 4 條責任線收斂成單一 owner；這才是硬體 attach rate、續約率與溢價能力真正被放大的地方。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-2">Why the white space is still open</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">真正還沒被解決的，不是 another platform，而是 4 個沒人想長期背責的缺口</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
