@@ -197,6 +197,35 @@ const CompetitiveLandscapeView = () => {
                 <p className="text-sm font-semibold text-sky-900">管理層該記住的一句話：<span className="text-slate-700">CSP 不是缺寫軟體的人，而是不想再養一支 20-50 人團隊去接 brownfield integration、firmware / lifecycle 風險與 24×7 remote ops。這些剛好就是軟體部門最能被定價的價值。</span></p>
               </div>
             </div>
+
+            <div className="p-6 bg-violet-50 rounded-2xl border border-violet-200">
+              <div className="flex items-start gap-3 mb-4">
+                <TrendingUp className="w-6 h-6 text-violet-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-violet-900">外部市場其實已經在替軟體部門說話</h3>
+                  <p className="text-sm text-violet-800 mt-1 font-medium">把官方產品頁翻成採購語言後，會更容易讓老闆理解：客戶核准的不是「功能很多」，而是更快上線、更穩營運、以及有人願意對 Day-2 結果負責。</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {competitiveLandscape.procurementLanguageShift?.cards.map((card, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-violet-100">
+                    <h4 className="text-sm font-black text-violet-800 mb-3">{card.title}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{card.marketSignal}</p>
+                      <p><span className="font-bold text-slate-500">採購會問：</span>{card.buyerQuestion}</p>
+                      <p><span className="font-bold text-violet-600">Foxconn 該怎麼講：</span>{card.foxconnPlay}</p>
+                    </div>
+                    <a href={card.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-violet-700 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {card.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-violet-100">
+                <p className="text-sm font-semibold text-violet-900">{competitiveLandscape.procurementLanguageShift?.boardMessage}</p>
+              </div>
+            </div>
           </div>
         )}
 

@@ -362,6 +362,37 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
     ],
     boardMessage: '一旦軟體部門能對應到不同預算 owner，Foxconn 賣的就不只是 server BOM，而是跨部門、跨年度、可續約的營運能力。'
   },
+  procurementLanguageShift: {
+    headline: '現在客戶核准的，其實是 3 種軟體結果，不是再一張功能清單',
+    summary: '從 NVIDIA Mission Control 與 Red Hat OpenShift AI 的官方語言來看，市場已經把 AI 基礎建設的採購重心放在 speed-to-value、operational control、以及 accountable operations。這剛好是軟體部門最能被定價、也最能把硬體放大的位置。',
+    cards: [
+      {
+        title: 'Speed-to-Value',
+        marketSignal: 'Red Hat OpenShift AI 官方直接強調 bring AI-enabled applications to production faster，以及 advanced tooling to automate deployments and self-service access。',
+        buyerQuestion: '這套方案能不能讓我的團隊更快把 AI 服務上線，而不是再花幾週自己拼平台？',
+        foxconnPlay: '把出廠預整合、驗收、baseline 建立與標準 runbook 包成 Deployment / Handoff Assurance，賣的是提早上線與提早產生營收。',
+        sourceLabel: 'Red Hat OpenShift AI',
+        source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
+        title: 'Operational Control',
+        marketSignal: 'NVIDIA Mission Control 官方把 cluster life cycle、continuous health checks、autonomous recovery、dynamic workload orchestration 放到同一條 AI factory operations 敘事裡。',
+        buyerQuestion: '上線後，誰來把升級、故障、工作負載調度與風險控制接住？',
+        foxconnPlay: '把 Lifecycle Control Tower、Remote Ops 與 Tenant Governance 串成 Day-2 治理層，讓軟體部門直接對穩定營運與資源治理結果負責。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Accountable Operations',
+        marketSignal: 'NVIDIA Mission Control 進一步明講 building management integration、power and cooling control、rapid leakage detection，代表市場已接受 AI 營運需要跨伺服器、叢集與設施層一起被管理。',
+        buyerQuestion: '當 power / cooling / facility event 發生時，到底誰能保住工作負載與 SLA？',
+        foxconnPlay: '把 Facility-Aware Capacity Assurance 與 Brownfield Integration 做成可續約服務，主張 Foxconn 軟體部門不是給 dashboard，而是替客戶承接跨 IT 與機電的營運責任。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      }
+    ],
+    boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、以及有人願意對 Day-2 結果負責；這三件事正好都屬於軟體部門。'
+  },
   // Messaging for leadership
   executiveSummary: {
     thesis: 'Software is the differentiator that turns commodity hardware into premium solutions.',
