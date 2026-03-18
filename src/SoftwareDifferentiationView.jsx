@@ -544,6 +544,31 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-rose-200 shadow-sm">
+              <h3 className="text-xl font-black text-rose-900 mb-2">為什麼軟體能從 attach rate 變成年約？因為客戶每年都在續買風險轉移</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把「軟體為什麼能形成續約」講成董事會語言：真正會被持續編列預算的，不是 support fee，而是 deployment、升級、設施事件與治理風險。誰持續接住，誰就有資格拿年約。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {softwareDifferentiation.serviceOfferings.renewalMoat.risks.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                    <h4 className="text-sm font-black text-rose-800 mb-3">{item.risk}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">會壞在哪：</span>{item.whatBreaks}</p>
+                      <p><span className="font-bold text-rose-700">對應年約服務：</span>{item.annualService}</p>
+                      <p><span className="font-bold text-blue-700">為什麼會持續續約：</span>{item.whyRecurring}</p>
+                      <p><span className="font-bold text-amber-700">市場訊號：</span>{item.marketSignal}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">{softwareDifferentiation.serviceOfferings.renewalMoat.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
               <h3 className="text-xl font-black text-indigo-900 mb-2">董事會更在意的其實是：誰會付錢、為什麼明年還會再付</h3>
               <p className="text-sm text-slate-700 mb-4">這一段把軟體部門的價值，從「功能很多」翻譯成「可對應預算 owner、可形成續約理由、可跨年度放大硬體 attach rate」的收入地圖。</p>

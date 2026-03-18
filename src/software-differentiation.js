@@ -949,6 +949,49 @@ structuralAdvantages: {
 				}
 			]
 		},
+		renewalMoat: {
+			headline: '真正能讓軟體部門被持續付費的，不是 support fee，而是持續接住 4 種營運風險',
+			coreInsight: '外部領先廠商已經在賣 deployment speed、lifecycle operations、observability、building management integration 與 hybrid governance。這代表客戶願意長期付費的，通常不是功能本身，而是誰願意持續對上線、升級、設施事件與合規治理負責。Foxconn 軟體部門若把這 4 類風險做成服務邊界，就更容易把 attach rate 變成年約。',
+			risks: [
+				{
+					risk: 'Deployment Risk',
+					whatBreaks: '硬體交機後，baseline、驗收、可觀測性與 Day-2 handoff 沒接好，導致 AI 服務延後上線。',
+					annualService: 'Factory-to-Operations Handoff Assurance + baseline refresh',
+					whyRecurring: '每次新場域、機型世代、golden image 或驗收標準變動，都要重新驗證與更新交接流程。',
+					marketSignal: 'HPE Private Cloud AI 直接用 deploy AI in days, not months、pre-configured validated platform、full stack visibility 來賣。',
+					sourceLabel: 'HPE Private Cloud AI',
+					source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+				},
+				{
+					risk: 'Lifecycle & Upgrade Risk',
+					whatBreaks: '驅動、韌體、CUDA、K8s 任一變更失誤，都可能讓 AI 叢集停機或造成 SLA 失約。',
+					annualService: 'Lifecycle Control Tower + quarterly upgrade governance',
+					whyRecurring: '升級不是一次性事件，而是每季都會重複發生的營運風險管理工作。',
+					marketSignal: 'NVIDIA Mission Control 已把 cluster life cycle、autonomous recovery、power / cooling control 放到 AI factory operations 前台。',
+					sourceLabel: 'NVIDIA Mission Control',
+					source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+				},
+				{
+					risk: 'Facility & Capacity Risk',
+					whatBreaks: 'power cap、cooling event、液冷告警或 building workflow 斷點，會讓 AI 叢集降載、延後擴容，甚至觸發 outage。',
+					annualService: 'Capacity Assurance / Power-Cooling Governance',
+					whyRecurring: '設施事件、季節性負載、擴容與機房調校會持續發生，客戶需要的是持續容量治理，不是一次性監控導入。',
+					marketSignal: 'Supermicro 與 NVIDIA 都已公開把 facility telemetry、building management integration、power / cooling control 拉進官方敘事。',
+					sourceLabel: 'Supermicro SuperCloud Composer + NVIDIA Mission Control',
+					source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
+				},
+				{
+					risk: 'Governance & Sovereign Risk',
+					whatBreaks: 'air-gapped / sovereign AI 環境若沒有內容同步、版本證據與權限治理，後續每次更新都像重新做專案。',
+					annualService: 'Air-Gap Content Lifecycle + compliance evidence service',
+					whyRecurring: '離線映像、鏡像同步、稽核證據與權限治理會隨版本、模型與法規要求持續變動。',
+					marketSignal: 'Red Hat 為 disconnected environments 提供獨立安裝 / 維運文件，代表這不是特例，而是正式營運場景。',
+					sourceLabel: 'Red Hat OpenShift AI (Disconnected Environments)',
+					source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index'
+				}
+			],
+			boardMessage: '董事會該記住的一句話：客戶每年續約的理由，不是因為軟體畫面還在，而是因為這 4 類風險每年都還在，而 Foxconn 軟體部門願意持續把它們接住。'
+		},
 		budgetMap: {
 			headline: '這些服務不是誰都能賣：軟體部門如何對應不同預算 owner',
 			summary: '要讓管理層真的看見軟體價值，不能只列功能，而要說清楚：誰會買、為什麼每年還會繼續買、以及這筆收入為何不會只停在一次性交付。',
