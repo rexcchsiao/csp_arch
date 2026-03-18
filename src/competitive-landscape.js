@@ -389,6 +389,14 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         foxconnPlay: '把 Facility-Aware Capacity Assurance 與 Brownfield Integration 做成可續約服務，主張 Foxconn 軟體部門不是給 dashboard，而是替客戶承接跨 IT 與機電的營運責任。',
         sourceLabel: 'NVIDIA Mission Control',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Capacity Deferral',
+        marketSignal: 'NVIDIA Mission Control 官方甚至直接把 validated power optimization 講成可在 power-constrained 環境下，以 85% power 維持 93% performance throughput。這代表市場已經在賣「先延後擴建、先把既有電力與冷卻容量吃滿」的營運結果。',
+        buyerQuestion: '在電力與冷卻已接近上限的既有機房裡，我能不能先延後 CAPEX 擴建，還是只能立刻多花一筆設施預算？',
+        foxconnPlay: 'Foxconn 應把 Facility-Aware Capacity Assurance 往上講成 capacity deferral service：把 BMC 遙測、排程策略、power cap、cooling event 與 maintenance workflow 串起來，賣的是更慢的擴建節奏、更少的意外降載、以及更可預測的容量使用。這會讓軟體部門不只影響 uptime，也直接影響 CAPEX 節奏。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、以及有人願意對 Day-2 結果負責；這三件事正好都屬於軟體部門。'
