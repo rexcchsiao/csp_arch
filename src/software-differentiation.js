@@ -954,6 +954,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 可把 recovery runbook、artifact / registry 備援、向量資料保護、golden image rollback 與稽核證據打包成 AI resilience service，讓軟體部門切進安全、治理與年度演練預算。',
 				sourceLabel: 'Dell AI Solutions',
 				source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
+			},
+			{
+				company: 'Schneider Electric AI Data Center Solutions',
+				proof: 'Schneider Electric 官方把 AI datacenter solution 定義成 end-to-end physical and digital AI infrastructure，並把 resilient electrical infrastructure、advanced liquid cooling 與 optimized operations 放在同一條價值敘事裡。',
+				buyerTranslation: '這說明連設施與電力基礎建設預算 owner，都已經在用「digital operations」語言核准 AI 專案；被買單的不是更多設備，而是誰能把伺服器、電力、冷卻與維運流程接成可治理的營運結果。',
+				foxconnPlay: 'Foxconn 應把軟體部門定位成 facility-to-cluster 的翻譯層：把 BMC、scheduler、power cap、cooling event、maintenance workflow 與 SLA 報表做成 Capacity Assurance / Power-Cooling Governance 服務，去對接資料中心營運與設施預算，而不是只停在 server monitoring。',
+				sourceLabel: 'Schneider Electric AI Data Center Solutions',
+				source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
