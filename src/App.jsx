@@ -14,6 +14,7 @@ import OdmComparisonChart from './OdmComparisonChart'
 import BuildVsBuyView from './BuildVsBuyView'
 import { softwareDifferentiation } from './software-differentiation'
 import { competitiveSources } from './competitive-sources'
+import { boardDecisionCard } from './executive-brief'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
@@ -294,6 +295,54 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Board takeaway</p>
                   <p className="text-sm font-bold">沒有軟體，Foxconn 賣的是設備；有了軟體，Foxconn 賣的是 AI 營運結果與長期關係</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">Board decision</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">把「軟體很重要」翻成今天就能拍板的 4 個決策</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    管理層常常不是被資料說服，而是卡在「所以我現在到底要批什麼」。這一塊把整份論述收斂成今日可批准的預算、組織、90 天啟動計畫與銷售激勵調整，讓軟體部門的價值不只停在策略敘事，而是能直接進入董事會 action item。
+                  </p>
+                </div>
+                <div className="bg-rose-50 border border-rose-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-rose-900">一句話版本：如果董事會今天要做對一件事，不是再確認軟體重不重要，而是正式把預算、組織與首波 90 天執行權限批下來。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {boardDecisionCard.decisionRequired.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-rose-100 bg-rose-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-rose-700 mb-2">Decision {idx + 1}</p>
+                    <h4 className="text-sm font-black text-slate-900 mb-3">{item.item}</h4>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼現在要批：</span>{item.rationale}</p>
+                      <p><span className="font-bold text-rose-700">時間點：</span>{item.timeline}</p>
+                      <p><span className="font-bold text-emerald-700">要看的成果：</span>{item.successMetric}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-2">If approved now</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{boardDecisionCard.ifApproved}</p>
+                </div>
+                <div className="p-5 rounded-2xl border border-amber-100 bg-amber-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-700 mb-2">If delayed</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{boardDecisionCard.ifDelayed}</p>
+                </div>
+                <div className="p-5 rounded-2xl border border-rose-100 bg-rose-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-700 mb-2">Risk of no decision</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{boardDecisionCard.riskOfNoDecision}</p>
+                </div>
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-900 text-slate-50">
+                <p className="text-sm font-semibold">董事會該記住的一句話：{boardDecisionCard.nextMeeting}</p>
               </div>
             </div>
 
