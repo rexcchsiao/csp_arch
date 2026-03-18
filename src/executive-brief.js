@@ -385,4 +385,41 @@ export const investmentThesisIn5Points = {
   
   // Why These 5 Points Matter
   context: "Leadership decisions hinge on 5 questions: (1) What's broken? (2) How do we fix it? (3) How big is the prize? (4) What's the return? (5) What happens if we wait? These 5 points answer each question with data, not slogans."
+
+};
+
+// Board Decision Card - What Leadership Needs to Approve Today (Added 2026-03-19 by CoCo)
+export const boardDecisionCard = {
+  headline: '今日董事會決策事項',
+  context: '本簡報旨在爭取管理層對軟件部門投資的正式批准，以便 Q2 啟動組織設計、Q3 開始交付價值',
+  decisionRequired: [
+    {
+      item: '批准 NT$ 65M/年 軟件團隊預算',
+      rationale: '50-80 人團隊（L9-L12）、實驗室設備、開發工具',
+      timeline: '2026 Q2-Q4 分階段投入',
+      successMetric: 'Year 3: NT$ 750M 軟件營收，20-25% 毛利率'
+    },
+    {
+      item: '授權軟件產品線組織設計',
+      rationale: '從「免費附加功能」轉型為「獨立營收產品線」，需獨立 P&L 與定價權',
+      timeline: '2026 Q2 完成組織設計',
+      successMetric: '50-80 FTE 團隊編制確認，關鍵職位（Firmware Lead、Orchestration Lead）開始招募'
+    },
+    {
+      item: '批准首波 90 天執行計畫',
+      rationale: '快速建立客戶案例與市場驗證',
+      timeline: '2026 Q2 前 90 天',
+      successMetric: 'Remote Ops 與 RAG 各 1 個客戶上線，NT$ 5-10M 首張訂單'
+    },
+    {
+      item: '確認軟件銷售激勵機制',
+      rationale: '目前銷售團隊僅以硬件銷量為 KPI，需加入軟件加值誘因',
+      timeline: '2026 Q3 前完成制度調整',
+      successMetric: '軟件 attach rate 達 5%（Year 1）、20%（Year 3）'
+    }
+  ],
+  ifApproved: 'Q2 完成組織設計 → Q3 首批 15-20 人到職 → Q4 首個客戶案例發布 → 2027 年規模化複製',
+  ifDelayed: 'Q3 競爭對手（廣達/緯穎）率先建立軟件口碑 → Q1 2027 首案流失 → Q3 2027 毛利壓縮至 12-15% → 2028 商品化陷阱（5-8% 毛利）',
+  riskOfNoDecision: '維持現狀 = 選擇落後。2026-2027 是 12-18 個月機會窗，若不行動，2028 年前將喪失 NT$ 1.5B+ 軟件加值營收，且淪為純硬件供應商',
+  nextMeeting: '建議於 2026 Q2 董事會正式列案審議，並指定專案負責人（建議由 CTO 或新事業部主管領軍）',
 };
