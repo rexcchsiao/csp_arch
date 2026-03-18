@@ -85,6 +85,13 @@ const App = () => {
       boardOutcome: '把「GPU 不夠用」翻成可治理、可定價的共享容量服務。',
     },
     {
+      pain: '既有機房先撞到的是電力與散熱上限，不是 GPU 不夠',
+      whyItStaysUnsolved: '多數方案會告訴客戶看到了 power / cooling event，但沒有把 BMC、排程、DCIM / BMS 與 maintenance workflow 接成能延後擴建、保住 SLA 的容量治理能力。',
+      service: 'Facility-Aware Capacity Assurance',
+      budgetOwner: 'Facilities / Capacity Planning / Data Center Operations',
+      boardOutcome: '把軟體價值直接連到 CAPEX 延後、outage 風險下降與更可預測的容量使用。',
+    },
+    {
       pain: 'AI 事故發生後，最貴的是 recoverability 與證據責任，不只是告警本身',
       whyItStaysUnsolved: '多數供應商即使談 resilience，也偏向通用備份，較少真正承接模型 artifact、向量資料、registry、golden image 與 incident evidence 這些 AI-specific Day-2 責任。',
       service: 'AI Recovery & Evidence Assurance',
@@ -719,9 +726,9 @@ const App = () => {
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">Where the software department becomes the revenue owner</p>
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">4 個還沒被好好解的痛點，剛好對應 4 個最容易 attach 成年約的服務</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">5 個還沒被好好解的痛點，剛好對應 5 個最容易 attach 成年約的服務</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    這一段把「市場白地」直接翻成董事會更在意的語言：哪些問題現在還讓客戶卡住、誰會為了解決它編預算、以及軟體部門怎麼把這些痛點接成可定價、可續約的服務邊界。這能更直接證明：軟體部門不是做 support，而是在接住硬體最難變現的那段價值。
+                    這一段把「市場白地」直接翻成董事會更在意的語言：哪些問題現在還讓客戶卡住、誰會為了解決它編預算、以及軟體部門怎麼把這些痛點接成可定價、可續約的服務邊界。這次特別把 capacity deferral 也拉進來，因為對老闆來說，能延後擴建、減少 outage 風險，往往比多一個功能更容易看見軟體部門的真實價值。這能更直接證明：軟體部門不是做 support，而是在接住硬體最難變現的那段價值。
                   </p>
                 </div>
                 <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
