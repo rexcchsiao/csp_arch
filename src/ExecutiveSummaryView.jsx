@@ -263,6 +263,7 @@ const ExecutiveSummaryView = () => {
       boardQuestion: '客戶是否已經把最怕出事的升級與變更窗口，交給 Foxconn 軟體部門來管？'
     },
   ];
+  const boardMandateGuardrails = softwareDifferentiation.serviceOfferings?.mandateGuardrails?.items || [];
 
   return (
     <div className="space-y-8">
@@ -762,6 +763,33 @@ const ExecutiveSummaryView = () => {
           <p className="text-sm font-semibold text-emerald-900">
             這段論述對管理層最關鍵的意義是：軟體部門不是要跟硬體搶預算，而是把原本一次性交機的收入，延伸成 Infrastructure、SRE、Operations、Compliance 都願意持續編列的年度支出。
           </p>
+        </div>
+      </div>
+
+      {/* Board mandate guardrails */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Lock className="w-5 h-5 text-rose-600" /> 董事會真正要批准的，不是「什麼都做的 AI 平台 team」
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一頁的重點很簡單：<span className="font-semibold text-slate-900">軟體部門若沒有清楚邊界，很容易被做成高成本、低溢價、永遠在追功能完整度的平台支援團隊。</span>
+          管理層真正該批准的，是一個對 attach rate、Day-2 risk transfer 與續約收入負責的部門任務，而不是 another control plane。下面這 3 條 guardrails，能幫老闆判斷資源會不會被投到真正能放大硬體價值的地方。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {boardMandateGuardrails.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-2">Mandate guardrail</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">如果走偏：</span>{item.risk}</p>
+                <p><span className="font-bold text-rose-700">更好的邊界：</span>{item.doInstead}</p>
+                <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-rose-100 bg-white p-4">
+          <p className="text-sm font-semibold text-rose-900">給管理層的一句話：<span className="text-slate-700">軟體部門最怕的不是做太少，而是做太散。真正該投資的，是那些能把 deployment、lifecycle、brownfield、air-gap 與 remote accountability 做成可定價責任鏈的能力。</span></p>
         </div>
       </div>
 
