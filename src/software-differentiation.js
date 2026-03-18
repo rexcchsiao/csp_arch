@@ -854,6 +854,29 @@ structuralAdvantages: {
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
 	},
+	factoryToOperationsGap: {
+		headline: '最容易被忽略、卻最容易被老闆聽懂的缺口：Factory-to-Operations handoff',
+		coreInsight: '很多 AI 專案真正拖慢上線、也最容易互相推責的，不是伺服器規格，而是「硬體已交機、軟體 baseline 與 Day-2 owner 還沒接起來」的灰色地帶。外部領先廠商已經在賣 turnkey、validated、continuous service availability，這代表市場正在替這段 handoff 斷點付錢。',
+		cards: [
+			{
+				company: 'HPE Private Cloud AI',
+				signal: 'HPE 官方直接用 deploy AI in days, not months、production deployment in hours、pre-configured validated platform、built-in observability 來賣。',
+				buyerPain: '這說明客戶最怕的不是買不到硬體，而是交機後還要再花數週把環境、驗收與可觀測性重新拼起來。',
+				foxconnPlay: 'Foxconn 應把工廠預載、burn-in、site acceptance、baseline 建立與 Day-2 runbook 串成 Factory-to-Operations Handoff Assurance，主張「交的不只是機器，而是可立即接手營運的 baseline」。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				company: 'NVIDIA Mission Control',
+				signal: 'Mission Control 官方敘事已把 cluster deployment、cluster life cycle、monitoring、autonomous recovery、building management integration 放進同一條 AI factory operations 敘事。',
+				buyerPain: '這代表 Day-0 安裝與 Day-2 營運在採購語言裡已經被視為同一件事：客戶要的是誰能一路把風險接住，而不是誰只把控制平面裝起來。',
+				foxconnPlay: 'Foxconn 不該只賣工具，而要把 handoff 斷點做成可定價服務：從工廠、現場驗收、生命周期治理到 remote ops 都由軟體部門當 accountable owner。',
+				sourceLabel: 'NVIDIA Mission Control',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			}
+		],
+		boardMessage: '董事會該記住的一句話：AI 專案最貴的延誤，常常不是少一台 GPU，而是沒有人對「交機後怎麼穩定接手營運」負全責；這正是軟體部門最值得被定價的位置。'
+	},
 	marketBuyingLanguage: {
 		headline: '市場現在在用什麼語言買單：不是功能清單，而是 4 種可核准的結果',
 		coreInsight: '外部官方頁面已經很一致：HPE 賣 deploy AI in days、full stack visibility；Red Hat 賣 lifecycle、monitoring、self-service、cost control；Lenovo 賣 productivity、agility、trust。這些都不是功能名詞，而是管理層會核准預算的結果語言。Foxconn 若要凸顯軟體部門價值，就該把自己的論述也翻成這種採購語言。',

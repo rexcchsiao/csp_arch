@@ -456,6 +456,30 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-fuchsia-200 shadow-sm">
+              <h3 className="text-xl font-black text-fuchsia-900 mb-2">老闆最容易秒懂的缺口：交機到營運之間，誰真的負責？</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把一個很常被忽略、但實際上最容易造成延誤與推責的斷點拉出來講清楚：硬體到貨不等於 AI 服務可上線，真正值錢的是誰能把出廠、現場驗收、baseline、可觀測性與 Day-2 handoff 接成同一條責任鏈。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.factoryToOperationsGap.cards.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
+                    <h4 className="text-sm font-black text-fuchsia-800 mb-3">{item.company}</h4>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.signal}</p>
+                      <p><span className="font-bold text-amber-700">客戶真正痛的點：</span>{item.buyerPain}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該怎麼賣：</span>{item.foxconnPlay}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-fuchsia-50 rounded-xl border border-fuchsia-100">
+                <p className="text-sm font-semibold text-fuchsia-900">{softwareDifferentiation.factoryToOperationsGap.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
               <h3 className="text-xl font-black text-emerald-900 mb-2">市場真正核准預算的 4 種語言</h3>
               <p className="text-sm text-slate-700 mb-4">這一段把外部官方頁面的產品語言，翻成管理層真正會點頭的預算語言：速度、控制、信任，以及單一 accountable owner。這比再多一個功能列表更能證明軟體部門的不可替代性。</p>
