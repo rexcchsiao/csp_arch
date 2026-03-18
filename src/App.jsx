@@ -22,6 +22,7 @@ const App = () => {
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
+  const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
   const painToServiceMap = [
     {
       pain: 'Brownfield AI 導入卡在既有機房流程',
@@ -260,6 +261,41 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">管理層該記住的一句話：Foxconn 若把這 3 段責任鏈講清楚，軟體部門就不是支援單位，而是把硬體 attach 成 time-to-revenue、SLA 保護與年度續約收入的價值 owner。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-600 mb-2">How software gets budget approved</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">老闆 / CFO 真正會核准的，不是功能清單，而是 4 種可被問責的結果</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    總覽如果只講功能，很容易讓軟體部門看起來像附加價值；但從 NVIDIA、HPE、Red Hat、Lenovo、Dell 的官方敘事來看，真正被核准的預算語言其實是：能不能更快上線、能不能少出事、能不能更好治理、以及到底誰對結果負責。把這段放在前面，能更直接把軟體部門從 support unit 拉高成預算 owner。
+                  </p>
+                </div>
+                <div className="bg-teal-50 border border-teal-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-teal-900">一句話版本：管理層不是在核准「多一套平台」，而是在核准更快上線、更少中斷、更容易治理，以及更清楚的責任歸屬。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {procurementProofCards.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-teal-100 bg-teal-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-teal-700 mb-2">{item.company}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">市場怎麼賣：</span>{item.proof}</p>
+                      <p><span className="font-bold text-teal-700">採購真正核准的是：</span>{item.buyerTranslation}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該怎麼講：</span>{item.foxconnPlay}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門之所以值錢，不是因為做了很多功能，而是因為它把上線速度、SLA 壓力、治理風險與責任歸屬翻成了可以被核准、被追 KPI、也能被續約的商業結果。</p>
               </div>
             </div>
 
