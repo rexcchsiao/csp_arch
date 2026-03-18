@@ -197,6 +197,29 @@ const App = () => {
       doInstead: '讓軟體部門直接背 software attachment rate、handoff time、remote resolution coverage、upgrade governance adoption 與 renewal signals。',
     },
   ]
+  const officialMarketSignals = [
+    {
+      company: 'NVIDIA Mission Control',
+      quote: 'streamlines every aspect of the AI factory—from developer workload scheduling and orchestration to monitoring and autonomous recovery',
+      interpretation: '連 NVIDIA 都已把價值敘事拉到 AI factory operations、autonomous recovery 與 power / cooling control。這證明客戶買的不只是 GPU，而是誰能把 Day-2 營運風險接住。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      company: 'HPE Private Cloud AI',
+      quote: 'Deploy AI in days, not months ... Gain operational simplicity with full stack visibility',
+      interpretation: 'HPE 直接用部署速度與 full-stack visibility 當賣點，說明管理層核准的語言已經不是節點規格，而是 time-to-value 與持續營運能力。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      company: 'Red Hat OpenShift AI',
+      quote: 'manage the lifecycle of predictive and generative AI models ... automate deployments and self-service access ... manage costs of inferencing',
+      interpretation: 'Red Hat 官方語言聚焦 lifecycle、deployment automation、self-service 與 cost control。這正好強化一個重點：軟體部門該被定位成治理與營運 owner，而不是交機後的附屬支援。',
+      sourceLabel: 'Red Hat OpenShift AI',
+      source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -315,6 +338,38 @@ const App = () => {
                     建議閱讀順序：先看總覽抓主張，再進 CoCo 分析報告看證據鏈，最後用自建 vs 採購回答管理層反對意見。
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">External proof that the market already buys software-led outcomes</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">不是我們自己說軟體重要，競品官方文案早就在替這件事背書</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一排故意只放競品官方語言，而且只抓最能說服管理層的關鍵句：deployment speed、AI lifecycle、autonomous recovery、cost control。目的不是蒐集 feature，而是直接證明市場現在核准的，就是軟體把硬體翻成可營運結果的能力。
+                  </p>
+                </div>
+                <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-sky-900">一句話版本：如果連 NVIDIA、HPE、Red Hat 都在賣 operations、lifecycle 與 visibility，Foxconn 就更不該把軟體只當成交機後的支援功能。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {officialMarketSignals.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-sky-100 bg-sky-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-700 mb-2">{item.company}</p>
+                    <p className="text-sm font-bold text-slate-900 mb-3 leading-relaxed">“{item.quote}”</p>
+                    <p className="text-xs text-slate-700 leading-relaxed">{item.interpretation}</p>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：市場已經在公開用 lifecycle、visibility、autonomous recovery、cost control 來賣 AI 基礎設施；Foxconn 若還把軟體部門放在附屬位置，等於主動放棄更高價值的採購語言。</p>
               </div>
             </div>
 
