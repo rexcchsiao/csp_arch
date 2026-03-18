@@ -140,13 +140,17 @@ const SoftwareDifferentiationView = () => {
                 {softwareDifferentiation.standardsGap.evidence.map((item, idx) => (
                   <div key={idx} className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                     <p className="text-xs font-bold text-slate-800 mb-2">{item.point}</p>
-                    <p className="text-xs text-slate-600">{item.implication}</p>
+                    <p className="text-xs text-slate-600 mb-3">{item.implication}</p>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
                   </div>
                 ))}
               </div>
               <div className="mt-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
                 <p className="text-sm font-semibold text-indigo-800">{softwareDifferentiation.standardsGap.boardMessage}</p>
-                <p className="text-xs text-slate-500 mt-2">Sources: DMTF Redfish, OpenBMC Project, NVIDIA Mission Control</p>
+                <p className="text-xs text-slate-500 mt-2">每一條證據都可直接點回官方來源，方便在管理層簡報中降低「這只是內部觀點」的質疑。</p>
               </div>
             </div>
 

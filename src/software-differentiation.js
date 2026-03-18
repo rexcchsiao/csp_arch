@@ -460,19 +460,27 @@ structuralAdvantages: {
     evidence: [
       {
         point: 'DMTF Redfish 提供的是 secure、machine-readable 的硬體管理標準與 interoperability profiles。',
-        implication: '這證明硬體管理 API 正在標準化，但也代表 OEM 若只停在 API 層，就很容易被視為可替換供應商。'
+        implication: '這證明硬體管理 API 正在標準化，但也代表 OEM 若只停在 API 層，就很容易被視為可替換供應商。',
+        sourceLabel: 'DMTF Redfish',
+        source: 'https://www.dmtf.org/standards/redfish'
       },
       {
         point: 'OpenBMC 提供的是 standard baseboard management controller firmware stack。',
-        implication: 'BMC 本身只是地基；客戶真正付費的是跨機種一致操作、升級治理、遠端修復、審計與 fleet policy。'
+        implication: 'BMC 本身只是地基；客戶真正付費的是跨機種一致操作、升級治理、遠端修復、審計與 fleet policy。',
+        sourceLabel: 'OpenBMC Project',
+        source: 'https://openbmc.org/'
       },
       {
         point: 'NVIDIA Mission Control 已把 cluster deployment、workload orchestration、building management integration、autonomous recovery 包成產品。',
-        implication: '市場已證明價值不在「有沒有標準 API」，而在誰能把這些能力做成可持續運營的 control plane。'
+        implication: '市場已證明價值不在「有沒有標準 API」，而在誰能把這些能力做成可持續運營的 control plane。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
       },
       {
         point: 'Red Hat 甚至為 disconnected environments 提供專門的 OpenShift AI 安裝 / 維運文件。',
-        implication: '這代表 air-gapped / sovereign AI 不是特例，而是需要獨立內容同步、升級治理與 runbook discipline 的正式營運場景。'
+        implication: '這代表 air-gapped / sovereign AI 不是特例，而是需要獨立內容同步、升級治理與 runbook discipline 的正式營運場景。',
+        sourceLabel: 'Red Hat OpenShift AI (Disconnected Environments)',
+        source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index'
       }
     ],
     boardMessage: '這正是軟體部門的不可替代性：把標準介面，變成可交付、可治理、可續約的營運能力；在斷網環境更進一步，還要把內容生命週期與稽核證據一起產品化。'
