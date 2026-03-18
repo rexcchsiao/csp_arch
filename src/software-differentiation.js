@@ -78,6 +78,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Facility-Aware Capacity Assurance：把 BMC 遙測、排程策略、power cap、cooling event 與 building management workflow 串成可執行的容量與事件治理流程',
       valueAmplification: '把「要不要先花大錢擴建機房」改成「先用軟體把既有設施吃滿、把 outage 風險降下來」；軟體部門因此直接影響擴容速度、SLA 與資本支出節奏',
     },
+    {
+      id: 'pp10',
+      problem: 'AI 工作負載出事時，真正昂貴的是 recoverability，而不只是監控告警',
+      impact: '模型 artifact、向量資料庫、golden image、設定基線與推論服務一旦毀損或遭勒索，客戶最怕的不是看到告警，而是沒有人能在可稽核前提下快速恢復並保住信任',
+      softwareSolution: 'AI Recovery & Evidence Assurance：把 artifact / registry 備援、向量資料保護、golden image rollback、恢復 runbook 與 incident evidence 打包成標準服務',
+      valueAmplification: '把「AI 出事只能臨場救火」變成可演練、可恢復、可對稽核交代的營運能力，讓軟體部門切進 resilience 預算與年度演練收入',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -129,6 +136,12 @@ export const softwareDifferentiation = {
       foxconn: '把 BMC / 叢集 / building management 訊號接成 Facility-Aware Capacity Assurance，遇到 power cap、cooling event、thermal / leakage alarm 時能保住工作負載與 SLA',
       competitors: '多數 OEM/ODM 不是只看到伺服器，就是只做到 DCIM 告警，缺乏把設施事件轉成 AI 工作負載治理的軟體層',
       whyItMatters: '在 power-constrained datacenter，客戶買的不是更多監控，而是更少擴建衝動、更少意外降載與更可預測的容量使用',
+    },
+    {
+      category: 'AI 韌性與可恢復性',
+      foxconn: '把 artifact / registry 備援、向量資料保護、golden image rollback、恢復 runbook 與 incident evidence 做成跨 AI 叢集的恢復治理服務',
+      competitors: '多數方案把 resilience 當成通用備份或安全議題，較少往 AI artifact、模型版本、向量資料與 brownfield 恢復責任延伸',
+      whyItMatters: '當 AI 服務中斷或資料毀損時，客戶買的不是 another alert，而是誰能更快恢復、保留證據、並把信任損失降到最低',
     },
   ],
 
@@ -427,6 +440,14 @@ structuralAdvantages: {
         foxconnPlay: '用 Remote Ops + Lifecycle Assurance + 工廠預整合，把「誰半夜接電話、誰對恢復時間負責」這件事商品化。',
         sourceLabel: 'NVIDIA Mission Control',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'AI resilience 預算正在浮上檯面，但少有人承接 AI-specific recoverability',
+        evidence: 'Dell 已把 Cyber Resilience for AI 直接放進 AI solutions 敘事，強調保護 AI workloads against data loss, corruption, and cyber threats。',
+        whyStillOpen: '多數供應商即使談 resilience，也偏向通用資料保護，較少真正承接模型 artifact、向量資料、registry、golden image 與恢復證據這些 AI-specific Day-2 責任。',
+        foxconnPlay: '把 AI Recovery & Evidence Assurance 做成 attach service，主張 Foxconn 賣的是恢復時間、稽核證據與服務信任保全，而不是只多一套備份工具。',
+        sourceLabel: 'Dell AI Solutions – Cyber Resilience for AI',
+        source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
       }
     ],
     boardMessage: '董事會該記住的一句話：真正還沒被滿足的市場空位，不是 another platform，而是有人願意對 brownfield、air-gap、facility event 與 remote-ops 結果負責；這正是軟體部門可以被定價、被續約、也最不容易被取代的位置。'
@@ -1093,6 +1114,15 @@ structuralAdvantages: {
 					marketSignal: 'Red Hat 為 disconnected environments 提供獨立安裝 / 維運文件，代表這不是特例，而是正式營運場景。',
 					sourceLabel: 'Red Hat OpenShift AI (Disconnected Environments)',
 					source: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index'
+				},
+				{
+					risk: 'AI Recoverability & Evidence Risk',
+					whatBreaks: '模型 artifact、向量資料、golden image 或推論服務一旦毀損 / 勒索，若缺少 AI-specific rollback 與證據流程，就算有備份也可能無法在 SLA 內恢復。',
+					annualService: 'AI Recovery & Evidence Assurance',
+					whyRecurring: '恢復演練、artifact 保護、證據保留與 runbook 更新會隨模型版本、資料集與法遵要求持續變動。',
+					marketSignal: 'Dell 已把 Cyber Resilience for AI 拉進 AI solutions 官方敘事，顯示 recoverability 已進入 AI 預算語言。',
+					sourceLabel: 'Dell AI Solutions – Cyber Resilience for AI',
+					source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
 				}
 			],
 			boardMessage: '董事會該記住的一句話：客戶每年續約的理由，不是因為軟體畫面還在，而是因為這 4 類風險每年都還在，而 Foxconn 軟體部門願意持續把它們接住。'
@@ -1128,6 +1158,13 @@ structuralAdvantages: {
 					whyNow: '跨站點運維、夜間故障、缺工與 SLA 需求持續升高',
 					renewalDriver: '值班、監控模型、備品策略與 SLA 報告天然適合年約',
 					boardOutcome: '把一次性交機，轉成可續約的年度服務收入'
+				},
+				{
+					service: 'AI Recovery & Evidence Assurance',
+					budgetOwner: 'CISO / Infrastructure Operations / Compliance',
+					whyNow: 'AI workloads 已開始被要求同時滿足 recoverability、稽核證據與營運信任，不再只是傳統備份議題',
+					renewalDriver: '年度演練、artifact 保護、golden image 更新、incident evidence 保留與法遵要求會持續驅動續約',
+					boardOutcome: '把 AI 事故後的恢復時間與信任損失，轉成可被採購與續約的軟體治理收入'
 				},
 				{
 					service: 'Tenant Governance & GPU Service Guardrails',
@@ -1193,6 +1230,13 @@ structuralAdvantages: {
 				margin: '70%+',
 				timeToMarket: '4-8 週',
 			},
+			{
+				name: 'AI 恢復演練與證據包服務',
+				why: '可先從 golden image rollback、artifact / registry 備援盤點、恢復 runbook 與稽核證據模板切入，快速把 resilience 做成 attach service',
+				revenue: 'NT$ 250K-700K/案 + 年度演練 / 證據維護費',
+				margin: '70%+',
+				timeToMarket: '4-8 週',
+			},
 		],
 		totalPotential: '首年可貢獻 NT$ 25-35M 營收，毛利率 70%+',
 	},
@@ -1244,6 +1288,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '不是只給監控畫面，而是把 AI 機房最容易卡住的 power / cooling / facility coordination 問題做成可量化、可續約的服務；這正好對應 NVIDIA Mission Control 已公開強調的 building management integration、power optimization 與 power/cooling event control 需求',
 				targetCustomer: '大型 CSP、電信商、液冷導入中的 AI 資料中心、既有 brownfield 機房'
+			},
+			{
+				name: 'AI Recovery & Evidence Assurance',
+				description: '針對模型 artifact、容器 registry、向量資料、golden image 與推論服務基線，提供備援盤點、恢復 runbook、rollback 設計、演練與 incident evidence 輸出，讓 AI 事故後不只可恢復，還能對稽核與管理層交代',
+				pricing: 'NT$ 300K-1.2M/案 + 年度演練 / 證據治理續約費',
+				margin: '65-75%',
+				differentiation: '不是泛用備份，而是把 AI 特有的 artifact、向量資料、模型版本與服務信任恢復做成標準服務；直接對應 Dell 已公開強調的 Cyber Resilience for AI 採購語言',
+				targetCustomer: '大型 CSP、金融、製造、政府與任何將 AI 服務視為關鍵營運系統的客戶'
 			},
 			{
 				name: 'Tenant Governance & GPU Service Guardrails',
