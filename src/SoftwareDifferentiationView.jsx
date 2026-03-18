@@ -524,6 +524,26 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
+              <h3 className="text-xl font-black text-sky-900 mb-2">先搶哪 4 種服務缺口，最能證明軟體部門不是成本中心？</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把最值得先賣的切口濃縮成董事會語言：不是 another platform，而是先去接住別人最常失手、也最容易形成續約的營運責任。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {softwareDifferentiation.serviceOfferings.uniqueServiceWedge.wedges.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-sky-50 rounded-2xl border border-sky-100">
+                    <h4 className="text-sm font-black text-sky-800 mb-3">{item.name}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場缺口：</span>{item.gap}</p>
+                      <p><span className="font-bold text-emerald-700">為什麼這格值得先打：</span>{item.whyItWins}</p>
+                      <p><span className="font-bold text-blue-700">收入邏輯：</span>{item.revenueLogic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                <p className="text-sm font-semibold text-sky-900">{softwareDifferentiation.serviceOfferings.uniqueServiceWedge.coreInsight}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-indigo-200 shadow-sm">
               <h3 className="text-xl font-black text-indigo-900 mb-2">董事會更在意的其實是：誰會付錢、為什麼明年還會再付</h3>
               <p className="text-sm text-slate-700 mb-4">這一段把軟體部門的價值，從「功能很多」翻譯成「可對應預算 owner、可形成續約理由、可跨年度放大硬體 attach rate」的收入地圖。</p>

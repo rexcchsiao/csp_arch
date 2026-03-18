@@ -919,6 +919,36 @@ structuralAdvantages: {
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
+		uniqueServiceWedge: {
+			headline: '最值得先賣的，不是 another platform，而是 4 個別人最容易失手的服務缺口',
+			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 4 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係的 owner。',
+			wedges: [
+				{
+					name: 'Factory-to-Operations Handoff Assurance',
+					gap: '多數競品只證明機器可交付，卻沒有把 burn-in、site acceptance、baseline、權限移交與 Day-2 runbook 串成同一條責任鏈。',
+					whyItWins: '這直接縮短 time-to-revenue，也最容易被管理層理解成「誰對上線成敗負責」。',
+					revenueLogic: '專案費 + baseline refresh / acceptance 年費'
+				},
+				{
+					name: 'Brownfield Integration & Fleet Baseline',
+					gap: '大型客戶通常已有 BMC、DCIM、告警、維護窗口與權限流程；新 AI 叢集若不能接進去，就會卡在跨團隊整合。',
+					whyItWins: '這不是 generic platform 能輕易取代的工作，因為它要求對現場資產、流程與變更風險負責。',
+					revenueLogic: '整合專案費 + 每年擴容 / 新場域延伸費'
+				},
+				{
+					name: 'Lifecycle Control Tower',
+					gap: '驅動、韌體、CUDA、K8s 升級是客戶最怕出事、也最常互相推責的區段。',
+					whyItWins: '把 upgrade risk 產品化後，Foxconn 賣的不只是工具，而是 maintenance window、rollback discipline 與 SLA 保護。',
+					revenueLogic: '治理專案費 + 年度升級顧問 / 訂閱費'
+				},
+				{
+					name: 'Air-Gap Content Lifecycle + Remote Ops',
+					gap: '很多方案證明可在斷網環境安裝，但沒有把離線內容同步、升級證據、遠端診斷與持續服務 availability 做成長期服務。',
+					whyItWins: '這塊最容易形成高毛利續約，且直接對應主權 AI、國防、金融等高門檻預算。',
+					revenueLogic: '導入費 + 年度內容維護 / SLA 續約費'
+				}
+			]
+		},
 		budgetMap: {
 			headline: '這些服務不是誰都能賣：軟體部門如何對應不同預算 owner',
 			summary: '要讓管理層真的看見軟體價值，不能只列功能，而要說清楚：誰會買、為什麼每年還會繼續買、以及這筆收入為何不會只停在一次性交付。',
