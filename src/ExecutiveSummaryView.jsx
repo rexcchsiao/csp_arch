@@ -287,6 +287,50 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Segment-specific motions - why the software team matters differently by customer type */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Layers className="w-5 h-5 text-fuchsia-600" /> 同一套硬體，面對不同客群其實在賣不同的軟體價值
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這段很重要，因為它直接回答老闆最常混在一起看的問題：<span className="font-semibold text-slate-900">大型 CSP / Hyperscaler 跟一般企業 / 主權 AI 客戶，真的會為同一種軟體價值買單嗎？</span>
+          答案其實不是喔～ 前者買的是 <span className="font-semibold text-fuchsia-700">營運責任轉移</span>，後者買的是 <span className="font-semibold text-blue-700">可交付、可治理、可合規的私有 AI 結果</span>。
+          把這兩條戰線講清楚，軟體部門的存在就不再像抽象平台團隊，而是把同一台伺服器翻成兩種完全不同、而且都能收費的服務語言。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {(softwareDifferentiation.segmentSpecificServiceMotions?.motions || []).map((motion) => (
+            <div key={motion.segment} className="rounded-2xl border border-fuchsia-100 bg-fuchsia-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-fuchsia-600 mb-2">Segment-specific software wedge</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{motion.segment}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">為什麼會買：</span>{motion.buyingTrigger}</p>
+                <p><span className="font-bold text-fuchsia-700">他們真正買的是：</span>{motion.whatTheyActuallyBuy}</p>
+                <p><span className="font-bold text-blue-700">Foxconn 應該用什麼切入：</span>{motion.softwareWedge}</p>
+                <p><span className="font-bold text-emerald-700">為什麼 Foxconn 有機會贏：</span>{motion.whyFoxconnWins}</p>
+                <p><span className="font-bold text-amber-700">市場佐證：</span>{motion.proof}</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {motion.sourceLabel}</p>
+                {motion.source && (
+                  <a
+                    href={motion.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
+          <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">面對 CSP，Foxconn 軟體部門賣的是 remote ops、lifecycle 與 brownfield accountability；面對企業，賣的是 deployment assurance、governance 與 sovereign-ready private AI。能把同一台硬體翻成這兩種買單語言的，正是軟體部門。</span></p>
+        </div>
+      </div>
+
       {/* Software value chain - board-level translation from technical work to commercial outcomes */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
