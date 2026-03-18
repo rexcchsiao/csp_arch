@@ -87,6 +87,45 @@ export const buildVsBuyAnalysis = {
     foxconnPositioning: 'Foxconn 軟體定位在「必要但非差異化」的基礎設施層，讓客戶專注在業務差異化功能',
   },
 
+  // Responsibility split - helps large CSPs see Foxconn as complement, not replacement (Added 2026-03-18 by CoCo)
+  responsibilitySplit: {
+    headline: '大型 CSP 真正想聽到的分工：哪些該自己做，哪些更適合交給 Foxconn',
+    summary: '這不是要客戶放棄自己的平台能力，而是把最該留在內部的差異化控制面，和最適合外包的 Day-2 交付/營運責任切清楚。Foxconn 的價值，不是取代客戶軟體團隊，而是讓他們不用把高階工程師長期綁在 brownfield、升級窗口、air-gap 與半夜救火上。',
+    keepInHouse: [
+      {
+        title: 'Developer / tenant-facing experience',
+        description: '模型 API、內部 AI portal、workflow、配額策略的最終商業規則，仍應由 CSP 自己掌握，因為那是服務差異化的一部分。'
+      },
+      {
+        title: '產品化定價與服務目錄',
+        description: '對外怎麼賣 GPU、推理、模型服務與 SLA 等級，屬於 CSP 自己的商業設計，不該外包。'
+      },
+      {
+        title: 'Customer / workload-level policy decisions',
+        description: '哪些內部團隊或外部租戶能用哪些模型、資料與資源，最終 policy owner 應留在客戶內部。'
+      }
+    ],
+    buyFromFoxconn: [
+      {
+        title: 'Factory-to-Operations handoff',
+        description: '把工廠預載、site acceptance、版本基線、權限移交與 Day-2 runbook 接起來，這類責任最適合由 Foxconn 以 attach service 承接。'
+      },
+      {
+        title: 'Lifecycle / upgrade accountability',
+        description: 'driver、firmware、CUDA、K8s 升級失敗時誰負責 rollback、維護窗口與證據留存，這類高風險變更治理更適合交給熟悉硬體與韌體邊界的供應商。'
+      },
+      {
+        title: 'Brownfield + facility coordination',
+        description: '新 AI 叢集怎麼接回既有 BMC / DCIM / BMS / power-cooling 流程，通常最耗跨團隊時間，也最不值得由 CSP 自己從零重造。'
+      },
+      {
+        title: 'Air-gap content lifecycle + remote ops',
+        description: '離線映像、升級證據、內容同步、遠端診斷與 on-call runbook 屬於長期營運負擔，適合被產品化成 Foxconn 的年度服務。'
+      }
+    ],
+    boardMessage: '一句話版本：CSP 應把「決定怎麼賣服務」留在自己手上，把「誰長期對交機後的 Day-2 風險負責」交給 Foxconn。這樣軟體部門賣的就不是工具，而是責任轉移。'
+  },
+
   // Customer Objection Handling
   objections: [
     {

@@ -1,9 +1,19 @@
 import React from 'react';
 import { buildVsBuyAnalysis } from './build-vs-buy';
-import { Target, TrendingUp, Clock, DollarSign, CheckCircle, XCircle, AlertCircle, Trophy } from 'lucide-react';
+import { Target, TrendingUp, Clock, CheckCircle, XCircle, AlertCircle, Trophy } from 'lucide-react';
 
 const BuildVsBuyView = () => {
-  const { headline, context, coreArgument, executiveSummary, tcoComparison, decisionFramework, objections, caseStudy } = buildVsBuyAnalysis;
+  const {
+    headline,
+    context,
+    coreArgument,
+    executiveSummary,
+    tcoComparison,
+    decisionFramework,
+    responsibilitySplit,
+    objections,
+    caseStudy,
+  } = buildVsBuyAnalysis;
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl shadow-lg border border-blue-200">
@@ -15,7 +25,6 @@ const BuildVsBuyView = () => {
         </div>
       </div>
 
-      {/* Executive Summary Card */}
       <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <Target className="w-6 h-6 text-blue-600" />
@@ -32,15 +41,13 @@ const BuildVsBuyView = () => {
         </div>
       </div>
 
-      {/* TCO Comparison */}
       <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <TrendingUp className="w-6 h-6 text-green-600" />
           {tcoComparison.headline}
         </h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Build In-House */}
           <div className="border border-red-200 rounded-lg p-4 bg-red-50">
             <h4 className="font-bold text-red-900 mb-3">自建方案</h4>
             <div className="space-y-2 text-sm">
@@ -65,7 +72,6 @@ const BuildVsBuyView = () => {
             </div>
           </div>
 
-          {/* Buy Foxconn */}
           <div className="border border-green-200 rounded-lg p-4 bg-green-50">
             <h4 className="font-bold text-green-900 mb-3">採購 Foxconn 方案</h4>
             <div className="space-y-2 text-sm">
@@ -97,13 +103,12 @@ const BuildVsBuyView = () => {
         </div>
       </div>
 
-      {/* Decision Framework */}
       <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <CheckCircle className="w-6 h-6 text-purple-600" />
           {decisionFramework.headline}
         </h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-3">
             <h4 className="font-bold text-red-700 flex items-center gap-2">
@@ -119,7 +124,7 @@ const BuildVsBuyView = () => {
               ))}
             </ul>
           </div>
-          
+
           <div className="space-y-3">
             <h4 className="font-bold text-green-700 flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
@@ -137,7 +142,41 @@ const BuildVsBuyView = () => {
         </div>
       </div>
 
-      {/* Customer Objections */}
+      <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <Clock className="w-6 h-6 text-indigo-600" />
+          {responsibilitySplit.headline}
+        </h3>
+        <p className="text-sm text-gray-700 mb-4">{responsibilitySplit.summary}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="border border-sky-200 rounded-lg p-4 bg-sky-50">
+            <h4 className="font-bold text-sky-900 mb-3">應留在客戶內部的差異化能力</h4>
+            <div className="space-y-3">
+              {responsibilitySplit.keepInHouse.map((item, idx) => (
+                <div key={idx} className="rounded-lg bg-white/70 p-3 border border-sky-100">
+                  <p className="text-sm font-bold text-gray-900 mb-1">{item.title}</p>
+                  <p className="text-xs text-gray-700 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="border border-emerald-200 rounded-lg p-4 bg-emerald-50">
+            <h4 className="font-bold text-emerald-900 mb-3">更適合交給 Foxconn 的 Day-2 責任</h4>
+            <div className="space-y-3">
+              {responsibilitySplit.buyFromFoxconn.map((item, idx) => (
+                <div key={idx} className="rounded-lg bg-white/70 p-3 border border-emerald-100">
+                  <p className="text-sm font-bold text-gray-900 mb-1">{item.title}</p>
+                  <p className="text-xs text-gray-700 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-600">
+          <p className="text-indigo-900 font-semibold text-sm">{responsibilitySplit.boardMessage}</p>
+        </div>
+      </div>
+
       <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <AlertCircle className="w-6 h-6 text-orange-600" />
@@ -148,15 +187,12 @@ const BuildVsBuyView = () => {
             <div key={idx} className="border-l-4 border-orange-300 pl-4 py-2 bg-orange-50 rounded">
               <p className="font-bold text-gray-900 mb-2">異議：{obj.objection}</p>
               <p className="text-gray-700 text-sm mb-2">{obj.response}</p>
-              {obj.evidence && (
-                <p className="text-xs text-gray-600 italic">證據：{obj.evidence}</p>
-              )}
+              {obj.evidence && <p className="text-xs text-gray-600 italic">證據：{obj.evidence}</p>}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Case Study */}
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <Trophy className="w-6 h-6 text-yellow-600" />
@@ -190,7 +226,7 @@ const BuildVsBuyView = () => {
             </ul>
           </div>
           <div className="p-4 bg-blue-50 rounded border-l-4 border-blue-600 italic text-gray-700">
-            "{caseStudy.outcome.quote}"
+            "{caseStudy.quote}"
           </div>
         </div>
       </div>
