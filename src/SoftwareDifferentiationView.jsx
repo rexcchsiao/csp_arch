@@ -436,6 +436,23 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-orange-200 shadow-sm">
+              <h3 className="text-xl font-black text-orange-900 mb-2">{softwareDifferentiation.serviceOfferings.mandateGuardrails.headline}</h3>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.serviceOfferings.mandateGuardrails.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.serviceOfferings.mandateGuardrails.items.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-orange-50 rounded-2xl border border-orange-100">
+                    <h4 className="text-sm font-black text-orange-800 mb-3">{item.title}</h4>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">若走偏：</span>{item.risk}</p>
+                      <p><span className="font-bold text-orange-700">更好的部門邊界：</span>{item.doInstead}</p>
+                      <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-teal-200 shadow-sm">
               <h3 className="text-xl font-black text-teal-900 mb-2">先把兩條戰線講清楚：CSP 要的是營運責任，企業要的是私有 AI 可交付結果</h3>
               <p className="text-sm text-slate-700 mb-4">這一段把最常被混在一起講的兩種客戶拆開。這樣老闆比較容易看懂：軟體部門不是做同一套平台賣所有人，而是把同一批硬體轉成兩種不同、但都可被定價的服務語言。</p>

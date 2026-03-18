@@ -1055,6 +1055,30 @@ structuralAdvantages: {
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
 		rationale: '硬體是一次性銷售，軟體/服務是持續性收入。以下是可立即啟動的服務項目：',
+		mandateGuardrails: {
+			headline: '軟體部門要守住的 3 條邊界：這樣才不會做成高成本、低溢價的平台 team',
+			coreInsight: '真正該投資的，不是再做一套功能很滿但責任很模糊的平台，而是清楚把軟體部門鎖定在最能被問責、也最能形成 attach rate 與續約收入的 Day-2 邊界。這 3 條 guardrails 能幫管理層避免把軟體資源浪費在難贏、難定價、也難跟硬體 attach 的工作上。',
+			items: [
+				{
+					title: '不要追求 another all-purpose control plane',
+					risk: '如果軟體部門主要 KPI 變成功能 breadth，很容易落入和 hyperscaler / platform vendor 比 feature completeness 的消耗戰；最後做得很累，卻仍被採購視為附屬功能。',
+					doInstead: '優先把 Deployment Assurance、Lifecycle Control Tower、Brownfield Integration、Air-Gap Content Lifecycle 與 Capacity Assurance 做成清楚的責任邊界。',
+					boardWhyItMatters: '這能讓軟體部門直接對 attach rate、上線速度、升級風險與續約收入負責，而不是被模糊地放進「平台支援」。'
+				},
+				{
+					title: '不要把價值講成 dashboard / portal / 監控畫面',
+					risk: '只講畫面與功能，最容易被要求附送或壓價；客戶也會把責任留在自己內部，Foxconn 只能當工具供應商。',
+					doInstead: '把價值翻成 accountable operations：誰對 handoff、maintenance window、remote resolution、air-gap 更新、facility event 與 recovery evidence 負責。',
+					boardWhyItMatters: '一旦採購語言從 feature list 變成 risk transfer，軟體部門就比較容易進入正式報價、維運 SLA 與年度治理預算。'
+				},
+				{
+					title: '不要沿用硬體部門 KPI 來評估軟體部門',
+					risk: '若仍用出貨、BOM 或單次交付思維管理軟體，團隊自然會優先做 demo feature，而不是可被續約的服務能力。',
+					doInstead: '把 software attachment rate、factory-to-operations handoff time、remote resolution coverage、lifecycle governance adoption 與 renewal signals 列為核心追蹤指標。',
+					boardWhyItMatters: '這能讓管理層更早看見軟體有沒有真的在放大硬體價值，而不是等到功能做很多卻還進不了報價。'
+				}
+			]
+		}, 
 		uniqueServiceWedge: {
 			headline: '最值得先賣的，不是 another platform，而是 4 個別人最容易失手的服務缺口',
 			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 4 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係的 owner。',
