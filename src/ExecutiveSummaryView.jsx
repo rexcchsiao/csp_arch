@@ -251,6 +251,12 @@ const ExecutiveSummaryView = () => {
       boardQuestion: '有多少故障與變更，不需要派人到現場就能被接住？'
     },
     {
+      metric: 'Capacity deferral in power / cooling-constrained sites',
+      whyItProvesValue: '這是最能讓董事會感受到「軟體不是成本，而是在延後 CAPEX」的指標：如果軟體真有價值，就應該能讓客戶先把既有機房容量吃得更滿，而不是一遇到 AI 負載就立刻喊擴建。',
+      target: '在 pilot 場域建立 power / cooling 事件治理、排程重平衡與容量保證基線，先證明可延後部分擴建或避免非必要降載。',
+      boardQuestion: '軟體部門有沒有把 power cap、cooling event 與 brownfield workflow 轉成「少擴建、少 outage、更多可預測容量」的具體成果？'
+    },
+    {
       metric: 'Lifecycle governance adoption',
       whyItProvesValue: '真正高毛利、最容易續約的不是 Day-0 安裝，而是之後每一次升級、回滾、維護窗口與稽核證據。',
       target: '至少讓 pilot 客戶開始用版本矩陣、maintenance window、rollback 與 upgrade reporting。',

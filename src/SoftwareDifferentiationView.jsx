@@ -511,8 +511,8 @@ const SoftwareDifferentiationView = () => {
             </div>
 
             <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
-              <h3 className="text-xl font-black text-emerald-900 mb-2">市場真正核准預算的 4 種語言</h3>
-              <p className="text-sm text-slate-700 mb-4">這一段把外部官方頁面的產品語言，翻成管理層真正會點頭的預算語言：速度、控制、信任，以及單一 accountable owner。這比再多一個功能列表更能證明軟體部門的不可替代性。</p>
+              <h3 className="text-xl font-black text-emerald-900 mb-2">市場真正核准預算的 6 種語言</h3>
+              <p className="text-sm text-slate-700 mb-4">這一段把外部官方頁面的產品語言，翻成管理層真正會點頭的預算語言：速度、控制、信任、單一 accountable owner、容量延後擴建，以及可恢復性。這比再多一個功能列表更能證明軟體部門的不可替代性。</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {softwareDifferentiation.marketBuyingLanguage.vectors.map((item, idx) => (
                   <div key={idx} className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
