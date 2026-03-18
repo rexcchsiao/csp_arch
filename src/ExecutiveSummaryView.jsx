@@ -99,6 +99,7 @@ const ExecutiveSummaryView = () => {
       whitespace: '多數 OEM/ODM 還停留在交機與基本管理，沒有把版本矩陣、maintenance window、rollback 與稽核輸出做成可續約服務。',
       foxconnPlay: '把 Lifecycle Control Tower 做成標準 attach：從硬體驗證延伸到季度升級治理與年度顧問收入。',
       source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      sourceUrl: hpePrivateCloudAISource?.url,
     },
     {
       title: 'Air-gapped / Sovereign AI 的 Day-2 內容生命週期沒人想接',
@@ -106,6 +107,7 @@ const ExecutiveSummaryView = () => {
       whitespace: '真正麻煩的是離線 registry、chart mirror、內容簽章、更新包驗證、升級 runbook 與稽核證據，這些通常不會被伺服器廠完整承接。',
       foxconnPlay: '把 Air-Gap Content Lifecycle 做成高毛利服務，鎖定國防、金融、主權雲等不能只買硬體的客戶。',
       source: disconnectedSource?.name || 'Red Hat OpenShift AI (Disconnected Environments)',
+      sourceUrl: disconnectedSource?.url,
     },
     {
       title: 'Facility-aware brownfield integration 仍缺真正 owner',
@@ -113,6 +115,7 @@ const ExecutiveSummaryView = () => {
       whitespace: '客戶最常卡住的不是 GPU 規格，而是新叢集能不能不打掉重練就接回既有 DCIM、告警、權限與維護窗口。這一層通常又髒又長尾，所以最容易被忽略。',
       foxconnPlay: '用 Brownfield Integration Hub 承接現場導入，讓軟體部門變成訂單真正落地的關鍵人。',
       source: missionControlSource?.name || 'NVIDIA Mission Control',
+      sourceUrl: missionControlSource?.url,
     },
   ];
   const hyperscalerKeepInHouseVsBuy = [
@@ -128,12 +131,14 @@ const ExecutiveSummaryView = () => {
       summary: 'Hyperscaler 的內部軟體通常偏向標準化，最耗時的反而是把新 AI 叢集接回既有機房、DCIM、權限與告警流程。',
       foxconnEdge: 'Foxconn 站在硬體、韌體、系統整合與現場交付交界，最有資格承接這種「髒但值錢」的導入工作。',
       source: 'DMTF Redfish / OpenBMC foundations + existing-facility integration thesis',
+      sourceUrl: standardsSources[0]?.url,
     },
     {
       title: 'Facility-Aware Capacity Assurance',
       summary: '真正讓 AI 專案爆掉的常不是模型，而是 rack power cap、cooling event、thermal / leakage alarm 這些跨 IT 與機電的協調問題。',
       foxconnEdge: 'Foxconn 可把 BMC 遙測、排程策略與既有 BMS/DCIM 流程串起來，賣的是「避免設施事件變成叢集 outage」的結果。',
       source: 'NVIDIA Mission Control building management / power-cooling integration',
+      sourceUrl: missionControlSource?.url,
     },
   ];
   const executiveOwnershipChain = [
