@@ -23,6 +23,36 @@ const App = () => {
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
+  const softwareValueChain = [
+    {
+      stage: '硬體部門交付',
+      delivers: 'GPU 節點、機櫃、網路與出廠規格達標',
+      customerQuestion: '設備有沒有到、能不能過 burn-in / 驗收？',
+      businessRisk: '如果只停在這裡，客戶買到的是可安裝設備，不是可長期營運的 AI 服務。',
+      softwareRole: '軟體部門把交機延伸成 baseline、驗收證據、runbook 與 Day-2 owner。',
+    },
+    {
+      stage: '上線與部署',
+      delivers: 'validated stack、site acceptance、快速上線流程',
+      customerQuestion: '多久可以開始跑模型、開始產生營收？',
+      businessRisk: '若 deployment 還靠客戶自己拼接，time-to-revenue 會被硬體交機後的灰色地帶吃掉。',
+      softwareRole: '軟體部門把出廠預整合、觀測性與標準 runbook 包成 Deployment Assurance。',
+    },
+    {
+      stage: 'Day-2 營運',
+      delivers: 'lifecycle governance、remote ops、brownfield / air-gap / facility coordination',
+      customerQuestion: '升級出事誰負責？半夜故障誰接住？既有機房流程怎麼整合？',
+      businessRisk: '這些責任若回到客戶內部，Foxconn 就會被看成可替換的硬體供應商。',
+      softwareRole: '軟體部門把 upgrade risk、on-call 壓力與跨團隊協調翻成可收費服務。',
+    },
+    {
+      stage: '續約與擴張',
+      delivers: 'SLA、capacity assurance、governance、年度基線刷新與擴容模板',
+      customerQuestion: '明年為什麼還要繼續付錢，而且願意擴大採購？',
+      businessRisk: '沒有軟體 owner，硬體價值會停在一次性 BOM，難以形成 ARR 與 attach rate。',
+      softwareRole: '軟體部門把每年都會重來一次的風險，收斂成每年都會續約一次的收入。',
+    },
+  ]
   const painToServiceMap = [
     {
       pain: 'Brownfield AI 導入卡在既有機房流程',
@@ -75,6 +105,32 @@ const App = () => {
       boardImpact: '這會把軟體價值從監控拉高成 outage 風險控制與延後擴建的能力。',
       sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
       source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+  ]
+  const boardProofPoints = [
+    {
+      metric: 'Software attachment rate',
+      question: '有多少 AI server 訂單，已不只是賣 BOM，而是帶著 deployment / lifecycle / remote-ops 服務一起成交？',
+      whyItMatters: '這是最直接的市場驗證：軟體部門是否真的把硬體訂單放大成可收費價值。',
+      earlySignal: '先看 pilot 與標竿案是否開始把 attach service 放進正式報價與交付範圍。',
+    },
+    {
+      metric: 'Factory-to-Operations handoff time',
+      question: '交機後多久，客戶能進入可監控、可升級、可接手營運的 baseline？',
+      whyItMatters: '這直接驗證軟體部門有沒有把工廠交付、site acceptance 與 Day-2 handoff 接成同一條責任鏈。',
+      earlySignal: '把「交機到可營運」從數週壓到數天，才算真的把 time-to-revenue 做出來。',
+    },
+    {
+      metric: 'Remote resolution coverage',
+      question: '有多少高頻故障與變更，不需要派人到現場就能被診斷、處理或安全降級？',
+      whyItMatters: '若仍主要靠現場人海，軟體部門就還沒把硬體轉成可規模化服務。',
+      earlySignal: '先追遠端診斷 / 處理覆蓋率，而不是一開始就只喊最終 SLA。',
+    },
+    {
+      metric: 'Lifecycle governance adoption',
+      question: '客戶是否已開始把版本矩陣、maintenance window、rollback 與 upgrade reporting 正式交給 Foxconn 管？',
+      whyItMatters: '最容易形成高毛利續約的，不是 Day-0 安裝，而是之後每一次升級與變更風險。',
+      earlySignal: '只要 pilot 客戶開始用 upgrade governance，就代表軟體已進入真正可續約區。',
     },
   ]
 
@@ -231,6 +287,72 @@ const App = () => {
             </div>
 
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-600 mb-2">Where hardware ends and software value begins</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">同一筆 AI Server 訂單，真正把毛利與續約拉高的是軟體部門接手後的 4 段價值鏈</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段是給老闆最直接的翻譯：硬體部門交付的是設備與規格，軟體部門交付的是可上線、可治理、可續約的營運結果。把兩者切開講，才能明確看見軟體部門不是 support function，而是把一次性 BOM 放大成 attach rate、ARR 與 board-level accountability 的那一層。
+                  </p>
+                </div>
+                <div className="bg-slate-100 border border-slate-200 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-slate-900">一句話版本：硬體把設備交到客戶手上；軟體部門把這批設備變成能上線、能被問責、也能每年續約的 AI 營運服務。</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {softwareValueChain.map((item, idx) => (
+                  <div key={idx} className="grid grid-cols-1 xl:grid-cols-[180px,1fr] gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5">
+                    <div>
+                      <p className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2">Stage {idx + 1}</p>
+                      <p className="text-lg font-black text-slate-900">{item.stage}</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed text-slate-700">
+                      <div className="space-y-2">
+                        <p><span className="font-bold text-slate-500">這一段交付什麼：</span>{item.delivers}</p>
+                        <p><span className="font-bold text-slate-500">客戶其實在問：</span>{item.customerQuestion}</p>
+                      </div>
+                      <div className="space-y-2">
+                        <p><span className="font-bold text-rose-700">如果沒軟體 owner：</span>{item.businessRisk}</p>
+                        <p><span className="font-bold text-emerald-700">軟體部門把它翻成：</span>{item.softwareRole}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-900 text-slate-50">
+                <p className="text-sm font-semibold">董事會該記住的一句話：硬體部門決定能不能交機，軟體部門決定這筆訂單最後是一次性交貨，還是能長成 deployment assurance、lifecycle governance、remote ops 與年度續約收入。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">How the board should verify software value</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">董事會不只要聽故事，還要追 4 個 proof points 才看得見軟體部門真的有在放大硬體價值</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一塊是把「軟體部門很重要」翻成管理層真的能每季追的驗證語言。真正該追的，不是功能做了多少，而是 attach rate 有沒有進報價、交機到營運 baseline 有沒有縮短、遠端處理覆蓋有沒有上升，以及客戶是否開始把升級治理正式交給 Foxconn。這樣老闆才看得見：軟體部門不是概念，而是會進入收入、交付與續約指標的價值 owner。
+                  </p>
+                </div>
+                <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-emerald-900">一句話版本：若軟體部門真的有價值，它會很早就反映在 attach、handoff、remote resolution 與 upgrade governance 這 4 件事上。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {boardProofPoints.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-emerald-700 mb-2">{item.metric}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">董事會該追問：</span>{item.question}</p>
+                      <p><span className="font-bold text-emerald-700">為什麼重要：</span>{item.whyItMatters}</p>
+                      <p><span className="font-bold text-blue-700">最早期訊號：</span>{item.earlySignal}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-600 mb-2">Why Foxconn is specifically credible</p>

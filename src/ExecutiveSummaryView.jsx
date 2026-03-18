@@ -1,7 +1,7 @@
 // Executive Summary View - Leadership Decision Dashboard
 // Surfaces key metrics, decisions, and value propositions for C-level executives
 import React from 'react';
-import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock, ExternalLink } from 'lucide-react';
 import { customerSuccessScenarios, executiveSummary } from './customer-success-stories';
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
