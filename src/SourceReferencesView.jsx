@@ -8,17 +8,24 @@ const SourceReferencesView = () => {
   const categories = [
     { id: 'nvidia', label: 'NVIDIA', icon: <Zap className="w-4 h-4" />, color: 'green' },
     { id: 'dell', label: 'Dell/HPE', icon: <BarChart3 className="w-4 h-4" />, color: 'blue' },
+    { id: 'odmPeers', label: 'OEM / ODM 同業', icon: <TrendingUp className="w-4 h-4" />, color: 'orange' },
     { id: 'enterprisePlatforms', label: '企業平台', icon: <Shield className="w-4 h-4" />, color: 'purple' },
     { id: 'supermicro', label: 'Supermicro', icon: <TrendingUp className="w-4 h-4" />, color: 'teal' },
     { id: 'schneider', label: 'Schneider', icon: <TrendingUp className="w-4 h-4" />, color: 'cyan' },
-    { id: 'gigabyte', label: 'GIGABYTE', icon: <TrendingUp className="w-4 h-4" />, color: 'orange' },
     { id: 'marketResearch', label: '市場研究', icon: <Info className="w-4 h-4" />, color: 'indigo' },
     { id: 'standards', label: '管理標準', icon: <CheckCircle className="w-4 h-4" />, color: 'emerald' },
   ];
 
   const sources = activeCategory === 'dell'
     ? [...(competitiveSources.dell || []), ...(competitiveSources.hpe || [])]
-    : (competitiveSources[activeCategory] || []);
+    : activeCategory === 'odmPeers'
+      ? [
+          ...(competitiveSources.qct || []),
+          ...(competitiveSources.quanta || []),
+          ...(competitiveSources.wistron || []),
+          ...(competitiveSources.gigabyte || []),
+        ]
+      : (competitiveSources[activeCategory] || []);
 
   return (
     <div className="bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden">
@@ -55,6 +62,16 @@ const SourceReferencesView = () => {
 
       {/* Sources List */}
       <div className="p-8">
+        {activeCategory === 'odmPeers' && (
+          <div className="mb-6 rounded-2xl border border-orange-200 bg-orange-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁把 Quanta / QCT、Wistron、GIGABYTE 等同業放在同一個來源池，方便直接支撐一個很關鍵的董事會論點：
+              Foxconn 面對的不是抽象的「市場都在做軟體」，而是 <span className="font-semibold text-slate-900">同級 OEM / ODM 已經開始用管理平台、軟體合作或營運敘事重新包裝硬體價值</span>。
+              這會讓軟體部門的投資理由更具急迫性，也更容易說服老闆這不是 optional add-on，而是避免商品化的必要防線。
+            </p>
+          </div>
+        )}
         <div className="space-y-6">
           {sources.map((source, idx) => (
             <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
