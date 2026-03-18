@@ -804,6 +804,30 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
             
+            <div className="p-6 bg-white rounded-2xl border border-rose-200 shadow-sm">
+              <h4 className="text-lg font-black text-rose-900 mb-2">{softwareDifferentiation.procurementDisqualifiers.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.procurementDisqualifiers.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.procurementDisqualifiers.items.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                    <h5 className="text-sm font-black text-rose-800 mb-3">{item.title}</h5>
+                    <div className="space-y-3 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">為什麼會卡案：</span>{item.whyItKillsDeals}</p>
+                      <p><span className="font-bold text-amber-700">外部訊號：</span>{item.marketProof}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該怎麼補位：</span>{item.foxconnImplication}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-rose-50 rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">{softwareDifferentiation.procurementDisqualifiers.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
               <div className="space-y-4">
                 {softwareDifferentiation.strategicAsk.items.map((item, idx) => (

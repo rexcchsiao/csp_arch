@@ -982,6 +982,45 @@ structuralAdvantages: {
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
 	},
+	procurementDisqualifiers: {
+		headline: '若沒有軟體部門，哪些採購門檻其實根本過不了？',
+		coreInsight: '這段不是再堆功能，而是把「缺少什麼能力會直接讓案子卡住」說成管理層聽得懂的語言。外部市場已經把 deployment speed、continuous service availability、lifecycle operations、cost / access governance、以及 end-to-end accountability 放到正式產品定位裡；如果 Foxconn 沒有對應的軟體 owner，就算硬體規格過關，也更容易在採購最後一哩輸掉。',
+		items: [
+			{
+				title: '沒有 Deployment Assurance，硬體到貨不等於可上線',
+				whyItKillsDeals: '當客戶內部問「多久能從交機進到 production？」時，如果答案仍是要再花數週自己整合，就很難跟 turnkey private AI 敘事競爭。',
+				marketProof: 'HPE Private Cloud AI 直接用 deploy AI in days, not months、production deployment in hours、pre-configured validated platform 當賣點。',
+				foxconnImplication: 'Foxconn 需要由軟體部門把工廠預載、site acceptance、baseline 驗證與 Day-2 handoff 包成正式交付能力，否則硬體優勢很難被轉成 time-to-revenue。',
+				sourceLabel: 'HPE Private Cloud AI',
+				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				title: '沒有 Lifecycle / Availability owner，客戶會懷疑誰對停機與升級失敗負責',
+				whyItKillsDeals: '如果提案只講監控或平台畫面，卻沒有清楚回答 maintenance window、rollback、predict problems、continuous service availability 誰接住，管理層很容易把風險留給內部團隊，進而壓縮軟體 attach 空間。',
+				marketProof: 'NVIDIA Mission Control 把 cluster life cycle、autonomous recovery、power / cooling control 放進 AI factory operations；HPE 也把 built-in observability、predict problems、continuous service availability 放進核心價值。',
+				foxconnImplication: 'Foxconn 應把 Lifecycle Control Tower、Remote Ops 與 Service Availability Assurance 綁成可被問責的軟體責任，而不是零散 feature。',
+				sourceLabel: 'NVIDIA Mission Control + HPE Private Cloud AI',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
+				title: '沒有 Governance layer，共享 GPU 叢集很容易被視為「能跑，但沒人敢放大」',
+				whyItKillsDeals: '很多企業真正擔心的不是叢集建不起來，而是模型、權限、成本、self-service access 與 chargeback 沒有治理邊界；這種情況下，硬體採購常會被拖慢或縮小規模。',
+				marketProof: 'Red Hat OpenShift AI 官方把 model lifecycle、monitoring、self-service access、inferencing cost 管理放在產品核心，代表治理已經是正式採購語言。',
+				foxconnImplication: 'Foxconn 需要由軟體部門把 Tenant Governance、showback / chargeback、air-gap governance 與 audit evidence 做成可報價服務，讓客戶敢把 shared AI capacity 擴大。',
+				sourceLabel: 'Red Hat OpenShift AI',
+				source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+			},
+			{
+				title: '沒有 Factory-to-Operations accountable owner，案子最容易卡在最後交接灰區',
+				whyItKillsDeals: '當硬體、資料、平台、現場維運分屬不同團隊時，真正拖慢專案的常常不是 BOM，而是沒有人對 end-to-end handoff、baseline 與 lifecycle support 負全責。',
+				marketProof: 'Dell AI Factory 已把 infrastructure、data 到 lifecycle support 包成 end-to-end AI 敘事，等於在採購語言裡放大了 accountable owner 的重要性。',
+				foxconnImplication: 'Foxconn 最值得放大的，不是再做一套更大的平台，而是讓軟體部門成為 Factory-to-Operations 的責任 owner，把硬體 attach 成更高勝率的交付結果。',
+				sourceLabel: 'Dell AI Factory',
+				source: 'https://www.dell.com/en-us/ai-factory'
+			}
+		],
+		boardMessage: '董事會該記住的一句話：AI 基礎設施最後輸贏，常常不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼治理、交機後誰接手」；這四題的 owner，就是軟體部門。'
+	},
 	factoryToOperationsGap: {
 		headline: '最容易被忽略、卻最容易被老闆聽懂的缺口：Factory-to-Operations handoff',
 		coreInsight: '很多 AI 專案真正拖慢上線、也最容易互相推責的，不是伺服器規格，而是「硬體已交機、軟體 baseline 與 Day-2 owner 還沒接起來」的灰色地帶。外部領先廠商已經在賣 turnkey、validated、continuous service availability，這代表市場正在替這段 handoff 斷點付錢。',
