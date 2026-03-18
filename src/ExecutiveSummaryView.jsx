@@ -136,6 +136,32 @@ const ExecutiveSummaryView = () => {
       source: 'NVIDIA Mission Control building management / power-cooling integration',
     },
   ];
+  const foxconnCredibilityReasons = [
+    {
+      title: 'Factory-to-Operations is a real buying gap, not a slogan',
+      externalSignal: 'HPE 已經直接用 deploy AI in days, not months、production deployment in hours、pre-configured validated platform 來賣 turnkey private AI。',
+      whyFoxconnIsCredible: 'Foxconn 天然同時握有工廠預載、burn-in、site acceptance、韌體基線與 Day-2 handoff 這條責任鏈。比起單純做平台的供應商，我們更有資格把「交機到營運」這段灰色地帶做成可收費服務。',
+      boardImplication: '這讓軟體部門不只是做 dashboard，而是把交機速度直接翻成 time-to-revenue 與 deployment assurance。',
+      source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      sourceUrl: hpePrivateCloudAISource?.url,
+    },
+    {
+      title: 'Facility events are moving into the AI software buying language',
+      externalSignal: 'NVIDIA Mission Control 已把 building management integration、power / cooling control、autonomous recovery 寫進 AI factory operations；Supermicro 也開始公開賣 liquid-cooling telemetry。',
+      whyFoxconnIsCredible: 'Foxconn 的價值不只在看到設施訊號，而是能把 BMC、伺服器、排程、機房流程與現場服務接起來，讓 power/cooling event 變成可治理、可回應、可續約的營運層。',
+      boardImplication: '這把軟體部門的位置從「監控工具提供者」往上抬成「容量保證與 outage 風險 owner」。',
+      source: missionControlSource?.name || 'NVIDIA Mission Control',
+      sourceUrl: missionControlSource?.url,
+    },
+    {
+      title: 'Open standards make operations software more valuable, not less',
+      externalSignal: 'Redfish 與 OpenBMC 正在把底層設備管理標準化。標準化不是壞消息，反而代表真正能溢價的層次往 workflow、lifecycle、auditability 與 fleet governance 移動。',
+      whyFoxconnIsCredible: 'Foxconn 站在 L9-L12 與混合世代設備交界，最容易把標準介面往上接成版本治理、brownfield integration 與 remote ops 閉環，而不是只停在 API 存在本身。',
+      boardImplication: '一旦底層能力越標準化，軟體部門越該被定位成把標準變成營運結果的 owner。',
+      source: standardsSources[0]?.name || 'DMTF Redfish / OpenBMC',
+      sourceUrl: standardsSources[0]?.url,
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -285,6 +311,47 @@ const ExecutiveSummaryView = () => {
           <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
             <p className="text-sm font-semibold text-blue-900">{competitiveLandscape.serviceValueCaptureMatrix?.boardMessage}</p>
           </div>
+        </div>
+      </div>
+
+      {/* Why Foxconn's software claim is specifically believable */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Layers className="w-5 h-5 text-cyan-600" /> 為什麼這個軟體故事換成 Foxconn 來講，可信度更高
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          市場上很多人都會說自己有平台，但真正能讓老闆點頭的，不只是外部市場趨勢，而是 <span className="font-semibold text-slate-900">Foxconn 有沒有一個別人比較難複製、而且能被定價的站位</span>。
+          下面這三張牌把答案講得更清楚：Foxconn 不是單純在跟風講 software，而是剛好站在工廠、硬體、韌體、交付、brownfield 與 Day-2 營運的交界處。這個位置，正是軟體部門最值錢的地方。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {foxconnCredibilityReasons.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Why Foxconn wins here</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">外部訊號：</span>{item.externalSignal}</p>
+                <p><span className="font-bold text-cyan-700">Foxconn 為什麼特別站得住：</span>{item.whyFoxconnIsCredible}</p>
+                <p><span className="font-bold text-emerald-700">董事會該怎麼記：</span>{item.boardImplication}</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
+          <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">別人也能說自己有平台，但只有站在 factory-to-operations、brownfield 與 facility-aware operations 交界的人，才比較有資格把 AI 交付風險、Day-2 風險與續約服務一起接起來。這就是 Foxconn 軟體部門最該被放大的理由。</span></p>
         </div>
       </div>
 
