@@ -414,9 +414,9 @@ structuralAdvantages: {
       },
       {
         title: 'Shared GPU cluster 的 tenant / quota / SLA 治理仍常落在客戶自己補洞',
-        evidence: 'Red Hat OpenShift AI 官方已把 self-service access、cost control、model lifecycle 與 monitoring 放到產品核心敘事；這代表企業已經把 AI 平台需求往多團隊共享、治理與成本責任移動。',
-        whyStillOpen: '很多基礎設施方案能把叢集建起來，卻沒有把「誰能用多少 GPU、哪些任務可搶占、quota 怎麼調整、showback / chargeback 怎麼對帳、SLA 失約誰負責」做成能被平台團隊與財務一起接受的治理層。',
-        foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：包含 quota policy、priority queue、showback / chargeback、approval workflow 與 SLA policy，讓 Foxconn 從賣叢集升級成 shared AI capacity 的治理 owner。',
+        evidence: 'Red Hat OpenShift AI 官方已把「manage costs of inferencing」、「automate deployments and self-service access to models, tools, and resources」、以及 monitoring / model lifecycle 放到產品核心敘事；這代表企業已經把 AI 平台需求往多團隊共享、治理與成本責任移動。',
+        whyStillOpen: '很多基礎設施方案能把叢集建起來，卻沒有把「誰能用多少 GPU、哪些任務可搶占、quota 怎麼調整、showback / chargeback 怎麼對帳、SLA 失約誰負責」做成能被平台團隊、FinOps 與 BU 主管一起接受的治理層。結果常變成：大家都有 self-service，卻沒有人真正對 shared capacity discipline 負責。',
+        foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：包含 quota policy、priority queue、showback / chargeback、approval workflow、SLA policy 與例外審批，讓 Foxconn 從賣叢集升級成 shared AI capacity 的治理 owner，而不只是設備供應商。',
         sourceLabel: 'Red Hat OpenShift AI',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
       },

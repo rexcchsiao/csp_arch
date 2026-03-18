@@ -291,7 +291,7 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       renewalDriver: '配額政策、優先級規則、showback / chargeback 報表、年度預算檢討都會持續驅動續約',
       painSolved: '把「誰拿多少 GPU、誰有優先權、功耗與成本怎麼算回去」做成正式治理能力，避免 AI 平台從共享資產變成內部搶資源與成本黑箱。',
       whyUnique: 'Foxconn 不只看到 K8s 工作負載，還看得到 BMC / 功耗 / 機櫃層訊號與 brownfield 權限流程，因此能把 quota、排程優先級、功耗視角與 showback 串成真正可執行的管理機制，而不是只做帳單後台。',
-      evidence: 'Red Hat OpenShift AI 官方已把 cost control、monitoring 與 hybrid operations 納入平台敘事，代表企業 AI 平台已從「能不能跑模型」走向「能不能治理成本與資源」。Foxconn 可把這個需求進一步下探到 mixed-vendor GPU 與機房營運層。',
+      evidence: 'Red Hat OpenShift AI 官方已把「manage costs of inferencing」、monitoring，以及「automate deployments and self-service access to models, tools, and resources」放進平台定位。這證明企業 AI 平台的採購語言正在往成本治理、自助化與營運控制移動；Foxconn 的差異化機會，是把這層治理再往下接到 mixed-vendor GPU pool、power telemetry 與 brownfield 機房流程。',
       source: 'https://www.redhat.com/en/products/ai/openshift-ai',
     },
     {
