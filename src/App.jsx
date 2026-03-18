@@ -180,6 +180,23 @@ const App = () => {
       source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
     },
   ]
+  const softwareDepartmentMandate = [
+    {
+      title: '不要追求做一個更大的 control plane',
+      risk: '如果 Foxconn 把軟體部門定位成和 hyperscaler / platform vendor 比 feature breadth，很容易落入「功能永遠追不完、卻很難溢價」的平台 parity 戰。',
+      doInstead: '把軟體部門聚焦在 handoff、lifecycle、brownfield、facility event 與 air-gap governance 這些必須有人背責的邊界。',
+    },
+    {
+      title: '要賣 accountable operations，不是 another dashboard',
+      risk: '單純監控、報表與 portal 很容易被視為附屬功能，採購也會傾向壓價或要求附送。',
+      doInstead: '把服務明確包裝成 Deployment Assurance、Lifecycle Control Tower、Capacity Assurance、AI Recovery & Evidence 等可被問責的結果。',
+    },
+    {
+      title: '部門 KPI 要對準 attach 與續約，不是功能數量',
+      risk: '若軟體仍被硬體 KPI 吃掉，團隊會自然往 demo feature 前進，而不是往能進報價、能被續約的服務邊界前進。',
+      doInstead: '讓軟體部門直接背 software attachment rate、handoff time、remote resolution coverage、upgrade governance adoption 與 renewal signals。',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -363,6 +380,37 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：當市場不再只比 GPU 與節點規格，軟體部門最值錢的角色，就是把 deployment confidence、change accountability 與 brownfield fit 變成 Foxconn 在 RFQ 上的最後勝負手。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600 mb-2">What the software department should deliberately not become</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">軟體部門最重要的戰略克制：不要去打「平台功能大全」這種難贏又難溢價的仗</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    市場已經有很多 control plane、observability 與 AI platform 敘事。真正更能凸顯 Foxconn 價值的，不是再證明我們也能做一套很大的平台，而是清楚告訴管理層：軟體部門要專心接住那些最容易拖慢交付、最容易在升級時出事、也最容易變成年約收入的責任邊界。這會比追求 feature parity 更能保住毛利，也更像軟體部門該擁有的獨立定位。
+                  </p>
+                </div>
+                <div className="bg-orange-50 border border-orange-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-orange-900">一句話版本：Foxconn 不需要再做一個更大的 control plane；Foxconn 需要的是一個更能被問責、也更能續約的 Day-2 software department。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDepartmentMandate.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-orange-100 bg-orange-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-orange-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">如果走錯方向：</span>{item.risk}</p>
+                      <p><span className="font-bold text-orange-700">更好的主張：</span>{item.doInstead}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門最值錢的地方，不是把功能表做得比 hyperscaler 更長，而是把 handoff、lifecycle、brownfield、facility event 與 air-gap governance 這些高責任邊界收斂成可被採購、可被問責、也可被續約的服務。</p>
               </div>
             </div>
 
