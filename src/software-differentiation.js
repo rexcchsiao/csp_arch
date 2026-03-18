@@ -842,6 +842,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 應順勢把 software department 定位成 deployment assurance + lifecycle governance + brownfield service owner，讓管理層看見：我們賣的是可交付結果，不是把軟體當配件。',
 				sourceLabel: 'Lenovo Hybrid AI Solutions',
 				source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
+			},
+			{
+				company: 'Dell AI Factory',
+				proof: 'Dell 官方直接把 AI Factory 定位成從 infrastructure、data 到 lifecycle support 的 end-to-end 交付敘事，賣點不是單一伺服器，而是整體導入與持續營運結果。',
+				buyerTranslation: '這代表客戶在核准預算時，真正想買的是「誰能對整條交付鏈負責」，包括部署風險、跨團隊協調、以及後續生命周期支援，而不是只買硬體規格。',
+				foxconnPlay: 'Foxconn 應把 software department 清楚定位成 Factory-to-Operations 的 accountable owner：從工廠預整合、site acceptance、baseline 建立，到 lifecycle / remote ops 服務都由軟體部門把責任接住。',
+				sourceLabel: 'Dell AI Factory',
+				source: 'https://www.dell.com/en-us/ai-factory'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
