@@ -136,6 +136,32 @@ const ExecutiveSummaryView = () => {
       source: 'NVIDIA Mission Control building management / power-cooling integration',
     },
   ];
+  const executiveOwnershipChain = [
+    {
+      stage: 'Factory handoff risk',
+      failureMode: '硬體到貨不等於 AI 服務可營運；最常延誤的是工廠預載、site acceptance、權限移交與 Day-2 baseline 沒有接成同一條責任鏈。',
+      softwareOwnerPlay: '由軟體部門把 factory pre-load、burn-in 證據、驗收 runbook、baseline 建立與 observability 打包成 Handoff Assurance。',
+      budgetLogic: '把交機速度直接翻成 time-to-revenue，讓 PMO / Infrastructure Delivery 願意編列 attach 預算。',
+      source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      sourceUrl: hpePrivateCloudAISource?.url,
+    },
+    {
+      stage: 'Change-window risk',
+      failureMode: '真正拖垮 ROI 的常是之後每一次 driver、firmware、CUDA、K8s 升級；這些跨層變更一失手就會變成 SLA 事故。',
+      softwareOwnerPlay: '由軟體部門把版本矩陣、canary、rollback、maintenance window 與審計證據產品化成 Lifecycle Control Tower。',
+      budgetLogic: '讓 Platform Engineering / SRE 買到的是變更安全與停機風險轉移，而不是另一個工具畫面。',
+      source: missionControlSource?.name || 'NVIDIA Mission Control',
+      sourceUrl: missionControlSource?.url,
+    },
+    {
+      stage: 'Facility-event risk',
+      failureMode: 'AI 機房真正先撞到的往往是 power cap、cooling event、thermal / leakage alarm 與既有 BMS / DCIM workflow，而不是 GPU 數量本身。',
+      softwareOwnerPlay: '由軟體部門把 BMC、scheduler、DCIM / BMS、power-cooling policy 與事件回應流程接成 Facility-Aware Capacity Assurance。',
+      budgetLogic: '讓 Facilities / Capacity Planning 願意為「少 outage、少擴建衝動、更多可預測容量」這種結果買單。',
+      source: schneiderAISource?.name || supermicroComposerSource?.name || 'Schneider Electric AI Data Center Solutions / Supermicro SuperCloud Composer',
+      sourceUrl: schneiderAISource?.url || supermicroComposerSource?.url,
+    },
+  ];
   const foxconnCredibilityReasons = [
     {
       title: 'Factory-to-Operations is a real buying gap, not a slogan',
@@ -437,6 +463,47 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-violet-100 bg-white p-4">
           <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">Hyperscaler 不是不會寫軟體，而是不想把最難規模化、最靠近設施現場、最容易出事又最難續命的那一層，全部自己做完。那一層正是 Foxconn 軟體部門最能創造 attach rate 與年約收入的地方。</span></p>
+        </div>
+      </div>
+
+      {/* Executive ownership chain */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Layers className="w-5 h-5 text-sky-600" /> 董事會真正該批准的，不是 another platform，而是 3 段可被驗收的責任鏈
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          如果要讓管理層真的看見軟體部門的不可替代性，最有效的方式不是再列更多功能，而是把 AI 專案最常出事的 3 個 handoff 講清楚：<span className="font-semibold text-slate-900">工廠交接、變更窗口、設施事件</span>。
+          這三段都有共同特徵：都發生在硬體規格比較之後、都直接影響上線速度與 SLA、而且一旦做成責任鏈，就最容易變成 attach rate 與年約收入。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {executiveOwnershipChain.map((item) => (
+            <div key={item.stage} className="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Executive ownership chain</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.stage}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">會壞在哪：</span>{item.failureMode}</p>
+                <p><span className="font-bold text-sky-700">軟體部門該接什麼：</span>{item.softwareOwnerPlay}</p>
+                <p><span className="font-bold text-emerald-700">為什麼這能拿到預算：</span>{item.budgetLogic}</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.source}</p>
+                {item.sourceUrl && (
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-sky-100 bg-white p-4">
+          <p className="text-sm font-semibold text-sky-900">給管理層的一句話：<span className="text-slate-700">軟體部門最值錢的地方，不是把設備變得更好看，而是把這 3 段最容易延誤、最容易推責、也最容易讓客戶願意付年費的責任鏈接起來。</span></p>
         </div>
       </div>
 
