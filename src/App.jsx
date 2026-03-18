@@ -20,6 +20,7 @@ const App = () => {
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'))
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
+  const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
 
   const foxconnCredibilityCards = [
     {
@@ -228,6 +229,41 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">管理層該記住的一句話：Foxconn 若把這 3 段責任鏈講清楚，軟體部門就不是支援單位，而是把硬體 attach 成 time-to-revenue、SLA 保護與年度續約收入的價值 owner。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">Recurring revenue logic</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">客戶為什麼會每年續約：不是因為介面存在，而是因為 4 種風險每年都還在</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    要讓老闆真的看見軟體部門價值，不能只講「我們做得出平台」，而要講清楚「客戶為什麼每年還願意付錢」。市場領先者已經把 deployment speed、cluster lifecycle、facility integration 與 disconnected operations 當成正式產品語言；這代表 Foxconn 最該賣的，是持續接住這些風險的年約服務，而不是一次性的專案支援。
+                  </p>
+                </div>
+                <div className="bg-rose-50 border border-rose-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-rose-900">一句話版本：軟體部門真正值錢的地方，是把每年都會重來一次的營運風險，變成每年都會續約一次的服務收入。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {recurringRevenueRisks.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-rose-100 bg-rose-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-rose-700 mb-2">{item.risk}</p>
+                    <p className="text-sm font-bold text-slate-900 mb-3">{item.annualService}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">如果沒人接：</span>{item.whatBreaks}</p>
+                      <p><span className="font-bold text-rose-700">為什麼會續約：</span>{item.whyRecurring}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：沒有軟體部門，這 4 類風險會分散在交付、SRE、機房與合規團隊之間互相推責；有了軟體部門，就能把它們收斂成可治理、可報價、可續約的服務邊界。</p>
               </div>
             </div>
           </div>
