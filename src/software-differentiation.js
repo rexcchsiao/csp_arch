@@ -330,6 +330,13 @@ structuralAdvantages: {
         takeaway: '這說明連硬體大廠都已經在賣「部署速度 + 信任 + 服務交付」，不是只賣 AI 伺服器規格。Foxconn 若要被看見，就必須把自己的軟體部門定位成把這些結果真正落地到 L9-L12、brownfield 與 Day-2 營運的人。',
         sourceLabel: 'Lenovo Hybrid AI Solutions',
         source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
+      },
+      {
+        company: 'Schneider Electric AI Data Center Solutions',
+        proof: 'Schneider Electric 官方直接把 AI datacenter solution 定義成 end-to-end physical and digital AI infrastructure，並把 resilient electrical infrastructure、advanced liquid cooling 與 optimized operations 放在同一個價值敘事裡。',
+        takeaway: '這是一個很強的市場訊號：連設施與電力基礎建設供應商都在用「digital operations」語言賣 AI 機房。Foxconn 若只停在伺服器層，就會錯過更高價值的 cross-layer 軟體位置；更好的主張，是由軟體部門把伺服器、電力、冷卻與 Day-2 營運流程接成可治理、可續約的服務。',
+        sourceLabel: 'Schneider Electric AI Data Center Solutions',
+        source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
