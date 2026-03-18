@@ -363,9 +363,9 @@ const App = () => {
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">Market-approved buying language</p>
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">市場真正核准預算的 4 種語言</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">市場真正核准預算的 6 種語言</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    從 HPE、NVIDIA、Red Hat 到 Lenovo 的官方產品敘事來看，客戶現在核准的不是功能清單，而是四種能被管理層理解的結果：速度、控制、信任，以及單一 accountable owner。把這四種語言直接放進總覽，能更快說清楚軟體部門不是支援角色，而是預算與續約的 owner。
+                    從 HPE、NVIDIA、Red Hat、Lenovo、Dell 到 Schneider Electric 的官方產品敘事來看，客戶現在核准的不是功能清單，而是六種能被管理層理解的結果：速度、控制、信任、單一 accountable owner、容量延後擴建能力，以及事故後的 recoverability。把這六種語言直接放進總覽，能更快說清楚軟體部門不是支援角色，而是預算與續約的 owner。
                   </p>
                 </div>
                 <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
