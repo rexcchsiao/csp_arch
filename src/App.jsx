@@ -399,6 +399,35 @@ const App = () => {
                 ))}
               </div>
 
+              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="p-5 rounded-2xl border border-rose-100 bg-rose-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-700 mb-3">Board mistake to avoid</p>
+                  <h4 className="text-lg font-black text-rose-900 mb-3">最容易把軟體價值講小的 3 種問法</h4>
+                  <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">錯問 1：</span>「這是不是只是硬體附帶的監控 / portal 功能？」</p>
+                    <p><span className="font-bold text-rose-700">為什麼危險：</span>一旦被講成功能附屬品，就很容易被要求附送、壓價，或繼續沿用硬體 KPI 來管理。</p>
+                    <p><span className="font-bold text-slate-500">錯問 2：</span>「既然大客戶也會寫平台，為什麼還需要我們？」</p>
+                    <p><span className="font-bold text-rose-700">為什麼危險：</span>這會忽略大型客戶真正想外包的，是 handoff、upgrade risk、brownfield coordination 與 remote accountability，而不是上層體驗本身。</p>
+                    <p><span className="font-bold text-slate-500">錯問 3：</span>「功能先做出來，再看能不能收費就好？」</p>
+                    <p><span className="font-bold text-rose-700">為什麼危險：</span>這會把團隊帶往 another control plane 的消耗戰，最後功能變多，卻不一定進得了正式報價與續約。</p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-3">Better board questions</p>
+                  <h4 className="text-lg font-black text-emerald-900 mb-3">更能看見軟體部門價值的 4 個追問</h4>
+                  <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-emerald-700">追問 1：</span>這季有多少 AI server 訂單，已把 deployment / lifecycle / remote-ops 服務一起放進正式報價？</p>
+                    <p><span className="font-bold text-emerald-700">追問 2：</span>交機後到客戶拿到可監控、可升級、可接手的 baseline，中間還要多久？</p>
+                    <p><span className="font-bold text-emerald-700">追問 3：</span>有多少高頻故障或變更，已不需要派人到現場就能被遠端診斷、處理或安全降級？</p>
+                    <p><span className="font-bold text-emerald-700">追問 4：</span>客戶是否已把 upgrade governance、rollback discipline、air-gap content lifecycle 或 brownfield baseline 正式交給 Foxconn？</p>
+                    <div className="mt-4 p-3 rounded-xl bg-white border border-emerald-100">
+                      <p className="text-xs font-semibold text-emerald-900">這 4 題的重點很簡單：不要只看做了多少功能，而要看軟體部門有沒有真的開始擁有 attach rate、handoff time、remote resolution coverage 與治理型續約訊號。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：硬體部門可以把設備交出去，但只有軟體部門能把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。</p>
               </div>
