@@ -107,6 +107,23 @@ const App = () => {
       source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
     },
   ]
+  const softwareDepartmentWhyNow = [
+    {
+      title: '買方不同',
+      point: '硬體部門主要對接採購、機房建置與規格驗收；軟體部門對接的卻是 Platform Engineering、SRE、FinOps、Compliance 與 Operations。',
+      boardWhyItMatters: '如果沒有獨立敘事與 owner，Foxconn 很容易只被當成設備供應商，進不了真正會持續編列 Day-2 預算的人。'
+    },
+    {
+      title: '收入節奏不同',
+      point: '硬體以一次性交機為主；軟體部門承接的是 deployment assurance、lifecycle governance、remote ops 與 baseline refresh 這類天然適合年約續費的工作。',
+      boardWhyItMatters: '這不是 support fee，而是把每年都會重來一次的風險，翻成每年都會續約一次的收入。'
+    },
+    {
+      title: 'KPI 不同',
+      point: '硬體成功看出貨、良率與 BOM；軟體成功看 attach rate、handoff time、remote resolution coverage、upgrade governance adoption 與續約率。',
+      boardWhyItMatters: '如果軟體仍被埋在硬體 KPI 下，就很難被正確投資，也很難累積真正的產品與服務飛輪。'
+    }
+  ]
   const boardProofPoints = [
     {
       metric: 'Software attachment rate',
@@ -280,6 +297,37 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-600 mb-2">Why this must be a software department, not just a support function</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">真正該讓老闆看見的，不只是「軟體重要」，而是這套能力天然就是獨立部門與獨立 P&amp;L 的邏輯</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    如果把這些能力只當成硬體部門底下的支援功能，Foxconn 很容易在組織與採購語言上都吃虧：面對的買方不同、收入節奏不同、KPI 也完全不同。把這段講清楚，才能讓管理層理解：軟體部門不是成本中心，而是 attach rate、續約率與 RFQ 勝率的 owner。
+                  </p>
+                </div>
+                <div className="bg-amber-50 border border-amber-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-amber-900">一句話版本：如果軟體只被當成支援，就會被硬體 KPI 吃掉；只有把它當成獨立價值層，Foxconn 才能真正把 Day-2 風險變成 Day-2 收入。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDepartmentWhyNow.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-amber-100 bg-amber-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-amber-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">核心差異：</span>{item.point}</p>
+                      <p><span className="font-bold text-amber-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：硬體部門可以把設備交出去，但只有軟體部門能把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">How software wins the RFQ when specs look similar</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">當硬體規格差不多時，最後把標案拉開差距的通常不是規格，而是 3 個 software tie-breakers</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
@@ -447,18 +495,18 @@ const App = () => {
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-600 mb-2">How software gets budget approved</p>
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">老闆 / CFO 真正會核准的，不是功能清單，而是 4 種可被問責的結果</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">老闆 / CFO 真正會核准的，不是功能清單，而是 6 種可被問責的結果</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    總覽如果只講功能，很容易讓軟體部門看起來像附加價值；但從 NVIDIA、HPE、Red Hat、Lenovo、Dell 的官方敘事來看，真正被核准的預算語言其實是：能不能更快上線、能不能少出事、能不能更好治理、以及到底誰對結果負責。把這段放在前面，能更直接把軟體部門從 support unit 拉高成預算 owner。
+                    總覽如果只講功能，很容易讓軟體部門看起來像附加價值；但從 NVIDIA、HPE、Red Hat、Lenovo、Dell 與 Schneider Electric 的官方敘事來看，真正被核准的預算語言其實是：能不能更快上線、能不能少出事、能不能更好治理、以及到底誰對結果負責，外加出事後能不能恢復、設施與叢集能不能一起被管理。把這段放在前面，能更直接把軟體部門從 support unit 拉高成預算 owner。
                   </p>
                 </div>
                 <div className="bg-teal-50 border border-teal-100 rounded-2xl px-4 py-3 max-w-md">
-                  <p className="text-sm font-semibold text-teal-900">一句話版本：管理層不是在核准「多一套平台」，而是在核准更快上線、更少中斷、更容易治理，以及更清楚的責任歸屬。</p>
+                  <p className="text-sm font-semibold text-teal-900">一句話版本：管理層不是在核准「多一套平台」，而是在核准更快上線、更少中斷、更容易治理、更清楚的責任歸屬，以及更可恢復、可跨設施協調的營運結果。</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {procurementProofCards.slice(0, 4).map((item, idx) => (
+                {procurementProofCards.map((item, idx) => (
                   <div key={idx} className="p-5 rounded-2xl border border-teal-100 bg-teal-50/70">
                     <p className="text-xs font-black uppercase tracking-wider text-teal-700 mb-2">{item.company}</p>
                     <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
@@ -474,7 +522,7 @@ const App = () => {
               </div>
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門之所以值錢，不是因為做了很多功能，而是因為它把上線速度、SLA 壓力、治理風險與責任歸屬翻成了可以被核准、被追 KPI、也能被續約的商業結果。</p>
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門之所以值錢，不是因為做了很多功能，而是因為它把上線速度、SLA 壓力、治理風險、恢復能力、設施協調與責任歸屬翻成了可以被核准、被追 KPI、也能被續約的商業結果。</p>
               </div>
             </div>
 
