@@ -22,6 +22,8 @@ const App = () => {
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
   const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure'))
+  const nutanixAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Nutanix Agentic AI'))
+  const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
@@ -366,6 +368,24 @@ const App = () => {
       interpretation: '連資料與儲存基礎建設供應商都已經不是只賣效能，而是在賣治理、安全、recoverability 與可持續營運。這會讓 Foxconn 的論點更站得住：軟體部門真正值錢的，不是多做一個介面，而是把 server delivery、lifecycle control、remote ops 與 recovery evidence 串成可被採購的結果。',
       sourceLabel: netappAISource?.name || 'NetApp AI infrastructure and data management',
       source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
+    },
+  ]
+  const softwareDepartmentBoundaryCards = [
+    {
+      title: 'Monitoring parity is not a moat',
+      marketSignal: 'Supermicro 已公開把實體資產、液冷與感測器資料納入 SuperCloud Composer / LCCM 敘事。這代表「看得到設備與 cooling telemetry」正在變成硬體供應商都會補上的基本能力。',
+      boardImplication: '如果 Foxconn 軟體部門只停在監控與告警，就很容易被當成 parity feature，而不是值得獨立投資的價值層。',
+      foxconnMove: 'Foxconn 要把這些 telemetry 往上翻成 facility-aware capacity assurance、maintenance workflow、baseline drift control 與 remote resolution coverage。',
+      sourceLabel: supermicroComposerSource?.name || 'Supermicro SuperCloud Composer',
+      source: supermicroComposerSource?.url || 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer',
+    },
+    {
+      title: 'Operating model is what gets budget approved',
+      marketSignal: 'Nutanix 已把 Agentic AI 講成 full-stack software solution 與 cloud operating model，並直接連到 GPU utilization、token costs 與 enterprise control。這代表市場現在核准的是「誰來長期經營 AI factory」，不是誰多做一套 UI。',
+      boardImplication: '這讓軟體部門的角色更清楚：不是 another dashboard team，而是 AI operating model 的 owner。',
+      foxconnMove: 'Foxconn 應把自己最有優勢的 factory handoff、brownfield baseline、lifecycle governance 與 remote ops，包成 operating model 的實體交付與責任轉移層。',
+      sourceLabel: nutanixAISource?.name || 'Nutanix Agentic AI',
+      source: nutanixAISource?.url || 'https://www.nutanix.com/solutions/ai',
     },
   ]
 
@@ -747,6 +767,42 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：市場已經在公開用 lifecycle、visibility、autonomous recovery、cost control 來賣 AI 基礎設施；Foxconn 若還把軟體部門放在附屬位置，等於主動放棄更高價值的採購語言。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">Why software must sit above monitoring parity</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">真正該投資的不是 another monitoring console，而是把 telemetry 升級成 operating model 與責任轉移</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段是補一個很容易被低估、但對董事會很重要的分水嶺：當硬體供應商也開始把液冷、感測器與設備可視化做進管理工具時，單純的 monitoring 很快就會變成 parity。真正能替軟體部門建立獨立價值的，不是「看得到」本身，而是誰能把這些訊號往上收斂成 capacity governance、change accountability、remote resolution 與可續約的 AI operating model。
+                  </p>
+                </div>
+                <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-sky-900">一句話版本：監控只能證明你看得到系統；軟體部門真正值錢，是因為它能對系統長期怎麼被治理、被升級、被救回來負責。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {softwareDepartmentBoundaryCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-sky-100 bg-sky-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-700 mb-2">Boundary proof {idx + 1}</p>
+                    <h4 className="text-sm font-black text-slate-900 mb-3">{item.title}</h4>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.marketSignal}</p>
+                      <p><span className="font-bold text-rose-700">董事會意義：</span>{item.boardImplication}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 應該怎麼賣：</span>{item.foxconnMove}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：若 monitoring 很快會變成基本配備，那 Foxconn 軟體部門真正該被批准的，就不是做更多畫面，而是成為 factory handoff、brownfield integration、lifecycle governance 與 remote accountability 的 owner。</p>
               </div>
             </div>
 
