@@ -272,6 +272,7 @@ const ExecutiveSummaryView = () => {
     },
   ];
   const boardMandateGuardrails = softwareDifferentiation.serviceOfferings?.mandateGuardrails?.items || [];
+  const softwareDepartmentMandateCards = softwareDifferentiation.softwareDepartmentMandateSummary?.cards || [];
 
   return (
     <div className="space-y-8">
@@ -336,6 +337,33 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
           <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">面對 CSP，Foxconn 軟體部門賣的是 remote ops、lifecycle 與 brownfield accountability；面對企業，賣的是 deployment assurance、governance 與 sovereign-ready private AI。能把同一台硬體翻成這兩種買單語言的，正是軟體部門。</span></p>
+        </div>
+      </div>
+
+      {/* Why this must be a software department, not a hardware afterthought */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Lock className="w-5 h-5 text-fuchsia-600" /> 為什麼這一定要是「軟體部門」，不能只是硬體附屬功能
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一段很關鍵，因為它直接回答董事會最常出現的誤解：<span className="font-semibold text-slate-900">「軟體很好，但是不是就放在硬體團隊裡順便做就好？」</span>
+          其實不行呀。因為一旦軟體仍被當成附屬功能，Foxconn 最容易失去的不是幾個 feature，而是 <span className="font-semibold text-fuchsia-700">attach rate、年約邏輯，以及進入 SRE / Platform / Compliance / FinOps 預算對話的資格</span>。
+          真正值得投資的，是一個能把 deployment、lifecycle、governance 與續約責任產品化的軟體部門 mandate。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {softwareDepartmentMandateCards.map((card) => (
+            <div key={card.title} className="rounded-2xl border border-fuchsia-100 bg-fuchsia-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-fuchsia-600 mb-2">Software department mandate</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{card.title}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">差別在哪：</span>{card.detail}</p>
+                <p><span className="font-bold text-emerald-700">董事會該在意：</span>{card.boardWhyItMatters}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
+          <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">硬體部門把設備交出去；軟體部門把交機後的 deployment、upgrade、governance 與 renewal 責任收斂成可持續經營的產品線。若沒有獨立 mandate，最容易被犧牲掉的，正是最有毛利的那一層。</span></p>
         </div>
       </div>
 
