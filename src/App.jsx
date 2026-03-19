@@ -234,6 +234,40 @@ const App = () => {
       source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
     },
   ]
+  const softwareBudgetExpansionCards = [
+    {
+      budget: 'Platform / SRE 預算',
+      marketSignal: 'NVIDIA Mission Control 已公開把 cluster life cycle、autonomous recovery 與 AI factory operations 做成正式產品語言。',
+      foxconnTranslation: 'Foxconn 軟體部門可賣的是 Lifecycle Control Tower、Remote Ops 與 change-window accountability，而不是附帶監控功能。',
+      boardWhyItMatters: '這代表軟體部門能直接對接平台營運與 SRE 預算，不必只能掛在硬體案內。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      budget: 'Facilities / DC Operations 預算',
+      marketSignal: 'Schneider 已把 AI datacenter 定義成 end-to-end physical and digital infrastructure，強調 resilient electrical infrastructure、advanced liquid cooling 與 optimized operations。',
+      foxconnTranslation: 'Foxconn 可以把 BMC、scheduler、power cap、cooling event 與維護流程接成 Facility-Aware Capacity Assurance。',
+      boardWhyItMatters: '這讓軟體部門不只賣給 IT，也能切進資料中心營運與設施預算。',
+      sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+    {
+      budget: 'CIO / Compliance / Sovereign AI 預算',
+      marketSignal: 'Red Hat OpenShift AI 把 model lifecycle、self-service access、monitoring、cost control 與 disconnected environments 都放進正式敘事。',
+      foxconnTranslation: 'Foxconn 可把 air-gap content lifecycle、tenant governance、audit evidence 與可持續更新能力包成治理型服務。',
+      boardWhyItMatters: '這說明軟體部門有資格進入合規、主權 AI 與治理預算，而不是只能做交機後支援。',
+      sourceLabel: 'Red Hat OpenShift AI',
+      source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
+    {
+      budget: 'Data / Security / Resilience 預算',
+      marketSignal: 'NetApp 已把 built-in governance、simple secure inferencing 與 cyber-resilient / recoverable data 納入 AI infrastructure 核心定位。',
+      foxconnTranslation: 'Foxconn 可把 AI Recovery & Evidence Assurance、baseline refresh 與 incident evidence 做成可續約服務。',
+      boardWhyItMatters: '這把軟體部門從硬體附屬角色，拉高成資料治理、恢復能力與年度續約收入的 owner。',
+      sourceLabel: netappAISource?.name || 'NetApp AI infrastructure and data management',
+      source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
+    },
+  ]
   const officialMarketSignals = [
     {
       company: 'NVIDIA Mission Control',
@@ -879,6 +913,41 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：當軟體部門能同時對接交付、SRE、機房、合規與 FinOps 預算，它就不只是附屬功能，而是 Foxconn 把一次性 AI server 訂單放大成多年度收入組合的關鍵控制層。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">External proof that software opens new budgets</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">不是我們自己說軟體能打不同預算，外部供應商官方敘事本身就已經把這些預算打開了</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一段刻意不談 Foxconn 內部假設，只用外部官方語言來證明一件事：今天 AI 基礎設施的預算 owner，早就不只採購與硬體團隊。從 NVIDIA 的 AI factory operations、Schneider 的 physical + digital infrastructure、Red Hat 的 disconnected governance，到 NetApp 的 recoverable data，市場已經在用不同預算語言買軟體帶來的 Day-2 結果。
+                  </p>
+                </div>
+                <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-sky-900">一句話版本：當外部市場已經用平台營運、設施治理、主權 AI 與恢復能力來編預算，Foxconn 軟體部門就應該被管理成跨預算 owner 的收入引擎。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                {softwareBudgetExpansionCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-sky-100 bg-sky-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-700 mb-2">{item.budget}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">市場已在這樣賣：</span>{item.marketSignal}</p>
+                      <p><span className="font-bold text-sky-700">Foxconn 應這樣翻譯：</span>{item.foxconnTranslation}</p>
+                      <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門最重要的價值，不只是替硬體加一些功能，而是把同一台 AI server 帶進 SRE、Facilities、Compliance 與 Data Security 這些原本硬體部門不容易直接觸及的預算。</p>
               </div>
             </div>
 
