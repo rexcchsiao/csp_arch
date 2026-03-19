@@ -401,6 +401,54 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-600 mb-2">Why the software department needs its own mandate</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">如果軟體部門只是硬體附屬功能，Foxconn 會直接失去的 3 件事</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這裡不是再講一次「軟體很重要」，而是把管理層最容易低估的代價講白：一旦軟體仍被當成硬體附屬支援，它會同時失去正式報價能力、續約邏輯，以及接觸真正 Day-2 預算 owner 的機會。這三件事一掉，軟體價值就很難被放大成部門級投資回報。
+                  </p>
+                </div>
+                <div className="bg-violet-50 border border-violet-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-violet-900">一句話版本：軟體部門若沒有獨立 mandate，最後最可能發生的，不是少幾個功能，而是少了 attach rate、少了年約、也少了進入決策桌的資格。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">Loss #1｜正式報價權</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">軟體會被當成附送功能，不容易形成 attach rate</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">會發生什麼：</span>業務容易把 deployment、lifecycle、remote-ops 能力包進硬體附加價值，而不是獨立寫進正式報價與交付範圍。</p>
+                    <p><span className="font-bold text-violet-700">為什麼危險：</span>一旦沒有明確 attach 語言，軟體部門就很難被看見自己創造了多少增量收入與 RFQ 勝率。</p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">Loss #2｜續約邏輯</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Day-2 風險會回到客戶內部，Foxconn 只能停在一次性交機</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">會發生什麼：</span>升級治理、brownfield baseline、air-gap content lifecycle、availability review 這些天然適合年約的工作，會被視為臨時支援或專案尾端雜務。</p>
+                    <p><span className="font-bold text-violet-700">為什麼危險：</span>客戶每年都還在承受相同風險，但 Foxconn 卻沒有把這些風險收斂成可續約收入。</p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">Loss #3｜預算 owner 接觸權</p>
+                  <p className="text-sm font-bold text-slate-900 mb-3">Foxconn 會更難進到 SRE、FinOps、Compliance 與 DC Ops 的正式預算</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-500">會發生什麼：</span>軟體價值會被局限在硬體採購對話，而不是擴展到平台治理、營運、合規與容量管理。</p>
+                    <p><span className="font-bold text-violet-700">為什麼危險：</span>這會直接限制 Foxconn 把同一筆 AI server 訂單放大成跨部門、跨年度收入組合的能力。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：是否讓軟體部門擁有獨立 mandate，決定的不是組織名片，而是 Foxconn 能不能把 AI server 從一次性設備收入，升級成可報價、可續約、可跨預算 owner 擴張的營運型業務。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">External proof that the market already buys software-led outcomes</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">不是我們自己說軟體重要，競品官方文案早就在替這件事背書</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
