@@ -72,6 +72,17 @@ const SourceReferencesView = () => {
             </p>
           </div>
         )}
+        {activeCategory === 'enterprisePlatforms' && (
+          <div className="mb-6 rounded-2xl border border-purple-200 bg-purple-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-purple-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁故意把 Red Hat、Lenovo、NetApp 這類企業平台與資料基礎設施來源放在一起，目的不是湊品牌數，而是直接證明一件事：
+              <span className="font-semibold text-slate-900">連不是傳統伺服器代工的玩家，都已經在賣 lifecycle、governance、recoverability、hybrid operations 與 secure inferencing</span>。
+              這代表市場核准的預算語言，早就不是「硬體規格夠不夠」，而是「誰能把 AI 叢集長期管好、救得回來、還能對稽核交代」。
+              這正好強化 Foxconn 的核心主張：軟體部門真正值錢的，不是做另一個 dashboard，而是把硬體交付延伸成可治理、可續約、可被問責的營運結果。
+            </p>
+          </div>
+        )}
         <div className="space-y-6">
           {sources.map((source, idx) => (
             <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
