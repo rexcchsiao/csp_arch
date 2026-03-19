@@ -350,6 +350,13 @@ structuralAdvantages: {
         takeaway: '這是一個很強的市場訊號：連設施與電力基礎建設供應商都在用「digital operations」語言賣 AI 機房。Foxconn 若只停在伺服器層，就會錯過更高價值的 cross-layer 軟體位置；更好的主張，是由軟體部門把伺服器、電力、冷卻與 Day-2 營運流程接成可治理、可續約的服務。',
         sourceLabel: 'Schneider Electric AI Data Center Solutions',
         source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
+      },
+      {
+        company: 'NetApp AI infrastructure and data management',
+        proof: 'NetApp 官方已把 AI 方案寫成 AI factory 的資料基礎，強調 unified foundation、built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
+        takeaway: '這是另一個很強的市場訊號：連儲存與資料基礎建設供應商都不再只賣效能，而是在賣可治理、可恢復、可安全營運的 AI 結果。Foxconn 若把軟體部門定位成 server delivery、lifecycle control、remote ops 與 recovery evidence 的 owner，就更能說清楚「沒有軟體，硬體價值無法被完整放大」。',
+        sourceLabel: 'NetApp AI infrastructure and data management',
+        source: 'https://www.netapp.com/artificial-intelligence/'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場領先者都在證明，軟體不是伺服器附屬品，而是把部署速度、治理能力、SLA 與續約收入一起打包出售的主體。'
@@ -986,6 +993,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 應把軟體部門定位成 facility-to-cluster 的翻譯層：把 BMC、scheduler、power cap、cooling event、maintenance workflow 與 SLA 報表做成 Capacity Assurance / Power-Cooling Governance 服務，去對接資料中心營運與設施預算，而不是只停在 server monitoring。',
 				sourceLabel: 'Schneider Electric AI Data Center Solutions',
 				source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
+			},
+			{
+				company: 'NetApp AI infrastructure and data management',
+				proof: 'NetApp 官方直接把 AI 基礎建設敘事拉到 unified foundation、built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
+				buyerTranslation: '這代表就算是資料與儲存預算 owner，現在核准的也不是純效能設備，而是誰能讓 AI factory 的資料、治理、安全與恢復能力一起被交付。',
+				foxconnPlay: 'Foxconn 可順勢把軟體部門定位成從 server 到 Day-2 recoverability 的責任 owner：把 lifecycle control、artifact / registry 保護、recovery evidence 與 remote ops 接成可被採購的營運結果，而不是只賣伺服器附帶管理工具。',
+				sourceLabel: 'NetApp AI infrastructure and data management',
+				source: 'https://www.netapp.com/artificial-intelligence/'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'

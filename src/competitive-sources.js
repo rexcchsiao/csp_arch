@@ -103,6 +103,16 @@ export const competitiveSources = {
   ],
   enterprisePlatforms: [
     {
+      name: 'NetApp AI infrastructure and data management',
+      url: 'https://www.netapp.com/artificial-intelligence/',
+      description: 'NetApp official AI positioning around AI factory data infrastructure, governance, secure inferencing, and recoverability',
+      relevance: 'Useful proof that even storage/data-infrastructure vendors now sell AI around governance, security, and operational outcomes—not just hardware performance',
+      lastVerified: '2026-03-19',
+      keyFeature: 'NetApp positions its AI offer around a unified foundation for the AI factory with scalable performance, built-in governance, real-time data intelligence, simple secure inferencing, and cyber-resilient data protection.',
+      limitation: 'The messaging is strongest at the data and storage layer; it does not clearly own server-fleet lifecycle governance, brownfield AI cluster integration, or factory-to-operations handoff.',
+      ourAdvantage: 'Foxconn can use this as market validation, then extend the story lower in the stack: turning server delivery, lifecycle control, remote ops, and recovery evidence into accountable software services that sit between hardware, facilities, and AI operations.'
+    },
+    {
       name: 'Red Hat OpenShift AI',
       url: 'https://www.redhat.com/en/products/ai/openshift-ai',
       description: 'Enterprise AI platform for managing model lifecycle across hybrid cloud environments',
