@@ -609,7 +609,7 @@ const ExecutiveSummaryView = () => {
       {/* Market whitespace - where software earns its keep */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 3 個高價值空白
+          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 4 個高價值空白
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。

@@ -288,9 +288,9 @@ const App = () => {
               </h2>
               <p className="text-sm md:text-base text-blue-50 max-w-4xl leading-relaxed">
                 市場領先者已經在賣 deployment speed、lifecycle operations、observability、power / cooling integration 與 governance。
-                這代表客戶真正會核准的，不再只是 BOM 與節點規格，而是誰能對 Day-2 營運結果負責。Foxconn 若要避免淪為 commodity 供應商，軟體部門就必須被清楚定位成這層責任與續約收入的 owner。
+                這代表客戶真正會核准的，不再只是 BOM 與節點規格，而是誰能對 Day-2 營運結果負責。Foxconn 若要避免淪為 commodity 供應商，軟體部門就必須被清楚定位成這層責任與續約收入的 owner，並以 attachment rate、Factory-to-Operations handoff time、upgrade governance adoption 與 renewal signals 這類軟體 KPI 被管理，而不是繼續沿用硬體出貨邏輯。
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
                 <div className="bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
                   <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Why now</p>
                   <p className="text-sm font-bold">競爭已從「誰拿到 GPU」轉向「誰能更快上線、穩定升級、把風險接住」</p>
@@ -302,6 +302,10 @@ const App = () => {
                 <div className="bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
                   <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Board takeaway</p>
                   <p className="text-sm font-bold">沒有軟體，Foxconn 賣的是設備；有了軟體，Foxconn 賣的是 AI 營運結果與長期關係</p>
+                </div>
+                <div className="bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+                  <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Software KPI shift</p>
+                  <p className="text-sm font-bold">董事會該追的不只是出貨，而是 attach rate、handoff time、upgrade governance adoption 與續約訊號</p>
                 </div>
               </div>
             </div>
@@ -775,7 +779,7 @@ const App = () => {
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">Where the software department becomes the revenue owner</p>
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">5 個還沒被好好解的痛點，剛好對應 5 個最容易 attach 成年約的服務</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">6 個還沒被好好解的痛點，剛好對應 6 個最容易 attach 成年約的服務</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
                     這一段把「市場白地」直接翻成董事會更在意的語言：哪些問題現在還讓客戶卡住、誰會為了解決它編預算、以及軟體部門怎麼把這些痛點接成可定價、可續約的服務邊界。這次特別把 capacity deferral 也拉進來，因為對老闆來說，能延後擴建、減少 outage 風險，往往比多一個功能更容易看見軟體部門的真實價值。這能更直接證明：軟體部門不是做 support，而是在接住硬體最難變現的那段價值。
                   </p>
