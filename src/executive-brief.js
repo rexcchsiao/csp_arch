@@ -557,3 +557,29 @@ export const softwareDepartmentScorecard = {
   }
 };
 
+
+// Decision Required - Clear Ask for Leadership (Added 2026-03-20 by CoCo)
+export const decisionRequired = {
+  headline: '本簡報請求管理層做出的具體決策',
+  context: '這不是「是否要做軟體」的問題，而是「何时要建立可規模化的軟體能力」的戰略選擇。市場已經用採購語言證明：客戶買的是 deployment speed、lifecycle governance、continuous service availability 與 recoverability。Foxconn 若不投資軟體部門，就無法進入這些正式預算對話。',
+  decision: {
+    what: '批准成立軟體產品線，2026 年編列 NT$ 65M 預算，組建 50-80 人全棧軟體團隊（L9-L12）',
+    timeline: 'Q2 2026 完成組織設計 → Q3 完成首波 25-30 人招募 → Q4 完成首個標竿案例上線',
+    scope: '聚焦 Remote Ops、Lifecycle Control Tower、RAG 一體機、Factory-to-Operations Handoff 四大服務主軸',
+    successMetrics: '2026 年底：software attach rate >5%、2 個客戶案例、NT$ 80M 軟體營收；2028 年底：attach rate >20%、NT$ 750M 營收、60%+ 毛利率'
+  },
+  alternatives: {
+    optionA: {
+      name: '維持現狀（不投資軟體）',
+      outcome: '2026-2027 年仍可出貨，但毛利率被壓縮至 10-15%；2028 年起面臨 5-8% 商品化壓力',
+      risk: 'NT$ 1.5B+ 機會損失；無法參與軟體服務預算；客戶被 hyperscaler 一站式方案鎖定'
+    },
+    optionB: {
+      name: '投資軟體（建議方案）',
+      outcome: '2026 Q4 首個案例上線，2027 年規模化複製，2028 年軟體營收 NT$ 750M，毛利率 20-25%',
+      upside: '避免商品化、建立可續約收入、提升估值倍數（從 8-12x P/E 提升至 20-30x P/E）'
+    }
+  },
+  urgency: '競爭對手（HPE、Dell、Quanta、GIGABYTE）已於 Q1 2026 開始行動。Foxconn 窗口期為 12-18 個月（Q2 2026-Q4 2027）。若 Q4 2027 前未建立軟體可信度，將失去 OEM/ODM 軟體領導地位。',
+  boardMessage: '董事會該記住的一句話：硬體讓客戶買得到 AI，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。這不是成本，是避免商品化並建立可持續溢價的唯一路徑。'
+};
