@@ -11,7 +11,7 @@ export const executiveBrief = {
   
   // The 30-Second Elevator Pitch
   elevatorPitch: {
-    problem: "Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle. Deployment takes 2-4 weeks. When GPUs fail, 8-hour downtime. Without software, this is stranded capital and delayed revenue.",
+    problem: "Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle. Deployment takes 2-4 weeks. When GPUs fail, 8-hour downtime costs NT$ 2-5M per incident in lost revenue (based on NT$ 6-12M/month AI workload value). Without software, this is stranded capital + delayed revenue.",
     solution: "Foxconn software stack transforms idle GPUs into 85%+ utilization, 2-hour deployment, and 70% remote fix rate. Same hardware, 2x business output.",
     ask: "Invest NT$ 65M/year for 50-80 person software team.",
     return: "Year 3: NT$ 750M software revenue, 20-25% gross margin (vs. 10-15% hardware-only). ROI: 11.5x. Payback: 18-24 months.",
@@ -107,7 +107,7 @@ export const executiveBrief = {
       painPoint: "Remote Operations Gap (70% of issues require on-site visit)",
       quote: "At 3 AM, we need someone on-site, not just online chat. That's 8 hours of downtime.",
       foxconnSolution: "Remote Ops toolchain (monitoring, diagnostics, predictive maintenance, remote repair)",
-      quantifiedImpact: "On-site visits reduced 70%, downtime reduced 60%"
+      quantifiedImpact: "On-site visits reduced 70%, downtime reduced 60%, saving NT$ 1.2-3M per incident (based on NT$ 2-5M/8hr downtime cost)"
     },
     {
       painPoint: "Energy Cost Crisis (15-25% of TCO wasted)",
