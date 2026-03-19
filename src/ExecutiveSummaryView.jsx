@@ -35,6 +35,8 @@ const ExecutiveSummaryView = () => {
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'));
   const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
+  const nutanixAgenticAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Nutanix Agentic AI'));
+  const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure and data management'));
   const quantaSource = competitiveSources.quanta?.[0];
   const wistronSource = competitiveSources.wistron?.[0];
   const gigabyteSource = competitiveSources.gigabyte?.[0];
@@ -128,6 +130,14 @@ const ExecutiveSummaryView = () => {
       foxconnMove: 'Position Foxconn software as the control layer that connects AI server fleets with facility constraints: power cap, cooling events, rollout discipline, and brownfield operating workflows. Sell it as capacity deferral and outage-risk control, not just facility telemetry.',
       source: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
       sourceUrl: schneiderAISource?.url,
+    },
+    {
+      criterion: 'AI buyers are now funding an operating model, not just a platform install',
+      marketSignal: 'Nutanix positions Agentic AI as a full-stack software solution for AI factories that simplifies operations, governs AI environments, and optimizes GPU utilization and token costs, while NetApp frames AI around unified governance, secure inferencing, and recoverable data.',
+      whyItChangesProcurement: 'This is a strong market signal that the budget is moving upward from bare infrastructure toward ongoing operating discipline: utilization, token economics, governance, and recoverability. Once that language enters the boardroom, software shifts from optional tooling to an owner of operating outcomes.',
+      foxconnMove: 'Frame Foxconn software as the physical-world operating model for AI factories: factory-to-operations handoff, tenant governance, lifecycle control, remote ops, and recovery evidence tied directly to the server fleet.',
+      source: nutanixAgenticAISource?.name || netappAISource?.name || 'Nutanix Agentic AI / NetApp AI infrastructure and data management',
+      sourceUrl: nutanixAgenticAISource?.url || netappAISource?.url,
     },
   ];
   const marketWhitespace = [
