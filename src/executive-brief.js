@@ -683,3 +683,106 @@ export const decisionRequired = {
   urgency: '競爭對手（HPE、Dell、Quanta、GIGABYTE）已於 Q1 2026 開始行動。Foxconn 窗口期為 12-18 個月（Q2 2026-Q4 2027）。若 Q4 2027 前未建立軟體可信度，將失去 OEM/ODM 軟體領導地位。',
   boardMessage: '董事會該記住的一句話：硬體讓客戶買得到 AI，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。這不是成本，是避免商品化並建立可持續溢價的唯一路徑。'
 };
+
+// Software Department Organizational Design - 50-80 FTE Structure (Added 2026-03-20 by CoCo)
+// Purpose: Show leadership exactly what the team looks like, key roles, and hiring phases
+export const organizationalDesign = {
+headline: 'Software Department Organizational Design: 50-80 FTE Structure',
+context: 'This org structure balances L9-L12 full-stack capability with phased hiring to reduce execution risk. Phase 1 focuses on core Remote Ops and RAG delivery; Phase 2 adds scale and specialization.',
+totalFTE: '50-80 FTE (Year 1: 30-35 FTE, Year 2: 50 FTE, Year 3: 80 FTE)',
+layers: [
+{
+layer: 'L9-L10: Firmware & Hardware Integration',
+fte: '12-15 FTE',
+roles: ['BMC firmware engineers (4-5)', 'BIOS/UEFI engineers (2-3)', 'GPU power/thermal specialists (2-3)', 'Hardware abstraction layer (3-4)', 'Lab validation engineers (2)'],
+keySkills: 'Intel/AMD platform expertise, NVIDIA/AMD GPU firmware, OpenBMC, Redfish, PID control for 800V power architecture',
+whyCritical: 'This is the hardware-software boundary where Foxconn has unique advantage. Pure software vendors cannot replicate L9-L10 depth.'
+},
+{
+layer: 'L11: Container Orchestration & Platform',
+fte: '15-20 FTE',
+roles: ['Kubernetes platform engineers (6-8)', 'GPU device plugin specialists (2-3)', 'Multi-tenant governance (2-3)', 'CI/CD & release engineering (3-4)', 'Platform security (2)'],
+keySkills: 'K8s operator pattern, Helm charts, MIG/vGPU scheduling, Red Hat OpenShift/Canonical Kubernetes, air-gapped deployment',
+whyCritical: 'Enables GPU virtualization, multi-tenant isolation, and brownfield integration with customer existing K8s clusters.'
+},
+{
+layer: 'L12: AI Workload & Applications',
+fte: '10-15 FTE',
+roles: ['RAG/LLM integration engineers (4-5)', 'Vector database specialists (2-3)', 'MLOps/Model deployment (2-3)', 'Enterprise integration (API/ITSM) (2)'],
+keySkills: 'LangChain, LlamaIndex, Pinecone/Milvus, model quantization, permission governance, compliance audit trails',
+whyCritical: 'Directly addresses enterprise pain point: "How do we deploy AI without sending data to cloud?"'
+},
+{
+layer: 'Remote Ops & Customer Success',
+fte: '8-12 FTE',
+roles: ['Remote ops engineers (4-5)', 'Predictive maintenance specialists (2)', 'Customer success managers (2-3)', 'Technical support (2)'],
+keySkills: 'Monitoring (Prometheus/Grafana), diagnostics, remote repair workflows, customer communication, SLA management',
+whyCritical: 'This is where software becomes a service. Remote Ops reduces on-site visits by 70% and enables global CSP coverage.'
+},
+{
+layer: 'Product & Program Management',
+fte: '5-8 FTE',
+roles: ['Product managers (2-3)', 'Program managers (2)', 'UX/UI designers (1-2)', 'Documentation & training (1)'],
+keySkills: 'Enterprise software product management, customer discovery, technical writing, UI/UX for operations tools',
+whyCritical: 'Ensures we build what customers actually need, not just what engineers think is cool.'
+}
+],
+hiringPhases: {
+phase1: {
+name: 'Phase 1: Core Team (Q2-Q3 2026)',
+target: '30-35 FTE',
+priority: 'L9-L10 firmware (8-10 FTE), K8s platform (8-10 FTE), Remote Ops (4-5 FTE), Product (3-4 FTE)',
+rationale: 'Minimum team to deliver Remote Ops MVP and RAG Appliance alpha. Focus on execution, not breadth.'
+},
+phase2: {
+name: 'Phase 2: Scale & Specialize (Q4 2026-Q2 2027)',
+target: '50 FTE',
+priority: 'Add L12 AI workload team (6-8 FTE), expand Remote Ops (3-4 FTE), add customer success (2-3 FTE)',
+rationale: 'Respond to customer feedback, add AI workload capabilities, scale support for 5+ customers.'
+},
+phase3: {
+name: 'Phase 3: Full Capability (Q3 2027-Q4 2028)',
+target: '80 FTE',
+priority: 'Full L9-L12 depth, dedicated security team, regional support coverage',
+rationale: 'Market leadership requires full-stack depth and 24/7 global support capability.'
+}
+},
+keyHires: [
+{
+role: 'VP of Software / CTO Software',
+priority: 'Critical - First Hire',
+profile: '15+ years enterprise software, experience scaling from 0-50 FTE, hardware+software background preferred',
+timeline: 'Q2 2026',
+impact: 'Sets technical vision, recruiting bar, and execution culture'
+},
+{
+role: 'Firmware Platform Lead (L9-L10)',
+priority: 'Critical - First Hire',
+profile: 'Deep BMC/BIOS expertise, OpenBMC contributor, understands GPU power/thermal',
+timeline: 'Q2 2026',
+impact: 'Foundation of Foxconn hardware+software differentiation'
+},
+{
+role: 'K8s Platform Lead (L11)',
+priority: 'Critical - First Hire',
+profile: 'K8s operator pattern expert, GPU scheduling, multi-tenant governance',
+timeline: 'Q2 2026',
+impact: 'Enables GPU virtualization and brownfield integration'
+},
+{
+role: 'Remote Ops Product Lead',
+priority: 'High - Q3 2026',
+profile: 'Enterprise SaaS product management, customer discovery, SLA-driven',
+timeline: 'Q3 2026',
+impact: 'Ensures Remote Ops solves real customer pain, not theoretical problems'
+},
+{
+role: 'RAG/AI Integration Lead',
+priority: 'High - Q3 2026',
+profile: 'LLM deployment, vector DB, enterprise RAG patterns, permission governance',
+timeline: 'Q3 2026',
+impact: 'Makes RAG Appliance turnkey and compliant'
+}
+],
+boardMessage: '董事會該知道：這不是一次補滿 80 人，而是分三階段擴編。第一年 30-35 人聚焦 Remote Ops MVP 和 RAG 一體機交付，降低執行風險。關鍵是儘早找到三位技術負責人（Firmware、K8s、Remote Ops），建立 recruiting bar 和技術文化。合夥夥伴（Red Hat、Canonical）可減少第一年招募壓力 40%。'
+};
