@@ -463,3 +463,97 @@ export const boardDecisionCard = {
   riskOfNoDecision: '維持現狀 = 選擇落後。2026-2027 是 12-18 個月機會窗，若不行動，2028 年前將喪失 NT$ 1.5B+ 軟件加值營收，且淪為純硬件供應商',
   nextMeeting: '建議於 2026 Q2 董事會正式列案審議，並指定專案負責人（建議由 CTO 或新事業部主管領軍）',
 };
+
+// Board-Ready Software Department Scorecard (Added 2026-03-19 by CoCo)
+// Purpose: Turn the software department argument from narrative into an operational review framework
+// Usage: Quarterly leadership reviews, board updates, go/no-go decisions
+export const softwareDepartmentScorecard = {
+  headline: 'Software Department Scorecard: Quarterly Review Framework',
+  context: 'This scorecard enables leadership to govern the software department investment with clear KPIs, thresholds, and recommended actions. Review quarterly.',
+  kpis: [
+    {
+      metric: 'Software Attach Rate',
+      definition: '% of total hardware orders that include software (Remote Ops, RAG, Orchestration)',
+      current: '0% (Q2 2026 baseline)',
+      target: { year1: '5%', year2: '12%', year3: '20%' },
+      threshold: 'If <2.5% by Q4 2026, trigger strategy review',
+      status: '🔴 Not yet started',
+      recommendedAction: 'If below target: (1) Review sales incentive structure, (2) Identify pilot customers, (3) Adjust pricing/packaging'
+    },
+    {
+      metric: 'Handoff Time (Hardware to Software)',
+      definition: 'Time from hardware delivery to software deployment completion',
+      current: '2-4 weeks (manual integration)',
+      target: { year1: '3 days', year2: '1 day', year3: '2 hours' },
+      threshold: 'If >1 week by Q4 2026, escalate automation investment',
+      status: '🔴 2-4 weeks',
+      recommendedAction: 'If above target: (1) Invest in pre-integration automation, (2) Standardize Helm charts, (3) Reduce manual steps'
+    },
+    {
+      metric: 'Remote Resolution Coverage',
+      definition: '% of customer issues resolved remotely without on-site visit',
+      current: '30% (baseline)',
+      target: { year1: '50%', year2: '65%', year3: '70%' },
+      threshold: 'If <40% by Q2 2027, review Remote Ops tooling',
+      status: '🔴 30%',
+      recommendedAction: 'If below target: (1) Enhance predictive maintenance accuracy, (2) Expand remote diagnostic capabilities, (3) Improve runbook automation'
+    },
+    {
+      metric: 'Lifecycle Governance Adoption',
+      definition: '% of customers using Lifecycle Control Tower for upgrades/rollback',
+      current: '0% (Q2 2026 baseline)',
+      target: { year1: '30%', year2: '50%', year3: '70%' },
+      threshold: 'If <20% by Q2 2027, review UX and onboarding',
+      status: '🔴 Not yet launched',
+      recommendedAction: 'If below target: (1) Simplify upgrade workflows, (2) Provide rollback guarantees, (3) Offer managed upgrade service'
+    },
+    {
+      metric: 'Software Gross Margin',
+      definition: 'Software revenue gross margin (target: 60%+ at scale)',
+      current: 'N/A (pre-revenue)',
+      target: { year1: '60%', year2: '60%', year3: '60%' },
+      threshold: 'If <50% by Year 2, review cost structure',
+      status: '🔴 Pre-revenue',
+      recommendedAction: 'If below target: (1) Increase automation, (2) Reduce custom development, (3) Scale via partners'
+    },
+    {
+      metric: 'Customer Retention Rate',
+      definition: '% of software customers renewing subscription after Year 1',
+      current: 'N/A (no renewals yet)',
+      target: { year1: 'N/A', year2: '75%', year3: '85%' },
+      threshold: 'If <70% by Year 3, investigate churn causes',
+      status: '🔴 No data',
+      recommendedAction: 'If below target: (1) Conduct exit interviews, (2) Improve onboarding, (3) Enhance customer success program'
+    }
+  ],
+  managementActions: {
+    green: 'KPI on track - continue current strategy, document learnings for scaling',
+    yellow: 'KPI at risk - initiate corrective action plan within 30 days, escalate to steering committee',
+    red: 'KPI off track - trigger go/no-go review, consider pivot or stop decision'
+  },
+  escalationMatrix: {
+    level1: { trigger: '1 KPI red for 1 quarter', action: 'Department head presents recovery plan to CTO', timeline: 'Within 30 days' },
+    level2: { trigger: '2+ KPIs red for 2 consecutive quarters', action: 'Steering committee review, consider strategy pivot', timeline: 'Within 60 days' },
+    level3: { trigger: 'Software attach rate <2.5% by Q4 2026', action: 'Executive review: continue, pivot, or stop', timeline: 'Board-level decision required' }
+  },
+  quarterlyReviewTemplate: {
+    reviewDate: 'YYYY-MM-DD',
+    quarter: 'Q# 202X',
+    kpiStatus: { attachRate: '🔴/🟡/🟢', handoffTime: '🔴/🟡/🟢', remoteResolution: '🔴/🟡/🟢', lifecycleGovernance: '🔴/🟡/🟢', grossMargin: '🔴/🟡/🟢', retention: '🔴/🟡/🟢' },
+    overallStatus: '🔴/🟡/🟢',
+    keyDecisions: ['Decision 1', 'Decision 2'],
+    actionsForNextQuarter: ['Action 1', 'Action 2'],
+    escalationRequired: 'Yes/No - If yes, specify level and timeline'
+  },
+  successDefinition: {
+    year1: 'Establish credibility: 1-2 benchmark customers, Remote Ops MVP delivered, RAG Appliance POC complete',
+    year2: 'Demonstrate repeatability: 5+ customers, NT$ 250M ARR, 12% attach rate, 60% gross margin',
+    year3: 'Achieve scale: NT$ 750M ARR, 20% attach rate, 85%+ retention, 20-25% gross margin'
+  },
+  goNoGoCriteria: {
+    continue: 'On track to hit Year 1 targets (5% attach, 1 customer case, NT$ 80M revenue)',
+    pivot: 'Missed attach rate but customer feedback strong - consider different segment or pricing',
+    stop: 'Year 1 attach rate <2.5% AND no clear path to differentiation AND customer feedback negative'
+  }
+};
+
