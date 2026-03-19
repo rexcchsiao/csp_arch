@@ -148,24 +148,51 @@ const App = () => {
       question: '有多少 AI server 訂單，已不只是賣 BOM，而是帶著 deployment / lifecycle / remote-ops 服務一起成交？',
       whyItMatters: '這是最直接的市場驗證：軟體部門是否真的把硬體訂單放大成可收費價值。',
       earlySignal: '先看 pilot 與標竿案是否開始把 attach service 放進正式報價與交付範圍。',
+      boardAction: '若 attach rate 仍低，優先調整報價模板與業務激勵，而不是先擴做更多功能。',
     },
     {
       metric: 'Factory-to-Operations handoff time',
       question: '交機後多久，客戶能進入可監控、可升級、可接手營運的 baseline？',
       whyItMatters: '這直接驗證軟體部門有沒有把工廠交付、site acceptance 與 Day-2 handoff 接成同一條責任鏈。',
       earlySignal: '把「交機到可營運」從數週壓到數天，才算真的把 time-to-revenue 做出來。',
+      boardAction: '若 handoff 仍拖長，應優先投資 baseline automation、site acceptance SOP 與工廠預載標準化。',
     },
     {
       metric: 'Remote resolution coverage',
       question: '有多少高頻故障與變更，不需要派人到現場就能被診斷、處理或安全降級？',
       whyItMatters: '若仍主要靠現場人海，軟體部門就還沒把硬體轉成可規模化服務。',
       earlySignal: '先追遠端診斷 / 處理覆蓋率，而不是一開始就只喊最終 SLA。',
+      boardAction: '若遠端覆蓋率偏低，應優先補 diagnostics、runbook automation 與值班流程，而不是先做新 UI。',
     },
     {
       metric: 'Lifecycle governance adoption',
       question: '客戶是否已開始把版本矩陣、maintenance window、rollback 與 upgrade reporting 正式交給 Foxconn 管？',
       whyItMatters: '最容易形成高毛利續約的，不是 Day-0 安裝，而是之後每一次升級與變更風險。',
       earlySignal: '只要 pilot 客戶開始用 upgrade governance，就代表軟體已進入真正可續約區。',
+      boardAction: '若 adoption 偏慢，代表提案仍像附帶支援；應把 change-window accountability 重新包成正式年約服務。',
+    },
+  ]
+
+  const softwareDepartmentScorecard = [
+    {
+      label: '董事會每季先看什麼',
+      value: '4 項軟體 KPI',
+      detail: 'attach rate、handoff time、remote resolution coverage、lifecycle governance adoption。',
+    },
+    {
+      label: '看這 4 項的原因',
+      value: '驗證軟體有沒有變收入',
+      detail: '不是看功能做多少，而是看硬體有沒有被翻成可報價、可交付、可續約的服務。',
+    },
+    {
+      label: '若數字不好看代表什麼',
+      value: '多半是包裝與責任邊界問題',
+      detail: '通常不是先缺更多 feature，而是缺標準 attach bundle、handoff 流程與 change-risk owner。',
+    },
+    {
+      label: '這對老闆的意義',
+      value: '把軟體從故事變管理系統',
+      detail: '董事會能用同一套 scorecard 持續追蹤軟體部門是否真的在放大硬體價值。',
     },
   ]
   const rfqTieBreakerCards = [
@@ -803,6 +830,16 @@ const App = () => {
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+                {softwareDepartmentScorecard.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-slate-200 bg-slate-50/90">
+                    <p className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2">{item.label}</p>
+                    <p className="text-lg font-black text-slate-900 mb-3 leading-snug">{item.value}</p>
+                    <p className="text-xs text-slate-700 leading-relaxed">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 {boardProofPoints.map((item, idx) => (
                   <div key={idx} className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/70">
@@ -811,6 +848,7 @@ const App = () => {
                       <p><span className="font-bold text-slate-500">董事會該追問：</span>{item.question}</p>
                       <p><span className="font-bold text-emerald-700">為什麼重要：</span>{item.whyItMatters}</p>
                       <p><span className="font-bold text-blue-700">最早期訊號：</span>{item.earlySignal}</p>
+                      <p><span className="font-bold text-amber-700">若數字不佳，先做什麼：</span>{item.boardAction}</p>
                     </div>
                   </div>
                 ))}
