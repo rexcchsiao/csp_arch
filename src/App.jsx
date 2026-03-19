@@ -1067,7 +1067,7 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">Market-approved buying language</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">市場真正核准預算的 7 種語言</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    從 HPE、NVIDIA、Red Hat、Lenovo、Dell 到 Schneider Electric 的官方產品敘事來看，客戶現在核准的不是功能清單，而是七種能被管理層理解的結果：速度、控制、信任、單一 accountable owner、容量延後擴建能力、事故後的 recoverability，以及持續服務可用性。把這七種語言直接放進總覽，能更快說清楚軟體部門不是支援角色，而是預算與續約的 owner。
+                    從 HPE、NVIDIA、Red Hat、Lenovo、Dell、Nutanix、NetApp 到 Schneider Electric 的官方產品敘事來看，客戶現在核准的不是功能清單，而是七種能被管理層理解的結果：速度、控制、信任、單一 accountable owner、容量延後擴建能力、事故後的 recoverability，以及持續服務可用性。尤其 Nutanix 已把 AI 講成 operating model，NetApp 也把 AI 敘事拉到 governance 與 recoverable data，這更強化了一件事：軟體部門不是支援角色，而是預算與續約的 owner。
                   </p>
                 </div>
                 <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
@@ -1242,7 +1242,7 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-600 mb-2">How software gets budget approved</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">老闆 / CFO 真正會核准的，不是功能清單，而是 6 種可被問責的結果</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    總覽如果只講功能，很容易讓軟體部門看起來像附加價值；但從 NVIDIA、HPE、Red Hat、Lenovo、Dell 與 Schneider Electric 的官方敘事來看，真正被核准的預算語言其實是：能不能更快上線、能不能少出事、能不能更好治理、以及到底誰對結果負責，外加出事後能不能恢復、設施與叢集能不能一起被管理。把這段放在前面，能更直接把軟體部門從 support unit 拉高成預算 owner。
+                    總覽如果只講功能，很容易讓軟體部門看起來像附加價值；但從 NVIDIA、HPE、Red Hat、Lenovo、Dell、Nutanix、NetApp 與 Schneider Electric 的官方敘事來看，真正被核准的預算語言其實是：能不能更快上線、能不能少出事、能不能更好治理、以及到底誰對結果負責，外加出事後能不能恢復、設施與叢集能不能一起被管理。Nutanix 把重點直接講成 AI operating model，NetApp 則把價值講成 built-in governance 與可恢復資料，這些都更直接支持「軟體部門應被當成預算 owner」而不是 support unit。
                   </p>
                 </div>
                 <div className="bg-teal-50 border border-teal-100 rounded-2xl px-4 py-3 max-w-md">
