@@ -22,6 +22,7 @@ const App = () => {
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
   const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure'))
+  const dellCyberResilienceSource = competitiveSources.dell?.find((source) => source.name.includes('Cyber Resilience'))
   const nutanixAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Nutanix Agentic AI'))
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
@@ -368,6 +369,13 @@ const App = () => {
       interpretation: '連資料與儲存基礎建設供應商都已經不是只賣效能，而是在賣治理、安全、recoverability 與可持續營運。這會讓 Foxconn 的論點更站得住：軟體部門真正值錢的，不是多做一個介面，而是把 server delivery、lifecycle control、remote ops 與 recovery evidence 串成可被採購的結果。',
       sourceLabel: netappAISource?.name || 'NetApp AI infrastructure and data management',
       source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
+    },
+    {
+      company: 'Dell Cyber Resilience for AI',
+      quote: 'secures AI and applications against data loss, corruption, and cyber threats',
+      interpretation: '這個訊號很關鍵：連 Dell 都開始把 AI recoverability 拉進正式採購語言。這幫 Foxconn 更清楚地把軟體部門定位成 AI Recovery & Evidence Assurance 的 owner——賣的是恢復 runbook、artifact / registry 保護、golden-image rollback 與 incident evidence，而不是單純 support。',
+      sourceLabel: dellCyberResilienceSource?.name || 'Dell AI Solutions – Cyber Resilience for AI',
+      source: dellCyberResilienceSource?.url || 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence',
     },
   ]
   const uniqueServiceProofCards = [
