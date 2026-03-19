@@ -25,6 +25,7 @@ const App = () => {
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
+  const procurementDisqualifierItems = softwareDifferentiation.procurementDisqualifiers?.items || []
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings?.budgetMap?.rows || []
   const segmentSpecificMotions = softwareDifferentiation.segmentSpecificServiceMotions?.motions || []
   const softwareValueChain = [
@@ -629,6 +630,42 @@ const App = () => {
                     建議閱讀順序：先看總覽抓主張，再進 CoCo 分析報告看證據鏈，最後用自建 vs 採購回答管理層反對意見。
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-rose-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">Why software is now a procurement gate, not just an add-on</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">有些案子不是少賣一點軟體而已，而是根本過不了最後採購門檻</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段刻意把軟體價值翻成更狠一點的董事會語言：很多 AI server 案子最後輸的，不是 GPU 規格，而是誰能清楚回答 deployment、upgrade、governance 與 Factory-to-Operations handoff 的責任。如果這些 owner 不存在，Foxconn 不是少賣一套軟體，而是更容易在最後一哩被視為「硬體可以、但營運風險太大」的供應商。
+                  </p>
+                </div>
+                <div className="bg-rose-50 border border-rose-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-rose-900">一句話版本：軟體部門不是加分題，很多時候它其實是避免案子在最後採購評估被刷掉的資格門檻。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {procurementDisqualifierItems.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-rose-100 bg-rose-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-rose-700 mb-2">Disqualifier {idx + 1}</p>
+                    <h4 className="text-sm font-black text-slate-900 mb-3">{item.title}</h4>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">為什麼會卡案：</span>{item.whyItKillsDeals}</p>
+                      <p><span className="font-bold text-amber-700">市場已經在檢查：</span>{item.marketProof}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該補上的 owner：</span>{item.foxconnImplication}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：如果市場現在核准的是更快上線、更少停機、更清楚治理與更完整交接，那 Foxconn 缺的不是更多 server feature，而是能把這些門檻收斂成正式 owner 的軟體部門。</p>
               </div>
             </div>
 
