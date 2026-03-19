@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { softwareDifferentiation } from './software-differentiation.js';
+import { softwareDifferentiation, financialImpactCalculator } from './software-differentiation.js';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
@@ -728,6 +728,43 @@ const SoftwareDifferentiationView = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm mt-6">
+              <h4 className="text-lg font-black text-emerald-900 mb-2">CFO / 老闆最容易看懂的 ROI 速算</h4>
+              <p className="text-sm text-slate-700 mb-4">這一塊的目的很單純：不要只說軟體會提升價值，而是直接把它翻成財務部門能快速驗算的三個公式。這會讓軟體部門更像投資案，而不是抽象策略。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                {financialImpactCalculator.calculations.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <h5 className="text-sm font-black text-emerald-800 mb-3">{item.name}</h5>
+                    <p className="text-xs text-slate-600 mb-3"><span className="font-bold text-slate-500">公式：</span>{item.formula}</p>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">客戶情境：</span>{item.example.customerScenario}</p>
+                      <p><span className="font-bold text-rose-700">沒有軟體：</span>{item.example.withoutSoftware}</p>
+                      <p><span className="font-bold text-emerald-700">有了軟體：</span>{item.example.withSoftware}</p>
+                      <p><span className="font-bold text-blue-700">可量化價值：</span>{item.example.savings}</p>
+                    </div>
+                    <div className="mt-4 p-3 bg-white rounded-xl border border-emerald-100">
+                      <p className="text-xs font-semibold text-emerald-900">會議一句話：{item.talkingPoint}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="p-5 bg-emerald-900 rounded-2xl text-white">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-200 mb-3">Quick financial summary</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="space-y-2">
+                    <p><span className="font-bold text-emerald-200">Year-1 可見價值：</span>{financialImpactCalculator.totalValueSummary.year1Value}</p>
+                    <p><span className="font-bold text-emerald-200">軟體成本：</span>{financialImpactCalculator.totalValueSummary.softwareCost}</p>
+                    <p><span className="font-bold text-emerald-200">淨收益：</span>{financialImpactCalculator.totalValueSummary.netBenefit}</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p><span className="font-bold text-emerald-200">ROI：</span>{financialImpactCalculator.totalValueSummary.roi}</p>
+                    <p><span className="font-bold text-emerald-200">回收期：</span>{financialImpactCalculator.totalValueSummary.paybackPeriod}</p>
+                    <p><span className="font-bold text-emerald-200">競爭重點：</span>{financialImpactCalculator.competitiveContext}</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="p-6 bg-blue-50 rounded-2xl border border-blue-200 mt-6">
