@@ -1040,6 +1040,14 @@ structuralAdvantages: {
 				foxconnImplication: 'Foxconn 最值得放大的，不是再做一套更大的平台，而是讓軟體部門成為 Factory-to-Operations 的責任 owner，把硬體 attach 成更高勝率的交付結果。',
 				sourceLabel: 'Dell AI Factory',
 				source: 'https://www.dell.com/en-us/ai-factory'
+			},
+			{
+				title: '沒有 AI recoverability / evidence owner，管理層會擔心 AI 出事後沒人能把服務與信任救回來',
+				whyItKillsDeals: '當模型 artifact、向量資料、registry、golden image 或推論服務發生毀損、勒索或錯誤更新時，若提案無法清楚回答「誰負責恢復、誰保留證據、誰能在 SLA 內把服務拉回來」，很多客戶就不敢把 AI 視為正式營運系統放大採購。',
+				marketProof: 'Dell 已把 Cyber Resilience for AI 放進 AI solutions 官方敘事；NetApp 也把 built-in governance、simple secure inferencing 與 cyber-resilient / recoverable data 放進 AI infrastructure and data management 的核心定位。這代表 recoverability 已經是正式採購語言，而不是事後加上的 IT 附屬需求。',
+				foxconnImplication: 'Foxconn 應把軟體部門講成 AI Recovery & Evidence Assurance owner：把 artifact / registry 保護、向量資料恢復、golden image rollback、演練 runbook 與 incident evidence 做成正式服務，讓管理層買到的是「AI 出事時誰能把營運與信任一起救回來」。',
+				sourceLabel: 'Dell AI Solutions + NetApp AI infrastructure and data management',
+				source: 'https://www.netapp.com/artificial-intelligence/'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：AI 基礎設施最後輸贏，常常不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼治理、交機後誰接手」；這四題的 owner，就是軟體部門。'
