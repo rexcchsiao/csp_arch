@@ -208,6 +208,32 @@ const App = () => {
       doInstead: '讓軟體部門直接背 software attachment rate、handoff time、remote resolution coverage、upgrade governance adoption 與 renewal signals。',
     },
   ]
+  const softwareFlywheelCards = [
+    {
+      title: 'Factory evidence loop',
+      whyItStartsWithSoftware: 'HPE 已把 pre-configured validated platform、deploy AI in days, not months 與 full stack visibility 放進同一條採購語言。這代表客戶買的不只是交機，而是第一天就有 baseline、驗收證據與可接手營運的起點。',
+      foxconnAngle: 'Foxconn 最值得強調的，不是「我們也能裝軟體」，而是軟體部門能把工廠預載、burn-in、site acceptance、baseline 與 runbook 串成可重複驗證的交付閉環。',
+      boardWhyItMatters: '這會把硬體出貨從一次性交付，升級成更容易 attach 的 Deployment Assurance。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      title: 'Field telemetry loop',
+      whyItStartsWithSoftware: 'NVIDIA Mission Control 已把 cluster life cycle、autonomous recovery、building management integration 與 power / cooling control 拉進 AI factory operations。這代表市場認可的價值，已經是持續營運資料如何反過來改善升級與故障處理，而不是只看第一次部署。',
+      foxconnAngle: 'Foxconn 可把軟體部門定位成把 field telemetry、upgrade history、remote resolution 與 facility event 綁成同一套 lifecycle learning loop 的 owner。',
+      boardWhyItMatters: '這會讓軟體價值從「看得到告警」升級成「每一次事件都會讓下次升級與恢復更可控」。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      title: 'Renewal evidence loop',
+      whyItStartsWithSoftware: 'NetApp 已把 built-in governance、simple secure inferencing 與 cyber-resilient / recoverable data 放進 AI infrastructure 敘事。這是一個很關鍵的市場訊號：客戶每年續約買的，往往不是介面本身，而是可治理、可恢復、可對稽核交代的證據。',
+      foxconnAngle: 'Foxconn 應把軟體部門講成 evidence owner：把 baseline refresh、recovery runbook、incident evidence 與治理報表做成續約理由，而不是只留在 support 紀錄。',
+      boardWhyItMatters: '這能把 Day-2 工作沉澱成明年還會繼續付錢的 Renewal Evidence。',
+      sourceLabel: netappAISource?.name || 'NetApp AI infrastructure and data management',
+      source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
+    },
+  ]
   const officialMarketSignals = [
     {
       company: 'NVIDIA Mission Control',
@@ -920,6 +946,39 @@ const App = () => {
             </div>
 
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 mb-2">Why software value compounds over time</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">軟體部門真正會越做越值錢，不是因為功能變多，而是因為它能把 factory → field → renewal 變成同一個證據閉環</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這一段特別重要，因為它把軟體部門的價值從「一次性幫忙上線」往上拉成「每一次交付、每一次事件、每一次恢復都會累積下一次更高勝率與更高續約率」。外部領先供應商已經在賣 validated deployment、AI factory operations、governance 與 recoverability；Foxconn 最值得講清楚的，是軟體部門如何把這些訊號串成自己的 learning loop，而不是每張訂單都重新來過。
+                  </p>
+                </div>
+                <div className="bg-indigo-50 border border-indigo-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-indigo-900">一句話版本：硬體部門把設備交出去；軟體部門把每次交付、故障與恢復都變成下一次更快上線、更敢續約的證據資產。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                {softwareFlywheelCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">市場訊號：</span>{item.whyItStartsWithSoftware}</p>
+                      <p><span className="font-bold text-indigo-700">Foxconn 該怎麼主張：</span>{item.foxconnAngle}</p>
+                      <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mb-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：如果軟體部門能把交付證據、現場遙測、升級歷史與恢復證據收斂成同一條 learning loop，它就不只是 support function，而是讓 attach rate、續約率與 RFQ 信任一起變厚的資產 owner。</p>
+              </div>
+
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 mb-2">Why the software department is not a support team</p>
