@@ -449,6 +449,65 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-2">Software department mandate</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">先把軟體部門的 mandate 講清楚，老闆才知道自己批准的不是「多一點研發」，而是新的價值控制層</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    很多提案會把軟體價值講成一堆功能，結果董事會最後只記得「好像要再多投一個團隊」。這裡故意先把 mandate 說白：軟體部門真正被授權的，是把 deployment、change risk、shared capacity governance 與 Day-2 accountability 收斂成正式 attach bundle 與續約服務。這樣老闆看到的就不是成本中心，而是新的報價、交付與續約控制點。
+                  </p>
+                </div>
+                <div className="bg-fuchsia-50 border border-fuchsia-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-fuchsia-900">一句話版本：軟體部門最該被批准的，不是做更多功能，而是正式成為 Deployment、Lifecycle、Governance 與 Day-2 risk ownership 的 owner。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+                <div className="p-5 rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-fuchsia-700 mb-2">Mandate #1</p>
+                  <p className="text-sm font-black text-slate-900 mb-3">Own the deployment handoff</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">把 factory pre-load、site acceptance、baseline、runbook 與初始 observability 接成正式交付責任，讓硬體交機直接連到 time-to-revenue，而不是停在可安裝狀態。</p>
+                </div>
+                <div className="p-5 rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-fuchsia-700 mb-2">Mandate #2</p>
+                  <p className="text-sm font-black text-slate-900 mb-3">Own change-window accountability</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">把 driver / firmware / CUDA / K8s 升級風險產品化，讓 maintenance window、rollback discipline 與 upgrade evidence 變成能正式報價與續約的年約服務。</p>
+                </div>
+                <div className="p-5 rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-fuchsia-700 mb-2">Mandate #3</p>
+                  <p className="text-sm font-black text-slate-900 mb-3">Own shared-capacity governance</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">把 quota、priority、showback / chargeback、approval workflow 與 SLA guardrails 做成治理層，而不是讓共享 GPU 叢集最後又退回人工協調。</p>
+                </div>
+                <div className="p-5 rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70">
+                  <p className="text-xs font-black uppercase tracking-wider text-fuchsia-700 mb-2">Mandate #4</p>
+                  <p className="text-sm font-black text-slate-900 mb-3">Own Day-2 risk transfer</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">把 Remote Ops、air-gap content lifecycle、facility-aware governance 與 recovery evidence 收斂成單一 owner，讓客戶買到的是責任轉移，不是 another dashboard。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50/90">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 mb-3">What the board should measure</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-slate-900">1. Software attachment rate：</span>有多少 AI server 訂單已把 deployment / lifecycle / remote-ops bundle 一起賣出去。</p>
+                    <p><span className="font-bold text-slate-900">2. Factory-to-Operations handoff time：</span>交機後多久進入可營運 baseline，而不是還卡在灰色交接帶。</p>
+                    <p><span className="font-bold text-slate-900">3. Remote resolution coverage：</span>有多少高頻事件已不必派人到現場就能被接住。</p>
+                    <p><span className="font-bold text-slate-900">4. Governance adoption：</span>客戶是否已把升級治理、共享容量規則與 air-gap lifecycle 正式交給 Foxconn。</p>
+                  </div>
+                </div>
+                <div className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/80">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-3">What should travel with every proposal</p>
+                  <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    <p><span className="font-bold text-emerald-800">Core attach：</span>Deployment Assurance（factory pre-load、baseline、site acceptance、runbook）</p>
+                    <p><span className="font-bold text-emerald-800">Core attach：</span>Lifecycle Control Tower（version matrix、maintenance window、rollback、upgrade evidence）</p>
+                    <p><span className="font-bold text-emerald-800">Default upsell：</span>Service Availability / Remote Ops（health review、predictive monitoring、remote resolution coverage）</p>
+                    <p><span className="font-bold text-emerald-800">Conditional attach：</span>Brownfield、air-gap、capacity assurance、tenant governance 視客戶場景疊加</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 mb-2">Board decision</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">把「軟體很重要」翻成今天就能拍板的 4 個決策</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
