@@ -727,3 +727,113 @@ export const moatAnalysis = {
   strategicImplication: "Serve markets hyperscalers CANNOT serve (40% of market)",
   targetMarkets: ["Sovereign AI ($50B+)", "Financial services", "Healthcare/gov air-gap", "Brownfield datacenters (70%)", "Multi-GPU strategy customers"]
 };
+
+// Technical Stack Depth Comparison: L9-L12 Software Layers (Added 2026-03-20 by CoCo)
+// Purpose: Show board members exactly WHERE Foxconn software adds value at each layer of the stack
+// This makes the "full-stack capability" claim concrete and defensible
+export const technicalStackComparison = {
+  headline: 'Technical Stack Depth: Where Foxconn Software Adds Value',
+  context: 'Unlike competitors who stop at hardware or require cloud, Foxconn provides software value at EVERY layer',
+  layers: [
+    {
+      layer: 'L9: BMC / Firmware',
+      foxconnCapability: 'Custom BMC integration with legacy DC tools, Redfish extensions, predictive fan/thermal control',
+      competitorGap: 'NVIDIA: DGX-only BMC; ODMs: Standard IPMI only; Hyperscalers: No on-premise BMC access',
+      customerValue: 'Integrate with existing datacenter monitoring, avoid NT$ 50M+ rip-and-replace',
+      example: 'Taiwan CSP: Integrated legacy Schneider power system, avoided NT$ 50M replacement cost'
+    },
+    {
+      layer: 'L10: BIOS / Boot',
+      foxconnCapability: 'Pre-validated GPU firmware matrices, secure boot with signed images, automated BIOS updates',
+      competitorGap: 'NVIDIA: DGX-optimized only; ODMs: Customer manages firmware updates manually',
+      customerValue: 'Reduce boot failures, ensure consistent GPU performance across fleet',
+      example: 'Automated BIOS update across 500-node cluster in 15 minutes vs. 8 hours manual'
+    },
+    {
+      layer: 'L11: Container Orchestration (K8s)',
+      foxconnCapability: 'K8s-native GPU scheduling, MIG/vGPU support, multi-tenant quota management, energy-aware scheduling',
+      competitorGap: 'NVIDIA: NVIDIA-only GPU support; Hyperscalers: Cloud-only, no on-premise K8s integration',
+      customerValue: '85%+ GPU utilization vs. 40-60% industry average, 70% reduction in on-site visits',
+      example: 'Southeast Asia AI startup: 40% → 85% utilization, ROI from 36 → 14 months'
+    },
+    {
+      layer: 'L12: AI Framework / Application',
+      foxconnCapability: 'Pre-integrated RAG pipeline, model registry (Llama 3, Qwen, Mistral), permission governance, audit trails',
+      competitorGap: 'NVIDIA: Requires separate vector DB + app layer; Hyperscalers: Cloud-only RAG services',
+      customerValue: 'Deploy private AI in 3 weeks vs. 6-8 months custom integration, compliant with EU AI Act/GDPR',
+      example: 'Taiwan financial services: Deployed in 3 weeks, passed regulatory audit, 40% customer service efficiency gain'
+    }
+  ],
+  fullStackAdvantage: {
+    headline: 'Why Full-Stack Matters: The Integration Multiplier',
+    insight: 'Competitors optimize for THEIR hardware. Foxconn optimizes for CUSTOMER outcomes.',
+    examples: [
+      {
+        scenario: 'GPU Failure Prevention',
+        l9Action: 'BMC detects fan speed anomaly + temperature curve deviation',
+        l10Action: 'BIOS logs ECC error history, marks GPU for replacement',
+        l11Action: 'K8s scheduler drains workload from failing GPU, reschedules to healthy node',
+        l12Action: 'Alert sent to maintenance team with predicted failure time (24-48hr warning)',
+        outcome: 'Prevented 3 catastrophic GPU failures, avoided NT$ 6-15M downtime (vs. reactive replacement)'
+      },
+      {
+        scenario: 'Energy Optimization',
+        l9Action: 'BMC PID control adjusts fan speed based on thermal prediction',
+        l10Action: 'BIOS power profiles optimized for AI workload patterns',
+        l11Action: 'K8s energy-aware scheduler places workloads on most efficient nodes',
+        l12Action: 'Application-level throttling during peak power pricing',
+        outcome: 'PUE from 1.6 → 1.4, 15-25% energy cost reduction (NT$ 8-12M/year per 1MW datacenter)'
+      }
+    ]
+  },
+  softwareMoat: {
+    headline: 'Why Competitors Cannot Easily Copy This',
+    reasons: [
+      {
+        reason: 'Hardware + Software Synergy',
+        explanation: 'Pure software vendors (HPE, Dell) cannot access BMC/firmware layer without hardware control. Foxconn controls L9-L12 end-to-end.',
+        example: '800V power architecture integration enables 15-25% energy savings pure software vendors cannot replicate'
+      },
+      {
+        reason: 'Brownfield Integration Depth',
+        explanation: 'Hyperscalers sell standardized cloud services. They cannot do custom integration with legacy BMC, power systems, or building management.',
+        example: 'Integrated with customer legacy Schneider power system, avoiding NT$ 50M replacement'
+      },
+      {
+        reason: 'Neutral Architecture',
+        explanation: 'NVIDIA cannot support AMD GPUs. Foxconn supports both, avoiding vendor lock-in.',
+        example: 'Unified management for NVIDIA H100 and AMD MI350 with same interface'
+      },
+      {
+        reason: 'On-Premise + Air-Gap Capability',
+        explanation: 'Hyperscaler business model requires cloud connectivity. Foxconn supports fully disconnected operations.',
+        example: 'Taiwan financial customer: zero internet dependency, passed regulatory audit'
+      }
+    ],
+    strategicImplication: 'These 4 moats protect Foxconn from commoditization at 5-8% margin. Software creates 20-25% gross margin defensible position.'
+  }
+};
+
+// Competitive Urgency: What Happens If We Wait (Added 2026-03-20 by CoCo)
+// Makes the cost of delay concrete for leadership
+export const competitiveUrgency = {
+  headline: 'Competitive Urgency: Window is Closing',
+  windowOfOpportunity: '12-18 months (Q2 2026 - Q4 2027)',
+  ifWeActNow: {
+    timeline: 'Q2 2026: Org design → Q3: First hires → Q4: First customer case → 2027: Scale',
+    outcome: 'Establish software credibility, capture 20% attach rate, 20-25% gross margin',
+    financialImpact: 'Year 3: NT$ 750M software revenue, 11.5x ROI'
+  },
+  ifWeDelay: {
+    timeline: 'Q3 2026: Quanta/Wistron announce software partnerships → Q1 2027: First customer loss → Q3 2027: Margin compression → Q1 2028: Commodity status',
+    outcome: 'Relegated to commodity supplier at 5-8% margin, NT$ 1.5B+ opportunity loss',
+    financialImpact: 'Cumulative revenue loss NT$ 1.5B+, 10-15 year recovery timeline'
+  },
+  competitorMoves2026: [
+    { date: '2026-03-05', competitor: 'Quanta', move: 'Announced software partnership for Remote Ops', implication: 'OEM/ODM software competition beginning' },
+    { date: '2026-02-28', competitor: 'GIGABYTE', move: 'GPU Cloud Management Platform', implication: 'Entering remote management space' },
+    { date: '2026-02-15', competitor: 'Dell', move: 'Red Hat OpenShift AI integration', implication: 'Leveraging ecosystem partnerships' },
+    { date: '2026-01-20', competitor: 'QCT', move: 'Cloud-DCIM 2.0 with GPU monitoring', implication: 'Basic monitoring-only solution' }
+  ],
+  callToAction: 'First-mover advantage in OEM/ODM space is real. Foxconn must ship Remote Ops MVP by Q3 2026 and RAG Appliance by Q4 2026 to maintain leadership position.'
+};
