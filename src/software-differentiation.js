@@ -733,6 +733,29 @@ structuralAdvantages: {
       mitigation: '建立跨平台 (CUDA + ROCm) 能力，保持技術中立性與供應鏈韌性',
     },
   ],
+  softwareDepartmentMandateSummary: {
+    headline: '為什麼這一定要是「軟體部門」而不是硬體附屬功能？',
+    coreInsight: '如果軟體能力仍被包在硬體附屬價值裡，Foxconn 最容易失去的不是幾個功能，而是 attach rate、年約邏輯，以及進入 SRE / Platform / Compliance / FinOps 預算對話的資格。這也是為什麼管理層需要用獨立 mandate 來看待軟體部門。',
+    cards: [
+      {
+        title: '買方不同',
+        detail: '硬體主要對接採購、機房建置與規格驗收；軟體部門真正對接的是 Platform Engineering、SRE、Operations、FinOps、Compliance 與資料中心營運團隊。',
+        boardWhyItMatters: '若沒有獨立部門定位，Foxconn 很容易只停留在設備供應商角色，進不了真正會持續編列 Day-2 預算的決策桌。',
+      },
+      {
+        title: '收入節奏不同',
+        detail: '硬體收入偏向一次性交機；軟體部門承接的是 deployment assurance、lifecycle governance、remote ops、baseline refresh 與 air-gap content lifecycle 這種天然適合年約續費的工作。',
+        boardWhyItMatters: '若仍沿用硬體思維管理，這些最容易形成高毛利續約的能力，就會被稀釋成「附送支援」。',
+      },
+      {
+        title: 'KPI 不同',
+        detail: '硬體成功看出貨、BOM、良率；軟體成功應看 software attachment rate、Factory-to-Operations handoff time、remote resolution coverage、upgrade governance adoption 與 renewal signals。',
+        boardWhyItMatters: '只有把 KPI 分開，管理層才看得見軟體部門到底有沒有真的在放大硬體價值，而不是只看到功能愈做愈多。',
+      },
+    ],
+    boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。',
+  },
+
   // Strategic ask - what we need from leadership
   strategicAsk: {
     headline: '對公司管理層的戰略要求',

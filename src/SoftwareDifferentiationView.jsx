@@ -775,6 +775,23 @@ const SoftwareDifferentiationView = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">戰略要求</h3>
 
+            <div className="p-6 bg-gradient-to-r from-violet-50 to-indigo-50 rounded-2xl border border-violet-200 shadow-sm">
+              <h4 className="text-lg font-black text-violet-900 mb-2">{softwareDifferentiation.softwareDepartmentMandateSummary.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.softwareDepartmentMandateSummary.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.softwareDepartmentMandateSummary.cards.map((item, idx) => (
+                  <div key={idx} className="p-4 bg-white rounded-xl border border-violet-100">
+                    <p className="text-xs font-black text-violet-800 mb-2">{item.title}</p>
+                    <p className="text-xs text-slate-700 mb-3">{item.detail}</p>
+                    <p className="text-xs font-medium text-violet-700">{item.boardWhyItMatters}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-violet-100">
+                <p className="text-sm font-semibold text-violet-900">{softwareDifferentiation.softwareDepartmentMandateSummary.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl border border-amber-200 shadow-sm">
               <h4 className="text-lg font-black text-amber-900 mb-2">給管理層的 30 秒決策卡</h4>
               <p className="text-sm text-slate-700 mb-4">這一塊不是再加資訊量，而是把整份論述濃縮成老闆在會議上真的講得出口的版本：問題、解法、結果、風險、以及最後要拍板的投資要求。</p>
