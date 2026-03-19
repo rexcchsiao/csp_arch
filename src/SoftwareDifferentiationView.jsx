@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { softwareDifferentiation, financialImpactCalculator } from './software-differentiation.js';
+import { leadershipDecisionMatrix } from './leadership-decision-matrix';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
@@ -854,6 +855,51 @@ const SoftwareDifferentiationView = () => {
                 <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
                   <p className="text-xs font-black text-emerald-800 mb-2">現在要拍板什麼</p>
                   <p className="text-xs text-slate-700">{softwareDifferentiation.leadershipQuickRef.ask}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <h4 className="text-lg font-black text-slate-900 mb-2">把「軟體很重要」翻成董事會真的會拍板的比較表</h4>
+              <p className="text-sm text-slate-700 mb-4">很多簡報最後停在「軟體值得投資」，但管理層其實更想知道：如果投、不投，各自會換到什麼結果。這個 decision matrix 讓軟體部門看起來更像正式投資案，而不是抽象願景。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {leadershipDecisionMatrix.decisionCriteria.slice(0, 4).map((criteria, idx) => (
+                  <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h5 className="text-sm font-black text-slate-900 mb-2">{criteria.criterion}</h5>
+                    <p className="text-xs text-slate-500 mb-3">{criteria.question}</p>
+                    <div className="space-y-3">
+                      <div className="p-3 bg-rose-50 rounded-xl border border-rose-100">
+                        <p className="text-xs font-black text-rose-700 mb-1">{criteria.option1.name}</p>
+                        <p className="text-xs text-slate-700">{criteria.option1.outcome}</p>
+                        {criteria.option1.risk && <p className="text-xs text-rose-600 mt-2">風險：{criteria.option1.risk}</p>}
+                      </div>
+                      <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+                        <p className="text-xs font-black text-emerald-700 mb-1">{criteria.option2.name}</p>
+                        <p className="text-xs text-slate-700">{criteria.option2.outcome}</p>
+                        {criteria.option2.upside && <p className="text-xs text-emerald-600 mt-2">上行：{criteria.option2.upside}</p>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-xs font-black text-emerald-800 mb-2">投資軟體的整體判斷</p>
+                  <p className="text-sm font-semibold text-emerald-900">{leadershipDecisionMatrix.riskReward.invest.netAssessment}</p>
+                  <ul className="mt-3 space-y-2 text-xs text-slate-700">
+                    {leadershipDecisionMatrix.riskReward.invest.upside.slice(0, 3).map((item, idx) => (
+                      <li key={idx}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                  <p className="text-xs font-black text-rose-800 mb-2">不投資的整體判斷</p>
+                  <p className="text-sm font-semibold text-rose-900">{leadershipDecisionMatrix.riskReward.notInvest.netAssessment}</p>
+                  <ul className="mt-3 space-y-2 text-xs text-slate-700">
+                    {leadershipDecisionMatrix.riskReward.notInvest.downside.slice(0, 3).map((item, idx) => (
+                      <li key={idx}>• {item}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
