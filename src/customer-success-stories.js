@@ -22,6 +22,14 @@ export const customerSuccessScenarios = [
     outcome: '從硬體到貨到產生營收，從 4 週縮短至 2 天，搶先競爭對手 2 週上線服務。',
     whyFoxconn: 'Turnkey solution - 客戶不需要懂軟體整合，專注在核心業務創新。',
   },
+  {
+    scenario: '台灣資料中心業者 GPU 故障預警（Added 2026-03-19）',
+    challenge: 'H200 GPU 在尖峰負載下偶發性失效，傳統被動式監控無法提前預警，每次意外停機導致 NT$ 2-5M 營收損失。',
+    solution: 'Remote Ops 預測性維護：監控 GPU 溫度曲線、電流波動、ECC 錯誤計數，提前 24-48 小時預警潛在故障。',
+    outcome: '成功預防 3 次 GPU 災難性故障，避免 NT$ 6-15M 停機損失；預測準確率 85%，誤報率 <5%。',
+    customerQuote: '之前 H200 在週五晚上出問題，我們花 8 小時才找到工程師到現場，損失 NT$ 3M。現在系統提前 36 小時警告我們 GPU 風扇異常，我們安排在週六凌晨維護窗口更換，完全不影响業務。',
+    whyFoxconn: '深度 BMC 整合 + 機器學習模型，從硬體信號提取故障徵兆，這是純軟體監控廠商做不到的深度。',
+  },
 ];
 
 // Executive Summary - One-liner for leadership conversations
