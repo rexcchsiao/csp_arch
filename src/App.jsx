@@ -370,6 +370,35 @@ const App = () => {
       source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
     },
   ]
+  const uniqueServiceProofCards = [
+    {
+      title: 'Deployment Assurance',
+      unsolvedPain: '客戶真正怕的不是機器不到，而是交機後還要再花數週把 baseline、驗收、權限與 runbook 拼起來。',
+      uniqueService: 'Factory-to-Operations Handoff Assurance：把工廠預載、site acceptance、baseline 與 Day-2 handoff 包成單一責任鏈。',
+      whyFoxconn: '只有同時碰得到製造、韌體、交機與現場驗收的團隊，才有資格把這段灰色地帶收斂成可收費服務。',
+      boardWhyItMatters: '這不是附加安裝服務，而是把硬體交機直接翻成 time-to-revenue。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      title: 'Lifecycle Assurance',
+      unsolvedPain: '客戶通常缺的不是會寫平台的人，而是願意對升級窗口、rollback 與 SLA 失約風險負責的人。',
+      uniqueService: 'Lifecycle Control Tower：版本矩陣、canary、rollback、maintenance window 與 upgrade evidence。',
+      whyFoxconn: 'Foxconn 最有機會把 server、firmware、driver、cluster lifecycle 與值班流程接成單一 accountable owner。',
+      boardWhyItMatters: '最容易形成高毛利續約的，不是 Day-0 安裝，而是之後每一次安全升級。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      title: 'Facility / Sovereign Assurance',
+      unsolvedPain: '真正在 brownfield / air-gap 機房裡卡住的，常常是 power / cooling 事件、離線內容生命週期與跨團隊治理責任。',
+      uniqueService: 'Capacity Assurance + Air-Gap Content Lifecycle：把設施訊號、斷網更新、稽核證據與 Day-2 runbook 做成持續服務。',
+      whyFoxconn: '這種價值需要同時理解伺服器、機房、斷網治理與長期維運，不是單一平台 vendor 靠 dashboard 就能補齊。',
+      boardWhyItMatters: '這會把軟體部門直接連到容量延後擴建、主權 AI 預算與年度治理收入。',
+      sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+  ]
   const softwareDepartmentBoundaryCards = [
     {
       title: 'Monitoring parity is not a moat',
@@ -465,6 +494,42 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Software KPI shift</p>
                   <p className="text-sm font-bold">董事會該追的不只是出貨，而是 attach rate、handoff time、upgrade governance adoption 與續約訊號</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 mb-2">Why the software department owns the hardest-to-replace services</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">最值得先講清楚的，不是功能多完整，而是哪 3 類未解痛點只有軟體部門最適合接</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段刻意放在前面，是因為老闆最常卡住的其實不是「軟體重不重要」，而是「到底哪些價值一定要由軟體部門來承接」。如果能先把未解痛點、可賣的獨特服務、以及為什麼只有 Foxconn 最站得住一次講清楚，後面的競品比較、投資請求與 KPI 才不會像在替功能找理由，而會更像在替新的收入控制層建立 mandate。
+                  </p>
+                </div>
+                <div className="bg-indigo-50 border border-indigo-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-indigo-900">一句話版本：軟體部門最值錢的，不是 another dashboard，而是把別人不想長期背責的 deployment、upgrade 與 facility / sovereign 風險接成正式服務。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                {uniqueServiceProofCards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">還沒被好好解的痛點：</span>{item.unsolvedPain}</p>
+                      <p><span className="font-bold text-indigo-700">Foxconn 應該賣的獨特服務：</span>{item.uniqueService}</p>
+                      <p><span className="font-bold text-cyan-700">為什麼偏偏是 Foxconn：</span>{item.whyFoxconn}</p>
+                      <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該先記住的一句話：真正讓軟體部門值得獨立投資的，不是功能表，而是它能把最容易卡住採購、也最容易形成續約的責任邊界，收斂成 Foxconn 自己的服務目錄。</p>
               </div>
             </div>
 
