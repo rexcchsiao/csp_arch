@@ -397,9 +397,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         foxconnPlay: 'Foxconn 應把 Facility-Aware Capacity Assurance 往上講成 capacity deferral service：把 BMC 遙測、排程策略、power cap、cooling event 與 maintenance workflow 串起來，賣的是更慢的擴建節奏、更少的意外降載、以及更可預測的容量使用。這會讓軟體部門不只影響 uptime，也直接影響 CAPEX 節奏。',
         sourceLabel: 'NVIDIA Mission Control',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Operating Model Economics',
+        marketSignal: 'Nutanix Agentic AI 官方直接把產品定位成 a full-stack software solution，提供 cloud operating model 來 build, operate and govern AI factories，並明講 optimize GPU utilization and token costs。這代表市場已把 AI 軟體價值往「誰能長期經營 AI factory 的經濟性」推進，而不是只看部署完成。',
+        buyerQuestion: '上線之後，誰來持續控制 GPU 利用率、token 成本、資源放置與多團隊共享秩序，而不是讓平台團隊自己長期補洞？',
+        foxconnPlay: 'Foxconn 應把軟體部門講成 AI operating model 的 owner：用 Tenant Governance、topology-aware placement、showback / chargeback 與 Lifecycle Control Tower，把 shared GPU economics 與 Day-2 營運責任一起收斂成可報價、可續約的服務。這會讓軟體部門更像收入與毛利的控制層，而不是附屬工具團隊。',
+        sourceLabel: 'Nutanix Agentic AI',
+        source: 'https://www.nutanix.com/solutions/ai'
       }
     ],
-    boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、以及有人願意對 Day-2 結果負責；這三件事正好都屬於軟體部門。'
+    boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、可延後擴建，以及有人能持續把 GPU economics 與 Day-2 結果一起管好；這些都屬於軟體部門。'
   },
   // Messaging for leadership
   executiveSummary: {

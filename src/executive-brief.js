@@ -388,6 +388,46 @@ export const investmentThesisIn5Points = {
 
 };
 
+// Ideal Pilot Customer Profile - Who Should Be Our First Benchmark? (Added 2026-03-19 by CoCo)
+// Purpose: Make the "first customer" concrete for leadership - not just "a CSP" but a specific profile
+export const idealPilotCustomer = {
+  headline: "Ideal First Customer Profile: Who We Target for Q3 2026 Pilot",
+  criteria: [
+    {
+      criterion: "Existing Foxconn Hardware Customer",
+      rationale: "Already trust Foxconn hardware quality; software is an upsell, not a green-field sale",
+      example: "Tier-2 CSP with 500-2000 GPU deployment, already using Foxconn H200 servers"
+    },
+    {
+      criterion: "Pain Point: High GPU Idle Time (>40%)",
+      rationale: "Clear ROI story: utilization improvement from 40% → 85% pays for software in 6-9 months",
+      example: "AI research lab or enterprise AI platform with bursty workload patterns"
+    },
+    {
+      criterion: "Multi-Site Operations (2+ datacenters)",
+      rationale: "Remote Ops value proposition only makes sense if they have distributed infrastructure",
+      example: "CSP with servers in Taipei + Kaohsiung, or Taiwan + Singapore"
+    },
+    {
+      criterion: "Compliance Constraints (Sovereign AI Candidate)",
+      rationale: "Cannot use hyperscaler cloud due to data residency; must deploy on-premise",
+      example: "Financial services, healthcare, government-adjacent workload"
+    },
+    {
+      criterion: "Decision Maker Pain: Recruitment + Retention",
+      rationale: "CTO/CIO struggling to recruit AI infrastructure team; Foxconn software = force multiplier",
+      example: "Traditional enterprise transitioning to AI, lacks in-house K8s/BMC expertise"
+    }
+  ],
+  disqualifiers: [
+    "Hyperscale customers (10,000+ GPUs) - too complex for first pilot",
+    "Pure cloud-native companies (already using AWS/Azure exclusively)",
+    "Customers demanding 100% custom development (not productizable)"
+  ],
+  valueProposition: "For this customer, Foxconn Remote Ops + RAG Appliance delivers: (1) 40% → 85% GPU utilization improvement, (2) 2-week → 2-hour deployment, (3) 70% reduction in on-site visits, (4) Compliance with data residency requirements. Total value: NT$ 20-50M/year in operational savings + revenue acceleration.",
+  pricing: "Pilot pricing: NT$ 5-10M first year (discounted from NT$ 15M list) in exchange for case study rights and quarterly feedback sessions."
+};
+
 // Board Decision Card - What Leadership Needs to Approve Today (Added 2026-03-19 by CoCo)
 export const boardDecisionCard = {
   headline: '今日董事會決策事項',
