@@ -132,6 +132,16 @@ export const competitiveSources = {
       limitation: 'The messaging is broad and ecosystem-led; it does not clearly own the brownfield Day-2 operating layer, lifecycle governance, or air-gapped service discipline.',
       ourAdvantage: 'Foxconn can use this as market validation, then differentiate lower in the stack: L9-L12 deployment assurance, lifecycle governance, remote ops, and brownfield integration as accountable services.'
     },
+    {
+      name: 'Nutanix Agentic AI',
+      url: 'https://www.nutanix.com/solutions/ai',
+      description: 'Nutanix official AI positioning around a cloud operating model for AI factories',
+      relevance: 'Useful proof that infrastructure software vendors are now selling AI around operating model, governance, GPU utilization, token economics, and secure enterprise control—not raw hardware alone',
+      lastVerified: '2026-03-19',
+      keyFeature: 'Nutanix describes Agentic AI as a full-stack software solution for AI factories that simplifies operations, governs AI environments, optimizes GPU utilization and token costs, and provides enterprise-grade control.',
+      limitation: 'The value proposition is software-led but still depends on Nutanix platform choices and does not clearly own factory-to-operations handoff, brownfield fleet baselines, or heterogeneous firmware lifecycle governance.',
+      ourAdvantage: 'Foxconn can use this as market proof that buyers now fund AI operating models and governance; then differentiate by connecting those software outcomes directly to server delivery, mixed-vendor fleet operations, and Day-2 accountability.'
+    },
     { name: 'Red Hat OpenShift AI (Disconnected Environments)', url: 'https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/latest/html/installing_and_uninstalling_openshift_ai_self-managed_in_a_disconnected_environment/index', description: 'Official documentation for deploying and operating OpenShift AI Self-Managed in disconnected environments', relevance: 'Validates that disconnected / air-gapped AI environments are a real enterprise operating requirement, not a niche edge case', lastVerified: '2026-03-17', keyFeature: 'Dedicated install and lifecycle documentation for disconnected environments', limitation: 'Disconnected deployment still requires customers to manage mirrored content, update discipline, and ongoing software lifecycle in offline environments', ourAdvantage: 'Foxconn can turn this operational burden into a productized service: offline content sync, upgrade governance, rollback, and field delivery for sovereign AI customers.' }
   ],
   // Standards & Regulations

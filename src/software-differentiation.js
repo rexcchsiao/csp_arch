@@ -352,6 +352,13 @@ structuralAdvantages: {
         source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
       },
       {
+        company: 'Nutanix Agentic AI',
+        proof: 'Nutanix 官方直接把 AI factory 的價值寫成 cloud operating model，並強調 simplify operations、govern AI factories、optimize GPU utilization and token costs、enterprise-grade security and control。',
+        takeaway: '這代表連基礎設施軟體供應商都不再只賣平台，而是在賣 AI 的 operating model、治理能力與成本控制。Foxconn 若把軟體部門定位成 server delivery、fleet governance、remote ops 與 Day-2 accountability 的 owner，就更容易說清楚為什麼軟體不是附加品，而是把 AI 工廠真正運轉起來的核心。',
+        sourceLabel: 'Nutanix Agentic AI',
+        source: 'https://www.nutanix.com/solutions/ai'
+      },
+      {
         company: 'NetApp AI infrastructure and data management',
         proof: 'NetApp 官方已把 AI 方案寫成 AI factory 的資料基礎，強調 unified foundation、built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
         takeaway: '這是另一個很強的市場訊號：連儲存與資料基礎建設供應商都不再只賣效能，而是在賣可治理、可恢復、可安全營運的 AI 結果。Foxconn 若把軟體部門定位成 server delivery、lifecycle control、remote ops 與 recovery evidence 的 owner，就更能說清楚「沒有軟體，硬體價值無法被完整放大」。',
@@ -1016,6 +1023,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 應把軟體部門定位成 facility-to-cluster 的翻譯層：把 BMC、scheduler、power cap、cooling event、maintenance workflow 與 SLA 報表做成 Capacity Assurance / Power-Cooling Governance 服務，去對接資料中心營運與設施預算，而不是只停在 server monitoring。',
 				sourceLabel: 'Schneider Electric AI Data Center Solutions',
 				source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
+			},
+			{
+				company: 'Nutanix Agentic AI',
+				proof: 'Nutanix 官方直接把 Agentic AI 定位成 a full-stack software solution，主張用 cloud operating model 來 help organizations build, operate and govern AI factories，並把 GPU utilization、token costs、enterprise control 放進同一套敘事。',
+				buyerTranslation: '這代表管理層現在核准的，不只是 AI infrastructure 能不能裝起來，而是能不能以更低的 token 成本、更高的 GPU 利用率與更清楚的治理邊界長期營運。連基礎設施軟體供應商都在賣 operating model，本身就證明軟體價值已經被正式預算化。',
+				foxconnPlay: 'Foxconn 可以把這個市場語言往下延伸到自己最有優勢的地方：不是跟 Nutanix 比 another platform，而是把 server delivery、brownfield fleet baseline、remote ops、lifecycle governance 與 tenant guardrails 包成 AI operating model 的實體交付層。這樣軟體部門賣的就是可被問責的營運模式，而不是附屬工具。',
+				sourceLabel: 'Nutanix Agentic AI',
+				source: 'https://www.nutanix.com/solutions/ai'
 			},
 			{
 				company: 'NetApp AI infrastructure and data management',
