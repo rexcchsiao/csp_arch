@@ -1172,9 +1172,25 @@ structuralAdvantages: {
 				foxconnTranslation: '把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 Factory-to-Operations baseline 串成 Service Availability Assurance：賣的是更少中斷、更快恢復與更穩定的 AI 服務，而不是監控畫面本身。',
 				sourceLabel: 'HPE Private Cloud AI',
 				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				label: 'AI Operating Model',
+				marketSignal: 'Nutanix 官方把 Agentic AI 直接講成 full-stack software solution，並用 cloud operating model、govern AI factories、optimize GPU utilization and token costs、enterprise-grade security and control 來賣。',
+				buyerQuestion: '客戶真正核准的是不是一套長期可經營、可治理、可控制成本的 AI operating model，而不只是把叢集裝起來？',
+				foxconnTranslation: '把軟體部門定位成 AI operating model 的實體交付層：以 Factory-to-Operations Handoff、Lifecycle Control Tower、Tenant Governance 與 Remote Ops，接住 operating model 最難落地的 Day-2 責任。',
+				sourceLabel: 'Nutanix Agentic AI',
+				source: 'https://www.nutanix.com/solutions/ai'
+			},
+			{
+				label: 'Governed & Recoverable Data',
+				marketSignal: 'NetApp 官方把 AI 基礎建設直接寫成 unified foundation for the AI factory，並強調 built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
+				buyerQuestion: '如果模型 artifact、向量資料、registry 或推論服務出事，誰能同時保住資料治理、恢復速度與稽核可信度？',
+				foxconnTranslation: '把軟體部門講成 AI Recovery & Evidence Assurance 的 owner：不只保護資料，而是把 artifact / registry 保護、golden image rollback、incident evidence 與 Day-2 recoverability 做成可續約治理服務。',
+				sourceLabel: 'NetApp AI infrastructure and data management',
+				source: 'https://www.netapp.com/artificial-intelligence/'
 			}
 		],
-		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership、capacity deferral 與 continuous service availability，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
+		boardMessage: '董事會該記住的一句話：若市場核准的是 speed、control、trust、accountable ownership、capacity deferral、continuous service availability、AI operating model，以及 governed / recoverable outcomes，軟體部門就不該被描述成「支援功能」，而是這些結果的 owner。'
 	},
 	serviceOfferings: {
 		headline: '從「賣伺服器」到「賣服務」：可具體交付的軟體服務組合',
