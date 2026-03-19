@@ -21,6 +21,7 @@ const App = () => {
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'))
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'))
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'))
+  const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure'))
   const recurringRevenueRisks = softwareDifferentiation.serviceOfferings?.renewalMoat?.risks || []
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
@@ -228,6 +229,13 @@ const App = () => {
       interpretation: 'Red Hat 官方語言聚焦 lifecycle、deployment automation、self-service 與 cost control。這正好強化一個重點：軟體部門該被定位成治理與營運 owner，而不是交機後的附屬支援。',
       sourceLabel: 'Red Hat OpenShift AI',
       source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
+    {
+      company: 'NetApp AI infrastructure and data management',
+      quote: 'unified foundation for the AI factory ... built-in governance ... simple secure inferencing ... cyber-resilient data protection',
+      interpretation: '連資料與儲存基礎建設供應商都已經不是只賣效能，而是在賣治理、安全、recoverability 與可持續營運。這會讓 Foxconn 的論點更站得住：軟體部門真正值錢的，不是多做一個介面，而是把 server delivery、lifecycle control、remote ops 與 recovery evidence 串成可被採購的結果。',
+      sourceLabel: netappAISource?.name || 'NetApp AI infrastructure and data management',
+      source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
     },
   ]
 
@@ -457,7 +465,7 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-2">External proof that the market already buys software-led outcomes</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">不是我們自己說軟體重要，競品官方文案早就在替這件事背書</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
-                    這一排故意只放競品官方語言，而且只抓最能說服管理層的關鍵句：deployment speed、AI lifecycle、autonomous recovery、cost control。目的不是蒐集 feature，而是直接證明市場現在核准的，就是軟體把硬體翻成可營運結果的能力。
+                    這一排故意只放競品官方語言，而且只抓最能說服管理層的關鍵句：deployment speed、AI lifecycle、autonomous recovery、cost control、governance 與 recoverability。目的不是蒐集 feature，而是直接證明市場現在核准的，就是軟體把硬體翻成可營運結果的能力。
                   </p>
                 </div>
                 <div className="bg-sky-50 border border-sky-100 rounded-2xl px-4 py-3 max-w-md">
