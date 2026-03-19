@@ -28,6 +28,7 @@ const App = () => {
   const procurementDisqualifierItems = softwareDifferentiation.procurementDisqualifiers?.items || []
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings?.budgetMap?.rows || []
   const segmentSpecificMotions = softwareDifferentiation.segmentSpecificServiceMotions?.motions || []
+  const standardsGapEvidence = softwareDifferentiation.standardsGap?.evidence || []
   const softwareValueChain = [
     {
       stage: '硬體部門交付',
@@ -917,6 +918,38 @@ const App = () => {
                 </div>
                 <div className="bg-slate-100 border border-slate-200 rounded-2xl px-4 py-3 max-w-md">
                   <p className="text-sm font-semibold text-slate-900">一句話版本：硬體把設備交到客戶手上；軟體部門把這批設備變成能上線、能被問責、也能每年續約的 AI 營運服務。</p>
+                </div>
+              </div>
+
+              <div className="mb-6 p-5 rounded-2xl border border-slate-200 bg-slate-50/90">
+                <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-4">
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 mb-2">Why standards do not replace the software department</p>
+                    <h4 className="text-xl font-black text-slate-900 mb-2">就算有 Redfish / OpenBMC，客戶買的也不是 API 本身，而是誰把 API 變成可治理、可續約的營運結果</h4>
+                    <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                      這段是專門堵一個很常見的反對意見：既然硬體管理介面正逐漸標準化，Foxconn 為什麼還要投資軟體部門？答案剛好相反——標準只解決「能不能讀寫設備」，卻沒有替客戶接住升級、回滾、air-gap 內容同步、審計證據與跨機房維運責任。真正值錢的不是 API，而是把標準介面翻成可交付、可治理、可續約服務的人。
+                    </p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl px-4 py-3 max-w-md">
+                    <p className="text-sm font-semibold text-slate-900">一句話版本：標準化只會讓「裸管理介面」更像基本配備，反而更凸顯誰能把它包成 Day-2 營運能力；那個 owner 就是軟體部門。</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                  {standardsGapEvidence.map((item, idx) => (
+                    <div key={idx} className="p-5 rounded-2xl border border-slate-200 bg-white">
+                      <p className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2">Evidence {idx + 1}</p>
+                      <p className="text-sm font-black text-slate-900 mb-3 leading-relaxed">{item.point}</p>
+                      <p className="text-xs text-slate-700 leading-relaxed">{item.implication}</p>
+                      <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                        {item.sourceLabel}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-5 p-4 rounded-2xl bg-slate-900 text-slate-50">
+                  <p className="text-sm font-semibold text-slate-50">董事會該記住的一句話：標準讓硬體更容易互通，但不會自動產生 baseline、rollback、SLA、稽核證據與續約理由；這些仍然要靠軟體部門把責任接起來。</p>
                 </div>
               </div>
 
