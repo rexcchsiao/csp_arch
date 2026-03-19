@@ -148,6 +148,33 @@ const App = () => {
       boardWhyItMatters: '如果軟體仍被埋在硬體 KPI 下，就很難被正確投資，也很難累積真正的產品與服務飛輪。'
     }
   ]
+  const softwareRevenueBridge = [
+    {
+      stage: 'Stage 1｜Attach at shipment',
+      revenueType: '交機即 attach 的 deployment / baseline 服務',
+      softwareOwner: 'Factory-to-Operations Handoff Assurance',
+      boardMeaning: '把硬體出貨從一次性交機，往可被正式報價的 software attach 推進。',
+    },
+    {
+      stage: 'Stage 2｜Stabilize after go-live',
+      revenueType: '上線後 30-90 天的 availability / remote-ops 服務',
+      softwareOwner: 'Service Availability Assurance + Remote Ops',
+      boardMeaning: '把「客戶自己接手風險」改成「Foxconn 對 uptime 與遠端處理覆蓋負責」。',
+    },
+    {
+      stage: 'Stage 3｜Renew every upgrade cycle',
+      revenueType: '季度或年度的變更治理與升級顧問收入',
+      softwareOwner: 'Lifecycle Control Tower',
+      boardMeaning: '把每次 driver / firmware / CUDA / K8s 升級都會重來一次的風險，收斂成年度續約邏輯。',
+    },
+    {
+      stage: 'Stage 4｜Expand into new budgets',
+      revenueType: 'brownfield、air-gap、capacity assurance、recoverability 等高價值治理收入',
+      softwareOwner: '情境型 attach modules',
+      boardMeaning: '讓同一台 AI server 不是只吃硬體採購，而能延伸到 Facilities、Compliance、SRE 與 Data / Security 預算。',
+    },
+  ]
+
   const boardProofPoints = [
     {
       metric: 'Software attachment rate',
@@ -595,6 +622,38 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該先記住的一句話：真正讓軟體部門值得獨立投資的，不是功能表，而是它能把最容易卡住採購、也最容易形成續約的責任邊界，收斂成 Foxconn 自己的服務目錄。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">How software turns one hardware order into repeatable revenue</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">老闆最該直接看懂的一件事：軟體部門不是替硬體加功能，而是把同一筆訂單拉長成 4 段收入鏈</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    很多簡報都能把軟體講得很厲害，但如果沒有把收入怎麼長出來說清楚，管理層還是容易把它當成成本。這一段刻意只回答一個商業問題：同一筆 AI server 訂單，軟體部門到底怎麼把一次性交機，往 attach、go-live 後服務、升級治理年約，以及跨預算 owner 的擴張收入一路延伸。這會比再多一頁 feature list 更直接證明軟體部門為什麼值得被獨立投資。
+                  </p>
+                </div>
+                <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-emerald-900">一句話版本：硬體決定這張單能不能成交，軟體部門決定這張單會不會在交機後繼續長出 attach、續約與新預算。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+                {softwareRevenueBridge.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-emerald-700 mb-2">{item.stage}</p>
+                    <p className="text-sm font-black text-slate-900 mb-3 leading-relaxed">{item.revenueType}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">軟體 owner：</span>{item.softwareOwner}</p>
+                      <p><span className="font-bold text-emerald-700">董事會意義：</span>{item.boardMeaning}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：如果軟體部門能把交機 attach、上線後 availability、升級治理與情境型治理收入接成一條鏈，它就不是 support function，而是把單次 BOM 放大成多年度營收的 revenue owner。</p>
               </div>
             </div>
 
