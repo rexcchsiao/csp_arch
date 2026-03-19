@@ -83,8 +83,8 @@ export const executiveBrief = {
   customerBenefits: [
     { metric: "GPU Utilization", before: "40-60%", after: "85%+", improvement: "+42%", businessImpact: "40% more AI workloads on same hardware" },
     { metric: "Deployment Time", before: "2-4 weeks", after: "2 hours", improvement: "-99%", businessImpact: "Revenue generation starts 2-4 weeks earlier" },
-    { metric: "Downtime", before: "8 hours average", after: "2 hours average", improvement: "-75%", businessImpact: "NT$ 20M/year saved per 100-server cluster" },
-    { metric: "On-site Support", before: "100%", after: "30%", improvement: "-70%", businessImpact: "NT$ 15M/year saved in travel and labor" },
+    { metric: "Downtime per Incident", before: "8 hours average", after: "2 hours average", improvement: "-75%", businessImpact: "NT$ 20M/year saved per 100-server cluster" }, { metric: "MTTR (Mean Time To Recovery)", before: "4-6 hours", after: "30-45 minutes", improvement: "-85%", businessImpact: "Critical for SLA compliance; 8x faster recovery via predictive alerts + remote repair" }, { metric: "MTBF (Mean Time Between Failures)", before: "Industry baseline", after: "+40% improvement", improvement: "+40%", businessImpact: "Predictive maintenance extends hardware lifespan; reduces unplanned outages" },
+    { metric: "On-site Support Required", before: "100%", after: "30%", improvement: "-70%", businessImpact: "NT$ 15M/year saved in travel and labor" },
     { metric: "Energy Efficiency (PUE)", before: "1.6", after: "1.4", improvement: "-12.5%", businessImpact: "15-25% reduction in power costs" },
     { metric: "Total 3-Year TCO", before: "NT$ 1,500M (100 H200 servers)", after: "NT$ 1,285M", improvement: "-14%", businessImpact: "NT$ 215M savings over 3 years" }
   ],
