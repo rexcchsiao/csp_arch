@@ -916,6 +916,14 @@ structuralAdvantages: {
 		coreInsight: '從 NVIDIA、HPE 到 Red Hat 的官方語言來看，市場領先者都不是在賣「我們有很多功能」，而是在賣更快上線、更少營運中斷、更容易治理。這正是軟體部門最該搶下的採購敘事。',
 		cards: [
 			{
+				company: 'NVIDIA Mission Control（Operations Expertise as Software）',
+				proof: 'NVIDIA 官網直接寫到「Bringing the World’s Most Advanced AI Factory Expertise to Every Business」，並說 Mission Control 讓平台團隊能以 fully supported software 高效率營運 AI factory。這種語言不是在賣 feature，而是在賣「把 world-class operations team 產品化」。',
+				buyerTranslation: '這代表連 NVIDIA 都知道，客戶真正會核准預算的，不是再多一個 control plane，而是能不能把原本要自己養的營運經驗、on-call discipline 與跨團隊協調，改成可以直接採購的軟體與服務。',
+				foxconnPlay: 'Foxconn 應把軟體部門定位成可被採購的 operations expertise：用 Factory-to-Operations Handoff、Remote Ops、Lifecycle Control Tower 與 brownfield governance，把「原本客戶要自己扛的營運能力」變成 attach service。這樣老闆更容易理解，軟體部門賣的不是畫面，而是可外包、可問責、可續約的營運專業。',
+				sourceLabel: 'NVIDIA Mission Control',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
 				company: 'NVIDIA Mission Control',
 				proof: '官方直接把 cluster life cycle、autonomous recovery、building management integration、power / cooling control 放進 AI factory operations 敘事，甚至強調在 power-constrained 環境可用 validated power optimization 達到 85% power、93% performance throughput。',
 				buyerTranslation: '客戶買的不是監控畫面，而是「就算機房電力/散熱受限，也不用立刻擴建，還能把 IT、機電、SRE 的協調風險一起轉出去」的營運保證。',
