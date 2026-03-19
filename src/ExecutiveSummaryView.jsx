@@ -395,6 +395,48 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Procurement disqualifiers - why software is not optional in real deals */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <AlertTriangle className="w-5 h-5 text-red-600" /> 沒有軟體部門，哪些案子其實在採購最後一哩就會卡住？
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這段最適合拿來回答管理層那句很現實的問題：<span className="font-semibold text-slate-900">「硬體規格都過了，為什麼還要投資軟體部門？」</span>
+          因為真正讓案子過不了的，常常不是 GPU 規格或單機效能，而是客戶在採購最後會追問的幾個責任問題：多久能上線、升級出事誰負責、共享之後怎麼治理、AI 出事後誰能救回來。
+          這四題如果沒有明確的軟體 owner，就很容易讓 Foxconn 退回成「設備供應商」，而不是能拿 attach rate 與年約收入的解決方案夥伴。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {(softwareDifferentiation.procurementDisqualifiers?.items || []).slice(0, 4).map((item) => (
+            <div key={item.title} className="rounded-2xl border border-red-100 bg-red-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-2">Procurement disqualifier</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">為什麼會卡案：</span>{item.whyItKillsDeals}</p>
+                <p><span className="font-bold text-amber-700">市場已經怎麼賣：</span>{item.marketProof}</p>
+                <p><span className="font-bold text-emerald-700">Foxconn 該怎麼補：</span>{item.foxconnImplication}</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <p className="text-[11px] text-slate-500">Source anchor: {item.sourceLabel}</p>
+                {item.source && (
+                  <a
+                    href={item.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    官方來源
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-red-100 bg-white p-4">
+          <p className="text-sm font-semibold text-red-900">給管理層的一句話：<span className="text-slate-700">很多 AI 基礎設施案子最後輸贏，不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼管、事故後誰救得回來」。這四題的 owner，如果不是軟體部門，就很難把硬體價值完整變現。</span></p>
+        </div>
+      </div>
+
       {/* Why Now - 2026 Q2 Inflection Point */}
       {executiveSummary.whyNow && (
         <div className="bg-amber-50 border-2 border-amber-200 rounded-3xl p-8">
@@ -613,7 +655,7 @@ const ExecutiveSummaryView = () => {
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。
-          下面這三個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口。
+          下面這四個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {marketWhitespace.map((item) => (
