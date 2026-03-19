@@ -449,6 +449,40 @@ const App = () => {
             <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
               <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
                 <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-600 mb-2">Even hyperscalers still buy help</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">大型 CSP 不是不會做，而是不想自己長期背 Factory-to-Operations、升級風險與 brownfield 設施協調</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段故意放在前面，因為管理層最常卡在同一個疑問：既然大型 CSP / Hyperscaler 已有強大軟體能力，為什麼還需要 Foxconn 軟體部門？答案不是去跟他們比誰 control plane 做得更大，而是承認他們真正願意外包的，是那些離交機很近、離設施很近、失敗代價又很高的 Day-2 責任。把這點先講清楚，軟體部門就更像可被採購的營運 owner，而不是附帶功能團隊。
+                  </p>
+                </div>
+                <div className="bg-violet-50 border border-violet-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-violet-900">一句話版本：大客戶買我們的軟體，不是因為他們不會寫平台，而是因為他們不想自己長期背半夜故障、升級失敗、brownfield 整合與 air-gap 治理的責任。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {hyperscalerBuyPatterns.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">{item.title}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">客戶不想自己長期扛：</span>{item.whatHyperscalersAvoid}</p>
+                      <p><span className="font-bold text-violet-700">Foxconn 可被定價的地方：</span>{item.foxconnValue}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該先記住的一句話：面對大型 CSP，軟體部門最值錢的不是 another platform，而是把 handoff、change-window 與 brownfield / facility coordination 做成單一 accountable owner。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-2">Software department mandate</p>
                   <h3 className="text-2xl font-black text-slate-900 mb-2">先把軟體部門的 mandate 講清楚，老闆才知道自己批准的不是「多一點研發」，而是新的價值控制層</h3>
                   <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
