@@ -268,6 +268,40 @@ const App = () => {
       source: netappAISource?.url || 'https://www.netapp.com/artificial-intelligence/',
     },
   ]
+  const defaultAttachBundle = [
+    {
+      bundle: 'Core attach｜Deployment Assurance',
+      include: 'Factory pre-load、site acceptance、baseline、runbook 與初始 observability。',
+      whyItShouldAlwaysTravel: '先把「交機」翻成「可被接手的營運起點」，否則硬體很容易卡在最後一哩。',
+      boardMeaning: '這是最直接把 time-to-revenue 寫進提案的軟體價值。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      bundle: 'Core attach｜Lifecycle Control Tower',
+      include: '版本矩陣、maintenance window、canary、rollback 與 change reporting。',
+      whyItShouldAlwaysTravel: '真正容易出事、也最容易形成續約的，不是 Day-0 安裝，而是之後每一次升級。',
+      boardMeaning: '這是把 upgrade risk 變成正式報價與年約邏輯的關鍵。',
+      sourceLabel: missionControlSource?.name || 'NVIDIA Mission Control',
+      source: missionControlSource?.url || 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
+      bundle: 'Default upsell｜Service Availability / Remote Ops',
+      include: 'health review、predictive monitoring、remote resolution coverage 與季度 baseline refresh。',
+      whyItShouldAlwaysTravel: '市場已在買 continuous service availability，不再只是買看板與告警。',
+      boardMeaning: '這是最容易把一次性交機拉成持續性服務收入的 software wedge。',
+      sourceLabel: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
+      source: hpePrivateCloudAISource?.url || 'https://www.hpe.com/us/en/private-cloud-ai.html',
+    },
+    {
+      bundle: 'Conditional attach｜Brownfield / Air-gap / Capacity Assurance',
+      include: '依客戶情境附上 brownfield baseline、air-gap content lifecycle 或 facility-aware capacity governance。',
+      whyItShouldAlwaysTravel: '這些不是每案都一樣，但往往正是最後把 RFQ 拉開差距、也最能提高 attach rate 的高價值責任邊界。',
+      boardMeaning: '軟體部門不是多一套功能，而是把不同風險包成不同 attach modules。',
+      sourceLabel: schneiderAISource?.name || 'Schneider Electric AI Data Center Solutions',
+      source: schneiderAISource?.url || 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+    },
+  ]
   const officialMarketSignals = [
     {
       company: 'NVIDIA Mission Control',
@@ -948,6 +982,41 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：軟體部門最重要的價值，不只是替硬體加一些功能，而是把同一台 AI server 帶進 SRE、Facilities、Compliance 與 Data Security 這些原本硬體部門不容易直接觸及的預算。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mb-2">What every proposal should carry by default</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">如果軟體部門真的要變成 attach rate 與續約引擎，每張提案都該帶著同一套標準 software bundle 出場</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    很多團隊明明認同軟體重要，但最後還是把價值講散了：有時候講監控、有時候講平台、有時候只剩 support。這一段把軟體部門收斂成更像報價模板的語言：哪些 bundle 應該幾乎每案都出現、哪些是依 brownfield / air-gap / facility 條件追加。這樣老闆更容易看見，軟體部門不是抽象能力，而是可複製、可教育業務、也可追蹤 attach rate 的商品化邏輯。
+                  </p>
+                </div>
+                <div className="bg-emerald-50 border border-emerald-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-emerald-900">一句話版本：提案若沒有帶著 Deployment、Lifecycle 與 Availability 這三種 software attach，軟體價值就很容易又退回「附帶支援」。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {defaultAttachBundle.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-emerald-100 bg-emerald-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-emerald-700 mb-2">{item.bundle}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">提案裡要寫清楚：</span>{item.include}</p>
+                      <p><span className="font-bold text-emerald-700">為什麼應該跟著每張單走：</span>{item.whyItShouldAlwaysTravel}</p>
+                      <p><span className="font-bold text-blue-700">董事會意義：</span>{item.boardMeaning}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：若軟體部門要被當成收入引擎，它就不能每案重新發明價值，而應該把 Deployment、Lifecycle、Availability 與情境型模組做成標準 attach bundle，讓 attach rate、RFQ 勝率與續約邏輯都能被持續複製。</p>
               </div>
             </div>
 
