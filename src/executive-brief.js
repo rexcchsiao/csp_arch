@@ -558,6 +558,106 @@ export const softwareDepartmentScorecard = {
 };
 
 
+// Customer Acquisition Dynamics - Sales Cycle & Economics (Added 2026-03-20 by CoCo)
+// Purpose: Leadership needs to understand how long it takes to close deals and what the acquisition economics look like
+export const customerAcquisitionDynamics = {
+  headline: '客戶獲取動態：銷售週期與經濟學',
+  context: '軟體不同於硬體——銷售週期更長但客戶終身價值更高。了解獲取成本與週期對於設定正確的財務預期至關重要。',
+  salesCycleBySegment: [
+    {
+      segment: 'CSP / Hyperscaler (Remote Ops)',
+      cycleLength: '6-9 months',
+      stages: 'Technical evaluation (2-3mo) → POC (2-3mo) → Security review (1-2mo) → Procurement (1-2mo)',
+      decisionMakers: 'CTO, VP Infrastructure, Head of AI Platform',
+      dealSize: 'NT$ 15-50M/year',
+      notes: 'Longest cycle due to multi-stakeholder approval, but highest retention (85%+)'
+    },
+    {
+      segment: 'Enterprise RAG (SMB/Mid-market)',
+      cycleLength: '2-4 months',
+      stages: 'Needs assessment (2-4 weeks) → POC (4-6 weeks) → Procurement (2-4 weeks)',
+      decisionMakers: 'CIO, Head of Digital Transformation',
+      dealSize: 'NT$ 5-15M (one-time) + 20% annual support',
+      notes: 'Faster cycle if compliance-driven (e.g., financial services under regulatory pressure)'
+    },
+    {
+      segment: 'Sovereign AI / Government-adjacent',
+      cycleLength: '9-15 months',
+      stages: 'RFP preparation (3-6mo) → Vendor selection (3-6mo) → Compliance certification (3mo)',
+      decisionMakers: 'Government CIO, Compliance Officer, Prime Contractor',
+      dealSize: 'NT$ 50-200M (multi-year)',
+      notes: 'Longest cycle but largest deals; requires patience and upfront investment in certifications'
+    },
+    {
+      segment: 'Existing Foxconn Hardware Customers (Attach Sale)',
+      cycleLength: '1-3 months',
+      stages: 'Hardware negotiation (concurrent) → Software demo (2-4 weeks) → Bundle pricing (2-4 weeks)',
+      decisionMakers: 'Same as hardware decision maker, often CFO for ROI approval',
+      dealSize: 'NT$ 3-20M/year (10-15% of hardware value)',
+      notes: 'Fastest cycle due to existing trust relationship; recommended initial focus'
+    }
+  ],
+  customerAcquisitionCost: {
+    cacBySegment: [
+      {
+        segment: 'CSP / Hyperscaler',
+        cac: 'NT$ 3-5M per customer',
+        breakdown: 'Sales team (40%), POC hardware/discount (35%), Technical pre-sales (15%), Marketing (10%)',
+        paybackPeriod: '6-9 months (first year contract covers CAC)',
+        ltvToCacRatio: '4-6x (assuming 3-year retention at 85%)'
+      },
+      {
+        segment: 'Enterprise RAG',
+        cac: 'NT$ 0.8-2M per customer',
+        breakdown: 'Sales team (50%), POC environment (25%), Marketing/events (15%), Partner commissions (10%)',
+        paybackPeriod: '3-6 months',
+        ltvToCacRatio: '3-5x (assuming 60% annual renewal)'
+      },
+      {
+        segment: 'Existing Hardware Customers (Attach)',
+        cac: 'NT$ 0.5-1M per customer',
+        breakdown: 'Sales commission overlap (60%), Technical demo (25%), Marketing (15%)',
+        paybackPeriod: '1-3 months (lowest due to existing relationship)',
+        ltvToCacRatio: '6-10x (highest due to low acquisition cost)'
+      }
+    ],
+    industryBenchmark: 'SaaS industry standard LTV:CAC is 3:1. Foxconn software targets 4-6x due to hardware attachment advantage.',
+    strategicImplication: 'Focus Year 1 on existing hardware customers (lowest CAC, fastest cycle) to build case studies, then expand to greenfield CSP accounts in Year 2.'
+  },
+  salesStrategy: {
+    phase1: {
+      name: 'Phase 1: Low-Hanging Fruit (Q3-Q4 2026)',
+      target: 'Existing Foxconn hardware customers with active pain points',
+      approach: 'Attach sale during hardware renewal or expansion',
+      expectedClose: '5-8 customers, NT$ 25-40M ARR',
+      rationale: 'Leverage existing trust, shortest sales cycle, lowest CAC'
+    },
+    phase2: {
+      name: 'Phase 2: Benchmark Cases (Q1-Q2 2027)',
+      target: '1-2 lighthouse CSP customers for Remote Ops',
+      approach: 'Pilot pricing (discounted) in exchange for case study rights',
+      expectedClose: '2-3 customers, NT$ 30-50M ARR',
+      rationale: 'Build credible references for broader market'
+    },
+    phase3: {
+      name: 'Phase 3: Scale & Sovereign (Q3 2027-Q4 2028)',
+      target: 'Sovereign AI projects + enterprise RAG at scale',
+      approach: 'Partner-led (system integrators, regional partners)',
+      expectedClose: '10-15 customers, NT$ 200M+ ARR',
+      rationale: 'Leverage partner ecosystem for reach, focus internal team on high-value deals'
+    }
+  },
+  keyMetrics: {
+    monthlyBurnRate: 'NT$ 5-6M/month (50-80 FTE team + lab + tools)',
+    dealsNeededToBreakEven: 'Year 1: 4-6 customers (NT$ 80M revenue target)',
+    pipelineRatio: '3-4x annual target (need NT$ 240-320M pipeline to close NT$ 80M)',
+    winRate: 'Target 25-35% (industry average for enterprise software is 20-30%)',
+    churnRisk: '<15% annual churn (target 85%+ retention)',
+    expansionRevenue: '30-50% of Year 2-3 growth from existing customers adding modules or capacity'
+  },
+  boardMessage: '董事會該知道的：軟體銷售週期比硬體長 2-3 倍（6-9 個月 vs. 2-3 個月），但客戶終身價值高 5-8 倍。第一年需要耐心建立案例，第二年起邊際效益遞增。建議策略：先從既有硬體客戶切入（信任基礎、週期短），建立標竿後再擴張到 CSP 與主權 AI 大案。'
+};
+
 // Decision Required - Clear Ask for Leadership (Added 2026-03-20 by CoCo)
 export const decisionRequired = {
   headline: '本簡報請求管理層做出的具體決策',
