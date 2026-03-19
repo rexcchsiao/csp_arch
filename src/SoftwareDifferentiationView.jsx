@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { executiveBrief } from './executive-brief.js';
 import { softwareDifferentiation, financialImpactCalculator } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
-import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory } from 'lucide-react';
+import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
   const [activeTab, setActiveTab] = useState('pain-points');
@@ -203,7 +204,58 @@ const SoftwareDifferentiationView = () => {
           </div>
         )}
 
-        {activeTab === 'competitive' && (
+        {activeTab === 'customer-voices' && (
+  <div className="space-y-6">
+    <div className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-200 mb-6">
+      <div className="flex items-start gap-3">
+        <MessageSquare className="w-6 h-6 text-emerald-600 mt-1" />
+        <div>
+          <h3 className="text-lg font-black text-emerald-800">真實客戶痛點與心聲</h3>
+          <p className="text-sm text-emerald-700 mt-2 font-medium">來自 CSP 與企業客戶的真實反饋 - 這些是他們每天面對的挑戰</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="grid grid-cols-1 gap-4">
+      {executiveBrief.customerVoices?.map((voice, idx) => (
+        <div key={idx} className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="p-2 bg-rose-50 rounded-lg">
+              <AlertTriangle className="w-5 h-5 text-rose-600" />
+            </div>
+            <div className="flex-1">
+              <h4 className="text-base font-bold text-slate-800 mb-2">{voice.painPoint}</h4>
+              <blockquote className="text-sm text-slate-700 italic border-l-4 border-rose-300 pl-4 mb-3">
+                "{voice.quote}"
+              </blockquote>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 mb-1">Foxconn 解決方案</p>
+              <p className="text-sm font-medium text-slate-800">{voice.foxconnSolution}</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-slate-500 mb-1">量化影響</p>
+              <p className="text-sm font-bold text-emerald-700">{voice.quantifiedImpact}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div className="p-6 bg-amber-50 rounded-2xl border border-amber-200">
+      <h4 className="text-base font-black text-amber-900 mb-2">為什麼這些聲音很重要？</h4>
+      <p className="text-sm text-amber-800">
+        這些不是假設性的痛點，而是來自 Foxconn CSP 客戶稽核、部署日誌、支援工單的真實反饋。
+        軟體部門的價值不在於「功能清單」，而在於把這些痛點轉化為可量化的營運改進：
+        利用率提升、部署加速、停機減少、合規無風險。
+      </p>
+    </div>
+  </div>
+)}
+
+{activeTab === 'competitive' && (
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">競爭優勢分析</h3>
 
