@@ -786,3 +786,131 @@ impact: 'Makes RAG Appliance turnkey and compliant'
 ],
 boardMessage: '董事會該知道：這不是一次補滿 80 人，而是分三階段擴編。第一年 30-35 人聚焦 Remote Ops MVP 和 RAG 一體機交付，降低執行風險。關鍵是儘早找到三位技術負責人（Firmware、K8s、Remote Ops），建立 recruiting bar 和技術文化。合夥夥伴（Red Hat、Canonical）可減少第一年招募壓力 40%。'
 };
+
+// First 90 Days: Week-by-Week Deliverables (Added 2026-03-20 by CoCo)
+// Purpose: Make the immediate next steps concrete and actionable for leadership
+// Usage: Week 1 kickoff, weekly standups, 30/60/90 day reviews
+export const first90DaysPlan = {
+  headline: '首 90 天執行計畫：週次分解與可交付成果',
+  context: '董事會批准後，軟體部門將按此週次計畫執行，每週五提交進度報告。若偏離計畫超過 2 週，觸發升級審查。',
+  phase1: {
+    name: 'Phase 1: Foundation (Day 1-30)',
+    theme: '組織就緒、實驗室建立、首個試點客戶簽約',
+    week1_2: {
+      deliverables: [
+        '任命軟體產品負責人（VP of Software）',
+        '完成 50-80 FTE 組織架構圖與職位描述',
+        '啟動關鍵職位招募（Firmware Lead、K8s Lead、Remote Ops Lead）',
+        '與 Red Hat/Canonical 舉行首次夥伴會議'
+      ],
+      successCriteria: '組織設計文件簽署完成，3 个關鍵職位開始面試，2 個夥伴會議完成'
+    },
+    week3_4: {
+      deliverables: [
+        'AI 工作負載實驗室場地確認（H100/H200 測試環境）',
+        'Remote Ops MVP 範圍定義（與首個試點客戶訪談）',
+        'RAG Appliance 架構設計完成（vector DB + permission governance）',
+        '完成首波 15-20 人招募目標 50%'
+      ],
+      successCriteria: '實驗室場地簽約，Remote Ops MVP scope 文件簽署，RAG 架構審查通過，8-10 個 offer 發出'
+    },
+    week5_6: {
+      deliverables: [
+        '實驗室硬體到位（2-4 台 H100 測試伺服器）',
+        'Remote Ops 第一個監控模組開發完成（GPU 溫度/功耗）',
+        'RAG Appliance POC 環境架設完成',
+        '確認首個試點客戶（既有 CSP 客戶，NT$ 5-10M 訂單）'
+      ],
+      successCriteria: '實驗室可運行，Remote Ops 監控 demo 可展示，RAG POC 可导入 100 份文件測試，首個客戶 LOI 簽署'
+    },
+    week7_8: {
+      deliverables: [
+        'Remote Ops 第一個客戶現場部署（試點）',
+        'RAG Appliance alpha 版本完成（基本文件导入 + 搜尋）',
+        '完成首波 15-20 人到職',
+        '與系統整合夥伴（SI）簽署合作備忘錄'
+      ],
+      successCriteria: 'Remote Ops 在客戶現場運行超過 48 小時無重大事故，RAG alpha 可回答文件問題，團隊到位率 100%，2 家 SI 夥伴簽署'
+    },
+    month1Metrics: {
+      hiring: '15-20 FTE offer 發出，8-10 人到職',
+      product: 'Remote Ops 監控模組 demo 可展示，RAG alpha 可運行',
+      customer: '1 個試點客戶 LOI 簽署，1 個現場部署進行中',
+      partnership: 'Red Hat/Canonical 夥伴會議完成，2 家 SI 簽署 MOU'
+    }
+  },
+  phase2: {
+    name: 'Phase 2: Execution (Day 31-60)',
+    theme: '首個客戶上線、產品迭代、第二個客戶簽約',
+    week9_10: {
+      deliverables: [
+        'Remote Ops 試點客戶驗收（70% 遠端診斷覆蓋率）',
+        'RAG Appliance beta 版本（權限治理 + 審計軌跡）',
+        '第二個試點客戶簽約（企業 RAG 案例）',
+        '啟動 K8s GPU 調度器開發（MIG/vGPU 支援）'
+      ],
+      successCriteria: 'Remote Ops 通過試點驗收，RAG beta 通過權限測試，第二個客戶合約簽署，K8s 調度器原型完成'
+    },
+    week11_12: {
+      deliverables: [
+        'Remote Ops 正式 GA（General Availability）',
+        'RAG Appliance 第一個企業客戶部署',
+        '啟動 Lifecycle Control Tower 設計（版本矩陣 + canary + rollback）',
+        '完成首波 NT$ 5-10M 軟體訂單認列'
+      ],
+      successCriteria: 'Remote Ops GA 公告，RAG 第一個企業上線，Lifecycle 設計文件審查通過，首筆軟體營收入帳'
+    },
+    month2Metrics: {
+      hiring: '累計 25-30 FTE 到職',
+      product: 'Remote Ops GA, RAG beta 可交付，Lifecycle 設計完成',
+      customer: '2 個試點客戶上線，NT$ 5-10M 訂單認列',
+      partnership: '2-3 家 SI 夥伴完成培訓，可獨立交付 RAG'
+    }
+  },
+  phase3: {
+    name: 'Phase 3: Scale Preparation (Day 61-90)',
+    theme: '標準化產品、規模化交付準備、董事會匯報',
+    week13_14: {
+      deliverables: [
+        'RAG Appliance 產品化（S/M/L SKU 定義）',
+        'Remote Ops 2.0 路線圖（預測性維護 + 自動修復）',
+        '第三個客戶簽約（主權 AI 或政府相關）',
+        '完成軟體銷售培訓教材（给銷售團隊）'
+      ],
+      successCriteria: 'RAG SKU 定價單發布，Remote Ops 2.0 路線圖審查通過，第三個客戶 LOI 簽署，銷售團隊完成首波培訓'
+    },
+    week15_16: {
+      deliverables: [
+        '準備董事會 Q2 匯報材料（90 天成果展示）',
+        'Remote Ops 2.0 alpha 版本（預測性維護模型上線）',
+        'RAG Appliance 第一個主權 AI 案例部署啟動',
+        '啟動第二波 20-25 人招募（L12 AI 工作負載團隊）'
+      ],
+      successCriteria: '董事會簡報完成，Remote Ops 2.0 alpha 可展示，主權 AI 案例啟動，第二波招募開始'
+    },
+    month3Metrics: {
+      hiring: '累計 35-40 FTE 到職，第二波招募啟動',
+      product: 'Remote Ops 2.0 alpha, RAG 產品化 SKU, Lifecycle 設計完成',
+      customer: '3 個客戶上線（1 CSP Remote Ops, 1 Enterprise RAG, 1 Sovereign AI）',
+      revenue: 'NT$ 10-20M 軟體訂單認列（累計）'
+    }
+  },
+  total90DayDeliverables: {
+    hiring: '35-40 FTE 到職（目標 50-80 FTE 的 50-70%）',
+    product: [
+      'Remote Ops GA + 2.0 alpha（預測性維護）',
+      'RAG Appliance 產品化（S/M/L SKU）',
+      'Lifecycle Control Tower 設計完成'
+    ],
+    customer: '3 個試點客戶上線（1 CSP, 1 Enterprise, 1 Sovereign AI）',
+    revenue: 'NT$ 10-20M 軟體訂單認列',
+    partnership: '2-3 家 SI 夥伴完成培訓，可獨立交付'
+  },
+  escalationTriggers: {
+    hiring: '若 Week 4 關鍵職位（Firmware/K8s/Remote Ops Lead）招募未達 50%，啟動高階人脈招募',
+    product: '若 Week 8 Remote Ops 無法在客戶現場運行超過 48 小時，觸發技術審查',
+    customer: '若 Week 12 無首個客戶簽約，調整產品定位或定價策略',
+    revenue: '若 Week 16 無任何軟體訂單認列，重新評估市場契合度'
+  },
+  boardMessage: '90 天後，董事會將看到：3 個客戶上線、NT$ 10-20M 訂單、35-40 人團隊、Remote Ops GA、RAG 產品化。若偏離此計畫超過 2 週，將主動觸發升級審查。'
+};
