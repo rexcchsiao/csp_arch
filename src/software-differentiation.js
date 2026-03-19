@@ -238,7 +238,7 @@ technicalDepth: {
     {
       area: 'Predictive Maintenance ML Model',
       capability: 'Failure prediction based on GPU telemetry patterns (temperature, ECC errors, power spikes)',
-      technicalDetail: 'Random Forest model trained on 10,000+ GPU-hours of failure data; 85% precision at 24-hour prediction window',
+      technicalDetail: 'Random Forest + LSTM model trained on 10,000+ GPU-hours of failure data; monitors 15+ features (ECC error rate trend, thermal cycling frequency, power spike patterns, memory degradation); 85% precision at 24-hour prediction window, 72-hour early warning for critical failures',
       competitorGap: 'Most monitoring tools only alert on threshold breaches; no predictive capability',
       businessImpact: '60% reduction in unplanned downtime; customers can schedule maintenance during off-peak'
     },
