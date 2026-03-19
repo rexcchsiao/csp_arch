@@ -25,6 +25,7 @@ const App = () => {
   const hyperscalerBuyPatterns = softwareDifferentiation.hyperscalerBuyTriggers?.patterns || []
   const procurementProofCards = softwareDifferentiation.procurementProof?.cards || []
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings?.budgetMap?.rows || []
+  const segmentSpecificMotions = softwareDifferentiation.segmentSpecificServiceMotions?.motions || []
   const softwareValueChain = [
     {
       stage: '硬體部門交付',
@@ -833,6 +834,42 @@ const App = () => {
 
               <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                 <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：當軟體部門能同時對接交付、SRE、機房、合規與 FinOps 預算，它就不只是附屬功能，而是 Foxconn 把一次性 AI server 訂單放大成多年度收入組合的關鍵控制層。</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-600 mb-2">Why the software department wins in two very different markets</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">同一個軟體部門，面對 CSP 與一般企業，其實在賣兩種不同的不可替代價值</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這段是替老闆把市場切乾淨：如果把所有客戶都講成在買同一套平台，軟體部門很容易看起來像籠統的支援單位。其實大型 CSP / Hyperscaler 買的是 remote-ops accountability、brownfield fit 與 capacity assurance；一般企業 / 主權 AI 客戶買的則是 deployment assurance、governance、air-gap content lifecycle 與私有 AI 可快速上線。這種雙引擎敘事，能更直接證明軟體部門不是附屬品，而是把同一台 AI server 翻成不同市場可成交服務的價值轉譯層。
+                  </p>
+                </div>
+                <div className="bg-violet-50 border border-violet-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-violet-900">一句話版本：面對 CSP，軟體部門賣的是營運責任轉移；面對企業，賣的是私有 AI 可交付結果。兩邊都不是硬體部門單獨能完成的事。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {segmentSpecificMotions.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-violet-100 bg-violet-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-violet-700 mb-2">{item.segment}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">客戶為什麼會買：</span>{item.buyingTrigger}</p>
+                      <p><span className="font-bold text-violet-700">客戶真正買的是：</span>{item.whatTheyActuallyBuy}</p>
+                      <p><span className="font-bold text-emerald-700">軟體部門的切入點：</span>{item.softwareWedge}</p>
+                      <p><span className="font-bold text-sky-700">為什麼是 Foxconn：</span>{item.whyFoxconnWins}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該記住的一句話：同一台 AI server，對 CSP 賣的是 Day-2 風險外包，對企業賣的是私有 AI 可交付能力；能把這兩種價值都翻譯成可報價、可續約服務的，就是軟體部門。</p>
               </div>
             </div>
 
