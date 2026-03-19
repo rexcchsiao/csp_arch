@@ -433,20 +433,20 @@ structuralAdvantages: {
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       },
       {
+        title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
+        evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery；HPE Private Cloud AI 也把 built-in observability、predict problems 與 continuous service availability 放進同一條產品敘事。這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
+        whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險與 availability 壓力留給客戶自己承擔。',
+        foxconnPlay: '用 Remote Ops + Lifecycle Assurance + 工廠預整合，把「誰半夜接電話、誰對恢復時間與持續可用性負責」這件事商品化。',
+        sourceLabel: 'NVIDIA Mission Control + HPE Private Cloud AI',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
         title: 'Shared GPU cluster 的 tenant / quota / SLA 治理仍常落在客戶自己補洞',
         evidence: 'Red Hat OpenShift AI 官方已把「manage costs of inferencing」、「automate deployments and self-service access to models, tools, and resources」、以及 monitoring / model lifecycle 放到產品核心敘事；這代表企業已經把 AI 平台需求往多團隊共享、治理與成本責任移動。',
         whyStillOpen: '很多基礎設施方案能把叢集建起來，卻沒有把「誰能用多少 GPU、哪些任務可搶占、quota 怎麼調整、showback / chargeback 怎麼對帳、SLA 失約誰負責」做成能被平台團隊、FinOps 與 BU 主管一起接受的治理層。結果常變成：大家都有 self-service，卻沒有人真正對 shared capacity discipline 負責。',
         foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：包含 quota policy、priority queue、showback / chargeback、approval workflow、SLA policy 與例外審批，讓 Foxconn 從賣叢集升級成 shared AI capacity 的治理 owner，而不只是設備供應商。',
         sourceLabel: 'Red Hat OpenShift AI',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
-      },
-      {
-        title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
-        evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery，這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
-        whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險留給客戶自己承擔。',
-        foxconnPlay: '用 Remote Ops + Lifecycle Assurance + 工廠預整合，把「誰半夜接電話、誰對恢復時間負責」這件事商品化。',
-        sourceLabel: 'NVIDIA Mission Control',
-        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
       },
       {
         title: 'AI resilience 預算正在浮上檯面，但少有人承接 AI-specific recoverability',
