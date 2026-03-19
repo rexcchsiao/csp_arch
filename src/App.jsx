@@ -425,6 +425,29 @@ const App = () => {
       source: nutanixAISource?.url || 'https://www.nutanix.com/solutions/ai',
     },
   ]
+  const postHardwareDecisionLens = [
+    {
+      stage: '交機後 72 小時',
+      hardwareQuestion: '設備到了沒、規格驗收過了沒？',
+      softwareQuestion: '誰把 baseline、site acceptance、runbook、初始 observability 接起來？',
+      ifNoSoftwareOwner: '硬體雖已交機，AI 服務仍可能卡在 handoff 灰區，time-to-revenue 被吃掉。',
+      whyBoardCares: '這是 Deployment Assurance 的價值：把「出貨完成」翻成「可以開始營運」。',
+    },
+    {
+      stage: '季度升級 / 變更窗口',
+      hardwareQuestion: '新世代節點與韌體能不能支援？',
+      softwareQuestion: '誰對 driver / firmware / CUDA / K8s 的 maintenance window、rollback 與證據負責？',
+      ifNoSoftwareOwner: '升級會變成高風險專案，客戶更傾向把 Foxconn 視為設備供應商，而不是營運夥伴。',
+      whyBoardCares: '這是 Lifecycle Control Tower 的價值：把 upgrade risk 變成可續約年約。',
+    },
+    {
+      stage: 'Day-2 故障 / brownfield / air-gap 場景',
+      hardwareQuestion: '是哪個節點或哪個零件出問題？',
+      softwareQuestion: '誰把 remote ops、既有機房流程、離線內容同步與 facility event 接成單一 owner？',
+      ifNoSoftwareOwner: '客戶最後還是得自己叫齊 SRE、機房、合規與現場團隊救火，Foxconn 難拿到高毛利服務位置。',
+      whyBoardCares: '這是軟體部門最值錢的地方：把 Day-2 風險轉成 Day-2 收入與續約理由。',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -502,6 +525,39 @@ const App = () => {
                   <p className="text-xs font-black uppercase tracking-wider text-blue-200 mb-2">Software KPI shift</p>
                   <p className="text-sm font-bold">董事會該追的不只是出貨，而是 attach rate、handoff time、upgrade governance adoption 與續約訊號</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-200">
+              <div className="flex items-start justify-between gap-4 flex-col lg:flex-row lg:items-end mb-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 mb-2">Decision lens the board can use in 30 seconds</p>
+                  <h3 className="text-2xl font-black text-slate-900 mb-2">老闆其實只要看 3 個時刻，就知道軟體部門是不是可被獨立投資的價值層</h3>
+                  <p className="text-sm text-slate-700 max-w-4xl leading-relaxed">
+                    這個 decision lens 刻意放在最前面，因為它把整份簡報濃縮成董事會最容易判斷的問題：硬體部門在每個關鍵時刻回答的是「設備有沒有到、規格有沒有過」；軟體部門回答的則是「誰對上線、升級、brownfield / air-gap / remote-ops 結果負責」。只要這 3 個時刻缺少清楚 owner，Foxconn 就更容易被看成設備供應商，而不是可續約的營運夥伴。
+                  </p>
+                </div>
+                <div className="bg-indigo-50 border border-indigo-100 rounded-2xl px-4 py-3 max-w-md">
+                  <p className="text-sm font-semibold text-indigo-900">一句話版本：董事會不用先看一百個 feature，只要看交機後、升級時、出事時，到底是不是都有人願意長期把風險接住。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                {postHardwareDecisionLens.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl border border-indigo-100 bg-indigo-50/70">
+                    <p className="text-xs font-black uppercase tracking-wider text-indigo-700 mb-2">{item.stage}</p>
+                    <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                      <p><span className="font-bold text-slate-500">硬體部門通常回答：</span>{item.hardwareQuestion}</p>
+                      <p><span className="font-bold text-indigo-700">軟體部門真正要回答：</span>{item.softwareQuestion}</p>
+                      <p><span className="font-bold text-rose-700">如果沒有軟體 owner：</span>{item.ifNoSoftwareOwner}</p>
+                      <p><span className="font-bold text-emerald-700">董事會該在意：</span>{item.whyBoardCares}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-sm font-semibold text-slate-900">董事會該先記住的一句話：如果交機後、升級時、出事時都需要清楚 owner，那軟體部門就不是附屬功能，而是把硬體變成可上線、可治理、可續約業務的責任中心。</p>
               </div>
             </div>
 
