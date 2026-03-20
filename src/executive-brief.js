@@ -548,6 +548,65 @@ export const boardDecisionCard = {
   nextMeeting: '建議於 2026 Q2 董事會正式列案審議，並指定專案負責人（建議由 CTO 或新事業部主管領軍）',
 };
 
+// Day 1 vs. Day 90: What Success Looks Like (Added 2026-03-20 by CoCo)
+// Purpose: Make the 90-day plan concrete and visualizable for leadership
+// Usage: Executive conversations where leaders ask "What exactly will we have in 90 days?"
+export const day1VsDay90Comparison = {
+  headline: 'Day 1 vs. Day 90: Concrete Milestones Leadership Can Visualize',
+  context: 'This comparison shows the tangible difference between starting state (Day 1) and first value delivery (Day 90). The goal is to make the 90-day plan concrete, not abstract.',
+  
+  comparison: [
+    {
+      dimension: 'Team',
+      day1: 'Paper org chart only. Key roles identified but not hired. No dedicated software space.',
+      day90: '15-20 person core team hired (L9-L10 firmware leads, L11-L12 orchestration engineers). Dedicated lab space operational with H100/H200 test environment. Recruitment pipeline filled for Q3 expansion to 50 FTE.',
+      successMetric: '15-20 FTE onboarded, lab operational, Q3 hiring plan approved'
+    },
+    {
+      dimension: 'Remote Ops Platform',
+      day1: 'Requirements document only. Customer pain points collected from 3 CSP interviews.',
+      day90: 'MVP deployed at 1 pilot customer site (50-100 server scale). Real-time monitoring, alerting, and basic diagnostics functional. First predictive maintenance alert generated (GPU temperature anomaly detected 36 hours before failure).',
+      successMetric: '1 live customer, 70% remote diagnosis coverage, 1 predictive maintenance success story'
+    },
+    {
+      dimension: 'RAG Appliance',
+      day1: 'Architecture design complete. Vector DB (pgvector/Milvus) selected. Permission model drafted.',
+      day90: 'Turnkey deployment flow validated: document import → permission setup → Q&A interface working. POC completed at 1 enterprise customer (financial services). Compliance audit trail functional for EU AI Act/GDPR.',
+      successMetric: '1 POC success case, 3-week deployment time validated, compliance checklist complete'
+    },
+    {
+      dimension: 'Customer Validation',
+      day1: 'Target customer list (10 CSP + 10 enterprise). Initial outreach emails sent.',
+      day90: '2 MOUs signed (1 CSP for Remote Ops, 1 enterprise for RAG). Customer feedback incorporated into v1.1 roadmap. First customer testimonial recorded.',
+      successMetric: '2 signed MOUs, 1 customer testimonial, feedback loop established'
+    },
+    {
+      dimension: 'Sales Enablement',
+      day1: 'Draft pricing sheet. No sales training completed.',
+      day90: 'Sales deck v1.0 complete. Pricing model finalized (Remote Ops: NT$ 5M/year, RAG: NT$ 8-15M one-time + 20% support). First 5 sales engineers trained. Software attach rate tracking system live.',
+      successMetric: 'Sales team trained, pricing finalized, first NT$ 5-10M software order booked'
+    },
+    {
+      dimension: 'Financial Position',
+      day1: 'NT$ 65M budget approved. No revenue.',
+      day90: 'NT$ 45M invested (lab, recruitment, tools). NT$ 5-10M first software revenue booked. Path to NT$ 80M Year 1 revenue validated.',
+      successMetric: 'First revenue booked, burn rate on track, Year 1 NT$ 80M target achievable'
+    }
+  ],
+  
+  executiveSummary: {
+    day1: 'On Day 1, we have a budget approval and a plan.',
+    day90: 'On Day 90, we have a live customer, a working product, a hired team, and first revenue. The difference is execution velocity.',
+    keyTakeaway: '90 days is enough to prove the model works — but only if we start now. Every week of delay extends time-to-revenue by 2-3 weeks due to customer procurement cycles.'
+  },
+  
+  riskOfDelay: {
+    oneMonthDelay: 'Start Q3 instead of Q2 → First revenue Q1 2027 instead of Q4 2026 → Missed opportunity: NT$ 20-30M revenue delay',
+    threeMonthDelay: 'Start Q4 instead of Q2 → Competitor (Quanta/Wistron) announces software partnership first → Loss of first-mover advantage, customer perception of "following" not "leading"',
+    conclusion: 'The cost of delay is not just financial — it is reputational. First mover in OEM/ODM software space establishes credibility that followers must overcome with 2-3x proof.'
+  }
+};
+
 // Board-Ready Software Department Scorecard (Added 2026-03-19 by CoCo)
 // Purpose: Turn the software department argument from narrative into an operational review framework
 // Usage: Quarterly leadership reviews, board updates, go/no-go decisions
