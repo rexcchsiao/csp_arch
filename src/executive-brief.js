@@ -1057,3 +1057,28 @@ export const first90DaysPlan = {
   },
   boardMessage: '90 天後，董事會將看到：3 個客戶上線、NT$ 10-20M 訂單、35-40 人團隊、Remote Ops GA、RAG 產品化。若偏離此計畫超過 2 週，將主動觸發升級審查。'
 };
+
+// Why Hyperscalers Wont Solve This (Added 2026-03-20 by CoCo)
+// Purpose: Preemptively address board question: "Why wont AWS/Azure/GCP just do this themselves?"
+// Strategic insight: Hyperscalers have strong incentives NOT to solve on-premise software
+export const whyHyperscalersWontSolveThis = {
+  headline: "Strategic Moat: Why Hyperscalers Wont Cut Out Foxconn",
+  coreInsight: "Hyperscalers (AWS/Azure/GCP) make 60-70% gross margin on cloud consumption. On-premise software cannibalizes their cloud business. Foxconn wins by serving the 40% of market hyperscalers cannot serve without self-sabotage.",
+  hyperscalerIncentives: [
+    { incentive: "Cloud Cannibalization Risk", explanation: "Every on-premise GPU deployed reduces cloud consumption. AWS/Azure/GCP prefer customers use cloud GPUs (60-70% margin) vs. on-premise (hardware-only, low margin).", foxconnAdvantage: "Foxconn has no cloud to cannibalize; on-premise is our core business." },
+    { incentive: "Data Gravity Strategy", explanation: "Hyperscalers want data in their cloud (S3, Blob, GCS) to lock in analytics/AI workloads. On-premise data breaks this flywheel.", foxconnAdvantage: "Foxconn supports both on-premise and hybrid; neutral to data location." },
+    { incentive: "Consumption-Based Pricing", explanation: "AWS/Azure/GCP business model relies on pay-per-use. On-premise fixed pricing undermines this model.", foxconnAdvantage: "Foxconn can offer fixed-price on-premise + subscription without conflict." },
+    { incentive: "Vendor Lock-In Economics", explanation: "Hyperscaler software (SageMaker, Azure ML, Vertex AI) designed to increase switching costs. On-premise neutrality reduces lock-in.", foxconnAdvantage: "Foxconn neutral architecture (NVIDIA+AMD) reduces customer lock-in concerns." }
+  ],
+  marketSegmentation: {
+    hyperscalerSweetSpot: "Cloud-native workloads, elastic demand, no data residency constraints (60% of market)",
+    foxconnSweetSpot: "On-premise required, data residency, air-gap, brownfield integration, multi-vendor GPU (40% of market)",
+    foxconnMessage: "We are not trying to beat hyperscalers at their game. We are serving the 40% of market they cannot serve without self-sabotage."
+  },
+  competitiveDynamics: {
+    aws: { strategy: "Push customers to SageMaker + EC2 P5; on-premise only via Outposts (limited, AWS-managed)", weakness: "Outposts requires AWS management; cannot air-gap; data still flows to AWS", foxconnOpportunity: "True air-gap, no AWS dependency, full on-premise control" },
+    azure: { strategy: "Azure Arc for hybrid, but core value is Azure consumption; AKS/Azure ML designed for cloud", weakness: "Arc is cloud-first management; on-premise is secondary", foxconnOpportunity: "On-premise first, no cloud dependency, sovereign AI compliant" },
+    gcp: { strategy: "Anthos for hybrid, but GCP profitability depends on cloud consumption growth", weakness: "Anthos requires GCP connectivity for full features; limited air-gap support", foxconnOpportunity: "Full air-gap support, no GCP connectivity required" }
+  },
+  boardMessage: "董事會該記住：Hyperscaler 不是不能做 on-premise 軟體，而是不願做——因為這會侵蝕他們的雲端本業。Foxconn 的護城河不是技術，而是商業模式：我們沒有雲端業務需要保護，所以可以全心服務 on-premise 客戶。這是結構性優勢，不是戰術性優勢。"
+};
