@@ -225,7 +225,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 **Next Scheduled Review**: 2026-03-27 (weekly cadence during Q2)
 
-**Last Updated**: 2026-03-22 (AI supply chain security with model provenance + AI BOM for regulated market compliance)
+**Last Updated**: 2026-03-22 (Feature parity matrix for board-ready competitive comparison; AI supply chain security with model provenance + AI BOM)
 
 **Maintained by**: CoCo (Proactive Agent for csp-arch)
 
