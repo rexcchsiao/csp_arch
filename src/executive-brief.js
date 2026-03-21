@@ -20,6 +20,50 @@ export const executiveBrief = {
   
   // The Core Argument in One Sentence
   coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only. This is the difference between strategic partner and commodity supplier.",
+  // Top 5 Unsolved Pain Points (2026) - Industry-Wide Challenges Foxconn Software Solves
+  top5UnsolvedPainPoints: [
+    {
+      rank: 1,
+      painPoint: "GPU Stranded Capital",
+      currentReality: "40-60% of NT$ 10M+ GPU investments sit idle due to poor resource management",
+      foxconnSolution: "GPU virtualization + K8s-native scheduling with MIG/vGPU support",
+      quantifiedImpact: "Utilization from 40% → 85%, ROI from 36 → 14 months, NT$ 4-6M saved per 100-server cluster",
+      monetizableService: "Remote Ops Platform (Silver/Gold tier): NT$ 5-15M/year per datacenter"
+    },
+    {
+      rank: 2,
+      painPoint: "Deployment Delays",
+      currentReality: "2-4 weeks from hardware delivery to production workload",
+      foxconnSolution: "Pre-integrated AI software stack (CUDA/ROCm/TensorRT) + Helm Charts + validated blueprints",
+      quantifiedImpact: "Deployment from 25 days → 2 hours, revenue generation 22 days earlier",
+      monetizableService: "RAG Appliance (Professional/Enterprise): NT$ 15-30M one-time + 20% annual support"
+    },
+    {
+      rank: 3,
+      painPoint: "Remote Operations Gap",
+      currentReality: "70% of issues require on-site visit, 8-hour downtime per incident",
+      foxconnSolution: "Remote Ops toolchain: monitoring, diagnostics, predictive maintenance, remote repair",
+      quantifiedImpact: "On-site visits -70%, downtime -60%, saving NT$ 20M/year per 100-server cluster",
+      monetizableService: "Remote Ops Platform (all tiers): NT$ 1-15M/year depending on SLA"
+    },
+    {
+      rank: 4,
+      painPoint: "Energy Cost Crisis",
+      currentReality: "Power = 40%+ of TCO; traditional cooling wastes 15-25% energy",
+      foxconnSolution: "BMC-based PID control + K8s energy-aware scheduler + 800V power management",
+      quantifiedImpact: "PUE from 1.6 → 1.4, energy cost savings NT$ 8-12M/year per 1MW datacenter",
+      monetizableService: "Energy Optimization Suite: 30% of energy savings (performance-based pricing)"
+    },
+    {
+      rank: 5,
+      painPoint: "Sovereign AI Compliance",
+      currentReality: "EU AI Act, GDPR, PDPA mandate data residency; public cloud prohibited for sensitive workloads",
+      foxconnSolution: "Sovereign AI-in-a-Box: air-gapped RAG appliance with compliance audit trail",
+      quantifiedImpact: "Enables $50B+ sovereign AI market; 3-week deployment vs. 12-week custom build",
+      monetizableService: "RAG Appliance + Sovereign AI compliance package: NT$ 30M+ per deployment"
+    }
+  ],
+  boardMessage: "These 5 pain points represent NT$ 1.5B+ opportunity by 2028. Each is addressed by monetizable software services with 60-75% gross margin. Without software, Foxconn cannot solve these problems—and customers will turn to HPE, Dell, or NVIDIA for complete solutions.",
   
   // Why 2026 is the Inflection Point
   whyNow: [
