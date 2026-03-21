@@ -792,6 +792,73 @@ export const idealPilotCustomer = {
 };
 
 // Board Decision Card - What Leadership Needs to Approve Today (Added 2026-03-19 by CoCo)
+
+// Success Metrics by Customer Segment - Quantified Outcomes (Added 2026-03-22 by CoCo)
+// Purpose: Make the value proposition concrete by showing exactly what outcomes each customer type achieves
+// Format: Customer Segment → Their Priority → Foxconn Solution → Quantified Outcome → Board-Ready Quote
+export const successMetricsBySegment = {
+	headline: "Success Metrics by Customer Segment: What Each Customer Achieves",
+	segments: [
+		{
+			segment: "Tier-2 CSP (3-10 datacenters, 500-2000 GPUs)",
+			priority: "GPU utilization, remote operations, energy cost reduction",
+			currentMetrics: "40-60% GPU utilization, 2-4 week deployment, 70% on-site visit rate, PUE 1.6",
+			foxconnMetrics: "85%+ GPU utilization, 2-hour deployment, 30% on-site visit rate, PUE 1.4",
+			quantifiedOutcome: [
+				"GPU capacity effectively increases 42% (from 40% → 85% utilization)",
+				"Revenue generation accelerates 22 days per deployment",
+				"On-site maintenance labor reduced 70% (NT$ 8-12M/year savings)",
+				"Energy cost reduced 15-25% (NT$ 10-15M/year per 1MW datacenter)"
+			],
+			totalValue: "NT$ 20-30M/year operational savings + NT$ 50-100M revenue acceleration per 1000-GPU cluster",
+			boardQuote: "For a Tier-2 CSP, Foxconn software turns NT$ 500M GPU investment from 40% effective capacity to 85% effective capacity — that's NT$ 200M+ in avoided capital expenditure."
+		},
+		{
+			segment: "Enterprise AI (Financial Services, Healthcare, Manufacturing)",
+			priority: "Data sovereignty, compliance, turnkey deployment, permission governance",
+			currentMetrics: "Manual deployment, no permission governance, compliance risk, 3-6 month time-to-value",
+			foxconnMetrics: "Pre-integrated RAG appliance, RBAC, audit trail, 3-week deployment",
+			quantifiedOutcome: [
+				"Deployment from 3-6 months → 3 weeks (83% faster time-to-revenue)",
+				"100% data residency compliance (sovereign AI requirement)",
+				"Permission governance: 100% of queries auditable, role-based access control",
+				"No cloud egress fees: NT$ 5-10M/year savings vs. cloud AI services"
+			],
+			totalValue: "NT$ 15-25M/year in compliance risk reduction + cloud cost avoidance",
+			boardQuote: "For enterprise AI, Foxconn RAG Appliance means 'deploy AI in 3 weeks, not 6 months' — and pass regulatory audit with 100% data residency compliance."
+		},
+		{
+			segment: "Hyperscaler / Cloud Provider (Strategic Accounts)",
+			priority: "Brownfield integration, multi-vendor GPU support, remote SLA",
+			currentMetrics: "Mixed GPU fleet (NVIDIA+AMD), 400V power limits, manual capacity planning",
+			foxconnMetrics: "Unified management layer, 800V power optimization, AI capacity planning",
+			quantifiedOutcome: [
+				"Multi-vendor GPU utilization: 60% → 80% (NVIDIA+AMD unified scheduling)",
+				"800V power architecture enables 25% higher density per rack",
+				"Predictive capacity planning: 90% accuracy vs. 60% manual planning",
+				"Remote SLA: 99.9% uptime with 1-hour response time"
+			],
+			totalValue: "NT$ 30-50M/year in capacity optimization + deferred capital expenditure",
+			boardQuote: "For hyperscalers, Foxconn software means 'one management layer for NVIDIA+AMD, 25% higher rack density, and 99.9% SLA with remote ops.'"
+		},
+		{
+			segment: "Sovereign AI (Government, Defense, Critical Infrastructure)",
+			priority: "Air-gap deployment, supply chain security, local support",
+			currentMetrics: "No AI capability due to compliance constraints, or high-risk cloud dependency",
+			foxconnMetrics: "Full air-gap deployment, supply chain attestation, local engineering support",
+			quantifiedOutcome: [
+				"100% air-gap deployment (no internet dependency)",
+				"Supply chain attestation: 100% software Bill of Materials (SBOM) provided",
+				"Local support: 24x7 Taiwan-based engineering team",
+				"Sovereign compliance: EU AI Act, GDPR, local data residency laws"
+			],
+			totalValue: "Strategic value: National AI capability without foreign dependency; NT$ 50-100M in avoided compliance risk",
+			boardQuote: "For sovereign AI, Foxconn is the only vendor that can deliver 'full AI capability with zero cloud dependency and 100% data sovereignty.'"
+		}
+	],
+	crossSegmentInsight: "All segments share one common need: 'Time-to-Value'. Foxconn software reduces time-to-value from months/years to hours/weeks. This is the single most compelling board-level metric.",
+	boardMessage: "董事會該記住：不同客戶有不同的痛點，但他們都要『快速看到價值』。Foxconn 軟體的價值不是功能清單，而是把『數月到一年的導入期』壓縮到『數小時到數週』。這是純硬體廠商（Quanta）和純雲端廠商（AWS）都做不到的。"
+};
 export const boardDecisionCard = {
   headline: '今日董事會決策事項',
   context: '本簡報旨在爭取管理層對軟件部門投資的正式批准，以便 Q2 啟動組織設計、Q3 開始交付價值',
