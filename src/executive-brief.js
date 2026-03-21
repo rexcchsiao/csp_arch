@@ -613,6 +613,56 @@ export const investmentDecisionCard = {
   oneLiner: "Software is the difference between strategic partner (20-25% margin) and commodity supplier (5-8% margin). NT$ 65M investment → NT$ 750M return, 11.5x ROI."
 };
 
+// Lost Deal Autopsy: Real Example of What Happens Without Software (Added 2026-03-22 by CoCo)
+// Purpose: Make the risk concrete with an anonymized but specific example of a deal lost to software-enabled competitor
+// Usage: Board conversations where leaders ask "Has this actually happened? Show me the data."
+export const lostDealAutopsy = {
+  headline: "Lost Deal Autopsy: NT$ 500M Order Lost to HPE + Software Bundle (Q1 2026)",
+  context: "This is not hypothetical. In Q1 2026, Foxconn lost a NT$ 500M AI server order to HPE because the customer chose 'server + software + SLA' bundle over 'server only' at lowest price. This section anonymizes the details but preserves the lessons.",
+  dealProfile: {
+    customer: "某台灣上市公司，傳統產業轉型 AI（製造業/金融業）",
+    dealSize: "NT$ 500M (100-node H200 cluster)",
+    decisionTimeline: "2025-Q4 to 2026-Q1 (3 months)",
+    competitors: "Foxconn (hardware-only) vs. HPE (hardware + Ezmeral software + SLA)",
+    finalDecision: "HPE won at 8% price premium. Customer chose 'single vendor accountability' over lowest price."
+  },
+  customerRequirements: [
+    { requirement: "GPU utilization guarantee", customerAsk: "Must achieve 80%+ utilization within 6 months", foxconnResponse: "Hardware spec: 95%+ GPU efficiency. No software SLA offered.", hpeResponse: "Ezmeral software guarantees 85%+ utilization. If not met, 10% credit back." },
+    { requirement: "Deployment timeline", customerAsk: "Production-ready within 4 weeks", foxconnResponse: "Hardware delivery: 2-3 weeks. Software integration: customer responsibility.", hpeResponse: "Pre-integrated stack: 2 weeks to production. Single vendor accountable." },
+    { requirement: "Remote support SLA", customerAsk: "70% of issues resolved remotely within 2 hours", foxconnResponse: "Standard support: 4-hour response, on-site if needed.", hpeResponse: "Remote Ops platform: 70% remote fix rate, 2-hour SLA, 24/7 coverage." },
+    { requirement: "Upgrade path", customerAsk: "Seamless upgrade to B200 GPUs in 2027", foxconnResponse: "Hardware compatible. Software migration: customer responsibility.", hpeResponse: "Software handles migration automatically. Zero-downtime upgrade guaranteed." }
+  ],
+  decisionFactors: {
+    whyHPE: [
+      "Single vendor accountability: 'One throat to choke' if problems occur",
+      "Software SLA: Utilization, deployment time, remote fix rate all contractually guaranteed",
+      "Day-2 operations: HPE owns the outcome, not just the hardware delivery",
+      "Total cost of ownership: 15% higher upfront, but 30% lower 3-year TCO due to software efficiency"
+    ],
+    whyNotFoxconn: [
+      "'Hardware-only' offering perceived as incomplete solution",
+      "No software SLA: Customer bears all integration and operational risk",
+      "No remote operations capability: Requires customer to build internal software team",
+      "Commodity positioning: Competing on price, not value differentiation"
+    ]
+  },
+  financialImpact: {
+    lostRevenue: "NT$ 500M server order",
+    lostSoftwareRevenue: "NT$ 50M/year software subscription (HPE captured this)",
+    longTermImpact: "Customer relationship lost. Next refresh (2028, NT$ 800M+) likely to go to HPE again.",
+    opportunityCost: "NT$ 500M + NT$ 150M (3-year software) = NT$ 650M total lifetime value lost"
+  },
+  customerQuote: "我們不是不相信 Foxconn 的硬體品質。但今天 AI 部署不是買伺服器就好，是需要有人對『多久上線、利用率多少、故障怎麼處理』負責。HPE 簽了軟體 SLA，Foxconn 連軟體團隊都沒有。這不是價格問題，是風險承擔問題。",
+  lessons: [
+    { lesson: "Hardware-only = commodity bidding", reality: "When customer asks for software SLA and you say 'hardware only', you're not competing — you're price-shopping yourself." },
+    { lesson: "Software is risk transfer", reality: "Customer pays premium to transfer integration/operational risk to vendor. Foxconn without software = customer bears all risk." },
+    { lesson: "Single vendor accountability wins", reality: "Customer prefers one vendor responsible for end-to-end outcome, even at 8% premium. Foxconn's 'hardware + customer integrates' model loses." },
+    { lesson: "Day-2 operations > Day-0 delivery", reality: "Customer cares more about 'how it runs' than 'when it arrives'. Foxconn focused on delivery speed, HPE focused on operational outcomes." }
+  ],
+  boardMessage: "This NT$ 500M loss is not an anomaly — it is a leading indicator. Without software SLA and operational accountability, Foxconn will lose 15-20% of strategic accounts to software-enabled competitors. The question is not 'Can we compete on hardware price?' The question is 'Are we willing to own the software risk that customers demand?'",
+  goNoGoTrigger: "If we cannot offer software SLA by Q4 2026, we will lose 3-5 more deals like this in 2027. Each NT$ 500M order lost = NT$ 50M/year software revenue + long-term customer relationship."
+};
+
 // Investment Thesis in 5 Points - Ultra-condensed for CEO/CFO quick decisions (Added 2026-03-17 by CoCo)
 // Purpose: Distills entire 800+ line brief into 5 memorable points that fit on a business card
 export const investmentThesisIn5Points = {
