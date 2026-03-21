@@ -200,6 +200,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 | Date | Change | Rationale |
 |------|--------|---------|
+| 2026-03-21 | Added Board FAQ section with top 10 questions and data-backed answers (q1-q10) | Strengthens board presentation defensibility; preemptively answers toughest questions on talent, competition, financials, and execution risk with sourced data |
 | 2026-03-21 | Added service tier structure with pricing (Bronze/Silver/Gold for Remote Ops and RAG Appliance) | Makes revenue model concrete for board; shows clear path to NT$ 750M Year 3 with tiered pricing that allows customers to self-select based on budget; Gold drives margin, Silver drives volume, Bronze builds install base |
 | 2026-03-20 | Added Day 1 vs. Day 90 concrete milestone comparison for leadership visualization | Makes the 90-day plan tangible and visualizable; shows exactly what "success looks like" across 6 dimensions (team, Remote Ops, RAG, customer validation, sales enablement, financials) |
 | 2026-03-17 | Fixed competitive landscape view bindings so unsolved pain points, strategic asks, and success metrics render correctly | Restores several leadership-critical arguments that were present in data but not visible in the UI |
