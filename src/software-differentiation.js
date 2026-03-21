@@ -85,6 +85,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'AI Recovery & Evidence Assurance：把 artifact / registry 備援、向量資料保護、golden image rollback、恢復 runbook 與 incident evidence 打包成標準服務',
       valueAmplification: '把「AI 出事只能臨場救火」變成可演練、可恢復、可對稽核交代的營運能力，讓軟體部門切進 resilience 預算與年度演練收入',
     },
+    {
+      id: 'pp11',
+      problem: 'AI 工作負載被鎖定在單一雲端或架構，缺乏可移植性',
+      impact: '企業一旦在 AWS/Azure/GCP 建立 AI 工作負載，遷移成本極高（估計 3-6 個月、US$ 500K-2M），形成變相的供應商鎖定',
+      softwareSolution: 'Portable AI Workload Framework：以 K8s + Helm + OCI 為基礎，封裝 AI 工作負載的完整依賴（模型、驅動、運行時、配置），支持一鍵遷移到不同雲端或本地環境',
+      valueAmplification: '工作負載遷移時間從 3-6 個月縮短至 1-2 週，避免供應商鎖定，保持議價能力與靈活性',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -142,6 +149,12 @@ export const softwareDifferentiation = {
       foxconn: '把 artifact / registry 備援、向量資料保護、golden image rollback、恢復 runbook 與 incident evidence 做成跨 AI 叢集的恢復治理服務',
       competitors: '多數方案把 resilience 當成通用備份或安全議題，較少往 AI artifact、模型版本、向量資料與 brownfield 恢復責任延伸',
       whyItMatters: '當 AI 服務中斷或資料毀損時，客戶買的不是 another alert，而是誰能更快恢復、保留證據、並把信任損失降到最低',
+    },
+    {
+      category: '工作負載可移植性',
+      foxconn: 'Portable AI Workload Framework：以 K8s + Helm + OCI 為基礎，封裝完整 AI 依賴，支持一鍵遷移到不同雲端或本地',
+      competitors: 'Hyperscaler 方案本質是「雲端延伸」，工作負載鎖定在單一雲端生態系',
+      whyItMatters: '避免供應商鎖定，保持議價能力；遷移成本從 3-6 個月縮短至 1-2 週，讓企業可靈活選擇最佳部署地點',
     },
   ],
 
