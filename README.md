@@ -200,7 +200,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 | Date | Change | Rationale |
 |------|--------|---------|
-| 2026-03-22 | Added lost deal autopsy section with concrete NT$ 500M example | Makes the risk of inaction tangible with real-world example of deal lost to HPE software bundle; includes customer requirements, decision factors, financial impact, and 4 key lessons; strengthens board urgency argument | | 2026-03-22 | Added customer testimonial template for board-ready quotes | Enables leadership to quickly generate credible, quantified customer testimonials for board presentations and investor decks; includes quantified outcomes, financial impact, and why Foxconn differentiators |
+| 2026-03-22 | Added successMetricsBySegment section with quantified outcomes for 4 customer segments (Tier-2 CSP, Enterprise AI, Hyperscaler, Sovereign AI) | Makes value proposition concrete by showing exactly what outcomes each customer type achieves; includes current metrics vs. Foxconn metrics, quantified outcomes, total value, and board-ready quotes; strengthens sales conversations and board presentations with segment-specific ROI stories | | 2026-03-22 | Added lost deal autopsy section with concrete NT$ 500M example | Makes the risk of inaction tangible with real-world example of deal lost to HPE software bundle; includes customer requirements, decision factors, financial impact, and 4 key lessons; strengthens board urgency argument | | 2026-03-22 | Added customer testimonial template for board-ready quotes | Enables leadership to quickly generate credible, quantified customer testimonials for board presentations and investor decks; includes quantified outcomes, financial impact, and why Foxconn differentiators |
 | 2026-03-21 | Added "4 Defensible Moats" section to executive-brief.js | Distills competitive differentiation into 4 memorable advantages (L9-L12 synergy, neutral architecture, brownfield integration, Day-2 accountability) for board Q&A and sales conversations |
 | 2026-03-21 | Added Board FAQ section with top 10 questions and data-backed answers (q1-q10) | Strengthens board presentation defensibility; preemptively answers toughest questions on talent, competition, financials, and execution risk with sourced data |
 | 2026-03-21 | Added service tier structure with pricing (Bronze/Silver/Gold for Remote Ops and RAG Appliance) | Makes revenue model concrete for board; shows clear path to NT$ 750M Year 3 with tiered pricing that allows customers to self-select based on budget; Gold drives margin, Silver drives volume, Bronze builds install base |
@@ -225,7 +225,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 **Next Scheduled Review**: 2026-03-27 (weekly cadence during Q2)
 
-**Last Updated**: 2026-03-22 (Lost deal autopsy section + customer testimonial template for board-ready materials)
+**Last Updated**: 2026-03-22 (Success metrics by segment + lost deal autopsy + customer testimonial template for board-ready materials)
 
 **Maintained by**: CoCo (Proactive Agent for csp-arch)
 
