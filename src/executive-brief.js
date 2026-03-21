@@ -347,6 +347,87 @@ export const partnershipOnlyRisk = {
 };
 
 
+// Feature Parity Matrix: Board-Ready Competitive Comparison (Added 2026-03-22 by CoCo)
+// Purpose: One-page visual showing exactly where Foxconn wins/loses vs. key competitors
+// Usage: Board Q&A, sales enablement, competitive positioning conversations
+export const featureParityMatrix = {
+  headline: "Feature Parity Matrix: Foxconn vs. Competitive Alternatives",
+  coreInsight: "Foxconn is the ONLY vendor offering full-stack capability (L9-L12) + neutral architecture + brownfield integration + Day-2 accountability. Competitors force trade-offs.",
+  features: [
+    {
+      feature: "Multi-GPU Vendor Support",
+      description: "Support NVIDIA + AMD + future architectures without lock-in",
+      foxconn: "✅ Yes (CUDA + ROCm)",
+      nvidia: "❌ NVIDIA only",
+      hpe: "⚠️ Limited (vendor-dependent)",
+      quanta: "⚠️ Hardware only, no orchestration",
+      whyItMatters: "Customers avoid single-vendor dependency; can mix GPU types based on workload/cost"
+    },
+    {
+      feature: "L9-L12 Full-Stack Integration",
+      description: "Firmware (L9-L10) + OS/Container (L11) + Orchestration (L12)",
+      foxconn: "✅ Yes (custom BMC, BIOS, K8s)",
+      nvidia: "⚠️ L11-L12 only (no firmware)",
+      hpe: "⚠️ Partial (proprietary firmware)",
+      quanta: "❌ Hardware only",
+      whyItMatters: "800V power management, energy optimization require L9-L10 access pure software vendors cannot replicate"
+    },
+    {
+      feature: "Brownfield Integration",
+      description: "Integrate with existing BMC/DCIM/alarm systems",
+      foxconn: "✅ Yes (Redfish/OpenBMC adapters)",
+      nvidia: "❌ Greenfield only (DGX Cloud)",
+      hpe: "⚠️ HPE hardware only",
+      quanta: "❌ No software layer",
+      whyItMatters: "Customers have 3-5 year refresh cycles; brownfield reduces deployment risk and cost"
+    },
+    {
+      feature: "Remote Operations SLA",
+      description: "70% remote fix rate, 2-hour response, 99.9% uptime",
+      foxconn: "✅ Yes (Gold tier)",
+      nvidia: "⚠️ Software support only",
+      hpe: "✅ Yes (but HPE-only)",
+      quanta: "❌ No operational accountability",
+      whyItMatters: "Day-2 accountability: single throat to choke for hardware + software + operations"
+    },
+    {
+      feature: "Sovereign AI Compliance",
+      description: "Air-gapped deployment, data residency, audit trail",
+      foxconn: "✅ Yes (RAG Appliance + air-gap pipeline)",
+      nvidia: "❌ Cloud-dependent for many features",
+      hpe: "⚠️ Partial (requires cloud for updates)",
+      quanta: "❌ No software offering",
+      whyItMatters: "EU AI Act, GDPR, PDPA create $50B+ compliance-driven market hyperscalers cannot serve"
+    },
+    {
+      feature: "Energy Optimization",
+      description: "PUE reduction via BMC-based cooling + workload scheduling",
+      foxconn: "✅ Yes (15-25% savings)",
+      nvidia: "⚠️ DGX Cloud only",
+      hpe: "⚠️ HPE hardware only",
+      quanta: "❌ No software control",
+      whyItMatters: "Power = 40%+ of TCO; energy efficiency is now a competitive differentiator"
+    },
+    {
+      feature: "Recurring Revenue Model",
+      description: "Subscription/annuity revenue (60-75% gross margin)",
+      foxconn: "✅ Yes (Remote Ops + RAG)",
+      nvidia: "❌ One-time hardware + support",
+      hpe: "⚠️ Partial (support contracts)",
+      quanta: "❌ Hardware only (5-8% margin)",
+      whyItMatters: "Subscription model = predictable revenue, higher valuation multiples, customer lock-in"
+    }
+  ],
+  competitivePositioning: {
+    foxconn: "Full-stack capability + neutral architecture + operational accountability",
+    nvidia: "Best for NVIDIA-only, DGX Cloud deployments (vendor lock-in)",
+    hpe: "Best for HPE shops wanting integrated hardware+software (proprietary ecosystem)",
+    quanta: "Hardware-only commodity supplier (5-8% margin)"
+  },
+  boardMessage: "Feature parity is not the goal — strategic differentiation is. Foxconn wins by offering what competitors cannot: neutral full-stack capability with Day-2 accountability. The matrix shows 7 critical features; Foxconn leads in 6, ties in 1. This is the defensible moat.",
+  salesUse: "When customer asks 'Why not Quanta/Wistron?', show this matrix. The answer is not price — it's capability depth and operational accountability."
+};
+
 // Market Validation: Industry Leaders Prove Software is the Product (Added 2026-03-21 by CoCo)
 // Critical insight: This is not Foxconn making things up. From NVIDIA to HPE to Nutanix, official messaging emphasizes deployment speed, full-stack observability, lifecycle governance, and building management integration — not raw hardware specs. This validates that software is what turns hardware into operable outcomes.
 export const marketValidation = {
@@ -1672,4 +1753,4 @@ revenueProjection: 'Year 2: NT$ 30M (10 enterprise customers × NT$ 3M/year)'
 boardMessage: 'AI supply chain security is not optional for regulated industries. By 2027, enterprises will not be able to deploy AI without model provenance and AI BOM documentation. Foxconn RAG Appliance with built-in AI supply chain security becomes the default choice for finance, healthcare, and government customers — markets representing $50B+ opportunity. This is not just compliance; it is competitive differentiation that pure hardware vendors (Quanta, Wistron) cannot replicate.'
 };
 
-export default { executiveBrief, boardFAQ, aiSupplyChainSecurity };
+export default { executiveBrief, boardFAQ, aiSupplyChainSecurity, featureParityMatrix };
