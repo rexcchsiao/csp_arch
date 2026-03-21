@@ -259,6 +259,46 @@ export const executiveBrief = {
   }};
 
 
+
+// Talent Acquisition Strategy - Addressing "Can Foxconn Attract Top Software Talent?" (Added 2026-03-21 by CoCo)
+// Common board question: How can Foxconn compete with tech giants for AI/software talent?
+export const talentStrategy = {
+  headline: "Talent Strategy: Competing for Top Software Talent",
+  coreInsight: "Foxconn cannot out-Google Google. But we can offer what tech giants cannot: hardware+software integration at scale, direct customer impact, and the chance to build something from the ground up.",
+  competitivePositioning: {
+    challenge: "Tech giants (Google, NVIDIA, Microsoft) offer higher base salaries and brand recognition",
+    foxconnAdvantage: [
+      { dimension: "Impact Scope", techGiant: "Optimize existing systems, narrow scope", foxconn: "Build from zero to one, full-stack ownership (L9-L12)" },
+      { dimension: "Hardware Integration", techGiant: "Software-only or cloud-only", foxconn: "Deep hardware+software synergy (800V power, BMC, firmware)" },
+      { dimension: "Customer Proximity", techGiant: "Indirect, abstracted", foxconn: "Direct CSP customer engagement, visible business impact" },
+      { dimension: "Career Growth", techGiant: "Promotion queue, established hierarchy", foxconn: "Founding team, rapid growth trajectory, equity upside" },
+      { dimension: "Work Flexibility", techGiant: "Increasingly rigid RTO policies", foxconn: "Remote-first for software roles, global talent pool" }
+    ]
+  },
+  recruitmentStrategy: {
+    phase1: { name: "Foundation (Q3 2026)", target: "15-20 FTE", keyHires: ["L9-L10 Firmware Lead (ex-NVIDIA/Dell)", "K8s Platform Lead (ex-CSP or Red Hat)", "Remote Ops Product Lead (ex-HPE/Schneider)"], approach: "Targeted recruitment from partners (Red Hat, Canonical, NVIDIA ecosystem) + internal transfer from Foxconn IT", budget: "NT$ 8-12M/year (average NT$ 600K-800K/FTE fully loaded)" },
+    phase2: { name: "Scale (Q4 2026-Q2 2027)", target: "30-40 FTE", keyHires: ["RAG/Vector DB Specialist", "AI/ML Operations Engineer", "Security & Compliance Lead"], approach: "University partnerships (NTU, NCTU, NTHU), ex-startup founders, returnee talent from US/China tech hubs", budget: "NT$ 20-25M/year" },
+    phase3: { name: "Maturity (Q3 2027+)", target: "50-80 FTE", keyHires: ["Regional PMs (US, EU, APAC)", "Sales Engineers (pre-sales support)", "Customer Success Managers"], approach: "Established brand, referral network, internal promotion pipeline", budget: "NT$ 40-55M/year" }
+  },
+  retentionStrategy: {
+    equity: "Stock options tied to software revenue milestones (not hardware volume)",
+    continuousLearning: "Conference budget (NT$ 200K/FTE/year), certification sponsorship (CKA, RHCE, NVIDIA certifications)",
+    careerPath: "Dual track: Technical (L9→L12 architect) and Management (Team Lead→VP Software)",
+    culture: "Software-first mindset within hardware company: separate evaluation criteria, agile processes, 20% innovation time"
+  },
+  riskMitigation: {
+    "Key person dependency": "Documentation requirements, pair programming, cross-training; no single point of failure",
+    "Burnout from rapid scaling": "Phased hiring (not big-bang), mental health support, realistic milestone setting",
+    "Culture clash (software vs. hardware mindset)": "Separate software division with distinct KPIs, agile processes, and evaluation criteria"
+  },
+  successMetrics: {
+    year1: "15-20 FTE hired, <15% attrition rate, 80%+ hiring manager satisfaction",
+    year2: "30-40 FTE, <12% attrition, 50%+ internal promotion rate for leadership roles",
+    year3: "50-80 FTE, <10% attrition (below industry average), established university pipeline"
+  },
+  boardMessage: "Talent is the #1 execution risk. But with the right value proposition (impact, growth, flexibility) and competitive compensation (market salary + equity + culture), Foxconn can attract and retain top software talent. The key is treating software as a distinct business, not an IT function."
+};
+
 // Technical Validation - Third-Party Benchmarks & Standards Compliance (Added 2026-03-20 by CoCo)
 // Addresses "Can Foxconn actually deliver?" concern with measurable technical criteria
 export const technicalValidation = {
