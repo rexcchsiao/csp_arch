@@ -43,6 +43,41 @@ This presentation covers:
 - **ROI**: 11.5x return by Year 3, 18-24 month payback period
 - **Risk of Inaction**: NT$ 1.5B+ opportunity loss by 2028 (commoditization at 5-8% margin)
 
+
+---
+
+## 💰 Service Tiers & Pricing (Added 2026-03-21)
+
+### Remote Ops Platform - Tiered subscription for datacenter operations
+
+| Tier | Price | Target Customer | Key Capabilities | Margin |
+|------|-------|-----------------|------------------|--------|
+| **Bronze** | NT$ 1M/year/datacenter | SMB with 1-2 datacenters | Real-time monitoring, email alerts, daily reports, 8x5 support | 60-65% |
+| **Silver** | NT$ 5M/year/datacenter | Mid-size CSP (3-10 datacenters) | Predictive alerts (85% accuracy), remote diagnosis/repair (70% fix rate), 24x7 support, 4hr SLA | 70-75% |
+| **Gold** | NT$ 15M/year/datacenter | Enterprise/Hyperscaler (10+ datacenters) | AI capacity planning, automated remediation, dedicated engineer, 1hr SLA, 99.9% uptime | 75-80% |
+
+**Revenue Path**: Year 1: 7 customers (NT$ 50M) → Year 3: 180 customers (NT$ 600M)
+
+### RAG Appliance (Private AI Knowledge Base) - Turnkey on-premise AI for enterprise/SMB
+
+| Tier | Price | Target Customer | Key Capabilities | Margin |
+|------|-------|-----------------|------------------|--------|
+| **Starter** | NT$ 8M one-time + 20%/yr | SMB (50-200 employees) | 100K documents, basic permissions, 10 users, 3-week deployment | 55-60% |
+| **Professional** | NT$ 15M one-time + 20%/yr | Enterprise (200-2000 employees) | 1M documents, RBAC, 100 users, hybrid search, audit trail, 4-6 week deployment | 65-70% |
+| **Enterprise** | NT$ 30M+ one-time + 15%/yr | Large enterprise/Government (2000+) | Unlimited docs, multi-tenant, custom fine-tuning, air-gap, sovereign AI compliance, 8-12 week deployment | 70-75% |
+
+**Revenue Path**: Year 1: 3 deployments (NT$ 30M) → Year 3: 25 deployments (NT$ 150M)
+
+### Path to NT$ 750M Year 3 Revenue
+
+| Year | Remote Ops | RAG Appliance | Total Software Revenue | Attachment Rate |
+|------|------------|---------------|----------------------|-----------------|
+| Year 1 | NT$ 50M | NT$ 30M | **NT$ 80M** | 5% |
+| Year 2 | NT$ 200M | NT$ 50M | **NT$ 250M** | 12% |
+| Year 3 | NT$ 600M | NT$ 150M | **NT$ 750M** | 20% |
+
+**Board Message**: Tiered pricing allows customers to self-select based on budget. Gold drives margin, Silver drives volume, Bronze builds install base.
+
 ## 🚀 Quick Start
 
 ```bash
