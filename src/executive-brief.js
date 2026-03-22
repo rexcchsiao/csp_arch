@@ -19,7 +19,16 @@ export const executiveBrief = {
   },
   
   // The Core Argument in One Sentence
-  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only. This is the difference between strategic partner and commodity supplier.",
+  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-8% hardware-only. This is the difference between strategic partner and commodity supplier.",
+  // The "Killing Argument" - One-Liner for Board Members to Repeat
+  killingArgument: {
+    headline: "The One-Liner Every Board Member Should Remember",
+    statement: "Hardware gets us invited to the bid. Software wins the deal—and determines whether we're a strategic partner (20-25% margin) or a commodity supplier (5-8% margin).",
+    whyItMatters: "By 2028, customers won't ask 'Does Foxconn have software?' They'll ask 'Why doesn't Foxconn's software do X?' The question is no longer IF software matters, but HOW FAST we can ship it.",
+    historicalPrecedent: "Quanta's AI server business (2024-2025): No software differentiation → 8-12% hardware margins → lost strategic accounts to NVIDIA DGX Cloud and hyperscaler one-stop solutions.",
+    foxconnAdvantage: "Only OEM/ODM with full-stack L9-L12 capability, neutral architecture (NVIDIA+AMD), and brownfield integration. Competitors can copy features, but cannot replicate hardware+software synergy without destroying their existing business models.",
+    boardAsk: "Approve NT$ 65M/year software investment now, or approve NT$ 1.5B opportunity loss by 2028. The window closes Q4 2027."
+  },
   // Top 5 Unsolved Pain Points (2026) - Industry-Wide Challenges Foxconn Software Solves
   top5UnsolvedPainPoints: [
     {
