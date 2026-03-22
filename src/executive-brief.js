@@ -1955,4 +1955,51 @@ export const competitiveResponsePlaybook = {
   boardMessage: '競爭對手的每一步都在預期中。Foxconn 的優勢不是「預測未來」，而是「準備好回應任何未來」。此 playbook 確保銷售團隊、產品團隊、董事會都有統一的回應策略，避免臨時應對導致訊息混亂。'
 };
 
-export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook };
+
+// Customer Testimonial Template - Board-Ready Quotes (Added 2026-03-22 by CoCo)
+// Purpose: Enable sales team to quickly generate credible, quantified customer testimonials for board presentations
+// Usage: After successful pilot/deployment, use this template to capture customer quotes with specific metrics
+export const customerTestimonialTemplate = {
+  headline: "Customer Testimonial Template: Board-Ready Quotes",
+  coreInsight: "Board members trust customer voices more than internal claims. Quantified testimonials with specific metrics (utilization %, deployment time, cost savings) are 3-5x more persuasive than generic praise.",
+  template: {
+    customerProfile: {
+      company: "[Customer Name - e.g., Tier-2 CSP in APAC]",
+      industry: "[CSP / Enterprise AI / Financial Services / Healthcare]",
+      deploymentScale: "[e.g., 100-node H200 cluster, 2 datacenters]",
+      deploymentDate: "[e.g., Q2 2026]",
+      foxconnSolution: "[Remote Ops Platform Silver Tier / RAG Appliance Professional]"
+    },
+    quantifiedOutcomes: [
+      { metric: "GPU Utilization", before: "[40-60%]", after: "[85%+]", improvement: "[+42%]", businessImpact: "[40% more AI workloads on same hardware, ROI from 36 → 14 months]" },
+      { metric: "Deployment Time", before: "[2-4 weeks]", after: "[2 hours]", improvement: "[-99%]", businessImpact: "[Revenue generation starts 22 days earlier]" },
+      { metric: "Remote Resolution Rate", before: "[30%]", after: "[70%]", improvement: "[+133%]", businessImpact: "[NT$ 15M/year saved in on-site support labor]" },
+      { metric: "Downtime per Incident", before: "[8 hours]", after: "[2 hours]", improvement: "[-75%]", businessImpact: "[NT$ 2-5M saved per incident (based on NT$ 6-12M/month AI workload value)]" },
+      { metric: "Energy Efficiency (PUE)", before: "[1.6]", after: "[1.4]", improvement: "[-12.5%]", businessImpact: "[NT$ 8-12M/year saved per 1MW datacenter]" }
+    ],
+    financialImpact: {
+      totalSavings3Year: "NT$ [215M] (based on 100-node H200 cluster)",
+      paybackPeriod: "[14 months] (vs. 36 months without Foxconn software)",
+      roi: "[11.5x] (vs. 3-5x industry average)"
+    },
+    boardReadyQuote: "[Quote from customer CTO/VP Infrastructure]:",
+    quoteTemplate: "『We chose Foxconn not just for hardware, but for the software differentiation. [Specific outcome: e.g., GPU utilization from 40% to 85%] means we can run [40% more workloads] on the same hardware. The [Remote Ops Platform] reduced our on-site visits by [70%] — at 3 AM, that's the difference between sleeping and driving to the datacenter. For any CSP evaluating AI infrastructure, the question isn't 'Does Foxconn have software?' It's 'Can we afford NOT to have this software?'』",
+    whyFoxconn: "[1-2 sentences on why customer chose Foxconn over competitors]:",
+    whyTemplate: "『We evaluated [NVIDIA Mission Control / HPE Private Cloud AI]. Foxconn won because: (1) Neutral architecture (NVIDIA+AMD), (2) L9-L12 full-stack integration, (3) Single vendor accountability. No finger-pointing when issues arise.』"
+  },
+  usage: {
+    forBoardPresentations: "Include 1-2 customer testimonials in every board deck. Update quarterly with latest deployments.",
+    forSalesDecks: "Use template to capture testimonials immediately after successful pilot. Don't wait for formal case study.",
+    forCompetitiveBakeOffs: "When competitor claims 'we have software too,' respond with quantified customer outcomes, not feature lists."
+  },
+  bestPractices: [
+    { practice: "Get specific numbers", example: "Not 'improved utilization' but 'from 40% to 85%' — board members trust specific numbers" },
+    { practice: "Include before/after comparison", example: "Show the pain point (before) and the outcome (after) — makes the value tangible" },
+    { practice: "Quote real people", example: "CTO/VP Infrastructure quotes carry more weight than anonymous 'customer feedback'" },
+    { practice: "Update quarterly", example: "Old testimonials lose credibility. Refresh every quarter with latest deployments" },
+    { practice: "Capture video when possible", example: "2-minute video testimonial > 10 pages of slides. Record at customer site visits." }
+  ],
+  riskIfMissing: "Without customer testimonials, board members may perceive software claims as 'vaporware' or 'PowerPoint features.' Real customer voices validate the strategy."
+};
+
+export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate };
