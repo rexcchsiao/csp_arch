@@ -691,7 +691,7 @@ export const q1_2026CompetitiveMoves = {
   }
 };
 
-export default competitiveLandscape;
+
 
 // The Foxconn Moat: What Competitors Cannot Replicate (Added 2026-03-17 by CoCo)
 // Distills the core strategic insight into 3 defensible capabilities
@@ -922,4 +922,128 @@ export const emergingTrends2026_2027 = {
     ],
     boardMessage: 'These trends are not optional features — they are the market redefining what "AI infrastructure" means. Foxconn must lead with software-encoded operational expertise, or be relegated to commodity hardware supplier.'
   }
+};
+
+// Sales Battle Cards: Quick Reference for Customer Conversations (Added 2026-03-22 by CoCo)
+// Purpose: Enable sales teams to quickly counter competitor claims with data-backed responses
+// Usage: Print as pocket cards or embed in sales enablement materials
+export const salesBattleCards = {
+  headline: 'Sales Battle Cards: When Customer Mentions Competitor X',
+  introduction: 'These battle cards provide quick, data-backed responses when customers mention competitor solutions. Each card follows: Competitor Claim → Foxconn Counter → Proof Point → Close.',
+  
+  battleCards: [
+    {
+      competitor: 'NVIDIA Mission Control',
+      customerMightSay: 'We are evaluating NVIDIA Mission Control for our AI factory.',
+      foxconnCounter: 'Mission Control is excellent for DGX Cloud deployments. But if you need on-premise, multi-vendor (NVIDIA+AMD), or sovereign AI compliance, Foxconn provides the neutral infrastructure layer.',
+      keyDifferentiators: [
+        'Mission Control optimized for DGX Cloud; Foxconn optimized for on-premise + air-gap',
+        'Mission Control = NVIDIA-only; Foxconn = NVIDIA + AMD (no vendor lock-in)',
+        'Mission Control = cloud-dependent; Foxconn = sovereign AI compliant (data residency guaranteed)'
+      ],
+      proofPoint: 'Tier-2 CSP customer chose Foxconn over Mission Control because "we need 100% on-premise deployment for data sovereignty, and we want option to use AMD GPUs for cost-sensitive workloads."',
+      close: 'Are you planning to run only NVIDIA GPUs on-premise, or do you want the flexibility to use AMD for certain workloads?'
+    },
+    
+    {
+      competitor: 'HPE Private Cloud AI',
+      customerMightSay: 'HPE is offering us a bundled deal with Ezmeral software included.',
+      foxconnCounter: 'HPE is a solid choice if you are standardizing on HPE hardware. But if you want brownfield integration (existing infrastructure), multi-vendor GPU support, and Day-2 operational accountability, Foxconn is the better fit.',
+      keyDifferentiators: [
+        'HPE requires HPE hardware; Foxconn integrates with your existing infrastructure',
+        'HPE = proprietary ecosystem; Foxconn = open standards (Redfish, OpenBMC)',
+        'HPE = Day-1 deployment focus; Foxconn = Day-2 lifecycle governance (upgrades, rollback, maintenance windows)'
+      ],
+      proofPoint: 'NT$ 500M deal lost in Q1 2026 because we offered hardware-only. With software SLA, we win on brownfield integration and multi-vendor support.',
+      close: 'Is HPE requiring you to rip-and-replace existing infrastructure, or can they integrate with what you already have?'
+    },
+    
+    {
+      competitor: 'Dell + Red Hat OpenShift AI',
+      customerMightSay: 'Dell is partnering with Red Hat to provide OpenShift AI.',
+      foxconnCounter: 'Dell + Red Hat is a strong combination for enterprises already standardized on Red Hat. But if you need L9-L12 firmware-level integration, 800V power optimization, or facility-aware operations, Foxconn has the full-stack advantage.',
+      keyDifferentiators: [
+        'Dell/Red Hat = L11-L12 software only; Foxconn = L9-L12 full-stack (firmware + orchestration + AI framework)',
+        'Dell = NVIDIA ecosystem; Foxconn = neutral (NVIDIA + AMD)',
+        'Dell = IT infrastructure focus; Foxconn = datacenter facility integration (power, cooling, 800V architecture)'
+      ],
+      proofPoint: 'Customer deployed Foxconn Remote Ops + 800V power management, achieving 15-25% energy savings that pure software stack cannot replicate.',
+      close: 'Do you need just the software layer, or do you want someone who can optimize from the firmware level up to the AI framework?'
+    },
+    
+    {
+      competitor: 'AWS/Azure/GCP Cloud AI',
+      customerMightSay: 'We are considering just using AWS/Azure for AI instead of building on-premise.',
+      foxconnCounter: 'Cloud is great for burst capacity and experimentation. But for production AI workloads at scale, on-premise with Foxconn software gives you 30-40% lower TCO, data sovereignty, and no cloud egress fees.',
+      keyDifferentiators: [
+        'Cloud = OPEX model, ongoing expense; Foxconn on-premise = CAPEX, 3-year TCO 30-40% lower',
+        'Cloud = data leaves premises; Foxconn = 100% data residency (sovereign AI compliant)',
+        'Cloud = egress fees lock-in; Foxconn = no egress fees, you own the infrastructure'
+      ],
+      proofPoint: 'Enterprise AI customer calculated NT$ 800M 3-year savings with on-premise Foxconn vs. cloud hyperscaler for 1000-GPU deployment.',
+      close: 'Have you calculated the 3-year TCO including cloud egress fees, or are you comparing only upfront hardware costs?'
+    },
+    
+    {
+      competitor: 'Quanta/Wistron/ASUS (Other ODMs)',
+      customerMightSay: 'Quanta is offering us a similar server at a lower price.',
+      foxconnCounter: 'Quanta is a competent ODM. But if you look at 3-year TCO including GPU utilization, deployment time, and operational labor, Foxconn software delivers 14% lower TCO and 20%+ gross margin vs. their 8-12%.',
+      keyDifferentiators: [
+        'Quanta = hardware-only, 8-12% margin (commodity trap); Foxconn = software + hardware, 20-25% margin',
+        'Quanta = 10-20 person software team; Foxconn = 50-80 person full-stack vision',
+        'Quanta = competing on price; Foxconn = competing on value (utilization, deployment speed, remote ops)'
+      ],
+      proofPoint: 'Historical precedent: Quanta AI server business lacked software differentiation, competed on 8-12% margins, lost strategic accounts to NVIDIA DGX Cloud.',
+      close: 'Are you buying servers at lowest upfront price, or are you buying business outcomes (utilization, time-to-revenue, operational efficiency)?'
+    },
+    
+    {
+      competitor: 'Supermicro SuperCloud Composer',
+      customerMightSay: 'Supermicro is offering SuperCloud Composer for real-time management.',
+      foxconnCounter: 'SuperCloud Composer is good for facility telemetry. But Foxconn goes beyond monitoring to lifecycle governance, tenant quota management, and brownfield integration with your existing ITSM workflows.',
+      keyDifferentiators: [
+        'Supermicro = facility telemetry (temperature, pressure); Foxconn = lifecycle governance + SLA workflows',
+        'Supermicro = hardware-first; Foxconn = outcomes-first (uptime, utilization, compliance)',
+        'Supermicro = monitoring; Foxconn = monitoring + remote repair + predictive maintenance'
+      ],
+      proofPoint: 'Customer deployed Foxconn Remote Ops with 70% remote fix rate vs. Supermicro monitoring-only approach requiring on-site visits.',
+      close: 'Do you need a dashboard to see problems, or do you need someone to fix 70% of problems remotely before you even see the alert?'
+    }
+  ],
+  
+  // Universal Objection Handlers (For Any Competitor)
+  objectionHandlers: [
+    {
+      objection: 'Your software is more expensive than building in-house.',
+      response: 'Building in-house requires 30-50 person team (NT$ 50-100M/year) plus 12-18 months development time. Foxconn delivers in 2-4 weeks with NT$ 65M/year investment. Time-to-value: 2 hours vs. 12-18 months.',
+      proofPoint: 'Customer TCO analysis: Build = NT$ 100M + 18 months opportunity cost. Foxconn = NT$ 50M Year 1, production in 2 weeks.'
+    },
+    {
+      objection: 'We already have an internal software team.',
+      response: 'Great! Foxconn complements your team by handling L9-L10 firmware integration and brownfield operations that your team does not have bandwidth for. We focus on the unglamorous but critical work: firmware updates, lifecycle governance, remote SLA.',
+      proofPoint: 'Hyperscaler customer with 200-person software team still uses Foxconn Remote Ops for L9-L10 integration and 24/7 remote operations.'
+    },
+    {
+      objection: 'We are standardized on NVIDIA ecosystem.',
+      response: 'That is a valid strategy. But NVIDIA supply can be constrained, and AMD MI350/MI400 with ROCm 6.x now offers viable alternative for cost-sensitive workloads. Foxconn gives you optionality without retooling.',
+      proofPoint: 'Customer uses Foxconn unified management to run 80% NVIDIA (performance workloads) + 20% AMD (cost-sensitive batch jobs), achieving 15% overall cost savings.'
+    },
+    {
+      objection: 'We will wait and see how the market evolves.',
+      response: 'Waiting has a cost: GPU utilization stays at 40-60%, deployment takes 2-4 weeks per project, and competitors lock in customers with software SLAs. The 12-18 month window (Q2 2026-Q4 2027) is when market leadership is established.',
+      proofPoint: 'Q1 2026: Lost NT$ 500M deal to HPE because customer wanted software SLA. Waiting = losing strategic accounts to software-enabled competitors.'
+    }
+  ],
+  
+  // The One-Liner Close (For Every Battle Card)
+  oneLinerClose: 'Foxconn is not just selling servers. We are selling time-to-revenue, operational efficiency, and risk reduction. The question is: do you want a hardware vendor, or a partner accountable for outcomes?',
+  
+  boardMessage: 'Sales teams need quick, data-backed responses to competitor mentions. These battle cards turn the 800+ line executive brief into actionable sales enablement. Each card is derived from real customer conversations and competitive wins/losses.'
+};
+
+export default {
+  competitiveLandscape,
+  moatAnalysis,
+  emergingTrends2026_2027,
+  salesBattleCards
 };
