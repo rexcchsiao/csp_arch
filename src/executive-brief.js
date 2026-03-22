@@ -2002,4 +2002,87 @@ export const customerTestimonialTemplate = {
   riskIfMissing: "Without customer testimonials, board members may perceive software claims as 'vaporware' or 'PowerPoint features.' Real customer voices validate the strategy."
 };
 
-export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate };
+
+// Channel & Partner Strategy - Go-to-Market Beyond Direct Sales (Added 2026-03-22 by CoCo)
+// Purpose: Address board question "How will Foxconn reach 180 customers by Year 3?"
+// Direct sales alone is insufficient; need channel partners for Tier 2/3 CSP and enterprise segments
+export const channelStrategy = {
+  headline: "Channel & Partner Strategy: Reaching Customers Beyond Direct Sales",
+  context: "Board question: 'Direct sales can reach 10-20 large CSP customers. How do we reach 180 customers by Year 3?' Answer: Channel partners (system integrators, distributors, regional partners) extend reach to Tier 2/3 markets without building 100-person sales team.",
+  targetByYear3: {
+    directSales: "30-40 customers (Tier-1 CSP, hyperscalers, sovereign AI)",
+    channelPartners: "140-150 customers (Tier 2/3 CSP, enterprise, SMB via partners)",
+    rationale: "70/30 rule: 30% direct (high-value), 70% channel (scale). Matches HPE/Dell channel mix."
+  },
+  partnerTypes: [
+    {
+      type: "System Integrators (SI)",
+      examples: "Accenture, Deloitte, local SIs in target markets",
+      role: "Deploy Foxconn Remote Ops + RAG Appliance for enterprise customers",
+      valueProp: "30-40% margin on software deployment services; recurring revenue from annual support",
+      target: "5-10 SI partners by Q4 2026",
+      customerReach: "50-70 enterprise customers via SIs"
+    },
+    {
+      type: "Technology Partners",
+      examples: "Red Hat, Canonical, NVIDIA (partner network)",
+      role: "Co-sell Foxconn software as part of their stack",
+      valueProp: "Foxconn completes their offering (e.g., Red Hat OpenShift AI + Foxconn Remote Ops = full solution)",
+      target: "3 formal co-sell agreements by Q2 2027",
+      customerReach: "20-30 customers via partner referrals"
+    },
+    {
+      type: "Regional Distributors",
+      examples: "Ingram Micro, Tech Data, local distributors in SE Asia/Middle East",
+      role: "Stock and resell RAG Appliance SKUs (Starter/Professional tiers)",
+      valueProp: "25-30% margin on hardware + 15-20% on software subscription",
+      target: "3-5 distributors by Q4 2026",
+      customerReach: "40-50 SMB/mid-market customers"
+    },
+    {
+      type: "Cloud Marketplaces",
+      examples: "AWS Marketplace, Azure Marketplace, GCP Marketplace",
+      role: "List Remote Ops SaaS subscription for cloud-adjacent deployments",
+      valueProp: "Customers use existing cloud budget; Foxconn gains cloud channel without cloud dependency",
+      target: "List on AWS Marketplace by Q1 2027",
+      customerReach: "10-20 customers (cloud-first enterprises)"
+    }
+  ],
+  incentiveStructure: {
+    partnerMargin: "Partners capture 25-40% margin (vs. 60-75% for Foxconn direct)",
+    rationale: "Partners need sufficient margin to justify sales effort; Foxconn retains 60%+ gross margin even with partner discounts",
+    example: "Remote Ops Gold tier (NT$ 15M list): Partner buys at NT$ 10M (-33%), sells at NT$ 15M, captures NT$ 5M margin. Foxconn retains NT$ 10M revenue at 70% margin = NT$ 7M gross profit."
+  },
+  channelEnablement: {
+    requirement: "Partners cannot sell what they don't understand. Enablement is critical.",
+    activities: [
+      "Partner training program (2-day certification for sales + technical staff)",
+      "Demo environment provided to all partners (pre-configured Remote Ops + RAG stack)",
+      "Deal registration system (first partner to register gets protection)",
+      "Quarterly partner summits (share roadmap, success stories, competitive intel)"
+    ],
+    investment: "NT$ 5M/year (partner program management, training, demo environments)"
+  },
+  risks: [
+    {
+      risk: "Channel conflict: Direct sales vs. partner sales",
+      mitigation: "Clear rules of engagement; deal registration; territory/segment segmentation"
+    },
+    {
+      risk: "Partner lacks technical capability",
+      mitigation: "Certification requirement; Foxconn SE support for first 3 deployments per partner"
+    },
+    {
+      risk: "Partner prioritizes competitor products",
+      mitigation: "Higher margin than competitors; exclusive features for partners; joint customer success plans"
+    }
+  ],
+  successMetrics: {
+    year1: "5 SI partners certified, 10% of revenue via channel",
+    year2: "15 partners, 30% of revenue via channel",
+    year3: "30+ partners, 50% of revenue via channel (90 of 180 customers)"
+  },
+  boardMessage: "Channel strategy is not optional—it's how we reach 180 customers without building 100-person sales team. Direct sales for whale accounts (CSP/hyperscaler); channel for scale (enterprise/SMB). Target: 50% of Year 3 revenue via channel partners."
+};
+
+export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy };
