@@ -1878,4 +1878,81 @@ export const first90DayDashboard = {
   boardMessage: 'The first 90 days are critical. This dashboard provides weekly visibility into execution, with clear escalation triggers if milestones slip. Board will see: (1) Week-by-week deliverables with success criteria, (2) Board-visible metrics updated weekly, (3) Pre-defined escalation triggers to address risks before they become crises, (4) Structured board meeting cadence to ensure timely decisions. This transforms software investment from "trust us" to "show us" — with measurable progress every week.'
 };
 
-export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix };
+// Competitive Response Playbook - Quick Reference for Leadership (Added 2026-03-22 by CoCo)
+// Purpose: Enable rapid, data-backed responses to competitor moves; shows board that Foxconn is prepared for dynamic competition
+// Usage: Sales enablement, board Q&A, strategic planning sessions
+export const competitiveResponsePlaybook = {
+  headline: 'Competitive Response Playbook: How Foxconn Responds to Competitor Moves',
+  purpose: '董事會常問：「如果競爭對手做 X，我們怎麼辦？」此 playbook 提供標準化回應策略，確保每個競爭動向都有數據支撐的 counter-move。',
+  
+  scenarios: [
+    {
+      competitorMove: 'Quanta/Wistron 宣布軟體合作夥伴關係 (e.g., 與 Red Hat/Canonical 合作)',
+      timing: '高機率 2026 Q3-Q4',
+      foxconnResponse: '強調「深度整合 vs. 表面合作」差異：Foxconn L9-L12 全棧能力 vs. 競爭對手的轉售/整合模式',
+      evidence: 'Quanta 軟體團隊僅 10-20 人，無自主 L9-L10 韌體能力；Foxconn 50-80 人團隊，自主開發 BMC/BIOS/編排全棧',
+      salesMessage: '合作夥伴關係無法複製 Foxconn 的硬體 + 軟體協同效應。我們的 800V 電源管理、BMC 深度整合、brownfield 導入能力，需要自主軟體團隊才能實現。',
+      boardReady: true
+    },
+    {
+      competitorMove: 'GIGABYTE/ASUS 推出類似 Remote Ops 的監控平台',
+      timing: '已發生 (2026-02-28 GIGABYTE 宣布)',
+      foxconnResponse: '強調「監控 vs. 修復」的本質差異：競爭對手停在可視化，Foxconn 提供端到端遠端修復與 SLA 問責',
+      evidence: 'GIGABYTE GPU Cloud Management Platform 僅支援雲部署；Foxconn Remote Ops 支援 air-gapped、混合雲、主權 AI 合規',
+      salesMessage: '監控是功能，修復是成果。客戶買的不是「看到問題」，而是「問題被解決」。Foxconn 70% 遠端修復率 vs. 競爭對手僅能告警。',
+      boardReady: true
+    },
+    {
+      competitorMove: 'HPE/Dell 降價競標，軟體 bundle 免費贈送',
+      timing: '高機率 2026 Q4-2027 Q1',
+      foxconnResponse: 'TCO 攻防戰：用 3 年 TCO 分析證明 Foxconn 方案總成本更低（即使初期價格較高）',
+      evidence: 'Lost deal autopsy (NT$ 500M case): 客戶選擇 HPE 軟體 bundle，但 3 年後 TCO 高出 15-20%（能源效率、運維人力、停機成本）',
+      salesMessage: '免費的軟體最貴。HPE/Dell 的「免費軟體」本質是綁鎖策略，第 2-3 年透過維運、升級、擴展收取高額費用。Foxconn 透明定價，3 年 TCO 低 15-20%。',
+      boardReady: true
+    },
+    {
+      competitorMove: 'NVIDIA 擴大 Mission Control 支援第三方伺服器',
+      timing: '可能 2027 年後',
+      foxconnResponse: '強調「中立架構」價值：NVIDIA 本質是 GPU 廠商， Mission Control 優先優化 DGX；Foxconn 真正支援 NVIDIA+AMD+ 多供應商',
+      evidence: 'Mission Control 設計初衷是優化 DGX Cloud；即使支援第三方，也無法做到 Foxconn 的 L9-L10 深度整合',
+      salesMessage: '讓 GPU 供應商管理你的基礎設施，等於讓房租客管理整棟樓。Foxconn 中立架構確保客戶不被單一 GPU 供應商鎖定。',
+      boardReady: true
+    },
+    {
+      competitorMove: 'Hyperscaler (AWS/Azure) 降低 AI 服務價格，與 Foxconn 直接競爭',
+      timing: '持續性威脅',
+      foxconnResponse: '強調「主權 AI/資料主權」與「混合雲靈活性」：Hyperscaler 本質是公有雲，無法滿足 air-gapped、本地合規需求',
+      evidence: 'EU AI Act、GDPR、PDPA 強制資料在地化；金融/醫療/政府禁止敏感資料上公有雲',
+      salesMessage: 'Hyperscaler 的「混合雲」本質是雲延伸，資料最終還是要上雲。Foxconn 真正支援本地部署、air-gapped、主權合規。',
+      boardReady: true
+    },
+    {
+      competitorMove: '新創公司推出開源替代方案 (e.g., 開源 Remote Ops/RAG 平台)',
+      timing: '不確定',
+      foxconnResponse: '強調「企業級支援責任」：開源方案無單一事主、無 SLA、無合規審計、無問責機制',
+      evidence: '企業客戶要的是「問題解決者」，不是「原始碼」。開源方案無法提供 7x24 支援、合規審計、SLA 問責。',
+      salesMessage: '開源免費，但代價是自負成敗。Foxconn 提供單一問責、SLA 保證、合規審計、7x24 支援。企業級客戶選擇的是「風險轉移」，不是「原始碼」。',
+      boardReady: true
+    }
+  ],
+  
+  // General Principles for Competitive Response
+  principles: [
+    { principle: '用數據回應，不用口號', example: '不說「我們比較好」，說「我們 85% GPU 利用率 vs. 產業平均 60%」' },
+    { principle: '強調差異化，不贬低對手', example: '不說「Quanta 很爛」，說「Quanta 是硬體思維，Foxconn 是軟體定義基礎設施」' },
+    { principle: '把競爭對手劣勢轉為客戶風險', example: '不說「HPE 鎖定客戶」，說「HPE 方案可能導致 3 年後 TCO 增加 15-20%」' },
+    { principle: '準備好「一頁式」回應模板', example: '每個競爭場景都有 1 頁簡報：對手動作、我們的回應、證據、客戶引用' }
+  ],
+  
+  // Escalation Triggers - When to Alert Leadership
+  escalationTriggers: [
+    { trigger: '競爭對手贏得戰略客戶 (NT$ 100M+ 訂單)', action: '立即召開戰略會議，調整銷售策略' },
+    { trigger: '競爭對手宣布重大合作夥伴關係 (e.g., 與 Microsoft/Red Hat 獨家合作)', action: '評估合作夥伴生態系缺口，加速互補合作' },
+    { trigger: '競爭對手挖角關鍵軟體人才 (3 人以上)', action: '檢視薪酬競爭力，啟動留才方案' },
+    { trigger: '競爭對手價格戰 (降價 >20%)', action: '啟動 TCO 攻防戰術，不跟進價格戰，強化價值論述' }
+  ],
+  
+  boardMessage: '競爭對手的每一步都在預期中。Foxconn 的優勢不是「預測未來」，而是「準備好回應任何未來」。此 playbook 確保銷售團隊、產品團隊、董事會都有統一的回應策略，避免臨時應對導致訊息混亂。'
+};
+
+export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook };
