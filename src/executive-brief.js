@@ -1832,4 +1832,50 @@ revenueProjection: 'Year 2: NT$ 30M (10 enterprise customers × NT$ 3M/year)'
 boardMessage: 'AI supply chain security is not optional for regulated industries. By 2027, enterprises will not be able to deploy AI without model provenance and AI BOM documentation. Foxconn RAG Appliance with built-in AI supply chain security becomes the default choice for finance, healthcare, and government customers — markets representing $50B+ opportunity. This is not just compliance; it is competitive differentiation that pure hardware vendors (Quanta, Wistron) cannot replicate.'
 };
 
-export default { executiveBrief, boardFAQ, aiSupplyChainSecurity, featureParityMatrix };
+// First 90-Day Execution Dashboard - Board-Visible Progress Tracking (Added 2026-03-22 by CoCo)
+// Purpose: Give board concrete, weekly visibility into software team execution during critical first quarter
+// Usage: Board meetings, executive reviews, early warning system for execution risks
+export const first90DayDashboard = {
+  headline: 'First 90-Day Execution Dashboard: Board-Visible Progress Tracking',
+  purpose: 'Transform software investment from "black box" to transparent, measurable execution with weekly board visibility',
+
+  weekByWeekMilestones: [
+    { week: 1, focus: 'Org Design & Team Mobilization', deliverables: ['Software product lead appointed', 'Org design finalized (50-80 FTE target)', 'Recruitment plan approved'], successCriteria: 'Leadership team identified, hiring plan approved', riskIfDelayed: 'Talent acquisition delay cascades to all subsequent milestones' },
+    { week: 2, focus: 'Lab Setup & Partnership Initiation', deliverables: ['AI workload validation lab setup begins', 'Red Hat/Canonical partnership discussions initiated', 'L9-L10 firmware team recruitment starts (5-8 hires)'], successCriteria: 'Lab hardware ordered, partnership LOIs in progress', riskIfDelayed: 'No lab = no testing environment; partnership delays slow time-to-market' },
+    { week: 3, focus: 'Remote Ops MVP Scope & Pilot Customer Alignment', deliverables: ['Remote Ops MVP scope defined with pilot customer', 'Lab operational (H100/H200 test environment)', 'RAG appliance architecture finalized (vector DB + permission governance)'], successCriteria: 'Pilot customer committed, lab ready for development', riskIfDelayed: 'No pilot customer = no real-world validation; lab delay blocks all development' },
+    { week: 4, focus: 'Hiring Plan & Architecture Sign-off', deliverables: ['L11-L12 team hiring plan finalized (10-15 FTE)', 'RAG appliance architecture signed off', 'Partnership LOIs signed (Red Hat, Canonical)'], successCriteria: 'Team structure complete, architecture validated by advisory board', riskIfDelayed: 'Architecture mistakes discovered late = costly rework' },
+    { week: 5-6, focus: 'Remote Ops Core Development', deliverables: ['BMC telemetry collection implemented', 'Basic monitoring dashboard functional', 'First 5-8 L9-L10 engineers hired'], successCriteria: 'Real-time server monitoring operational in lab', riskIfDelayed: 'Core telemetry is foundation; delay blocks all higher-level features' },
+    { week: 7-8, focus: 'RAG Appliance Alpha Build', deliverables: ['Document ingestion pipeline functional', 'Basic vector search operational', 'Permission governance model implemented'], successCriteria: 'End-to-end RAG flow works with test documents', riskIfDelayed: 'RAG complexity underestimated; may need scope reduction' },
+    { week: 9-10, focus: 'Pilot Customer Deployment Prep', deliverables: ['Remote Ops deployed in pilot customer test environment', 'RAG appliance alpha tested with customer data', 'Initial performance benchmarks collected'], successCriteria: 'Customer can monitor 10 servers, run RAG queries on test data', riskIfDelayed: 'Customer confidence at risk; may need to extend pilot timeline' },
+    { week: 11-12, focus: 'Board Demo & Go/No-Go Decision', deliverables: ['Live demo to board: Remote Ops + RAG appliance', 'Pilot customer feedback presentation', 'Go/No-Go recommendation for Q4 scale-up'], successCriteria: 'Board approves Q4 scale-up budget, pilot customer provides testimonial', riskIfDelayed: 'If pilot fails, need fundamental strategy reassessment' }
+  ],
+
+  boardVisibleMetrics: [
+    { metric: 'Team Fill Rate', target: 'Week 4: 50% of L9-L10 roles filled', actual: 'TBD', status: 'On Track/At Risk/Missed', definition: 'Percentage of critical L9-L10 firmware roles filled vs. hiring plan' },
+    { metric: 'Lab Operational Date', target: 'Week 3', actual: 'TBD', status: 'On Track/At Risk/Missed', definition: 'Date when H100/H200 test environment is fully functional' },
+    { metric: 'Pilot Customer Commitment', target: 'Week 3', actual: 'TBD', status: 'Committed/At Risk/Not Started', definition: 'Signed agreement from pilot customer for 90-day trial' },
+    { metric: 'Partnership LOIs Signed', target: 'Week 4: Red Hat + Canonical', actual: 'TBD', status: 'Signed/Negotiating/Not Started', definition: 'Letter of Intent from key technology partners' },
+    { metric: 'Remote Ops MVP Features', target: 'Week 10: 5/5 core features', actual: 'TBD', status: 'On Track/Behind', definition: 'BMC telemetry, monitoring, alerting, remote diagnosis, predictive maintenance' },
+    { metric: 'RAG Appliance Alpha', target: 'Week 8: End-to-end flow', actual: 'TBD', status: 'On Track/Behind/Blocked', definition: 'Document upload → vector embedding → search → Q&A functional' },
+    { metric: 'Pilot Customer Satisfaction', target: 'Week 12: 8/10 or higher', actual: 'TBD', status: 'On Track/At Risk', definition: 'Pilot customer rating of Remote Ops + RAG Appliance' }
+  ],
+
+  escalationTriggers: [
+    { trigger: 'Week 4: <50% team fill rate', action: 'Escalate to HR VP; approve emergency recruitment budget (+NT$ 5M)', owner: 'Software Product Lead' },
+    { trigger: 'Week 6: Lab not operational', action: 'Escalate to COO; fast-track procurement or use cloud alternative', owner: 'Infrastructure Lead' },
+    { trigger: 'Week 8: No pilot customer commitment', action: 'Escalate to Sales VP; assign dedicated sales engineer or change target customer', owner: 'Customer Success Lead' },
+    { trigger: 'Week 10: Remote Ops MVP <3/5 features', action: 'Escalate to CTO; reduce scope or extend timeline', owner: 'Technical Lead' },
+    { trigger: 'Week 12: Pilot customer satisfaction <7/10', action: 'Escalate to CEO; fundamental strategy reassessment required', owner: 'Software Product Lead' }
+  ],
+
+  boardMeetingCadence: [
+    { week: 'Week 1', format: 'Kickoff briefing (30 min)', agenda: ['Review org design', 'Confirm pilot customer target', 'Approve recruitment plan'] },
+    { week: 'Week 4', format: 'Progress review (45 min)', agenda: ['Team hiring status', 'Lab setup demo', 'Partnership LOI status', 'Pilot customer commitment'] },
+    { week: 'Week 8', format: 'Alpha demo (60 min)', agenda: ['Remote Ops live demo', 'RAG appliance alpha demo', 'Pilot customer feedback', 'Go/No-Go recommendation'] },
+    { week: 'Week 12', format: 'Board decision meeting (90 min)', agenda: ['Full pilot results presentation', 'Customer testimonial (video or live)', 'Q4 scale-up budget request', 'Go/No-Go decision'] }
+  ],
+
+  boardMessage: 'The first 90 days are critical. This dashboard provides weekly visibility into execution, with clear escalation triggers if milestones slip. Board will see: (1) Week-by-week deliverables with success criteria, (2) Board-visible metrics updated weekly, (3) Pre-defined escalation triggers to address risks before they become crises, (4) Structured board meeting cadence to ensure timely decisions. This transforms software investment from "trust us" to "show us" — with measurable progress every week.'
+};
+
+export default { executiveBrief, boardFAQ, first90DayDashboard, aiSupplyChainSecurity, featureParityMatrix };
