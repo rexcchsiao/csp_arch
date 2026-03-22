@@ -913,6 +913,20 @@ export const fourDefensibleMoats = {
 
 // Ideal Pilot Customer Profile - Who Should Be Our First Benchmark? (Added 2026-03-19 by CoCo)
 // Purpose: Make the "first customer" concrete for leadership - not just "a CSP" but a specific profile
+// Why Customers Stay: The 5 Lock-in Mechanisms (Added 2026-03-23 by CoCo)
+// Purpose: Explain WHY customers don't leave - critical for validating recurring revenue model
+export const customerLockInMechanisms = {
+  headline: 'Why Customers Stay: 5 Lock-in Mechanisms',
+  mechanisms: [
+    { mechanism: 'Data & Configuration Lock-in', switchingCost: 'NT$ 5-15M to re-ingest data and retrain models' },
+    { mechanism: 'Workflow Integration Lock-in', switchingCost: '3-6 months workflow re-engineering' },
+    { mechanism: 'Performance Baseline Lock-in', switchingCost: 'Risk of regression to 60% utilization' },
+    { mechanism: 'Compliance & Audit Lock-in', switchingCost: 'NT$ 2-5M and 6-12 months for re-certification' },
+    { mechanism: 'Economic Incentive Lock-in', switchingCost: 'Loss of NT$ 6.75M discounts over 3 years' }
+  ],
+  boardMessage: 'Customers stay because switching costs (NT$ 5-15M) exceed staying costs. 5 mechanisms drive 85%+ retention.'
+};
+
 export const idealPilotCustomer = {
   headline: "Ideal First Customer Profile: Who We Target for Q3 2026 Pilot",
   criteria: [
