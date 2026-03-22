@@ -2202,3 +2202,51 @@ export const postBoardActionItems = {
   boardMessage: "Post-board execution is where strategies succeed or fail. The first 30 days determine whether this becomes 'the software department that delivered' or 'the PowerPoint initiative that died in committees.'",
   urgencyNote: "Competitors are not waiting. Every week of delay after board approval is a week lost to Quanta/Wistron/GIGABYTE. Speed signals commitment. Speed attracts talent. Speed wins markets."
 };
+
+// Board Presentation Deck Outline - Slide-by-Slide Structure (Added 2026-03-22 by CoCo)
+// Purpose: Map existing content into 12-slide board presentation flow
+// Usage: Create PowerPoint/Keynote deck using this structure; each slide references existing data
+export const boardPresentationOutline = {
+  title: "Software Differentiation Strategy: Board Presentation Deck",
+  totalSlides: 12,
+  estimatedDuration: "45-60 minutes (30 min presentation + 15-30 min Q&A)",
+  slides: [
+    { slide: 1, title: "Title Slide", content: "Software Differentiation Strategy: From Hardware Commodity to AI Solutions Partner", speaker: "CEO or Software Product Lead", duration: "1 min", sourceData: "executiveBrief.title" },
+    { slide: 2, title: "The 30-Second Elevator Pitch", content: "Problem: 40-60% GPU idle time, 2-4 week deployment. Solution: 85%+ utilization, 2-hour deployment. Ask: NT$ 65M/year. Return: NT$ 750M Year 3, 11.5x ROI.", speaker: "CEO", duration: "2 min", sourceData: "executiveBrief.elevatorPitch" },
+    { slide: 3, title: "Why 2026 is the Inflection Point", content: "4 trends: GPU supply normalization, Sovereign AI regulations ($50B market), Energy cost crisis (power = 40% TCO), Hyperscaler vertical integration", speaker: "Software Product Lead", duration: "4 min", sourceData: "executiveBrief.whyNow" },
+    { slide: 4, title: "Top 5 Unsolved Pain Points (Customer Voices)", content: "Show real customer quotes + quantified impact: GPU stranded capital, deployment delays, remote ops gap, energy crisis, sovereign AI compliance", speaker: "Software Product Lead", duration: "5 min", sourceData: "executiveBrief.top5UnsolvedPainPoints + customerVoices" },
+    { slide: 5, title: "Competitive Reality Check", content: "NVIDIA Mission Control GA, HPE Private Cloud AI, Dell AI Factory. OEM/ODM competitors (Quanta/Wistron) announcing software partnerships. Window: 12-18 months.", speaker: "Software Product Lead", duration: "4 min", sourceData: "competitiveLandscape.competitiveUrgency + executiveBrief.competitiveReality" },
+    { slide: 6, title: "Foxconn's 4 Defensible Moats", content: "L9-L12 full-stack capability, Neutral architecture (NVIDIA+AMD), Brownfield integration, Day-2 operational accountability", speaker: "CTO or Software Product Lead", duration: "4 min", sourceData: "executiveBrief.defensibleMoats + whyFoxconnWillSucceed" },
+    { slide: 7, title: "Product Portfolio & Pricing", content: "Remote Ops Platform (Bronze/Silver/Gold: NT$ 1-15M/year), RAG Appliance (NT$ 8-30M one-time + 20%/yr). Path to NT$ 750M Year 3.", speaker: "Software Product Lead", duration: "5 min", sourceData: "README.md Service Tiers & Pricing section" },
+    { slide: 8, title: "Financial Case: CFO-Ready Metrics", content: "Investment: NT$ 65M/year. Year 3: NT$ 750M revenue, 20-25% margin, 11.5x ROI, 18-24 month payback. Risk-adjusted view (best/base/worst case).", speaker: "CFO", duration: "5 min", sourceData: "executiveBrief.financials" },
+    { slide: 9, title: "Execution Roadmap: First 90 Days", content: "Week 1-4: Org design, lab setup, pilot customer identification. Week 5-12: Remote Ops MVP, RAG Appliance MVP. Week 13-16: First customer deployment.", speaker: "Software Product Lead", duration: "4 min", sourceData: "executiveBrief.first30Days + first90DayDashboard" },
+    { slide: 10, title: "Risk Register & Mitigation", content: "Top 5 risks: Talent acquisition, technology selection, market acceptance, competitor response, execution delay. All have mitigation strategies.", speaker: "Software Product Lead", duration: "3 min", sourceData: "executiveBrief.risks" },
+    { slide: 11, title: "The Ask: Board Resolution", content: "7 resolution items: (1) Establish software product line, (2) Authorize NT$ 65M/year, (3) Approve hiring plan, (4) Lab setup, (5) Sales incentives, (6) Quarterly reporting, (7) Go/no-go review Q4 2026", speaker: "CEO", duration: "3 min", sourceData: "boardResolutionTemplate.resolutionItems" },
+    { slide: 12, title: "Q&A / Next Steps", content: "Immediate next 48 hours: Appoint Software Product Lead, setup budget code, identify lab space. Board decision: Approve now or approve NT$ 1.5B opportunity loss by 2028.", speaker: "CEO", duration: "15-30 min", sourceData: "postBoardActionItems.immediate48Hours" }
+  ],
+  appendixSlides: [
+    { name: "Appendix A: Technical Validation Benchmarks", source: "software-differentiation.js technicalValidation" },
+    { name: "Appendix B: Customer Success Stories", source: "customer-success-stories.js" },
+    { name: "Appendix C: 800V Power Architecture Opportunity", source: "800v-power-architecture.js" },
+    { name: "Appendix D: Competitive Response Playbook", source: "competitiveResponsePlaybook" },
+    { name: "Appendix E: Board FAQ (Top 10 Questions)", source: "boardFAQ" }
+  ],
+  designNotes: {
+    visualStyle: "Clean, professional. Use Foxconn brand colors. Minimal text on slides (5-5-5 rule: max 5 words per line, 5 lines per bullet, 5 bullets per slide).",
+    dataVisualization: "Use charts for financial projections (bar chart: Year 1-3 revenue), timeline for roadmap (Gantt chart), comparison table for competitive landscape.",
+    customerQuotes: "Highlight 2-3 customer quotes in large font for emotional impact",
+    kpiCallouts: "Use callout boxes for key metrics: 85% utilization, 2-hour deployment, 11.5x ROI, NT$ 1.5B opportunity loss"
+  },
+  boardMessage: "This 12-slide structure maps directly to existing data in the project. Each slide pulls from validated, sourced content. Appendix slides provide backup for technical deep-dive questions. Total deck can be presented in 30 minutes with 30 minutes for Q&A.",
+  preparationChecklist: [
+    "Create PowerPoint/Keynote deck using 12-slide structure",
+    "Pull charts from software-differentiation.js financials",
+    "Extract customer quotes from customer-success-stories.js",
+    "Prepare appendix slides for anticipated technical questions",
+    "Rehearse presentation to ensure 30-minute delivery",
+    "Print board resolution template for immediate adoption"
+  ]
+};
+
+// Add to export
+export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline };
