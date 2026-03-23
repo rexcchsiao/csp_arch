@@ -2264,4 +2264,142 @@ export const boardPresentationOutline = {
 };
 
 // Add to export
-export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline };
+
+// Pilot Program Guarantee & Risk Reversal Framework (Added 2026-03-23 by CoCo)
+// Purpose: Address board's implicit question "What if the software doesn't deliver?" with concrete risk reversal mechanisms
+// Format: Customer-facing guarantee + internal success metrics + escalation triggers
+export const pilotProgramGuarantee = {
+  headline: "Pilot Program Guarantee: Risk Reversal for First Customers",
+  context: "Board concern: 'What if Foxconn software fails to deliver promised outcomes?' Answer: Structured pilot program with clear success criteria, milestone-based funding, and money-back guarantee reduces customer risk and demonstrates Foxconn confidence.",
+  customerFacingGuarantee: {
+    title: "90-Day Pilot Success Guarantee",
+    promise: "If Foxconn Remote Ops Platform does not achieve agreed-upon KPIs within 90 days, customer receives 100% refund of pilot fees + NT$ 500K credit for future deployment.",
+    qualifyingConditions: [
+      "Customer provides access to 50-100 server test environment",
+      "Customer designates technical point-of-contact for weekly sync",
+      "Customer participates in baseline measurement (Week 1)",
+      "Foxconn software deployed according to reference architecture"
+    ],
+    guaranteedMetrics: [
+      {
+        metric: "GPU Utilization Improvement",
+        baseline: "Current utilization (e.g., 40-60%)",
+        target: "85%+ utilization or 15 percentage point improvement",
+        measurement: "Weekly utilization reports from Remote Ops dashboard"
+      },
+      {
+        metric: "Deployment Time Reduction",
+        baseline: "Current deployment time (e.g., 2-4 weeks)",
+        target: "2-hour deployment for new workloads",
+        measurement: "Time from image upload to production-ready"
+      },
+      {
+        metric: "Remote Fix Rate",
+        baseline: "Current on-site visit rate",
+        target: "70% of issues resolved remotely without on-site visit",
+        measurement: "Support ticket analysis (Week 1-12)"
+      },
+      {
+        metric: "Predictive Maintenance Accuracy",
+        baseline: "Current unplanned downtime",
+        target: "85% accuracy in predicting GPU failures 24-48 hours in advance",
+        measurement: "False positive/negative tracking"
+      }
+    ],
+    financialTerms: {
+      pilotFee: "NT$ 5M for 90-day pilot (discounted from NT$ 15M Gold tier)",
+      refundCondition: "If 3+ guaranteed metrics not met by Day 90, customer eligible for 100% refund",
+      creditOffered: "NT$ 500K credit toward Year 1 deployment if pilot successful",
+      rationale: "Foxconn takes execution risk; customer takes minimal risk. Demonstrates confidence in software capability."
+    }
+  },
+  internalSuccessMetrics: {
+    title: "Internal Success Criteria (Board Reporting)",
+    purpose: "Track pilot health weekly; escalate if metrics drift from target",
+    weeklyCheckpoints: [
+      {
+        week: "Week 1-2",
+        focus: "Baseline & Installation",
+        successCriteria: "Baseline metrics documented, software installed on 50+ servers, monitoring functional",
+        escalationTrigger: "If baseline not established by Week 2, escalate to Software Product Lead"
+      },
+      {
+        week: "Week 3-6",
+        focus: "Utilization Improvement",
+        successCriteria: "GPU utilization trending upward (5-10 percentage point improvement)",
+        escalationTrigger: "If no improvement by Week 4, escalate to CTO; deploy optimization playbook"
+      },
+      {
+        week: "Week 7-9",
+        focus: "Remote Operations Validation",
+        successCriteria: "50%+ issues resolved remotely, first predictive alert generated",
+        escalationTrigger: "If remote fix rate <30% by Week 8, add dedicated support engineer"
+      },
+      {
+        week: "Week 10-12",
+        focus: "Final Validation & Testimonial",
+        successCriteria: "All 4 guaranteed metrics met, customer testimonial captured",
+        escalationTrigger: "If metrics at risk by Week 10, CEO outreach to customer CTO"
+      }
+    ],
+    boardReporting: "Weekly pilot status included in board update (green/yellow/red status)"
+  },
+  riskMitigation: {
+    title: "Risk Mitigation: What Could Go Wrong and How We Prevent It",
+    risks: [
+      {
+        risk: "Customer environment incompatibility",
+        probability: "Medium",
+        impact: "High",
+        mitigation: "Pre-pilot environment assessment; Week 1 compatibility testing; rollback plan ready",
+        fallback: "If incompatibility found, offer alternative deployment model (hybrid cloud) or terminate pilot with no charge"
+      },
+      {
+        risk: "Customer lacks internal bandwidth to participate",
+        probability: "Medium",
+        impact: "Medium",
+        mitigation: "Dedicated Foxconn customer success manager; weekly 30-min sync; shared Slack channel",
+        fallback: "If customer engagement low, escalate to customer CTO; adjust timeline or pause pilot"
+      },
+      {
+        risk: "Software bugs or performance issues",
+        probability: "Medium",
+        impact: "High",
+        mitigation: "Lab validation before deployment; staging environment; rollback capability",
+        fallback: "24-hour bug fix SLA during pilot; if critical issue unresolved in 48 hours, revert to baseline"
+      },
+      {
+        risk: "Metrics not achieved due to customer workload characteristics",
+        probability: "Low",
+        impact: "Medium",
+        mitigation: "Pre-pilot workload assessment; ensure workload is representative of typical usage",
+        fallback: "If workload atypical, extend pilot timeline or select different pilot customer"
+      }
+    ],
+    lessonLearned: "Pilot program designed to fail fast if success not achievable. Better to identify issues in 90-day pilot than after full-scale deployment."
+  },
+  competitiveComparison: {
+    title: "Competitive Guarantee Comparison",
+    foxconn: "90-day pilot with 100% refund + NT$ 500K credit if KPIs not met",
+    hpe: "30-day trial, no explicit guarantee mentioned",
+    dell: "Proof-of-concept available, terms negotiated per customer",
+    nvidia: "No public guarantee; standard enterprise support SLA",
+    quanta: "No software guarantee; hardware warranty only",
+    boardMessage: "Foxconn's guarantee is stronger than competitors because we own L9-L12 stack. Pure software vendors (HPE, Dell) cannot guarantee hardware+software outcomes. This is our differentiation."
+  },
+  customerTestimonialTemplate: {
+    title: "Post-Pilot Customer Testimonial (Template)",
+    structure: [
+      "Before Foxconn: [Current state with pain points]",
+      "After Foxconn: [Quantified improvement]",
+      "Key Differentiator: [Why Foxconn vs. competitors]",
+      "Recommendation: [Who should use this]"
+    ],
+    example: "Before Foxconn: 'We had 45% GPU utilization and 2-week deployment time. Our AI projects were delayed due to infrastructure bottlenecks.' After Foxconn: 'Remote Ops Platform achieved 87% utilization in 6 weeks. New workloads deploy in 2 hours. We're generating revenue 12 days faster per project.' Key Differentiator: 'Foxconn owns the full stack from firmware to applications. When we had an issue, one call to Foxconn solved it—no finger-pointing between hardware and software vendors.' Recommendation: 'If you're a CSP with 500+ GPUs struggling with utilization and remote operations, Foxconn software is worth the investment. ROI paid back in 8 months for us.' — CTO, Tier-2 CSP"
+  },
+  boardAsk: "This guarantee framework demonstrates Foxconn's confidence in software execution. By taking on execution risk, we reduce customer adoption barriers and accelerate pilot-to-production conversion. Recommended for board approval as part of pilot program terms.",
+  nextStep: "Legal review of guarantee language; finalize pilot customer LOI with guarantee terms included."
+};
+
+// Add to export
+export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee };
