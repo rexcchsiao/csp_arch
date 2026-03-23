@@ -2525,4 +2525,135 @@ export const messagingHierarchy = {
 };
 
 // Add to export
-export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy };
+export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy, decisionTriggers };
+
+// Decision Triggers: When to Scale, Pivot, or Stop (Added 2026-03-23 by CoCo)
+// Purpose: Provide clear, quantifiable triggers for leadership to make go/no-go decisions at each stage
+// Usage: Include in board resolution Item 7 (quarterly review); use as operational guide for software team
+export const decisionTriggers = {
+  headline: "Decision Triggers: Clear Go/No-Go Criteria for Each Stage",
+  purpose: "Avoid 'zombie projects' by establishing clear success/failure criteria upfront. If triggers are met, leadership must act—either scale investment or stop and reallocate resources.",
+  
+  pilotStage: {
+    stage: "Pilot Stage (Q3-Q4 2026)",
+    duration: "90 days from first customer deployment",
+    successTriggers: {
+      criteria: [
+        { metric: "GPU utilization improvement", threshold: "≥20% improvement (e.g., 45% → 65%)", status: "Required for pilot success" },
+        { metric: "Deployment time reduction", threshold: "≥50% reduction (e.g., 14 days → 7 days)", status: "Required for pilot success" },
+        { metric: "Remote fix rate", threshold: "≥50% of issues resolved remotely", status: "Required for pilot success" },
+        { metric: "Customer satisfaction (NPS)", threshold: "≥40 (enterprise software benchmark)", status: "Required for pilot success" },
+        { metric: "Pilot customer referenceability", threshold: "Customer willing to provide testimonial or case study", status: "Required for scale-up" }
+      ],
+      action: "If ALL 5 criteria met → Proceed to Scale-Up Stage (approve Year 2 budget)"
+    },
+    pivotTriggers: {
+      criteria: [
+        { metric: "GPU utilization improvement", threshold: "10-19% improvement", action: "Investigate root cause: workload characteristics? customer process gaps? Adjust targeting." },
+        { metric: "Deployment time reduction", threshold: "20-49% reduction", action: "Streamline deployment playbook; reduce customization; focus on standard configurations." },
+        { metric: "Remote fix rate", threshold: "30-49% remote", action: "Enhance remote diagnostics; add more remote repair playbooks; improve documentation." },
+        { metric: "Customer satisfaction (NPS)", threshold: "20-39", action: "Conduct customer interviews; identify pain points; improve support responsiveness." }
+      ],
+      action: "If ANY criterion in pivot range → Continue pilot for additional 90 days with specific improvements; do NOT scale until success criteria met"
+    },
+    stopTriggers: {
+      criteria: [
+        { metric: "GPU utilization improvement", threshold: "<10% improvement", reason: "Software not delivering core value proposition" },
+        { metric: "Deployment time reduction", threshold: "<20% reduction", reason: "Deployment process not sufficiently automated" },
+        { metric: "Remote fix rate", threshold: "<30% remote", reason: "Remote ops capability insufficient; may need to accept hardware-only model" },
+        { metric: "Customer satisfaction (NPS)", threshold: "<20", reason: "Product-market fit concerns; fundamental issues with value proposition" },
+        { metric: "Technical feasibility", threshold: "Critical showstopper bug unresolved after 30 days", reason: "Technical debt or architecture issue prevents delivery" }
+      ],
+      action: "If ANY stop trigger met → Stop software investment; re-evaluate strategy; consider partnership-only approach or exit software business"
+    }
+  },
+  
+  scaleUpStage: {
+    stage: "Scale-Up Stage (2027)",
+    duration: "12 months from pilot completion",
+    successTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "≥12% of total orders", status: "On track for Year 3 target" },
+        { metric: "Software revenue", threshold: "≥NT$ 250M ARR", status: "On track for Year 3 target" },
+        { metric: "Customer retention rate", threshold: "≥85% (12-month retention)", status: "Healthy recurring revenue base" },
+        { metric: "Gross margin", threshold: "≥20% (software-enabled orders)", status: "Achieving margin expansion goal" },
+        { metric: "Customer acquisition cost (CAC) payback", threshold: "<12 months", status: "Efficient growth" }
+      ],
+      action: "If ALL 5 criteria met → Proceed to Maturity Stage (approve Year 3-5 budget expansion)"
+    },
+    pivotTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "6-11%", action: "Review sales incentives; improve sales training; adjust pricing or packaging" },
+        { metric: "Software revenue", threshold: "NT$ 125-249M", action: "Accelerate customer deployments; expand to adjacent customer segments" },
+        { metric: "Customer retention rate", threshold: "70-84%", action: "Conduct exit interviews; identify churn reasons; improve onboarding and support" },
+        { metric: "Gross margin", threshold: "15-19%", action: "Reduce customization; focus on standard SKUs; improve operational efficiency" }
+      ],
+      action: "If ANY criterion in pivot range → Continue scale-up for additional 12 months with specific improvements; reassess Year 3 targets"
+    },
+    stopTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "<6%", reason: "Market not accepting software value proposition" },
+        { metric: "Customer retention rate", threshold: "<70%", reason: "Product-market fit issues; customers not realizing value" },
+        { metric: "Gross margin", threshold: "<15% after 2 years", reason: "Software business model not viable; margin compression continuing" },
+        { metric: "Competitive response", threshold: "Major competitor (NVIDIA/HPE/Dell) achieves >40% market share with superior software", reason: "Market dynamics shifted; Foxconn cannot catch up without disproportionate investment" }
+      ],
+      action: "If ANY stop trigger met → Stop software expansion; maintain existing software customers; consider divestiture or partnership exit"
+    }
+  },
+  
+  maturityStage: {
+    stage: "Maturity Stage (2028+)",
+    duration: "Ongoing",
+    successTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "≥20% of total orders", status: "Achieved strategic objective" },
+        { metric: "Software revenue", threshold: "≥NT$ 750M ARR", status: "Achieved strategic objective" },
+        { metric: "Gross margin", threshold: "≥20-25% (software-enabled)", status: "Achieved margin expansion goal" },
+        { metric: "Customer lifetime value (LTV) : CAC ratio", threshold: "≥4:1", status: "Healthy unit economics" },
+        { metric: "Net revenue retention", threshold: "≥110% (expansion > churn)", status: "Growing existing customer base" }
+      ],
+      action: "If ALL 5 criteria met → Maintain investment level; focus on operational excellence and margin expansion"
+    },
+    pivotTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "15-19%", action: "Expand to new customer segments; enhance sales incentives" },
+        { metric: "Gross margin", threshold: "15-19%", action: "Reduce customization; increase pricing; improve operational efficiency" },
+        { metric: "Net revenue retention", threshold: "95-109%", action: "Focus on customer success; identify upsell opportunities" }
+      ],
+      action: "If ANY criterion in pivot range → Implement targeted improvements; maintain investment but do not expand"
+    },
+    stopTriggers: {
+      criteria: [
+        { metric: "Software attachment rate", threshold: "<15% after 3 years", reason: "Market saturation or fundamental product-market fit issue" },
+        { metric: "Gross margin", threshold: "<15% after 3 years", reason: "Software business not achieving target margins; may need to restructure or exit" },
+        { metric: "Strategic shift", threshold: "Major customer (≥20% of software revenue) announces in-house software development", reason: "Key customer dependency risk; diversification needed" }
+      ],
+      action: "If ANY stop trigger met → Conduct strategic review; consider partnership, divestiture, or pivot to different software segment"
+    }
+  },
+  
+  escalationProtocol: {
+    title: "Escalation Protocol: Who Decides and When",
+    routine: {
+      frequency: "Monthly",
+      reviewer: "Software Product Lead + Engineering Lead",
+      action: "Review KPIs; if all on track, continue execution"
+    },
+    escalation: {
+      frequency: "Quarterly",
+      reviewer: "CEO + CFO + CTO + Software Product Lead",
+      action: "Review stage gates; if ANY pivot or stop trigger met, escalate to board within 30 days"
+    },
+    boardReview: {
+      frequency: "Quarterly (as per board resolution Item 6)",
+      reviewer: "Board of Directors",
+      action: "If stop triggers met, board must decide: (1) approve corrective action plan, (2) approve pivot strategy, or (3) approve exit from software business"
+    }
+  },
+  
+  boardMessage: "Decision triggers prevent 'zombie projects' that consume resources without delivering value. By establishing clear go/no-go criteria upfront, leadership commits to data-driven decisions rather than emotional attachment. This is standard venture capital practice: fund milestones, not hopes. The triggers above are aggressive but achievable based on pilot customer feedback and competitive benchmarks.",
+  
+  historicalPrecedent: "Quanta's software failure (2024-2025): No clear stop triggers → continued investment in non-differentiated software → eventual commoditization at 8-12% margin. Foxconn will avoid this by committing to stop triggers upfront.",
+  
+  riskMitigation: "If stop triggers are met, Foxconn loses NT$ 65M (Year 1 investment) but avoids NT$ 195M (Years 2-3) and can pivot talent to higher-value initiatives. This is superior to Quanta's approach of continuing investment without clear success criteria."
+};
