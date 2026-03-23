@@ -2402,4 +2402,93 @@ export const pilotProgramGuarantee = {
 };
 
 // Add to export
-export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee };
+// Messaging Hierarchy: Adaptable Pitches for Different Audiences (Added 2026-03-23 by CoCo)
+export const messagingHierarchy = {
+  headline: "Messaging Hierarchy: Adaptable Pitches for Different Time Constraints",
+  purpose: "Different audiences require different levels of detail. This hierarchy ensures consistent messaging across 30-second elevator pitches to 10-minute board presentations.",
+  
+  versions: [
+    {
+      duration: "30 seconds",
+      audience: "Elevator encounter, hallway conversation, quick intro",
+      keyMessage: "Hardware gets us invited to the bid. Software wins the deal—and determines whether we're a strategic partner (20-25% margin) or a commodity supplier (5-8% margin).",
+      supportingPoint: "Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle. Our software transforms that to 85%+ utilization in 2 hours—not 2-4 weeks.",
+      callToAction: "Approve NT$ 65M/year software investment now, or approve NT$ 1.5B opportunity loss by 2028."
+    },
+    {
+      duration: "2 minutes",
+      audience: "Executive briefing, investor call, board pre-read summary",
+      keyMessage: "Foxconn software turns idle GPUs into 85%+ utilization, captures NT$ 50B sovereign AI market, delivers 11.5x ROI — but only if we act in next 12-18 months before competitors lock in customers.",
+      supportingPoints: [
+        "Problem: GPU servers sit idle 40-60%, deployment takes 2-4 weeks, maintenance requires on-site visits",
+        "Solution: Remote Ops Platform + RAG Appliance deliver 85%+ utilization, 2-hour deployment, 70% remote fix rate",
+        "Market: NT$ 750M Year 3 revenue at 20-25% gross margin (vs. 10-15% hardware-only)",
+        "Risk: By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity",
+        "Ask: NT$ 65M/year for 50-80 person team, ROI 11.5x, payback 18-24 months"
+      ],
+      callToAction: "Board approval needed: (1) NT$ 65M/year investment, (2) 50-80 FTE hiring, (3) lab setup, (4) sales incentives"
+    },
+    {
+      duration: "5 minutes",
+      audience: "Board presentation, investor meeting, customer CTO briefing",
+      keyMessage: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-8% hardware-only. This is the difference between strategic partner and commodity supplier.",
+      structure: [
+        { section: "The Problem (1 min)", points: ["40-60% GPU idle time = NT$ 4-6M stranded capital per 100-server cluster", "2-4 week deployment delays revenue by 22 days", "70% of issues require on-site visit = 8-hour downtime, NT$ 2-5M loss"] },
+        { section: "The Solution (1.5 min)", points: ["Remote Ops Platform: 85%+ utilization, 2-hour deployment, 70% remote fix rate", "RAG Appliance: Turnkey private AI for sovereign AI market (NT$ 50B+ opportunity)", "90-day pilot guarantee: 100% refund + NT$ 500K credit if KPIs not met"] },
+        { section: "The Market (1 min)", points: ["Year 3: NT$ 750M revenue (Remote Ops NT$ 600M + RAG NT$ 150M)", "20-25% gross margin (vs. 10-15% hardware-only)", "11.5x ROI, 18-24 month payback, 68% IRR"] },
+        { section: "The Competition (1 min)", points: ["NVIDIA Mission Control: Optimized for DGX Cloud, we're neutral (NVIDIA+AMD)", "HPE/Dell: Proprietary ecosystems, we're open architecture", "Quanta/Wistron: 10-30 person teams, we're 50-80 person full-stack vision"] },
+        { section: "The Ask (0.5 min)", points: ["NT$ 65M/year for 50-80 FTE team", "Q2 2026 org design → Q3 hiring → Q4 first customer", "Go/no-go review Q4 2026 if penetration <2.5%"] }
+      ],
+      callToAction: "Approve board resolution with 7 items: software product line, NT$ 65M/year, hiring plan, lab setup, sales incentives, quarterly reporting, Q4 2026 go/no-go review"
+    },
+    {
+      duration: "10 minutes",
+      audience: "Full board presentation, detailed investor due diligence, strategic partner briefing",
+      keyMessage: "Complete strategic narrative covering problem, solution, market opportunity, competitive landscape, financial projections, risk mitigation, and execution plan.",
+      structure: [
+        { section: "Executive Summary (1 min)", points: ["30-second pitch", "Core thesis", "The ask"] },
+        { section: "The Problem: Why Customers Are Struggling (2 min)", points: ["5 unsolved pain points (GPU idle time, deployment delays, remote ops gap, energy crisis, sovereign AI compliance)", "Customer voices: real quotes from CSP audits", "Lost deal autopsy: NT$ 500M deal lost to HPE software bundle"] },
+        { section: "The Solution: Foxconn Software Stack (2 min)", points: ["Remote Ops Platform: Bronze/Silver/Gold tiers", "RAG Appliance: Starter/Professional/Enterprise tiers", "4 defensible moats (L9-L12 synergy, neutral architecture, brownfield integration, Day-2 accountability)", "90-day pilot guarantee with 4 guaranteed metrics"] },
+        { section: "Market Opportunity & Financials (2 min)", points: ["NT$ 750M Year 3 revenue (NT$ 600M Remote Ops + NT$ 150M RAG)", "20-25% gross margin, 11.5x ROI, 18-24 month payback", "Customer acquisition: focus on existing hardware customers first (lowest CAC)", "Success metrics by segment (CSP, Enterprise, Hyperscaler, Sovereign AI)"] },
+        { section: "Competitive Landscape (1.5 min)", points: ["NVIDIA Mission Control, HPE Private Cloud AI, Dell AI Factory positioning", "OEM/ODM comparison: Quanta, Wistron, GIGABYTE, ASUS, Supermicro", "Why Foxconn will succeed where Quanta failed (6 differentiation factors)", "Q1 2026 competitive moves and Foxconn response"] },
+        { section: "Execution Plan (1 min)", points: ["First 90 days: Week 1-16 deliverables", "Talent acquisition strategy (phased hiring, competitive positioning)", "Organizational design: 5 layers (L9-L12 + Product), 50-80 FTE", "Post-board action items: 48h, Week 1, Month 1"] },
+        { section: "Risk Mitigation (0.5 min)", points: ["Pilot program guarantee reduces customer adoption risk", "Customer lock-in mechanisms drive 85%+ retention", "Risk timeline: quarterly milestones of inaction (Q2 2026-Q1 2028)"] }
+      ],
+      callToAction: "Board resolution approval with 7 items. Effective date: immediate. First quarterly review: Q4 2026."
+    }
+  ],
+  
+  audienceSpecificMessaging: {
+    ceo: {
+      priority: "Strategic positioning, competitive differentiation, long-term moat",
+      keyMessage: "This is the difference between being a strategic partner (20-25% margin) and a commodity supplier (5-8% margin). Window closes Q4 2027.",
+      supportingData: "Quanta precedent: 8-12% hardware margins without software. Dell precedent: 18-22% margin with software transition."
+    },
+    cfo: {
+      priority: "ROI, payback period, cash flow, risk-adjusted returns",
+      keyMessage: "11.5x ROI, 18-24 month payback, 68% IRR. Break-even at 54% of target (NT$ 43M Year 1). Significant downside protection.",
+      supportingData: "Year 1: NT$ 80M revenue, NT$ 48M margin. Year 3: NT$ 750M revenue, NT$ 450M margin. LTV:CAC 4-6x."
+    },
+    cto: {
+      priority: "Technical feasibility, talent acquisition, execution risk",
+      keyMessage: "L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD), brownfield integration. Talent strategy: impact + growth + flexibility vs. big tech compensation.",
+      supportingData: "90-day pilot with 4 guaranteed metrics. Week 1-16 deliverables. Lab validation before deployment. 24-hour bug fix SLA during pilot."
+    },
+    headOfSales: {
+      priority: "Sales cycle, attachment rate, commission structure, customer objections",
+      keyMessage: "Attach sale to existing hardware customers: 1-3 month cycle (vs. 6-9 month greenfield). Software multiplier in comp plan effective Q3 2026.",
+      supportingData: "5 customer objection handlers pre-loaded. Pilot program reduces adoption barrier. Customer testimonial template ready."
+    },
+    boardMember: {
+      priority: "Fiduciary duty, risk mitigation, competitive positioning, exit strategy",
+      keyMessage: "Risk of inaction: NT$ 1.5B opportunity loss by 2028. Go/no-go review Q4 2026 if penetration <2.5%. Quarterly board reporting on software KPIs.",
+      supportingData: "Board resolution template with 7 items. 90-day pilot guarantee. Customer lock-in mechanisms (5 switching costs)."
+    }
+  },
+  
+  boardMessage: "This messaging hierarchy ensures consistent, audience-appropriate communication across all stakeholder interactions. CEO can use 30-second version for impromptu conversations, 2-minute version for executive briefings, 5-minute version for board presentations, and 10-minute version for full board approval meetings. Audience-specific messaging tailors the argument to each decision-maker's priorities.",
+  usage: "Print as a one-pager for leadership team. Include in board pre-read materials. Train sales team on 2-minute and 5-minute versions for customer conversations."
+};
+
+// Add to export
+export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy };

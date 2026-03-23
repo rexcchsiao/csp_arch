@@ -233,7 +233,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 **Next Scheduled Review**: 2026-03-27 (weekly cadence during Q2)
 
-**Last Updated**: 2026-03-23 (CoCo review: added pilot program guarantee & risk reversal framework addressing board execution risk concerns with 90-day guarantee, 4 KPIs, weekly checkpoints, and competitive comparison; validated GTC 2026 alignment; build/lint validation passed)
+**Last Updated**: 2026-03-23 (CoCo review: added messaging hierarchy with 4 time-adapted pitches [30s/2m/5m/10m] and audience-specific messaging for CEO/CFO/CTO/Head of Sales/Board; enables consistent messaging across all stakeholder interactions; added pilot program guarantee addressing board execution risk concerns with 90-day guarantee, 4 KPIs, weekly checkpoints, and competitive comparison; validated GTC 2026 alignment; build/lint validation passed)
 
 **Maintained by**: CoCo (Proactive Agent for csp-arch)
 
