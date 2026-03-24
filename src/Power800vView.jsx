@@ -203,15 +203,40 @@ const Power800vView = () => {
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {competitiveAnalysis.competitors.map((comp, idx) => (
-                    <tr key={idx} className="hover:bg-slate-50">
-                      <td className="py-3 px-4 text-sm font-bold text-slate-900">{comp.name}</td>
+                    <tr key={idx} className="hover:bg-slate-50 align-top">
+                      <td className="py-3 px-4 text-sm font-bold text-slate-900">
+                        <div>{comp.name}</div>
+                        {comp.sourceUrl && (
+                          <a
+                            href={comp.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-orange-600 underline"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            {comp.source}
+                          </a>
+                        )}
+                      </td>
                       <td className="py-3 px-4 text-sm text-green-700">{comp.strength}</td>
                       <td className="py-3 px-4 text-sm text-red-700">{comp.weakness}</td>
-                      <td className="py-3 px-4 text-sm text-blue-700">{comp.ourAdvantage}</td>
+                      <td className="py-3 px-4 text-sm text-blue-700">
+                        <p>{comp.ourAdvantage}</p>
+                        {comp.strategicNote && (
+                          <div className="mt-2 rounded-lg border border-blue-100 bg-blue-50 p-2 text-xs text-slate-700">
+                            <span className="font-bold text-blue-700">為什麼這能凸顯軟體部門價值：</span> {comp.strategicNote}
+                          </div>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
+              <h4 className="text-sm font-black text-orange-900 mb-2">這張表真正想讓老闆看到什麼？</h4>
+              <p className="text-sm text-slate-700 leading-6">連 Vertiv、Schneider 這種偏設施端的公司，都已經不只賣 UPS / cooling 硬體，而是在賣 <span className="font-bold text-orange-700">AI-ready reference design、optimized operations、end-to-end physical + digital infrastructure</span>。這代表 800V / 液冷 / power orchestration 的採購語言已經往軟體與營運結果移動。Foxconn 軟體部門最值錢的地方，不是再做一個監控畫面，而是把這些 facility 訊號接成 <span className="font-bold text-orange-700">capacity assurance、workload governance、brownfield rollout 與可續約的 Remote Ops 服務</span>。</p>
             </div>
           </div>
         )}

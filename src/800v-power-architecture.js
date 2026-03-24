@@ -60,21 +60,21 @@ export const competitiveAnalysis = {
   competitors: [
     {
       name: 'Vertiv',
-      strength: '傳統電源大廠，硬體完整',
-      weakness: '軟體能力弱，缺乏 AI 整合',
-      ourAdvantage: 'AI 負載預測、自適應控制、遠端運維',
-      source: 'Vertiv Thermal Trends 2026',
-      sourceUrl: 'https://www.vertiv.com/global-cooling-trends/',
-      strategicNote: 'Vertiv focused on facilities-level DCIM; lacks L9-L12 server-integrated power management'
+      strength: 'AI-ready 電力/散熱基礎設施完整，且已把 retrofit 與新建置 reference design 包成標準化方案',
+      weakness: '強在 physical infrastructure readiness，但較少往 server-fleet lifecycle governance、workload-aware capacity policy 與 mixed-vendor Day-2 operations 延伸',
+      ourAdvantage: 'Foxconn 可把 rack density / power-cap / cooling constraint 直接接到 L9-L12 軟體治理：AI 負載預測、自適應控制、容量保證與遠端運維',
+      source: 'Vertiv AI Hub / AI-ready retrofit & reference designs',
+      sourceUrl: 'https://www.vertiv.com/en-us/solutions/ai-hub/',
+      strategicNote: 'Vertiv 已把 70kW-142kW rack density 與 retrofit readiness 做成官方 AI 敘事，證明客戶會為「可上線的 AI 電力/冷卻能力」買單；Foxconn 的軟體價值在於再往上把這些 facility constraints 轉成 cluster policy、brownfield capacity assurance 與可續約的 Day-2 服務。'
     },
     {
       name: 'Schneider Electric',
-      strength: '全球佈建、品牌知名度高',
-      weakness: '解決方案制式化，缺乏客製化',
-      ourAdvantage: '彈性軟體架構、快速迭代、貼身服務',
-      source: 'Schneider Electric AI Data Center Solutions 2026',
-      sourceUrl: 'https://www.se.com/ww/en/work/solutions/industrial-automation/artificial-intelligence.jsp',
-      strategicNote: 'Schneider offers EcoStruxure but requires third-party integration for AI workload optimization'
+      strength: '全球佈建、品牌知名度高，並明確把 resilient electrical infrastructure + advanced liquid cooling + optimized operations 綁成 AI datacenter 敘事',
+      weakness: '強在 end-to-end physical and digital infrastructure，但不天然擁有 server-fleet lifecycle governance、GPU workload policy 與客戶現場 mixed-vendor 叢集營運責任',
+      ourAdvantage: 'Foxconn 可把電力/液冷訊號往上接到 AI 伺服器韌體、叢集排程與 brownfield 維運流程，形成更貼近軟體部門可收費的控制層',
+      source: 'Schneider Electric AI data center solutions',
+      sourceUrl: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/',
+      strategicNote: 'Schneider 已用「End-to-end physical and digital AI infrastructure」來教育市場，這反而幫 Foxconn 證明：800V / 液冷 / 電力管理不只是硬體採購，而是需要軟體把設施訊號轉成 workload governance、SLA 保護與 brownfield 營運能力。'
     },
     {
       name: 'Delta Electronics',
