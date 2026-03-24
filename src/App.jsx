@@ -77,14 +77,45 @@ const App = () => {
 
         {/* Content by Tab */}
         {activeTab === 'overview' && (
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
-            <h2 className="text-2xl font-black mb-4">歡迎頁面</h2>
-            <p className="text-slate-700 mb-4">
-              這是 Foxconn AI Server Software 的展示頁面。
-            </p>
-            <p className="text-slate-700">
-              請點擊上方的 <strong className="text-blue-600">"CoCo 分析報告"</strong> 或 <strong className="text-orange-600">"800V 高壓電力架構"</strong> 按鈕查看完整分析。
-            </p>
+          <div className="space-y-6">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+              <h2 className="text-2xl font-black mb-4 text-slate-900">給管理層的總覽：為什麼 AI 伺服器一定要有軟體部門</h2>
+              <p className="text-slate-700 mb-4 leading-relaxed">
+                真正被客戶買單的，早就不只是 GPU 規格，而是誰能把交機後的 <strong className="text-blue-600">部署速度、生命周期治理、遠端運維、brownfield 整合、power / cooling 事件處理</strong> 接成可持續營運的結果。
+                沒有軟體部門，硬體比較容易被看成可替換的 BOM；有軟體部門，Foxconn 才有機會把 AI 伺服器升級成可被續約、可被問責、可被溢價的服務。
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Board takeaway 01</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">軟體部門賣的是 Day-2 Assurance</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    關鍵不是第一次裝得起來，而是之後能不能穩定升級、可治理、可稽核、可遠端處理，這才是最容易形成 attach rate 與年約收入的價值層。
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-fuchsia-100 bg-fuchsia-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-fuchsia-600 mb-2">Board takeaway 02</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">大型 CSP 買的是責任轉移</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    客戶不是不會做，而是不想自己承接 brownfield 整合、變更窗口、remote diagnostics、dispatch readiness 與設施事件協調這些高風險 Day-2 工作。
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-orange-100 bg-orange-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-orange-600 mb-2">Board takeaway 03</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">軟體直接影響毛利與續約</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    軟體不是附屬功能，而是把一次性交機翻成 deployment assurance、lifecycle governance、capacity assurance 與 remote ops 年度收入的關鍵槓桿。
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-sm font-semibold text-slate-900 mb-2">建議閱讀順序</p>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li><strong className="text-blue-600">CoCo 分析報告：</strong>最完整的董事會論述、競品訊號、服務切口與軟體部門定位。</li>
+                  <li><strong className="text-orange-600">800V 高壓電力架構：</strong>AI 機房 power / cooling 升級如何反過來創造新的軟體價值。</li>
+                  <li><strong className="text-purple-600">自建 vs 採購：</strong>回答大型 CSP / Hyperscaler 為什麼仍然會買 Foxconn 的軟體與服務。</li>
+                </ul>
+              </div>
+            </div>
           </div>
         )}
 
