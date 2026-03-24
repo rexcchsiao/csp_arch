@@ -460,6 +460,14 @@ structuralAdvantages: {
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       },
       {
+        title: 'AI datacenter retrofit readiness 正在變成新預算項，但少有人把它接成軟體服務',
+        evidence: 'Vertiv AI Hub 已把 retrofit-ready / new-build reference designs、70kW-142kW rack density、energy optimization 與 whitespace readiness 放到官方 AI 基礎建設敘事前台。',
+        whyStillOpen: '這證明客戶開始正式為「現有機房能不能先撐住下一波 AI 擴容」編列預算；但多數供應商仍停在物理設施設計或監控，沒有把 retrofit readiness、power cap、rack density、workload placement 與 lifecycle governance 接成持續性的軟體責任。',
+        foxconnPlay: '把 AI Retrofit Readiness Assessment 做成軟體部門的前導服務：先用 BMC / rack / power / cooling telemetry 建立 brownfield 容量基線，再延伸到 Capacity Assurance、change-window governance 與分階段擴容路線圖。這樣軟體部門賣的不只是監控，而是「幫客戶延後 CAPEX、降低 retrofit 失誤、把機房準備度變成可管理結果」。',
+        sourceLabel: 'Vertiv AI Hub',
+        source: 'https://www.vertiv.com/en-us/solutions/ai-hub/'
+      },
+      {
         title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
         evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery；HPE Private Cloud AI 也把 built-in observability、predict problems 與 continuous service availability 放進同一條產品敘事。這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
         whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險與 availability 壓力留給客戶自己承擔。',
@@ -1517,6 +1525,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '不是只給監控畫面，而是把 AI 機房最容易卡住的 power / cooling / facility coordination 問題做成可量化、可續約的服務；這正好對應 NVIDIA Mission Control 已公開強調的 building management integration、power optimization 與 power/cooling event control 需求',
 				targetCustomer: '大型 CSP、電信商、液冷導入中的 AI 資料中心、既有 brownfield 機房'
+			},
+			{
+				name: 'AI Retrofit Readiness Assessment',
+				description: '以 rack density、power cap、cooling headroom、whitespace readiness 與 brownfield 維護窗口為主軸，先評估既有機房能否承接下一波 AI 擴容，再把結果接到容量治理、升級節奏與分階段 retrofit 路線圖',
+				pricing: 'NT$ 350K-1.2M/案 + retrofit roadmap / quarterly reassessment 年費',
+				margin: '65-75%',
+				differentiation: '直接把 Vertiv 已公開驗證的 retrofit-ready / whitespace-readiness 採購語言，翻成 Foxconn 更有優勢的軟體服務：不只評估設施夠不夠，而是把機房準備度接成 workload placement、brownfield integration 與 lifecycle governance 的可交付結果',
+				targetCustomer: '既有 brownfield 機房、正評估液冷或高密度 AI 機櫃的 CSP / 電信商 / 大型企業'
 			},
 			{
 				name: 'AI Recovery & Evidence Assurance',
