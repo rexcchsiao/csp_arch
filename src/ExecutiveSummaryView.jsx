@@ -6,6 +6,7 @@ import { customerSuccessScenarios, executiveSummary } from './customer-success-s
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
+import { aiSupplyChainSecurity, modelPerformanceMonitoring } from './executive-brief.js';
 
 const ExecutiveSummaryView = () => {
   const metrics = [
@@ -374,6 +375,45 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
           <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">硬體部門把設備交出去；軟體部門把交機後的 deployment、upgrade、governance 與 renewal 責任收斂成可持續經營的產品線。若沒有獨立 mandate，最容易被犧牲掉的，正是最有毛利的那一層。</span></p>
+        </div>
+      </div>
+
+      {/* Next monetizable Day-2 software wedges */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <ShieldIcon className="w-5 h-5 text-emerald-600" /> 下一波最容易被老闆看懂、也最能拉高軟體部門價值的 2 個 Day-2 模組
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這兩塊很適合拿來強化一個超關鍵論點：<span className="font-semibold text-slate-900">Foxconn 軟體部門不只是把伺服器裝起來，而是持續對 AI 服務的治理、可恢復性與商業結果負責。</span>
+          一個模組守住 <span className="font-semibold text-emerald-700">合規 / 供應鏈可信度</span>，另一個模組守住 <span className="font-semibold text-blue-700">模型上線後的表現與營運風險</span>。
+          兩者都比單純 dashboard 更接近管理層會核准的預算語言，也更能證明軟體部門正在往高毛利、可續約的方向長出來。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Emerging software wedge 01</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{aiSupplyChainSecurity.headline}</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">為什麼現在重要：</span>{aiSupplyChainSecurity.urgency}</p>
+              <p><span className="font-bold text-emerald-700">Foxconn 該賣的是：</span>{aiSupplyChainSecurity.foxconnDifferentiation?.foxconnAdvantage}</p>
+              <p><span className="font-bold text-blue-700">可收費方式：</span>{aiSupplyChainSecurity.foxconnDifferentiation?.monetization}</p>
+              <p><span className="font-bold text-amber-700">市場訊號：</span>{aiSupplyChainSecurity.marketValidation?.adoptionRate}</p>
+              <p><span className="font-bold text-fuchsia-700">董事會該記住：</span>{aiSupplyChainSecurity.boardMessage}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Emerging software wedge 02</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{modelPerformanceMonitoring.headline}</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">為什麼現在重要：</span>{modelPerformanceMonitoring.urgency}</p>
+              <p><span className="font-bold text-blue-700">Foxconn 該賣的是：</span>{modelPerformanceMonitoring.foxconnDifferentiation?.foxconnAdvantage}</p>
+              <p><span className="font-bold text-emerald-700">可收費方式：</span>{modelPerformanceMonitoring.foxconnDifferentiation?.monetization}</p>
+              <p><span className="font-bold text-amber-700">市場訊號：</span>{modelPerformanceMonitoring.marketValidation?.adoptionRate}</p>
+              <p><span className="font-bold text-fuchsia-700">董事會該記住：</span>{modelPerformanceMonitoring.boardMessage}</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">如果前半場是把 AI 叢集交出去，後半場就是用 supply-chain security 與 model performance monitoring 證明：Foxconn 軟體部門願意對 AI 服務的可信度、持續可用性與商業結果長期背責。</span></p>
         </div>
       </div>
 
