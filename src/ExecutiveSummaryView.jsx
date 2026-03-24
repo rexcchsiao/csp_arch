@@ -7,6 +7,7 @@ import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
 import { aiSupplyChainSecurity, modelPerformanceMonitoring } from './executive-brief.js';
+import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis.js';
 
 const ExecutiveSummaryView = () => {
   const metrics = [
@@ -285,6 +286,9 @@ const ExecutiveSummaryView = () => {
   ];
   const boardMandateGuardrails = softwareDifferentiation.serviceOfferings?.mandateGuardrails?.items || [];
   const softwareDepartmentMandateCards = softwareDifferentiation.softwareDepartmentMandateSummary?.cards || [];
+  const hyperscalerDecisionTriggers = hyperscalerGapAnalysis.decisionMatrix?.useFoxconnWhen || [];
+  const hyperscalerBuildLogic = hyperscalerGapAnalysis.coreInsight;
+  const hyperscalerCaseStudy = hyperscalerGapAnalysis.caseStudy;
 
   return (
     <div className="space-y-8">
@@ -349,6 +353,64 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
           <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">面對 CSP，Foxconn 軟體部門賣的是 remote ops、lifecycle 與 brownfield accountability；面對企業，賣的是 deployment assurance、governance 與 sovereign-ready private AI。能把同一台硬體翻成這兩種買單語言的，正是軟體部門。</span></p>
+        </div>
+      </div>
+
+      {/* Why large CSPs still buy instead of build everything themselves */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Users className="w-5 h-5 text-cyan-600" /> 大型 CSP / Hyperscaler 不是不會做，而是不想自己扛這些軟體責任
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這塊超適合拿來補強老闆最常冒出的疑問：<span className="font-semibold text-slate-900">「如果客戶自己就有很強的軟體團隊，Foxconn 軟體部門還有什麼價值？」</span>
+          真正答案不是「他們不會做」，而是<span className="font-semibold text-cyan-700">這些工作不夠差異化、卻很吃人、很吃時間，而且一旦失敗代價很高</span>。
+          所以客戶更願意把基礎設施治理、在地支援、混合部署與 brownfield 整合外包給能對結果負責的人，讓內部團隊回頭做真正能創造營收的產品與服務。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4 mb-4">
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Build vs. buy reality</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{hyperscalerBuildLogic?.headline}</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">現實：</span>{hyperscalerBuildLogic?.reality}</p>
+              <p><span className="font-bold text-cyan-700">Foxconn 價值：</span>{hyperscalerBuildLogic?.foxconnValue}</p>
+              <p><span className="font-bold text-emerald-700">經濟帳：</span>{hyperscalerBuildLogic?.economicLogic}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5 md:col-span-2">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">When strong software teams still buy</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{hyperscalerGapAnalysis.decisionMatrix?.headline}</p>
+            <div className="grid md:grid-cols-2 gap-3 text-xs text-slate-700 leading-relaxed">
+              {hyperscalerDecisionTriggers.slice(0, 6).map((trigger) => (
+                <div key={trigger} className="rounded-xl border border-white/80 bg-white p-3">
+                  <span className="font-bold text-cyan-700">• </span>{trigger}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="rounded-2xl border border-cyan-100 bg-white p-5">
+          <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Board-ready proof point</p>
+          <p className="text-sm font-black text-slate-900 mb-3">{hyperscalerCaseStudy?.headline}</p>
+          <div className="grid md:grid-cols-2 gap-4 text-xs text-slate-700 leading-relaxed">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <p><span className="font-bold text-slate-500">案例背景：</span>{hyperscalerCaseStudy?.customer}</p>
+              <p className="mt-2"><span className="font-bold text-slate-500">原始立場：</span>{hyperscalerCaseStudy?.initialPosition}</p>
+              <p className="mt-2"><span className="font-bold text-slate-500">自建代價：</span>{hyperscalerCaseStudy?.evaluation?.buildOption?.timeline}；{hyperscalerCaseStudy?.evaluation?.buildOption?.cost}</p>
+              <p className="mt-2"><span className="font-bold text-cyan-700">採購結果：</span>{hyperscalerCaseStudy?.evaluation?.buyOption?.timeline}；{hyperscalerCaseStudy?.evaluation?.buyOption?.cost}</p>
+            </div>
+            <div className="rounded-xl border border-cyan-100 bg-cyan-50 p-4">
+              <p><span className="font-bold text-emerald-700">為什麼最後選 Foxconn：</span></p>
+              <ul className="mt-2 space-y-1">
+                {hyperscalerCaseStudy?.reasons?.slice(0, 4).map((reason) => (
+                  <li key={reason}>• {reason}</li>
+                ))}
+              </ul>
+              <p className="mt-3"><span className="font-bold text-cyan-700">結果：</span>{hyperscalerCaseStudy?.outcome?.timeline}；{hyperscalerCaseStudy?.outcome?.cost}</p>
+            </div>
+          </div>
+          <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
+            <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">大型客戶不是缺軟體能力，而是不想把 12-18 個月、20-50 人、而且失敗代價很高的非差異化基礎設施工作都自己扛。能把這些責任接住，正是 Foxconn 軟體部門的價值。</span></p>
+          </div>
         </div>
       </div>
 
