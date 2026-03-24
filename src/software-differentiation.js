@@ -432,6 +432,14 @@ structuralAdvantages: {
         boardWhyItMatters: '這把軟體價值從「看得到告警」提升成「能延後擴建、減少 outage、形成年度容量治理收入」；也更符合大型 CSP / 企業真正會編列預算的語言。',
         sourceLabel: 'Supermicro SuperCloud Composer + NVIDIA Mission Control',
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
+      },
+      {
+        title: 'Commissioning Assurance',
+        marketSignal: 'Dell AI Factory 把 infrastructure、data、lifecycle support 包成 end-to-end AI 交付敘事；HPE Private Cloud AI 也強調 pre-configured validated platform 與快速 production deployment。',
+        foxconnPlay: 'Foxconn 應把「工廠 burn-in / 韌體基線 / rack-level acceptance / 到站遙測 baseline / handoff evidence pack」包成 commissioning assurance，賣的是從出廠到上線的可驗證交付鏈，而不是把機櫃送到現場後就把責任切斷。',
+        boardWhyItMatters: '這是 Foxconn 最有資格做、也最能體現軟體部門價值的位置：把工廠、韌體、現場驗收與 Day-2 維運接成同一條數位責任鏈，降低交機爭議、縮短首波故障定位時間，並把 OEM/ODM 交付變成可定價的軟體服務。',
+        sourceLabel: 'Dell AI Factory + HPE Private Cloud AI',
+        source: 'https://www.dell.com/en-us/ai-factory'
       }
     ],
     boardMessage: '董事會該記住的一句話：硬體讓客戶「買得到 AI」，軟體部門的 Day-2 Assurance 讓客戶「敢長期把營運風險交給我們」。'
@@ -505,6 +513,14 @@ structuralAdvantages: {
         foxconnPlay: '把 Remote Diagnostics & Dispatch Readiness 做成 attach service：先用 BMC / 遙測 / runbook 遠端縮小故障範圍、判斷是否需要換件、同步備品與維修窗口，讓 Foxconn 賣的是更少 truck roll、更高 first-time-fix rate 與更低跨站點 OPEX。',
         sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Factory-to-datacenter commissioning evidence 仍少有人做成持續性軟體責任',
+        evidence: 'Dell AI Factory 把 infrastructure、data、lifecycle support 包成 end-to-end AI factory 敘事；HPE Private Cloud AI 則用 pre-configured validated platform、production deployment in hours 來賣交付可信度。',
+        whyStillOpen: '市場很會談 validated platform，但較少有人真正承接「出廠基線是否與到站 rack reality 一致、驗收證據如何留存、第一個月故障要不要回頭翻交付紀錄」這些 handoff 問題。結果是硬體、現場整合與 Day-2 維運之間常出現責任斷點。',
+        foxconnPlay: '把 Commissioning Evidence Pack / Handoff Assurance 做成 attach service：把 burn-in 結果、韌體矩陣、racked-and-powered telemetry baseline、acceptance checklist、初始告警門檻與 Day-2 runbook 一次交付，讓軟體部門成為從工廠到機房的責任鏈 owner。',
+        sourceLabel: 'Dell AI Factory + HPE Private Cloud AI',
+        source: 'https://www.dell.com/en-us/ai-factory'
       }
     ],
     boardMessage: '董事會該記住的一句話：真正還沒被滿足的市場空位，不是 another platform，而是有人願意對 brownfield、air-gap、facility event 與 remote-ops 結果負責；這正是軟體部門可以被定價、被續約、也最不容易被取代的位置。'
