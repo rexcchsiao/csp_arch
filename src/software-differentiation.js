@@ -1326,6 +1326,12 @@ structuralAdvantages: {
 					revenueLogic: '導入費 + 年度內容維護 / SLA 續約費'
 				},
 				{
+					name: 'Remote Diagnostics & Dispatch Readiness',
+					gap: '多數 OEM / ODM 最多做到告警與 break/fix 支援，卻沒有把遠端故障分流、備品命中率、維修窗口協調與跨站點 dispatch readiness 做成可被採購的服務。',
+					whyItWins: '這直接對應大型 CSP / 電信商最容易量化的 OPEX 痛點：少白跑機房、少帶錯料、少拖延維修窗口，對管理層比 another dashboard 更好理解。',
+					revenueLogic: '健檢專案費 + 年度 readiness review / runbook / 備品策略續約費'
+				},
+				{
 					name: 'Tenant Governance & GPU Service Guardrails',
 					gap: '共享 GPU 叢集最容易失控的，不是 scheduler 有沒有跑，而是 quota、priority、showback、approval workflow 與 SLA 例外處理沒被產品化。',
 					whyItWins: '這直接對應平台團隊、FinOps、部門主管之間最常吵的治理問題，也最容易從附加功能變成年約服務。',
@@ -1381,6 +1387,15 @@ structuralAdvantages: {
 					marketSignal: 'Dell 已把 Cyber Resilience for AI 拉進 AI solutions 官方敘事，顯示 recoverability 已進入 AI 預算語言。',
 					sourceLabel: 'Dell AI Solutions – Cyber Resilience for AI',
 					source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
+				},
+				{
+					risk: 'Dispatch / Serviceability Risk',
+					whatBreaks: '當跨站點 AI 機房半夜出事時，如果無法先遠端縮小故障範圍、確認是否需要派人、以及該帶哪些備品，客戶就會把成本吞在 truck roll、維修窗口延誤與 first-time-fix rate 下降上。',
+					annualService: 'Remote Diagnostics & Dispatch Readiness',
+					whyRecurring: '新機型、備品策略、runbook、值班矩陣與跨站點 dispatch 流程會持續變動，天然適合做成季度 review 與年度 readiness 續約。',
+					marketSignal: 'NVIDIA Mission Control 已把 AI factory operations、autonomous recovery 與 building management integration 拉進官方敘事；Dell AI Factory 也把 lifecycle support 與 end-to-end delivery 放到採購前台。這代表客戶正為「誰先遠端把問題縮小，再決定怎麼派工」這種 serviceability 結果付錢。',
+					sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
+					source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
 				}
 			],
 			boardMessage: '董事會該記住的一句話：客戶每年續約的理由，不是因為軟體畫面還在，而是因為這 4 類風險每年都還在，而 Foxconn 軟體部門願意持續把它們接住。'
