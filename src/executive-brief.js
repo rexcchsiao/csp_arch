@@ -50,18 +50,18 @@ export const executiveBrief = {
     {
       rank: 3,
       painPoint: "Remote Operations Gap",
-      currentReality: "70% of issues require on-site visit, 8-hour downtime per incident",
-      foxconnSolution: "Remote Ops toolchain: monitoring, diagnostics, predictive maintenance, remote repair",
-      quantifiedImpact: "On-site visits -70%, downtime -60%, saving NT$ 20M/year per 100-server cluster",
-      monetizableService: "Remote Ops Platform (all tiers): NT$ 1-15M/year depending on SLA"
+      currentReality: "70% of issues still trigger on-site dispatch because teams cannot remotely triage root cause, pre-stage the right spare parts, or decide whether a truck roll is actually necessary; each incident can consume 8 hours of downtime plus avoidable field-service OPEX.",
+      foxconnSolution: "Remote Ops toolchain: monitoring, remote log capture, diagnostics, predictive maintenance, remote repair, plus dispatch-readiness workflows and evidence packs that shrink fault scope before a field visit is approved",
+      quantifiedImpact: "On-site visits -70%, downtime -60%, higher first-time-fix rates, and faster RCA handoff, saving NT$ 20M/year per 100-server cluster",
+      monetizableService: "Remote Ops Platform + Dispatch Readiness / Evidence SLA: NT$ 1-15M/year depending on SLA"
     },
     {
       rank: 4,
       painPoint: "Energy Cost Crisis",
-      currentReality: "Power = 40%+ of TCO; traditional cooling wastes 15-25% energy",
-      foxconnSolution: "BMC-based PID control + K8s energy-aware scheduler + 800V power management",
-      quantifiedImpact: "PUE from 1.6 → 1.4, energy cost savings NT$ 8-12M/year per 1MW datacenter",
-      monetizableService: "Energy Optimization Suite: 30% of energy savings (performance-based pricing)"
+      currentReality: "Power = 40%+ of TCO; many brownfield AI sites hit rack power, cooling, or whitespace limits before they run out of GPU demand, forcing premature retrofit CAPEX or risky overcommitment.",
+      foxconnSolution: "BMC-based PID control + K8s energy-aware scheduler + 800V power management + facility-aware capacity assurance for brownfield rollout decisions",
+      quantifiedImpact: "PUE from 1.6 → 1.4, energy cost savings NT$ 8-12M/year per 1MW datacenter, plus delayed retrofit CAPEX by using existing power/cooling headroom more safely",
+      monetizableService: "Energy Optimization Suite + Capacity Assurance services: 30% of verified savings / deferred capacity value"
     },
     {
       rank: 5,
@@ -102,7 +102,7 @@ export const executiveBrief = {
   competitiveReality: {
     oemOdmLandscape: "Quanta/Wistron/ASUS: 10-30 person software teams, hardware-focused, competing on 10-15% margins. Quanta announced software partnership (2026-03-05), signaling OEM/ODM software competition beginning.",
     brandFactoryLandscape: "Dell/HPE: 100-200 person teams, but tied to proprietary ecosystems",
-    hyperscalerLandscape: "AWS/Azure/GCP: World-class software, but cloud-only, cannot meet sovereign AI needs",
+    hyperscalerLandscape: "AWS/Azure/GCP: world-class software for their own platforms, but they are incentivized to prioritize cloud consumption and internal tooling over customer-specific brownfield handoff, air-gapped lifecycle governance, and remote serviceability workflows",
     foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD). Unique hardware+software synergy: 800V power architecture integration enables 15-25% energy savings pure software vendors cannot replicate.",
     strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential. Window: 12-18 months (Q2 2026-Q4 2027) to establish credibility before competitors lock in customers.",
     ecosystemAdvantage: "Foxconn leverages partner ecosystem (Red Hat, Canonical, NVIDIA Partner Network) to accelerate delivery vs. building everything from scratch. Competitors like Quanta/Wistron lack these partnerships."
@@ -175,9 +175,9 @@ export const executiveBrief = {
     {
       name: "Remote Ops Platform",
       targetCustomer: "CSP/Hyperscaler with multi-datacenter operations",
-      capabilities: ["Real-time monitoring", "Remote diagnosis", "Predictive maintenance", "70% remote fix rate"],
+      capabilities: ["Real-time monitoring", "Remote diagnosis", "Predictive maintenance", "Dispatch readiness / truck-roll avoidance", "70% remote fix rate"],
       pricingModel: "Subscription: NT$ 5M/year per datacenter",
-      competitiveAdvantage: "Deep BMC integration, multi-vendor GPU support, air-gapped deployment"
+      competitiveAdvantage: "Deep BMC integration, multi-vendor GPU support, air-gapped deployment, remote evidence capture, and serviceability workflows that reduce unnecessary field dispatch while giving customer SRE teams faster RCA-ready diagnostics"
     },
     {
       name: "RAG Appliance (Private AI Knowledge Base)",
@@ -196,9 +196,9 @@ export const executiveBrief = {
     {
       name: "Energy Optimization Suite",
       targetCustomer: "Large-scale datacenters (10MW+ power consumption)",
-      capabilities: ["Predictive cooling", "Workload-aware power management", "PUE optimization", "Carbon reporting"],
+      capabilities: ["Predictive cooling", "Workload-aware power management", "PUE optimization", "Brownfield capacity / retrofit readiness", "Carbon reporting"],
       pricingModel: "Performance-based: 30% of energy savings",
-      competitiveAdvantage: "L9-L10 firmware integration enables 15-25% energy reduction"
+      competitiveAdvantage: "L9-L10 firmware integration enables 15-25% energy reduction and gives Foxconn a credible path to sell facility-aware capacity assurance before customers commit to new retrofit CAPEX"
     }
   ],
   
@@ -424,7 +424,7 @@ export const whyFoxconnWillSucceed = {
       factor: "4. Day-2 Operational Accountability",
       quanta: "No operational SLA, hardware warranty only",
       foxconn: "70% remote fix rate, 2-hour response, 99.9% uptime SLA (Gold tier)",
-      whyItMatters: "Customers buy outcomes, not hardware. Foxconn owns the outcome. Quanta owned the box."
+      whyItMatters: "Customers buy outcomes, not hardware. Foxconn owns the outcome—including remote diagnosis, evidence handoff, and dispatch readiness. Quanta owned the box."
     },
     {
       factor: "5. Partner Ecosystem Leverage",
