@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { executiveBrief, softwareDepartmentScorecard } from './executive-brief.js';
-import { softwareDifferentiation, financialImpactCalculator } from './software-differentiation.js';
+import { softwareDifferentiation, financialImpactCalculator, softwareMoatSummary } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
 
@@ -865,6 +865,52 @@ const SoftwareDifferentiationView = () => {
         {activeTab === 'ask' && (
           <div className="space-y-6">
             <h3 className="text-xl font-black text-slate-800 mb-4">戰略要求</h3>
+
+            <div className="p-6 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl border border-indigo-300 shadow-sm text-white">
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-200 mb-2">Board quick card</p>
+                  <h4 className="text-lg font-black text-white mb-2">{softwareMoatSummary.headline}</h4>
+                  <p className="text-sm text-slate-200 font-medium">{softwareMoatSummary.oneLiner}</p>
+                </div>
+                <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-2xl bg-white/10 border border-white/10">
+                  <Shield className="w-6 h-6 text-indigo-200" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <p className="text-xs font-black text-indigo-200 mb-2">殘酷現實</p>
+                  <p className="text-xs text-slate-200">{softwareMoatSummary.brutalReality.insight}</p>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <p className="text-xs font-black text-indigo-200 mb-2">財務影響</p>
+                  <p className="text-xs text-slate-200 mb-2">{softwareMoatSummary.financialImpact.example}</p>
+                  <p className="text-xs font-semibold text-emerald-300">{softwareMoatSummary.financialImpact.roi}</p>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <p className="text-xs font-black text-indigo-200 mb-2">競爭現實</p>
+                  <p className="text-xs text-slate-200">{softwareMoatSummary.competitiveReality.insight}</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareMoatSummary.strategicChoice && (
+                  <>
+                    <div className="p-4 bg-rose-500/10 rounded-xl border border-rose-300/20">
+                      <p className="text-xs font-black text-rose-200 mb-2">{softwareMoatSummary.strategicChoice.optionA.name}</p>
+                      <p className="text-xs text-slate-200 mb-2">{softwareMoatSummary.strategicChoice.optionA.outcome}</p>
+                      <p className="text-xs text-rose-200">{softwareMoatSummary.strategicChoice.optionA.timeline}｜{softwareMoatSummary.strategicChoice.optionA.opportunityCost}</p>
+                    </div>
+                    <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-300/20">
+                      <p className="text-xs font-black text-emerald-200 mb-2">{softwareMoatSummary.strategicChoice.optionB.name}</p>
+                      <p className="text-xs text-slate-200 mb-2">{softwareMoatSummary.strategicChoice.optionB.outcome}</p>
+                      <p className="text-xs text-emerald-200">{softwareMoatSummary.strategicChoice.optionB.timeline}｜{softwareMoatSummary.strategicChoice.optionB.upside}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
 
             <div className="p-6 bg-gradient-to-r from-violet-50 to-indigo-50 rounded-2xl border border-violet-200 shadow-sm">
               <h4 className="text-lg font-black text-violet-900 mb-2">{softwareDifferentiation.softwareDepartmentMandateSummary.headline}</h4>
