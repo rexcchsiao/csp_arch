@@ -1444,8 +1444,15 @@ structuralAdvantages: {
 				margin: '70%+',
 				timeToMarket: '4-8 週',
 			},
+			{
+				name: 'GPU Quota / Showback 治理健檢',
+				why: '直接回應 shared GPU cluster 最常見卻最少人負責的痛點：quota、priority、approval workflow、showback / chargeback 與 SLA 例外常靠人工協調；這類治理需求可用既有 K8s / scheduler / usage metering 能力快速包成顧問式服務',
+				revenue: 'NT$ 180K-600K/案 + 年度 policy / showback 維運費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
 		],
-		totalPotential: '首年可貢獻 NT$ 25-35M 營收，毛利率 70%+',
+		totalPotential: '首年可貢獻 NT$ 28-40M 營收，毛利率 70%+',
 	},
 		offerings: [
 			{
