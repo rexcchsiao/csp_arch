@@ -42,10 +42,10 @@ export const executiveBrief = {
     {
       rank: 2,
       painPoint: "Deployment Delays",
-      currentReality: "2-4 weeks from hardware delivery to production workload",
-      foxconnSolution: "Pre-integrated AI software stack (CUDA/ROCm/TensorRT) + Helm Charts + validated blueprints",
-      quantifiedImpact: "Deployment from 25 days → 2 hours, revenue generation 22 days earlier",
-      monetizableService: "RAG Appliance (Professional/Enterprise): NT$ 15-30M one-time + 20% annual support"
+      currentReality: "2-4 weeks from hardware delivery to production workload because factory pre-load, site acceptance, software baseline, and Day-2 ownership are often split across different teams",
+      foxconnSolution: "Pre-integrated AI software stack (CUDA/ROCm/TensorRT) + Helm Charts + validated blueprints + Factory-to-Operations handoff workflow that carries the cluster from delivery into production readiness",
+      quantifiedImpact: "Deployment from 25 days → 2 hours, revenue generation 22 days earlier, and less post-installation finger-pointing between hardware, platform, and operations teams",
+      monetizableService: "Commissioning & Handoff Assurance: NT$ 0.3-1.2M per project + annual baseline refresh / acceptance services"
     },
     {
       rank: 3,
@@ -178,6 +178,13 @@ export const executiveBrief = {
       capabilities: ["Real-time monitoring", "Remote diagnosis", "Predictive maintenance", "Dispatch readiness / truck-roll avoidance", "70% remote fix rate"],
       pricingModel: "Subscription: NT$ 5M/year per datacenter",
       competitiveAdvantage: "Deep BMC integration, multi-vendor GPU support, air-gapped deployment, remote evidence capture, and serviceability workflows that reduce unnecessary field dispatch while giving customer SRE teams faster RCA-ready diagnostics"
+    },
+    {
+      name: "Commissioning & Handoff Assurance",
+      targetCustomer: "CSPs and enterprises that need production readiness fast but do not want factory, field deployment, and Day-2 operations split across separate owners",
+      capabilities: ["Factory pre-load validation", "Site acceptance baseline", "Golden image / firmware matrix evidence pack", "Day-2 runbook handoff", "Baseline refresh for future expansions"],
+      pricingModel: "Project-based: NT$ 0.3-1.2M per deployment + annual baseline refresh / acceptance retainer",
+      competitiveAdvantage: "Turns the gray zone between server delivery and stable operations into a billable, accountable software-led service that shortens time-to-revenue and reduces post-installation blame loops"
     },
     {
       name: "RAG Appliance (Private AI Knowledge Base)",
