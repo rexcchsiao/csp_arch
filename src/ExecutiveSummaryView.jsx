@@ -1,7 +1,7 @@
 // Executive Summary View - Leadership Decision Dashboard
 // Surfaces key metrics, decisions, and value propositions for C-level executives
 import React from 'react';
-import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock, ExternalLink } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, AlertTriangle, CheckCircle, ArrowRight, Lock, Layers, BarChart3, Zap, Shield as ShieldIcon, Award, Clock, ExternalLink, Users } from 'lucide-react';
 import { customerSuccessScenarios, executiveSummary } from './customer-success-stories';
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
@@ -289,6 +289,9 @@ const ExecutiveSummaryView = () => {
   const hyperscalerDecisionTriggers = hyperscalerGapAnalysis.decisionMatrix?.useFoxconnWhen || [];
   const hyperscalerBuildLogic = hyperscalerGapAnalysis.coreInsight;
   const hyperscalerCaseStudy = hyperscalerGapAnalysis.caseStudy;
+  const dispatchReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'Remote Diagnostics & Dispatch Readiness 服務');
+  const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
+  const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
 
   return (
     <div className="space-y-8">
@@ -411,6 +414,49 @@ const ExecutiveSummaryView = () => {
           <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
             <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">大型客戶不是缺軟體能力，而是不想把 12-18 個月、20-50 人、而且失敗代價很高的非差異化基礎設施工作都自己扛。能把這些責任接住，正是 Foxconn 軟體部門的價值。</span></p>
           </div>
+        </div>
+      </div>
+
+      {/* Why large CSPs will still pay for remote diagnostics and dispatch readiness */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Users className="w-5 h-5 text-cyan-600" /> 大型 CSP 願意額外付錢的，不是 another dashboard，而是少派錯人、少白跑機房
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這塊很適合補強一個常被低估、但其實很有採購力的論點：<span className="font-semibold text-slate-900">大型 CSP / 電信商 / 跨站點機房真正痛的，不只是看到告警，而是半夜出事時能不能先遠端把問題縮小，再決定是否真的要派人到場。</span>
+          這種 <span className="font-semibold text-cyan-700">truck-roll avoidance + dispatch readiness</span> 很貼近 OPEX、SLA 與 first-time-fix rate，對管理層來說也比抽象平台功能更好理解：少白跑一趟、少帶錯備品、少延誤一個維修窗口，就是實打實的成本與可用性改善。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Service wedge</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{dispatchReadinessService?.name}</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">賣的不是：</span>單純遠端監控畫面。</p>
+              <p><span className="font-bold text-cyan-700">賣的其實是：</span>{dispatchReadinessService?.differentiation}</p>
+              <p><span className="font-bold text-emerald-700">收費方式：</span>{dispatchReadinessService?.pricing}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Why buyers approve budget</p>
+            <p className="text-sm font-black text-slate-900 mb-3">這筆預算對誰來說最痛、也最容易成立</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">預算 owner：</span>{dispatchBudgetRow?.budgetOwner}</p>
+              <p><span className="font-bold text-amber-700">現在就會買的原因：</span>{dispatchBudgetRow?.whyNow}</p>
+              <p><span className="font-bold text-blue-700">為什麼會續約：</span>{dispatchBudgetRow?.renewalDriver}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Fast monetization</p>
+            <p className="text-sm font-black text-slate-900 mb-3">這其實是可以很快上線的 attach service</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">Quick win：</span>{dispatchQuickWin?.why}</p>
+              <p><span className="font-bold text-emerald-700">Time-to-market：</span>{dispatchQuickWin?.timeToMarket}</p>
+              <p><span className="font-bold text-cyan-700">營收 / 毛利：</span>{dispatchQuickWin?.revenue}；{dispatchQuickWin?.margin}</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
+          <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">Foxconn 軟體部門不是只在賣 observability，而是在把「先遠端縮小故障範圍、判斷是否要派人、同步正確備品與維修窗口」做成可定價的 serviceability 產品。這種能力越早被產品化，就越能把大型 CSP 的 OPEX 痛點變成高毛利年約。</span></p>
         </div>
       </div>
 
