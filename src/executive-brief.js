@@ -584,6 +584,12 @@ export const marketValidation = {
       source: "https://www.se.com/ww/en/work/solutions/it/data-centers/"
     },
     {
+      company: "Vertiv AI Hub",
+      whatTheyreSelling: "Retrofit-ready / new-build AI reference designs, 70kW-142kW rack-density planning, energy optimization, and whitespace readiness for AI deployments",
+      whyItMatters: "Even facilities and power/cooling specialists are now selling AI datacenter readiness as an operational outcome. This strengthens Foxconn's claim that the software department should monetize brownfield retrofit readiness, rack power constraints, and capacity assurance — not just server telemetry.",
+      source: "https://www.vertiv.com/en-us/solutions/ai-hub/"
+    },
+    {
       company: "Supermicro SuperCloud Composer",
       whatTheyreSelling: "Real-time management of physical assets and CDU/cooling-tower sensor data (pressure, humidity, temperature, pump status, component health)",
       whyItMatters: "Even hardware-first AI server vendors are expanding software around facility telemetry and operations. Foxconn differentiates by turning facility telemetry into capacity governance, SLA workflows, and brownfield operational services.",
