@@ -29,6 +29,7 @@ const ExecutiveSummaryView = () => {
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
   const recurringValueWedgeCount = competitiveLandscape.softwareDepartmentWedge?.wedges?.length || 0;
   const standardsSources = competitiveSources.standards || [];
+  const openTelemetrySource = competitiveSources.standards?.find((source) => source.name.includes('OpenTelemetry'));
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
@@ -125,6 +126,14 @@ const ExecutiveSummaryView = () => {
       foxconnMove: 'Frame Foxconn software as the accountable layer that converts factory delivery into ongoing operating outcomes: deployment assurance, lifecycle governance, and sovereign-ready operations.',
       source: lenovoHybridAISource?.name || 'Lenovo Hybrid AI Solutions',
       sourceUrl: lenovoHybridAISource?.url,
+    },
+    {
+      criterion: 'Telemetry itself is becoming commodity infrastructure—the value shifts to workflow ownership',
+      marketSignal: 'OpenTelemetry is standardizing traces, metrics, and logs across heterogeneous environments, making raw observability collection easier to replicate across vendors.',
+      whyItChangesProcurement: 'When telemetry collection becomes standard, buyers stop paying premium for another dashboard and start paying for the layer that turns signals into maintenance policy, rollback discipline, dispatch readiness, and board-visible SLA outcomes.',
+      foxconnMove: 'Position Foxconn software as the operating layer above telemetry: root-cause workflows, lifecycle governance, remote-ops playbooks, and evidence packs that convert data exhaust into accountable service outcomes.',
+      source: openTelemetrySource?.name || 'OpenTelemetry',
+      sourceUrl: openTelemetrySource?.url,
     },
     {
       criterion: 'Even facilities vendors now package AI infrastructure as physical + digital operations',
