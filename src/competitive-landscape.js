@@ -166,6 +166,12 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       foxconnSolution: 'Facility-aware control plane: correlate BMC telemetry, Redfish events, scheduler policies, and existing BMS/DCIM workflows so Foxconn can throttle, drain, rebalance, or stage maintenance before a local infrastructure issue becomes a cluster outage.',
       evidence: 'NVIDIA Mission Control explicitly positions building management integration, power and cooling control, and rapid leakage detection as AI-factory operations needs. That validates the problem; Foxconn differentiates by bringing the same outcome to mixed-vendor, brownfield facilities instead of only NVIDIA-validated environments.',
     },
+    {
+      problem: 'AI Supply Chain Security & Model Provenance',
+      description: 'Enterprise and sovereign AI buyers increasingly ask not only whether the cluster can run models, but whether the model source, training data lineage, runtime integrity, and audit trail can survive security review. Without this, many regulated deployments stall before procurement closes.',
+      foxconnSolution: 'AI trust layer: model provenance records, AI bill of materials (AI BOM), artifact signing, runtime integrity checks, and compliance-ready audit exports tied back to Foxconn-managed hardware telemetry and deployment workflows.',
+      evidence: 'EU AI Act, enterprise security reviews, and sovereign AI programs are shifting procurement toward traceability and runtime assurance. This is valuable because it moves software from “cluster tooling” into security, compliance, and board-risk budgets.',
+    },
   ],
   softwareDepartmentWedge: {
     headline: '軟體部門真正可守住、可定價的價值楔子',
@@ -212,6 +218,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         whyFoxconnWins: 'Foxconn 可把 GPU / 功耗 / 任務 / 配額 / 權限整合成同一個治理層，讓平台工程、財務與 BU 都看得懂、算得清、控得住',
         whyOthersAvoid: 'GPU 廠與純硬體 ODM 多半停在設備管理；雲平台雖有帳單能力，但不會深入客戶本地 mixed-vendor GPU pool、維護窗口與權限流程',
         monetization: '平台訂閱 + 進階報表 / 治理模組授權'
+      },
+      {
+        name: 'AI Security, Provenance & Runtime Assurance',
+        customerTrigger: '只要客戶開始把 AI 用在金融、醫療、政府、製造等正式營運流程，安全與稽核團隊就會追問：模型從哪裡來、資料有沒有污染、部署後有沒有被竄改、出事時拿不拿得出證據',
+        whyFoxconnWins: 'Foxconn 同時掌握硬體遙測、部署流程、模型 artifact 交付與 Day-2 維運資料，最有機會把 AI BOM、模型簽章、runtime integrity 與 audit evidence 做成可被稽核、可被續約的 assurance layer',
+        whyOthersAvoid: '純硬體廠多半止於硬體安全；純軟體商又缺少 BMC / firmware / brownfield 現場接點，難把 AI 安全做成從設備到工作負載的一致責任邊界',
+        monetization: '安全/合規加值模組授權 + 年度稽核/證據服務'
       }
     ],
     boardMessage: '這六個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
@@ -305,6 +318,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'NVIDIA Mission Control 官方已把 building management integration、power and cooling control、rapid leakage detection 放進 AI factory operations 範疇，代表這是高價值且被驗證的軟體層戰場。Foxconn 的機會在於把這種能力帶進 mixed-vendor、brownfield 環境。',
       source: 'https://www.nvidia.com/en-us/data-center/mission-control/',
     },
+    {
+      name: 'AI Security, Provenance & Runtime Assurance',
+      targetCustomer: '金融、醫療、政府、製造與任何需要通過安全審查或模型治理稽核的 enterprise / sovereign AI 專案',
+      monetization: '安全/合規模組授權 + 年度稽核/證據服務 + 事件應對顧問費',
+      budgetOwner: 'CISO / Risk / Compliance / AI Governance Office',
+      renewalDriver: '模型更新、稽核要求、供應鏈風險盤點與 runtime anomaly review 會持續驅動年度續約',
+      painSolved: '把「模型從哪裡來、資料是否可追溯、部署後有沒有被竄改、出事時拿不拿得出證據」這些原本容易卡住採購的問題，變成可交付、可驗證、可續約的 assurance layer。',
+      whyUnique: 'Foxconn 同時碰得到硬體遙測、部署管線、模型 artifact 與 Day-2 維運現場，因此可以把 AI BOM、artifact signing、runtime integrity 與 audit evidence 從設備到工作負載串成同一條責任鏈，而不是只給文件模板。',
+      evidence: 'EU AI Act 與企業級 AI 安全審查正把 model provenance、technical documentation 與 runtime governance 拉進正式採購門檻；這代表安全與可追溯性已不是附屬需求，而是會決定案子能不能簽的軟體能力。',
+      source: 'https://artificialintelligenceact.eu/',
+    },
   ],
   serviceValueCaptureMatrix: {
     headline: '不是功能清單，而是可持續拿預算的服務地圖',
@@ -358,6 +382,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         trigger: 'AI 負載撞上 power/cooling 上限，需跨 IT 與機電協調',
         recurringReason: '容量規劃、事件演練與季節性負載管理都需要持續服務',
         boardOutcome: '把設施瓶頸變成可管理能力，延後昂貴擴建'
+      },
+      {
+        service: 'AI Security, Provenance & Runtime Assurance',
+        budgetOwner: 'CISO / Risk / Compliance / AI Governance Office',
+        trigger: '客戶要求模型可追溯、供應鏈可信、runtime anomaly 可檢測，否則 AI 專案過不了安全審查或採購門檻',
+        recurringReason: '模型版本更新、年度稽核、供應鏈風險盤點與異常事件檢討都會持續發生',
+        boardOutcome: '讓軟體部門切進安全與治理預算，把原本會卡單的風險轉成可續約的 assurance 收入'
       }
     ],
     boardMessage: '一旦軟體部門能對應到不同預算 owner，Foxconn 賣的就不只是 server BOM，而是跨部門、跨年度、可續約的營運能力。'
