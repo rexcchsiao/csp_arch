@@ -331,8 +331,8 @@ structuralAdvantages: {
     cards: [
       {
         company: 'NVIDIA Mission Control',
-        proof: '官方定位直接寫到 AI factory operations、cluster life cycle、building management integration、performance / power / cooling control。',
-        takeaway: '連 NVIDIA 都不只賣 GPU，而是賣「AI 工廠怎麼穩定營運」。Foxconn 若不投資軟體，就只能留在價值鏈較低的位置。',
+        proof: '官方定位直接寫到 AI factory operations、cluster life cycle、building management integration、performance / power / cooling control，並明講可在 power-constrained 環境下以 85% power 達到 93% performance throughput。',
+        takeaway: '連 NVIDIA 都不只賣 GPU，而是在賣「AI 工廠如何在受限電力下仍把 token throughput 榨出來」。Foxconn 若不投資軟體，就只能留在價值鏈較低的位置，難以切入真正被管理層核准的 power-aware operations 預算。',
         sourceLabel: 'NVIDIA Mission Control',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
       },
@@ -1237,6 +1237,14 @@ structuralAdvantages: {
 				foxconnTranslation: '把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 Factory-to-Operations baseline 串成 Service Availability Assurance：賣的是更少中斷、更快恢復與更穩定的 AI 服務，而不是監控畫面本身。',
 				sourceLabel: 'HPE Private Cloud AI',
 				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+			},
+			{
+				label: 'Token Throughput Under Power Constraints',
+				marketSignal: 'NVIDIA Mission Control 官方直接把 AI factory operations 與 advanced power optimizations 綁在一起，並主張在 power-constrained 或 cost-conscious 環境下可用 85% power 達到 93% performance throughput。',
+				buyerQuestion: '如果機房電力已接近上限，我能不能不先擴建，也先把 AI token 產出維持在可接受水位？',
+				foxconnTranslation: '把 Facility-Aware Capacity Assurance、power-aware scheduling、rack power cap governance 與 brownfield facility workflow 講成「token throughput assurance」：軟體部門賣的不只是省電，而是讓客戶在受限電力下仍能交付可預測的 AI 產出與擴容節奏。',
+				sourceLabel: 'NVIDIA Mission Control',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
 			},
 			{
 				label: 'AI Operating Model',
