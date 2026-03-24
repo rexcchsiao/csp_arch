@@ -365,6 +365,13 @@ structuralAdvantages: {
         source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
       },
       {
+        company: 'Vertiv AI Hub',
+        proof: 'Vertiv 官方已把 AI 基礎建設敘事拉到 retrofit-ready / new-build reference designs、70kW-142kW rack density、energy optimization 與 whitespace readiness，代表設施供應商正在把「AI 機房準備度」本身包成可被採購的結果。',
+        takeaway: '這補強了一個很重要的董事會論點：未來客戶不只問伺服器規格，而會問「現有機房能不能先撐住下一波 AI 擴容」。Foxconn 若由軟體部門把 rack power、cooling constraints、brownfield retrofit readiness 與工作負載治理接起來，就有機會把 facility constraints 轉成高毛利的 Capacity Assurance 服務，而不是只跟著硬體一起被比價。',
+        sourceLabel: 'Vertiv AI Hub',
+        source: 'https://www.vertiv.com/en-us/solutions/ai-hub/'
+      },
+      {
         company: 'Nutanix Agentic AI',
         proof: 'Nutanix 官方直接把 AI factory 的價值寫成 cloud operating model，並強調 simplify operations、govern AI factories、optimize GPU utilization and token costs、enterprise-grade security and control。',
         takeaway: '這代表連基礎設施軟體供應商都不再只賣平台，而是在賣 AI 的 operating model、治理能力與成本控制。Foxconn 若把軟體部門定位成 server delivery、fleet governance、remote ops 與 Day-2 accountability 的 owner，就更容易說清楚為什麼軟體不是附加品，而是把 AI 工廠真正運轉起來的核心。',
