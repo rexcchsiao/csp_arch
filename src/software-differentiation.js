@@ -490,6 +490,14 @@ structuralAdvantages: {
         foxconnPlay: '把 AI Recovery & Evidence Assurance 做成 attach service，主張 Foxconn 賣的是恢復時間、稽核證據與服務信任保全，而不是只多一套備份工具。',
         sourceLabel: 'Dell AI Solutions – Cyber Resilience for AI',
         source: 'https://www.dell.com/en-us/shop/scc/sc/artificial-intelligence'
+      },
+      {
+        title: 'Remote triage / truck-roll avoidance 很少被產品化，但對大型 CSP 是真 OPEX 痛點',
+        evidence: 'NVIDIA Mission Control 已把 AI factory operations、autonomous recovery 放進官方敘事；Dell AI Factory 也把 lifecycle support 與 end-to-end delivery 放到採購前台。這代表客戶已開始為「誰先遠端把問題縮小，再決定是否派人到場」付錢。',
+        whyStillOpen: '多數供應商仍停在監控告警或 break/fix 支援，沒有把遠端故障分流、備品判斷、dispatch readiness 與跨站點 serviceability 做成明確服務邊界。結果是客戶明明買了高密度 AI 叢集，夜間出事時還是只能先派人到現場看。',
+        foxconnPlay: '把 Remote Diagnostics & Dispatch Readiness 做成 attach service：先用 BMC / 遙測 / runbook 遠端縮小故障範圍、判斷是否需要換件、同步備品與維修窗口，讓 Foxconn 賣的是更少 truck roll、更高 first-time-fix rate 與更低跨站點 OPEX。',
+        sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
       }
     ],
     boardMessage: '董事會該記住的一句話：真正還沒被滿足的市場空位，不是 another platform，而是有人願意對 brownfield、air-gap、facility event 與 remote-ops 結果負責；這正是軟體部門可以被定價、被續約、也最不容易被取代的位置。'
@@ -1361,11 +1369,11 @@ structuralAdvantages: {
 					boardOutcome: '把交機速度直接翻成 time-to-revenue，並讓軟體部門站上交付成敗的關鍵位置'
 				},
 				{
-					service: 'Remote Ops & Predictive Maintenance',
-					budgetOwner: 'Operations / Service Delivery',
-					whyNow: '跨站點運維、夜間故障、缺工與 SLA 需求持續升高',
-					renewalDriver: '值班、監控模型、備品策略與 SLA 報告天然適合年約',
-					boardOutcome: '把一次性交機，轉成可續約的年度服務收入'
+					service: 'Remote Diagnostics & Dispatch Readiness',
+					budgetOwner: 'Operations / Field Service / Service Delivery',
+					whyNow: '大型 CSP 與跨站點機房最痛的是夜間故障、跨城 dispatch、備品命中率與 truck-roll 成本；若不能先遠端縮小問題，現場維修效率會被吃掉',
+					renewalDriver: 'runbook、備品策略、dispatch matrix、故障分流規則與 readiness review 都會隨新機型、場域與 SLA 持續更新，天然適合年約',
+					boardOutcome: '把 serviceability OPEX 變成可被採購的軟體服務，讓軟體部門直接對 MTTR、truck-roll reduction 與 first-time-fix rate 負責'
 				},
 				{
 					service: 'Service Availability Assurance',
@@ -1439,6 +1447,13 @@ structuralAdvantages: {
 				timeToMarket: '4-8 週',
 			},
 			{
+				name: 'Remote Diagnostics / Dispatch Readiness 健檢',
+				why: '直接回應大型 CSP 最痛的夜間 serviceability 問題：先遠端縮小故障範圍、確認是否真的要派人、提早對好備品與維修窗口；可先以既有 BMC 遙測、支援工單與維修 runbook 包成顧問式服務',
+				revenue: 'NT$ 220K-650K/案 + 年度 readiness review / runbook 維護費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
 				name: 'Service Availability 健檢包',
 				why: '直接把 observability、predict problems、availability review 與季度健康檢查包成高層聽得懂的服務語言，對應 HPE 已公開使用的 continuous service availability 採購敘事',
 				revenue: 'NT$ 180K-500K/案 + 季度健康檢查年費',
@@ -1501,6 +1516,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '不是只有告警，而是把 serviceability 做成可被採購的結果：更少 truck roll、更短 MTTR、更高備品命中率',
 				targetCustomer: '大型 CSP、Hyperscaler strategic accounts、跨站點資料中心營運團隊'
+			},
+			{
+				name: 'Remote Diagnostics & Dispatch Readiness 服務',
+				description: '把遠端故障分流、備品命中率、dispatch readiness 與跨站點維修窗口協調做成標準服務；先遠端判斷 power / thermal / GPU / BMC 事件的 probable cause，再決定是否需要 truck roll 與該帶哪些備品',
+				pricing: 'NT$ 250K-900K/案 + 年度 readiness review / runbook / 備品策略續約費',
+				margin: '65-75%',
+				differentiation: '直接把大型 CSP 最在意的 serviceability OPEX 產品化：不是只看得到告警，而是把「少派錯人、少帶錯料、少白跑一趟」變成可量化結果',
+				targetCustomer: '大型 CSP、電信商、跨站點 AI 機房營運團隊'
 			},
 			{
 				name: 'Lifecycle Control Tower 升級治理服務',
