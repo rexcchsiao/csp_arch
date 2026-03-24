@@ -94,6 +94,17 @@ const SourceReferencesView = () => {
             </p>
           </div>
         )}
+        {activeCategory === 'standards' && (
+          <div className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁是幫董事會回答一個很常見、也很容易把軟體價值砍掉的問題：
+              <span className="font-semibold text-slate-900">「既然 Redfish、OpenBMC、OpenTelemetry 都是標準或開源，為什麼還需要軟體部門？」</span>
+              答案很簡單：標準只負責把資料與控制面暴露出來，<span className="font-semibold text-slate-900">真正能被客戶買單的，是疊在上面的 change governance、maintenance workflow、rollback discipline、dispatch readiness、以及 SLA / 稽核可交代的營運結果</span>。
+              換句話說，沒有軟體部門，Foxconn 只有「可讀取的訊號」；有軟體部門，Foxconn 才有「可續約的服務能力」。
+            </p>
+          </div>
+        )}
         <div className="space-y-6">
           {sources.map((source, idx) => (
             <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
