@@ -824,6 +824,11 @@ structuralAdvantages: {
         detail: '硬體成功看出貨、BOM、良率；軟體成功應看 software attachment rate、Factory-to-Operations handoff time、remote resolution coverage、upgrade governance adoption 與 renewal signals。',
         boardWhyItMatters: '只有把 KPI 分開，管理層才看得見軟體部門到底有沒有真的在放大硬體價值，而不是只看到功能愈做愈多。',
       },
+      {
+        title: '責任鏈不同',
+        detail: '硬體團隊負責把設備交付到位；軟體部門更適合成為 incident evidence / RCA 的 owner，把 BMC、GPU、作業系統、叢集與維修 runbook 串成可交付的證據鏈與恢復決策流程。',
+        boardWhyItMatters: '這讓 Foxconn 賣的不只是「看到告警」，而是「出事後誰能先遠端收斂根因、保留證據、降低誤派工與縮短恢復時間」—— 這種責任邊界更容易被採購、SRE 與合規團隊正式編列預算。',
+      },
     ],
     boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。',
   },

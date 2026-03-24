@@ -6,7 +6,7 @@ import { customerSuccessScenarios, executiveSummary } from './customer-success-s
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
-import { aiSupplyChainSecurity, modelPerformanceMonitoring } from './executive-brief.js';
+import { aiSupplyChainSecurity, modelPerformanceMonitoring, aiInfrastructureSecurity } from './executive-brief.js';
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis.js';
 
 const ExecutiveSummaryView = () => {
@@ -553,7 +553,7 @@ const ExecutiveSummaryView = () => {
           一個模組守住 <span className="font-semibold text-emerald-700">合規 / 供應鏈可信度</span>，另一個模組守住 <span className="font-semibold text-blue-700">模型上線後的表現與營運風險</span>。
           兩者都比單純 dashboard 更接近管理層會核准的預算語言，也更能證明軟體部門正在往高毛利、可續約的方向長出來。
         </p>
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
             <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Emerging software wedge 01</p>
             <p className="text-sm font-black text-slate-900 mb-3">{aiSupplyChainSecurity.headline}</p>
@@ -576,9 +576,20 @@ const ExecutiveSummaryView = () => {
               <p><span className="font-bold text-fuchsia-700">董事會該記住：</span>{modelPerformanceMonitoring.boardMessage}</p>
             </div>
           </div>
+          <div className="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-2">Emerging software wedge 03</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{aiInfrastructureSecurity.headline}</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">為什麼現在重要：</span>{aiInfrastructureSecurity.coreInsight}</p>
+              <p><span className="font-bold text-rose-700">Foxconn 該賣的是：</span>{aiInfrastructureSecurity.monetizationOpportunity?.serviceTiers?.[1]?.tier}、{aiInfrastructureSecurity.monetizationOpportunity?.serviceTiers?.[2]?.tier}</p>
+              <p><span className="font-bold text-blue-700">可收費方式：</span>{aiInfrastructureSecurity.monetizationOpportunity?.revenueProjection}</p>
+              <p><span className="font-bold text-amber-700">競爭現實：</span>{aiInfrastructureSecurity.competitiveDifferentiation?.foxconnAdvantage}</p>
+              <p><span className="font-bold text-fuchsia-700">董事會該記住：</span>{aiInfrastructureSecurity.boardMessage}</p>
+            </div>
+          </div>
         </div>
         <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
-          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">如果前半場是把 AI 叢集交出去，後半場就是用 supply-chain security 與 model performance monitoring 證明：Foxconn 軟體部門願意對 AI 服務的可信度、持續可用性與商業結果長期背責。</span></p>
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">如果前半場是把 AI 叢集交出去，後半場就是用 supply-chain security、model performance monitoring 與 zero-trust infrastructure security 證明：Foxconn 軟體部門願意對 AI 服務的可信度、持續可用性、資安風險與商業結果長期背責。</span></p>
         </div>
       </div>
 

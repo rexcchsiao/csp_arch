@@ -194,6 +194,13 @@ export const executiveBrief = {
       competitiveAdvantage: "Turnkey deployment in 3 weeks, compliant with EU AI Act/GDPR/PDPA"
     },
     {
+      name: "AI Infrastructure Security Overlay",
+      targetCustomer: "Regulated enterprise, sovereign AI, government, defense, and critical infrastructure deployments",
+      capabilities: ["Secure boot / firmware validation", "GPU tenancy isolation", "Runtime anomaly detection", "Compliance reporting", "AI model / prompt security controls"],
+      pricingModel: "Add-on subscription: NT$ 3-15M/year depending on Security Enhanced vs. Security Premium tier",
+      competitiveAdvantage: "Turns security from pass/fail procurement blocker into Foxconn-owned L9-L12 software margin; especially differentiated for air-gapped, sovereign, and brownfield deployments where hyperscaler-first security models do not fit"
+    },
+    {
       name: "GPU Orchestration Platform",
       targetCustomer: "AI research labs, enterprises with shared GPU clusters",
       capabilities: ["Multi-tenant GPU sharing", "MIG/vGPU support", "Workload scheduling", "Cost allocation"],
@@ -2538,7 +2545,7 @@ export const messagingHierarchy = {
 };
 
 // Add to export
-export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy, decisionTriggers };
+export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, aiInfrastructureSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy, decisionTriggers };
 
 // Decision Triggers: When to Scale, Pivot, or Stop (Added 2026-03-23 by CoCo)
 // Purpose: Provide clear, quantifiable triggers for leadership to make go/no-go decisions at each stage
