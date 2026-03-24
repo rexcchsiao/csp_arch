@@ -292,6 +292,7 @@ const ExecutiveSummaryView = () => {
   const dispatchReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'Remote Diagnostics & Dispatch Readiness 服務');
   const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
   const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
+  const retrofitReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'AI Retrofit Readiness Assessment');
 
   return (
     <div className="space-y-8">
@@ -457,6 +458,61 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
           <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">Foxconn 軟體部門不是只在賣 observability，而是在把「先遠端縮小故障範圍、判斷是否要派人、同步正確備品與維修窗口」做成可定價的 serviceability 產品。這種能力越早被產品化，就越能把大型 CSP 的 OPEX 痛點變成高毛利年約。</span></p>
+        </div>
+      </div>
+
+      {/* Why brownfield retrofit readiness is a software wedge, not a facilities side note */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Zap className="w-5 h-5 text-sky-600" /> AI 擴容前的 retrofit readiness，其實是軟體部門最好切入的前導服務
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這塊很值得往前放，因為它把一個董事會很容易懂、而且市場已經在正式採購的問題講清楚：<span className="font-semibold text-slate-900">客戶下一波 AI 擴容最先撞到的，常常不是 GPU 規格，而是既有機房到底撐不撐得住。</span>
+          Vertiv 已經把 <span className="font-semibold text-sky-700">retrofit-ready、whitespace readiness、rack density</span> 講成正式 AI 基礎建設語言，代表這已經不是設施團隊私下討論的小事，而是會影響擴容節奏、CAPEX 與 outage 風險的採購議題。
+          Foxconn 最有價值的切法，不是只給現場評估報告，而是讓軟體部門把這份 readiness 直接接到 <span className="font-semibold text-fuchsia-700">capacity governance、workload placement、brownfield integration 與 lifecycle control</span>。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Market signal</p>
+            <p className="text-sm font-black text-slate-900 mb-3">為什麼這已經進入採購語言</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">外部訊號：</span>{vertivAISource?.keyFeature}</p>
+              <p><span className="font-bold text-amber-700">採購翻譯：</span>客戶現在不只問「機器能不能買」，而是會問「現有場域能不能安全接住下一波 AI 密度」。</p>
+              <p><span className="font-bold text-sky-700">對 Foxconn 的意義：</span>這讓軟體部門有機會在正式擴容案之前，先拿到一筆高毛利前導服務與後續治理入口。</p>
+            </div>
+            {vertivAISource?.url && (
+              <a
+                href={vertivAISource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+              >
+                <ExternalLink className="w-3 h-3" />
+                官方來源
+              </a>
+            )}
+          </div>
+          <div className="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Productized service</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{retrofitReadinessService?.name}</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">賣的是：</span>{retrofitReadinessService?.description}</p>
+              <p><span className="font-bold text-emerald-700">收費方式：</span>{retrofitReadinessService?.pricing}</p>
+              <p><span className="font-bold text-fuchsia-700">差異化：</span>{retrofitReadinessService?.differentiation}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Why the board should care</p>
+            <p className="text-sm font-black text-slate-900 mb-3">這種前導服務為什麼能放大軟體部門價值</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">先卡位：</span>在硬體擴容案正式招標前，先以 readiness assessment 進場，讓 Foxconn 提前掌握 brownfield 約束與導入節奏。</p>
+              <p><span className="font-bold text-blue-700">再續約：</span>assessment 做完後，最自然延伸的就是 Capacity Assurance、Lifecycle Control Tower 與現場 rollout 顧問服務。</p>
+              <p><span className="font-bold text-amber-700">董事會語言：</span>這不是「多賣一份顧問報告」，而是把 AI 擴容的 CAPEX 決策、風險控制與後續軟體 attach rate 都提前抓進 Foxconn 手裡。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-sky-100 bg-white p-4">
+          <p className="text-sm font-semibold text-sky-900">給管理層的一句話：<span className="text-slate-700">如果客戶現在連機房 readiness 都願意花錢評估，Foxconn 軟體部門就不該只在交機後才出現。最聰明的打法，是把 AI Retrofit Readiness Assessment 做成前導 wedge，先吃下擴容決策權，再延伸到容量治理、變更治理與年度續約。</span></p>
         </div>
       </div>
 
