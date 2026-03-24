@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { executiveBrief } from './executive-brief.js';
+import { executiveBrief, softwareDepartmentScorecard } from './executive-brief.js';
 import { softwareDifferentiation, financialImpactCalculator } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
@@ -10,6 +10,7 @@ const SoftwareDifferentiationView = () => {
 
   const tabs = [
     { id: 'pain-points', label: '痛點分析', icon: <AlertTriangle className="w-4 h-4" /> },
+    { id: 'customer-voices', label: '客戶聲音', icon: <MessageSquare className="w-4 h-4" /> },
     { id: 'competitive', label: '競爭優勢', icon: <Trophy className="w-4 h-4" /> },
     { id: 'technical-moat', label: '技術護城河', icon: <Cpu className="w-4 h-4" /> },
     { id: 'structural-advantages', label: '結構優勢', icon: <Factory className="w-4 h-4" /> },
@@ -29,7 +30,7 @@ const SoftwareDifferentiationView = () => {
           </div>
           <div>
             <h2 className="text-3xl font-black">軟體差異化分析</h2>
-            <p className="text-indigo-100 text-sm font-medium">沒有軟體，硬體價值無法完全放大</p>
+            <p className="text-indigo-100 text-sm font-medium">沒有軟體，硬體價值無法完全放大；真正可被定價的是 Day-2 可營運結果，而不只是功能清單</p>
           </div>
         </div>
         
@@ -952,6 +953,50 @@ const SoftwareDifferentiationView = () => {
                       <li key={idx}>• {item}</li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
+              <h4 className="text-lg font-black text-emerald-900 mb-2">把軟體部門從口號變成可被季度治理的 KPI</h4>
+              <p className="text-sm text-slate-700 mb-4">這一塊直接回答董事會另一個常見疑問：就算批准投資，之後要怎麼管？與其只說軟體很重要，不如把軟體部門的成敗拆成 attach rate、handoff time、remote resolution、lifecycle adoption 等可追蹤指標，讓管理層每季都能做 go / no-go 判斷。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {softwareDepartmentScorecard.kpis.slice(0, 4).map((kpi, idx) => (
+                  <div key={idx} className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h5 className="text-sm font-black text-emerald-800">{kpi.metric}</h5>
+                      <span className="text-xs font-bold text-emerald-700 whitespace-nowrap">{kpi.status}</span>
+                    </div>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">定義：</span>{kpi.definition}</p>
+                      <p><span className="font-bold text-slate-500">目前基線：</span>{kpi.current}</p>
+                      <p><span className="font-bold text-emerald-700">Year 1 → Year 3：</span>{kpi.target.year1} → {kpi.target.year3}</p>
+                      <p><span className="font-bold text-amber-700">警戒線：</span>{kpi.threshold}</p>
+                      <p><span className="font-bold text-blue-700">落後時動作：</span>{kpi.recommendedAction}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                  <p className="text-xs font-black text-slate-900 mb-2">🟢 綠燈</p>
+                  <p className="text-xs text-slate-700">{softwareDepartmentScorecard.managementActions.green}</p>
+                </div>
+                <div className="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                  <p className="text-xs font-black text-amber-900 mb-2">🟡 黃燈</p>
+                  <p className="text-xs text-slate-700">{softwareDepartmentScorecard.managementActions.yellow}</p>
+                </div>
+                <div className="p-4 bg-rose-50 rounded-xl border border-rose-200">
+                  <p className="text-xs font-black text-rose-900 mb-2">🔴 紅燈</p>
+                  <p className="text-xs text-slate-700">{softwareDepartmentScorecard.managementActions.red}</p>
+                </div>
+              </div>
+              <div className="p-4 bg-emerald-900 rounded-xl text-white">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-200 mb-3">Board governance trigger</p>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-bold text-emerald-200">Level 1：</span>{softwareDepartmentScorecard.escalationMatrix.level1.trigger} → {softwareDepartmentScorecard.escalationMatrix.level1.action}</p>
+                  <p><span className="font-bold text-emerald-200">Level 2：</span>{softwareDepartmentScorecard.escalationMatrix.level2.trigger} → {softwareDepartmentScorecard.escalationMatrix.level2.action}</p>
+                  <p><span className="font-bold text-emerald-200">Level 3：</span>{softwareDepartmentScorecard.escalationMatrix.level3.trigger} → {softwareDepartmentScorecard.escalationMatrix.level3.action}</p>
                 </div>
               </div>
             </div>
