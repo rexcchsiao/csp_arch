@@ -1068,8 +1068,8 @@ const ExecutiveSummaryView = () => {
           當軟體能力能對應到明確的預算 owner、採購觸發事件與續約理由，它就不再像附贈支援，而是可獨立成立的營運能力。
         </p>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
-          {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 4).map((row) => (
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
+          {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 6).map((row) => (
             <div key={row.service} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
               <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Budget approval map</p>
               <p className="text-sm font-black text-slate-900 mb-3">{row.service}</p>
