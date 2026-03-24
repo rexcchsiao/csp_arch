@@ -35,6 +35,7 @@ const ExecutiveSummaryView = () => {
   const openshiftAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name === 'Red Hat OpenShift AI');
   const supermicroComposerSource = competitiveSources.supermicro?.find((source) => source.name.includes('SuperCloud Composer'));
   const schneiderAISource = competitiveSources.schneider?.find((source) => source.name.includes('AI Data Center Solutions'));
+  const vertivAISource = competitiveSources.vertiv?.find((source) => source.name.includes('Vertiv AI Hub'));
   const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
   const nutanixAgenticAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Nutanix Agentic AI'));
   const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure and data management'));
@@ -160,11 +161,11 @@ const ExecutiveSummaryView = () => {
     },
     {
       title: 'Facility-aware brownfield integration 仍缺真正 owner',
-      marketSignal: 'NVIDIA Mission Control 已把 building management integration、power / cooling control、autonomous recovery 放進產品敘事，證明 AI 機房的價值正在往 IT + facilities 協同移動。',
-      whitespace: '客戶最常卡住的不是 GPU 規格，而是新叢集能不能不打掉重練就接回既有 DCIM、告警、權限與維護窗口。這一層通常又髒又長尾，所以最容易被忽略。',
-      foxconnPlay: '用 Brownfield Integration Hub 承接現場導入，讓軟體部門變成訂單真正落地的關鍵人。',
-      source: missionControlSource?.name || 'NVIDIA Mission Control',
-      sourceUrl: missionControlSource?.url,
+      marketSignal: 'NVIDIA Mission Control 已把 building management integration、power / cooling control、autonomous recovery 放進產品敘事，證明 AI 機房的價值正在往 IT + facilities 協同移動。Vertiv 甚至已把 retrofit-ready AI designs 與 rack-density / deployment-size 設計公開化，代表現場 readiness 已經進入正式採購語言。',
+      whitespace: '客戶最常卡住的不是 GPU 規格，而是新叢集能不能不打掉重練就接回既有 DCIM、告警、權限與維護窗口，並確認現場 rack power、cooling headroom 與 rollout 節奏撐得住。這一層通常又髒又長尾，所以最容易被忽略。',
+      foxconnPlay: '用 Brownfield Integration Hub + Capacity Assurance 承接現場導入，讓軟體部門變成把 facility readiness 轉成可執行叢集 rollout 的關鍵人。',
+      source: vertivAISource?.name || missionControlSource?.name || 'Vertiv AI Hub / NVIDIA Mission Control',
+      sourceUrl: vertivAISource?.url || missionControlSource?.url,
     },
     {
       title: 'AI recoverability 與 incident evidence 幾乎還沒被 OEM/ODM 產品化',

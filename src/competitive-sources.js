@@ -80,6 +80,18 @@ export const competitiveSources = {
       ourAdvantage: 'Foxconn can bridge the gap between facility infrastructure and AI server operations by turning power/cooling signals into lifecycle governance, capacity assurance, and remote service outcomes tied directly to the server fleet.'
     }
   ],
+  vertiv: [
+    {
+      name: 'Vertiv AI Hub',
+      url: 'https://www.vertiv.com/en-us/solutions/ai-hub/',
+      description: 'Official Vertiv AI infrastructure hub highlighting retrofit and new-build reference designs for high-density AI deployments',
+      relevance: 'Useful proof that power and cooling vendors now package AI datacenter value around deployment-ready designs, energy optimization, and physical infrastructure readiness—not only equipment SKUs',
+      lastVerified: '2026-03-24',
+      keyFeature: 'Vertiv publishes retrofit-ready and new-build AI reference designs spanning 70kW to 142kW rack densities, plus energy-optimization and whitespace-readiness messaging for AI deployments.',
+      limitation: 'The story is strongest on physical infrastructure readiness and cooling / power architecture; it does not clearly extend upward into server-fleet lifecycle governance, workload-aware capacity policy, or mixed-vendor Day-2 operations.',
+      ourAdvantage: 'Foxconn can bridge facility readiness with server operations by turning rack-density, power-cap, and cooling constraints into brownfield capacity assurance, lifecycle governance, and remote-ops services tied to the AI cluster.'
+    }
+  ],
   gigabyte: [
     { name: 'GIGABYTE Server Management', url: 'https://www.gigabyte.com/Server/Management', description: 'Server management console', relevance: 'Basic BMC management, no AI-specific features', lastVerified: '2026-03-16', keyFeature: 'Traditional IPMI/BMC-based server management', limitation: 'No GPU-specific monitoring, no AI workload optimization, no RAG or private AI capabilities' }
   ],
