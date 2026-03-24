@@ -92,6 +92,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Portable AI Workload Framework：以 K8s + Helm + OCI 為基礎，封裝 AI 工作負載的完整依賴（模型、驅動、運行時、配置），支持一鍵遷移到不同雲端或本地環境',
       valueAmplification: '工作負載遷移時間從 3-6 個月縮短至 1-2 週，避免供應商鎖定，保持議價能力與靈活性',
     },
+    {
+      id: 'pp12',
+      problem: '監控資料很多，但真正缺的是能把告警變成可執行責任的營運流程',
+      impact: '大型 AI 叢集常同時有 BMC、DCIM、K8s、APM、log 平台與工單系統；可觀測性工具愈多，團隊反而更容易卡在「看得到問題，但不知道誰該先處理、何時升級、是否需要派人」',
+      softwareSolution: 'Telemetry-to-Operations Layer：把 Redfish / OpenBMC / OpenTelemetry 訊號串進 root-cause workflow、maintenance window、dispatch readiness、rollback policy 與 SLA / 稽核報表',
+      valueAmplification: '把「更多監控工具」升級成「更少誤派工、更快責任收斂、更容易續約的 Day-2 服務」，讓軟體部門直接切入營運治理預算',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -519,6 +526,12 @@ structuralAdvantages: {
         implication: 'BMC 本身只是地基；客戶真正付費的是跨機種一致操作、升級治理、遠端修復、審計與 fleet policy。',
         sourceLabel: 'OpenBMC Project',
         source: 'https://openbmc.org/'
+      },
+      {
+        point: 'OpenTelemetry 正在把 traces、metrics、logs 的收集方式標準化。',
+        implication: '這證明「蒐集到資料」正在快速商品化；真正可收費的差異化，反而是誰能把訊號轉成 root-cause workflow、dispatch readiness、rollback discipline 與 SLA 行動。',
+        sourceLabel: 'OpenTelemetry',
+        source: 'https://opentelemetry.io/'
       },
       {
         point: 'NVIDIA Mission Control 已把 cluster deployment、workload orchestration、building management integration、autonomous recovery 包成產品。',
