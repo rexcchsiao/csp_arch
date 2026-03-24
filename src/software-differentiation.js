@@ -919,11 +919,11 @@ structuralAdvantages: {
 		motions: [
 			{
 				segment: '大型 CSP / Hyperscaler',
-				buyingTrigger: '客戶已有平台團隊，但不想自己承接 12-18 個月的整合、升級、power / cooling 事件與跨站點 on-call 風險。',
-				whatTheyActuallyBuy: '買的是 single accountable owner：當 AI 叢集遇到 brownfield 整合、設施事件、版本變更與遠端故障時，有人能把風險接住。',
-				softwareWedge: 'Remote Ops、Lifecycle Control Tower、Brownfield Integration & Fleet Baseline、Capacity Assurance / Power-Cooling Governance。',
-				whyFoxconnWins: 'Foxconn 最有機會贏的不是 another control plane，而是把工廠預整合、L9-L10 韌體接觸點、現場維護與 Day-2 營運責任串成一條服務鏈。',
-				proof: 'NVIDIA Mission Control 與 Dell AI Factory 都已把 lifecycle operations、building management integration 與 end-to-end support 拉到產品前台，這代表市場已承認大型客戶會為 Day-2 營運結果付錢。',
+				buyingTrigger: '客戶已有平台團隊，但不想自己承接 12-18 個月的整合、升級、power / cooling 事件、跨站點 on-call 風險，以及每次故障都要先派人到現場才能判斷的 serviceability 成本。',
+				whatTheyActuallyBuy: '買的是 single accountable owner：當 AI 叢集遇到 brownfield 整合、設施事件、版本變更與遠端故障時，有人能先遠端完成診斷、縮小故障範圍、安排維修窗口與備品，再決定是否真的需要 truck roll。',
+				softwareWedge: 'Remote Ops、Remote Diagnostics & Predictive Maintenance SLA、Lifecycle Control Tower、Brownfield Integration & Fleet Baseline、Capacity Assurance / Power-Cooling Governance。',
+				whyFoxconnWins: 'Foxconn 最有機會贏的不是 another control plane，而是把工廠預整合、L9-L10 韌體接觸點、遠端故障分流、現場維護與 Day-2 營運責任串成一條服務鏈。',
+				proof: 'NVIDIA Mission Control 與 Dell AI Factory 都已把 lifecycle operations、building management integration 與 end-to-end support 拉到產品前台；這代表大型客戶願意為「少派人到現場、先遠端把問題縮小、再帶著正確備品去修」這種 Day-2 serviceability 結果付錢。',
 				sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
 				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
 			},
@@ -1493,6 +1493,14 @@ structuralAdvantages: {
 				margin: '60-70%',
 				differentiation: '競爭對手僅提供基礎監控，我們提供主動式維護與修復',
 				targetCustomer: 'CSP 客戶、多據點企業'
+			},
+			{
+				name: 'Remote Diagnostics & Predictive Maintenance SLA',
+				description: '以 BMC 遙測、GPU / power / thermal 趨勢與事件 runbook 為基礎，先遠端完成故障分流、備品判斷、維修窗口安排與預警處置，目標是把「每次告警都要派人到場」改成「只有真正需要換件時才出動」',
+				pricing: 'NT$ 300K-1.2M/案 + 依節點與 SLA 等級收年費',
+				margin: '65-75%',
+				differentiation: '不是只有告警，而是把 serviceability 做成可被採購的結果：更少 truck roll、更短 MTTR、更高備品命中率',
+				targetCustomer: '大型 CSP、Hyperscaler strategic accounts、跨站點資料中心營運團隊'
 			},
 			{
 				name: 'Lifecycle Control Tower 升級治理服務',
