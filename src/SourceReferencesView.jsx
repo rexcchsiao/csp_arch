@@ -12,6 +12,7 @@ const SourceReferencesView = () => {
     { id: 'enterprisePlatforms', label: '企業平台', icon: <Shield className="w-4 h-4" />, color: 'purple' },
     { id: 'supermicro', label: 'Supermicro', icon: <TrendingUp className="w-4 h-4" />, color: 'teal' },
     { id: 'schneider', label: 'Schneider', icon: <TrendingUp className="w-4 h-4" />, color: 'cyan' },
+    { id: 'vertiv', label: 'Vertiv', icon: <TrendingUp className="w-4 h-4" />, color: 'sky' },
     { id: 'marketResearch', label: '市場研究', icon: <Info className="w-4 h-4" />, color: 'indigo' },
     { id: 'standards', label: '管理標準', icon: <CheckCircle className="w-4 h-4" />, color: 'emerald' },
   ];
@@ -80,6 +81,16 @@ const SourceReferencesView = () => {
               <span className="font-semibold text-slate-900">連不是傳統伺服器代工的玩家，都已經在賣 lifecycle、governance、recoverability、hybrid operations 與 secure inferencing</span>。
               這代表市場核准的預算語言，早就不是「硬體規格夠不夠」，而是「誰能把 AI 叢集長期管好、救得回來、還能對稽核交代」。
               這正好強化 Foxconn 的核心主張：軟體部門真正值錢的，不是做另一個 dashboard，而是把硬體交付延伸成可治理、可續約、可被問責的營運結果。
+            </p>
+          </div>
+        )}
+        {activeCategory === 'vertiv' && (
+          <div className="mb-6 rounded-2xl border border-sky-200 bg-sky-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁特別把 Vertiv 拉出來，是因為它幫軟體部門補上一個很有力的董事會論點：
+              <span className="font-semibold text-slate-900">市場已經開始把 AI 機房的價值，往 rack density、retrofit readiness、energy optimization 與 whitespace readiness 這些「設施容量結果」來包裝</span>。
+              這剛好能替 Foxconn 的 Facility-Aware Capacity Assurance 背書——軟體部門不是只在管 server，而是在幫客戶延後 power / cooling CAPEX、降低 brownfield 改造風險、把機電限制翻成可管理的營運能力。
             </p>
           </div>
         )}
