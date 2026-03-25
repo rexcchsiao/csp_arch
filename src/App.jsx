@@ -149,6 +149,28 @@ const App = () => {
                 </div>
               </div>
 
+              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">What procurement is really scoring now</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">從 NVIDIA、HPE、Red Hat 的官方語言來看，採購正在評估的是營運結果，不是功能數量</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 速度</p>
+                    <p className="leading-relaxed">HPE 直接用 deploy AI in days, not months、production deployment in hours 來賣。這代表採購會先看 time-to-value，而不是硬體到貨後還要自己整合多久。</p>
+                  </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 可持續營運</p>
+                    <p className="leading-relaxed">NVIDIA Mission Control 已把 cluster lifecycle、autonomous recovery、building management integration、air-gapped deployment、leak-detection validation 放進正式產品語言。這代表 Day-2 風險已經進入採購評分表。</p>
+                  </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 治理與成本責任</p>
+                    <p className="leading-relaxed">Red Hat OpenShift AI 強調 monitoring、cost control、self-service access。這代表共享 GPU 之後的 quota、showback、policy 與治理能力，已經是正式預算語言。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-cyan-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">當採購開始評分部署速度、持續可用性、設施事件協調與治理責任時，軟體部門就不再是附屬支援，而是最直接影響得標率、attach rate 與續約的價值層。</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Proposal filter</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">沒有軟體部門，最容易在哪 4 題直接被刷掉？</h3>
