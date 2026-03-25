@@ -107,6 +107,28 @@ const App = () => {
                   </p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Proposal filter</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">沒有軟體部門，最容易在哪 4 題直接被刷掉？</h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-rose-100 bg-white/80 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 多久能上線？</p>
+                    <p className="leading-relaxed">若沒有 Deployment Assurance，硬體到貨不等於能進 production。客戶最後看到的不是規格，而是 time-to-revenue 還要不要再等 2-4 週。</p>
+                  </div>
+                  <div className="rounded-xl border border-rose-100 bg-white/80 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 升級失敗誰負責？</p>
+                    <p className="leading-relaxed">若沒有 Lifecycle owner，driver / firmware / CUDA / K8s 任一變更都可能變成 CAB 與 SRE 不敢放行的風險，軟體 attach rate 也很難被核准。</p>
+                  </div>
+                  <div className="rounded-xl border border-rose-100 bg-white/80 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 半夜出事誰先遠端收斂問題？</p>
+                    <p className="leading-relaxed">大型 CSP 真正痛的是 truck roll、帶錯料、跨站點 dispatch 與維修窗口浪費。若提案沒有 remote diagnostics / dispatch readiness，管理層很難相信這是可營運的 AI 服務。</p>
+                  </div>
+                  <div className="rounded-xl border border-rose-100 bg-white/80 p-4">
+                    <p className="font-black text-slate-900 mb-1">4. 共享之後怎麼治理與恢復？</p>
+                    <p className="leading-relaxed">若沒有 quota / showback / air-gap governance / recovery evidence，shared GPU cluster 只會變成能跑但沒人敢放大的平台，採購也更容易被拖慢。</p>
+                  </div>
+                </div>
+              </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-sm font-semibold text-slate-900 mb-2">建議閱讀順序</p>
                 <ul className="space-y-2 text-sm text-slate-700">
