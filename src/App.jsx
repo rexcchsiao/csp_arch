@@ -13,9 +13,11 @@ import CompetitiveComparisonChart from './CompetitiveComparisonChart'
 import OdmComparisonChart from './OdmComparisonChart'
 import Power800vView from './Power800vView'
 import BuildVsBuyView from './BuildVsBuyView'
+import { buildVsBuyAnalysis } from './build-vs-buy'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
+  const { responsibilitySplit } = buildVsBuyAnalysis
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -163,6 +165,40 @@ const App = () => {
                     <p className="font-black text-slate-900 mb-1">Capacity Assurance / Power-Cooling Governance</p>
                     <p className="leading-relaxed">把 rack power cap、cooling event、BMC 遙測與 workload policy 串成可執行的容量治理流程，賣的是延後擴建與保住 SLA，而不只是設施監控。</p>
                   </div>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">Build-vs-buy shortcut</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">大型 CSP / Hyperscaler 真正想聽的，不是「我們會做很多功能」，而是「哪些責任該留在客戶內部、哪些更該交給 Foxconn」</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  {responsibilitySplit.summary}
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div className="rounded-2xl border border-sky-100 bg-white/90 p-4">
+                    <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Keep in-house</p>
+                    <div className="space-y-3 text-sm text-slate-700">
+                      {responsibilitySplit.keepInHouse.slice(0, 2).map((item) => (
+                        <div key={item.title}>
+                          <p className="font-black text-slate-900 mb-1">{item.title}</p>
+                          <p className="text-xs leading-relaxed">{item.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Buy from Foxconn</p>
+                    <div className="space-y-3 text-sm text-slate-700">
+                      {responsibilitySplit.buyFromFoxconn.slice(0, 3).map((item) => (
+                        <div key={item.title}>
+                          <p className="font-black text-slate-900 mb-1">{item.title}</p>
+                          <p className="text-xs leading-relaxed">{item.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-cyan-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">{responsibilitySplit.boardMessage}</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
