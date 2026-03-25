@@ -101,9 +101,9 @@ export const executiveBrief = {
   // Competitive Reality Check
   competitiveReality: {
     oemOdmLandscape: "Quanta/Wistron/ASUS: 10-30 person software teams, hardware-focused, competing on 10-15% margins. Quanta announced software partnership (2026-03-05), signaling OEM/ODM software competition beginning.",
-    brandFactoryLandscape: "Dell/HPE: 100-200 person teams, but tied to proprietary ecosystems",
+    brandFactoryLandscape: "Dell/HPE: 100-200 person teams, but tied to proprietary ecosystems. Their official AI messaging is now built around turnkey deployment, full-stack visibility, and lifecycle support—not bare server specs—which validates that software and operating model have become the real budget line.",
     hyperscalerLandscape: "AWS/Azure/GCP: world-class software for their own platforms, but they are incentivized to prioritize cloud consumption and internal tooling over customer-specific brownfield handoff, air-gapped lifecycle governance, and remote serviceability workflows",
-    foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD). Unique hardware+software synergy: 800V power architecture integration enables 15-25% energy savings pure software vendors cannot replicate.",
+    foxconnPosition: "Only OEM/ODM with 50-80 person software vision, L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD). Unique hardware+software synergy: 800V power architecture integration enables 15-25% energy savings pure software vendors cannot replicate. That lets Foxconn translate the same market language already used by NVIDIA Mission Control and HPE Private Cloud AI—cluster lifecycle, autonomous recovery, power/cooling coordination, and full-stack observability—into a neutral, brownfield-friendly service story.",
     strategicImplication: "Without software differentiation, Foxconn faces commoditization at 5-8% margin. Software investment is not optional—it's existential. Window: 12-18 months (Q2 2026-Q4 2027) to establish credibility before competitors lock in customers.",
     ecosystemAdvantage: "Foxconn leverages partner ecosystem (Red Hat, Canonical, NVIDIA Partner Network) to accelerate delivery vs. building everything from scratch. Competitors like Quanta/Wistron lack these partnerships."
   },
