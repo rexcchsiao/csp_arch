@@ -491,6 +491,14 @@ structuralAdvantages: {
         source: 'https://www.vertiv.com/en-us/solutions/ai-hub/'
       },
       {
+        title: '受監管 AI 專案真正會卡在 model provenance / audit evidence，而不只是模型能不能跑',
+        evidence: 'EU AI Act 已把 technical documentation、logging、record-keeping、instructions for use 與 post-market monitoring 納入正式法規語言；Red Hat 也特別為 disconnected environments 提供獨立安裝與維運文件，側面證明離線 AI 的難點在持續治理與證據鏈。',
+        whyStillOpen: '很多供應商能把模型或 RAG 環境裝起來，卻沒有把「模型來源、離線鏡像、更新紀錄、操作日誌、稽核匯出包」接成可被法遵、資安與內控接受的營運責任。結果常變成：AI 能 demo，但一進採購或稽核流程就卡住。',
+        foxconnPlay: '把 Model Provenance & Audit Evidence Pack 做成 attach service：把 artifact / image / mirror content 版本、更新證據、權限與操作紀錄、離線交付文件與稽核匯出包一次交齊，讓軟體部門從「幫客戶部署」升級成「幫客戶通過治理與採購門檻」的 owner。',
+        sourceLabel: 'EU AI Act + Red Hat OpenShift AI (Disconnected Environments)',
+        source: 'https://artificialintelligenceact.eu/'
+      },
+      {
         title: '市場很會賣平台，但較少人承諾 remote-ops accountability',
         evidence: 'NVIDIA Mission Control 強調 AI factory operations 與 autonomous recovery；HPE Private Cloud AI 也把 built-in observability、predict problems 與 continuous service availability 放進同一條產品敘事。這代表市場已承認客戶買的是營運結果，不是單一功能模組。',
         whyStillOpen: '很多供應商仍偏向賣 control plane，本質上把最後的 on-call、跨機房診斷、升級窗口風險與 availability 壓力留給客戶自己承擔。',
@@ -1463,6 +1471,13 @@ structuralAdvantages: {
 					boardOutcome: '把 AI 事故後的恢復時間與信任損失，轉成可被採購與續約的軟體治理收入'
 				},
 				{
+					service: 'Model Provenance & Audit Evidence Pack',
+					budgetOwner: 'Compliance / CIO Office / AI Governance Program',
+					whyNow: '受監管 AI 專案開始被要求說清楚模型來源、離線鏡像、更新紀錄、操作日誌與技術文件；若沒有 evidence owner，專案常在採購或稽核流程卡住',
+					renewalDriver: '模型版本、離線內容、權限與稽核格式會隨法規與內控要求持續更新，天然適合做成年度 evidence refresh / audit support',
+					boardOutcome: '把「AI 能 demo 但過不了稽核」的風險，轉成可被採購、可續約的治理服務收入'
+				},
+				{
 					service: 'Tenant Governance & GPU Service Guardrails',
 					budgetOwner: 'Platform Engineering / FinOps / AI Center of Excellence',
 					whyNow: '共享 GPU 叢集快速增加後，部門之間最常卡的不是有沒有節點，而是 quota、priority、showback / chargeback 與 SLA 例外責任誰來管',
@@ -1551,6 +1566,13 @@ structuralAdvantages: {
 				name: 'GPU Quota / Showback 治理健檢',
 				why: '直接回應 shared GPU cluster 最常見卻最少人負責的痛點：quota、priority、approval workflow、showback / chargeback 與 SLA 例外常靠人工協調；這類治理需求可用既有 K8s / scheduler / usage metering 能力快速包成顧問式服務',
 				revenue: 'NT$ 180K-600K/案 + 年度 policy / showback 維運費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
+				name: 'Model Provenance / Audit Evidence 健檢包',
+				why: '直接回應受監管 AI 專案最容易卡關的治理缺口：模型來源、離線鏡像、更新紀錄、操作日誌與稽核匯出包往往散落在不同團隊；可先以既有 artifact registry、mirror、權限與 runbook 資產快速包成顧問式交付',
+				revenue: 'NT$ 220K-700K/案 + 年度 evidence refresh / audit support 續約費',
 				margin: '70%+',
 				timeToMarket: '2-6 週',
 			},
