@@ -178,6 +178,14 @@ const ExecutiveSummaryView = () => {
       sourceUrl: vertivAISource?.url || missionControlSource?.url,
     },
     {
+      title: 'Shared GPU cluster 的 quota / showback / SLA 治理仍常落在客戶自己補洞',
+      marketSignal: 'Red Hat OpenShift AI 已把 monitoring、cost control、self-service access 納入核心敘事；Nutanix 甚至直接把 GPU utilization 與 token-cost optimization 講成 AI factory operating model。',
+      whitespace: '很多平台能把共享 AI 叢集建起來，但沒有把 quota policy、priority queue、approval workflow、showback / chargeback 與 SLA 例外處理做成可被 FinOps、平台團隊與 BU 主管一起接受的治理層。結果常變成 everyone has self-service, but nobody owns shared-capacity discipline。',
+      foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：賣的是共享 GPU 的治理、對帳與責任邊界，而不是 another portal。這會讓軟體部門直接進入 CFO / FinOps / platform budget 對話。',
+      source: openshiftAISource?.name || nutanixAgenticAISource?.name || 'Red Hat OpenShift AI / Nutanix Agentic AI',
+      sourceUrl: openshiftAISource?.url || nutanixAgenticAISource?.url,
+    },
+    {
       title: 'AI recoverability 與 incident evidence 幾乎還沒被 OEM/ODM 產品化',
       marketSignal: 'Dell 已把 Cyber Resilience for AI 直接放進 AI solutions 官方敘事，強調要保護 AI workloads against data loss, corruption, and cyber threats。',
       whitespace: '市場已開始把 recoverability 視為 AI 預算語言，但多數伺服器供應商仍停留在告警、備份或通用資安層，沒有真正承接模型 artifact、vector data、golden image、registry 與 incident evidence 的恢復責任。',
@@ -914,11 +922,11 @@ const ExecutiveSummaryView = () => {
       {/* Market whitespace - where software earns its keep */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 4 個高價值空白
+          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 5 個高價值空白
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。
-          下面這四個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口。
+          下面這五個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口，而且新增的 shared GPU 治理切面，會讓軟體價值更直接連到 CFO / FinOps 也看得懂的預算語言。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {marketWhitespace.map((item) => (
