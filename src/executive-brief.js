@@ -19,7 +19,7 @@ export const executiveBrief = {
   },
   
   // The Core Argument in One Sentence
-  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-8% hardware-only. This is the difference between strategic partner and commodity supplier.",
+  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only. This is the difference between strategic partner and commodity supplier.",
   // The "Killing Argument" - One-Liner for Board Members to Repeat
   killingArgument: {
     headline: "The One-Liner Every Board Member Should Remember",
@@ -2485,7 +2485,7 @@ export const messagingHierarchy = {
     {
       duration: "5 minutes",
       audience: "Board presentation, investor meeting, customer CTO briefing",
-      keyMessage: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-8% hardware-only. This is the difference between strategic partner and commodity supplier.",
+      keyMessage: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only. This is the difference between strategic partner and commodity supplier.",
       structure: [
         { section: "The Problem (1 min)", points: ["40-60% GPU idle time = NT$ 4-6M stranded capital per 100-server cluster", "2-4 week deployment delays revenue by 22 days", "70% of issues require on-site visit = 8-hour downtime, NT$ 2-5M loss"] },
         { section: "The Solution (1.5 min)", points: ["Remote Ops Platform: 85%+ utilization, 2-hour deployment, 70% remote fix rate", "RAG Appliance: Turnkey private AI for sovereign AI market (NT$ 50B+ opportunity)", "90-day pilot guarantee: 100% refund + NT$ 500K credit if KPIs not met"] },
