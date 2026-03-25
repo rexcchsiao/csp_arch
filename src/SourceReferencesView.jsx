@@ -15,6 +15,7 @@ const SourceReferencesView = () => {
     { id: 'vertiv', label: 'Vertiv', icon: <TrendingUp className="w-4 h-4" />, color: 'sky' },
     { id: 'marketResearch', label: '市場研究', icon: <Info className="w-4 h-4" />, color: 'indigo' },
     { id: 'standards', label: '管理標準', icon: <CheckCircle className="w-4 h-4" />, color: 'emerald' },
+    { id: 'regulations', label: '法規 / 主權 AI', icon: <Shield className="w-4 h-4" />, color: 'rose' },
   ];
 
   const sources = activeCategory === 'dell'
@@ -126,6 +127,17 @@ const SourceReferencesView = () => {
               <span className="font-semibold text-slate-900">「既然 Redfish、OpenBMC、OpenTelemetry 都是標準或開源，為什麼還需要軟體部門？」</span>
               答案很簡單：標準只負責把資料與控制面暴露出來，<span className="font-semibold text-slate-900">真正能被客戶買單的，是疊在上面的 change governance、maintenance workflow、rollback discipline、dispatch readiness、以及 SLA / 稽核可交代的營運結果</span>。
               換句話說，沒有軟體部門，Foxconn 只有「可讀取的訊號」；有軟體部門，Foxconn 才有「可續約的服務能力」。
+            </p>
+          </div>
+        )}
+        {activeCategory === 'regulations' && (
+          <div className="mb-6 rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這頁很適合補一個常被低估、但其實很容易讓老闆點頭的論點：
+              <span className="font-semibold text-slate-900">受監管 AI 專案開始需要的不只是算力，而是 technical documentation、logging、record-keeping、資料邊界與可交付 audit evidence。</span>
+              一旦 EU AI Act、GDPR 這類要求進入採購與稽核流程，Foxconn 軟體部門的價值就不再只是維運工具，而是把 model provenance、離線內容版本、更新紀錄與合規證據做成正式服務責任鏈。
+              這也讓軟體部門更容易切進 <span className="font-semibold text-slate-900">compliance / sovereign AI / regulated industry</span> 的預算，而不只停在 IT 功能討論。
             </p>
           </div>
         )}

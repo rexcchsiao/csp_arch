@@ -130,6 +130,31 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">What the market still leaves unsolved</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">真正還沒被補滿的，不是 another dashboard，而是 4 條沒人想完全承接的責任鏈</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 交機到可營運，中間誰接？</p>
+                    <p className="leading-relaxed">HPE 已把 deploy AI in days, not months 與 validated platform 當成正式採購語言，代表客戶痛的不是硬體能不能到，而是工廠預載、site acceptance、baseline 與 Day-2 owner 有沒有接成一條線。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 半夜故障，誰先把派工縮小？</p>
+                    <p className="leading-relaxed">NVIDIA 與 HPE 都在賣 lifecycle、autonomous recovery、continuous service availability，但大多 OEM/ODM 仍停在監控。真正值錢的是 remote diagnostics、dispatch readiness 與 evidence pack，不是多一張畫面。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 共享 GPU 之後，誰替成本與秩序背責？</p>
+                    <p className="leading-relaxed">Red Hat、Nutanix 已把 cost control、governance、GPU utilization 講成 operating model，表示共享算力之後真正的採購題目，已經變成 quota、showback、policy 與 SLA 例外處理要由誰負責。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">4. 受監管 AI 要過採購與稽核，誰把證據鏈交齊？</p>
+                    <p className="leading-relaxed">EU AI Act 已把 technical documentation、logging、record-keeping 拉進正式法規語言。很多案子不是模型不能跑，而是 model provenance、離線內容版本、更新紀錄與 audit evidence 沒有 owner；這正是軟體部門最能切入合規預算的位置。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-sky-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-sky-900">董事會該記住的一句話：<span className="text-slate-700">如果市場真正缺的是責任鏈 owner，而 Foxconn 剛好最有資格把 factory、firmware、brownfield、remote ops 與 shared-cluster governance 接起來，那軟體部門賣的就不是功能，而是別人最難完整承接的營運責任。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-fuchsia-700 mb-2">Procurement litmus test</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">老闆只要先問 4 題，就能判斷這是不是「該由軟體部門負責」的價值</h3>
@@ -240,6 +265,27 @@ const App = () => {
                 </div>
                 <div className="rounded-xl border border-amber-100 bg-white p-4">
                   <p className="text-sm font-semibold text-amber-900">董事會該記住的一句話：<span className="text-slate-700">當客戶開始正式為 recoverability、evidence 與恢復信任付錢時，軟體部門的價值就不再只是讓系統看得見，而是讓 AI 出事時仍救得回來、講得清楚、也續得下去。</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">New budget owner opening</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">下一條很值得搶的，不只是維運預算，而是 AI governance / security / audit 預算</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 模型來源要講得清楚</p>
+                    <p className="leading-relaxed">EU AI Act 已把 technical documentation、logging、record-keeping 拉進正式法規語言。很多 regulated AI 專案真正卡住的，不是模型不能跑，而是誰來交 model provenance、更新紀錄與 evidence pack。</p>
+                  </div>
+                  <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 安全團隊要的不是 another dashboard</p>
+                    <p className="leading-relaxed">當企業開始把 AI 看成正式營運系統，資安與法遵真正想買的是可稽核的 artifact / registry 保護、離線內容版本、權限邊界與事故證據，而不是多一張管理畫面。</p>
+                  </div>
+                  <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 這筆錢的 owner 也會跟著變</p>
+                    <p className="leading-relaxed">一旦提案能回答 audit、recoverability、model provenance 與 sovereign operation，Foxconn 就不只是在對 Infrastructure / SRE 溝通，還能切進 CISO、Compliance、AI governance program 與 regulated industry 預算。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-rose-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-rose-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門如果能把 model provenance、audit evidence、recoverability 與 sovereign operation 做成可被稽核的服務，就不是在幫硬體補功能，而是在替 Foxconn 打開原本碰不到的治理與資安預算。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
