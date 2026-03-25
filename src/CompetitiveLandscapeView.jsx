@@ -222,6 +222,29 @@ const CompetitiveLandscapeView = () => {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="p-4 bg-white rounded-2xl border border-violet-100">
+                  <p className="text-xs font-bold text-violet-500 uppercase tracking-wide mb-2">可對應預算 owner</p>
+                  <p className="text-3xl font-black text-slate-900">6</p>
+                  <p className="text-xs text-slate-600 mt-2">Infra、SRE、Ops、CIO/Compliance、FinOps/Platform、Facilities 都有理由買單。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-violet-100">
+                  <p className="text-xs font-bold text-violet-500 uppercase tracking-wide mb-2">可續約主軸</p>
+                  <p className="text-3xl font-black text-blue-700">6</p>
+                  <p className="text-xs text-slate-600 mt-2">Brownfield、Lifecycle、Remote Ops、Sovereign/Air-Gap、Tenant Governance、Facility Assurance。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-violet-100">
+                  <p className="text-xs font-bold text-violet-500 uppercase tracking-wide mb-2">收入型態</p>
+                  <p className="text-3xl font-black text-green-700">3</p>
+                  <p className="text-xs text-slate-600 mt-2">一次性整合、年度訂閱、SLA / 升級事件顧問費可以疊加。</p>
+                </div>
+                <div className="p-4 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl border border-violet-200 text-white">
+                  <p className="text-xs font-bold uppercase tracking-wide mb-2 text-violet-100">管理層一句話</p>
+                  <p className="text-sm font-black leading-snug">軟體部門不是成本中心，是把單次交機變成跨部門、跨年度收入的 attach engine。</p>
+                </div>
+              </div>
+
               <div className="mt-4 p-4 bg-white rounded-xl border border-violet-100">
                 <p className="text-sm font-semibold text-violet-900">{competitiveLandscape.procurementLanguageShift?.boardMessage}</p>
               </div>
