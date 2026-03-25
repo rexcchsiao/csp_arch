@@ -20,7 +20,14 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
-  const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 4)
+  const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
+    [
+      'Factory-to-Operations Handoff Assurance',
+      'Remote Diagnostics & Dispatch Readiness',
+      'Service Availability Assurance',
+      'AI Recovery & Evidence Assurance'
+    ].includes(row.service)
+  ))
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -110,6 +117,27 @@ const App = () => {
                   <p className="text-xs text-slate-700 leading-relaxed">
                     軟體不是附屬功能，而是把一次性交機翻成 deployment assurance、lifecycle governance、capacity assurance 與 remote ops 年度收入的關鍵槓桿。
                   </p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">董事會真正該批准的，是 3 條可被驗收、也可被續約的責任鏈</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 交機到可營運的 handoff</p>
+                    <p className="leading-relaxed">把 factory pre-load、site acceptance、baseline 建立、observability 與 Day-2 runbook 接成同一條責任鏈，賣的是更快上線與更少推責，不只是安裝支援。</p>
+                  </div>
+                  <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 夜間事故的遠端收斂能力</p>
+                    <p className="leading-relaxed">把 remote diagnostics、evidence pack、dispatch readiness 與 rollback 流程產品化，讓客戶買到的是少白跑、少 outage、也更快交付 RCA 的能力。</p>
+                  </div>
+                  <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 升級與治理的持續 owner</p>
+                    <p className="leading-relaxed">把版本矩陣、maintenance window、air-gap update discipline、quota / showback 與 audit evidence 做成持續治理服務，直接把硬體案延伸成 Day-2 年約收入。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 這 3 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
@@ -290,8 +318,8 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">High-value service wedge</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 4 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
-                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700">
+                <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 5 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-4 text-sm text-slate-700">
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Factory-to-Operations Handoff Assurance</p>
                     <p className="leading-relaxed">把出廠預載、burn-in、site acceptance、baseline 與 Day-2 runbook 接成同一條交付責任鏈，賣的是更快上線，不是更多安裝工時。</p>
@@ -307,6 +335,10 @@ const App = () => {
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Tenant Governance & GPU Service Guardrails</p>
                     <p className="leading-relaxed">把 quota、priority、approval workflow、showback / chargeback 與 SLA 例外處理做成共享 GPU 治理服務，賣的是「大家能共用算力又不失控」，直接對接 Platform / FinOps 預算。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">AI Recovery & Evidence Assurance</p>
+                    <p className="leading-relaxed">把 artifact / registry 保護、向量資料恢復、golden image rollback、incident evidence 與年度演練做成 attach service，賣的是「AI 出事時仍救得回來、講得清楚、也續得下去」的營運信任。</p>
                   </div>
                 </div>
               </div>
