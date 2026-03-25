@@ -953,6 +953,31 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-cyan-200 shadow-sm">
+              <h4 className="text-lg font-black text-cyan-900 mb-2">{softwareDifferentiation.serviceOfferings.buyingCommitteeMap.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.serviceOfferings.buyingCommitteeMap.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.serviceOfferings.buyingCommitteeMap.stakeholders.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100">
+                    <h5 className="text-sm font-black text-cyan-800 mb-3">{item.buyer}</h5>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">他們拍板什麼：</span>{item.whatTheyApprove}</p>
+                      <p><span className="font-bold text-amber-700">外部訊號：</span>{item.trigger}</p>
+                      <p><span className="font-bold text-emerald-700">軟體部門切入點：</span>{item.softwareHook}</p>
+                      <p><span className="font-bold text-cyan-700">為什麼這對董事會重要：</span>{item.boardWhyItMatters}</p>
+                    </div>
+                    <a href={item.source} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {item.sourceLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100">
+                <p className="text-sm font-semibold text-cyan-900">{softwareDifferentiation.serviceOfferings.buyingCommitteeMap.boardMessage}</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl border border-amber-200 shadow-sm">
               <h4 className="text-lg font-black text-amber-900 mb-2">給管理層的 30 秒決策卡</h4>
               <p className="text-sm text-slate-700 mb-4">這一塊不是再加資訊量，而是把整份論述濃縮成老闆在會議上真的講得出口的版本：問題、解法、結果、風險、以及最後要拍板的投資要求。</p>

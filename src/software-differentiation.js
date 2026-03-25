@@ -1500,6 +1500,67 @@ structuralAdvantages: {
 			],
 			boardMessage: '軟體部門最值得投資的地方，是它能把同一套硬體 attach 到不同部門預算，並把收入型態從一次性 BOM 變成跨年度續約。'
 		},
+		buyingCommitteeMap: {
+			headline: '真正能放大軟體部門價值的，不只是功能，而是它一次打進 6 種決策桌',
+			coreInsight: '當外部市場都在用 deploy AI in days、continuous service availability、building management integration、govern AI factories 這種語言賣 AI 基礎建設時，代表案子已不再只由硬體採購拍板。軟體部門的真正價值，是讓 Foxconn 從單一設備供應商，升級成同時對接 CIO、COO、SRE、Compliance、FinOps 與資料中心營運團隊的 cross-functional owner。',
+			stakeholders: [
+				{
+					buyer: 'CIO / CTO',
+					whatTheyApprove: '是否把 AI 基礎設施視為可長期營運的平台，而不是一次性專案',
+					trigger: 'HPE 與 Nutanix 都在賣 deploy AI in days、AI operating model、turnkey outcomes，代表高層已開始把 AI infrastructure 當成營運模式投資。',
+					softwareHook: 'Deployment Assurance、Factory-to-Operations Handoff、AI Operating Model 敘事',
+					boardWhyItMatters: '軟體部門讓 Foxconn 進到「平台與營運模式」的對話，而不只是 server 規格比較。',
+					sourceLabel: 'HPE Private Cloud AI + Nutanix Agentic AI',
+					source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+				},
+				{
+					buyer: 'COO / Service Delivery',
+					whatTheyApprove: '誰對持續服務可用性、遠端修復效率與跨站點 serviceability 負責',
+					trigger: 'HPE 已把 continuous service availability、predict problems 放進正式產品敘事，證明可用性已是管理層預算語言。',
+					softwareHook: 'Service Availability Assurance、Remote Diagnostics & Dispatch Readiness、Remote Ops SLA',
+					boardWhyItMatters: '軟體部門把「支援成本」翻成可被續約的 uptime / MTTR / truck-roll reduction 服務。',
+					sourceLabel: 'HPE Private Cloud AI',
+					source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
+				},
+				{
+					buyer: 'Platform Engineering / SRE',
+					whatTheyApprove: '升級風險、cluster lifecycle、rollback discipline 與 incident response 是否可被標準化',
+					trigger: 'NVIDIA Mission Control 已把 cluster life cycle、autonomous recovery、continuous health checks 做成 AI factory operations 核心能力。',
+					softwareHook: 'Lifecycle Control Tower、AI Recovery & Evidence Assurance、continuous health checks 轉運營流程',
+					boardWhyItMatters: '軟體部門若能接住 change-window 與恢復責任，就能從 dashboard 供應商升級成 Day-2 owner。',
+					sourceLabel: 'NVIDIA Mission Control',
+					source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+				},
+				{
+					buyer: 'Data Center Operations / Facilities',
+					whatTheyApprove: 'power cap、cooling event、leak detection 與 building workflow 能否和 AI 工作負載治理接起來',
+					trigger: 'NVIDIA、Supermicro、Schneider 都已把 building management integration、power/cooling control、facility telemetry 放到官方 AI 敘事前台。',
+					softwareHook: 'Capacity Assurance / Power-Cooling Governance、AI Retrofit Readiness、Facility-Aware Capacity Assurance',
+					boardWhyItMatters: '軟體部門開始碰到的是原本不屬於伺服器部門的設施預算，這會直接拉高 attach 空間。',
+					sourceLabel: 'NVIDIA Mission Control + Schneider Electric AI Data Center Solutions',
+					source: 'https://www.se.com/ww/en/work/solutions/data-centers-and-networks/ai-data-centers/'
+				},
+				{
+					buyer: 'Compliance / CISO / AI Governance',
+					whatTheyApprove: '模型來源、離線內容同步、稽核證據與 recoverability 是否足以支撐受監管 AI 專案',
+					trigger: 'EU AI Act 與 Red Hat disconnected environments 文件都在提醒市場：能部署不等於能被治理。',
+					softwareHook: 'Model Provenance & Audit Evidence Pack、Air-Gap Content Lifecycle、AI Recovery & Evidence Assurance',
+					boardWhyItMatters: '這讓軟體部門不只吃 infrastructure 預算，也吃到法遵與治理預算。',
+					sourceLabel: 'EU AI Act + Red Hat OpenShift AI (Disconnected Environments)',
+					source: 'https://artificialintelligenceact.eu/'
+				},
+				{
+					buyer: 'FinOps / BU Owner / Shared GPU Platform Owner',
+					whatTheyApprove: '共享 GPU 叢集是否有 quota、showback、token / GPU cost discipline 與例外治理',
+					trigger: 'Red Hat 與 Nutanix 都已把 self-service、GPU utilization、token costs、governance 放到產品核心。',
+					softwareHook: 'Tenant Governance & GPU Service Guardrails、showback / chargeback、quota policy',
+					boardWhyItMatters: '軟體部門因此不只賣 infra availability，還能賣 shared capacity economics。',
+					sourceLabel: 'Red Hat OpenShift AI + Nutanix Agentic AI',
+					source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+				}
+			],
+			boardMessage: '董事會該記住的一句話：硬體部門通常只打進採購桌；軟體部門一旦成立，就能同時打進營運、治理、設施、財務與平台團隊的預算桌，這就是 attach rate 與續約率會被放大的根本原因。'
+		},
 	// Quick Win Services: Prioritized by time-to-market and development effort (Added 2026-03-16 by CoCo)
 	quickWins: {
 		headline: '快速變現服務：3 個月內可上線',
