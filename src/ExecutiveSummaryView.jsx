@@ -136,6 +136,14 @@ const ExecutiveSummaryView = () => {
       sourceUrl: openTelemetrySource?.url,
     },
     {
+      criterion: 'Operations expertise itself is now being productized as software',
+      marketSignal: 'NVIDIA Mission Control is explicitly framed as bringing “the world’s most advanced AI factory expertise to every business,” which turns operations know-how—not just tools—into a purchasable software layer.',
+      whyItChangesProcurement: 'Once buyers are willing to fund packaged operations expertise, the software department can be positioned as the owner of deployment discipline, incident evidence, lifecycle governance, and remote accountability rather than a support team that happens to ship dashboards.',
+      foxconnMove: 'Describe Foxconn software as accountable operations expertise for mixed-vendor, brownfield, and sovereign environments: factory-to-operations handoff, remote evidence packs, lifecycle control, and facility-aware response.',
+      source: missionControlSource?.name || 'NVIDIA Mission Control',
+      sourceUrl: missionControlSource?.url,
+    },
+    {
       criterion: 'Even facilities vendors now package AI infrastructure as physical + digital operations',
       marketSignal: 'Schneider Electric officially frames AI datacenter solutions as end-to-end physical and digital AI infrastructure, combining resilient electrical infrastructure, advanced liquid cooling, and optimized operations.',
       whyItChangesProcurement: 'This is a strong signal that software-and-operations value is not just an AI server vendor story. When the facilities layer itself is sold with digital-operations language, customers become more willing to budget for cross-layer orchestration instead of treating servers as isolated hardware purchases. NVIDIA now even frames power-constrained optimization in business terms—run at 85% power with 93% performance throughput—so the buying conversation shifts from "more monitoring" to "how much CAPEX and outage risk can we defer?"',
