@@ -193,6 +193,27 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-amber-700 mb-2">Budget language shift</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">AI 預算已經開始把「recoverability + evidence」當正式採購條件，不只是資安附屬需求</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-amber-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Dell：AI resilience 已進主敘事</p>
+                    <p className="leading-relaxed">Dell 已把 Cyber Resilience for AI 直接放進 AI solutions，說明管理層開始正式追問：模型、資料、推論服務出事時，誰能把服務與信任一起救回來。</p>
+                  </div>
+                  <div className="rounded-xl border border-amber-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">NetApp：governed / recoverable data 已成賣點</p>
+                    <p className="leading-relaxed">連資料基礎設施廠商都在賣 built-in governance、secure inferencing 與 recoverable data，這代表 recoverability 已經不是 IT 細節，而是 AI factory 的正式預算語言。</p>
+                  </div>
+                  <div className="rounded-xl border border-amber-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Foxconn 最該賣的是 AI Recovery & Evidence Assurance</p>
+                    <p className="leading-relaxed">把 artifact / registry 保護、向量資料恢復、golden image rollback、incident evidence 與演練 runbook 做成 attach service，軟體部門才能從「監控供應商」升級成 AI recoverability owner。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-amber-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-amber-900">董事會該記住的一句話：<span className="text-slate-700">當客戶開始正式為 recoverability、evidence 與恢復信任付錢時，軟體部門的價值就不再只是讓系統看得見，而是讓 AI 出事時仍救得回來、講得清楚、也續得下去。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">High-value service wedge</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 4 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
