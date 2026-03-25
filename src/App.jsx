@@ -129,6 +129,24 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">High-value service wedge</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 3 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Factory-to-Operations Handoff Assurance</p>
+                    <p className="leading-relaxed">把出廠預載、burn-in、site acceptance、baseline 與 Day-2 runbook 接成同一條交付責任鏈，賣的是更快上線，不是更多安裝工時。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Remote Diagnostics & Dispatch Readiness</p>
+                    <p className="leading-relaxed">先遠端把故障範圍縮小、判斷是否要派人、該帶哪些備品，再決定 truck roll；賣的是更少白跑、更短 MTTR，而不是 another dashboard。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Capacity Assurance / Power-Cooling Governance</p>
+                    <p className="leading-relaxed">把 rack power cap、cooling event、BMC 遙測與 workload policy 串成可執行的容量治理流程，賣的是延後擴建與保住 SLA，而不只是設施監控。</p>
+                  </div>
+                </div>
+              </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-sm font-semibold text-slate-900 mb-2">建議閱讀順序</p>
                 <ul className="space-y-2 text-sm text-slate-700">
