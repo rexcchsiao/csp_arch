@@ -894,6 +894,30 @@ const SoftwareDifferentiationView = () => {
                 </div>
               </div>
 
+              <div className="p-5 bg-white/5 rounded-2xl border border-white/10 mb-4">
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-200 mb-2">Same hardware, two P&amp;L outcomes</p>
+                    <h5 className="text-sm font-black text-white">同一筆 AI 伺服器訂單，軟體 attach 前後的價值差有多大？</h5>
+                  </div>
+                  <TrendingUp className="w-5 h-5 text-emerald-300 flex-shrink-0" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {softwareMoatSummary.financialImpact.scenarios.map((scenario, idx) => (
+                    <div key={idx} className={`p-4 rounded-xl border ${idx === 0 ? 'bg-rose-500/10 border-rose-300/20' : 'bg-emerald-500/10 border-emerald-300/20'}`}>
+                      <p className={`text-xs font-black mb-2 ${idx === 0 ? 'text-rose-200' : 'text-emerald-200'}`}>{scenario.scenario}</p>
+                      <div className="space-y-2 text-xs text-slate-200">
+                        <p><span className="font-bold text-slate-300">Revenue：</span>{scenario.revenue}</p>
+                        <p><span className="font-bold text-slate-300">Gross profit：</span>{scenario.grossProfit}</p>
+                        <p><span className="font-bold text-slate-300">Margin：</span>{scenario.margin}</p>
+                        <p><span className={`font-semibold ${idx === 0 ? 'text-rose-200' : 'text-emerald-200'}`}>{scenario.outcome}</span></p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-xs text-slate-300">董事會可直接帶走的訊息：不是多賣一套工具，而是把同一張硬體 PO，從一次性交機的低毛利交易，翻成可溢價、可續約、可被問責的軟體加值生意。</p>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {softwareMoatSummary.strategicChoice && (
                   <>
