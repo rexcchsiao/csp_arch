@@ -130,6 +130,31 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-fuchsia-700 mb-2">Procurement litmus test</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">老闆只要先問 4 題，就能判斷這是不是「該由軟體部門負責」的價值</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-fuchsia-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">這筆預算買的是功能，還是營運專業？</p>
+                    <p className="leading-relaxed">如果客戶買的是 deployment discipline、night-shift incident handling、remote evidence、lifecycle governance，那本質上買的是 operations expertise，不是多一個畫面。</p>
+                  </div>
+                  <div className="rounded-xl border border-fuchsia-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">出事時誰先遠端把根因縮小？</p>
+                    <p className="leading-relaxed">只要答案牽涉 RCA、evidence pack、dispatch readiness、rollback policy，就代表這是軟體部門該承接的責任鏈，而不是硬體附屬支援。</p>
+                  </div>
+                  <div className="rounded-xl border border-fuchsia-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">升級、斷網、設施事件是誰的 owner？</p>
+                    <p className="leading-relaxed">當客戶開始問 maintenance window、air-gapped updates、power / cooling event governance，評分標準就已經從產品功能轉到持續營運能力。</p>
+                  </div>
+                  <div className="rounded-xl border border-fuchsia-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">這能不能形成年約與續約？</p>
+                    <p className="leading-relaxed">如果價值來自 deployment assurance、remote ops、capacity assurance 與治理責任，就不是一次性交機邏輯，而是典型軟體/服務收入。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-fuchsia-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-fuchsia-900">董事會該記住的一句話：<span className="text-slate-700">當市場開始願意為「world-class operations team delivered as software」付錢，Foxconn 最該投資的就不是更多附屬功能，而是能承接部署、證據、升級與遠端問責的軟體部門。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why software matters more as infra gets standardized</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">Redfish / OpenBMC / OpenTelemetry 越成熟，越代表客戶會把預算往上層營運能力移動</h3>
