@@ -376,6 +376,24 @@ const App = () => {
                     </div>
                   </div>
                 </div>
+                <div className="rounded-2xl border border-cyan-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">Strategic boundary</p>
+                  <h4 className="text-base font-black text-slate-900 mb-3">Foxconn 軟體部門最該守住的，不是 customer-facing control plane，而是 3 條最容易被外包、也最能被續約的責任鏈</h4>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                    <div className="rounded-xl border border-cyan-100 bg-cyan-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">1. 不跟客戶搶產品控制面</p>
+                      <p className="leading-relaxed">客戶自己的 portal、模型 API、對外定價與 workload policy 應留在客戶內部；這樣比較不會被理解成 Foxconn 想取代客戶平台團隊。</p>
+                    </div>
+                    <div className="rounded-xl border border-cyan-100 bg-cyan-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">2. 專心承接 Day-2 高風險責任</p>
+                      <p className="leading-relaxed">真正值得外包的是 handoff、upgrade / rollback、brownfield / facility coordination 與 remote diagnostics，因為這些最耗跨團隊時間，也最難只靠另一套 dashboard 解決。</p>
+                    </div>
+                    <div className="rounded-xl border border-cyan-100 bg-cyan-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">3. 把責任鏈翻成年約語言</p>
+                      <p className="leading-relaxed">只要價值被講成 remote accountability、serviceability、maintenance-window discipline 與 evidence pack，軟體部門就更容易從附屬功能升級成可續約服務。</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="rounded-xl border border-cyan-100 bg-white p-4">
                   <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">{responsibilitySplit.boardMessage}</span></p>
                 </div>
