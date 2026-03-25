@@ -13,6 +13,7 @@ const BuildVsBuyView = () => {
     responsibilitySplit,
     objections,
     caseStudy,
+    hyperscalerResponse,
   } = buildVsBuyAnalysis;
 
   return (
@@ -174,6 +175,25 @@ const BuildVsBuyView = () => {
         </div>
         <div className="mt-4 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-600">
           <p className="text-indigo-900 font-semibold text-sm">{responsibilitySplit.boardMessage}</p>
+        </div>
+      </div>
+
+      <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <AlertCircle className="w-6 h-6 text-orange-600" />
+          當客戶說「AWS / Azure 也能做到」時
+        </h3>
+        <p className="text-sm text-gray-700 mb-4">{hyperscalerResponse.headline}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+          {hyperscalerResponse.keyPoints.map((point, idx) => (
+            <div key={idx} className="rounded-lg border border-orange-100 bg-orange-50 p-4">
+              <p className="text-sm text-gray-800 leading-relaxed">{point}</p>
+            </div>
+          ))}
+        </div>
+        <div className="rounded-lg border border-indigo-100 bg-indigo-50 p-4">
+          <p className="text-sm font-semibold text-indigo-900 mb-2">五年 TCO 對比</p>
+          <p className="text-sm text-gray-700">{hyperscalerResponse.tcoComparison}</p>
         </div>
       </div>
 
