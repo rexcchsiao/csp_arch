@@ -172,6 +172,12 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       foxconnSolution: 'AI trust layer: model provenance records, AI bill of materials (AI BOM), artifact signing, runtime integrity checks, and compliance-ready audit exports tied back to Foxconn-managed hardware telemetry and deployment workflows.',
       evidence: 'EU AI Act, enterprise security reviews, and sovereign AI programs are shifting procurement toward traceability and runtime assurance. This is valuable because it moves software from “cluster tooling” into security, compliance, and board-risk budgets.',
     },
+    {
+      problem: 'AI Workload Portability & Exit Economics',
+      description: 'Once AI workloads are wrapped around a single cloud, GPU stack, or proprietary serving environment, customers lose pricing leverage and migration speed. The board-level pain is not technical elegance; it is being unable to move sensitive or high-cost workloads when compliance, latency, or token economics change.',
+      foxconnSolution: 'Portable AI Workload Layer: package models, runtimes, policies, observability hooks, and deployment artifacts with Kubernetes / OCI standards so workloads can move across on-prem, edge, and cloud without full re-platforming.',
+      evidence: 'Red Hat OpenShift AI explicitly sells hybrid-cloud flexibility across on-prem, public cloud, and edge, while Nutanix Agentic AI positions a cloud operating model that optimizes GPU utilization and token costs. That validates buyer demand for software that preserves workload mobility and economic choice rather than locking infrastructure to one environment.',
+    },
   ],
   softwareDepartmentWedge: {
     headline: '軟體部門真正可守住、可定價的價值楔子',
@@ -225,6 +231,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         whyFoxconnWins: 'Foxconn 同時掌握硬體遙測、部署流程、模型 artifact 交付與 Day-2 維運資料，最有機會把 AI BOM、模型簽章、runtime integrity 與 audit evidence 做成可被稽核、可被續約的 assurance layer',
         whyOthersAvoid: '純硬體廠多半止於硬體安全；純軟體商又缺少 BMC / firmware / brownfield 現場接點，難把 AI 安全做成從設備到工作負載的一致責任邊界',
         monetization: '安全/合規加值模組授權 + 年度稽核/證據服務'
+      },
+      {
+        name: 'Portable AI Workload Exit Layer',
+        customerTrigger: '當客戶同時面臨資料在地化、雲端成本上升、GPU 供應切換或併購整併時，最怕的是 AI 工作負載被鎖死在單一環境，既不能快速搬回地端，也難以維持既有治理與觀測邏輯',
+        whyFoxconnWins: 'Foxconn 可把模型 artifact、runtime 依賴、部署 policy、觀測與權限鉤子，連同工廠預載與 brownfield 現場流程一起封裝，讓 AI 工作負載跟著標準化交付包移動，而不是每次重做一套平台',
+        whyOthersAvoid: 'Hyperscaler 與封閉平台更傾向把客戶留在自家環境；純硬體 ODM 看得到機器、看不到 workload package 與 Day-2 policy，因此難把「可移植性」做成持續服務',
+        monetization: '遷移/整併專案費 + 年度 portability governance 訂閱'
       }
     ],
     boardMessage: '這七個楔子有共同點：都發生在硬體出貨之後、都直接影響客戶營運、都能收年度費。這就是軟體部門最值得投資的地方。'
@@ -329,6 +342,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       evidence: 'EU AI Act 與企業級 AI 安全審查正把 model provenance、technical documentation 與 runtime governance 拉進正式採購門檻；這代表安全與可追溯性已不是附屬需求，而是會決定案子能不能簽的軟體能力。',
       source: 'https://artificialintelligenceact.eu/',
     },
+    {
+      name: 'Portable AI Workload Exit Layer',
+      targetCustomer: '同時需要 on-prem / edge / public cloud 彈性、且不想被單一雲端或單一 GPU 生態綁死的大型企業、CSP 與跨區域 AI 平台團隊',
+      monetization: '遷移/整併專案費 + portability governance 訂閱 + 年度 workload certification 服務',
+      budgetOwner: 'Platform Engineering / Cloud Infrastructure / CIO Office',
+      renewalDriver: '每次新區域上線、雲地搬遷、GPU 世代切換與合規邊界調整，都需要重新驗證可移植性與標準交付包',
+      painSolved: '把「AI 工作負載搬不動、成本談不下來、合規一改就要重做平台」這種 board-level 風險，轉成可規劃、可驗證、可演練的 workload mobility 能力。',
+      whyUnique: 'Foxconn 既能碰到伺服器 / 韌體 / 叢集交付，也能把模型 artifact、runtime、policy、observability 與 factory pre-load 包成一致的 deployment package，因此能把 portability 做成真正可交付、而非只有架構口號。',
+      evidence: 'Red Hat OpenShift AI 官方強調 across hybrid cloud environments 與 on-prem / public cloud / edge flexibility；Nutanix Agentic AI 則把 cloud operating model、GPU utilization 與 token cost optimization 綁在一起，代表市場已把工作負載移動性視為經濟與治理問題，不只是平台偏好。',
+      source: 'https://www.redhat.com/en/products/ai/openshift-ai',
+    },
   ],
   serviceValueCaptureMatrix: {
     headline: '不是功能清單，而是可持續拿預算的服務地圖',
@@ -389,6 +413,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         trigger: '客戶要求模型可追溯、供應鏈可信、runtime anomaly 可檢測，否則 AI 專案過不了安全審查或採購門檻',
         recurringReason: '模型版本更新、年度稽核、供應鏈風險盤點與異常事件檢討都會持續發生',
         boardOutcome: '讓軟體部門切進安全與治理預算，把原本會卡單的風險轉成可續約的 assurance 收入'
+      },
+      {
+        service: 'Portable AI Workload Exit Layer',
+        budgetOwner: 'Platform Engineering / Cloud Infrastructure / CIO Office',
+        trigger: '客戶要在 on-prem、edge、public cloud 間移動 AI 工作負載，或希望在 GPU/雲成本與合規條件變化時保留轉移能力',
+        recurringReason: '每次新區域上線、平台整併、GPU 世代替換與 workload certification 都需要持續治理與驗證',
+        boardOutcome: '把「避免被單一平台鎖死」翻成可續約的 portability 收入，並替管理層保住議價能力與混合部署彈性'
       }
     ],
     boardMessage: '一旦軟體部門能對應到不同預算 owner，Foxconn 賣的就不只是 server BOM，而是跨部門、跨年度、可續約的營運能力。'
@@ -436,6 +467,14 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         foxconnPlay: 'Foxconn 應把軟體部門講成 AI operating model 的 owner：用 Tenant Governance、topology-aware placement、showback / chargeback 與 Lifecycle Control Tower，把 shared GPU economics 與 Day-2 營運責任一起收斂成可報價、可續約的服務。這會讓軟體部門更像收入與毛利的控制層，而不是附屬工具團隊。',
         sourceLabel: 'Nutanix Agentic AI',
         source: 'https://www.nutanix.com/solutions/ai'
+      },
+      {
+        title: 'Portability Is Becoming Procurement Insurance',
+        marketSignal: 'Red Hat OpenShift AI 官方直接把平台定義為可在 hybrid cloud environments across on-prem, public cloud, and edge 管理 AI lifecycle；這代表「工作負載能不能移動」已經是正式產品語言，而不是架構師私下偏好。',
+        buyerQuestion: '如果合規、延遲、雲成本或 GPU 供應條件改變，我能不能把 AI 工作負載搬走，而不用重做整套平台？',
+        foxconnPlay: 'Foxconn 應把 Portable AI Workload Exit Layer 講成採購保險：把模型 artifact、runtime、policy、observability 與部署包標準化，讓客戶保留 on-prem / edge / cloud 的切換能力，也讓軟體部門能切進 portability governance 與 workload certification 預算。',
+        sourceLabel: 'Red Hat OpenShift AI',
+        source: 'https://www.redhat.com/en/products/ai/openshift-ai'
       }
     ],
     boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、可延後擴建，以及有人能持續把 GPU economics 與 Day-2 結果一起管好；這些都屬於軟體部門。'
