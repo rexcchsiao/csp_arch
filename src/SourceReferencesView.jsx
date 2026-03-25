@@ -63,6 +63,17 @@ const SourceReferencesView = () => {
 
       {/* Sources List */}
       <div className="p-8">
+        {activeCategory === 'nvidia' && (
+          <div className="mb-6 rounded-2xl border border-green-200 bg-green-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-green-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁最值得老闆注意的，不只是 NVIDIA 很強，而是 <span className="font-semibold text-slate-900">NVIDIA 自己都在把 AI 基礎建設從「GPU + 管理軟體」往「AI factory operations」重寫</span>。
+              Mission Control 已經把 cluster lifecycle、autonomous recovery、building-management integration 放進官方語言，而 2026/03 驗證到的 Mission Control 2.3 又進一步把 <span className="font-semibold text-slate-900">air-gapped deployment 與 leak-detection validation</span> 拉進前台。
+              這是一個很強的市場訊號：客戶現在不只在買算力，也開始正式為 <span className="font-semibold text-slate-900">主權運營、斷網環境更新治理、以及 power / cooling / 漏液事件的 Day-2 風險收斂</span> 編列預算。
+              這剛好能幫 Foxconn 把軟體部門講成更高價值的位置：不是 another dashboard，而是把 brownfield、air-gap、facility event 與 remote accountability 做成可續約的營運責任。
+            </p>
+          </div>
+        )}
         {activeCategory === 'odmPeers' && (
           <div className="mb-6 rounded-2xl border border-orange-200 bg-orange-50 p-5">
             <p className="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Why this matters</p>

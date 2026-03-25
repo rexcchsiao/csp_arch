@@ -115,7 +115,7 @@ const App = () => {
                 <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
                   <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">NVIDIA Mission Control</p>
-                    <p className="leading-relaxed">官方主打 cluster life cycle、autonomous recovery、power / cooling control、building management integration。這證明客戶已經願意為 AI factory operations 付錢，不是只買 GPU。</p>
+                    <p className="leading-relaxed">官方主打 cluster life cycle、autonomous recovery、power / cooling control、building management integration；Mission Control 2.3 甚至進一步把 air-gapped deployment 與 leak-detection validation 拉進產品語言。這證明客戶已經願意為 AI factory operations、主權運營與機房事件治理付錢，不是只買 GPU。</p>
                   </div>
                   <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">HPE Private Cloud AI</p>
