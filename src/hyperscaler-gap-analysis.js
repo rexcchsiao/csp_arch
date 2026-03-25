@@ -11,7 +11,7 @@ export const hyperscalerGapAnalysis = {
     headline: '關鍵洞察：Hyperscaler 的「自建 vs. 採購」困境',
     reality: 'Hyperscaler 確實有頂尖軟體團隊，但他們的工程資源必須優先投入「直接創造營收」的功能（AI 服務、用戶體驗、新產品），而非「基礎設施管理」這種必要但非差異化的工作。',
     foxconnValue: 'Foxconn 的本質是「基礎設施即服務」—— 讓 Hyperscaler 的工程師專注在業務邏輯，而非重覆造輪子。',
-    economicLogic: 'Hyperscaler 工程師平均成本 US$ 200K-400K/年。將 20-50 個工程師投入基礎設施管理，5 年成本 US$ 20M-100M，且延誤上市 12-18 個月。',
+    economicLogic: 'Hyperscaler 工程師平均成本 US$ 200K-400K/年。將 20-50 個工程師投入基礎設施管理，5 年成本 US$ 20M-100M，且延誤上市 12-18 個月；更麻煩的是，這些團隊還得自己承接遠端證據蒐集、RCA 交付、dispatch readiness 與 night-shift serviceability，屬於高成本但低差異化的 Day-2 工作。',
   },
 
   // Hyperscaler Internal Software Capabilities - What They Actually Have
@@ -143,6 +143,7 @@ export const hyperscalerGapAnalysis = {
       '需要在地化支援與快速現場回應',
       '有客製化需求（BMC 整合、監控工具鏈、審計報告）',
       '希望聚焦在業務差異化功能，而非基礎設施管理',
+      '需要在問題發生時先遠端收斂根因、交付 RCA / evidence pack、確認 dispatch readiness，而不是每次都先派人進機房',
     ],
     useInternalWhen: [
       '核心競爭優勢所在的領域（如 Google 的搜尋演算法）',
@@ -184,6 +185,7 @@ export const hyperscalerGapAnalysis = {
       '將 25 人軟體團隊重新配置到客戶體驗優化',
       '避免技術選型風險（Foxconn 已驗證技術棧）',
       '在地支援團隊，2 小時內可現場回應',
+      '把夜間事故的遠端證據收集、dispatch 判斷與 RCA 交付交給 Foxconn，避免每次故障都先派人進機房縮小範圍',
     ],
     outcome: {
       timeline: '2026 Q1 上線，比自建提前 18 個月',
