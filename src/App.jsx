@@ -20,6 +20,7 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
+  const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 4)
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -270,6 +271,29 @@ const App = () => {
                 </div>
                 <div className="rounded-xl border border-cyan-100 bg-white p-4">
                   <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">{responsibilitySplit.boardMessage}</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-teal-200 bg-teal-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-teal-700 mb-2">Budget-owner translation</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">同一套 AI 伺服器，軟體部門其實是在打開 4 條不同預算線，不只是附加功能費</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  最能證明軟體部門價值的，不是功能做得多，而是能把同一批硬體翻成 Infrastructure、SRE / Platform、Delivery PMO、Service Delivery 都願意付錢的結果。這代表軟體部門不是硬體附屬支援，而是把單次交機延伸成跨部門、跨年度收入的預算轉譯層。
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  {budgetOwnerRows.map((row) => (
+                    <div key={row.service} className="rounded-2xl border border-teal-100 bg-white/90 p-4">
+                      <p className="text-sm font-black text-slate-900 mb-2">{row.service}</p>
+                      <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                        <p><span className="font-bold text-slate-500">預算 owner：</span>{row.budgetOwner}</p>
+                        <p><span className="font-bold text-amber-700">為什麼現在會買：</span>{row.whyNow}</p>
+                        <p><span className="font-bold text-emerald-700">為什麼明年還會續：</span>{row.renewalDriver}</p>
+                        <p><span className="font-bold text-teal-800">董事會看到的結果：</span>{row.boardOutcome}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-teal-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-teal-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門最值錢的地方，不是幫硬體補功能，而是把同一張 server PO 延伸成多個預算 owner 都願意續買的 Day-2 營運責任。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
