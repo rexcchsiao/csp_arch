@@ -314,6 +314,7 @@ const ExecutiveSummaryView = () => {
   const hyperscalerDecisionTriggers = hyperscalerGapAnalysis.decisionMatrix?.useFoxconnWhen || [];
   const hyperscalerBuildLogic = hyperscalerGapAnalysis.coreInsight;
   const hyperscalerCaseStudy = hyperscalerGapAnalysis.caseStudy;
+  const evidencePackGap = hyperscalerGapAnalysis.gapAnalysis?.find((item) => item.gap?.includes('遠端證據鏈'));
   const dispatchReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'Remote Diagnostics & Dispatch Readiness 服務');
   const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
   const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
@@ -510,6 +511,30 @@ const ExecutiveSummaryView = () => {
         <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
           <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">Foxconn 軟體部門不是只在賣 observability，而是在把「先遠端縮小故障範圍、判斷是否要派人、同步正確備品與維修窗口」做成可定價的 serviceability 產品。這種能力越早被產品化，就越能把大型 CSP 的 OPEX 痛點變成高毛利年約。</span></p>
         </div>
+
+        {evidencePackGap && (
+          <div className="mt-4 rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Another buyer-facing gap Foxconn can own</p>
+            <p className="text-sm font-black text-slate-900 mb-3">{evidencePackGap.gap}</p>
+            <div className="grid md:grid-cols-3 gap-4 text-xs text-slate-700 leading-relaxed">
+              <div className="rounded-xl border border-white/80 bg-white p-4">
+                <p className="font-bold text-slate-500 mb-2">客戶現在最痛的不是</p>
+                <p>{evidencePackGap.customerPain}</p>
+              </div>
+              <div className="rounded-xl border border-white/80 bg-white p-4">
+                <p className="font-bold text-cyan-700 mb-2">Foxconn 可直接賣的責任</p>
+                <p>{evidencePackGap.foxconnSolution}</p>
+              </div>
+              <div className="rounded-xl border border-white/80 bg-white p-4">
+                <p className="font-bold text-emerald-700 mb-2">為什麼管理層會買單</p>
+                <p>{evidencePackGap.businessImpact}</p>
+              </div>
+            </div>
+            <div className="mt-4 rounded-xl border border-white/80 bg-white p-4">
+              <p className="text-sm font-semibold text-cyan-900">一句話版本：<span className="text-slate-700">很多客戶不是缺監控，而是缺一個能在半夜先遠端把 BMC / GPU / workload 證據收齊、交出可行動 RCA、再決定要不要派人的 owner。把這件事產品化，Foxconn 賣的就不只是 dashboard，而是可被採購的 night-shift accountability。</span></p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Why brownfield retrofit readiness is a software wedge, not a facilities side note */}
