@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Target, Trophy, Shield, Zap, TrendingUp, Users, Lightbulb, CheckCircle, AlertTriangle, ExternalLink, BarChart3, Layers, Gauge, HelpCircle } from 'lucide-react';
 import { competitiveLandscape } from './competitive-landscape.js';
+import { softwareDifferentiation } from './software-differentiation.js';
 
 const CompetitiveLandscapeView = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -129,6 +130,79 @@ const CompetitiveLandscapeView = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            <div className="p-6 bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded-2xl border border-fuchsia-200">
+              <div className="flex items-start gap-3 mb-4">
+                <Layers className="w-6 h-6 text-fuchsia-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-fuchsia-900">{softwareDifferentiation.softwareDepartmentMandateSummary.headline}</h3>
+                  <p className="text-sm text-fuchsia-800 mt-1 font-medium">{softwareDifferentiation.softwareDepartmentMandateSummary.coreInsight}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.softwareDepartmentMandateSummary.cards.map((card, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-fuchsia-100">
+                    <h4 className="text-sm font-black text-fuchsia-800 mb-3">{card.title}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">差別在哪：</span>{card.detail}</p>
+                      <p><span className="font-bold text-fuchsia-600">為什麼董事會要在意：</span>{card.boardWhyItMatters}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-xl border border-fuchsia-100">
+                <p className="text-sm font-semibold text-fuchsia-900">{softwareDifferentiation.softwareDepartmentMandateSummary.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <TrendingUp className="w-6 h-6 text-emerald-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-emerald-900">軟體部門最值得被投資的原因：它能把一次性交機翻成跨年度收入</h3>
+                  <p className="text-sm text-emerald-800 mt-1 font-medium">如果老闆只記得一件事，應該是這件：軟體部門不是多做幾個功能，而是把硬體 attach 到更多預算 owner，並把交付、升級、遠端運維與治理風險變成可續約的年約收入。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                <div className="p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">可對接預算 owner</p>
+                  <p className="text-3xl font-black text-slate-900">6</p>
+                  <p className="text-xs text-slate-600 mt-2">Infra、SRE、Ops、Compliance、FinOps、Facilities 都能買單。</p>
+                </div>
+                <div className="p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">續約主軸</p>
+                  <p className="text-3xl font-black text-blue-700">6</p>
+                  <p className="text-xs text-slate-600 mt-2">Brownfield、Lifecycle、Remote Ops、Air-Gap、Tenant Governance、Facility Assurance。</p>
+                </div>
+                <div className="p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">收入型態</p>
+                  <p className="text-3xl font-black text-green-700">3</p>
+                  <p className="text-xs text-slate-600 mt-2">整合專案、年度訂閱、SLA / 升級事件顧問費可疊加。</p>
+                </div>
+                <div className="p-4 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl border border-emerald-200 text-white">
+                  <p className="text-xs font-bold uppercase tracking-wide mb-2 text-emerald-100">一句話總結</p>
+                  <p className="text-sm font-black leading-snug">軟體部門不是成本中心，是把 server BOM 變成 ARR 的 attach engine。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 3).map((row, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-emerald-100">
+                    <h4 className="text-sm font-black text-emerald-800 mb-3">{row.service}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">誰付錢：</span>{row.budgetOwner}</p>
+                      <p><span className="font-bold text-slate-500">為什麼現在會買：</span>{row.whyNow}</p>
+                      <p><span className="font-bold text-blue-600">為什麼明年還會續：</span>{row.renewalDriver}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                <p className="text-sm font-semibold text-emerald-900">管理層該記住的一句話：<span className="text-slate-700">真正值得投資的，不是 another dashboard，而是讓軟體部門把 deployment、lifecycle、remote ops 與治理風險收斂成可被報價、可被續約、也可被董事會追蹤的收入責任。</span></p>
               </div>
             </div>
 
