@@ -14,10 +14,12 @@ import OdmComparisonChart from './OdmComparisonChart'
 import Power800vView from './Power800vView'
 import BuildVsBuyView from './BuildVsBuyView'
 import { buildVsBuyAnalysis } from './build-vs-buy'
+import { softwareDifferentiation } from './software-differentiation'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
+  const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -270,6 +272,23 @@ const App = () => {
                   <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">{responsibilitySplit.boardMessage}</span></p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Why a standalone software department matters</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">軟體部門不是硬體附屬功能，因為它對接的是完全不同的買方、收入節奏與 KPI</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                  {mandateCards.map((card) => (
+                    <div key={card.title} className="rounded-xl border border-indigo-100 bg-white/90 p-4">
+                      <p className="font-black text-slate-900 mb-2">{card.title}</p>
+                      <p className="leading-relaxed mb-3">{card.detail}</p>
+                      <p className="text-xs leading-relaxed text-indigo-900">{card.boardWhyItMatters}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-indigo-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-indigo-900">董事會該記住的一句話：<span className="text-slate-700">{mandateBoardMessage}</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-sm font-semibold text-slate-900 mb-2">建議閱讀順序</p>
                 <ul className="space-y-2 text-sm text-slate-700">
