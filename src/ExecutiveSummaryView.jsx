@@ -310,6 +310,32 @@ const ExecutiveSummaryView = () => {
   const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
   const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
   const retrofitReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'AI Retrofit Readiness Assessment');
+  const budgetOwnerSignals = [
+    {
+      label: 'Deployment / PMO 預算',
+      takeaway: '交機後能不能更快驗收、上線、交接',
+      color: 'text-emerald-700',
+      bg: 'bg-emerald-50 border-emerald-100',
+    },
+    {
+      label: 'SRE / Operations 預算',
+      takeaway: '夜間事故、dispatch、可用性與維護窗口誰接住',
+      color: 'text-blue-700',
+      bg: 'bg-blue-50 border-blue-100',
+    },
+    {
+      label: 'Compliance / Sovereign 預算',
+      takeaway: 'air-gap 更新、稽核證據、治理責任誰負責',
+      color: 'text-violet-700',
+      bg: 'bg-violet-50 border-violet-100',
+    },
+    {
+      label: 'Facility / Capacity 預算',
+      takeaway: 'power / cooling 吃緊時，如何少擴建、少 outage',
+      color: 'text-amber-700',
+      bg: 'bg-amber-50 border-amber-100',
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -1096,6 +1122,21 @@ const ExecutiveSummaryView = () => {
           當軟體能力能對應到明確的預算 owner、採購觸發事件與續約理由，它就不再像附贈支援，而是可獨立成立的營運能力。
         </p>
 
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-3 mb-6">
+          {budgetOwnerSignals.map((item) => (
+            <div key={item.label} className={`rounded-2xl border p-4 ${item.bg}`}>
+              <p className={`text-xs font-black uppercase tracking-widest mb-2 ${item.color}`}>{item.label}</p>
+              <p className="text-sm font-semibold leading-relaxed text-slate-800">{item.takeaway}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <p className="text-sm font-semibold text-slate-900">
+            這段其實是在幫管理層換腦袋：<span className="text-slate-700">軟體部門不是只能吃 IT 預算，而是能把同一台 AI 伺服器延伸到 Deployment、Operations、Compliance、Facility 四種 owner 都願意核准的支出。</span>
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
           {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 6).map((row) => (
             <div key={row.service} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
@@ -1128,6 +1169,32 @@ const ExecutiveSummaryView = () => {
           <p className="text-sm font-semibold text-emerald-900">
             這段論述對管理層最關鍵的意義是：軟體部門不是要跟硬體搶預算，而是把原本一次性交機的收入，延伸成 Infrastructure、SRE、Operations、Compliance 都願意持續編列的年度支出。
           </p>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-violet-100 bg-violet-50 p-5">
+          <div className="mb-4">
+            <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-2">Why this must be a software department</p>
+            <h4 className="text-lg font-black text-violet-950">為什麼這一定要是「軟體部門」而不是硬體附屬功能</h4>
+            <p className="text-sm text-slate-700 mt-2 leading-relaxed">
+              真正該讓管理層看見的，不是軟體功能變多，而是<span className="font-semibold text-violet-900">買方、收入節奏、KPI 與責任鏈都已經跟硬體不同</span>。
+              如果還把它當成附贈支援，Foxconn 最容易失去的就不是幾個 feature，而是 attach rate、續約邏輯，以及進入 SRE / Platform / Compliance / FinOps 預算對話的資格。
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {softwareDepartmentMandateCards.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-violet-200 bg-white p-4">
+                <p className="text-xs font-black uppercase tracking-widest text-violet-500 mb-2">Mandate shift</p>
+                <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
+                <div className="space-y-2 text-xs leading-relaxed text-slate-700">
+                  <p><span className="font-bold text-slate-500">變化：</span>{item.detail}</p>
+                  <p><span className="font-bold text-violet-700">為何重要：</span>{item.boardWhyItMatters}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 rounded-xl border border-violet-100 bg-white p-4">
+            <p className="text-sm font-semibold text-violet-900">一句話版本：<span className="text-slate-700">硬體部門把設備交出去；軟體部門把交機後的部署、升級、治理與續約責任，收斂成可被核准、可被定價、也可被續約的產品線。</span></p>
+          </div>
         </div>
       </div>
 
