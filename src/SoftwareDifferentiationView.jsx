@@ -649,7 +649,7 @@ const SoftwareDifferentiationView = () => {
             </div>
 
             <div className="p-6 bg-white rounded-2xl border border-sky-200 shadow-sm">
-              <h3 className="text-xl font-black text-sky-900 mb-2">先搶哪 4 種服務缺口，最能證明軟體部門不是成本中心？</h3>
+              <h3 className="text-xl font-black text-sky-900 mb-2">先搶哪 6 種服務缺口，最能證明軟體部門不是成本中心？</h3>
               <p className="text-sm text-slate-700 mb-4">這一段把最值得先賣的切口濃縮成董事會語言：不是 another platform，而是先去接住別人最常失手、也最容易形成續約的營運責任。</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {softwareDifferentiation.serviceOfferings.uniqueServiceWedge.wedges.map((item, idx) => (

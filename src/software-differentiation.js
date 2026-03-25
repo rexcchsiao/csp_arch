@@ -1158,6 +1158,14 @@ structuralAdvantages: {
 				source: 'https://www.dell.com/en-us/ai-factory'
 			},
 			{
+				title: '沒有 model provenance / audit evidence owner，受監管 AI 案子很容易在法遵關卡卡住',
+				whyItKillsDeals: '金融、政府、醫療與主權 AI 專案，真正卡住的常不是模型能不能跑，而是誰能證明模型來源、離線內容同步、更新紀錄、操作日誌與技術文件在稽核時講得清楚。若 Foxconn 只能賣硬體或部署本身，客戶很容易把這塊視為尚未完成的治理風險。',
+				marketProof: 'EU AI Act 已把 technical documentation、logging、record-keeping 與可追溯治理拉進正式法規語言；Red Hat 也特別為 disconnected environments 提供獨立安裝與維運文件，側面證明離線 AI 的難點在持續治理與證據鏈，而不只是第一次安裝。',
+				foxconnImplication: 'Foxconn 可以把軟體部門定位成 Model Provenance & Audit Evidence owner：把 artifact / image / mirror content 版本、更新證據、權限與操作記錄、稽核匯出包做成正式服務，讓客戶買到的是「可被法遵與內控接受的 AI 營運方式」。',
+				sourceLabel: 'EU AI Act + Red Hat OpenShift AI (Disconnected Environments)',
+				source: 'https://artificialintelligenceact.eu/'
+			},
+			{
 				title: '沒有 AI recoverability / evidence owner，管理層會擔心 AI 出事後沒人能把服務與信任救回來',
 				whyItKillsDeals: '當模型 artifact、向量資料、registry、golden image 或推論服務發生毀損、勒索或錯誤更新時，若提案無法清楚回答「誰負責恢復、誰保留證據、誰能在 SLA 內把服務拉回來」，很多客戶就不敢把 AI 視為正式營運系統放大採購。',
 				marketProof: 'Dell 已把 Cyber Resilience for AI 放進 AI solutions 官方敘事；NetApp 也把 built-in governance、simple secure inferencing 與 cyber-resilient / recoverable data 放進 AI infrastructure and data management 的核心定位。這代表 recoverability 已經是正式採購語言，而不是事後加上的 IT 附屬需求。',
@@ -1306,8 +1314,8 @@ structuralAdvantages: {
 			]
 		}, 
 		uniqueServiceWedge: {
-			headline: '最值得先賣的，不是 another platform，而是 4 個別人最容易失手的服務缺口',
-			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 4 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係的 owner。',
+			headline: '最值得先賣的，不是 another platform，而是 6 個別人最容易失手的服務缺口',
+			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 6 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係的 owner。',
 			wedges: [
 				{
 					name: 'Factory-to-Operations Handoff Assurance',
@@ -1348,8 +1356,8 @@ structuralAdvantages: {
 			]
 		},
 		renewalMoat: {
-			headline: '真正能讓軟體部門被持續付費的，不是 support fee，而是持續接住 4 種營運風險',
-			coreInsight: '外部領先廠商已經在賣 deployment speed、lifecycle operations、observability、building management integration 與 hybrid governance。這代表客戶願意長期付費的，通常不是功能本身，而是誰願意持續對上線、升級、設施事件與合規治理負責。Foxconn 軟體部門若把這 4 類風險做成服務邊界，就更容易把 attach rate 變成年約。',
+			headline: '真正能讓軟體部門被持續付費的，不是 support fee，而是持續接住 6 種營運風險',
+			coreInsight: '外部領先廠商已經在賣 deployment speed、lifecycle operations、observability、building management integration 與 hybrid governance。這代表客戶願意長期付費的，通常不是功能本身，而是誰願意持續對上線、升級、設施事件、合規治理、recoverability 與 serviceability 負責。Foxconn 軟體部門若把這 6 類風險做成服務邊界，就更容易把 attach rate 變成年約。',
 			risks: [
 				{
 					risk: 'Deployment Risk',
@@ -1406,7 +1414,7 @@ structuralAdvantages: {
 					source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
 				}
 			],
-			boardMessage: '董事會該記住的一句話：客戶每年續約的理由，不是因為軟體畫面還在，而是因為這 4 類風險每年都還在，而 Foxconn 軟體部門願意持續把它們接住。'
+			boardMessage: '董事會該記住的一句話：客戶每年續約的理由，不是因為軟體畫面還在，而是因為這 6 類風險每年都還在，而 Foxconn 軟體部門願意持續把它們接住。'
 		},
 		budgetMap: {
 			headline: '這些服務不是誰都能賣：軟體部門如何對應不同預算 owner',
