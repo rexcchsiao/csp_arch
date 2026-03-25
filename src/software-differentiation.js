@@ -475,6 +475,14 @@ structuralAdvantages: {
         source: 'https://www.supermicro.com/en/solutions/management-software/supercloud-composer'
       },
       {
+        title: 'Liquid-cooling leak detection 有人驗證，但少有人把它做成可續約的事故治理服務',
+        evidence: 'NVIDIA Mission Control 2.3 已把 air-gapped deployment 與 leak-detection validation 放進官方能力描述，代表高密度 AI 機房已開始正式把「漏液事件怎麼被驗證、隔離、保住工作負載」納入採購語言。',
+        whyStillOpen: '多數供應商即使能接 leak sensor / facility alarm，也常停在告警層，沒有把 leak event 後的 workload drain、節點隔離、dispatch readiness、證據保全與恢復門檻做成單一可問責流程。',
+        foxconnPlay: '把 Leak Incident Readiness / Cooling Event Governance 做成 attach service：由軟體部門接住 leak detection validation、受影響 rack/cluster 的 workload choreography、遠端證據包與恢復前檢查，讓 Foxconn 賣的是「少一次擴大事故、少一次不必要停機」，不是 another facility dashboard。',
+        sourceLabel: 'NVIDIA Mission Control',
+        source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
         title: 'AI datacenter retrofit readiness 正在變成新預算項，但少有人把它接成軟體服務',
         evidence: 'Vertiv AI Hub 已把 retrofit-ready / new-build reference designs、70kW-142kW rack density、energy optimization 與 whitespace readiness 放到官方 AI 基礎建設敘事前台。',
         whyStillOpen: '這證明客戶開始正式為「現有機房能不能先撐住下一波 AI 擴容」編列預算；但多數供應商仍停在物理設施設計或監控，沒有把 retrofit readiness、power cap、rack density、workload placement 與 lifecycle governance 接成持續性的軟體責任。',
