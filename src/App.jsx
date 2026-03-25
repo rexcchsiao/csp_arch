@@ -127,6 +127,28 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why software matters more as infra gets standardized</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">Redfish / OpenBMC / OpenTelemetry 越成熟，越代表客戶會把預算往上層營運能力移動</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">底層訊號正在商品化</p>
+                    <p className="leading-relaxed">DMTF Redfish、OpenBMC 與 OpenTelemetry 讓設備管理、遙測與 log / trace 收集愈來愈標準化。這代表「看得到資料」本身愈來愈難溢價。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">真正值錢的是把訊號變成責任</p>
+                    <p className="leading-relaxed">客戶最後買單的不是 API 或 dashboard，而是誰能把訊號接成 maintenance window、rollback、dispatch readiness、RCA / evidence pack 與 SLA 報表。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">這正是軟體部門最該佔的位置</p>
+                    <p className="leading-relaxed">當底層能力更開放，Foxconn 更應把軟體部門定位成 operating layer owner：把標準化硬體能力翻成可治理、可問責、可續約的 Day-2 服務結果。</p>
+                  </div>
+                </div>
+                <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">開放標準沒有削弱軟體部門，反而把價值從「設備可管理」推向「營運可問責」；沒有軟體部門，Foxconn 只能提供訊號，有軟體部門，Foxconn 才能提供結果。</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Proposal filter</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">沒有軟體部門，最容易在哪 4 題直接被刷掉？</h3>
