@@ -2545,7 +2545,7 @@ export const messagingHierarchy = {
 };
 
 // Add to export
-export default { executiveBrief, boardFAQ, first90DayDashboard, modelPerformanceMonitoring, aiSupplyChainSecurity, aiInfrastructureSecurity, featureParityMatrix, competitiveResponsePlaybook, customerTestimonialTemplate, channelStrategy, boardResolutionTemplate, postBoardActionItems, boardPresentationOutline, pilotProgramGuarantee, messagingHierarchy, decisionTriggers };
+// Note: export default moved to end of file to avoid temporal dead zone issues
 
 // Decision Triggers: When to Scale, Pivot, or Stop (Added 2026-03-23 by CoCo)
 // Purpose: Provide clear, quantifiable triggers for leadership to make go/no-go decisions at each stage
@@ -2960,4 +2960,24 @@ export const aiWorkloadPortability = {
     quote: 'Before Foxconn, GPU failures were a weekly crisis. Now it\'s a non-event. The system detects, migrates, and recovers automatically. Our data scientists don\'t even notice.'
   },
   boardMessage: 'AI workload portability is the difference between "AI infrastructure" and "AI utility." Customers pay premium for reliability (99.9% SLA) and flexibility (vendor neutrality). Foxconn L9-L12 integration enables hardware-assisted failover, live migration, and multi-vendor support that pure software vendors (HPE, Dell) and hyperscalers cannot replicate. This is NT$ 100-150M Year 3 revenue at 70-75% gross margin, and it transforms Foxconn from hardware vendor to reliability partner.'
+};
+
+// Export all constants at the end of the file
+export default {
+  executiveBrief,
+  boardFAQ,
+  first90DayDashboard,
+  modelPerformanceMonitoring,
+  aiSupplyChainSecurity,
+  aiInfrastructureSecurity,
+  featureParityMatrix,
+  competitiveResponsePlaybook,
+  customerTestimonialTemplate,
+  channelStrategy,
+  boardResolutionTemplate,
+  postBoardActionItems,
+  boardPresentationOutline,
+  pilotProgramGuarantee,
+  messagingHierarchy,
+  decisionTriggers
 };
