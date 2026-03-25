@@ -74,6 +74,19 @@ const SourceReferencesView = () => {
             </p>
           </div>
         )}
+        {activeCategory === 'dell' && (
+          <div className="mb-6 rounded-2xl border border-blue-200 bg-blue-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這一頁最重要的訊號，不是 Dell 或 HPE 的品牌比較大，而是他們都已經把
+              <span className="font-semibold text-slate-900"> AI 基礎建設的主價值，從「伺服器規格」改寫成「交付速度、持續可用性、lifecycle support 與 cyber resilience」</span>。
+              HPE 官方直接賣的是 <span className="font-semibold text-slate-900">deploy AI in days, not months、built-in observability、predict problems、continuous service availability</span>；
+              Dell 則把 <span className="font-semibold text-slate-900">end-to-end AI factory delivery 與 cyber resilience for AI</span> 放進同一條採購敘事。
+              這對 Foxconn 很有利，因為它證明老闆真正該投資的不是「多做一套管理畫面」，而是讓軟體部門去承接
+              <span className="font-semibold text-slate-900">Factory-to-Operations handoff、Day-2 availability、recoverability 與可被續約的營運責任</span>。
+            </p>
+          </div>
+        )}
         {activeCategory === 'odmPeers' && (
           <div className="mb-6 rounded-2xl border border-orange-200 bg-orange-50 p-5">
             <p className="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Why this matters</p>
