@@ -107,6 +107,24 @@ const App = () => {
                   </p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">Market validation</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">這不是 Foxconn 自說自話：市場領先者已經在賣「軟體化營運結果」</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">NVIDIA Mission Control</p>
+                    <p className="leading-relaxed">官方主打 cluster life cycle、autonomous recovery、power / cooling control、building management integration。這證明客戶已經願意為 AI factory operations 付錢，不是只買 GPU。</p>
+                  </div>
+                  <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">HPE Private Cloud AI</p>
+                    <p className="leading-relaxed">官方直接賣 deploy AI in days, not months、built-in observability、predict problems、continuous service availability。這代表管理層核准的是速度與可用性，而不是另一台伺服器。</p>
+                  </div>
+                  <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Dell / Nutanix / Red Hat</p>
+                    <p className="leading-relaxed">從 end-to-end lifecycle support 到 AI operating model、cost / access governance，外部大廠都在把治理與 Day-2 服務變成正式產品。Foxconn 若沒有軟體部門，等於自動退出這條預算線。</p>
+                  </div>
+                </div>
+              </div>
               <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Proposal filter</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">沒有軟體部門，最容易在哪 4 題直接被刷掉？</h3>
