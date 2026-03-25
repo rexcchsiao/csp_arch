@@ -1360,6 +1360,12 @@ structuralAdvantages: {
 					gap: '共享 GPU 叢集最容易失控的，不是 scheduler 有沒有跑，而是 quota、priority、showback、approval workflow 與 SLA 例外處理沒被產品化。',
 					whyItWins: '這直接對應平台團隊、FinOps、部門主管之間最常吵的治理問題，也最容易從附加功能變成年約服務。',
 					revenueLogic: '治理專案費 + 年度 quota / policy / showback 維運費'
+				},
+				{
+					name: 'Model Provenance & Audit Evidence Service',
+					gap: '很多 AI 基礎設施方案能把模型或 RAG 環境裝起來，卻沒有把模型來源、離線鏡像、更新紀錄、操作日誌與稽核匯出包做成單一可交付責任。',
+					whyItWins: '這讓 Foxconn 不只吃 Infrastructure / SRE 預算，還能切進 Compliance、CIO Office 與 AI governance program；而且一旦進入受監管產業，續約理由通常比單純監控更硬。',
+					revenueLogic: '治理健檢專案費 + 年度 evidence refresh / audit support 續約費'
 				}
 			]
 		},
