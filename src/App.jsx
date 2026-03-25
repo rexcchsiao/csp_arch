@@ -233,7 +233,7 @@ const App = () => {
               <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">What procurement is really scoring now</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">從 NVIDIA、HPE、Red Hat 的官方語言來看，採購正在評估的是營運結果，不是功能數量</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 速度</p>
                     <p className="leading-relaxed">HPE 直接用 deploy AI in days, not months、production deployment in hours 來賣。這代表採購會先看 time-to-value，而不是硬體到貨後還要自己整合多久。</p>
@@ -246,9 +246,13 @@ const App = () => {
                     <p className="font-black text-slate-900 mb-1">3. 治理與成本責任</p>
                     <p className="leading-relaxed">Red Hat OpenShift AI 強調 monitoring、cost control、self-service access。這代表共享 GPU 之後的 quota、showback、policy 與治理能力，已經是正式預算語言。</p>
                   </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">4. 可被外包的營運專業</p>
+                    <p className="leading-relaxed">NVIDIA 甚至把 Mission Control 講成「world-class operations team delivered as software」。這代表客戶願意買的，不只是 control plane，而是把 deployment discipline、incident handling 與 remote accountability 外包給可被問責的軟體 owner。</p>
+                  </div>
                 </div>
                 <div className="rounded-xl border border-cyan-100 bg-white p-4">
-                  <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">當採購開始評分部署速度、持續可用性、設施事件協調與治理責任時，軟體部門就不再是附屬支援，而是最直接影響得標率、attach rate 與續約的價值層。</span></p>
+                  <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">當採購開始評分部署速度、持續可用性、設施事件協調、治理責任，甚至可被外包的營運專業時，軟體部門就不再是附屬支援，而是最直接影響得標率、attach rate 與續約的價值層。</span></p>
                 </div>
               </div>
 
