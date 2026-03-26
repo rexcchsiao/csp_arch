@@ -17,6 +17,7 @@ import { buildVsBuyAnalysis } from './build-vs-buy'
 import { softwareDifferentiation } from './software-differentiation'
 import { competitiveLandscape } from './competitive-landscape'
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis'
+import { competitiveSources } from './competitive-sources'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
@@ -24,6 +25,12 @@ const App = () => {
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
   const urgencySignals = competitiveLandscape.competitiveUrgency.slice(0, 3)
   const hyperscalerGaps = hyperscalerGapAnalysis.gapAnalysis.slice(0, 4)
+  const officialValidationSources = [
+    competitiveSources.nvidia[1],
+    competitiveSources.hpe[1],
+    competitiveSources.dell[0],
+    competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI')
+  ].filter(Boolean)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
       'Factory-to-Operations Handoff Assurance',
@@ -161,6 +168,25 @@ const App = () => {
                     <p className="font-black text-slate-900 mb-1">Dell / Nutanix / Red Hat</p>
                     <p className="leading-relaxed">從 end-to-end lifecycle support 到 AI operating model、cost / access governance，外部大廠都在把治理與 Day-2 服務變成正式產品。Foxconn 若沒有軟體部門，等於自動退出這條預算線。</p>
                   </div>
+                </div>
+                <div className="mt-4 rounded-xl border border-violet-100 bg-white p-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-700 mb-3">Official sources you can click in the meeting</p>
+                  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-3 text-sm text-slate-700">
+                    {officialValidationSources.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-xl border border-violet-100 bg-violet-50/60 p-4 hover:bg-violet-50 transition-colors"
+                      >
+                        <p className="font-black text-slate-900 mb-1">{item.name}</p>
+                        <p className="text-xs leading-relaxed mb-2">{item.keyFeature}</p>
+                        <p className="text-[11px] font-semibold text-violet-700">Verified {item.lastVerified}</p>
+                      </a>
+                    ))}
+                  </div>
+                  <p className="text-xs text-slate-500 mt-3">這一排的作用不是增加內容，而是讓老闆在總覽頁就能直接點回官方頁，降低「這只是內部主張」的質疑。</p>
                 </div>
               </div>
               <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
