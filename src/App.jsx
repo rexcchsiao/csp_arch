@@ -15,17 +15,20 @@ import Power800vView from './Power800vView'
 import BuildVsBuyView from './BuildVsBuyView'
 import { buildVsBuyAnalysis } from './build-vs-buy'
 import { softwareDifferentiation } from './software-differentiation'
+import { competitiveLandscape } from './competitive-landscape'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
+  const urgencySignals = competitiveLandscape.competitiveUrgency.slice(0, 3)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
       'Factory-to-Operations Handoff Assurance',
       'Remote Diagnostics & Dispatch Readiness',
       'Service Availability Assurance',
-      'AI Recovery & Evidence Assurance'
+      'AI Recovery & Evidence Assurance',
+      'Model Provenance & Audit Evidence Pack'
     ].includes(row.service)
   ))
 
@@ -233,6 +236,17 @@ const App = () => {
               <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">What procurement is really scoring now</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">從 NVIDIA、HPE、Red Hat 的官方語言來看，採購正在評估的是營運結果，不是功能數量</h3>
+                <div className="rounded-xl border border-cyan-100 bg-white/90 p-4 mb-4 text-sm text-slate-700">
+                  <p className="font-black text-slate-900 mb-2">更直白地說：市場已經開始把「營運專業」當成軟體買</p>
+                  <p className="leading-relaxed mb-3">
+                    NVIDIA Mission Control 直接把自己定位成 <span className="font-semibold text-slate-900">world-class operations team delivered as software</span>。
+                    這句話的殺傷力很大，因為它把軟體從「工具」往上拉成「可被採購、可被外包、可被問責的營運能力」。
+                    這也正是 Foxconn 最該複製但不能照抄的市場語言：不是說我們也有平台，而是說我們能把
+                    <span className="font-semibold text-slate-900"> factory-to-operations handoff、remote diagnostics、lifecycle governance、dispatch readiness 與 evidence pack </span>
+                    包成客戶願意長期付費的營運專業。
+                  </p>
+                  <p className="text-sm font-semibold text-cyan-900">董事會一句話版本：<span className="text-slate-700">如果市場已願意為「營運專業 delivered as software」付錢，Foxconn 軟體部門就不該再被描述成支援功能，而應該被定義成可被採購的 operations line。</span></p>
+                </div>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 速度</p>
@@ -400,7 +414,7 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-teal-200 bg-teal-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-teal-700 mb-2">Budget-owner translation</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">同一套 AI 伺服器，軟體部門其實是在打開 4 條不同預算線，不只是附加功能費</h3>
+                <h3 className="text-lg font-black text-slate-900 mb-3">同一套 AI 伺服器，軟體部門其實是在打開 5 條不同預算線，不只是附加功能費</h3>
                 <p className="text-sm text-slate-700 leading-relaxed mb-4">
                   最能證明軟體部門價值的，不是功能做得多，而是能把同一批硬體翻成 Infrastructure、SRE / Platform、Delivery PMO、Service Delivery 都願意付錢的結果。這代表軟體部門不是硬體附屬支援，而是把單次交機延伸成跨部門、跨年度收入的預算轉譯層。
                 </p>
@@ -435,6 +449,28 @@ const App = () => {
                 </div>
                 <div className="rounded-xl border border-indigo-100 bg-white p-4">
                   <p className="text-sm font-semibold text-indigo-900">董事會該記住的一句話：<span className="text-slate-700">{mandateBoardMessage}</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Why now</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">這不只是市場趨勢，OEM / ODM 同業已經開始往軟體靠，窗口期其實不長了</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  如果這份提案只建立在 NVIDIA / HPE / Dell 這些大廠訊號，管理層很容易覺得那是品牌廠的玩法，離 Foxconn 還有距離。
+                  但真正更危險的訊號是：<span className="font-semibold text-slate-900">同一條 OEM / ODM 戰線上的玩家，也已經開始補軟體敘事</span>。
+                  一旦市場先被別人定義成「AI 伺服器應該附帶 lifecycle、remote ops、brownfield integration 與 governance 服務」，Foxconn 之後再補，很容易從定義者變成跟隨者。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                  {urgencySignals.map((item) => (
+                    <div key={item.competitor} className="rounded-xl border border-orange-100 bg-white/90 p-4 text-sm text-slate-700">
+                      <p className="text-xs font-black uppercase tracking-widest text-orange-600 mb-2">Competitive urgency</p>
+                      <p className="font-black text-slate-900 mb-2">{item.competitor}</p>
+                      <p className="leading-relaxed mb-3"><span className="font-semibold text-slate-900">市場動作：</span>{item.action}</p>
+                      <p className="leading-relaxed"><span className="font-semibold text-orange-700">Foxconn 該怎麼看：</span>{item.foxconnResponse}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-orange-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-orange-900">董事會該記住的一句話：<span className="text-slate-700">現在要批准的，不只是「做不做軟體」，而是要不要搶先定義 OEM / ODM 的軟體價值敘事；如果同業先把 remote accountability、lifecycle governance 與 brownfield service 講成標準配備，Foxconn 再進場就只剩追價值、不是定價值。</span></p>
                 </div>
               </div>
 
