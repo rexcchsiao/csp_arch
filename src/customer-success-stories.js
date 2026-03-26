@@ -1,5 +1,66 @@
 // Customer Success Scenarios - Concrete examples that leadership can relate to
 // These scenarios illustrate the tangible value of software investment
+
+// Day-in-the-Life Comparison: 3 AM GPU Failure (Added 2026-03-27)
+// This visceral scenario shows board members exactly what they're buying
+export const dayInTheLifeComparison = {
+  headline: '凌晨 3 點的 GPU 故障：有 Foxconn 軟體 vs. 沒有軟體的差別',
+  subtitle: '同樣是硬體故障，軟體決定了這是「小插曲」還是「災難」',
+  scenario: {
+    time: '週五 凌晨 03:17',
+    location: '台灣某資料中心，100 台 H200 集群',
+    trigger: 'GPU #47 溫度異常飆升至 92°C，ECC 錯誤計數暴增'
+  },
+  withoutFoxconn: {
+    title: '沒有 Foxconn Remote Ops：8 小時的災難',
+    timeline: [
+      { time: '03:17', event: 'GPU 過熱，系統崩潰', actor: '硬體', impact: '10% 工作負載中斷' },
+      { time: '03:17', event: '基礎監控發出 alert', actor: '系統', impact: '但無人值守，alert 被忽略' },
+      { time: '06:00', event: '早班工程師發現異常', actor: '運維團隊', impact: '已延誤 2.7 小時' },
+      { time: '06:15', event: '遠端登入檢查，無法確定原因', actor: '工程師 A', impact: '缺乏深度診斷工具' },
+      { time: '06:45', event: '升級為嚴重事件，通知主管', actor: '工程師 A', impact: '影響範圍擴大到 15% 工作負載' },
+      { time: '07:30', event: '決定派工程師到現場', actor: '運維主管', impact: '工程師從家中出發，需 1.5 小時車程' },
+      { time: '09:00', event: '工程師抵達現場', actor: '工程師 B', impact: '已停機 5.7 小時' },
+      { time: '09:30', event: '更換 GPU，重新啟動集群', actor: '工程師 B', impact: '總停機時間：6.2 小時' },
+      { time: '10:00', event: '恢復正常運作', actor: '系統', impact: '損失：NT$ 3-5M 營收 + 客戶信任' }
+    ],
+    outcome: {
+      downtime: '6.2 小時',
+      revenueLoss: 'NT$ 3-5M',
+      customerImpact: 'SLA violation, 客戶投訴',
+      teamImpact: '緊急加班，士氣低落',
+      rootCause: '事後諸葛：風扇異常 3 天前就有徵兆，但沒有預警'
+    }
+  },
+  withFoxconn: {
+    title: '有 Foxconn Remote Ops：2 小時的主動處置',
+    timeline: [
+      { time: '前一天 14:00', event: '預測性維護系統偵測到 GPU #47 風扇轉速異常', actor: 'Foxconn Remote Ops', impact: '發出預警通知' },
+      { time: '前一天 14:15', event: '系統自動生成維修工單，建議 48 小時內更換', actor: 'Foxconn Remote Ops', impact: '運維團隊排入維護窗口' },
+      { time: '前一天 16:00', event: '運維主管確認維修計劃', actor: '客戶', impact: '安排在次日凌晨 2:00-4:00 維護窗口' },
+      { time: '週五 02:00', event: '系統自動進入維護模式，遷移 workloads', actor: 'Foxconn Remote Ops', impact: '業務零中斷' },
+      { time: '02:15', event: '遠端診斷確認需更換風扇模組', actor: 'Foxconn Remote Ops', impact: '準備備品' },
+      { time: '02:30', event: '現場工程師更換風扇（或遠端指導客戶人員）', actor: '客戶 + Foxconn', impact: '30 分鐘完成' },
+      { time: '03:00', event: '系統驗證正常，恢復全負載運作', actor: 'Foxconn Remote Ops', impact: '業務零中斷' },
+      { time: '03:15', event: '自動生成維修報告與證據包', actor: 'Foxconn Remote Ops', impact: '合規存證完成' }
+    ],
+    outcome: {
+      downtime: '0 分鐘（計劃性維護）',
+      revenueLoss: 'NT$ 0',
+      customerImpact: 'SLA 達標，客戶滿意度提升',
+      teamImpact: '計劃內工作，團隊士氣穩定',
+      rootCause: '提前 36 小時預警，從容處置'
+    }
+  },
+  boardMessage: '這就是軟體的價值：把「6 小時災難」變成「30 分鐘計劃維護」。客戶願意為此付費，不是因為功能清單，是因為他們買的是「不用在凌晨 3 點接緊急電話」的安心。',
+  financialImpact: {
+    withoutSoftware: 'NT$ 3-5M / 次 × 12 次/年 = NT$ 36-60M/年 損失',
+    withSoftware: 'NT$ 5M/年 Remote Ops 訂閱費',
+    roi: '每投入 NT$ 1，避免 NT$ 7-12 損失 + 客戶流失風險',
+    intangible: '客戶信任、團隊士氣、品牌聲譽'
+  }
+};
+
 export const customerSuccessScenarios = [
   {
     scenario: '台灣某金融業私有 AI 部署',
