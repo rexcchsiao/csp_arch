@@ -35,6 +35,7 @@ This presentation covers:
 
 ## 🎯 Key Messages
 
+- **🖥️ AI Factory OS**: Foxconn software is the "operating system" for AI infrastructure—turning raw GPU hardware into predictable, governable, revenue-generating AI factories (like Windows for PCs, but for AI datacenters)
 - **GPU Utilization**: From 40-60% to 85%+ (+42% improvement)
 - **Deployment Time**: From 2-4 weeks to 2 hours (-99% reduction)
 - **Maintenance Labor**: Reduce on-site support by 70%
@@ -42,6 +43,7 @@ This presentation covers:
 - **Energy Efficiency**: PUE from 1.6 to 1.4, reducing datacenter power costs by 15-25%
 - **ROI**: 11.5x return by Year 3, 18-24 month payback period
 - **Risk of Inaction**: NT$ 1.5B+ opportunity loss by 2028 (commoditization at 5-8% margin)
+- **Strategic Frame**: Without AI Factory OS, Foxconn becomes a contract manufacturer for hyperscalers' own brands (5-8% margin). With AI Factory OS, Foxconn becomes a strategic partner (20-25% margin).
 
 
 ---
