@@ -144,6 +144,14 @@ const ExecutiveSummaryView = () => {
       sourceUrl: missionControlSource?.url,
     },
     {
+      criterion: 'Night-shift serviceability is becoming budgetable, not just break/fix support',
+      marketSignal: 'NVIDIA Mission Control packages autonomous recovery and AI factory operations as software, while Dell AI Factory wraps lifecycle support and end-to-end delivery into the buying story—signaling that buyers increasingly pay for fewer blind truck rolls, faster remote triage, and better dispatch readiness.',
+      whyItChangesProcurement: 'When customers start pricing the cost of wrong dispatches, delayed maintenance windows, and after-hours escalation churn, remote diagnostics stops looking like optional tooling and starts looking like an OPEX and SLA control layer.',
+      foxconnMove: 'Position Foxconn software as the night-shift accountability layer: remote diagnostics, evidence capture, dispatch readiness, and spare-parts / maintenance-window coordination that reduce unnecessary site visits.',
+      source: `${missionControlSource?.name || 'NVIDIA Mission Control'} / ${dellAIFactorySource?.name || 'Dell AI Factory'}`,
+      sourceUrl: missionControlSource?.url || dellAIFactorySource?.url,
+    },
+    {
       criterion: 'Even facilities vendors now package AI infrastructure as physical + digital operations',
       marketSignal: 'Schneider Electric officially frames AI datacenter solutions as end-to-end physical and digital AI infrastructure, combining resilient electrical infrastructure, advanced liquid cooling, and optimized operations.',
       whyItChangesProcurement: 'This is a strong signal that software-and-operations value is not just an AI server vendor story. When the facilities layer itself is sold with digital-operations language, customers become more willing to budget for cross-layer orchestration instead of treating servers as isolated hardware purchases. NVIDIA now even frames power-constrained optimization in business terms—run at 85% power with 93% performance throughput—so the buying conversation shifts from "more monitoring" to "how much CAPEX and outage risk can we defer?"',
@@ -168,6 +176,14 @@ const ExecutiveSummaryView = () => {
       foxconnPlay: '把 Lifecycle Control Tower 做成標準 attach：從硬體驗證延伸到季度升級治理與年度顧問收入。',
       source: hpePrivateCloudAISource?.name || 'HPE Private Cloud AI',
       sourceUrl: hpePrivateCloudAISource?.url,
+    },
+    {
+      title: 'Factory-to-Operations commissioning evidence 仍少有人做成可收費責任鏈',
+      marketSignal: 'Dell 已把 AI Factory 定位成從 infrastructure、data 到 lifecycle support 的 end-to-end 交付敘事；HPE 也用 pre-configured validated platform 與 production deployment in hours 來賣交付可信度。',
+      whitespace: '市場很會談 turnkey 與 validated platform，但較少有人真正承接「出廠 burn-in、韌體矩陣、site acceptance、baseline 與 Day-2 handoff 證據怎麼串成同一條責任鏈」。結果常是硬體交機了，營運責任卻還沒正式接起來。',
+      foxconnPlay: '把 Factory-to-Operations Handoff Assurance / Commissioning Evidence Pack 做成 attach service：把工廠預載、驗收、baseline、權限移交與初始 observability 一次交齊，讓軟體部門成為交機後可營運結果的 owner。',
+      source: dellAIFactorySource?.name || hpePrivateCloudAISource?.name || 'Dell AI Factory / HPE Private Cloud AI',
+      sourceUrl: dellAIFactorySource?.url || hpePrivateCloudAISource?.url,
     },
     {
       title: 'Air-gapped / Sovereign AI 的 Day-2 內容生命週期沒人想接',
@@ -287,8 +303,8 @@ const ExecutiveSummaryView = () => {
     {
       metric: 'Factory-to-Operations handoff time',
       whyItProvesValue: '這直接驗證軟體部門有沒有把工廠交機、site acceptance、baseline 與 Day-2 handoff 接成一條責任鏈。',
-      target: '把「交機到可營運 baseline」從數週壓到數天，並讓流程可重複、可驗收。',
-      boardQuestion: '交機後多久，客戶能進入可監控、可升級、可接手營運的狀態？'
+      target: '把「交機到可營運 baseline」從數週壓到數天，並交付可重複、可驗收的 commissioning evidence pack（burn-in、site acceptance、baseline、handoff runbook）。',
+      boardQuestion: '交機後多久，客戶能進入可監控、可升級、可接手營運的狀態？我們是否真的把 commissioning 證據鏈一起交齊？'
     },
     {
       metric: 'Remote resolution coverage',
@@ -319,6 +335,7 @@ const ExecutiveSummaryView = () => {
   const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
   const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
   const retrofitReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'AI Retrofit Readiness Assessment');
+  const marketBuyingLanguageVectors = (softwareDifferentiation.marketBuyingLanguage?.vectors || []).slice(0, 6);
   const budgetOwnerSignals = [
     {
       label: 'Deployment / PMO 預算',
@@ -736,7 +753,7 @@ const ExecutiveSummaryView = () => {
           這四題如果沒有明確的軟體 owner，就很容易讓 Foxconn 退回成「設備供應商」，而不是能拿 attach rate 與年約收入的解決方案夥伴。
         </p>
         <div className="grid md:grid-cols-2 gap-4">
-          {(softwareDifferentiation.procurementDisqualifiers?.items || []).slice(0, 4).map((item) => (
+          {(softwareDifferentiation.procurementDisqualifiers?.items || []).slice(0, 6).map((item) => (
             <div key={item.title} className="rounded-2xl border border-red-100 bg-red-50 p-5">
               <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-2">Procurement disqualifier</p>
               <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
@@ -766,6 +783,50 @@ const ExecutiveSummaryView = () => {
           <p className="text-sm font-semibold text-red-900">給管理層的一句話：<span className="text-slate-700">很多 AI 基礎設施案子最後輸贏，不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼管、事故後誰救得回來」。這四題的 owner，如果不是軟體部門，就很難把硬體價值完整變現。</span></p>
         </div>
       </div>
+
+      {/* Procurement language - how the market already frames software value */}
+      {marketBuyingLanguageVectors.length > 0 && (
+        <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+          <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5 text-sky-600" /> 市場現在不是用功能清單買單，而是用「可核准的結果」買單
+          </h3>
+          <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+            這段很適合直接幫老闆把話術拉正：外部領先廠商已經很少只賣規格或 feature list，更多是在賣
+            <span className="font-semibold text-slate-900"> 更快上線、更穩營運、更容易治理、以及誰來負責 </span>
+            這些管理層看得懂、也真的會核准預算的結果。只要 Foxconn 也用同一種語言講軟體部門，價值就會清楚很多。
+          </p>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {marketBuyingLanguageVectors.map((vector) => (
+              <div key={vector.label} className="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Buying language</p>
+                <p className="text-sm font-black text-slate-900 mb-3">{vector.label}</p>
+                <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                  <p><span className="font-bold text-slate-500">市場怎麼講：</span>{vector.marketSignal}</p>
+                  <p><span className="font-bold text-amber-700">買方真正問的是：</span>{vector.buyerQuestion}</p>
+                  <p><span className="font-bold text-emerald-700">Foxconn 應該怎麼翻：</span>{vector.foxconnTranslation}</p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-[11px] text-slate-500">Source anchor: {vector.sourceLabel}</p>
+                  {vector.source && (
+                    <a
+                      href={vector.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      官方來源
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 rounded-xl border border-sky-100 bg-slate-50 p-4">
+            <p className="text-sm font-semibold text-sky-900">給管理層的一句話：<span className="text-slate-700">如果市場核准的是 speed-to-value、operational control、trust、single accountable owner、capacity deferral 與 recoverability，那軟體部門就不是支援功能，而是這些結果的 owner。</span></p>
+          </div>
+        </div>
+      )}
 
       {/* Why Now - 2026 Q2 Inflection Point */}
       {executiveSummary.whyNow && (
@@ -981,11 +1042,11 @@ const ExecutiveSummaryView = () => {
       {/* Market whitespace - where software earns its keep */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 5 個高價值空白
+          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 6 個高價值空白
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。
-          下面這五個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口，而且新增的 shared GPU 治理切面，會讓軟體價值更直接連到 CFO / FinOps 也看得懂的預算語言。
+          下面這六個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口：從 commissioning / handoff 證據鏈、air-gapped Day-2 內容生命週期，到 shared GPU 治理與 AI recoverability，都是最容易被董事會理解成「不是 another feature，而是可被問責的營運責任」的地方。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {marketWhitespace.map((item) => (
