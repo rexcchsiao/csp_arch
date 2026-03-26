@@ -210,8 +210,13 @@ const App = () => {
                     <p className="leading-relaxed">EU AI Act 已把 technical documentation、logging、record-keeping 拉進正式法規語言。很多案子不是模型不能跑，而是 model provenance、離線內容版本、更新紀錄與 audit evidence 沒有 owner；這正是軟體部門最能切入合規預算的位置。</p>
                   </div>
                 </div>
+                <div className="rounded-xl border border-sky-100 bg-white/90 p-4 mb-4">
+                  <p className="font-black text-slate-900 mb-1">5. AI 供應鏈安全與 model provenance，誰敢簽字負責？</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">受監管 AI 專案真正會卡住的，常不是模型能不能跑，而是模型從哪裡來、訓練/匯入資料是否可追溯、離線內容有沒有版本證據、出事時能不能交出 AI BOM 與 audit evidence。這種需求天然不是硬體附屬功能，而是軟體部門才能產品化的治理服務，也更容易切進法遵、資安與 CIO 預算。</p>
+                  <p className="text-xs text-slate-500 mt-2">可對應的外部語言：EU AI Act 的 technical documentation / logging / record-keeping 要求，以及企業對 model provenance、AI BOM、離線內容版本紀律的採購門檻。</p>
+                </div>
                 <div className="rounded-xl border border-sky-100 bg-white p-4">
-                  <p className="text-sm font-semibold text-sky-900">董事會該記住的一句話：<span className="text-slate-700">如果市場真正缺的是責任鏈 owner，而 Foxconn 剛好最有資格把 factory、firmware、brownfield、remote ops 與 shared-cluster governance 接起來，那軟體部門賣的就不是功能，而是別人最難完整承接的營運責任。</span></p>
+                  <p className="text-sm font-semibold text-sky-900">董事會該記住的一句話：<span className="text-slate-700">如果市場真正缺的是責任鏈 owner，而 Foxconn 剛好最有資格把 factory、firmware、brownfield、remote ops、shared-cluster governance 與 AI evidence governance 接起來，那軟體部門賣的就不是功能，而是別人最難完整承接的營運責任。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 p-5 mb-6">
