@@ -210,6 +210,14 @@ const ExecutiveSummaryView = () => {
       sourceUrl: openshiftAISource?.url || nutanixAgenticAISource?.url,
     },
     {
+      title: 'Remote triage / dispatch readiness 很少被產品化，卻是 CSP 最痛的 OPEX 缺口',
+      marketSignal: 'NVIDIA Mission Control 已把 AI factory operations、autonomous recovery 與 building-management integration 放到產品前台；Dell AI Factory 也把 lifecycle support 與 end-to-end delivery 放進正式採購敘事。',
+      whitespace: '很多供應商能監控、能告警，卻沒有把「先遠端縮小故障範圍、判斷是否真的要派人、該帶哪些備品、如何對齊 maintenance window」做成單一可問責服務。結果是大型 CSP 半夜出事時，還是只能先 truck roll，再慢慢找根因。',
+      foxconnPlay: '把 Remote Diagnostics & Dispatch Readiness 做成 attach service：賣的是更少白跑機房、更高 first-time-fix rate、更快備品命中與更低跨站點 serviceability OPEX。這比 another dashboard 更像老闆會批的服務。',
+      source: `${missionControlSource?.name || 'NVIDIA Mission Control'} / ${dellAIFactorySource?.name || 'Dell AI Factory'}`,
+      sourceUrl: missionControlSource?.url || dellAIFactorySource?.url,
+    },
+    {
       title: 'AI recoverability 與 incident evidence 幾乎還沒被 OEM/ODM 產品化',
       marketSignal: 'Dell 已把 Cyber Resilience for AI 直接放進 AI solutions 官方敘事，強調要保護 AI workloads against data loss, corruption, and cyber threats。',
       whitespace: '市場已開始把 recoverability 視為 AI 預算語言，但多數伺服器供應商仍停留在告警、備份或通用資安層，沒有真正承接模型 artifact、vector data、golden image、registry 與 incident evidence 的恢復責任。',
