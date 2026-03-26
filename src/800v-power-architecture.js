@@ -36,6 +36,11 @@ export const marketOpportunity = {
     segment2028: 'NT$ 85B (55% 滲透率)',
     source: 'IDC AI Infrastructure Forecast 2026'
   },
+  executiveFraming: {
+    headline: '這不是 power firmware 專案，而是可被採購、續約、稽核的營運責任層',
+    narrative: '當 Vertiv 與 Schneider 都把 AI-ready reference design、optimized operations、physical + digital infrastructure 變成官方銷售語言時，Foxconn 最該賣的就不只是電力控制功能，而是把 power / cooling / leak / maintenance event 接成可問責的 service layer。這會讓 800V 軟體更像 availability 與 brownfield readiness 服務，而不是難以單獨計價的 embedded feature。',
+    boardQuestion: '我們是在做一套很厲害但難收費的控制軟體，還是在做一個能降低 CAPEX 延後、減少誤派工、加速 brownfield 上線的年度服務？'
+  },
   targetCustomers: [
     { segment: 'Hyperscalers', examples: 'AWS, Azure, GCP, Meta', need: '大規模部署、效率優先' },
     { segment: 'AI 新創', examples: 'CoreWeave, Lambda, Together AI', need: '快速部署、成本效益' },
@@ -53,6 +58,36 @@ export const marketOpportunity = {
     '2027': 'NT$ 25M (50 案 × NT$ 500K)',
     '2028': 'NT$ 75M (150 案 × NT$ 500K)'
   }
+}
+
+export const servicePackaging = {
+  headline: '把 800V 軟體包成老闆看得懂的 3 種服務',
+  packages: [
+    {
+      name: 'Facility-Aware Capacity Assurance',
+      buyer: 'CSP / enterprise AI platform owner / datacenter operations lead',
+      promise: '把 rack density、power cap、cooling constraint 轉成可排程的容量保證與 brownfield 上線條件，延後不必要的機電擴建。',
+      whyNow: 'Vertiv 已經用 AI-ready retrofit、142kW rack density 與 whitespace readiness 教育市場：客戶願意為「能不能安全再塞一櫃」這種結果買單。',
+      source: 'Vertiv AI Hub',
+      sourceUrl: 'https://www.vertiv.com/en-us/solutions/ai-hub/'
+    },
+    {
+      name: 'Power-to-Workload Incident Triage',
+      buyer: 'Remote ops team / service delivery / SRE',
+      promise: '把 power / liquid-cooling / leak 事件直接連到 workload 降載、dispatch readiness、evidence capture 與 maintenance window 判斷，讓夜間故障不再只剩 BMC 告警。',
+      whyNow: 'NVIDIA Mission Control 已把 building-management integration、autonomous recovery、air-gapped deployment 與 leak-detection validation 放進官方語言，代表 buyers 已開始為 Day-2 facility-event handling 編預算。',
+      source: 'NVIDIA Mission Control',
+      sourceUrl: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+    },
+    {
+      name: 'Commissioning-to-Operations Evidence Pack',
+      buyer: 'Program management / customer success / regulated industry buyer',
+      promise: '把 burn-in、power baseline、site acceptance、handoff runbook 與 recovery evidence 做成正式交付物，縮短交機到可營運的責任真空。',
+      whyNow: 'Dell AI Factory 與 HPE Private Cloud AI 都在賣 end-to-end delivery、continuous service availability 與 validated deployment，證明市場已接受「交付可信度」本身可以被定價。',
+      source: 'Dell AI Factory / HPE Private Cloud AI',
+      sourceUrl: 'https://www.dell.com/en-us/ai-factory'
+    }
+  ]
 }
 
 export const competitiveAnalysis = {
@@ -108,4 +143,4 @@ export const roadmap = {
   ]
 }
 
-export default { power800vContext, power800vSoftwareModules, marketOpportunity, competitiveAnalysis, roadmap }
+export default { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, roadmap }

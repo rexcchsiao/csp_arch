@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Zap, TrendingUp, Shield, Award, Clock, Target, CheckCircle, ExternalLink, AlertTriangle, BarChart3 } from 'lucide-react'
-import { power800vContext, power800vSoftwareModules, marketOpportunity, competitiveAnalysis, roadmap } from './800v-power-architecture'
+import { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, roadmap } from './800v-power-architecture'
 
 const Power800vView = () => {
   const [activeSection, setActiveSection] = useState('modules')
@@ -133,6 +133,19 @@ const Power800vView = () => {
 
         {activeSection === 'market' && (
           <div className="space-y-6">
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
+              <div className="flex items-start gap-3">
+                <Target className="w-5 h-5 text-emerald-600 mt-0.5" />
+                <div>
+                  <h3 className="text-lg font-black text-emerald-900 mb-2">{marketOpportunity.executiveFraming.headline}</h3>
+                  <p className="text-sm text-slate-700 leading-6 mb-3">{marketOpportunity.executiveFraming.narrative}</p>
+                  <div className="rounded-xl border border-emerald-200 bg-white/80 p-3 text-sm text-slate-700">
+                    <span className="font-black text-emerald-700">董事會該問：</span> {marketOpportunity.executiveFraming.boardQuestion}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="p-6 bg-green-50 rounded-2xl border border-green-200">
               <h3 className="text-xl font-black text-green-800 mb-4">{marketOpportunity.headline}</h3>
               
@@ -183,6 +196,27 @@ const Power800vView = () => {
                   <p className="text-xs font-bold text-slate-700">預測維護</p>
                   <p className="text-xs text-slate-600">{marketOpportunity.businessModel.maintenance}</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+              <h4 className="text-lg font-black text-blue-900 mb-4">{servicePackaging.headline}</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {servicePackaging.packages.map((pkg) => (
+                  <div key={pkg.name} className="rounded-2xl border border-blue-100 bg-white p-4">
+                    <p className="text-sm font-black text-slate-900 mb-2">{pkg.name}</p>
+                    <p className="text-xs font-bold text-blue-700 mb-1">買方角色</p>
+                    <p className="text-xs text-slate-600 mb-3">{pkg.buyer}</p>
+                    <p className="text-xs font-bold text-blue-700 mb-1">可收費主張</p>
+                    <p className="text-xs text-slate-700 mb-3">{pkg.promise}</p>
+                    <p className="text-xs font-bold text-blue-700 mb-1">市場為什麼現在會買</p>
+                    <p className="text-xs text-slate-700 mb-3">{pkg.whyNow}</p>
+                    <a href={pkg.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 hover:text-blue-900 underline">
+                      <ExternalLink className="w-3 h-3" />
+                      {pkg.source}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
