@@ -370,6 +370,26 @@ const ExecutiveSummaryView = () => {
       bg: 'bg-amber-50 border-amber-100',
     },
   ];
+  const softwareSignatureMoments = [
+    {
+      title: 'Service-ready',
+      owner: '交機到可營運的責任鏈',
+      meaning: '把 factory pre-load、site acceptance、baseline 與 Day-2 handoff 接成可驗收結果，讓硬體從「已到貨」變成「可上線」。',
+      budgetLogic: '這讓軟體部門直接對 time-to-revenue 負責，而不是只提供安裝協助。'
+    },
+    {
+      title: 'Audit-ready',
+      owner: '治理與證據責任鏈',
+      meaning: '把 air-gap content lifecycle、model provenance、權限治理、更新紀錄與 audit evidence 做成正式交付物，讓受監管客戶敢簽。',
+      budgetLogic: '這讓軟體部門進入 compliance / sovereign AI 預算，而不只是 IT 工具預算。'
+    },
+    {
+      title: 'Dispatch-ready',
+      owner: '夜班運維與現場服務責任鏈',
+      meaning: '把 remote diagnostics、evidence pack、備品判斷與維修窗口協調接起來，先遠端縮小故障範圍，再決定是否真的要 truck roll。',
+      budgetLogic: '這讓軟體部門直接對 OPEX、SLA 與 first-time-fix rate 產生可定價價值。'
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -390,6 +410,76 @@ const ExecutiveSummaryView = () => {
             <p className="text-xs font-bold uppercase tracking-widest mb-2 opacity-80">戰略要求</p>
             <p className="text-sm leading-relaxed opacity-90">{executiveSummary.ask}</p>
           </div>
+        </div>
+      </div>
+
+      {/* Why the market is already buying operations expertise as software */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <ShieldIcon className="w-5 h-5 text-cyan-600" /> 市場正在買的不是另一套工具，而是「營運專業 delivered as software」
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這個說法很值得放前面，因為它能把整份論述突然變得很像採購語言：<span className="font-semibold text-slate-900">客戶真正願意核准的，不是又一個 control plane，而是把原本要自己養的營運經驗、night-shift discipline、change-window governance 與 remote accountability，改成可直接採購的軟體與服務。</span>
+          連 NVIDIA Mission Control 都已經用「把 AI factory expertise 帶給每一家企業」這種語言在賣，這代表市場願意付錢的，其實是 world-class operations team 的產品化版本。Foxconn 如果把軟體部門定位成 deployment、lifecycle、dispatch readiness、facility-event governance 與 evidence pack 的 owner，就比較不會被看成附屬功能，而會被看成可被問責的 operations line。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">What buyers are really approving</p>
+            <p className="text-sm font-black text-slate-900 mb-3">把內部營運專業外包成可採購能力</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">不是：</span>再多一個 dashboard 或 portal。</p>
+              <p><span className="font-bold text-cyan-700">而是：</span>deployment discipline、upgrade safety、night-shift incident handling、dispatch readiness、audit evidence 與 brownfield coordination。</p>
+              <p><span className="font-bold text-emerald-700">董事會語言：</span>軟體部門賣的是風險轉移與可問責營運，不是附加畫面。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Why this matters commercially</p>
+            <p className="text-sm font-black text-slate-900 mb-3">一旦賣的是營運專業，就更容易變成年約</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">因為：</span>deployment、lifecycle、facility events、shared-cluster governance 與 recoverability 都不是一次性事件。</p>
+              <p><span className="font-bold text-blue-700">結果：</span>軟體 attach 不再像一次性整合費，而更像季度治理、年度 SLA 與 evidence refresh 收入。</p>
+              <p><span className="font-bold text-emerald-700">管理層看到的是：</span>更高 attach rate、更長續約週期、以及更難被替換的服務關係。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Why Foxconn can credibly sell it</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Foxconn 站的位置，比純平台商更接近責任現場</p>
+            <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">因為：</span>Foxconn 同時碰到工廠預載、硬體驗收、韌體基線、brownfield 整合與 Day-2 維運。</p>
+              <p><span className="font-bold text-cyan-700">所以：</span>最有資格把 factory-to-operations handoff、remote diagnostics、capacity assurance 與 evidence pack 接成同一條服務鏈。</p>
+              <p><span className="font-bold text-emerald-700">市場翻譯：</span>這不是 another AI platform，而是 AI infrastructure operations expertise 的產品化。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
+          <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">如果市場已經願意為「營運專業 delivered as software」付錢，Foxconn 軟體部門就不該再被描述成支援功能，而應該被定義成把交機、升級、治理與 night-shift 風險接住的 operations line。</span></p>
+        </div>
+      </div>
+
+      {/* Three signatures the software department can uniquely own */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 3 個可簽收的結果
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready 這三條責任鏈的 owner。</span>
+          只要管理層記住這三個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理與 night-shift serviceability 的核心價值。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {softwareSignatureMoments.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-indigo-600 mb-2">Board-signable software outcome</p>
+              <p className="text-sm font-black text-slate-900 mb-1">{item.title}</p>
+              <p className="text-xs font-bold text-indigo-900 mb-3">{item.owner}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">這代表什麼：</span>{item.meaning}</p>
+                <p><span className="font-bold text-emerald-700">為什麼會有預算：</span>{item.budgetLogic}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
+          <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任與夜班維運責任一起交給 Foxconn。這三個 ready，才是軟體部門最值錢的地方。</span></p>
         </div>
       </div>
 
