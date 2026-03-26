@@ -187,6 +187,13 @@ export const executiveBrief = {
       competitiveAdvantage: "Turns the gray zone between server delivery and stable operations into a billable, accountable software-led service that shortens time-to-revenue and reduces post-installation blame loops"
     },
     {
+      name: "Service Availability Assurance",
+      targetCustomer: "CSPs, enterprise AI platform teams, and sovereign AI programs that need ongoing uptime discipline after deployment—not just a working dashboard on Day 1",
+      capabilities: ["Quarterly health review", "Predictive risk watchlist", "Availability baseline refresh", "Incident review and recovery evidence pack", "SLA / governance report for leadership"],
+      pricingModel: "Annual subscription: NT$ 1.5-6M/year depending on cluster size and review cadence",
+      competitiveAdvantage: "Matches the buying language already validated by HPE Private Cloud AI (continuous service availability) and NVIDIA Mission Control (AI factory operations), but ties it to Foxconn-owned server delivery, brownfield lifecycle governance, and remote service accountability rather than a proprietary cloud stack"
+    },
+    {
       name: "RAG Appliance (Private AI Knowledge Base)",
       targetCustomer: "Enterprise/SMB requiring on-premise AI (finance, healthcare, government)",
       capabilities: ["Document ingestion", "Permission governance", "Vector search", "Q&A interface", "Compliance audit trail"],

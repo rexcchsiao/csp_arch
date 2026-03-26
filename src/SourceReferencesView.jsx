@@ -109,6 +109,30 @@ const SourceReferencesView = () => {
             </p>
           </div>
         )}
+        {activeCategory === 'supermicro' && (
+          <div className="mb-6 rounded-2xl border border-teal-200 bg-teal-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-teal-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              把 Supermicro 單獨拉出來的價值，在於它幫 Foxconn 證明了一件很現實的事：
+              <span className="font-semibold text-slate-900">連硬體導向很強的 AI 伺服器廠，都已經不得不往軟體、facility telemetry 與 operations tooling 延伸</span>。
+              這代表市場不再把「看得到硬體狀態」當成加分題，而是把它視為基本盤。Foxconn 軟體部門真正該拿高毛利的位置，應該比 monitoring 再往前一步——
+              <span className="font-semibold text-slate-900">把監控轉成 lifecycle governance、dispatch readiness、SLA evidence 與 brownfield operational service</span>。
+              換句話說，Supermicro 驗證了「沒有軟體不行」，而 Foxconn 要主張的是「只有監控還不夠」。
+            </p>
+          </div>
+        )}
+        {activeCategory === 'schneider' && (
+          <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              Schneider 這頁的說服力，在於它把 AI datacenter 的採購語言往更高一層拉：
+              <span className="font-semibold text-slate-900">客戶買的不是單一設備，而是 physical + digital infrastructure 一起形成的可營運結果</span>。
+              這正好幫 Foxconn 軟體部門拿到一個很強的位置——不是只管 server health，而是去承接 power、cooling、capacity 與 workload 之間的協調責任。
+              只要董事會接受「AI 機房價值 = 設施 + 軟體營運能力」，Foxconn 的軟體部門就更容易被定位成
+              <span className="font-semibold text-slate-900">延後擴建 CAPEX、降低 brownfield 風險、把 facility event 變成可續約服務</span> 的核心單位。
+            </p>
+          </div>
+        )}
         {activeCategory === 'vertiv' && (
           <div className="mb-6 rounded-2xl border border-sky-200 bg-sky-50 p-5">
             <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Why this matters</p>

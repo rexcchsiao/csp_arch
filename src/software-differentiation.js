@@ -447,7 +447,7 @@ structuralAdvantages: {
 
   // Market white space - where the software team creates value competitors still under-serve (Added 2026-03-18 by CoCo)
   marketWhiteSpace: {
-    headline: '市場還沒被好好解決的 4 個缺口：這正是軟體部門該站上的位置',
+    headline: '市場還沒被好好解決的關鍵缺口：這正是軟體部門該站上的位置',
     coreInsight: '外部產品頁已經證明，大家都開始賣 AI operations、observability 與 validated deployment；但真正還缺的，是誰願意對 brownfield、air-gapped、facility-constrained 與跨團隊責任切割的 Day-2 風險負責。這些缺口，不是再加一個 dashboard 就能補起來。',
     gaps: [
       {
@@ -844,6 +844,11 @@ structuralAdvantages: {
         title: '責任鏈不同',
         detail: '硬體團隊負責把設備交付到位；軟體部門更適合成為 incident evidence / RCA 的 owner，把 BMC、GPU、作業系統、叢集與維修 runbook 串成可交付的證據鏈與恢復決策流程。',
         boardWhyItMatters: '這讓 Foxconn 賣的不只是「看到告警」，而是「出事後誰能先遠端收斂根因、保留證據、降低誤派工與縮短恢復時間」—— 這種責任邊界更容易被採購、SRE 與合規團隊正式編列預算。',
+      },
+      {
+        title: '報價 / P&L 邏輯不同',
+        detail: '硬體報價常被壓回 BOM 與交機價格；軟體部門則更適合用 attach rate、SLA tier、baseline refresh、季度 review 與年度續約來設計價格與毛利結構。若兩者混在一起，最容易發生的就是軟體價值被業務當成贈品送掉。',
+        boardWhyItMatters: '管理層若不給軟體部門獨立報價與續約 mandate，再好的 Day-2 能力也很難形成可見 P&L；最後 Foxconn 看到的只會是更高交付成本，而不是更高附加價值收入。',
       },
     ],
     boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。',
@@ -1263,7 +1268,7 @@ structuralAdvantages: {
 				label: 'Continuous Service Availability',
 				marketSignal: 'HPE Private Cloud AI 官方直接把 built-in observability、predict problems 與 continuous service availability 放進產品價值敘事，代表客戶買的已經不只是「看得到」，而是「服務不要中斷」。',
 				buyerQuestion: '這套方案上線後，誰能持續保住可用性，而不是等出事後再靠人力救火？',
-				foxconnTranslation: '把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 Factory-to-Operations baseline 串成 Service Availability Assurance：賣的是更少中斷、更快恢復與更穩定的 AI 服務，而不是監控畫面本身。',
+				foxconnTranslation: '把 Remote Ops、Predictive Maintenance、Lifecycle Control Tower 與 Factory-to-Operations baseline 串成 Service Availability Assurance：賣的是更少中斷、更快恢復與更穩定的 AI 服務，而不是監控畫面本身。這也讓軟體部門更容易被定位成可獨立報價、可季度 review、可年度續約的 uptime / recovery owner，而不是被算進硬體附送支援。',
 				sourceLabel: 'HPE Private Cloud AI',
 				source: 'https://www.hpe.com/us/en/private-cloud-ai.html'
 			},
@@ -1322,8 +1327,8 @@ structuralAdvantages: {
 			]
 		}, 
 		uniqueServiceWedge: {
-			headline: '最值得先賣的，不是 another platform，而是 6 個別人最容易失手的服務缺口',
-			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 6 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係的 owner。',
+			headline: '最值得先賣的，不是 another platform，而是 7 個別人最容易失手的服務缺口',
+			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 7 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係、跨部門預算入口與續約 owner 的部門。',
 			wedges: [
 				{
 					name: 'Factory-to-Operations Handoff Assurance',
