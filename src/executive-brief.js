@@ -1716,6 +1716,104 @@ export const first90DaysPlan = {
 // Why Hyperscalers Wont Solve This (Added 2026-03-20 by CoCo)
 // Purpose: Preemptively address board question: "Why wont AWS/Azure/GCP just do this themselves?"
 // Strategic insight: Hyperscalers have strong incentives NOT to solve on-premise software
+// 12-Month Success Snapshot - What Success Looks Like After Year 1 (Added 2026-03-27 by CoCo)
+// Purpose: Make Year 1 success concrete and measurable for the board
+// Usage: Board Q&A, quarterly reviews, executive alignment
+export const year1SuccessSnapshot = {
+  headline: 'Day 365: What Success Looks Like After Year 1',
+  context: '董事會批准後 12 個月，軟體部門應該達成什麼成果？此 snapshot 提供具體、可衡量的 Year 1 成功基準。',
+  
+  // The 5 Key Milestones for Year 1
+  fiveKeyMilestones: [
+    {
+      milestone: '1. Team Built',
+      target: '35-40 FTE software engineers (L9-L12)',
+      status: 'Recruitment complete, team operational',
+      significance: 'Critical mass achieved; can deliver Remote Ops + RAG simultaneously',
+      boardMetric: 'Headcount: 35-40 FTE (vs. 50-80 FTE 3-year target)'
+    },
+    {
+      milestone: '2. First Revenue',
+      target: 'NT$ 80M software revenue (5% attach rate)',
+      status: '7 customers: 5 Remote Ops + 2 RAG deployments',
+      significance: 'Validates pricing model; proves customers willing to pay',
+      boardMetric: 'Revenue: NT$ 80M (Remote Ops NT$ 50M + RAG NT$ 30M)'
+    },
+    {
+      milestone: '3. Customer Proof',
+      target: '3 published case studies with quantified outcomes',
+      status: '1 CSP (Remote Ops), 1 Enterprise (RAG), 1 Sovereign AI',
+      significance: 'External validation; reduces sales cycle for future deals',
+      boardMetric: 'Case studies: 3 published, 5 in pipeline'
+    },
+    {
+      milestone: '4. Product Maturity',
+      target: 'Remote Ops GA v2.0, RAG Appliance v1.0',
+      status: '70% remote fix rate, 85% GPU utilization achieved',
+      significance: 'Product-market fit validated; ready for scale',
+      boardMetric: 'Remote Ops: 70% remote fix, RAG: 3-week deployment'
+    },
+    {
+      milestone: '5. Partner Ecosystem',
+      target: '5 SI partners trained and certified',
+      status: 'Able to deliver 50% of projects via partners',
+      significance: 'Scale mechanism; reduces delivery bottleneck',
+      boardMetric: '5 certified partners, 50% partner-delivered'
+    }
+  ],
+  
+  // Financial Metrics - Year 1 Actuals vs. Target
+  financialMetrics: {
+    revenue: { target: 'NT$ 80M', actual: 'NT$ 80M', variance: '0%', status: 'On track' },
+    grossMargin: { target: '65%', actual: '63%', variance: '-2pp', status: 'Acceptable' },
+    attachmentRate: { target: '5%', actual: '5%', variance: '0pp', status: 'On track' },
+    customerCount: { target: '7', actual: '7', variance: '0', status: 'On track' },
+    averageDealSize: { target: 'NT$ 11.4M', actual: 'NT$ 11.4M', variance: '0%', status: 'On track' },
+    burnRate: { target: 'NT$ 65M/year', actual: 'NT$ 62M', variance: '-5%', status: 'Under budget' }
+  },
+  
+  // Operational Metrics - Product & Delivery
+  operationalMetrics: {
+    remoteOpsFixRate: { target: '70%', actual: '68%', variance: '-2pp', status: 'Acceptable' },
+    ragDeploymentTime: { target: '3 weeks', actual: '3.5 weeks', variance: '+17%', status: 'Minor delay' },
+    gpuUtilization: { target: '85%', actual: '83%', variance: '-2pp', status: 'Acceptable' },
+    deploymentTime: { target: '2 hours', actual: '2.5 hours', variance: '+25%', status: 'Minor delay' },
+    predictiveAccuracy: { target: '85%', actual: '82%', variance: '-3pp', status: 'Acceptable' },
+    customerSatisfaction: { target: 'NPS 40+', actual: 'NPS 38', variance: '-2', status: 'Acceptable' }
+  },
+  
+  // What Success Feels Like - Qualitative Indicators
+  qualitativeIndicators: [
+    { indicator: 'Sales Team Confidence', evidence: 'Sales team proactively pitching software, not waiting for hardware upsell' },
+    { indicator: 'Customer Inbound', evidence: 'Customers asking "What software do you have?" before "What GPU specs?"' },
+    { indicator: 'Competitor Response', evidence: 'Quanta/Wistron announce software partnerships (defensive move)' },
+    { indicator: 'Talent Attraction', evidence: 'Top software engineers from tech giants applying without recruitment outreach' },
+    { indicator: 'Board Narrative', evidence: 'Board discussion shifts from "IF software" to "HOW to scale software"' }
+  ],
+  
+  // Red Flags - When to Worry
+  redFlags: [
+    { flag: 'Attachment rate <2.5% by Q4 2026', action: 'Reassess pricing, packaging, or target segment' },
+    { flag: 'Zero published case studies by Q3 2026', action: 'Review product-market fit; consider pivot' },
+    { flag: 'Customer churn >15% in Year 1', action: 'Investigate root cause; may indicate delivery gap' },
+    { flag: 'Gross margin <55% by Year 1 end', action: 'Review customization level; reduce services, increase productization' },
+    { flag: 'Team turnover >20% in Year 1', action: 'Culture or compensation issue; immediate retention review' }
+  ],
+  
+  // Green Flags - When to Accelerate
+  greenFlags: [
+    { flag: 'Attachment rate >7% by Q4 2026', action: 'Accelerate hiring; increase Year 2 target from 12% to 15%' },
+    { flag: 'Customer inbound >5 without sales outreach', action: 'Scale marketing; consider price increase' },
+    { flag: 'Gross margin >70% by Year 1 end', action: 'Reinvest in R&D; accelerate Remote Ops 2.0 features' },
+    { flag: 'Partner-delivered >60% of projects', action: 'Expand partner program; reduce direct delivery team' }
+  ],
+  
+  // The "So What?" - Why Year 1 Matters
+  boardMessage: 'Year 1 is not about NT$ 80M revenue. It\'s about proving: (1) Customers will pay for Foxconn software. (2) Foxconn can build and deliver software at scale. (3) Software creates defensible margin (20-25% vs. 10-15% hardware). If Year 1 succeeds, Year 2-3 scale is execution risk. If Year 1 fails, we reassess before committing Years 2-3 budget.',
+  
+  nextMilestone: 'Q4 2026 Board Review: Go/No-Go decision for Year 2 scale-up based on Year 1 metrics. Success = automatic NT$ 150M Year 2 budget approval. Failure = strategy reassessment.'
+};
+
 export const whyHyperscalersWontSolveThis = {
   headline: "Strategic Moat: Why Hyperscalers Wont Cut Out Foxconn",
   coreInsight: "Hyperscalers (AWS/Azure/GCP) make 60-70% gross margin on cloud consumption. On-premise software cannibalizes their cloud business. Foxconn wins by serving the 40% of market hyperscalers cannot serve without self-sabotage.",
