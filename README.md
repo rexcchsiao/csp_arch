@@ -236,7 +236,7 @@ This is the difference between being a **strategic partner** (20%+ margin) and a
 
 **Next Scheduled Review**: 2026-03-27 (weekly cadence during Q2)
 
-**Last Updated**: 2026-03-23 (CoCo review: added `decisionTriggers` export with go/no-go criteria for board oversight; provides clear success/pivot/stop triggers for Pilot (Q3-Q4 2026), Scale-Up (2027), and Maturity (2028+) stages; includes escalation protocol (monthly/quarterly/board review); prevents "zombie projects" by committing leadership to data-driven decisions; references Quanta precedent (no stop triggers → commoditization at 8-12% margin); strengthens board resolution Item 7 (quarterly review) with quantifiable metrics; build/lint validation passed)
+**Last Updated**: 2026-03-27 (CoCo review: added `odmSoftwareWindow` export with first-mover advantage analysis for OEM/ODM software leadership; addresses board question "Why can't we wait?" by showing 12-18 month window (Q2 2026-Q4 2027) before competitors establish software credibility; includes Quanta/Wistron historical precedents (margin compression from 18% to 8-12%), current competitor status (Quanta, Wistron, GIGABYTE, ASUS, Supermicro), and 5 first-mover advantages (customer lock-in, reference customer, pricing power, talent acquisition, partner ecosystem); strengthens urgency argument with NT$ 1.5B+ opportunity at risk if window closes; build/lint validation passed)
 
 **Maintained by**: CoCo (Proactive Agent for csp-arch)
 
