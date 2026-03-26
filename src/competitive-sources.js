@@ -159,8 +159,36 @@ export const competitiveSources = {
   ],
   // Standards & Regulations
   regulations: [
-    { name: 'EU AI Act', url: 'https://artificialintelligenceact.eu/', description: 'EU AI regulation framework', relevance: 'Effective 2026, drives sovereign AI demand' },
-    { name: 'GDPR', url: 'https://gdpr.eu/', description: 'EU data protection regulation', relevance: 'Data residency requirements' }
+    {
+      name: 'EU AI Act (official EU text / implementation portal)',
+      url: 'https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai',
+      description: 'Official European Commission overview of the AI Act and implementation framework',
+      relevance: 'Useful proof that regulated AI deployments increasingly require technical documentation, logging, traceability, and post-deployment governance—not only working infrastructure.',
+      lastVerified: '2026-03-26',
+      keyFeature: 'The EU framework explicitly centers risk management, technical documentation, record-keeping, transparency, human oversight, and post-market monitoring as ongoing obligations for regulated AI systems.',
+      limitation: 'The regulation defines obligations, but it does not provide the operational layer customers still need in practice: model provenance tracking, offline content lifecycle, audit-ready evidence packs, or the infrastructure workflows that keep those records current across server fleets.',
+      ourAdvantage: 'Foxconn can turn this regulatory burden into software revenue by packaging model provenance, AI BOM / artifact records, air-gap content lifecycle, audit exports, and evidence refresh as attach services for sovereign and regulated AI customers.'
+    },
+    {
+      name: 'NIST AI Risk Management Framework',
+      url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+      description: 'U.S. guidance for governing AI risks across design, deployment, operation, and monitoring',
+      relevance: 'Useful proof that AI buyers increasingly expect governance, monitoring, and documentation discipline as part of production AI operations.',
+      lastVerified: '2026-03-26',
+      keyFeature: 'NIST frames AI operations around govern / map / measure / manage practices, emphasizing documentation, monitoring, accountability, and continuous risk treatment after deployment.',
+      limitation: 'Framework guidance alone does not give customers a working operating model for evidence collection, regulated change control, or mixed-vendor AI fleet governance.',
+      ourAdvantage: 'Foxconn can translate governance expectations into concrete software services: deployment evidence packs, lifecycle governance, recovery evidence, model-change records, and compliance-ready reporting tied back to actual server operations.'
+    },
+    {
+      name: 'GDPR',
+      url: 'https://gdpr.eu/',
+      description: 'EU data protection regulation',
+      relevance: 'Reinforces why data residency, access control, and sovereign / on-prem AI operations remain board-level buying criteria for regulated workloads.',
+      lastVerified: '2026-03-26',
+      keyFeature: 'GDPR keeps data handling, access boundaries, and auditability in scope for enterprise AI deployments involving personal or sensitive information.',
+      limitation: 'GDPR explains the legal boundary, but customers still need operational tooling and service discipline to enforce data locality, access governance, and evidence retention in live AI environments.',
+      ourAdvantage: 'Foxconn can connect infrastructure delivery with sovereign AI operations: on-prem deployment, disconnected update discipline, access governance, and auditable operating evidence instead of leaving customers to stitch policy and infrastructure together themselves.'
+    }
   ]
 };
 
