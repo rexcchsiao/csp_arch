@@ -16,12 +16,14 @@ import BuildVsBuyView from './BuildVsBuyView'
 import { buildVsBuyAnalysis } from './build-vs-buy'
 import { softwareDifferentiation } from './software-differentiation'
 import { competitiveLandscape } from './competitive-landscape'
+import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
   const urgencySignals = competitiveLandscape.competitiveUrgency.slice(0, 3)
+  const hyperscalerGaps = hyperscalerGapAnalysis.gapAnalysis.slice(0, 4)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
       'Factory-to-Operations Handoff Assurance',
@@ -209,6 +211,25 @@ const App = () => {
                 </div>
                 <div className="rounded-xl border border-fuchsia-100 bg-white p-4">
                   <p className="text-sm font-semibold text-fuchsia-900">董事會該記住的一句話：<span className="text-slate-700">當市場開始願意為「world-class operations team delivered as software」付錢，Foxconn 最該投資的就不是更多附屬功能，而是能承接部署、證據、升級與遠端問責的軟體部門。</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">Why hyperscalers still buy</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">就算大型 CSP / Hyperscaler 有強大軟體團隊，還是有 4 類責任更適合外包給 Foxconn</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  真正會被外包的，不是 customer-facing AI portal，而是那些 <span className="font-semibold text-slate-900">離設施很近、離營運風險很近、卻不直接創造營收</span> 的 Day-2 工作。這段如果由 Foxconn 軟體部門承接，老闆更容易看見：我們賣的是責任轉移，不是跟客戶搶平台主導權。
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-4 text-sm text-slate-700">
+                  {hyperscalerGaps.map((item) => (
+                    <div key={item.gap} className="rounded-xl border border-violet-100 bg-white/90 p-4">
+                      <p className="font-black text-slate-900 mb-2">{item.gap.replace('Gap ', '').trim()}</p>
+                      <p className="leading-relaxed mb-2"><span className="font-semibold text-violet-700">客戶痛點：</span>{item.customerPain}</p>
+                      <p className="leading-relaxed"><span className="font-semibold text-slate-900">Foxconn 該賣的：</span>{item.foxconnSolution}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-violet-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">Hyperscaler 不是不會做，而是不想把工程資源耗在本地部署、多供應商 GPU、成本可預測性與在地運維這些非差異化但高風險的底層責任；這正是 Foxconn 軟體部門最該去承接、也最容易變成年約的價值。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
