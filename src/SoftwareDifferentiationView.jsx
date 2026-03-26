@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { executiveBrief, softwareDepartmentScorecard } from './executive-brief.js';
 import { softwareDifferentiation, financialImpactCalculator, softwareMoatSummary } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
+import { competitiveSources } from './competitive-sources.js';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
@@ -303,6 +304,38 @@ const SoftwareDifferentiationView = () => {
               </div>
               <div className="mt-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
                 <p className="text-sm font-semibold text-violet-900">管理層該記住的一句話：<span className="text-slate-700">最值得投資的不是 another dashboard，而是願意對 brownfield、air-gap、facility event、remote-ops 結果負責的軟體能力。</span></p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-blue-200 shadow-sm">
+              <h4 className="text-lg font-black text-blue-900 mb-2">官方來源交叉驗證：市場真的在把 Day-2 營運寫進產品定位</h4>
+              <p className="text-sm text-slate-700 mb-4">這一段不是再重複內部觀點，而是直接把官方產品敘事攤開看：AI 基礎建設的 buying language 已經從硬體規格，移到 lifecycle、availability、air-gapped operations、以及 factory-to-operations accountability。這正是軟體部門最有資格主張、也最能被定價的位置。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  competitiveSources.nvidia[1],
+                  competitiveSources.hpe[1],
+                  competitiveSources.dell[0],
+                  competitiveSources.enterprisePlatforms.find((item) => item.name.includes('Disconnected Environments')),
+                ].filter(Boolean).map((item, idx) => (
+                  <div key={idx} className="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h5 className="text-sm font-black text-blue-800">{item.name}</h5>
+                      <span className="text-[11px] font-bold text-blue-600 whitespace-nowrap">{item.lastVerified ? `Verified ${item.lastVerified}` : 'Official source'}</span>
+                    </div>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">市場怎麼賣：</span>{item.keyFeature}</p>
+                      {item.limitation && <p><span className="font-bold text-amber-700">限制：</span>{item.limitation}</p>}
+                      {item.ourAdvantage && <p><span className="font-bold text-emerald-700">Foxconn 可切入：</span>{item.ourAdvantage}</p>}
+                    </div>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline">
+                      <ExternalLink className="w-3 h-3" />
+                      官方來源
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <p className="text-sm font-semibold text-blue-900">董事會一句話：連 NVIDIA、HPE、Dell、Red Hat 都已經把 lifecycle、continuous availability、air-gapped operations 與 end-to-end handoff 擺到產品前台，Foxconn 若不把軟體部門獨立出來承接這些責任，就只會被看成可替換的硬體供應商。</p>
               </div>
             </div>
 
