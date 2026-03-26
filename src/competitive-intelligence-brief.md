@@ -144,7 +144,7 @@
 
 **Investment Required:** NT$ 65M/year (50-80 person team + lab + tools)  
 **Expected Return:** Year 3: NT$ 750M software revenue, 20-25% gross margin, 11.5x ROI  
-**Risk of Inaction:** By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity. **Historical Parallel:** Quanta Computer's AI server business (2024-2025) — lacked software differentiation, competed on 8-12% hardware margins, lost strategic accounts to NVIDIA DGX Cloud and hyperscaler one-stop solutions. Foxconn's software investment is the difference between being a strategic partner (20-25% margin) and a contract manufacturer (5-8% margin).
+**Risk of Inaction:** By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity. **Comparable market pattern:** public OEM/ODM positioning still skews heavily toward hardware delivery, while higher-margin AI infrastructure narratives from NVIDIA, Dell, HPE, and Nutanix increasingly center on lifecycle operations, governance, recoverability, and AI operating models. The strategic risk for Foxconn is not one specific competitor case, but being grouped into the broader hardware-only bucket while software-led players capture the budget tied to Day-2 accountability. Foxconn's software investment is the difference between being a strategic partner (20-25% margin) and a contract manufacturer (5-8% margin).
 
 ---
 
