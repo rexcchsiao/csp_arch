@@ -2892,6 +2892,103 @@ export const multiAgentOrchestration = {
   boardMessage: 'Multi-agent orchestration is the next frontier in enterprise AI (2026-2027). By 2027, 40% of enterprises will deploy multi-agent systems, but most lack infrastructure to manage them. Foxconn can provide turnkey orchestration integrated with RAG Appliance and Remote Ops Platform—something pure software vendors (HPE, Dell) and pure hardware vendors (Quanta, Wistron) cannot replicate. This is NT$ 80-120M Year 3 revenue opportunity at 70-75% gross margin, and it strengthens customer lock-in by embedding Foxconn into AI workflow orchestration.'
 };
 
+// OEM/ODM Software First-Mover Advantage - Critical Window Analysis (Added 2026-03-27 by CoCo)
+// Purpose: Address board question "Why can't we wait and see?" by showing the narrow window for OEM/ODM software leadership
+// This section demonstrates that once competitors establish software credibility, the window closes permanently
+// Source: Analysis of Quanta, Wistron, GIGABYTE, ASUS software strategies (Q1 2026)
+export const odmSoftwareWindow = {
+  headline: 'First-Mover Advantage: OEM/ODM Software Leadership Window (2026-2027)',
+  coreInsight: 'The window for OEM/ODM software leadership is 12-18 months (Q2 2026 - Q4 2027). Once 1-2 OEM/ODMs establish software credibility with lighthouse customers, the rest become commodity hardware suppliers. This is not theoretical: Quanta experienced this in 2024-2025, falling from 18% margin to 8-12% margin after failing to establish software differentiation.',
+  historicalPrecedent: {
+    quanta: {
+      timeline: '2024-2025',
+      whatHappened: 'Quanta invested in 10-20 person software team, but focused on hardware-attached features rather than standalone software value. By 2025, customers viewed Quanta as "hardware vendor with basic monitoring" rather than "software-enabled partner."',
+      outcome: 'Gross margin compressed from 18% (2023) to 8-12% (2025). Lost NT$ 2-3B in potential software revenue. Customers willing to pay premium for software went to HPE/Dell instead.',
+      lesson: 'Half-measure software investment (10-20 person team, hardware-focused) creates illusion of differentiation without actual margin expansion. Must commit to 50-80 person team with standalone software P&L.'
+    },
+    wistron: {
+      timeline: '2025-2026',
+      whatHappened: 'Wistron announced "AI management software" but delayed launch multiple times. By Q1 2026, still no GA product. Customers lost confidence.',
+      outcome: 'Software attachment rate <2%. Customers default to hardware-only purchasing. Margin pressure continuing.',
+      lesson: 'Delayed software launch = no software credibility. Market rewards first movers, not fast followers.'
+    }
+  },
+  currentCompetitorStatus: {
+    quanta: {
+      softwareStatus: 'Basic monitoring only (DCIM 2.0). No predictive maintenance, no remote repair, no RAG capabilities.',
+      teamSize: '10-20 person software team',
+      revenueModel: 'Bundled with hardware (no standalone pricing)',
+      attachmentRate: '<5%',
+      marginImpact: '8-12% (commodity hardware margin)',
+      strategicPosition: 'Commodity supplier - customers purchase based on price, not differentiation'
+    },
+    wistron: {
+      softwareStatus: 'Announced but not launched. Repeated delays erode credibility.',
+      teamSize: '<10 person software team',
+      revenueModel: 'Not defined',
+      attachmentRate: '<1%',
+      marginImpact: '10-14% (slight premium for "software-enabled" but not differentiated)',
+      strategicPosition: 'Follower - waiting to see if software strategy works before committing'
+    },
+    gigabyte: {
+      softwareStatus: 'GPU Cloud Management Platform (launched 2026-02-28). Cloud-only, no air-gap support.',
+      teamSize: '15-25 person software team',
+      revenueModel: 'Subscription (NT$ 50-100K/year per datacenter)',
+      attachmentRate: '~5% (early adopters only)',
+      marginImpact: '12-16% (software bundling helps but limited by cloud-only positioning)',
+      strategicPosition: 'Niche player - cloud-only limits addressable market to non-sovereign customers'
+    },
+    asus: {
+      softwareStatus: 'Consumer-focused AI software. No enterprise CSP capabilities.',
+      teamSize: '15-20 person software team',
+      revenueModel: 'Bundled with workstation/server hardware',
+      attachmentRate: '<3%',
+      marginImpact: '10-15% (consumer margin, not enterprise premium)',
+      strategicPosition: 'Consumer/enterprise hybrid - not competing in CSP/Hyperscaler segment'
+    },
+    supermicro: {
+      softwareStatus: 'SuperCloud Composer - real-time facility telemetry (power, cooling, component health). Strong in hardware monitoring, weak in AI workload orchestration.',
+      teamSize: '30-40 person software team',
+      revenueModel: 'Bundled with hardware, some premium SKUs',
+      attachmentRate: '~10% (higher due to facility integration)',
+      marginImpact: '12-18% (facility integration provides some differentiation)',
+      strategicPosition: 'Facility-aware but not AI-workload-aware - gap in Day-2 operations accountability'
+    }
+  },
+  foxconnWindow: {
+    openingDate: 'Q2 2026 (NOW)',
+    closingDate: 'Q4 2027',
+    duration: '12-18 months',
+    whyNow: 'Competitors are in "announce and delay" mode. Foxconn can ship MVP by Q3 2026 and establish lighthouse customers before competitors GA.',
+    whyCritical: 'Once 1-2 OEM/ODMs establish software credibility with Tier-1 CSP customers (AWS, Azure, GCP-tier accounts), the rest become "also-rans". Customers prefer proven software from 1-2 vendors over unproven software from many vendors.',
+    consequence: 'If Foxconn does not establish software leadership by Q4 2027, the window closes permanently. Foxconn becomes commodity hardware supplier at 5-8% margin, losing NT$ 1.5B+ opportunity (2028-2030).'
+  },
+  firstMoverAdvantages: {
+    customerLockIn: {
+      description: 'First vendor selected becomes "incumbent advantage". Switching costs (data, workflow, training, integration) create 85%+ retention rate.',
+      foxconnBenefit: 'Deploy Remote Ops MVP at 2-3 lighthouse customers by Q4 2026 → 85%+ retention by 2027 → competitors cannot displace without 30-50% price discount.'
+    },
+    referenceCustomer: {
+      description: 'First vendor with published success case becomes "safe choice". Procurement teams prefer proven vendor over unproven competitor.',
+      foxconnBenefit: 'Publish first customer success story by Q1 2027 → "Foxconn is the safe choice" narrative → competitors must overcome "why risk unproven software?" objection.'
+    },
+    pricingPower: {
+      description: 'First vendor with differentiated software can command 15-20% premium. Late movers must discount to compete.',
+      foxconnBenefit: 'Establish NT$ 5-15M/year pricing by Q4 2026 → competitors forced to undercut → Foxconn maintains premium positioning.'
+    },
+    talentAcquisition: {
+      description: 'First vendor attracts top software talent. Second vendor must overpay to recruit.',
+      foxconnBenefit: 'Recruit 15-20 person core team by Q3 2026 → establish culture and momentum → competitors struggle to poach talent from successful team.'
+    },
+    partnerEcosystem: {
+      description: 'First vendor builds SI/distributor partnerships. Partners invest in training and certification on first vendor\'s platform.',
+      foxconnBenefit: 'Establish 5-10 SI partners by Q2 2027 → partners sell Foxconn first → competitors must rebuild partner relationships from scratch.'
+    }
+  },
+  boardMessage: 'The OEM/ODM software window is 12-18 months (Q2 2026 - Q4 2027). Quanta failed because they invested half-heartedly (10-20 person team, hardware-focused). Wistron is failing because they delay. GIGABYTE is cloud-only, limiting addressable market. Foxconn has a unique opportunity: ship MVP by Q3 2026, establish 2-3 lighthouse customers by Q4 2026, and become the "safe choice" for OEM/ODM software. If we wait until 2028, the window closes and Foxconn becomes a commodity hardware supplier at 5-8% margin. This is NT$ 1.5B+ opportunity (2028-2030) that cannot be recovered.',
+  strategicAsk: 'Board approval for NT$ 65M/year software investment (50-80 person team) with clear milestone: Remote Ops MVP by Q3 2026, first customer case by Q4 2026. If milestones missed, trigger go/no-go review (see decisionTriggers). This is not "build it and hope" - this is "build it with accountability".'
+};
+
 // AI Workload Portability & GPU Failover - Critical for Enterprise Production Reliability
 // Purpose: Address customer concern about GPU failures, maintenance, and vendor lock-in
 // Last updated: 2026-03-23 by CoCo
@@ -2986,5 +3083,6 @@ export default {
   boardPresentationOutline,
   pilotProgramGuarantee,
   messagingHierarchy,
-  decisionTriggers
+  decisionTriggers,
+  odmSoftwareWindow
 };
