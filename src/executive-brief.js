@@ -3086,3 +3086,108 @@ export default {
   decisionTriggers,
   odmSoftwareWindow
 };
+
+// Board Investment Decision Checklist - Quick Validation Framework (Added 2026-03-27 by CoCo)
+// Purpose: Give board members a simple 5-question checklist to validate investment thesis
+// Format: Yes/No questions with objective criteria; 4+ "Yes" = Strong buy signal
+// AI Factory OS: Strategic Framing (Added 2026-03-27 by CoCo)
+// Purpose: Provide board members with intuitive mental model for Foxconn software value
+// Analogy: Just as Windows transformed PCs from hardware boxes into productive tools,
+// Foxconn AI Factory OS transforms GPU clusters from stranded capital into revenue-generating AI factories
+export const aiFactoryOS = {
+  headline: 'AI Factory OS: The Operating System for AI Infrastructure',
+  coreAnalogy: {
+    historical: 'In the 1980s, PCs were commodity hardware until Microsoft Windows provided a unified operating system. Hardware vendors (IBM, Dell, HP) who bundled Windows became strategic partners. Those who sold "bare metal" became commodity suppliers.',
+    current: 'Today, AI server clusters are at the same inflection point. GPUs are the new PC hardware. AI Factory OS is the new Windows. Foxconn software transforms raw GPU clusters into predictable, governable, revenue-generating AI factories.',
+    implication: 'Without AI Factory OS, Foxconn becomes a contract manufacturer for hyperscalers\' own brands (5-8% margin). With AI Factory OS, Foxconn becomes a strategic partner (20-25% margin).'
+  },
+  whatItIs: [
+    { layer: 'L9-L10: Firmware & Hardware Abstraction', windows: 'Device drivers', foxconn: 'BMC firmware, GPU power management, 800V power architecture, Redfish API' },
+    { layer: 'L11: Container & Orchestration', windows: 'Process management', foxconn: 'K8s-native scheduling, GPU virtualization (MIG/vGPU), multi-tenant isolation' },
+    { layer: 'L12: Application & Governance', windows: 'User applications + policies', foxconn: 'Remote Ops Platform, RAG Appliance, quota/SLA governance, observability, audit trails' }
+  ],
+  keyCapabilities: [
+    { capability: 'Hardware Abstraction', description: 'Unified interface to heterogeneous GPU fleets (NVIDIA + AMD)', customerValue: 'No vendor lock-in; migrate workloads based on cost/performance, not compatibility' },
+    { capability: 'Resource Orchestration', description: 'Intelligent scheduling across GPU clusters', customerValue: '85%+ utilization vs. 40-60% industry average; NT$ 4-6M saved per 100-server cluster' },
+    { capability: 'Lifecycle Management', description: 'From factory preload to Day-2 operations', customerValue: '2-hour deployment vs. 2-4 weeks; single accountable owner for hardware + software' },
+    { capability: 'Observability & Governance', description: 'Full-stack telemetry from BMC to application layer', customerValue: 'Predict failures 7 days in advance; 70% remote fix rate; compliance audit trails' },
+    { capability: 'Energy Optimization', description: 'AI-driven power/cooling control integrated with workload scheduling', customerValue: 'PUE from 1.6 → 1.4; 15-25% energy cost savings (NT$ 8-12M/year per 1MW datacenter)' }
+  ],
+  competitivePositioning: {
+    nvidia: { name: 'NVIDIA Mission Control', limitation: 'Optimized for NVIDIA GPUs only. Cannot manage AMD workloads. Locks customers into NVIDIA ecosystem.', foxconnAdvantage: 'Neutral architecture: NVIDIA + AMD + future vendors. Customer choice preserved.' },
+    hpe: { name: 'HPE Private Cloud AI', limitation: 'Requires HPE hardware. Proprietary ecosystem lock-in. Limited brownfield integration.', foxconnAdvantage: 'Works with existing infrastructure. Brownfield-friendly. No rip-and-replace required.' },
+    dell: { name: 'Dell AI Factory (Red Hat OpenShift)', limitation: 'Relies on Red Hat/VMware stack. No native L9-L10 hardware integration.', foxconnAdvantage: 'Deep hardware+software synergy: BMC telemetry + K8s orchestration = predictive capabilities pure software vendors cannot replicate.' },
+    hyperscalers: { name: 'AWS/Azure/GCP AI Services', limitation: 'Cloud-only. Data must leave premises. Not sovereign AI compliant.', foxconnAdvantage: 'On-premise deployment. Air-gap capable. Data residency guaranteed. Sovereign AI compliant.' }
+  },
+  financialFraming: {
+    withoutSoftware: { margin: '5-8%', model: 'Commodity hardware supplier', customerPerception: 'Interchangeable with Quanta, Wistron, GIGABYTE', revenueType: 'One-time hardware sales' },
+    withSoftware: { margin: '20-25%', model: 'Strategic AI infrastructure partner', customerPerception: 'Unique value: hardware + software + accountability', revenueType: 'Recurring subscription + services (60-75% gross margin)' },
+    delta: 'NT$ 1.5B+ cumulative opportunity by 2028. ROI: 11.5x. Payback: 18-24 months.'
+  },
+  boardMessage: 'AI Factory OS is not a product—it\'s a strategic frame. It tells the board: (1) Software is not an accessory; it\'s the operating system that makes hardware valuable. (2) Foxconn is not selling "features"; we\'re selling the AI equivalent of Windows for datacenters. (3) The choice is binary: become a strategic partner (20-25% margin) or a commodity supplier (5-8% margin). There is no middle ground.',
+  elevatorPitch: 'Foxconn AI Factory OS does for AI datacenters what Windows did for PCs: transforms raw hardware into a productive, governable, revenue-generating platform. Same GPUs, 2x output. Same hardware, strategic partner status.'
+};
+
+// Board Investment Decision Checklist - Quick Validation Framework (Added 2026-03-27 by CoCo)
+// Purpose: Give board members a simple 5-question checklist to validate investment thesis
+// Format: Yes/No questions with objective criteria; 4+ "Yes" = Strong buy signal
+export const investmentDecisionChecklist = {
+  headline: "Investment Decision Checklist: Should Foxconn Invest in Software?",
+  instructions: "Answer each question objectively. 4+ 'Yes' answers = Strong investment case. <3 'Yes' = Reassess strategy.",
+  questions: [
+    {
+      id: 1,
+      question: "Is hardware-only AI server business at risk of commoditization?",
+      criteria: "Check: Are competitors (Quanta, Wistron, GIGABYTE) competing on price? Is gross margin trending toward 10-15% or below?",
+      marketSignal: "OEM/ODM hardware margins already at 10-15%; NVIDIA/HPE/Dell capturing 20-25%+ with software-attached solutions",
+      foxconnImplication: "Without software differentiation, Foxconn faces 5-8% margin by 2028 (commodity supplier territory)",
+      answer: "YES",
+      evidence: "Quanta 2024-2025 financials: 8-12% hardware margins; lost strategic accounts to NVIDIA DGX Cloud and hyperscaler one-stop solutions"
+    },
+    {
+      id: 2,
+      question: "Are customers willing to pay premium for software-enabled outcomes?",
+      criteria: "Check: Are competitors successfully selling software-attached solutions at 20-25%+ margins?",
+      marketSignal: "NVIDIA Mission Control, HPE Private Cloud AI, Dell AI Factory all commanding premium pricing; attach rate increasing from 15% (2025) to 45% (2028)",
+      foxconnImplication: "NT$ 750M Year 3 revenue opportunity at 60-75% gross margin vs. 10-15% hardware-only",
+      answer: "YES",
+      evidence: "HPE explicitly sells 'deploy AI in days, not months'; NVIDIA positions Mission Control as 'world-class operations team delivered as software'; customers paying 15-20% premium for deployment assurance and Day-2 accountability"
+    },
+    {
+      id: 3,
+      question: "Does Foxconn have defensible competitive advantages?",
+      criteria: "Check: Can competitors easily replicate Foxconn's software capability? What moats exist?",
+      marketSignal: "Pure software vendors (HPE, Dell) lack L9-L10 hardware integration. Pure hardware vendors (Quanta, Wistron) lack L11-L12 orchestration capability.",
+      foxconnImplication: "Only OEM/ODM with L9-L12 full-stack capability, neutral architecture (NVIDIA+AMD), brownfield integration, and factory-to-operations handoff",
+      answer: "YES",
+      evidence: "Foxconn can integrate BMC telemetry (L9-L10) with workload orchestration (L11-L12) - competitors would need to destroy existing business models to replicate"
+    },
+    {
+      id: 4,
+      question: "Is the investment financially attractive?",
+      criteria: "Check: Does ROI exceed cost of capital? Is payback period acceptable?",
+      marketSignal: "Tech industry cost of capital: 12-15%. Typical IT project ROI: 20-30%",
+      foxconnImplication: "NT$ 65M/year investment → NT$ 750M Year 3 revenue, 11.5x ROI, 18-24 month payback, 68% IRR",
+      answer: "YES",
+      evidence: "Even worst-case scenario (NT$ 400M Year 3 revenue) still generates positive NPV; break-even at 54% of target (NT$ 43M Year 1 revenue)"
+    },
+    {
+      id: 5,
+      question: "Is the window of opportunity time-limited?",
+      criteria: "Check: Will competitors lock in customers if Foxconn delays? How long before market closes?",
+      marketSignal: "NVIDIA, HPE, Dell already establishing software narratives. Quanta/Wistron announcing software partnerships. Customer procurement criteria shifting to software-enabled outcomes.",
+      foxconnImplication: "12-18 month window (Q2 2026 - Q4 2027) to establish credibility before competitors lock in customers",
+      answer: "YES",
+      evidence: "Quanta software partnership announcement (2026-03-05) signals OEM/ODM software competition beginning; every quarter of delay costs NT$ 100-200M in foregone revenue"
+    }
+  ],
+  scoring: {
+    fiveYes: "STRONG BUY - All criteria met. Proceed with investment immediately.",
+    fourYes: "BUY - Strong case. Minor concerns can be addressed during execution.",
+    threeYes: "HOLD - Investment case marginal. Reassess strategy or reduce scope.",
+    twoOrLess: "NO INVEST - Fundamental issues. Do not proceed."
+  },
+  boardMessage: "This checklist forces objective evaluation of the investment thesis. All 5 questions must be answered 'YES' to proceed. If any answer is 'NO' or 'UNSURE', the board should request additional analysis before approval.",
+  riskOfDelay: "Every quarter of delay: NT$ 100-200M foregone revenue + customer trust erosion + talent acquisition challenges. Competitors are not waiting. The window closes Q4 2027."
+};
+

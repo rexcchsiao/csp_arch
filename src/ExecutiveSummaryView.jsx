@@ -6,7 +6,7 @@ import { customerSuccessScenarios, executiveSummary } from './customer-success-s
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
-import { aiSupplyChainSecurity, modelPerformanceMonitoring, aiInfrastructureSecurity } from './executive-brief.js';
+import { aiSupplyChainSecurity, modelPerformanceMonitoring, aiInfrastructureSecurity, aiFactoryOS, investmentDecisionChecklist } from './executive-brief.js';
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis.js';
 
 const ExecutiveSummaryView = () => {
@@ -784,7 +784,121 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
-      {/* Software value chain - board-level translation from technical work to commercial outcomes */}
+      {/* AI Factory OS - Strategic framing for board members */}
+<div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+  <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+    <Layers className="w-5 h-5 text-indigo-600" /> AI Factory OS：把 GPU 叢集變成可營運、可治理、可持續獲利的 AI 工廠
+  </h3>
+  <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+    這段給董事會一個超直觀的心智模型：<span className="font-semibold text-slate-900">就像 Windows 讓 PC 硬體變成可生产力工具，Foxconn AI Factory OS 讓 GPU 叢集從閒置資本變成可預測、可治理、持續產生營收的 AI 工廠。</span> 沒有 AI Factory OS，Foxconn 就是合約製造商（5-8% 毛利）；有了 AI Factory OS，Foxconn 是戰略合作夥伴（20-25% 毛利）。
+  </p>
+  <div className="grid md:grid-cols-3 gap-4 mb-6">
+    <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
+      <p className="text-xs font-black uppercase tracking-widest text-indigo-600 mb-2">歷史對照</p>
+      <p className="text-sm font-black text-slate-900 mb-3">1980s PC 產業</p>
+      <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+        <p><span className="font-bold text-slate-500">當時情況：</span>PC 是 commodity 硬體，直到 Microsoft Windows 提供統一的作業系統。</p>
+        <p><span className="font-bold text-blue-700">結果：</span>有綁 Windows 的硬體廠（IBM、Dell、HP）變成戰略合作夥伴，只賣裸機的被歸類成 commodity supplier。</p>
+      </div>
+    </div>
+    <div className="rounded-2xl border border-purple-100 bg-purple-50 p-5">
+      <p className="text-xs font-black uppercase tracking-widest text-purple-600 mb-2">現在狀況</p>
+      <p className="text-sm font-black text-slate-900 mb-3">2026 AI Server 產業</p>
+      <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+        <p><span className="font-bold text-slate-500">現在情況：</span>GPU 是新 PC 硬體，AI Factory OS 是新 Windows。</p>
+        <p><span className="font-bold text-emerald-700">Foxconn 機會：</span>把 raw GPU clusters 變成 predictable、governable、revenue-generating 的 AI 工廠。</p>
+      </div>
+    </div>
+    <div className="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+      <p className="text-xs font-black uppercase tracking-widest text-amber-600 mb-2">戰略含意</p>
+      <p className="text-sm font-black text-slate-900 mb-3">二選一的選擇</p>
+      <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+        <p><span className="font-bold text-slate-500">沒有軟體：</span>合約製造商，5-8% 毛利，客戶覺得你跟 Quanta、Wistron 沒差。</p>
+        <p><span className="font-bold text-amber-700">有 AI Factory OS：</span>戰略合作夥伴，20-25% 毛利，客戶覺得你不可替代。</p>
+      </div>
+    </div>
+  </div>
+  <div className="grid md:grid-cols-2 gap-4">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">AI Factory OS 三層架構</p>
+      <div className="space-y-3 text-xs text-slate-700">
+        {aiFactoryOS.whatItIs?.map((layer, idx) => (
+          <div key={idx} className="border-b border-slate-200 pb-2 last:border-b-0">
+            <p className="font-bold text-slate-900">{layer.layer}</p>
+            <p><span className="text-slate-500">Windows 對應：</span>{layer.windows}</p>
+            <p><span className="text-emerald-700">Foxconn 實作：</span>{layer.foxconn}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">關鍵能力與客戶價值</p>
+      <div className="space-y-3 text-xs text-slate-700">
+        {aiFactoryOS.keyCapabilities?.map((cap, idx) => (
+          <div key={idx} className="border-b border-slate-200 pb-2 last:border-b-0">
+            <p className="font-bold text-slate-900">{cap.capability}</p>
+            <p><span className="text-slate-500">描述：</span>{cap.description}</p>
+            <p><span className="text-emerald-700">客戶價值：</span>{cap.customerValue}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
+    <p className="text-sm font-semibold text-indigo-900">董事會該記住：<span className="text-slate-700">AI Factory OS 不是產品，是戰略框架。它告訴董事會：(1) 軟體不是配件，是讓硬體有價值的作業系統；(2) Foxconn 不是在賣功能，是在賣 AI 等級的 Windows for datacenters；(3) 選擇是二元的：戰略合作夥伴（20-25% 毛利）或 commodity supplier（5-8% 毛利），沒有中間地帶。</span></p>
+  </div>
+</div>
+
+{/* Investment Decision Checklist - 5-question board validation framework */}
+<div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+  <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+    <CheckCircle className="w-5 h-5 text-emerald-600" /> 投資決策檢核表：5 個問題快速驗證軟體投資案例
+  </h3>
+  <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+    這個檢核表給董事會一個客觀框架來評估投資案例：<span className="font-semibold text-slate-900">{investmentDecisionChecklist.instructions}</span> 所有 5 個問題都必須回答「YES」才能繼續。如果有任何一個是「NO」或「不確定」，董事會應要求更多分析。
+  </p>
+  <div className="space-y-4">
+    {investmentDecisionChecklist.questions?.map((q) => (
+      <div key={q.id} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+        <div className="flex items-start gap-3 mb-3">
+          <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-black text-slate-900">問題 {q.id}：{q.question}</p>
+            <p className="text-xs text-slate-600 mt-1"><span className="font-bold">驗證標準：</span>{q.criteria}</p>
+          </div>
+        </div>
+        <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+          <p><span className="font-bold text-slate-500">市場訊號：</span>{q.marketSignal}</p>
+          <p><span className="font-bold text-emerald-700">Foxconn 含意：</span>{q.foxconnImplication}</p>
+          <p><span className="font-bold text-amber-700">證據：</span>{q.evidence}</p>
+        </div>
+        <div className="mt-3 flex items-center gap-2">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-black bg-emerald-600 text-white">{q.answer}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div className="mt-6 grid md:grid-cols-2 gap-4">
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-2">評分標準</p>
+      <ul className="space-y-2 text-xs text-slate-700">
+        <li><span className="font-bold text-emerald-700">5 個 YES：</span>{investmentDecisionChecklist.scoring?.fiveYes}</li>
+        <li><span className="font-bold text-blue-700">4 個 YES：</span>{investmentDecisionChecklist.scoring?.fourYes}</li>
+        <li><span className="font-bold text-amber-700">3 個 YES：</span>{investmentDecisionChecklist.scoring?.threeYes}</li>
+        <li><span className="font-bold text-red-700">≤2 個 YES：</span>{investmentDecisionChecklist.scoring?.twoOrLess}</li>
+      </ul>
+    </div>
+    <div className="rounded-xl border border-red-100 bg-red-50 p-4">
+      <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-2">延遲的代價</p>
+      <p className="text-xs text-slate-700 leading-relaxed">{investmentDecisionChecklist.riskOfDelay}</p>
+    </div>
+  </div>
+  <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+    <p className="text-sm font-semibold text-emerald-900">董事會行動呼籲：<span className="text-slate-700">{investmentDecisionChecklist.boardMessage}</span></p>
+  </div>
+</div>
+
+{/* Software value chain - board-level translation from technical work to commercial outcomes */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-blue-600" /> 董事會最該記住的 4 段價值鏈：軟體工作如何直接變成毛利與續約
