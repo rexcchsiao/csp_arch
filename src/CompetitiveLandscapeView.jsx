@@ -297,6 +297,30 @@ const CompetitiveLandscapeView = () => {
                 ))}
               </div>
 
+              <div className="mt-4 p-5 bg-white rounded-2xl border border-violet-100">
+                <div className="flex items-start gap-3 mb-4">
+                  <AlertTriangle className="w-5 h-5 text-rose-500 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-violet-900">再講白一點：沒有軟體部門，案子最容易死在哪些採購關卡？</h4>
+                    <p className="text-xs text-slate-600 mt-1">這不是功能少不少的問題，而是客戶會直接質疑誰對上線、升級、治理與 handoff 負責。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {softwareDifferentiation.procurementDisqualifiers.items.slice(0, 4).map((item, idx) => (
+                    <div key={idx} className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                      <p className="text-xs font-black text-rose-800 mb-2">{item.title}</p>
+                      <div className="space-y-2 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">為什麼會卡：</span>{item.whyItKillsDeals}</p>
+                        <p><span className="font-bold text-violet-700">Foxconn 該補位：</span>{item.foxconnImplication}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+                  <p className="text-sm font-semibold text-violet-900">一句話總結：如果沒有獨立的軟體 owner，Foxconn 就很難在採購最後一哩清楚回答「多久能上線、誰接住升級風險、共享之後怎麼治理、交機後誰負責 handoff」。</p>
+                </div>
+              </div>
+
               <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="p-4 bg-white rounded-2xl border border-violet-100">
                   <p className="text-xs font-bold text-violet-500 uppercase tracking-wide mb-2">可對應預算 owner</p>
