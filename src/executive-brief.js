@@ -3610,6 +3610,47 @@ export const partnerEcosystem = {
 // Foxconn Manufacturing DNA: The Unfair Advantage in AI Infrastructure (Added 2026-03-28 by CoCo)
 // Purpose: Highlight Foxconn's unique manufacturing heritage as defensible differentiation
 // Why it matters: HPE/Dell sell software licenses. Quanta/Wistron sell hardware boxes. Foxconn sells production-ready AI infrastructure.
+// Strategic Summary: 5 Board-Level Insights Every Director Should Remember (Added 2026-03-28 by CoCo)
+// Purpose: Distill 100+ pages of analysis into 5 memorable, repeatable insights
+// Usage: Board pre-read, executive conversations, investor Q&A
+export const strategicSummary = {
+  headline: 'Foxconn Software Strategy: 5 Board-Level Insights',
+  subtitle: 'If the board remembers nothing else, remember these 5 points',
+  insights: [
+    {
+      insight: '1. The Window Is Closing: 12-18 Months to Establish Software Credibility',
+      evidence: 'Q2 2026-Q4 2027 is the strategic window before hyperscalers lock in customers with entrenched solutions',
+      urgency: 'Every quarter of delay costs NT$ 100-200M in foregone revenue + customer trust',
+      action: 'Approve NT$ 65M/year investment in Q2 2026 to capture first-mover advantage in OEM/ODM space'
+    },
+    {
+      insight: '2. Software Transforms Margin Profile: From 5-8% (Commodity) to 20-25% (Strategic Partner)',
+      evidence: 'Remote Ops + RAG Appliance generate NT$ 750M Year 3 revenue at 20-25% gross margin vs. 10-15% hardware-only',
+      urgency: 'Without software, Foxconn becomes contract manufacturer for hyperscalers own brands',
+      action: 'Establish software P&L with separate margin targets and sales incentives'
+    },
+    {
+      insight: '3. Foxconn Unique Advantage: L9-L12 Full-Stack Capability That Competitors Cannot Replicate',
+      evidence: 'Only Foxconn has manufacturing DNA (200+ factories), neutral architecture (NVIDIA+AMD), and brownfield integration capability',
+      urgency: 'HPE/Dell lack L9-L10 hardware access; Quanta/Wistron lack software depth; hyperscalers lack on-premise focus',
+      action: 'Invest in 50-80 FTE team with L9-L12 depth; leverage partner ecosystem (Red Hat, Canonical) for acceleration'
+    },
+    {
+      insight: '4. Customer Pain Is Real and Quantified: 40-60% GPU Idle Time, 2-4 Week Deployment, 70% On-Site Repair Rate',
+      evidence: 'Customer audit data from 3 CSP datacenters (Q1 2026); NT$ 3-5M revenue loss per 6-hour outage',
+      urgency: 'Customers are actively seeking alternatives to hyperscaler lock-in and hardware-only vendors',
+      action: 'Deploy Remote Ops MVP by Q3 2026 and RAG Appliance by Q4 2026 with 90-day KPI guarantee'
+    },
+    {
+      insight: '5. Risk of Inaction Exceeds Investment Risk: NT$ 1.5B+ Opportunity Loss by 2028',
+      evidence: 'Cumulative impact: NT$ 80M (Year 1) + NT$ 250M (Year 2) + NT$ 750M (Year 3) + margin erosion',
+      urgency: 'Quanta precedent: hardware-only vendors compress to 8-12% margin; software-enabled vendors achieve 18-25%',
+      action: 'Approve investment with Q4 2026 go/no-go review: <2.5% attachment rate triggers reassessment'
+    }
+  ],
+  oneSentenceSummary: 'Foxconn software transforms AI infrastructure from commodity hardware (5-8% margin) to strategic platform (20-25% margin), but only if we act in the next 12-18 months before competitors lock in customers.',
+  boardMessage: 'These 5 insights distill 100+ pages of analysis into memorable, actionable points. Board members should be able to recite these from memory after the presentation. The strategic choice is clear: invest NT$ 65M/year now to capture NT$ 750M Year 3 revenue at 20-25% margin, or risk commoditization at 5-8% margin by 2028.'
+};
 export const foxconnManufacturingAdvantage = {
   headline: 'Foxconn Manufacturing DNA: The Unfair Advantage in AI Infrastructure',
   coreInsight: 'Foxconn is not just another OEM/ODM — we are THE manufacturing company that understands production AI deployment. While HPE/Dell sell software licenses and Quanta/Wistron sell hardware boxes, Foxconn sells production-ready AI infrastructure that works at scale. This is our manufacturing DNA advantage.',
