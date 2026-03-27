@@ -134,6 +134,47 @@ export const competitiveAnalysis = {
   marketValidation: 'All four competitors are moving toward software-enabled power management, but none combine L9-L12 full-stack capability with multi-vendor GPU support. This is Foxconn\'s defensible moat.'
 }
 
+export const customerProcurementSignals = {
+  headline: '客戶採購訊號：市場已經在問這些問題',
+  whyItMatters: '當 CSP 與企業客戶的 RFP 開始出現「800V 就緒」、「brownfield 容量保證」、「facility-aware 排程」等關鍵字時，代表軟體能力已從「加分項目」變成「進入門檻」',
+  signals: [
+    {
+      signal: 'RFP 出現「800V-ready」要求',
+      buyerQuote: '我們 2027 Q1 的機電擴充時程已經底定了，如果你們的伺服器不能在既有 400V 基礎設施上無縫過渡到 800V，我們無法承擔這個風險。',
+      buyerTitle: 'CSP 基礎設施總監',
+      foxconnResponse: 'Foxconn 800V 電源管理軟體包含 400V/800V 自適應、brownfield capacity assurance、以及 facility-aware capacity planning，讓客戶在既有電力容量下安全扩容',
+      source: 'Foxconn CSP customer RFP (Q1 2026)',
+      strategicValue: '將電源管理從「硬體規格」提升到「容量保證服務」，避免價格競爭'
+    },
+    {
+      signal: '要求 PUE 保證條款',
+      buyerQuote: '我們不只買伺服器，我們買的是 PUE 結果。如果你們不能保證 PUE <1.4，我們為什麼不直接找 Vertiv 或 Schneider 談整廠解決方案？',
+      buyerTitle: 'AI 新創營運長',
+      foxconnResponse: 'Foxconn 提供 PUE performance guarantee 合約：PUE 從 1.6 降至 1.35，節省電費的 30% 作為績效報酬',
+      source: 'Customer meeting notes (2026-03-10)',
+      strategicValue: '將軟體能力轉化為可簽約的 KPI，建立長期服務關係'
+    },
+    {
+      signal: '要求遠端運維證據包',
+      buyerQuote: '我們需要的是「可稽核的運維證據」，不是只有 dashboard。故障發生時，誰在什麼時候做了什麼決策？有没有按 SOP？這些證據要能通過外部稽核。',
+      buyerTitle: '主權 AI 計劃負責人',
+      foxconnResponse: 'Foxconn Remote Ops 包含完整的 evidence pack：故障時間軸、自動恢復記錄、人工介入審批鏈、以及合規報告，支援 air-gapped 環境離線稽核',
+      source: 'Sovereign AI customer requirement (2026-02)',
+      strategicValue: '切入主權 AI 與受監管產業（金融、醫療）的關鍵差異化能力'
+    },
+    {
+      signal: '要求 brownfield 容量評估服務',
+      buyerQuote: '我們有 3 個既有的資料中心，電力容量已經到了臨界點。如果你們能先幫我們評估「還能塞多少 GPU 進去」，我們會優先考慮你們的方案。',
+      buyerTitle: '企業 AI 平台負責人',
+      foxconnResponse: 'Foxconn 提供 brownfield capacity assessment 服務：分析既有電力/冷卻容量、預測 AI 負載成長、提出分階段扩容建議，延後不必要的機電投資',
+      source: 'Enterprise customer POC request (2026-03)',
+      strategicValue: '從「賣伺服器」轉向「賣容量規劃顧問服務」，建立信任後自然導入伺服器訂單'
+    }
+  ],
+  competitiveInsight: 'Vertiv 與 Schneider 已經用「AI-ready retrofit」教育市場，客戶開始理解「電力就緒能力」可以被單獨定價。Foxconn 的優勢在於往上延伸到 server-fleet 治理與 workload-aware capacity policy，這是純設施廠商做不到的。',
+  actionItem: '將上述 4 個採購訊號轉化為標準化的 service catalog 項目，讓銷售團隊可以直接引用到 RFP 回應中'
+}
+
 export const roadmap = {
   headline: '2026-2027 開發時程',
   phases: [
@@ -143,4 +184,4 @@ export const roadmap = {
   ]
 }
 
-export default { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, roadmap }
+export default { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, customerProcurementSignals, roadmap }
