@@ -3182,7 +3182,7 @@ export default {
   pilotProgramGuarantee,
   messagingHierarchy,
   decisionTriggers,
-  odmSoftwareWindow
+  odmSoftwareWindow, boardPresentationReadiness
 };
 
 // Board Investment Decision Checklist - Quick Validation Framework (Added 2026-03-27 by CoCo)
