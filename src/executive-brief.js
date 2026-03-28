@@ -4263,6 +4263,111 @@ export const boardDemoScript = {
 // Purpose: Ensure flawless execution on the actual day of board presentation
 // Audience: Software Product Lead, CEO, presentation team
 // Usage: Print and check off items throughout the day
+// Hostile Board Q&A - Prepare for the Toughest Questions (Added 2026-03-28 by CoCo)
+// Purpose: Prepare presentation team for challenging, skeptical, or confrontational board questions
+// Usage: Review before board meeting; assign specific questions to specific presenters
+export const hostileBoardQnA = {
+  headline: 'Hostile Board Q&A: Prepare for the Toughest Questions',
+  corePrinciple: 'Board members are paid to be skeptical. Their job is to stress-test the investment thesis. Do not take challenging questions personally—answer with data, not emotion.',
+  generalGuidelines: {
+    do: [
+      'Pause before answering—take 2-3 seconds to compose your thoughts',
+      'Acknowledge the validity of the concern: "That\'s an excellent question..."',
+      'Answer with specific data points, not vague assurances',
+      'If you don\'t know, say "I don\'t have that data with me, but I will follow up within 24 hours"',
+      'Maintain eye contact and confident body language',
+      'Let the CEO handle strategic questions, CFO handle financial, Software Lead handle technical'
+    ],
+    dont: [
+      'Do NOT get defensive or argumentative',
+      'Do NOT say "you\'re wrong" or "you don\' understand"',
+      'Do NOT make up numbers or exaggerate claims',
+      'Do NOT interrupt the questioner',
+      'Do NOT use jargon or acronyms without explanation',
+      'Do NOT blame competitors, customers, or internal teams'
+    ]
+  },
+  toughQuestions: [
+    {
+      question: 'Why should we trust Foxconn can build software? We\'re a hardware company, not a software company.',
+      underlyingConcern: 'Foxconn has no track record of successful software products; this is outside our core competency',
+      whoAnswers: 'CEO or Software Product Lead',
+      response: 'Valid concern. Three points: First, we\'re not starting from zero—we already have L9-L12 firmware teams doing software development for hardware customers. Second, we\'re not building everything from scratch—we leverage open source (K8s, OpenBMC, Prometheus) and focus our innovation on the integration layer. Third, we\'re hiring experienced software leadership—our Product Lead comes from [relevant company], and we\'re recruiting talent from companies like Red Hat, Canonical, and NVIDIA.',
+      evidence: 'Our Remote Ops MVP is already in development with 3 design partners. The core stack (monitoring, alerting, remote diagnostics) uses proven open-source components. We\'re not reinventing the wheel—we\'re integrating and productizing.',
+      fallback: 'If pressed: "Let me share the specific backgrounds of our first 10 software hires and our advisory board."'
+    },
+    {
+      question: 'What prevents NVIDIA, HPE, or Dell from crushing us with pricing or bundling?',
+      underlyingConcern: 'Competitors have deeper pockets and can afford to lose money to win market share',
+      whoAnswers: 'CEO',
+      response: 'Three reasons they can\'t easily crush us: First, NVIDIA\'s business model is selling GPUs at 60%+ gross margin—they won\'t sacrifice that for software bundling. Second, HPE and Dell are tied to their proprietary ecosystems—customers specifically want neutral alternatives. Third, we have a 12-18 month window before competitors fully respond, and we\'re using that time to build customer relationships and case studies.',
+      evidence: 'NVIDIA Mission Control is optimized for DGX Cloud, not neutral deployments. HPE Private Cloud AI requires HPE infrastructure. Our neutral architecture (NVIDIA + AMD + future-proof) is something they structurally cannot replicate without cannibalizing their existing business.',
+      fallback: 'If pressed: "Our customer interviews show 60%+ are actively seeking neutral alternatives to avoid vendor lock-in. That\'s our beachhead."'
+    },
+    {
+      question: 'Your NT$ 750M Year 3 revenue projection seems aggressive. What if you only achieve 50%?',
+      underlyingConcern: 'Financial projections are overly optimistic; what\'s the downside risk?',
+      whoAnswers: 'CFO',
+      response: 'Fair question. Let me walk through the math: NT$ 750M assumes 180 customers at average NT$ 4.2M/year. At 50% achievement (90 customers), we\'d generate NT$ 375M revenue. Even at that level, we\'d still achieve NT$ 225M gross margin (60% margin), which covers the NT$ 65M annual investment 3.5x over. So even in a 50% downside scenario, the investment still returns 3.5x.',
+      evidence: 'Our break-even analysis shows we need only NT$ 43M Year 1 revenue (54% of target) to cover costs. We\'ve built in significant downside protection.',
+      fallback: 'If pressed: "I can share the detailed sensitivity analysis showing revenue scenarios from 25% to 150% of target."'
+    },
+    {
+      question: 'Why not just partner with a software company instead of building in-house?',
+      underlyingConcern: 'Building software is risky and slow; partnership is faster and safer',
+      whoAnswers: 'CEO',
+      response: 'We evaluated partnerships extensively. The problem is: (1) Software vendors like Red Hat or Canonical don\'t have AI-specific operations tools—they\'re general-purpose. (2) Partnership means shared margins—we\'d give up 30-40% of revenue to the partner. (3) Most critically, we lose control of the roadmap and customer relationship. Our customers want Foxconn accountable for outcomes, not finger-pointing between hardware and software vendors.',
+      evidence: 'Quanta tried the partnership route—their software capabilities remain limited. HPE and Dell both built in-house because they realized software is where the customer relationship and margin live.',
+      fallback: 'If pressed: "We\'re not opposed to selective partnerships (e.g., Red Hat for OpenShift integration), but the core Remote Ops and RAG products must be Foxconn-owned to capture full value."'
+    },
+    {
+      question: 'What if we invest NT$ 65M and fail? What\'s the downside?',
+      underlyingConcern: 'This could be a NT$ 65M loss with no return; how do we mitigate this risk?',
+      whoAnswers: 'CEO or CFO',
+      response: 'Three layers of protection: First, we\'re staging the investment—NT$ 15M in Year 1 to build MVP and prove customer demand, then scaling based on milestones. Second, we have a 90-day pilot guarantee—if customers don\'t achieve agreed KPIs (85% utilization, 2-hour deployment, 70% remote fix rate), we refund 100% + NT$ 500K credit. This forces us to be confident. Third, even if we "fail," the software team and IP have value—we could spin out, sell the technology, or integrate into existing businesses.',
+      evidence: 'Our pilot program terms are designed to de-risk for both us and the customer. We only win if the customer achieves measurable outcomes.',
+      fallback: 'If pressed: "The real risk is not failing—it\'s not trying and watching competitors capture the software margin while we become a commodity supplier at 5-8% margin."'
+    },
+    {
+      question: 'How do we know you can attract and retain top software talent? Foxconn isn\'t known as a software company.',
+      underlyingConcern: 'Recruiting and retention risk could derail the entire initiative',
+      whoAnswers: 'CEO or Software Product Lead',
+      response: 'Valid concern. Our talent strategy has three pillars: First, we\'re hiring a VP-level Software Product Lead with credible industry experience to lead the team. Second, we\'re offering competitive compensation plus equity-like incentives tied to software revenue milestones. Third, we\'re selling impact—these engineers will be building the software layer that differentiates Foxconn from commodity ODMs. That\'s a compelling mission.',
+      evidence: 'We\'ve already had initial conversations with candidates from Red Hat, Canonical, and NVIDIA who are interested in the challenge of building Foxconn\'s software capability.',
+      fallback: 'If pressed: "I can share our detailed talent acquisition plan, including target companies, compensation benchmarks, and retention strategies."'
+    },
+    {
+      question: 'What if the 12-18 month window you mention is wrong? What if we have more or less time?',
+      underlyingConcern: 'The urgency narrative might be manufactured; is this really a now-or-never situation?',
+      whoAnswers: 'CEO',
+      response: 'Fair skepticism. The 12-18 month window is based on: (1) NVIDIA Mission Control just went GA in March 2026—they\'re in early adoption phase. (2) HPE Private Cloud AI is still ramping. (3) Customer interviews show they\'re evaluating vendors now, but will lock in 2-3 year contracts by late 2027. If we\'re wrong and the window is longer, we still benefit from being first-mover among ODMs. If we\'re right and we wait, we\'re locked out. The asymmetry favors action.',
+      evidence: 'GTC 2026 (March 2026) showed NVIDIA\'s software strategy is real and shipping. Our customer interviews confirm they\'re in active evaluation mode now.',
+      fallback: 'If pressed: "Even if the window is 24-30 months instead of 12-18, every quarter of delay costs NT$ 100-200M in foregone revenue and customer trust."'
+    },
+    {
+      question: 'Your competitive analysis seems biased. Have you really evaluated alternatives objectively?',
+      underlyingConcern: 'This presentation might be cherry-picking data to support a predetermined conclusion',
+      whoAnswers: 'Software Product Lead',
+      response: 'I appreciate the scrutiny. Our competitive analysis includes: (1) Official product documentation from NVIDIA, HPE, Dell, and others. (2) Customer interviews where they compared us to alternatives. (3) Third-party analyst reports from IDC and Gartner. We\'ve documented all sources in our competitive intelligence brief. I\'m happy to share the full analysis and walk through any specific comparison you\'d like to challenge.',
+      evidence: 'Our competitive sources file includes 30+ verified references with URLs and last-verified dates. We welcome external validation of our claims.',
+      fallback: 'If pressed: "Let me connect you with our design partners who evaluated multiple vendors and chose Foxconn. They can speak to the competitive dynamics."'
+    }
+  ],
+  rolePlayPreparation: {
+    title: 'Pre-Meeting Role Play Exercise',
+    instructions: 'Before the board meeting, conduct a 30-minute role play where one person plays "skeptical board member" and asks these tough questions while the team practices responses.',
+    roles: [
+      { role: 'Hostile Board Member', person: 'Rotate—everyone should experience this', task: 'Ask tough questions, interrupt politely, push back on vague answers' },
+      { role: 'CEO', person: 'CEO or designate', task: 'Handle strategic questions, financial risk, competitive threats' },
+      { role: 'CFO', person: 'CFO or designate', task: 'Handle financial projections, ROI, downside scenarios' },
+      { role: 'Software Product Lead', person: 'Software Product Lead', task: 'Handle technical capability, talent, timeline questions' },
+      { role: 'Observer', person: 'Executive coach or trusted advisor', task: 'Provide feedback on body language, clarity, and confidence' }
+    ],
+    successCriteria: 'Team can answer all 8 tough questions without hesitation, maintains confident body language, and uses data-backed responses.'
+  },
+  boardMessage: 'Board members are paid to be skeptical. Their tough questions are not personal attacks—they\'re due diligence. Prepare for these questions, practice your responses, and answer with data. The difference between approval and rejection is often how well you handle the toughest questions, not the quality of your slides.'
+};
+
 export const boardMeetingDayOfChecklist = {
   headline: 'Board Meeting Day-Of Checklist: Flawless Execution',
   corePrinciple: 'The difference between approval and rejection is often preparation quality, not content quality. This checklist ensures no detail is overlooked.',
