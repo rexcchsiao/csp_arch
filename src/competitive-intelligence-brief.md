@@ -250,9 +250,53 @@
 
 ---
 
+## 800V Power Architecture: The Software Moat (2026-03-28 Update)
+
+**Strategic Insight:** While competitors focus on L11-L12 cluster management, Foxconn's unique advantage lies in L9-L10 power architecture integration. This is not just firmware—it's a defensible moat that pure software vendors (Red Hat, NVIDIA) and traditional OEMs (Dell, HPE) cannot replicate without destroying their existing business models.
+
+### Why 800V Matters for Software Differentiation
+
+| Competitor Type | Limitation | Foxconn Advantage |
+|----------------|------------|-------------------|
+| **Pure Software (Red Hat, Canonical)** | No access to BMC/firmware layer; cannot optimize K8s scheduler for power telemetry | L9-L12 full-stack: BMC firmware + K8s scheduler co-optimization enables 15-25% energy savings |
+| **NVIDIA DGX Cloud** | Optimized for DGX Cloud only; neutral customers fear lock-in | Neutral architecture (NVIDIA + AMD + future GPUs); brownfield-friendly |
+| **Traditional OEM (Dell, HPE)** | Legacy 400V architecture; retrofitting requires hardware refresh | 400V→800V adaptive management protects customer's existing infrastructure investment |
+| **Power Vendors (Vertiv, Schneider)** | Strong in physical infrastructure, weak in workload-aware governance | Power telemetry → workload policy → SLA protection; facility events trigger automatic workload rebalancing |
+
+### Three Monetizable 800V Software Services
+
+1. **Facility-Aware Capacity Assurance** (NT$ 3-8M/year)
+   - **Buyer:** CSP infrastructure lead, datacenter operations
+   - **Promise:** "We tell you how much more AI capacity you can safely add to your existing brownfield site—before you hit power/cooling limits"
+   - **Why Now:** Vertiv/Schneider already selling "AI-ready retrofit" at NT$ 50-100M+ per site; Foxconn adds workload-aware capacity planning
+
+2. **Power-to-Workload Incident Triage** (NT$ 2-5M/year)
+   - **Buyer:** Remote ops team, SRE lead
+   - **Promise:** "When power/cooling events happen, we automatically triage: is this a workload issue, hardware fault, or facility problem? Then we dispatch the right response"
+   - **Why Now:** NVIDIA Mission Control 2.3 added leak-detection validation and building management integration—validates market willingness to pay for facility-workload coordination
+
+3. **Commissioning-to-Operations Evidence Pack** (NT$ 0.5-1M/project)
+   - **Buyer:** Program management, regulated industry compliance
+   - **Promise:** "From burn-in to handoff to operations: we provide auditable evidence that power baseline, site acceptance, and recovery procedures were validated"
+   - **Why Now:** EU AI Act technical documentation requirements; financial/healthcare AI deployments require audit trails
+
+### Competitive Validation
+
+- **Vertiv AI Hub** (2026-03): Now selling "70kW-142kW rack density readiness" and "AI-ready retrofit reference designs"—validates that customers will pay premium for power/cooling certainty
+- **Schneider Electric** (2026-02): "End-to-end physical and digital AI infrastructure" narrative—proves market accepts software as part of power solution
+- **NVIDIA Mission Control 2.3** (2026-03-17): Added air-gapped deployment and building management integration—confirms facility-workload coordination is mainstream requirement
+
+### Strategic Recommendation
+
+**Do not position 800V software as "power management firmware"**—position it as **"brownfield AI capacity assurance"** and **"facility-aware workload governance."** This shifts the conversation from embedded features (one-time hardware attach) to operational services (recurring revenue, 60-75% margin).
+
+**Board Message:** "While competitors fight over cluster management features, Foxconn owns the layer below (power/firmware) and the layer above (workload governance). This L9-L12 integration is why we can deliver 15-25% energy savings and brownfield readiness that pure software vendors cannot replicate."
+
+---
+
 **Document Control:**
-- Version: 1.0
-- Last Updated: 2026-03-27 (Post-GTC validation added)
+- Version: 1.1
+- Last Updated: 2026-03-28 (800V Power Architecture moat added)
 - Next Review: 2026-04-01 (weekly updates during Q2)
 - Owner: Software Product Line Team
 - Distribution: Leadership, Sales Team, Engineering Leadership
