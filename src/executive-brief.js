@@ -3870,3 +3870,155 @@ export const salesBattleCards = {
   },
   boardMessage: 'Sales battle cards turn competitive intelligence into actionable sales tools. Each card provides: (1) customer objection, (2) data-backed response, (3) proof points with quantified outcomes, and (4) "kill question" that exposes competitor weakness. This is not about bashing competitors—it is about helping customers make informed decisions based on their actual needs (utilization, deployment speed, sovereignty, TCO). Sales teams should practice these responses until they become second nature.'
 };
+
+// CEO/CFO One-Pager: 2-Minute Executive Summary (Added 2026-03-28 by CoCo)
+// Purpose: Distill 100+ pages of analysis into a single page that busy CEOs/CFOs can read in 2 minutes
+// Usage: Board pre-read, CEO briefing, investor Q&A, executive alignment
+// Format: Problem → Solution → Investment → Return → Risk of Inaction
+export const ceoCfoOnePager = {
+  headline: 'Foxconn Software Differentiation: CEO/CFO One-Pager',
+  subtitle: 'Turning AI Infrastructure from Commodity (5-8% margin) into Strategic Partnership (20-25% margin)',
+  readingTime: '2 minutes',
+  sections: [
+    {
+      title: '1. The Problem',
+      icon: '⚠️',
+      content: [
+        'Customers spend NT$ 10M+ on GPU servers, but 40-60% sit idle due to software complexity',
+        'Deployment takes 2-4 weeks instead of 2 hours, delaying revenue by 22+ days',
+        '70% of maintenance issues require on-site visits, causing 8+ hour downtimes',
+        'Without software differentiation, Foxconn becomes a commodity supplier at 5-8% margin by 2028'
+      ],
+      customerQuote: '"We bought the best hardware, but it took 25 days before we could start generating revenue. GPU utilization is 45%, not the 85% we were promised."'
+    },
+    {
+      title: '2. The Solution',
+      icon: '✅',
+      content: [
+        'Remote Ops Platform: Real-time monitoring, predictive maintenance (85% accuracy), 70% remote fix rate',
+        'RAG Appliance: Turnkey private AI knowledge base for enterprise/SMB (NT$ 8-30M per deployment)',
+        '800V Power Management: AI-driven power/cooling optimization, PUE from 1.6 → 1.4',
+        'Result: Same hardware, 2x business output, 20-25% gross margin (vs. 10-15% hardware-only)'
+      ],
+      foxconnAdvantage: 'Only Foxconn has L9-L12 full-stack capability (firmware to orchestration), neutral architecture (NVIDIA+AMD), and manufacturing DNA (200+ factory deployments)'
+    },
+    {
+      title: '3. The Investment',
+      icon: '💰',
+      content: [
+        'Team: 50-80 FTE software engineers (L9-L12 depth)',
+        'Timeline: Q2 2026 org design → Q3 team building → Q4 first customer',
+        'Budget: NT$ 65M/year (includes talent, lab, tools, customer POC)',
+        'Infrastructure: AI Workload Validation Lab (H100/H200/B200 test environment)'
+      ],
+      comparison: 'NT$ 65M/year is 0.1% of Foxconn revenue; ROI is 11.5x by Year 3'
+    },
+    {
+      title: '4. The Return',
+      icon: '📈',
+      content: [
+        'Year 1: NT$ 80M revenue (5% attachment rate)',
+        'Year 2: NT$ 250M revenue (12% attachment rate)',
+        'Year 3: NT$ 750M revenue (20% attachment rate, 20-25% gross margin)',
+        'ROI: 11.5x return, 18-24 month payback period'
+      ],
+      financialImpact: 'Software transforms Foxconn from 5-8% margin commodity supplier to 20-25% margin strategic partner'
+    },
+    {
+      title: '5. The Risk of Inaction',
+      icon: '🔥',
+      content: [
+        'By 2028: Commodity trap at 5-8% margin (Quanta precedent: 18% → 8-12% margin)',
+        'Lost opportunity: NT$ 1.5B+ cumulative revenue (2026-2030)',
+        'Customer lock-in: Hyperscalers and competitors will have entrenched solutions by Q4 2027',
+        'Talent loss: Top software engineers will join competitors with software-first vision'
+      ],
+      urgency: 'Window of opportunity: 12-18 months (Q2 2026 - Q4 2027). After that, the door closes.'
+    }
+  ],
+  executiveSummary: {
+    oneLiner: 'Foxconn software transforms idle GPUs into 85%+ utilization, captures NT$ 50B sovereign AI market, delivers 11.5x ROI — but only if we act in the next 12-18 months before competitors lock in customers.',
+    threePoints: [
+      'Problem: Hardware-only = 5-8% margin commodity; Software-enabled = 20-25% margin strategic partner',
+      'Solution: Remote Ops + RAG Appliance + 800V Power Management = NT$ 750M Year 3 revenue',
+      'Ask: NT$ 65M/year investment, 50-80 FTE team, Q2 2026 start → 11.5x ROI, 18-24 month payback'
+    ],
+    boardQuestion: 'Do we want to be a contract manufacturer for hyperscalers\' own brands (5-8% margin), or a strategic partner (20-25% margin)? The answer determines whether we invest in software now or face commoditization by 2028.',
+    callToAction: 'Approve NT$ 65M/year software investment in Q2 2026. Ship Remote Ops MVP by Q3 2026. Close first 3 customers by Q4 2026. Review progress quarterly with go/no-go decision at Q4 2026 (<2.5% attachment rate triggers reassessment).'
+  },
+  competitiveContext: {
+    whatCompetitorsDoing: [
+      'NVIDIA: Mission Control GA (March 2026) — optimized for DGX Cloud, but requires NVIDIA-only stack',
+      'HPE: Private Cloud AI with RAG templates — requires HPE hardware, 10-15% margin',
+      'Dell: AI Factory with Red Hat OpenShift — tied to NVIDIA ecosystem, limited brownfield support',
+      'Quanta: 10-20 person software team, hardware-focused — margin compressed to 8-12%',
+      'GIGABYTE: Cloud-only GPU management — no air-gap, no sovereign AI capability'
+    ],
+    foxconnDifferentiation: [
+      'Neutral architecture: Support NVIDIA + AMD (competitors lock to single vendor)',
+      'Brownfield integration: Works with existing infrastructure (competitors require rip-and-replace)',
+      'L9-L12 depth: Firmware-to-orchestration control (competitors lack hardware integration)',
+      'Manufacturing DNA: 200+ factory deployments, production-tested (competitors sell "lab demos")',
+      'Day-2 accountability: Remote Ops + lifecycle governance (competitors focus on deployment speed only)'
+    ]
+  },
+  financialSnapshot: {
+    investment: 'NT$ 65M/year (50-80 FTE team + lab + tools)',
+    year1: { revenue: 'NT$ 80M', margin: '20-22%', attachmentRate: '5%', customers: '10-15' },
+    year2: { revenue: 'NT$ 250M', margin: '22-24%', attachmentRate: '12%', customers: '50-60' },
+    year3: { revenue: 'NT$ 750M', margin: '20-25%', attachmentRate: '20%', customers: '180+' },
+    roi: '11.5x return by Year 3',
+    payback: '18-24 months',
+    breakEven: 'Q4 2027 (Year 2 Q4)'
+  },
+  riskMitigation: {
+    recruitmentRisk: {
+      risk: 'Cannot attract 50-80 qualified software engineers',
+      mitigation: 'Start with 15-20 FTE core team; partner with Red Hat/Canonical for initial delivery; target ex-NVIDIA/Dell/CSP talent',
+      fallback: 'If recruitment lags, prioritize Remote Ops (higher margin, clearer ROI) over RAG'
+    },
+    adoptionRisk: {
+      risk: 'CSP customers do not adopt software offering',
+      mitigation: 'Co-development model with 2-3 lighthouse customers (MOU before full build); 90-day pilot guarantee with KPI commitment',
+      fallback: 'Pivot to SMB/Enterprise RAG market (lower complexity, faster sales cycle)'
+    },
+    executionRisk: {
+      risk: 'Software fails to deliver promised KPIs',
+      mitigation: '90-day pilot guarantee: 100% refund + NT$ 500K credit if KPIs not met; weekly escalation triggers',
+      fallback: 'Focus on Remote Ops (monitoring + predictive maintenance) which has proven track record in other industries'
+    },
+    competitiveRisk: {
+      risk: 'Competitors undercut on price or lock in customers first',
+      mitigation: 'First-mover advantage in OEM/ODM space; neutral architecture (NVIDIA+AMD) differentiates from vendor lock-in',
+      fallback: 'Emphasize brownfield integration and Day-2 accountability where competitors cannot follow'
+    }
+  },
+  boardReadyMetrics: {
+    kpi1: { metric: 'GPU Utilization', current: '40-60%', target: '85%+', impact: 'NT$ 4-6M saved per 100-server cluster' },
+    kpi2: { metric: 'Deployment Time', current: '2-4 weeks', target: '2 hours', impact: 'Revenue generation 22 days earlier' },
+    kpi3: { metric: 'Remote Fix Rate', current: '30%', target: '70%', impact: '70% reduction in on-site visits' },
+    kpi4: { metric: 'Predictive Accuracy', current: 'N/A', target: '85%', impact: '60% reduction in downtime' },
+    kpi5: { metric: 'Software Attachment Rate', current: '<1%', target: '20%', impact: 'NT$ 750M Year 3 revenue' },
+    kpi6: { metric: 'Gross Margin', current: '10-15% (hardware-only)', target: '20-25%', impact: 'NT$ 150-187M gross profit Year 3' }
+  },
+  nextSteps: {
+    immediate: [
+      { action: 'Board approves NT$ 65M/year software investment', owner: 'Board of Directors', deadline: 'Q2 2026' },
+      { action: 'Complete software product line organizational design', owner: 'CEO + CHRO', deadline: 'Day 30' },
+      { action: 'Launch recruitment for L9-L10 firmware team (5-8 hires)', owner: 'HR + Engineering', deadline: 'Day 45' }
+    ],
+    q3_2026: [
+      'Remote Ops MVP development complete',
+      'First 15-20 FTE onboarded',
+      'AI Workload Validation Lab operational',
+      'Sign MOU with first CSP customer for joint development'
+    ],
+    q4_2026: [
+      'Remote Ops beta deployed at first customer site (50-100 servers)',
+      'RAG Appliance POC complete (financial or healthcare customer)',
+      'Software service pricing model established',
+      'Q3 expansion plan submitted (50-80 person team)'
+    ]
+  },
+  finalMessage: 'This is not a "nice-to-have" software project. This is the difference between being a strategic partner (20-25% margin) and a commodity supplier (5-8% margin). The window is 12-18 months. The investment is NT$ 65M/year. The return is 11.5x. The risk of inaction is NT$ 1.5B+ lost opportunity. The decision is now.'
+};
