@@ -4175,3 +4175,86 @@ export const customerBuyingSignals = {
   boardMessage: '銷售團隊需要工具來識別「準備好簽約」的客戶。這套信號系統幫助前線業務優先處理高意向案件，提高成交率。目標：將銷售週期從 6-9 個月縮短至 3-4 個月，提高成交率從 20% 至 35%。',
 };
 
+
+// Board & Customer Demo Script - 10-Minute Live Demo (Added 2026-03-28 by CoCo)
+// Purpose: Step-by-step script for 10-minute live demo of Remote Ops + RAG Appliance
+// Audience: Board members, CSP customers, enterprise AI platform owners
+// Owner: Software Product Lead (VP-level)
+// Duration: 10 minutes total (5 min Remote Ops, 5 min RAG)
+export const boardDemoScript = {
+  headline: '10 分鐘現場展示腳本：Remote Ops + RAG Appliance',
+  instructions: '此腳本設計用於最短時間內產生最大影響。每個環節都已計時。請反覆練習以確保流暢交付。技術故障時請切換備份影片。',
+  preparation: {
+    environment: '實驗室：H100 測試集群（10 節點）+ RAG alpha 環境',
+    prerequisites: [
+      'Remote Ops dashboard 載入即時遙測數據',
+      'RAG appliance 預載 100 份範例文件',
+      'Demo 帳號（管理員權限）',
+      '備份影片就緒（5 分鐘導覽）',
+      '網路連線已驗證'
+    ],
+    timing: '最佳時機：戰略簡報後（3 分鐘），Q&A 前（15 分鐘）',
+    owner: 'Software Product Lead（VP 級）或指定 demo 工程師'
+  },
+  part1_remoteOps: {
+    title: '第一部分：Remote Ops 平台（5 分鐘）',
+    duration: '5:00',
+    objective: '展示即時監控、預測性警報、遠端診斷能力',
+    steps: [
+      { time: '0:00-0:30', step: 'Dashboard 總覽', script: '這是 Remote Ops dashboard，顯示 10 節點 H100 集群即時狀態。綠色代表健康、黃色警告、紅色故障。目前：100% 正常運行時間、87% 平均利用率。', action: '顯示集群總覽 dashboard', proofPoint: '來自 BMC 和 GPU 感測器的即時遙測數據' },
+      { time: '0:30-1:30', step: '預測性警報演示', script: '今天凌晨 2:47，系統檢測到 GPU-3 功耗異常。ML 模型預測 48 小時內 85% 機率故障。系統自動生成警報並指派給值班工程師。', action: '點擊警報歷史，顯示 GPU-3 預測性警報與時間戳', proofPoint: '85% 預測準確率減少 60% 意外停機' },
+      { time: '1:30-2:30', step: '遠端診斷流程', script: '工程師未派遣技術人員，而是啟動遠端診斷。系統捕捉 GPU 日誌、功耗軌跡、熱數據。根本原因：電源軌電容老化。遠端修復：調整功耗上限並安排下次維護視窗更換。', action: '顯示含日誌捕捉和 RCA 的遠端診斷流程', proofPoint: '70% 遠端修復率消除昂貴的現場服務' },
+      { time: '2:30-3:30', step: '容量規劃視圖', script: '此視圖顯示容量規劃。根據工作負載趨勢，預測此集群 3 週後達到 95% 利用率。系統建議新增 2 節點或遷移工作負載。防止容量瓶頸影響生產。', action: '顯示含趨勢線的容量規劃 dashboard', proofPoint: '主動容量規劃防止閒置工作負載導致的收入損失' },
+      { time: '3:30-4:30', step: '能源效率指標', script: 'PUE 追蹤顯示平均 1.38，部署 Foxconn 軟體前為 1.62。能源成本降低 15%——每 1MW datacenter 年省 NT$ 8-12M。', action: '顯示 PUE 趨勢圖與前後對比', proofPoint: '智能調度和冷卻控制實現 15-25% 能源成本降低' },
+      { time: "4:30-5:00", step: '轉場到 RAG', script: 'Remote Ops 確保 AI 基礎設施高效運行。接下來展示 RAG Appliance 如何將基礎設施轉化為業務價值。', action: '切換到 RAG demo 環境', proofPoint: null }
+    ],
+    commonMistakes: [
+      '花太多時間在 dashboard 導航（聚焦成果）',
+      '使用技術術語而不解釋業務影響',
+      '跳過「部署 Foxconn 前」對比（務必展示差異）'
+    ],
+    fallback: '如果 live demo 失敗：切換預錄影片（5 分鐘）保持相同敘事'
+  },
+  part2_ragAppliance: {
+    title: '第二部分：RAG Appliance（5 分鐘）',
+    duration: '5:00',
+    objective: '展示含權限治理的 turnkey 私有 AI 知識庫',
+    steps: [
+      { time: '0:00-0:30', step: 'RAG Dashboard 總覽', script: '這是 RAG Appliance dashboard。已預載 100 份範例文件——財務報告、人資政策、技術手冊。系統在 3 分鐘內完成所有內容的接收、向量化和索引。', action: '顯示文件數量和索引狀態', proofPoint: '3 週部署 vs. 內部開發 12-18 個月' },
+      { time: '0:30-1:30', step: '自然語言查詢', script: '讓我問個問題：「生產集群的 GPU 利用率目標是多少？」系統搜索所有 100 份文件，按相關性排序，返回：「根據 AI Infrastructure Standards v2.3，生產集群必須維持 85%+ 持續 GPU 利用率。」', action: '輸入查詢並顯示含來源引用的搜索結果', proofPoint: '混合搜索（關鍵字 + 向量）提供準確、有引用的答案' },
+      { time: '1:30-2:30', step: '權限治理演示', script: '現在切換到不同帳號——人資經理。同樣的問題得到不同答案，因為他們無權訪問技術標準。這就是基於角色的訪問控制。', action: '切換帳號，顯示基於權限的過濾結果', proofPoint: 'RBAC 確保符合數據治理政策' },
+      { time: '2:30-3:30', step: '審計軌跡與合規', script: '每次查詢、文件訪問、權限變更都會記錄。此審計軌跡可導出用於合規審計（EU AI Act、SOC 2、ISO 27001）。這是過去一小時的審計日誌。', action: '顯示含時間戳、用戶和操作的審計軌跡', proofPoint: '完整審計軌跡支持受監管行業部署（金融、醫療、政府）' },
+      { time: '3:30-4:30', step: '文件接收演示', script: '讓我新增一份文件——這份 PDF 技術手冊。上傳後，系統在 30 秒內完成接收、向化和索引。現在可以立即查詢。', action: '上傳 PDF，顯示接收進度，然後查詢新文件', proofPoint: '快速內容上線——無需手動索引' },
+      { time: '4:30-5:00', step: '結尾', script: 'Remote Ops 確保 AI 基礎設施優化運行。RAG Appliance 將基礎設施轉化為業務情報。結合起來，它們將 NT$ 10M GPU 投資從閒置資本轉變為收入驅動的 AI 工廠。', action: '返回主 dashboard', proofPoint: '完整軟體棧：基礎設施 + 情報' }
+    ],
+    commonMistakes: [
+      '提問可能失敗的查詢（預先測試所有查詢）',
+      '不解釋功能背後的「為什麼」（總是連結到業務價值）',
+      '跳過權限演示（企業買家關鍵）'
+    ],
+    fallback: '如果文件上傳失敗：顯示預接收範例並解釋流程'
+  },
+  qandaPreparation: {
+    commonQuestions: [
+      { question: '這與 NVIDIA Mission Control 有何不同？', answer: 'Mission Control 為 DGX Cloud 優化。我們支持本地部署、多供應商（NVIDIA+AMD）和 air-gapped 主權部署。相同 GPU 性能，但您擁有基礎設施。' },
+      { question: '如果軟體未能交付怎麼辦？', answer: '我們提供 90 天試點保證：如果未達成 4 個 KPI（利用率、部署時間、遠端修復率、預測準確率），100% 退款 + NT$ 500K 點數。' },
+      { question: '多快可以部署？', answer: 'Remote Ops MVP：2-4 週。RAG Appliance：Starter tier 3 週。比內部開發快 12-18 個月。' },
+      { question: '與現有工具整合如何？', answer: '我們整合 ServiceNow、ITSM、Slack、Teams 和主要雲供應商。API-first 架構確保兼容性。' }
+    ],
+    objectionHandling: {
+      '太貴': 'TCO 分析顯示 3 年內比競爭對手節省 15-20%。如果無法解決問題，免費軟體最昂貴。',
+      '內部開發': '12-18 個月開發時間，73% 失敗率（IDC）。我們 3 週交付，成果驗證。',
+      '還沒準備好': '每季度延誤成本 NT$ 100-200M 收入損失。Q4 2027 視窗關閉。'
+    }
+  },
+  successMetrics: {
+    demoSuccessCriteria: [
+      '董事會成員問「何時可以部署？」',
+      '客戶要求試點計劃條款',
+      '無技術故障或尷尬停頓',
+      '10 分鐘內完成，保留 Q&A 時間'
+    ],
+    followUpAction: '24 小時內：發送感謝郵件，附 demo 錄影、試點計劃條款和建議時程'
+  },
+  boardMessage: '此 demo 腳本將抽象的軟體主張轉化為有形、可視的證明。董事會成員和客戶記住他們看到的，而不是聽到的。完美的 10 分鐘 demo 勝過 100 頁功能列表。練習到成為肌肉記憶。'
+};
