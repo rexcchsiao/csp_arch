@@ -4258,3 +4258,84 @@ export const boardDemoScript = {
   },
   boardMessage: '此 demo 腳本將抽象的軟體主張轉化為有形、可視的證明。董事會成員和客戶記住他們看到的，而不是聽到的。完美的 10 分鐘 demo 勝過 100 頁功能列表。練習到成為肌肉記憶。'
 };
+
+// Board Meeting Day-Of Checklist - Tactical Execution Guide (Added 2026-03-28 by CoCo)
+// Purpose: Ensure flawless execution on the actual day of board presentation
+// Audience: Software Product Lead, CEO, presentation team
+// Usage: Print and check off items throughout the day
+export const boardMeetingDayOfChecklist = {
+  headline: 'Board Meeting Day-Of Checklist: Flawless Execution',
+  corePrinciple: 'The difference between approval and rejection is often preparation quality, not content quality. This checklist ensures no detail is overlooked.',
+  
+  phase1_morning_of: {
+    title: 'Phase 1: Morning of Presentation (7:00-9:00 AM)',
+    timeframe: '3-4 hours before meeting',
+    tasks: [
+      { time: '7:00 AM', task: 'Technical Setup Verification', details: 'Test projector/TV, HDMI adapters, clicker, audio. Verify laptop is charged and presentation mode enabled (no notifications).', owner: 'Technical lead', status: '☐' },
+      { time: '7:30 AM', task: 'Demo Environment Health Check', details: 'Verify Remote Ops dashboard is live with real data. Test RAG appliance query response time (<2 seconds). Confirm demo accounts are active.', owner: 'Software Product Lead', status: '☐' },
+      { time: '8:00 AM', task: 'Print Materials', details: 'Print 10 copies: executive brief (1-pager), financial projections (1-pager), board resolution template. Use high-quality paper.', owner: 'Executive assistant', status: '☐' },
+      { time: '8:30 AM', task: 'Backup Preparation', details: 'Save presentation to USB drive, email to self, upload to cloud. Test backup video playback. Have printed speaker notes as fallback.', owner: 'Presentation lead', status: '☐' },
+      { time: '9:00 AM', task: 'Team Briefing', details: '15-minute huddle with CEO, CFO, Software Product Lead. Review roles, timing, Q&A assignments. Confirm "who answers what".', owner: 'CEO', status: '☐' }
+    ]
+  },
+
+  phase2_one_hour_before: {
+    title: 'Phase 2: One Hour Before (60 minutes prior)',
+    timeframe: 'T-60 to T-0 minutes',
+    tasks: [
+      { time: 'T-60 min', task: 'Room Setup', details: 'Arrange seating (board members face-to-face with presenters). Place printed materials at each seat. Test room temperature (22-24°C).', owner: 'Event coordinator', status: '☐' },
+      { time: 'T-45 min', task: 'Final Tech Rehearsal', details: 'Run through first 2 slides and demo flow. Verify clicker works from all seating positions. Check microphone volume.', owner: 'Software Product Lead', status: '☐' },
+      { time: 'T-30 min', task: 'Personal Preparation', details: 'Presenters use restroom, hydrate, check appearance. Silence all phones. Remove smartwatches or disable notifications.', owner: 'All presenters', status: '☐' },
+      { time: 'T-15 min', task: 'Mental Rehearsal', details: 'Visualize opening statement, key transitions, and closing ask. Review "killing argument" one-liner. Breathe.', owner: 'All presenters', status: '☐' },
+      { time: 'T-5 min', task: 'Final Position Check', details: 'CEO and Software Product Lead in position. Laptop open to title slide. Demo environment loaded. Clicker in hand.', owner: 'All presenters', status: '☐' }
+    ]
+  },
+
+  phase3_during_presentation: {
+    title: 'Phase 3: During Presentation (T-0 to T+60 min)',
+    timeframe: 'Presentation execution',
+    tasks: [
+      { time: 'T+0 min', task: 'Opening (CEO)', details: 'Start with 30-second elevator pitch. State the ask clearly: "NT$ 65M/year for 50-80 FTE team, NT$ 750M Year 3 revenue."', owner: 'CEO', status: '☐' },
+      { time: 'T+5 min', task: 'Pain Points & Market Context (Software Product Lead)', details: 'Show customer quotes, competitive urgency. Emphasize 12-18 month window.', owner: 'Software Product Lead', status: '☐' },
+      { time: 'T+15 min', task: 'Live Demo (Software Product Lead)', details: 'Execute 10-minute demo script. Remote Ops (5 min) + RAG Appliance (5 min). If demo fails, immediately switch to backup video without apology.', owner: 'Software Product Lead', status: '☐' },
+      { time: 'T+25 min', task: 'Financial Case (CFO)', details: 'Present 11.5x ROI, 18-24 month payback, risk-adjusted view. Address "what if we fail" with pilot guarantee.', owner: 'CFO', status: '☐' },
+      { time: 'T+35 min', task: 'The Ask & Resolution (CEO)', details: 'Present board resolution template. "We need approval on 7 items today to proceed." Pause for questions.', owner: 'CEO', status: '☐' },
+      { time: 'T+40 min', task: 'Q&A Management', details: 'CEO moderates. Route technical questions to Software Product Lead, financial to CFO, strategic to CEO. Note unanswered questions for follow-up.', owner: 'All presenters', status: '☐' },
+      { time: 'T+60 min', task: 'Closing & Next Steps', details: 'Restate the ask. "Every quarter of delay costs NT$ 100-200M. The window closes Q4 2027." Request immediate vote or timeline for decision.', owner: 'CEO', status: '☐' }
+    ]
+  },
+
+  phase4_immediately_after: {
+    title: 'Phase 4: Immediately After Meeting (T+60 to T+90 min)',
+    timeframe: 'Post-meeting follow-up',
+    tasks: [
+      { time: 'T+60 min', task: 'Debrief (Private)', details: '5-minute huddle: What went well? What questions were challenging? Any board member concerns that need immediate address?', owner: 'Presentation team', status: '☐' },
+      { time: 'T+75 min', task: 'Thank You Notes', details: 'Send personalized emails to board members who asked questions or raised concerns. Attach requested materials.', owner: 'CEO', status: '☐' },
+      { time: 'T+90 min', task: 'Documentation', details: 'Record meeting outcome (approved/deferred/rejected), key concerns raised, conditions attached. Update risk register if needed.', owner: 'Executive assistant', status: '☐' }
+    ]
+  },
+
+  emergencyProtocols: {
+    title: 'Emergency Protocols: When Things Go Wrong',
+    scenarios: [
+      { scenario: 'Demo fails catastrophically', response: 'Do NOT apologize excessively. "Let me show you the recorded version while we troubleshoot." Switch to backup video immediately. Continue narrative without interruption.', prevention: 'Test demo 2x morning-of. Have video cued to exact timestamp.' },
+      { scenario: 'Board member hostile or confrontational', response: 'Do NOT get defensive. "That\'s a valid concern. Here\'s how we\'ve addressed it..." Use data, not emotion. Offer to follow up with detailed analysis.', prevention: 'Pre-brief key board members individually before meeting. Anticipate objections in FAQ.' },
+      { scenario: 'Technical failure (projector, audio, internet)', response: 'Have printed copies of all slides. Continue presentation from printed materials. "While we resolve this, let me walk you through the key points..."', prevention: 'Arrive 60 min early. Test all equipment. Have offline copies of everything.' },
+      { scenario: 'CEO or key presenter unavailable (illness, emergency)', response: 'Designate backup presenter in advance. Software Product Lead can present CEO slides if needed. Do NOT postpone unless absolutely necessary.', prevention: 'Cross-train presenters. Have speaker notes for all sections.' }
+    ]
+  },
+
+  successCriteria: {
+    title: 'Success Criteria: What "Good" Looks Like',
+    criteria: [
+      { metric: 'Demo execution', target: 'No technical failures, <2 second query response time' },
+      { metric: 'Timing', target: 'Complete presentation in 30-35 min, leave 25-30 min for Q&A' },
+      { metric: 'Board engagement', target: 'Board members ask substantive questions (not logistics), take notes, lean forward' },
+      { metric: 'Decision clarity', target: 'Clear vote or decision timeline established before meeting ends' },
+      { metric: 'Follow-up actions', target: 'All requested materials delivered within 24 hours' }
+    ]
+  },
+
+  boardMessage: 'This checklist transforms abstract preparation into concrete actions. The difference between approval and rejection is often execution quality, not content quality. Print this. Use it. Update it after each presentation.',
+  finalReminder: 'You have prepared for weeks. The data is solid. The argument is defensible. The financial case is compelling. Today is about execution. Breathe. Focus on the customer pain. Show them the future. Ask for the decision.'
+};
