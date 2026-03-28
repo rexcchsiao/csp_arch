@@ -4022,3 +4022,156 @@ export const ceoCfoOnePager = {
   },
   finalMessage: 'This is not a "nice-to-have" software project. This is the difference between being a strategic partner (20-25% margin) and a commodity supplier (5-8% margin). The window is 12-18 months. The investment is NT$ 65M/year. The return is 11.5x. The risk of inaction is NT$ 1.5B+ lost opportunity. The decision is now.'
 };
+
+// Customer Buying Signals - When to Push for Close (Added 2026-03-28 by CoCo)
+// Helps sales team identify high-intent prospects and time their close appropriately
+export const customerBuyingSignals = {
+  headline: '客戶採購信號：如何識別「準備好簽約」的客戶',
+  purpose: '銷售團隊可據此判斷客戶意向強度，優先跟進高潛力案件，避免在低意向客戶浪費時間',
+  
+  // Green Flags - Strong Buying Signals
+  greenFlags: [
+    {
+      signal: '主動詢問「與既有基礎設施整合」細節',
+      example: '「你們的 Remote Ops 可以跟我們現有的 ServiceNow/ITSM 串接嗎？」',
+      whyItMatters: '客戶開始想像上線後的實際運作，表示已進入「如何部署」而非「要不要買」的思維',
+      salesAction: '立即安排技術對接會議，提供整合藍圖與 API 文件',
+    },
+    {
+      signal: '詢問「交付時程」與「上線時間」',
+      example: '「如果我們 Q3 簽約，多久可以上線？」',
+      whyItMatters: '時間表代表客戶已有內部決策時間點，可能是預算年度結束或業務需求截止日',
+      salesAction: '提供明確時程表，強調「Q3 簽約、Q4 上線」的可行性，創造急迫感',
+    },
+    {
+      signal: '主動透露痛點細節與成本影響',
+      example: '「我們上個月 GPU 故障停了 6 小時，損失約 NT$ 3M」',
+      whyItMatters: '願意分享具體損失數字，代表信任建立且已量化問題嚴重性',
+      salesAction: '用客戶提供的數字計算 ROI，強調「下次故障本可避免」',
+    },
+    {
+      signal: '詢問其他客戶案例與參考對象',
+      example: '「有沒有類似我們產業的客戶可以交流？」',
+      whyItMatters: '尋求同業背書，降低決策風險，通常已進入最後評估階段',
+      salesAction: '提供同業案例研究，必要時安排客戶參考訪問（需事先同意）',
+    },
+    {
+      signal: '詢問合約條款與 SLA 細節',
+      example: '「你們的 SLA 保證是什麼？違約條款怎麼訂？」',
+      whyItMatters: '從功能討論轉移到商務條款，代表採購流程已進入後期',
+      salesAction: '提供標準 SLA 範本，標註可協商項目，加快法務審查',
+    },
+    {
+      signal: '邀請高層參與簡報或 POC 演示',
+      example: '「下週我們 CTO 會回來，可以安排一場簡報嗎？」',
+      whyItMatters: '決策者投入時間，代表案件優先級提升',
+      salesAction: '準備董事會等級簡報，聚焦財務影響與風險緩解',
+    },
+  ],
+  
+  // Red Flags - Low Intent or Wrong Fit
+  redFlags: [
+    {
+      signal: '只問價格，不問價值',
+      example: '「你們的軟體要多少錢？」（未了解功能前）',
+      risk: '價格導向客戶容易流失，難以建立長期合作關係',
+      salesAction: '轉移焦點到 TCO 與 ROI，避免陷入價格戰',
+    },
+    {
+      signal: '無法提供具體痛點或量化影響',
+      example: '「我們想了解一下 AI 軟體趨勢」',
+      risk: '可能是「為創新而創新」，無實際需求，成交機率低',
+      salesAction: '用問題引導痛點：「目前 GPU 利用率多少？故障停機損失多少？」',
+    },
+    {
+      signal: '決策架構模糊或無法識別決策者',
+      example: '「我們需要內部討論」但無法說明決策流程',
+      risk: '可能找不到真正決策者，案件容易卡關',
+      salesAction: '協助繪製決策地圖：「通常這類案件會由哪位主管拍板？」',
+    },
+    {
+      signal: '要求大量客製化但不願承諾採購量',
+      example: '「可以幫我們量身打造嗎？但我們還不確定要買多少」',
+      risk: '客製化成本高，若無承諾易造成資源浪費',
+      salesAction: '提供標準化方案為主，客製化列為加價項目並要求承諾',
+    },
+  ],
+  
+  // Buying Stage Identification
+  stages: {
+    awareness: {
+      stage: '認知期',
+      customerBehavior: '被動接收資訊，參加簡報但不提具體問題',
+      probability: '<10%',
+      nurturing: '提供產業報告、白皮書、案例研究，建立信任',
+    },
+    consideration: {
+      stage: '評估期',
+      customerBehavior: '主動詢問功能細節、競品比較、技術架構',
+      probability: '30-40%',
+      nurturing: '安排 POC、技術交流、客戶參考訪問',
+    },
+    decision: {
+      stage: '決策期',
+      customerBehavior: '詢問價格、合約、交付時程、SLA',
+      probability: '60-70%',
+      nurturing: '提供商業條件、高層拜訪、加速法務審查',
+    },
+    commitment: {
+      stage: '承諾期',
+      customerBehavior: '簽約、安排上線時程、指定專案負責人',
+      probability: '90%+',
+      nurturing: '確保順利上線、建立長期合作關係',
+    },
+  },
+  
+  // Qualification Framework - BANT + Foxconn Specific
+  qualification: {
+    headline: '客戶資格評估框架',
+    criteria: [
+      {
+        acronym: 'B',
+        name: 'Budget (預算)',
+        question: '客戶是否有編列軟體相關預算？',
+        green: '已有軟體預算或明確表達可投資 NT$ 5-15M/年',
+        red: '期望免費或要求大幅折扣',
+      },
+      {
+        acronym: 'A',
+        name: 'Authority (決策權)',
+        question: '對話對象是否為決策者或能接觸決策者？',
+        green: '直接與 CTO/CIO/VP 對話，或能安排高層會議',
+        red: '只能接觸基層工程師或採購，無法接觸決策者',
+      },
+      {
+        acronym: 'N',
+        name: 'Need (需求)',
+        question: '客戶是否有明確痛點且已量化影響？',
+        green: '能具體說明 GPU 閒置、停機損失、部署延遲等痛點',
+        red: '只有模糊的「想了解」，無具體痛點',
+      },
+      {
+        acronym: 'T',
+        name: 'Timeline (時程)',
+        question: '客戶是否有明確的決策與上線時程？',
+        green: '已有內部時間表（如 Q3 前上線、年底前決策）',
+        red: '無時間壓力，「慢慢評估」',
+      },
+      {
+        acronym: 'F',
+        name: 'Foxconn Fit (契合度)',
+        question: '客戶需求是否匹配 Foxconn 優勢？',
+        green: '需要 L9-L12 整合、brownfield 部署、主權 AI、遠端運維',
+        red: '只需要純軟體或純硬體，不需要整合價值',
+      },
+    ],
+    scoring: {
+      '4-5 個綠色': '高優先級，全力跟進',
+      '2-3 個綠色': '中優先級，持續培養',
+      '0-1 個綠色': '低優先級，暫緩投入資源',
+    },
+  },
+  
+  boardMessage: '銷售團隊需要工具來識別「準備好簽約」的客戶。這套信號系統幫助前線業務優先處理高意向案件，提高成交率。目標：將銷售週期從 6-9 個月縮短至 3-4 個月，提高成交率從 20% 至 35%。',
+};
+
