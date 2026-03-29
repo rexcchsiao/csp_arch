@@ -4663,3 +4663,121 @@ export const edgeAIDeployment = {
   },
   boardMessage: 'Edge AI is not a distraction from our core datacenter strategy — it\'s an extension. Same RAG Appliance software, optimized for distributed deployment. Same Remote Ops monitoring, applied to edge locations. Foxconn\'s manufacturing DNA and global deployment network make us uniquely qualified to win this market. NT$ 200M Year 3 revenue at 60-70% margin, with strategic value of customer lock-in and reference cases.'
 };
+
+// Board Oversight Dashboard - Quarterly Reporting Template for Software Department
+// Purpose: Provide board with clear, measurable KPIs to track software investment progress
+// Usage: Quarterly board meetings, executive reviews, go/no-go decision points
+// Last updated: 2026-03-30 by CoCo
+export const boardOversightDashboard = {
+  headline: 'Board Oversight Dashboard: Quarterly Software Investment Tracking',
+  coreInsight: 'Board approval is not the end — it\'s the beginning of accountable execution. This dashboard provides 6 KPIs (3 leading, 3 lagging) that the board will review quarterly. Red flags trigger immediate escalation. Green flags validate continued investment.',
+  
+  reportingCadence: {
+    frequency: 'Quarterly (Q3 2026, Q4 2026, Q1 2027, ...)',
+    format: '1-page dashboard + 10-minute presentation + Q&A',
+    presenters: ['Software Product Lead (VP-level)', 'CFO (financial metrics)', 'CEO (strategic context)'],
+    audience: 'Board of Directors + Executive Leadership Team'
+  },
+
+  kpiFramework: {
+    leading: [
+      {
+        kpi: 'Software Attachment Rate',
+        definition: '% of AI server orders that include software (Remote Ops, RAG Appliance, or add-ons)',
+        formula: '(Orders with software / Total AI server orders) × 100',
+        target: { year1: '5%', year2: '12%', year3: '20%' },
+        threshold: { green: '≥90% of target', yellow: '70-89% of target', red: '<70% of target' },
+        whyItMatters: 'Leading indicator of market acceptance; predicts future revenue 6-9 months in advance',
+        dataOwner: 'Sales VP',
+        escalationTrigger: 'If attachment rate <2.5% by Q4 2026, trigger go/no-go review'
+      },
+      {
+        kpi: 'Talent Acquisition Progress',
+        definition: '% of planned 50-80 FTE team hired and onboarded',
+        formula: '(Actual FTE / Planned FTE) × 100',
+        target: { q3_2026: '15-20 FTE', q4_2026: '25-35 FTE', q2_2027: '50 FTE', q4_2027: '80 FTE' },
+        threshold: { green: '≥90% of target', yellow: '70-89% of target', red: '<70% of target' },
+        whyItMatters: 'Team size directly impacts delivery capability; delays cascade to product milestones',
+        dataOwner: 'Software Product Lead',
+        escalationTrigger: 'If <10 FTE by Q4 2026, reassess recruitment strategy or timeline'
+      },
+      {
+        kpi: 'Product Milestone Completion',
+        definition: '% of planned product milestones delivered on-time and meeting quality bar',
+        formula: '(Milestones completed on-time / Total milestones planned) × 100',
+        target: { q3_2026: 'Remote Ops MVP', q4_2026: 'RAG Appliance GA', q2_2027: 'Sovereign AI case' },
+        threshold: { green: '≥90% on-time', yellow: '70-89% on-time', red: '<70% on-time' },
+        whyItMatters: 'Product delays signal execution risk; customer cases required for revenue validation',
+        dataOwner: 'Software Product Lead',
+        escalationTrigger: 'If Remote Ops MVP not delivered by Q3 2026, trigger corrective action plan'
+      }
+    ],
+    lagging: [
+      {
+        kpi: 'Software Revenue',
+        definition: 'Annual recurring revenue (ARR) from software subscriptions and one-time deployments',
+        formula: 'Sum of all software contracts (annualized for multi-year)',
+        target: { year1: 'NT$ 80M', year2: 'NT$ 250M', year3: 'NT$ 750M' },
+        threshold: { green: '≥90% of target', yellow: '70-89% of target', red: '<70% of target' },
+        whyItMatters: 'Lagging indicator of market success; validates business model and pricing strategy',
+        dataOwner: 'CFO',
+        escalationTrigger: 'If Year 1 revenue <NT$ 43M (break-even), reassess go-to-market strategy'
+      },
+      {
+        kpi: 'Gross Margin',
+        definition: 'Software gross margin as % of revenue (target: 60-75%)',
+        formula: '(Software revenue - Software COGS) / Software revenue × 100',
+        target: { year1: '60%', year2: '65%', year3: '70-75%' },
+        threshold: { green: '≥90% of target', yellow: '70-89% of target', red: '<70% of target' },
+        whyItMatters: 'Validates software business model; low margin indicates pricing pressure or delivery inefficiency',
+        dataOwner: 'CFO',
+        escalationTrigger: 'If gross margin <50% by Year 2, reassess service delivery model'
+      },
+      {
+        kpi: 'Customer Retention Rate',
+        definition: '% of software customers who renew subscription or purchase additional services',
+        formula: '(Customers at end of period - New customers) / Customers at start of period × 100',
+        target: { year1: '80%+', year2: '85%+', year3: '85%+' },
+        threshold: { green: '≥90% of target', yellow: '70-89% of target', red: '<70% of target' },
+        whyItMatters: 'Validates customer satisfaction and product-market fit; high churn indicates value gap',
+        dataOwner: 'Software Product Lead',
+        escalationTrigger: 'If retention <75% by Year 2, trigger customer satisfaction review'
+      }
+    ]
+  },
+
+  quarterlyReportTemplate: {
+    section1: { title: 'Executive Summary', content: ['Overall status: 🟢 On Track / 🟡 At Risk / 🔴 Off Track', 'Key wins this quarter (2-3 bullet points)', 'Key challenges this quarter (2-3 bullet points)', 'Ask from board (if any): guidance, introductions, resource approval'] },
+    section2: { title: 'KPI Dashboard', content: ['6 KPIs with current value, target, threshold status (🟢/🟡/🔴)', 'Trend analysis: improving, stable, or declining vs. last quarter', 'Root cause for any red/yellow KPIs'] },
+    section3: { title: 'Financial Performance', content: ['Software revenue vs. plan (NT$)', 'Software gross margin % vs. plan', 'Burn rate and runway (months to next funding needed)', 'Customer acquisition cost (CAC) and lifetime value (LTV)'] },
+    section4: { title: 'Product & Customer Updates', content: ['Product milestones achieved/missed', 'New customer wins (name, deal size, use case)', 'Customer testimonials or case studies (if available)', 'Competitive intelligence: any major competitor moves'] },
+    section5: { title: 'Risks & Mitigation', content: ['Top 3 risks (probability × impact)', 'Mitigation actions in progress', 'Ask from board (if escalation needed)'] },
+    section6: { title: 'Next Quarter Plan', content: ['Key milestones for next quarter', 'Hiring plan (FTE additions)', 'Revenue target', 'Critical dependencies or blockers'] }
+  },
+
+  goNoGoCriteria: {
+    q4_2026_review: {
+      question: 'Should Foxconn continue software investment at planned scale?',
+      greenLights: ['Software attachment rate ≥2.5% (50% of Year 1 target)', 'Remote Ops MVP delivered and deployed at 1+ customer', 'Talent acquisition ≥10 FTE (core team in place)', 'Customer feedback positive (NPS ≥30 or equivalent)'],
+      yellowLights: ['Attachment rate 1.5-2.5% (concerning but recoverable)', 'Remote Ops MVP delayed by <3 months', 'Talent acquisition 5-10 FTE (behind but hiring)', 'Mixed customer feedback (NPS 0-30)'],
+      redLights: ['Attachment rate <1.5% (market rejection signal)', 'Remote Ops MVP not delivered or failed customer pilot', 'Talent acquisition <5 FTE (cannot execute)', 'Negative customer feedback (NPS <0)'],
+      decisionOutcomes: {
+        allGreen: 'Continue investment at planned scale (NT$ 65M/year)',
+        mostlyGreen: 'Continue with corrective action plan (address yellow areas)',
+        mostlyYellow: 'Continue with reduced scope (NT$ 40M/year) + revised milestones',
+        anyRed: 'Trigger strategic review: pivot, partner, or stop software investment'
+      }
+    }
+  },
+
+  boardMessage: 'This dashboard transforms software investment from "trust us" to "track us." Six KPIs (3 leading, 3 lagging) provide early warning signals and validate progress. Q4 2026 go/no-go review ensures accountability: if we miss targets, the board has data to decide pivot, partner, or stop. This is not "build it and hope" — this is "build it with accountability."',
+  
+  escalationProtocol: {
+    yellowKpi: 'Software Product Lead presents corrective action plan within 2 weeks',
+    redKpi: 'CEO presents board-level escalation with options (resource request, timeline adjustment, or strategic pivot)',
+    twoRedQuarters: 'Mandatory board review: reassess software strategy or leadership'
+  },
+
+  firstReportDate: 'Q4 2026 (October-December 2026)',
+  historicalBaseline: 'Q2 2026 (investment approval quarter) = baseline for all KPIs'
+};
