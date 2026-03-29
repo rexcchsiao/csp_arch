@@ -4599,3 +4599,67 @@ export const budgetCycleTiming = {
   },
   boardMessage: 'Sales cycle timing is as important as product readiness. Engaging prospects aligned to their budget cycles reduces sales cycle from 9 months to 3-4 months. Software team must work with sales to identify budget timing early in qualification.'
 };
+
+// Edge AI & Distributed Deployment - Next Frontier (Added 2026-03-30 by CoCo)
+// Purpose: Expand market opportunity beyond centralized datacenters to edge locations
+// Why This Matters: By 2027, 40% of AI inference will happen at the edge (Gartner 2026). Foxconn's manufacturing DNA + local deployment capability positions us uniquely for this market.
+export const edgeAIDeployment = {
+  headline: 'Edge AI: Distributed Inference at Scale',
+  marketTrend: {
+    prediction: 'By 2027, 40% of AI inference workloads will run at the edge (retail, factory, hospital, branch office) rather than centralized datacenters',
+    driver: 'Latency requirements (real-time decision), data sovereignty (data stays on-premise), bandwidth costs (avoid uploading all video/sensor data), and operational resilience (offline capability)',
+    marketSize: 'Edge AI infrastructure market: $25B (2026) → $110B (2030), 35% CAGR (IDC 2026)'
+  },
+  useCases: [
+    {
+      scenario: 'Smart Factory Quality Control',
+      workload: 'Computer vision for defect detection on production line',
+      requirement: '<50ms latency, 99.9% uptime, air-gap capable',
+      foxconnSolution: 'RAG Appliance Edge (1U server with GPU) + pre-trained vision models + Remote Ops monitoring',
+      revenue: 'NT$ 5-10M per factory deployment, 60-65% margin'
+    },
+    {
+      scenario: 'Retail Chain Inventory Management',
+      workload: 'Shelf monitoring, price verification, customer analytics',
+      requirement: 'Distributed across 100-500 stores, centralized management, intermittent connectivity',
+      foxconnSolution: 'RAG Appliance Edge (integrated with POS systems) + cloud orchestration for model updates',
+      revenue: 'NT$ 2-5M per 100 stores, 65-70% margin (software-heavy)'
+    },
+    {
+      scenario: 'Hospital Patient Monitoring',
+      workload: 'Real-time vital signs analysis, fall detection, medication compliance',
+      requirement: 'HIPAA/GDPR compliance, zero data exfiltration, 24/7 reliability',
+      foxconnSolution: 'RAG Appliance Edge (healthcare-certified) + sovereign AI compliance + predictive maintenance',
+      revenue: 'NT$ 10-20M per hospital, 60-65% margin'
+    },
+    {
+      scenario: 'Bank Branch Document Processing',
+      workload: 'KYC verification, check processing, contract analysis',
+      requirement: 'Financial-grade security, audit trail, offline capability',
+      foxconnSolution: 'RAG Appliance Edge + model provenance + AI BOM for regulatory compliance',
+      revenue: 'NT$ 3-8M per bank deployment, 65-70% margin'
+    }
+  ],
+  foxconnAdvantage: {
+    headline: 'Why Foxconn Wins Edge AI',
+    advantages: [
+      { what: 'Manufacturing + Software Integration', detail: 'Unlike pure software vendors (HPE, Dell), Foxconn controls hardware design, pre-installation, and field deployment. Edge AI requires tight hardware-software integration for reliability.' },
+      { what: 'Global Deployment Network', detail: 'Foxconn already ships to 200+ factories globally. Edge AI deployment leverages existing logistics, local partners, and field service infrastructure.' },
+      { what: 'RAG Appliance Synergy', detail: 'Same RAG Appliance software stack, optimized for edge (smaller footprint, offline-first, remote management). Reuses 80% of core development.' },
+      { what: 'Brownfield Integration', detail: 'Edge locations often have legacy systems (CCTV, PLCs, POS). Foxconn specializes in integrating with existing infrastructure, not greenfield-only deployments.' }
+    ]
+  },
+  competitiveGap: {
+    hyperscalers: 'AWS/Azure/GCP require cloud connectivity or complex hybrid setups. Edge locations need standalone capability.',
+    softwareVendors: 'HPE/Dell lack manufacturing DNA and field deployment infrastructure. They rely on partners for edge rollout.',
+    purePlayEdge: 'Startups (e.g., FogHorn, Software AG) lack Foxconn\'s hardware integration and global scale.'
+  },
+  revenueOpportunity: {
+    year1: 'NT$ 30M (5-10 pilot deployments in manufacturing + retail)',
+    year2: 'NT$ 100M (20-30 deployments, expand to healthcare + finance)',
+    year3: 'NT$ 200M (50+ deployments, 15-20% attachment rate to hardware sales)',
+    margin: '60-70% gross margin (software + services heavy)',
+    strategicValue: 'Edge deployments create sticky customer relationships, drive Remote Ops adoption, and serve as reference cases for larger datacenter deals'
+  },
+  boardMessage: 'Edge AI is not a distraction from our core datacenter strategy — it\'s an extension. Same RAG Appliance software, optimized for distributed deployment. Same Remote Ops monitoring, applied to edge locations. Foxconn\'s manufacturing DNA and global deployment network make us uniquely qualified to win this market. NT$ 200M Year 3 revenue at 60-70% margin, with strategic value of customer lock-in and reference cases.'
+};
