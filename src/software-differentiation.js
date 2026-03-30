@@ -579,6 +579,12 @@ structuralAdvantages: {
         source: 'https://opentelemetry.io/'
       },
       {
+        point: 'NIST Secure Software Development Framework（SSDF）已明確把 secure software development practices 與 common vocabulary 拉進 software purchasers 的 acquisition language。',
+        implication: '這代表客戶會正式追問的不只是「設備能不能被管理」，還包括 BIOS / BMC / driver / image 的來源、簽章、批准、回滾與 audit trail 是否有人持續治理；這一層若沒有軟體部門，就很難被包成可交付、可稽核、可續約的服務。',
+        sourceLabel: 'NIST SSDF',
+        source: 'https://csrc.nist.gov/Projects/ssdf'
+      },
+      {
         point: 'NVIDIA Mission Control 已把 cluster deployment、workload orchestration、building management integration、autonomous recovery 包成產品。',
         implication: '市場已證明價值不在「有沒有標準 API」，而在誰能把這些能力做成可持續運營的 control plane。',
         sourceLabel: 'NVIDIA Mission Control',
@@ -1524,6 +1530,13 @@ structuralAdvantages: {
 					whyNow: 'HPE 已把 built-in observability、predict problems 與 continuous service availability 直接寫成 Private Cloud AI 的採購語言，代表客戶已開始用「持續可用性」而不是「監控功能」核准預算',
 					renewalDriver: 'availability review、baseline refresh、故障回顧、季度健康檢查與升級風險收斂都會持續發生，天然適合年約',
 					boardOutcome: '把軟體部門從 dashboard 供應商升級成 uptime / 恢復速度 / 持續服務可用性的責任 owner'
+				},
+				{
+					service: 'Firmware Provenance & Attested Update Governance',
+					budgetOwner: 'CIO / CISO / Compliance',
+					whyNow: '主權 AI、金融與高敏感客戶開始追問 BIOS / BMC / 驅動 / 映像的來源、簽章、版本基線、批准流程與回滾證據；若沒有明確 owner，專案很容易卡在採購與資安審查',
+					renewalDriver: '每次韌體、驅動、映像或 golden image 更新，都需要重新驗證來源、簽章、批准紀錄與 fleet-level audit trail，天然適合做成年度 attestation review / evidence refresh 續約',
+					boardOutcome: '把原本容易被當成硬體附帶責任的更新風險，翻成可被 CIO / CISO 核准的軟體治理收入，並提高主權 AI / 高敏感客戶的成交率'
 				},
 				{
 					service: 'AI Recovery & Evidence Assurance',
