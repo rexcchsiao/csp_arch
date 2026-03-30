@@ -32,6 +32,7 @@ const ExecutiveSummaryView = () => {
   const redfishSource = competitiveSources.standards?.find((source) => source.name.includes('Redfish'));
   const openBmcSource = competitiveSources.standards?.find((source) => source.name.includes('OpenBMC'));
   const openTelemetrySource = competitiveSources.standards?.find((source) => source.name.includes('OpenTelemetry'));
+  const nistSsdfSource = competitiveSources.standards?.find((source) => source.name.includes('NIST Secure Software Development Framework'));
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
   const dellAIFactorySource = competitiveSources.dell?.find((source) => source.name.includes('Dell AI Factory'));
@@ -790,6 +791,7 @@ const ExecutiveSummaryView = () => {
             <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
               <p><span className="font-bold text-slate-500">EU AI Act：</span>{euAiActSource?.keyFeature || '正式把 technical documentation、record-keeping、traceability 與 post-deployment governance 拉進 AI 義務。'}</p>
               <p><span className="font-bold text-slate-500">NIST AI RMF：</span>{nistAiRmfSource?.keyFeature || '強調 govern / measure / manage 與持續性的監控、文件與責任邊界。'}</p>
+              <p><span className="font-bold text-slate-500">NIST SSDF：</span>{nistSsdfSource?.keyFeature || '已把 secure software development 與 supplier evaluation / acquisition language 連在一起，代表買方會正式追問更新來源、批准流程與證據鏈。'}</p>
               <p><span className="font-bold text-slate-500">Redfish：</span>{redfishSource?.limitation || '標準 API 解決的是可管理，不是誰對批准流程、回滾紀律與可稽核更新鏈負責。'} </p>
             </div>
           </div>
