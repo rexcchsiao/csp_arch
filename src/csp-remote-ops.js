@@ -83,6 +83,25 @@ export const cspRemoteOps = [
     competitiveEdge: '完整 L9-L12 遠端運維工具鏈，NVIDIA 僅提供 L11-L12，缺乏韌體層整合',
   },
   {
+    title: '遠端證據收斂與派工就緒 (Remote Evidence Pack & Dispatch Readiness)',
+    capability: '把 BMC 事件、GPU 遙測、作業系統 / K8s / 工作負載關鍵 log、自動時間線與 runbook 建議打包成可交付的 evidence pack，先遠端縮小 probable cause，再判斷是否真的需要 truck roll、該帶哪些備品、以及是否可先透過降載/隔離保住 SLA。',
+    value: '把「每次夜間告警都要先派人去機房看」改成「先遠端完成 70-80% 故障收斂」，直接降低 truck-roll 成本、誤派工與跨站點維修延誤。',
+    metrics: {
+      evidenceCollectionTime: '<10 分鐘完成第一版 RCA-ready evidence pack',
+      dispatchReduction: '30-50% 非必要現場派工可被避免',
+      firstTimeFixRate: '+20-30%（帶對備品、帶對 runbook）',
+      customerImpact: '把 serviceability 從 break/fix 支援升級成可簽 SLA 的軟體服務',
+    },
+    workflow: [
+      'Step 1: 事件發生後自動收集 BMC / GPU / OS / K8s 關鍵訊號與最近變更紀錄',
+      'Step 2: 系統產出 probable cause、受影響範圍、建議隔離/降載動作與需確認備品',
+      'Step 3: 值班團隊依 evidence pack 判斷是否需要現場 dispatch 或先遠端處置',
+      'Step 4: 若需派工，現場工程師帶著對應料件與操作步驟到場，提高 first-time-fix rate',
+    ],
+    refs: [{ name: 'NVIDIA Mission Control', url: 'https://www.nvidia.com/en-us/data-center/mission-control/' }],
+    competitiveEdge: 'NVIDIA 已把 AI factory operations、autonomous recovery、building management integration 與 continuous health checks 放到官方敘事前台；Foxconn 再往前補一層「遠端證據收斂 + 派工就緒」責任鏈，讓軟體部門賣的不只是 observability，而是更少 truck roll、 更快 RCA 與更高 serviceability。',
+  },
+  {
     title: '故障預警與自動修復',
     capability: '新增：結合預測性維護與遠端運維，實現「預警 → 診斷 → 修復」的自動化閉環。',
     value: '在用戶察覺問題前就完成修復，實現零中斷运维。',
