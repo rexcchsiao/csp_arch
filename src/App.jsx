@@ -134,7 +134,7 @@ const App = () => {
                 真正被客戶買單的，早就不只是 GPU 規格，而是誰能把交機後的 <strong className="text-blue-600">部署速度、生命周期治理、遠端運維、brownfield 整合、power / cooling 事件處理</strong> 接成可持續營運的結果。
                 沒有軟體部門，硬體比較容易被看成可替換的 BOM；有軟體部門，Foxconn 才有機會把 AI 伺服器升級成可被續約、可被問責、可被溢價的服務。
               </p>
-              <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
                 <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
                   <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Board takeaway 01</p>
                   <p className="text-sm font-black text-slate-900 mb-2">軟體部門賣的是 Day-2 Assurance</p>
@@ -154,6 +154,13 @@ const App = () => {
                   <p className="text-sm font-black text-slate-900 mb-2">軟體直接影響毛利與續約</p>
                   <p className="text-xs text-slate-700 leading-relaxed">
                     軟體不是附屬功能，而是把一次性交機翻成 deployment assurance、lifecycle governance、capacity assurance 與 remote ops 年度收入的關鍵槓桿。
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-2">Board takeaway 04</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">AI supply-chain governance 正在變成新採購門檻</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    受監管與主權 AI 客戶開始正式追問 model provenance、artifact / mirror 版本、audit evidence 與 recoverability。這些不是硬體附屬功能，而是軟體部門才能產品化、也最容易切進法遵與資安預算的治理責任。
                   </p>
                 </div>
               </div>
