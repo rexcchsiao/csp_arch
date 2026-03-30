@@ -124,12 +124,12 @@ export const hyperscalerGapAnalysis = {
       businessImpact: '加速上市時程，避免為了符合產品限制而修改業務流程',
     },
     {
-      gap: 'Gap 6: 遠端證據鏈與 RCA 問責',
-      hyperscalerApproach: '多數平台把監控、健康檢查與自動復原做得很強，但 incident evidence、跨層 log/dump 蒐集、客戶可交付 RCA 套件常仍需客戶自己串接內部流程',
-      customerPain: '真正昂貴的不只是告警本身，而是故障發生後誰能遠端收集 BMC / GPU / workload 證據、在不派人到現場的前提下完成初判，並快速交付可供 SRE / 平台 / 稽核團隊使用的 RCA',
-      foxconnSolution: '將 Remote Evidence Pack 做成 attach service：自動收集 BMC 事件、GPU 遙測、作業系統與工作負載關鍵 log、保留時間線與 runbook，讓 Foxconn 不只監控問題，而是對遠端診斷與證據交付負責',
-      customerQuote: '我們缺的不是 another alert，我們缺的是半夜出事時，不用先派人進機房也能把根因收斂到可行動範圍。',
-      businessImpact: '減少 truck roll 與跨團隊來回時間，讓 Remote Ops 更容易被採購成正式 SLA / 年約服務，而不是附帶支援',
+      gap: 'Gap 6: 遠端證據鏈、Factory Baseline 與 RCA 問責',
+      hyperscalerApproach: '多數平台把監控、健康檢查與自動復原做得很強，但 incident evidence、跨層 log/dump 蒐集、serial-level baseline 比對、以及客戶可交付 RCA / RMA 套件常仍需客戶自己串接內部流程',
+      customerPain: '真正昂貴的不只是告警本身，而是故障發生後誰能遠端收集 BMC / GPU / workload 證據，回比工廠 burn-in / 韌體 / golden image baseline，在不派人到現場的前提下完成初判，並快速交付可供 SRE / 平台 / 稽核 / 維修團隊使用的 RCA',
+      foxconnSolution: '將 Remote Evidence Pack 做成 attach service：自動收集 BMC 事件、GPU 遙測、作業系統與工作負載關鍵 log，並串回 serial-level factory baseline、burn-in 結果、韌體矩陣與時間線 / runbook，讓 Foxconn 不只監控問題，而是對遠端診斷、RCA 與 dispatch / RMA-ready evidence 交付負責',
+      customerQuote: '我們缺的不是 another alert，我們缺的是半夜出事時，不用先派人進機房也能把根因收斂到可行動範圍，還能知道該帶哪種備品與基線差異在哪裡。',
+      businessImpact: '減少 truck roll、錯帶備品與跨團隊來回時間，讓 Remote Ops 更容易被採購成正式 SLA / 年約服務，而不是附帶支援；也更能凸顯 Foxconn 把 factory truth 接到 Day-2 問責的獨特位置',
     },
   ],
 
