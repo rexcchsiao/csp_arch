@@ -143,6 +143,18 @@ const SourceReferencesView = () => {
             </p>
           </div>
         )}
+        {activeCategory === 'marketResearch' && (
+          <div className="mb-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Why this matters</p>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              這頁的作用不是拿研究報告堆砌數字，而是替老闆補上兩個很關鍵的「大方向佐證」：
+              <span className="font-semibold text-slate-900">AI 基礎建設支出還在往上、而且資料中心的 power 壓力正在同步升高</span>。
+              這兩件事放在一起，剛好會把價值往軟體層推——因為當客戶面對的是更大的 AI 投資、更貴的容量與更難擴建的機房，他們真正願意付錢的，就會是
+              <span className="font-semibold text-slate-900">部署速度、capacity assurance、power / cooling governance、remote ops 與可被續約的 Day-2 營運能力</span>。
+              換句話說，市場研究在這裡不是背景資訊，而是幫 Foxconn 軟體部門證明：未來被放大的，不只會是硬體需求，也會是把硬體變成可營運結果的軟體價值。
+            </p>
+          </div>
+        )}
         {activeCategory === 'standards' && (
           <div className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
             <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why this matters</p>
