@@ -24,7 +24,14 @@ const App = () => {
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
   const urgencySignals = competitiveLandscape.competitiveUrgency.slice(0, 3)
-  const hyperscalerGaps = hyperscalerGapAnalysis.gapAnalysis.slice(0, 4)
+  const hyperscalerGaps = hyperscalerGapAnalysis.gapAnalysis.filter((item) => (
+    [
+      'Gap 1: 混合雲/本地部署能力',
+      'Gap 4: 在地化支援主權',
+      'Gap 5: 客製化靈活性',
+      'Gap 6: 遠端證據鏈與 RCA 問責'
+    ].includes(item.gap)
+  ))
   const officialValidationSources = [
     competitiveSources.nvidia[1],
     competitiveSources.hpe[1],
@@ -40,6 +47,23 @@ const App = () => {
       'Model Provenance & Audit Evidence Pack'
     ].includes(row.service)
   ))
+  const softwareBoundaryCards = [
+    {
+      doNotOwn: '不要跟客戶搶 AI 應用層與 developer portal 主導權',
+      why: '大型 CSP / Hyperscaler 的真正差異化在自家模型服務、內部平台體驗與 customer-facing APIs。Foxconn 若硬搶這層，容易被視為供應商越界。',
+      foxconnOwns: 'Foxconn 軟體部門應聚焦接住 factory-to-operations handoff、brownfield integration、remote diagnostics、lifecycle governance 與 recovery evidence 這些高風險但非客戶核心差異化的責任鏈。'
+    },
+    {
+      doNotOwn: '不要把價值講成 another dashboard',
+      why: '當 Redfish / OpenBMC / OpenTelemetry 與各家 observability 工具愈來愈普及，單純「看得到」很難維持溢價，董事會也不容易買單。',
+      foxconnOwns: 'Foxconn 應把軟體定位成 operating owner：誰負責 maintenance window、rollback discipline、dispatch readiness、SLA evidence 與跨站點 incident 收斂。'
+    },
+    {
+      doNotOwn: '不要把軟體價值停在 Day-1 安裝完成',
+      why: '客戶真正願意續約的，通常不是第一次裝起來，而是之後每一季的升級風險、夜間事故、air-gap 內容更新與 audit evidence refresh。',
+      foxconnOwns: 'Foxconn 軟體部門應明確吃下 Day-2 / Day-365：availability review、baseline refresh、dispatch governance、AI recovery 與 compliance evidence 這些會持續發生的營運工作。'
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -303,6 +327,28 @@ const App = () => {
                 </div>
                 <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
                   <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">開放標準沒有削弱軟體部門，反而把價值從「設備可管理」推向「營運可問責」；沒有軟體部門，Foxconn 只能提供訊號，有軟體部門，Foxconn 才能提供結果。</span></p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-amber-700 mb-2">Strategic boundary</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">更容易說服董事會的版本：Foxconn 軟體部門不是什麼都做，而是只接最值錢、最該被外包的責任鏈</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  這段很重要，因為它直接處理老闆最常見的擔心：<span className="font-semibold text-slate-900">「如果大型客戶本來就有軟體團隊，我們做軟體是不是會跟客戶撞車？」</span>
+                  最好的答案不是「我們也能做平台」，而是明確畫出邊界：Foxconn 不搶客戶核心差異化，而是承接那些
+                  <span className="font-semibold text-slate-900">離硬體、設施、交機與 Day-2 事故很近，卻最容易被低估又最容易拖垮 SLA 的責任</span>。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  {softwareBoundaryCards.map((card) => (
+                    <div key={card.doNotOwn} className="rounded-xl border border-amber-100 bg-white/90 p-4">
+                      <p className="font-black text-slate-900 mb-2">{card.doNotOwn}</p>
+                      <p className="leading-relaxed mb-2"><span className="font-semibold text-amber-700">為什麼：</span>{card.why}</p>
+                      <p className="leading-relaxed"><span className="font-semibold text-slate-900">Foxconn 應該吃下的：</span>{card.foxconnOwns}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-amber-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-amber-900">董事會該記住的一句話：<span className="text-slate-700">Foxconn 軟體部門不是跟客戶搶應用平台，而是替客戶接住最不想自己養、卻又最容易出事的 Day-2 責任鏈；這種邊界畫得越清楚，軟體價值越像高毛利服務，而不是高成本擴編。</span></p>
                 </div>
               </div>
 
