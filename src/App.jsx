@@ -29,7 +29,7 @@ const App = () => {
       'Gap 1: 混合雲/本地部署能力',
       'Gap 4: 在地化支援主權',
       'Gap 5: 客製化靈活性',
-      'Gap 6: 遠端證據鏈與 RCA 問責'
+      'Gap 6: 遠端證據鏈、Factory Baseline 與 RCA 問責'
     ].includes(item.gap)
   ))
   const officialValidationSources = [
@@ -37,6 +37,7 @@ const App = () => {
     competitiveSources.hpe[1],
     competitiveSources.dell[0],
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
+    competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
     competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework')
   ].filter(Boolean)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
