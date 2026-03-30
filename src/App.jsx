@@ -152,6 +152,27 @@ const App = () => {
                   <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 這 3 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why Foxconn can own this uniquely</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">Foxconn 最該強調的，不只是「我們也能做軟體」，而是我們能把工廠、交機、維修與 Day-2 資料接成別人較難複製的責任鏈</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 軟體能吃到 factory truth，不只是 runtime signals</p>
+                    <p className="leading-relaxed">Foxconn 不只看得到機房告警，還有機會把 burn-in、golden image、出廠韌體矩陣、site acceptance 與 Day-2 incident evidence 接在一起。這讓軟體部門賣的不是 another monitoring layer，而是從工廠到現場都能被追溯的 handoff 與 RCA 責任鏈。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 軟體能把 service loop 關起來，而不是只交工具</p>
+                    <p className="leading-relaxed">很多平台供應商能賣 control plane，但不一定能把故障證據、備品判斷、dispatch readiness、現場維修窗口與下一版 baseline refresh 接成同一個 service loop。Foxconn 若由軟體部門承接，賣的是更少白跑、更快 RCA、更高 first-time-fix rate。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 這條責任鏈最容易長成年約，而不是一次性交付</p>
+                    <p className="leading-relaxed">只要軟體部門的角色被定義成 baseline owner、incident evidence owner、upgrade governance owner，收入邏輯就會從交機專案，延伸成季度 review、年度 SLA、evidence refresh 與 lifecycle renewal。這正是硬體最難自己長出來的高毛利層。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-emerald-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">雲平台與管理軟體供應商大多只能看到「上線後」；Foxconn 若把軟體部門做對，看到的會是「出廠前 + 交機時 + 出事後」整條責任鏈，這就是最能放大硬體價值、也最難被複製的軟體位置。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">Market validation</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">這不是 Foxconn 自說自話：市場領先者已經在賣「軟體化營運結果」</h3>
