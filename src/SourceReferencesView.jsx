@@ -69,9 +69,9 @@ const SourceReferencesView = () => {
             <p className="text-xs font-black uppercase tracking-widest text-green-700 mb-2">Why this matters</p>
             <p className="text-sm text-slate-700 leading-relaxed">
               這一頁最值得老闆注意的，不只是 NVIDIA 很強，而是 <span className="font-semibold text-slate-900">NVIDIA 自己都在把 AI 基礎建設從「GPU + 管理軟體」往「AI factory operations」重寫</span>。
-              Mission Control 已經把 cluster lifecycle、autonomous recovery、building-management integration 放進官方語言，而 2026/03 驗證到的 Mission Control 2.3 又進一步把 <span className="font-semibold text-slate-900">air-gapped deployment 與 leak-detection validation</span> 拉進前台。
-              這是一個很強的市場訊號：客戶現在不只在買算力，也開始正式為 <span className="font-semibold text-slate-900">主權運營、斷網環境更新治理、以及 power / cooling / 漏液事件的 Day-2 風險收斂</span> 編列預算。
-              這剛好能幫 Foxconn 把軟體部門講成更高價值的位置：不是 another dashboard，而是把 brownfield、air-gap、facility event 與 remote accountability 做成可續約的營運責任。
+              Mission Control 已經把 <span className="font-semibold text-slate-900">cluster life cycle、autonomous recovery、continuous health checks、building-management integration</span> 放進官方語言，而 2026/03 驗證到的 Mission Control 2.3 又進一步把 <span className="font-semibold text-slate-900">air-gapped deployment 與 leak-detection validation</span> 拉進前台。
+              這是一個很強的市場訊號：客戶現在不只在買算力，也開始正式為 <span className="font-semibold text-slate-900">主權運營、斷網環境更新治理、power / cooling / 漏液事件的 Day-2 風險收斂，以及可被問責的持續健康檢查</span> 編列預算。
+              這剛好能幫 Foxconn 把軟體部門講成更高價值的位置：不是 another dashboard，而是把 brownfield、air-gap、facility event 與 remote accountability 做成可續約的營運責任，直接承接「誰負責把 AI factory 持續跑穩」這條責任鏈。
             </p>
           </div>
         )}
@@ -81,10 +81,10 @@ const SourceReferencesView = () => {
             <p className="text-sm text-slate-700 leading-relaxed">
               這一頁最重要的訊號，不是 Dell 或 HPE 的品牌比較大，而是他們都已經把
               <span className="font-semibold text-slate-900"> AI 基礎建設的主價值，從「伺服器規格」改寫成「交付速度、持續可用性、lifecycle support 與 cyber resilience」</span>。
-              HPE 官方直接賣的是 <span className="font-semibold text-slate-900">deploy AI in days, not months、built-in observability、predict problems、continuous service availability</span>；
-              Dell 則把 <span className="font-semibold text-slate-900">end-to-end AI factory delivery 與 cyber resilience for AI</span> 放進同一條採購敘事。
+              HPE 官方直接賣的是 <span className="font-semibold text-slate-900">deploy AI in days, not months、full-stack visibility、built-in observability、predict problems、continuous service availability</span>；
+              Dell 則把 <span className="font-semibold text-slate-900">end-to-end AI factory delivery、lifecycle support 與 cyber resilience for AI</span> 放進同一條採購敘事。
               這對 Foxconn 很有利，因為它證明老闆真正該投資的不是「多做一套管理畫面」，而是讓軟體部門去承接
-              <span className="font-semibold text-slate-900">Factory-to-Operations handoff、Day-2 availability、recoverability 與可被續約的營運責任</span>。
+              <span className="font-semibold text-slate-900">Factory-to-Operations handoff、Day-2 availability、recoverability、change governance 與可被續約的營運責任</span>。
             </p>
           </div>
         )}
