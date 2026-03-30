@@ -455,11 +455,11 @@ const App = () => {
                   </div>
                   <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">2. 安全團隊要的不是 another dashboard</p>
-                    <p className="leading-relaxed">當企業開始把 AI 看成正式營運系統，資安與法遵真正想買的是可稽核的 artifact / registry 保護、離線內容版本、權限邊界與事故證據，而不是多一張管理畫面。</p>
+                    <p className="leading-relaxed">當企業開始把 AI 看成正式營運系統，資安與法遵真正想買的是可稽核的 artifact / registry 保護、離線內容版本、權限邊界、AI BOM 與事故證據，而不是多一張管理畫面。</p>
                   </div>
                   <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">3. 這筆錢的 owner 也會跟著變</p>
-                    <p className="leading-relaxed">一旦提案能回答 audit、recoverability、model provenance 與 sovereign operation，Foxconn 就不只是在對 Infrastructure / SRE 溝通，還能切進 CISO、Compliance、AI governance program 與 regulated industry 預算。</p>
+                    <p className="leading-relaxed">一旦提案能回答 audit、recoverability、model provenance、AI BOM 與 sovereign operation，Foxconn 就不只是在對 Infrastructure / SRE 溝通，還能切進 CISO、Compliance、AI governance program 與 regulated industry 預算。</p>
                   </div>
                 </div>
                 <div className="rounded-xl border border-rose-100 bg-white/90 p-4 mb-4">
