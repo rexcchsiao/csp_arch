@@ -36,6 +36,7 @@ const App = () => {
     competitiveSources.nvidia[1],
     competitiveSources.hpe[1],
     competitiveSources.dell[0],
+    competitiveSources.enterprisePlatforms.find((item) => item.name === 'VAST AI OS'),
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
     competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
     competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework'),
@@ -417,7 +418,7 @@ const App = () => {
                   </p>
                   <p className="text-sm font-semibold text-cyan-900">董事會一句話版本：<span className="text-slate-700">如果市場已願意為「營運專業 delivered as software」付錢，Foxconn 軟體部門就不該再被描述成支援功能，而應該被定義成可被採購的 operations line。</span></p>
                 </div>
-                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 速度</p>
                     <p className="leading-relaxed">HPE 直接用 deploy AI in days, not months、production deployment in hours 來賣。這代表採購會先看 time-to-value，而不是硬體到貨後還要自己整合多久。</p>
@@ -433,6 +434,10 @@ const App = () => {
                   <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">4. 可被外包的營運專業</p>
                     <p className="leading-relaxed">NVIDIA 甚至把 Mission Control 講成「world-class operations team delivered as software」。這代表客戶願意買的，不只是 control plane，而是把 deployment discipline、incident handling 與 remote accountability 外包給可被問責的軟體 owner。</p>
+                  </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">5. AI operating model 已成正式 buying language</p>
+                    <p className="leading-relaxed">連 VAST AI OS、Nutanix Agentic AI 這類基礎設施供應商，都在用 AI operating system / cloud operating model 來賣部署、營運與治理。這代表市場已接受「AI 的主產品是營運模型，不只是伺服器」；Foxconn 更該把軟體部門定位成最貼近 factory-to-operations 的實體交付層。</p>
                   </div>
                 </div>
                 <div className="rounded-xl border border-cyan-100 bg-white p-4">
@@ -531,8 +536,8 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">High-value service wedge</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 5 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
-                <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-4 text-sm text-slate-700">
+                <h3 className="text-lg font-black text-slate-900 mb-3">最值得先講清楚的 6 個軟體服務：不是功能，而是可被核准的責任邊界</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 text-sm text-slate-700">
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Factory-to-Operations Handoff Assurance</p>
                     <p className="leading-relaxed">把出廠預載、burn-in、site acceptance、baseline 與 Day-2 runbook 接成同一條交付責任鏈，賣的是更快上線，不是更多安裝工時。</p>
@@ -540,6 +545,10 @@ const App = () => {
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Remote Diagnostics & Dispatch Readiness</p>
                     <p className="leading-relaxed">先遠端把故障範圍縮小、判斷是否要派人、該帶哪些備品，再決定 truck roll；賣的是更少白跑、更短 MTTR，而不是 another dashboard。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Factory Truth Evidence Pack</p>
+                    <p className="leading-relaxed">把 serial-level burn-in 結果、出廠韌體矩陣、golden image、site acceptance baseline 與 Day-2 incident timeline 接成可交付的 RCA / RMA-ready evidence，賣的是更快責任收斂、更少錯換料與更高 first-time-fix rate。</p>
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Capacity Assurance / Power-Cooling Governance</p>
