@@ -1192,6 +1192,14 @@ structuralAdvantages: {
 				source: 'https://www.dell.com/en-us/ai-factory'
 			},
 			{
+				title: '沒有 Remote Evidence / Dispatch Readiness owner，大型 CSP 會懷疑夜間故障到底誰先把問題收斂',
+				whyItKillsDeals: '大型 CSP / 電信商最怕的常不是看不到告警，而是半夜出事後還得先派人進機房，才能知道是 GPU、韌體、電源、液冷還是工作負載問題；若供應商無法先遠端收集證據、縮小 probable cause、確認是否真的需要 truck roll 與該帶哪些備品，serviceability 成本就會被客戶自己吞下。',
+				marketProof: 'NVIDIA Mission Control 已把 AI factory operations、autonomous recovery、continuous health checks 與 building management integration 拉進正式產品敘事；Dell AI Factory 也把 lifecycle support 與 end-to-end delivery 放到採購前台。這代表市場已經在為「誰能先遠端把問題縮小、再決定怎麼派工」付錢，而不是只為監控畫面付錢。',
+				foxconnImplication: 'Foxconn 應把軟體部門定位成 Remote Evidence Pack / Dispatch Readiness owner：把 BMC / GPU / OS / workload 關鍵訊號、最近變更紀錄、factory baseline、RCA-ready timeline 與備品建議打包成正式服務，讓客戶買到的是更少 truck roll、更高 first-time-fix rate 與更清楚的夜間責任邊界。',
+				sourceLabel: 'NVIDIA Mission Control + Dell AI Factory',
+				source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+			},
+			{
 				title: '沒有 model provenance / audit evidence owner，受監管 AI 案子很容易在法遵關卡卡住',
 				whyItKillsDeals: '金融、政府、醫療與主權 AI 專案，真正卡住的常不是模型能不能跑，而是誰能證明模型來源、離線內容同步、更新紀錄、操作日誌與技術文件在稽核時講得清楚。若 Foxconn 只能賣硬體或部署本身，客戶很容易把這塊視為尚未完成的治理風險。',
 				marketProof: 'EU AI Act 已把 technical documentation、logging、record-keeping 與可追溯治理拉進正式法規語言；Red Hat 也特別為 disconnected environments 提供獨立安裝與維運文件，側面證明離線 AI 的難點在持續治理與證據鏈，而不只是第一次安裝。',
