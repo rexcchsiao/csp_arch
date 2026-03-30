@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Target, Trophy, Shield, Zap, TrendingUp, Users, Lightbulb, CheckCircle, AlertTriangle, ExternalLink, BarChart3, Layers, Gauge, HelpCircle } from 'lucide-react';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { softwareDifferentiation } from './software-differentiation.js';
+import { customerDecisionCriteria } from './executive-brief.js';
+import { competitiveSources } from './competitive-sources.js';
 
 const CompetitiveLandscapeView = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -370,6 +372,34 @@ const CompetitiveLandscapeView = () => {
                 </div>
               </div>
 
+              <div className="mt-4 p-5 bg-white rounded-2xl border border-violet-100">
+                <div className="flex items-start gap-3 mb-4">
+                  <Trophy className="w-5 h-5 text-violet-600 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-violet-900">客戶其實怎麼評分供應商：Foxconn 最容易贏的不是功能數，而是責任深度</h4>
+                    <p className="text-xs text-slate-600 mt-1">把採購問題直接翻成評分表後，軟體部門的價值會更具體：不是「有沒有平台」，而是能不能在 deployment、Day-2、brownfield 與 multi-vendor 上明顯勝出。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {customerDecisionCriteria.evaluationCriteria.slice(0, 4).map((item, idx) => (
+                    <div key={idx} className="p-4 bg-violet-50 rounded-xl border border-violet-100">
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <p className="text-xs font-black text-violet-800">{item.criterion}</p>
+                        <span className="text-[11px] font-bold text-violet-600">權重 {item.weight}</span>
+                      </div>
+                      <p className="text-xs text-slate-700 mb-2">{item.description}</p>
+                      <div className="space-y-1.5 text-xs text-slate-700">
+                        <p><span className="font-bold text-violet-700">Foxconn：</span>{item.foxconnDetail}</p>
+                        <p><span className="font-bold text-slate-500">為什麼會贏：</span>{item.winningArgument}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+                  <p className="text-sm font-semibold text-violet-900">管理層該記住的一句話：<span className="text-slate-700">如果客戶的正式評分表本來就在看 deployment speed、GPU utilization、remote ops 與 multi-vendor support，那 Foxconn 軟體部門的價值就不是 nice-to-have，而是直接決定能不能從硬體競標進到高分決選。</span></p>
+                </div>
+              </div>
+
               <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="p-4 bg-white rounded-2xl border border-violet-100">
                   <p className="text-xs font-bold text-violet-500 uppercase tracking-wide mb-2">可對應預算 owner</p>
@@ -394,6 +424,108 @@ const CompetitiveLandscapeView = () => {
 
               <div className="mt-4 p-4 bg-white rounded-xl border border-violet-100">
                 <p className="text-sm font-semibold text-violet-900">{competitiveLandscape.procurementLanguageShift?.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-cyan-50 rounded-2xl border border-cyan-200">
+              <div className="flex items-start gap-3 mb-4">
+                <Layers className="w-6 h-6 text-cyan-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-cyan-900">有了 Redfish、OpenTelemetry、SSDF，為什麼還是一定要有軟體部門？</h3>
+                  <p className="text-sm text-cyan-800 mt-1 font-medium">因為標準只解決「能不能讀資料、管設備、定義流程」，卻沒有替客戶接住 maintenance window、rollback、dispatch readiness、audit evidence 與 SLA 問責。這正是軟體部門最能被定價的地方。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                {competitiveSources.standards
+                  .filter((item) => (
+                    item.name === 'DMTF Redfish' || item.name === 'OpenTelemetry' || item.name === 'NIST Secure Software Development Framework (SSDF)'
+                  ))
+                  .map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-4 bg-white rounded-2xl border border-cyan-100 hover:bg-cyan-100/40 transition-colors"
+                    >
+                      <p className="text-sm font-black text-slate-900 mb-2">{item.name}</p>
+                      <p className="text-xs text-slate-700 leading-relaxed mb-2">{item.keyFeature}</p>
+                      <p className="text-[11px] font-semibold text-cyan-700">Foxconn angle: {item.ourAdvantage}</p>
+                    </a>
+                  ))}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="p-4 bg-white rounded-2xl border border-cyan-100">
+                  <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">標準解決了什麼</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">設備介面、遙測格式、開發治理語言</p>
+                  <p className="text-xs text-slate-700">Redfish 讓硬體 API 標準化，OpenTelemetry 讓訊號格式標準化，SSDF 讓安全開發與供應商審查有共同語言。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-cyan-100">
+                  <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">標準沒有接住什麼</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">升級責任、回滾紀律、派工判斷、稽核證據</p>
+                  <p className="text-xs text-slate-700">客戶真正怕的不是看不到資料，而是出事時誰來決定 maintenance window、誰先遠端縮小 root cause、誰交 rollback 與 audit evidence。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-cyan-100">
+                  <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">這為什麼抬高軟體部門價值</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">因為軟體部門把 commodity telemetry 變成可續約責任</p>
+                  <p className="text-xs text-slate-700">當別人只能賣 API 或 monitoring，Foxconn 軟體部門可以賣 governance、evidence、dispatch readiness 與 Day-2 accountability，這才是 attach rate 與年約收入來源。</p>
+                </div>
+              </div>
+
+              <div className="p-4 bg-white rounded-xl border border-cyan-100">
+                <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">標準化會讓底層能力越來越 commodity，但也因此更凸顯上層營運治理的重要性；真正把 Redfish、OpenTelemetry、SSDF 轉成續約收入的人，不是硬體團隊，而是軟體部門。</span></p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-rose-50 rounded-2xl border border-rose-200">
+              <div className="flex items-start gap-3 mb-4">
+                <Shield className="w-6 h-6 text-rose-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-rose-900">下一條很值得搶的，不只是維運預算，而是 AI governance / security / audit 預算</h3>
+                  <p className="text-sm text-rose-800 mt-1 font-medium">這能直接補強軟體部門的價值主張：不是只讓系統更好管，而是讓受監管與高敏感客戶更敢簽，也讓 Foxconn 從 Infra / SRE 預算往 CISO、Compliance 與 AI governance program 預算延伸。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="p-4 bg-white rounded-2xl border border-rose-100">
+                  <p className="text-xs font-bold text-rose-600 uppercase tracking-wide mb-2">為什麼現在會被買單</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">模型來源、更新紀錄、evidence pack 已經變成正式採購語言</p>
+                  <p className="text-xs text-slate-700">很多 regulated AI 專案真正卡住的，不是模型不能跑，而是誰來交 model provenance、logging、record-keeping 與 audit evidence。這正是軟體部門最能產品化的治理責任。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-rose-100">
+                  <p className="text-xs font-bold text-rose-600 uppercase tracking-wide mb-2">新的預算 owner</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">不只對 Infrastructure / SRE 講，還能對 CISO / Compliance 講</p>
+                  <p className="text-xs text-slate-700">一旦提案能回答 audit、recoverability、AI BOM、sovereign operation 與 attested update governance，Foxconn 就能切進原本硬體案較難碰到的治理與資安預算。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-rose-100">
+                  <p className="text-xs font-bold text-rose-600 uppercase tracking-wide mb-2">對董事會最有感的差異</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">軟體部門從維運工具升級成 trustworthy AI operations owner</p>
+                  <p className="text-xs text-slate-700">這會把軟體的角色從「幫硬體補功能」升級成「替 Foxconn 承接 AI 治理、證據鏈與續約責任」，更容易被視為高毛利的戰略資產。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {competitiveSources.regulations.filter((item) => (
+                  item.name === 'EU AI Act (official EU text / implementation portal)' || item.name === 'NIST AI Risk Management Framework'
+                )).map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-4 bg-white rounded-2xl border border-rose-100 hover:bg-rose-100/40 transition-colors"
+                  >
+                    <p className="text-sm font-black text-slate-900 mb-2">{item.name}</p>
+                    <p className="text-xs text-slate-700 leading-relaxed mb-2">{item.keyFeature}</p>
+                    <p className="text-[11px] font-semibold text-rose-700">Verified {item.lastVerified}</p>
+                  </a>
+                ))}
+              </div>
+
+              <div className="p-4 bg-white rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門如果能把 model provenance、audit evidence、recoverability 與 sovereign operation 做成可被稽核的服務，就不是在幫硬體補功能，而是在替 Foxconn 打開原本碰不到的治理與資安預算。</span></p>
               </div>
             </div>
           </div>
