@@ -389,6 +389,10 @@ const App = () => {
               <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">New budget owner opening</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">下一條很值得搶的，不只是維運預算，而是 AI governance / security / audit 預算</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  這條預算線不只來自歐盟法規壓力。EU AI Act 已把 technical documentation、logging、record-keeping 拉進正式法規語言；NIST AI RMF 也把 govern / map / measure / manage 講成持續性的營運責任。
+                  這代表企業開始把 <span className="font-semibold text-slate-900">模型來源、操作紀錄、變更證據與 recoverability</span> 當成 production AI 的基本治理要求，而不是法遵團隊臨時加上的附註。
+                </p>
                 <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 模型來源要講得清楚</p>
