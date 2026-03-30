@@ -465,6 +465,14 @@ structuralAdvantages: {
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
       },
       {
+        title: 'Procurement Assurance',
+        marketSignal: 'NIST SSDF 已明確把 secure software development practices 與 common vocabulary 拉進 software purchasers 的 acquisition language；DMTF Redfish 也強調 secure management 與 interoperability profiles。這代表高敏感客戶在採購時，已開始正式追問更新來源、簽章、批准流程、回滾與 audit trail，而不只看規格。',
+        foxconnPlay: 'Foxconn 應把 BIOS / BMC / driver / container image 的來源、簽章驗證、版本基線、批准流程、rollback evidence 與 fleet-level audit trail 打包成 procurement assurance，主張我們不只是把 AI 伺服器交出去，而是把更新鏈的可追溯性與採購風險一起接住。',
+        boardWhyItMatters: '這讓軟體部門直接影響案子能不能過採購、資安與法遵審查；沒有這層，硬體規格再好也可能卡在最後一哩。',
+        sourceLabel: 'NIST SSDF + DMTF Redfish',
+        source: 'https://csrc.nist.gov/Projects/ssdf'
+      },
+      {
         title: 'Facility Assurance',
         marketSignal: 'Supermicro 已開始把液冷與設施層遙測納入官方軟體敘事；NVIDIA Mission Control 也直接主打 building management integration、power / cooling control。',
         foxconnPlay: 'Foxconn 不該只賣 facility monitoring，而要把 BMC、scheduler、DCIM / BMS、power cap 與 cooling event 串成 facility assurance：遇到設施事件時，能排空、降載、重平衡、保住 SLA，並保留 brownfield 機房的既有流程。',
