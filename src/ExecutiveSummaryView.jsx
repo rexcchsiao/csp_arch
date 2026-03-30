@@ -29,6 +29,8 @@ const ExecutiveSummaryView = () => {
   const missionControlSource = competitiveSources.nvidia?.find((source) => source.name.includes('Mission Control'));
   const recurringValueWedgeCount = competitiveLandscape.softwareDepartmentWedge?.wedges?.length || 0;
   const standardsSources = competitiveSources.standards || [];
+  const redfishSource = competitiveSources.standards?.find((source) => source.name.includes('Redfish'));
+  const openBmcSource = competitiveSources.standards?.find((source) => source.name.includes('OpenBMC'));
   const openTelemetrySource = competitiveSources.standards?.find((source) => source.name.includes('OpenTelemetry'));
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
@@ -225,7 +227,16 @@ const ExecutiveSummaryView = () => {
       source: dellCyberResilienceSource?.name || 'Dell AI Solutions – Cyber Resilience for AI',
       sourceUrl: dellCyberResilienceSource?.url,
     },
+    {
+      title: '序號級 factory baseline / warranty evidence ledger 幾乎還沒人做成服務',
+      marketSignal: 'Redfish 與 OpenBMC 讓底層遙測、事件與設備狀態更容易標準化取得，代表原始資料本身會越來越像 commodity。',
+      whitespace: '真正缺的不是再多一個 API，而是誰能把 serial-level burn-in、韌體矩陣、site acceptance、後續 incident timeline 與更換紀錄，整理成可供 SRE、維修、保固與稽核共用的 service ledger。這條責任鏈若沒人接，客戶就只能自己拼湊 RCA 與 RMA 證據。',
+      foxconnPlay: '把 Factory Asset Memory & Warranty Evidence Ledger 做成 attach service：賣的是更快 RMA 判定、更少跨團隊扯皮、更準的備品命中率，以及把工廠真相延伸到 Day-2 service accountability。這會更像 Foxconn 獨有的軟體價值，而不是 everyone can copy 的 observability 功能。',
+      source: redfishSource?.name || openBmcSource?.name || 'DMTF Redfish / OpenBMC',
+      sourceUrl: redfishSource?.url || openBmcSource?.url,
+    },
   ];
+  const marketWhitespaceCount = marketWhitespace.length;
   const hyperscalerKeepInHouseVsBuy = [
     {
       title: 'Change Safety / Lifecycle Control',
@@ -247,6 +258,13 @@ const ExecutiveSummaryView = () => {
       foxconnEdge: 'Foxconn 可把 BMC 遙測、排程策略與既有 BMS/DCIM 流程串起來，賣的是「避免設施事件變成叢集 outage」的結果。',
       source: 'NVIDIA Mission Control building management / power-cooling integration',
       sourceUrl: missionControlSource?.url,
+    },
+    {
+      title: 'Serial-Level Evidence / Warranty Accountability',
+      summary: 'Hyperscaler 當然能自己建監控平台，但通常不想自己維護「每台機器從 burn-in、韌體、site acceptance 到 incident / 更換歷史」這種序號級證據鏈。這種工作不直接差異化，卻一出事就很貴。',
+      foxconnEdge: 'Foxconn 天生最接近 factory truth，可把工廠基線、現場變更、RCA 與 RMA-ready evidence 串成同一套 service ledger，讓客戶少養一支專門處理 night-shift triage、保固扯皮與 dispatch readiness 的團隊。',
+      source: redfishSource?.name || openBmcSource?.name || 'DMTF Redfish / OpenBMC',
+      sourceUrl: redfishSource?.url || openBmcSource?.url,
     },
   ];
   const executiveOwnershipChain = [
@@ -1254,11 +1272,11 @@ const ExecutiveSummaryView = () => {
       {/* Market whitespace - where software earns its keep */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 6 個高價值空白
+          <Target className="w-5 h-5 text-rose-600" /> 市場還沒被真正補滿的 {marketWhitespaceCount} 個高價值空白
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           如果老闆只看「大家都說自己有平台」，很容易誤判軟體差異不大。真實市場不是這樣啦～ 客戶真正會付錢的地方，往往是那些沒人想接、但一出事就非常痛的 Day-2 問題。
-          下面這六個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口：從 commissioning / handoff 證據鏈、air-gapped Day-2 內容生命週期，到 shared GPU 治理與 AI recoverability，都是最容易被董事會理解成「不是 another feature，而是可被問責的營運責任」的地方。
+          下面這 {marketWhitespaceCount} 個空白，正好就是軟體部門能把硬體 attach 成高毛利服務的切入口：從 commissioning / handoff 證據鏈、air-gapped Day-2 內容生命週期，到 shared GPU 治理與 AI recoverability，都是最容易被董事會理解成「不是 another feature，而是可被問責的營運責任」的地方。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {marketWhitespace.map((item) => (
