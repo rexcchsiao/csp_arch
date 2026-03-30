@@ -267,8 +267,57 @@ const CompetitiveLandscapeView = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-4 p-4 bg-white rounded-xl border border-sky-100">
-                <p className="text-sm font-semibold text-sky-900">管理層該記住的一句話：<span className="text-slate-700">CSP 不是缺寫軟體的人，而是不想再養一支 20-50 人團隊去接 brownfield integration、firmware / lifecycle 風險與 24×7 remote ops。這些剛好就是軟體部門最能被定價的價值。</span></p>
+              <div className="mt-4 p-5 bg-white rounded-2xl border border-sky-100">
+                <div className="flex items-start gap-3 mb-3">
+                  <Layers className="w-5 h-5 text-sky-600 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-sky-900">再講白一點：Hyperscaler 最常外包的，不是寫功能，而是承接責任鏈</h4>
+                    <p className="text-xs text-slate-600 mt-1">真正容易被外包出去的，是那些 <span className="font-semibold text-slate-900">不直接差異化、但一出事就很貴</span> 的工作：工廠預載到現場驗收的 handoff、版本基線、夜間遠端診斷、dispatch readiness、evidence pack 與 RCA 交付。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+                  <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                    <p className="text-xs font-bold text-sky-700 mb-2">客戶內部團隊會想省下什麼？</p>
+                    <p className="text-xs text-slate-700">避免再養一支 20-50 人 team 去接 factory-to-ops handoff、firmware / lifecycle governance 與 24×7 incident follow-through。</p>
+                  </div>
+                  <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                    <p className="text-xs font-bold text-sky-700 mb-2">Foxconn 比較容易被買單在哪？</p>
+                    <p className="text-xs text-slate-700">不是 another dashboard，而是把交機、驗收、遠端證據收集、dispatch 判斷與 Day-2 runbook 做成正式服務責任。</p>
+                  </div>
+                  <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                    <p className="text-xs font-bold text-sky-700 mb-2">為什麼這會提高軟體部門價值？</p>
+                    <p className="text-xs text-slate-700">因為這類工作直接碰到 uptime、time-to-revenue 與跨團隊協調成本，最容易被採購成 SLA / 年約，而不是一次性功能費。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  {competitiveLandscape.uniqueServices
+                    ?.filter((service) => service.name === 'Remote Diagnostics & Dispatch Readiness')
+                    .map((service, idx) => (
+                      <React.Fragment key={idx}>
+                        <div className="p-4 bg-sky-50 rounded-xl border border-sky-100">
+                          <p className="text-xs font-bold text-sky-700 mb-2">最容易被採購成正式服務的是什麼？</p>
+                          <div className="space-y-2 text-xs text-slate-700">
+                            <p><span className="font-bold text-slate-500">服務：</span>{service.name}</p>
+                            <p><span className="font-bold text-slate-500">誰會買：</span>{service.budgetOwner}</p>
+                            <p><span className="font-bold text-slate-500">怎麼收費：</span>{service.monetization}</p>
+                            <p><span className="font-bold text-slate-500">買的其實是：</span>{service.painSolved}</p>
+                          </div>
+                        </div>
+                        <div className="p-4 bg-white rounded-xl border border-sky-100">
+                          <p className="text-xs font-bold text-sky-700 mb-2">為什麼這張牌能把軟體部門變成收入 owner？</p>
+                          <div className="space-y-2 text-xs text-slate-700">
+                            <p><span className="font-bold text-slate-500">Foxconn 優勢：</span>{service.whyUnique}</p>
+                            <p><span className="font-bold text-slate-500">會續約的理由：</span>{service.renewalDriver}</p>
+                          </div>
+                          <a href={service.source} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:underline">
+                            <ExternalLink className="w-3 h-3" />
+                            來源連結
+                          </a>
+                        </div>
+                      </React.Fragment>
+                    ))}
+                </div>
+                <p className="text-sm font-semibold text-sky-900">管理層該記住的一句話：<span className="text-slate-700">CSP 不是缺寫軟體的人，而是不想再養一支 20-50 人團隊去接 brownfield integration、factory-to-ops handoff、firmware / lifecycle 風險與 24×7 remote ops。這些剛好就是軟體部門最能被定價的價值。</span></p>
               </div>
             </div>
 
