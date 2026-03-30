@@ -66,6 +66,26 @@ const App = () => {
       foxconnOwns: 'Foxconn 軟體部門應明確吃下 Day-2 / Day-365：availability review、baseline refresh、dispatch governance、AI recovery 與 compliance evidence 這些會持續發生的營運工作。'
     }
   ]
+  const crossLayerMoatCards = [
+    {
+      competitorType: '純軟體 / AI 平台商',
+      whatTheyUsuallyOwn: '強在 model lifecycle、self-service、governance 與 cloud operating model。',
+      whyTheyStillLeaveAGap: '通常不直接掌握 BMC、韌體、site acceptance、power / cooling 事件與現場 dispatch readiness，所以較難承接從工廠到機房的責任鏈。',
+      foxconnAngle: 'Foxconn 可把 factory baseline、韌體矩陣、遠端證據包與 lifecycle governance 串起來，賣的是 software-defined accountability，不只是平台功能。'
+    },
+    {
+      competitorType: '品牌廠 / 傳統 OEM',
+      whatTheyUsuallyOwn: '強在 validated platform 與 end-to-end 交付敘事。',
+      whyTheyStillLeaveAGap: '多半偏向自家硬體生態，對 mixed-vendor brownfield、既有機房流程與跨世代設備共管的彈性較受限。',
+      foxconnAngle: 'Foxconn 最有機會把軟體部門定位成中立的 brownfield owner：不要求客戶整場重做，也能把 handoff、upgrade、remote ops 與 evidence 接起來。'
+    },
+    {
+      competitorType: '設施 / 電力 / 液冷廠商',
+      whatTheyUsuallyOwn: '強在 power、cooling、retrofit readiness 與 physical infrastructure。',
+      whyTheyStillLeaveAGap: '即使看得到 rack density、power cap 與 leak alarm，也不一定能把訊號往上接到 workload placement、maintenance window、rollback 與 SLA 保護。',
+      foxconnAngle: 'Foxconn 可把 L9-L10 電力/韌體訊號直接接到 L11-L12 叢集治理，讓軟體部門賣的是 capacity assurance、facility-aware workload governance 與可續約的 Day-2 服務。'
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -312,6 +332,19 @@ const App = () => {
                       <p className="leading-relaxed"><span className="font-semibold text-slate-900">Foxconn 該賣的：</span>{item.foxconnSolution}</p>
                     </div>
                   ))}
+                </div>
+                <div className="rounded-xl border border-violet-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-violet-700 mb-3">Why Foxconn software is structurally hard to replace</p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                    {crossLayerMoatCards.map((card) => (
+                      <div key={card.competitorType} className="rounded-xl border border-violet-100 bg-violet-50/60 p-4">
+                        <p className="font-black text-slate-900 mb-2">{card.competitorType}</p>
+                        <p className="leading-relaxed mb-2"><span className="font-semibold text-violet-700">他們通常擅長：</span>{card.whatTheyUsuallyOwn}</p>
+                        <p className="leading-relaxed mb-2"><span className="font-semibold text-slate-900">但仍留下的缺口：</span>{card.whyTheyStillLeaveAGap}</p>
+                        <p className="leading-relaxed"><span className="font-semibold text-violet-900">Foxconn 軟體部門的位置：</span>{card.foxconnAngle}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="rounded-xl border border-violet-100 bg-white p-4">
                   <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">Hyperscaler 不是不會做，而是不想把工程資源耗在本地部署、多供應商 GPU、成本可預測性與在地運維這些非差異化但高風險的底層責任；這正是 Foxconn 軟體部門最該去承接、也最容易變成年約的價值。</span></p>
