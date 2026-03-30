@@ -46,7 +46,8 @@ const App = () => {
       'Remote Diagnostics & Dispatch Readiness',
       'Service Availability Assurance',
       'AI Recovery & Evidence Assurance',
-      'Model Provenance & Audit Evidence Pack'
+      'Model Provenance & Audit Evidence Pack',
+      'Firmware Provenance & Attested Update Governance'
     ].includes(row.service)
   ))
   const softwareBoundaryCards = [
@@ -181,6 +182,13 @@ const App = () => {
                   <p className="text-sm font-black text-slate-900 mb-2">AI supply-chain governance 正在變成新採購門檻</p>
                   <p className="text-xs text-slate-700 leading-relaxed">
                     受監管與主權 AI 客戶開始正式追問 model provenance、artifact / mirror 版本、audit evidence 與 recoverability。這些不是硬體附屬功能，而是軟體部門才能產品化、也最容易切進法遵與資安預算的治理責任。
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-violet-100 bg-violet-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-2">Board takeaway 05</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">Firmware provenance 讓軟體部門碰到 CIO / CISO 預算</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    當客戶開始追問 BIOS / BMC / driver / image 的來源、簽章、批准流程與回滾證據時，被採購的已不是「管理工具」，而是可被稽核的更新治理。這正是軟體部門最能把硬體交付延伸成年度治理收入的位置。
                   </p>
                 </div>
               </div>
