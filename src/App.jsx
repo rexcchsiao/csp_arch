@@ -36,7 +36,8 @@ const App = () => {
     competitiveSources.nvidia[1],
     competitiveSources.hpe[1],
     competitiveSources.dell[0],
-    competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI')
+    competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
+    competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework')
   ].filter(Boolean)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
@@ -452,6 +453,27 @@ const App = () => {
                     <p className="font-black text-slate-900 mb-1">3. 這筆錢的 owner 也會跟著變</p>
                     <p className="leading-relaxed">一旦提案能回答 audit、recoverability、model provenance 與 sovereign operation，Foxconn 就不只是在對 Infrastructure / SRE 溝通，還能切進 CISO、Compliance、AI governance program 與 regulated industry 預算。</p>
                   </div>
+                </div>
+                <div className="rounded-xl border border-rose-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-700 mb-3">Two external proof points management can cite</p>
+                  <div className="grid md:grid-cols-2 gap-3 text-sm text-slate-700">
+                    {competitiveSources.regulations.filter((item) => (
+                      item.name === 'EU AI Act (official EU text / implementation portal)' || item.name === 'NIST AI Risk Management Framework'
+                    )).map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-xl border border-rose-100 bg-white p-4 hover:bg-rose-50 transition-colors"
+                      >
+                        <p className="font-black text-slate-900 mb-1">{item.name}</p>
+                        <p className="text-xs leading-relaxed mb-2">{item.keyFeature}</p>
+                        <p className="text-[11px] font-semibold text-rose-700">Verified {item.lastVerified}</p>
+                      </a>
+                    ))}
+                  </div>
+                  <p className="text-xs text-slate-500 mt-3">這讓管理層可以直接把「AI 治理 / 證據鏈已經成為正式營運要求」連回官方來源，而不是只停在內部判斷。</p>
                 </div>
                 <div className="rounded-xl border border-rose-100 bg-white p-4">
                   <p className="text-sm font-semibold text-rose-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門如果能把 model provenance、audit evidence、recoverability 與 sovereign operation 做成可被稽核的服務，就不是在幫硬體補功能，而是在替 Foxconn 打開原本碰不到的治理與資安預算。</span></p>
