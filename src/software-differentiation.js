@@ -1214,6 +1214,14 @@ structuralAdvantages: {
 				foxconnImplication: 'Foxconn 可把軟體部門定位成 Trustworthy AI Operations owner：把 model provenance、風險檢核、操作/變更紀錄、evidence export、air-gap 內容治理與恢復證據包成正式服務，讓客戶買到的是「可通過內部批准、可長期營運、也可被稽核」的 AI 基礎設施。',
 				sourceLabel: 'NIST AI Risk Management Framework',
 				source: 'https://www.nist.gov/itl/ai-risk-management-framework'
+			},
+			{
+				title: '沒有 firmware provenance / attested update governance owner，主權與高敏感客戶會擔心誰替韌體與更新風險背書',
+				whyItKillsDeals: 'AI 伺服器的高風險不只在模型與資料，也在 BIOS / BMC / 驅動 / 容器映像的更新鏈。若提案無法說清楚更新來源、簽章、驗證、回滾與供應商責任，受監管或主權型客戶常會把它視為尚未收斂的營運與採購風險。',
+				marketProof: 'DMTF Redfish 強調 simple and secure management 與 interoperability profiles，代表底層管理 API 正在標準化；NIST SSDF 更直接指出 secure software development practices 與 common vocabulary 可被 software purchasers 用於 acquisition processes。這說明客戶真正會追問的，不只是設備能不能被管理，而是供應商能不能把更新鏈、驗證紀錄與回滾紀律做成可採購的治理能力。',
+				foxconnImplication: 'Foxconn 應把軟體部門定位成 Firmware Provenance & Attested Update Governance owner：把韌體 / 映像來源、簽章驗證、版本基線、批准流程、回滾證據與 fleet-level audit trail 包成正式服務。這能把原本容易被當成硬體附帶責任的更新風險，翻成可被 CIO / CISO / Compliance 核准的軟體治理收入。',
+				sourceLabel: 'DMTF Redfish + NIST SSDF',
+				source: 'https://www.dmtf.org/standards/redfish'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：AI 基礎設施最後輸贏，常常不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼治理、交機後誰接手」；這四題的 owner，就是軟體部門。'
@@ -1400,6 +1408,12 @@ structuralAdvantages: {
 					gap: '很多 AI 基礎設施方案能把模型或 RAG 環境裝起來，卻沒有把模型來源、離線鏡像、更新紀錄、操作日誌與稽核匯出包做成單一可交付責任。',
 					whyItWins: '這讓 Foxconn 不只吃 Infrastructure / SRE 預算，還能切進 Compliance、CIO Office 與 AI governance program；而且一旦進入受監管產業，續約理由通常比單純監控更硬。',
 					revenueLogic: '治理健檢專案費 + 年度 evidence refresh / audit support 續約費'
+				},
+				{
+					name: 'Firmware Provenance & Attested Update Governance',
+					gap: '很多 AI 伺服器方案能把模型與叢集裝起來，卻沒有把 BIOS / BMC / 驅動 / 容器映像的來源、簽章、版本基線、批准流程、回滾與 fleet-level audit trail 接成單一責任鏈。',
+					whyItWins: '這能把原本容易被視為硬體附帶責任的更新風險，翻成 CIO / CISO / Compliance 願意核准的軟體治理服務；也讓 Foxconn 更像長期營運風險 owner，而不是只在交機時出現。',
+					revenueLogic: '治理健檢專案費 + 年度 attestation review / evidence refresh 續約費'
 				}
 			]
 		},
@@ -1674,6 +1688,13 @@ structuralAdvantages: {
 				name: 'Model Provenance / Audit Evidence 健檢包',
 				why: '直接回應受監管 AI 專案最容易卡關的治理缺口：模型來源、離線鏡像、更新紀錄、操作日誌與稽核匯出包往往散落在不同團隊；可先以既有 artifact registry、mirror、權限與 runbook 資產快速包成顧問式交付',
 				revenue: 'NT$ 220K-700K/案 + 年度 evidence refresh / audit support 續約費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
+				name: 'Firmware Provenance / Attested Update Governance 健檢包',
+				why: '把 BIOS / BMC / 驅動 / 容器映像更新鏈做成可交付治理：先盤點來源、簽章、版本基線、批准流程、回滾與稽核證據，再用既有 Redfish / 韌體維運資產快速包成顧問式服務，直接回應主權 AI 與高敏感客戶對供應鏈風險的疑慮',
+				revenue: 'NT$ 250K-750K/案 + 年度 attestation review / evidence refresh 續約費',
 				margin: '70%+',
 				timeToMarket: '2-6 週',
 			},
