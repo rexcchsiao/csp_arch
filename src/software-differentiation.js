@@ -158,6 +158,12 @@ export const softwareDifferentiation = {
       whyItMatters: '當 AI 服務中斷或資料毀損時，客戶買的不是 another alert，而是誰能更快恢復、保留證據、並把信任損失降到最低',
     },
     {
+      category: 'Factory-to-Operations 交接責任鏈',
+      foxconn: '把工廠 burn-in、韌體/映像基線、site acceptance、初始遙測 baseline、handoff evidence pack 與 Day-2 runbook 接成同一條交付責任鏈',
+      competitors: '多數品牌廠會賣 validated platform，但責任常在硬體交機、現場驗收、平台接手與後續維運之間切段；OEM/ODM 更常停在「機器到場」而非「營運可接手」',
+      whyItMatters: '董事會最容易理解的不是功能多寡，而是交機後誰對上線速度、初期故障定位與第一個 maintenance window 負責；這一段若由軟體部門接住，硬體 attach rate 與續約率都更容易被放大',
+    },
+    {
       category: '工作負載可移植性',
       foxconn: 'Portable AI Workload Framework：以 K8s + Helm + OCI 為基礎，封裝完整 AI 依賴，支持一鍵遷移到不同雲端或本地',
       competitors: 'Hyperscaler 方案本質是「雲端延伸」，工作負載鎖定在單一雲端生態系',
