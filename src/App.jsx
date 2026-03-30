@@ -581,6 +581,35 @@ const App = () => {
                 </div>
               </div>
               <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Operating mandate</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">如果軟體部門真的要被批准，管理層就該用 Day-2 KPI 管它，而不是沿用硬體 KPI</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  很多公司不是沒做軟體，而是把軟體團隊仍當成硬體附屬支援，最後功能做了不少，卻沒人對 attach rate、handoff、remote resolution 與 renewal 負責。
+                  這頁最該替老闆畫清楚的，是 <span className="font-semibold text-slate-900">軟體部門一旦成立，成功定義就必須跟硬體部門不同</span>。
+                </p>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 mb-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-indigo-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 看 software attachment rate</p>
+                    <p className="leading-relaxed">不是只看伺服器有沒有賣出，而是看多少案子把 deployment assurance、remote ops、lifecycle governance 一起賣進去。</p>
+                  </div>
+                  <div className="rounded-xl border border-indigo-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 看 handoff time</p>
+                    <p className="leading-relaxed">工廠預載、site acceptance、baseline 建立到 Day-2 接手要縮多短，這才是軟體是否真的在放大硬體價值的第一個硬指標。</p>
+                  </div>
+                  <div className="rounded-xl border border-indigo-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 看 remote resolution coverage</p>
+                    <p className="leading-relaxed">半夜故障時，有多少事件能先遠端收斂、減少 truck roll、提高 first-time-fix rate，這比多做幾張 dashboard 更能代表部門價值。</p>
+                  </div>
+                  <div className="rounded-xl border border-indigo-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">4. 看 renewal signals</p>
+                    <p className="leading-relaxed">如果季度 availability review、baseline refresh、air-gap content lifecycle 與 evidence support 能被持續續買，才代表軟體部門真的從功能變成收入責任鏈。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-indigo-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-indigo-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門一旦成立，評分標準就不該再是出貨與 BOM，而是 attach rate、handoff speed、remote resolution 與 renewal；只有這樣，軟體價值才不會被算成附送支援。</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Why a standalone software department matters</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">軟體部門不是硬體附屬功能，因為它對接的是完全不同的買方、收入節奏與 KPI</h3>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
