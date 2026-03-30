@@ -191,7 +191,7 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">What the market still leaves unsolved</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">真正還沒被補滿的，不是 another dashboard，而是 4 條沒人想完全承接的責任鏈</h3>
+                <h3 className="text-lg font-black text-slate-900 mb-3">真正還沒被補滿的，不是 another dashboard，而是 5 條沒人想完全承接的責任鏈</h3>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 交機到可營運，中間誰接？</p>
