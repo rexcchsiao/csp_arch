@@ -392,6 +392,13 @@ structuralAdvantages: {
         source: 'https://www.nutanix.com/solutions/ai'
       },
       {
+        company: 'VAST AI OS',
+        proof: 'VAST 官方直接用「AI needs its own operating system」來定位產品，並主打 build, deploy, and operate AI at enterprise scale、unified data infrastructure、以及降低 fragmented tools 帶來的 operational complexity。',
+        takeaway: '這是一個很強的市場訊號：連資料基礎設施廠商都不再只賣 storage / performance，而是把自己包成 AI 的 operating system。Foxconn 若只講硬體規格會很吃虧；更好的說法是由軟體部門把 server delivery、brownfield fit、lifecycle governance 與 remote service accountability，包成更貼近機房 reality 的 AI operating layer。',
+        sourceLabel: 'VAST AI OS',
+        source: 'https://www.vastdata.com/platform/ai-os'
+      },
+      {
         company: 'NetApp AI infrastructure and data management',
         proof: 'NetApp 官方已把 AI 方案寫成 AI factory 的資料基礎，強調 unified foundation、built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
         takeaway: '這是另一個很強的市場訊號：連儲存與資料基礎建設供應商都不再只賣效能，而是在賣可治理、可恢復、可安全營運的 AI 結果。Foxconn 若把軟體部門定位成 server delivery、lifecycle control、remote ops 與 recovery evidence 的 owner，就更能說清楚「沒有軟體，硬體價值無法被完整放大」。',
@@ -1031,9 +1038,9 @@ structuralAdvantages: {
 			{
 				stage: 'Stage 3｜年度 SLA 收入',
 				focus: '把日常風險管理做成可被續約的服務',
-				offerings: ['Remote Ops 遠端運維服務', 'Air-Gap Content Lifecycle 服務', '合規與審計支援服務'],
-				whyItWins: '客戶買的不是 dashboard，而是半夜不用派人去機房、升級不會出事、離線環境也能安全更新、稽核時拿得出報告。',
-				revenueLogic: '按節點 / 按 SLA / 按年收費，建立 ARR 與高毛利服務收入。'
+				offerings: ['Remote Ops 遠端運維服務', 'Service Availability Assurance', 'Air-Gap Content Lifecycle 服務', '合規與審計支援服務'],
+				whyItWins: '客戶買的不是 dashboard，而是半夜不用派人去機房、升級不會出事、離線環境也能安全更新、服務 availability 能被季度檢視，而且稽核時拿得出報告。',
+				revenueLogic: '按節點 / 按 SLA / 按年收費，並用季度健康檢查與 baseline refresh 穩定建立 ARR 與高毛利服務收入。'
 			},
 			{
 				stage: 'Stage 4｜平台擴張',
@@ -1136,6 +1143,14 @@ structuralAdvantages: {
 				foxconnPlay: 'Foxconn 可順勢把軟體部門定位成從 server 到 Day-2 recoverability 的責任 owner：把 lifecycle control、artifact / registry 保護、recovery evidence 與 remote ops 接成可被採購的營運結果，而不是只賣伺服器附帶管理工具。',
 				sourceLabel: 'NetApp AI infrastructure and data management',
 				source: 'https://www.netapp.com/artificial-intelligence/'
+			},
+			{
+				company: 'VAST AI OS',
+				proof: 'VAST 官方直接主張「AI needs its own operating system」，並把價值寫成 build, deploy, and operate AI at enterprise scale、unified data infrastructure、以及減少 fragmented tools 帶來的 operational complexity。',
+				buyerTranslation: '這代表市場愈來愈接受一種新採購語言：客戶不是只買伺服器、儲存或單一平台，而是在買一個能把 AI 營運複雜度抽象掉的 operating layer。',
+				foxconnPlay: 'Foxconn 不需要去複製另一個 AI OS，而是應該把軟體部門定位成更貼近機房 reality 的 operating layer：以 server delivery、brownfield baseline、lifecycle governance、facility-aware remote ops 與 dispatch readiness，去承接 VAST 這類純軟體/資料平台較少真正負責的 Day-2 現場責任。',
+				sourceLabel: 'VAST AI OS',
+				source: 'https://www.vastdata.com/platform/ai-os'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：硬體讓客戶有算力，軟體部門讓客戶敢把上線速度、SLA 壓力、治理風險與續約責任一起交給我們。'
@@ -1191,6 +1206,14 @@ structuralAdvantages: {
 				foxconnImplication: 'Foxconn 應把軟體部門講成 AI Recovery & Evidence Assurance owner：把 artifact / registry 保護、向量資料恢復、golden image rollback、演練 runbook 與 incident evidence 做成正式服務，讓管理層買到的是「AI 出事時誰能把營運與信任一起救回來」。',
 				sourceLabel: 'Dell AI Solutions + NetApp AI infrastructure and data management',
 				source: 'https://www.netapp.com/artificial-intelligence/'
+			},
+			{
+				title: '沒有 trustworthy AI / governance evidence owner，受監管或大型企業案子會卡在批准流程',
+				whyItKillsDeals: '越來越多企業不只問模型能不能跑，而是追問 AI 風險是否被治理、證據是否留存、角色與責任是否明確；若提案無法說清楚誰負責 trustworthiness、紀錄、驗證與持續風險管理，專案很容易在法遵、內控、採購委員會或 CIO review 被要求補件。',
+				marketProof: 'NIST AI RMF 已把 trustworthiness considerations、design / development / use / evaluation 與 generative AI 風險管理做成正式框架語言。這代表大型企業與受監管客戶已經開始把 AI 治理與證據鏈視為正式營運要求，而不是 POC 階段可忽略的軟性議題。',
+				foxconnImplication: 'Foxconn 可把軟體部門定位成 Trustworthy AI Operations owner：把 model provenance、風險檢核、操作/變更紀錄、evidence export、air-gap 內容治理與恢復證據包成正式服務，讓客戶買到的是「可通過內部批准、可長期營運、也可被稽核」的 AI 基礎設施。',
+				sourceLabel: 'NIST AI Risk Management Framework',
+				source: 'https://www.nist.gov/itl/ai-risk-management-framework'
 			}
 		],
 		boardMessage: '董事會該記住的一句話：AI 基礎設施最後輸贏，常常不是規格表，而是誰能回答「多久能上線、出了事誰負責、共享之後怎麼治理、交機後誰接手」；這四題的 owner，就是軟體部門。'

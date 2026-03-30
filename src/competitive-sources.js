@@ -116,6 +116,16 @@ export const competitiveSources = {
   ],
   enterprisePlatforms: [
     {
+      name: 'VAST AI OS',
+      url: 'https://www.vastdata.com/platform/ai-os',
+      description: 'VAST Data official positioning around an AI operating system for building, deploying, and operating AI at enterprise scale',
+      relevance: 'Useful proof that infrastructure vendors are shifting from hardware/storage language to AI operating system and unified operations language',
+      lastVerified: '2026-03-30',
+      keyFeature: 'VAST explicitly argues that AI needs its own operating system, positions AI OS as the toolkit to build, deploy, and operate AI agents at enterprise scale, and emphasizes unified data infrastructure plus operational simplicity.',
+      limitation: 'The message is strongest around data and AI infrastructure abstraction; it does not clearly own server-fleet lifecycle governance, factory-to-operations handoff, or facility-aware Remote Ops across heterogeneous AI server environments.',
+      ourAdvantage: 'Foxconn can use this as external validation that buyers now accept AI operating-system language, then differentiate by tying that language to hardware-adjacent responsibilities VAST does not own well: brownfield datacenter fit, firmware/lifecycle control, dispatch readiness, and Day-2 service accountability.'
+    },
+    {
       name: 'NetApp AI infrastructure and data management',
       url: 'https://www.netapp.com/artificial-intelligence/',
       description: 'NetApp official AI positioning around AI factory data infrastructure, governance, secure inferencing, and recoverability',
