@@ -38,7 +38,8 @@ const App = () => {
     competitiveSources.dell[0],
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
     competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
-    competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework')
+    competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework'),
+    competitiveSources.standards.find((item) => item.name === 'NIST Secure Software Development Framework (SSDF)')
   ].filter(Boolean)
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
@@ -522,7 +523,7 @@ const App = () => {
                       </a>
                     ))}
                   </div>
-                  <p className="text-xs text-slate-500 mt-3">這讓管理層可以直接把「AI 治理 / 證據鏈已經成為正式營運要求」連回官方來源，而不是只停在內部判斷。</p>
+                  <p className="text-xs text-slate-500 mt-3">這讓管理層可以直接把「AI 治理 / 證據鏈已經成為正式營運要求」連回官方來源，而不是只停在內部判斷；如果需要進一步強調 firmware / image provenance、signed update workflow 與 supplier evaluation 已進入採購語言，總覽頁上方的 official sources 也已補進 NIST SSDF 可直接點給老闆看。</p>
                 </div>
                 <div className="rounded-xl border border-rose-100 bg-white p-4">
                   <p className="text-sm font-semibold text-rose-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門如果能把 model provenance、audit evidence、recoverability 與 sovereign operation 做成可被稽核的服務，就不是在幫硬體補功能，而是在替 Foxconn 打開原本碰不到的治理與資安預算。</span></p>
