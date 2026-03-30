@@ -43,6 +43,9 @@ const ExecutiveSummaryView = () => {
   const lenovoHybridAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Lenovo Hybrid AI Solutions'));
   const nutanixAgenticAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Nutanix Agentic AI'));
   const netappAISource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('NetApp AI infrastructure and data management'));
+  const vastAiOsSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('VAST AI OS'));
+  const euAiActSource = competitiveSources.regulations?.find((source) => source.name.includes('EU AI Act'));
+  const nistAiRmfSource = competitiveSources.regulations?.find((source) => source.name.includes('NIST AI Risk Management Framework'));
   const quantaSource = competitiveSources.quanta?.[0];
   const wistronSource = competitiveSources.wistron?.[0];
   const gigabyteSource = competitiveSources.gigabyte?.[0];
@@ -752,6 +755,50 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Firmware / update-chain governance - a board-friendly software wedge */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <ShieldIcon className="w-5 h-5 text-emerald-600" /> 主權 AI 與高敏感客戶最後會追問的，其實是：誰替更新鏈與證據鏈背書？
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這塊很值得補進董事會摘要，因為它把軟體部門價值從「營運效率」再往上抬到 <span className="font-semibold text-slate-900">供應鏈可信度、更新問責與可稽核治理</span>。
+          真正卡住受監管 / 主權 AI 案子的，常常不是模型跑不起來，而是客戶會追問：<span className="font-semibold text-emerald-700">BIOS / BMC / driver / container image 的來源、簽章、版本基線、批准流程、回滾證據與 fleet-level audit trail，到底由誰負責？</span>
+          這種問題如果沒有軟體 owner，硬體規格再漂亮也很容易在採購、法遵或 CISO review 卡住。反過來說，若由軟體部門把 firmware provenance 與 attested update governance 做成正式服務，Foxconn 就不只是賣 AI 伺服器，而是在賣可被信任、可被批准、也可被續約的更新治理能力。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Why this is becoming a buying gate</p>
+            <p className="text-sm font-black text-slate-900 mb-3">受監管 AI 專案現在會直接問更新鏈責任</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">市場現實：</span>主權 AI / 金融 / 政府客戶不只看模型與資料，也會追問 firmware、映像與更新鏈是否可被驗證、可被回滾、可留存證據。</p>
+              <p><span className="font-bold text-emerald-700">採購翻譯：</span>若沒有 attested update governance，客戶會把它視為仍未收斂的供應鏈與營運風險，而不是小技術細節。</p>
+              <p><span className="font-bold text-blue-700">對軟體部門的意義：</span>這讓軟體部門不只碰 SRE / Ops 預算，也能切進 CIO / CISO / Compliance 的正式預算桌。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">What Foxconn should actually sell</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Firmware Provenance &amp; Attested Update Governance</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">賣的不是：</span>單純 firmware update tool 或 another admin portal。</p>
+              <p><span className="font-bold text-emerald-700">賣的其實是：</span>來源與簽章驗證、版本基線、批准流程、maintenance window、回滾證據、以及 fleet-level audit trail 的單一責任鏈。</p>
+              <p><span className="font-bold text-blue-700">商業效果：</span>把原本容易被當成硬體附帶責任的更新風險，翻成可被問責、可報價、可年度續約的治理服務。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">External proof this is not just our opinion</p>
+            <p className="text-sm font-black text-slate-900 mb-3">法規與標準都在把這件事推向正式採購語言</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">EU AI Act：</span>{euAiActSource?.keyFeature || '正式把 technical documentation、record-keeping、traceability 與 post-deployment governance 拉進 AI 義務。'}</p>
+              <p><span className="font-bold text-slate-500">NIST AI RMF：</span>{nistAiRmfSource?.keyFeature || '強調 govern / measure / manage 與持續性的監控、文件與責任邊界。'}</p>
+              <p><span className="font-bold text-slate-500">Redfish：</span>{redfishSource?.limitation || '標準 API 解決的是可管理，不是誰對批准流程、回滾紀律與可稽核更新鏈負責。'} </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">AI 基礎設施最後被批准的，不只是算力，而是這套算力能不能被可信地更新、回滾、稽核與長期營運。把這條更新治理責任鏈產品化，會讓軟體部門更像正式的風險控制 owner，而不是硬體附屬支援。</span></p>
+        </div>
+      </div>
+
       {/* Next monetizable Day-2 software wedges */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
@@ -861,6 +908,25 @@ const ExecutiveSummaryView = () => {
         ))}
       </div>
     </div>
+  </div>
+  <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
+    <p className="text-xs font-black uppercase tracking-widest text-indigo-600 mb-2">External validation</p>
+    <p className="text-sm font-black text-slate-900 mb-2">「AI operating system」已經是市場語言，不是只有我們自己在取名字</p>
+    <p className="text-sm text-slate-700 leading-relaxed">
+      {vastAiOsSource?.name || 'VAST AI OS'} 也直接把 AI 基礎設施往 operating-system / unified operations 的方向包裝，強調企業需要的是用來 build, deploy, and operate AI 的 operating layer。
+      這個外部訊號很有用，因為它代表 <span className="font-semibold text-indigo-900">董事會其實已經能接受「AI 需要自己的作業系統層」這種說法</span>；Foxconn 要做的不是發明新名詞，而是把這個語言綁回自己真正更站得住腳的責任：factory-to-operations handoff、brownfield integration、lifecycle control 與 facility-aware Remote Ops。
+    </p>
+    {vastAiOsSource?.url && (
+      <a
+        href={vastAiOsSource.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+      >
+        <ExternalLink className="w-3 h-3" />
+        官方來源
+      </a>
+    )}
   </div>
   <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
     <p className="text-sm font-semibold text-indigo-900">董事會該記住：<span className="text-slate-700">AI Factory OS 不是產品，是戰略框架。它告訴董事會：(1) 軟體不是配件，是讓硬體有價值的作業系統；(2) Foxconn 不是在賣功能，是在賣 AI 等級的 Windows for datacenters；(3) 選擇是二元的：戰略合作夥伴（20-25% 毛利）或 commodity supplier（5-8% 毛利），沒有中間地帶。</span></p>
