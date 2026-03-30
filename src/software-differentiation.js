@@ -99,6 +99,20 @@ export const softwareDifferentiation = {
       softwareSolution: 'Telemetry-to-Operations Layer：把 Redfish / OpenBMC / OpenTelemetry 訊號串進 root-cause workflow、maintenance window、dispatch readiness、rollback policy 與 SLA / 稽核報表',
       valueAmplification: '把「更多監控工具」升級成「更少誤派工、更快責任收斂、更容易續約的 Day-2 服務」，讓軟體部門直接切入營運治理預算',
     },
+    {
+      id: 'pp13',
+      problem: 'AI 推論真正燒錢的是 Day-2 token / inference 成本，而不是第一次把模型跑起來',
+      impact: '很多企業與 CSP 在完成模型部署後，才發現真正難控的是 batch size、GPU 記憶體壅塞、快取命中率、模型量化策略與 per-tenant 成本歸屬；若沒有軟體層持續優化，推論 OPEX 很容易在 3-6 個月內失控，讓 AI 專案被 CFO 盯上',
+      softwareSolution: 'Inference Cost Control Layer：把 vLLM / Triton / scheduler、GPU telemetry、batch / cache / quantization policy、showback / chargeback 與 budget guardrail 接成可持續調校的成本治理服務',
+      valueAmplification: '把「模型能跑」升級成「模型跑得起、跑得久、跑得可預算」，讓軟體部門直接對 token 成本、推論毛利與 shared GPU 使用紀律負責',
+    },
+    {
+      id: 'pp14',
+      problem: 'AI 伺服器真正難被採購核准的，常是韌體/映像更新鏈的可追溯性，而不是硬體規格本身',
+      impact: '主權 AI、金融、政府與高敏感產業會追問 BIOS / BMC / driver / container image 的來源、簽章、批准、回滾與稽核證據；若沒有軟體 owner，專案很容易卡在資安、法遵或採購審查，而不是卡在效能',
+      softwareSolution: 'Firmware Provenance & Attested Update Governance：把韌體 / 映像來源、簽章驗證、版本基線、批准流程、fleet-level audit trail 與 rollback evidence 做成可被稽核的持續治理服務',
+      valueAmplification: '把原本容易被視為硬體附帶責任的更新風險，翻成 CIO / CISO / Compliance 願意正式買單的軟體服務，讓軟體部門直接切進高敏感客戶的治理預算',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -168,6 +182,18 @@ export const softwareDifferentiation = {
       foxconn: 'Portable AI Workload Framework：以 K8s + Helm + OCI 為基礎，封裝完整 AI 依賴，支持一鍵遷移到不同雲端或本地',
       competitors: 'Hyperscaler 方案本質是「雲端延伸」，工作負載鎖定在單一雲端生態系',
       whyItMatters: '避免供應商鎖定，保持議價能力；遷移成本從 3-6 個月縮短至 1-2 週，讓企業可靈活選擇最佳部署地點',
+    },
+    {
+      category: 'AI inference cost governance',
+      foxconn: '把 GPU telemetry、vLLM / Triton runtime、batch / cache / quantization policy、showback / chargeback 與 tenant budget guardrail 接成可持續優化的成本治理層',
+      competitors: '多數方案能把模型 serving 起來，但較少把 token / inference 成本、共享叢集預算與 per-tenant 責任做成可被 FinOps / 平台團隊共同使用的治理服務',
+      whyItMatters: '董事會與 CFO 真正在意的不只是 AI 能不能上線，而是 token 成本會不會失控；誰能把 inference OPEX 壓進可預算範圍，誰就更容易拿到續約與擴容預算',
+    },
+    {
+      category: 'Firmware provenance / update governance',
+      foxconn: '把 BIOS / BMC / driver / container image 的來源、簽章驗證、批准流程、版本基線、rollback evidence 與 fleet-level audit trail 做成持續治理服務',
+      competitors: '多數 OEM/ODM 仍把更新鏈視為硬體附帶責任，較少把 provenance、attestation、approval 與稽核證據包裝成可獨立報價的軟體能力',
+      whyItMatters: '一旦客戶開始追問供應鏈風險、主權 AI、資安與稽核責任，真正能過採購關卡的，不是規格表，而是誰能持續替更新鏈與回滾證據背書；這種責任邊界最適合由軟體部門承接',
     },
   ],
 
@@ -526,6 +552,14 @@ structuralAdvantages: {
         foxconnPlay: '把 Tenant Governance & GPU Service Guardrails 做成 attach service：包含 quota policy、priority queue、showback / chargeback、approval workflow、SLA policy 與例外審批，讓 Foxconn 從賣叢集升級成 shared AI capacity 的治理 owner，而不只是設備供應商。',
         sourceLabel: 'Red Hat OpenShift AI',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
+        title: '企業很快發現：推論上線不難，真正難的是把 token / inference 成本壓進可預算範圍',
+        evidence: 'Nutanix Agentic AI 官方已把 optimize GPU utilization and token costs 放進 AI operating model 敘事；Red Hat OpenShift AI 也直接把 manage costs of inferencing 納入產品核心語言。這代表市場已經承認：AI 平台若不能持續治理推論成本，CFO 與平台團隊很快就會踩煞車。',
+        whyStillOpen: '很多供應商能把模型 serving 起來，但很少把 batch / cache / quantization policy、GPU 記憶體壅塞、per-tenant budget guardrail、showback / chargeback 與工作負載調度接成可持續優化的治理服務。結果常變成：PoC 成功，正式營運卻被持續上升的 token 成本拖垮。',
+        foxconnPlay: '把 Inference Cost Control 做成 attach service：由軟體部門整合 runtime、scheduler、GPU telemetry 與 FinOps 規則，賣的是「更低 token 成本、更可預測的月費、更少因推論 OPEX 失控而被迫縮案」。這樣 Foxconn 就不是只賣 AI server，而是賣能長期跑得起的 AI 經營模型。',
+        sourceLabel: 'Nutanix Agentic AI + Red Hat OpenShift AI',
+        source: 'https://www.nutanix.com/solutions/ai'
       },
       {
         title: 'AI resilience 預算正在浮上檯面，但少有人承接 AI-specific recoverability',
@@ -1560,6 +1594,13 @@ structuralAdvantages: {
 					boardOutcome: '把「GPU 不夠用」的抱怨，轉成可被治理、可被定價、可降低內耗的共享容量服務'
 				},
 				{
+					service: 'Inference Cost Control',
+					budgetOwner: 'FinOps / Platform Engineering / AI Center of Excellence',
+					whyNow: '很多 AI 專案在模型上線後，真正卡住的是 token / inference 成本失控、batch / cache 策略失衡與 GPU 記憶體壅塞；若缺少持續治理，CFO 很快就會把原本要擴大的 AI 預算踩煞車',
+					renewalDriver: '模型版本、runtime、batch / cache / quantization policy、租戶配額與月度預算門檻會持續變動，天然適合做成季度 review 與年度優化續約',
+					boardOutcome: '把「AI 可以 demo」升級成「AI 能長期跑得起、月費可預測、token 成本能被治理」；這讓軟體部門直接切進 CFO、FinOps 與平台團隊的持續預算'
+				},
+				{
 					service: 'Sovereign RAG / Air-Gap Services',
 					budgetOwner: 'CIO Office / Compliance-driven AI Program',
 					whyNow: '資料不能上雲、需在地化與稽核的 AI 專案快速增加',
@@ -1818,6 +1859,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '把很多供應商只做到「能排程」的 shared cluster，往上做成「可治理、可對帳、可對外承諾 SLA」的服務；這會讓 Foxconn 更像 shared AI capacity 的營運 owner，而不是只賣叢集',
 				targetCustomer: '大型企業 AI 平台團隊、研究機構、內部多 BU 共用 GPU 的 CSP / 製造業'
+			},
+			{
+				name: 'Inference Cost Control 服務',
+				description: '把 vLLM / Triton runtime、scheduler、GPU telemetry、batch / cache / quantization policy、showback / chargeback 與 tenant budget guardrail 接成持續優化服務，讓 AI 推論不只上線，而是能長期維持在可預算範圍內',
+				pricing: 'NT$ 300K-1.1M/案 + 年度 optimization / FinOps review 續約費',
+				margin: '70-80%',
+				differentiation: '多數供應商把 value 停在 model serving；Foxconn 往上把 token 成本、共享 GPU 經濟學與 runtime 治理產品化，賣的是更低 inference OPEX 與更可預測的月費',
+				targetCustomer: '大型企業 AI 平台團隊、CSP、需要管理 shared inference 成本的內部 AI 平台'
 			},
 			{
 				name: 'RAG 一體機部署服務',
