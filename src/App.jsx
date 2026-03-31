@@ -588,6 +588,10 @@ const App = () => {
                     <p className="font-black text-slate-900 mb-1">AI Recovery & Evidence Assurance</p>
                     <p className="leading-relaxed">把 artifact / registry 保護、向量資料恢復、golden image rollback、incident evidence 與年度演練做成 attach service，賣的是「AI 出事時仍救得回來、講得清楚、也續得下去」的營運信任。</p>
                   </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Model Provenance & Audit Evidence Pack</p>
+                    <p className="leading-relaxed">把模型來源、離線內容版本、artifact / mirror 更新紀錄、操作日誌、AI BOM 與 audit export 接成單一可交付證據包，賣的是「這套 AI 能不能過採購、資安、法遵與內控審查」，直接把軟體部門帶進 CIO / CISO / Compliance 預算。</p>
+                  </div>
                 </div>
               </div>
               <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
