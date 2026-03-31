@@ -235,6 +235,23 @@ const App = () => {
                     <p className="leading-relaxed">把 quota、showback / chargeback、priority policy 與 GPU 預算護欄做成正式治理層，讓共享 AI 叢集不只是能跑，而是能被 FinOps、平台團隊與 BU owner 接受與續買。</p>
                   </div>
                 </div>
+                <div className="rounded-xl border border-blue-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-700 mb-3">Why software starts creating value before Day-2</p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">HPE 已把 validated deployment 當採購語言</p>
+                      <p className="leading-relaxed">HPE Private Cloud AI 直接賣 <span className="font-semibold text-slate-900">deploy AI in days, not months</span> 與 pre-configured validated platform，代表客戶從 Day-0 就願意為更快驗收、更快上線與更少整合風險付錢。</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">NVIDIA 已把 deployment 與機房營運接在一起</p>
+                      <p className="leading-relaxed">Mission Control 把 cluster deployment、cluster lifecycle、building management integration 放在同一條 AI factory operations 敘事裡，說明市場已把「交機後誰接手營運」視為同一筆預算邏輯。</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">Vertiv 已把 readiness / retrofit 講成正式採購前置作業</p>
+                      <p className="leading-relaxed">當 Vertiv 用 retrofit-ready、reference design、whitespace readiness 來賣 AI 機房準備度時，Foxconn 最值得強調的就是：軟體部門可把 commissioning、handoff 與 brownfield readiness 接成可收費的 Day-0 wedge。</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="rounded-xl border border-blue-100 bg-white p-4">
                   <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 與 shared-cluster governance 這 4 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
