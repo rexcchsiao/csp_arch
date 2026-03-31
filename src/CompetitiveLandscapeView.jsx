@@ -483,15 +483,15 @@ const CompetitiveLandscapeView = () => {
               <div className="flex items-start gap-3 mb-4">
                 <Layers className="w-6 h-6 text-cyan-600 mt-1" />
                 <div>
-                  <h3 className="text-lg font-black text-cyan-900">有了 Redfish、OpenTelemetry、SSDF，為什麼還是一定要有軟體部門？</h3>
-                  <p className="text-sm text-cyan-800 mt-1 font-medium">因為標準只解決「能不能讀資料、管設備、定義流程」，卻沒有替客戶接住 maintenance window、rollback、dispatch readiness、audit evidence 與 SLA 問責。這正是軟體部門最能被定價的地方。</p>
+                  <h3 className="text-lg font-black text-cyan-900">有了 Redfish、OpenTelemetry、OpenCost、SSDF，為什麼還是一定要有軟體部門？</h3>
+                  <p className="text-sm text-cyan-800 mt-1 font-medium">因為標準與開源層只解決「能不能讀資料、管設備、量測成本、定義流程」，卻沒有替客戶接住 maintenance window、rollback、dispatch readiness、budget guardrail、audit evidence 與 SLA 問責。這正是軟體部門最能被定價的地方。</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
                 {competitiveSources.standards
                   .filter((item) => (
-                    item.name === 'DMTF Redfish' || item.name === 'OpenTelemetry' || item.name === 'NIST Secure Software Development Framework (SSDF)'
+                    item.name === 'DMTF Redfish' || item.name === 'OpenTelemetry' || item.name === 'OpenCost' || item.name === 'NIST Secure Software Development Framework (SSDF)'
                   ))
                   .map((item) => (
                     <a
@@ -508,11 +508,11 @@ const CompetitiveLandscapeView = () => {
                   ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
                 <div className="p-4 bg-white rounded-2xl border border-cyan-100">
                   <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">標準解決了什麼</p>
-                  <p className="text-sm font-black text-slate-900 mb-2">設備介面、遙測格式、開發治理語言</p>
-                  <p className="text-xs text-slate-700">Redfish 讓硬體 API 標準化，OpenTelemetry 讓訊號格式標準化，SSDF 讓安全開發與供應商審查有共同語言。</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">設備介面、遙測格式、成本量測、開發治理語言</p>
+                  <p className="text-xs text-slate-700">Redfish 讓硬體 API 標準化，OpenTelemetry 讓訊號格式標準化，OpenCost 讓 GPU / K8s 成本可視化更標準化，SSDF 讓安全開發與供應商審查有共同語言。</p>
                 </div>
                 <div className="p-4 bg-white rounded-2xl border border-cyan-100">
                   <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">標準沒有接住什麼</p>
@@ -520,14 +520,19 @@ const CompetitiveLandscapeView = () => {
                   <p className="text-xs text-slate-700">客戶真正怕的不是看不到資料，而是出事時誰來決定 maintenance window、誰先遠端縮小 root cause、誰交 rollback 與 audit evidence。</p>
                 </div>
                 <div className="p-4 bg-white rounded-2xl border border-cyan-100">
+                  <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">連成本可視化都在 commodity 化</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">下一個預算焦點會是 quota、showback 與 budget guardrail</p>
+                  <p className="text-xs text-slate-700">當 OpenCost 這類工具已能把 GPU / container 成本看得更清楚，客戶下一步自然會問：誰來定 quota、誰批准例外、runaway inference spend 誰負責、以及成本怎麼對回 BU / tenant？</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-cyan-100">
                   <p className="text-xs font-bold text-cyan-600 uppercase tracking-wide mb-2">這為什麼抬高軟體部門價值</p>
-                  <p className="text-sm font-black text-slate-900 mb-2">因為軟體部門把 commodity telemetry 變成可續約責任</p>
-                  <p className="text-xs text-slate-700">當別人只能賣 API 或 monitoring，Foxconn 軟體部門可以賣 governance、evidence、dispatch readiness 與 Day-2 accountability，這才是 attach rate 與年約收入來源。</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">因為軟體部門把 commodity signals 變成可續約責任</p>
+                  <p className="text-xs text-slate-700">當別人只能賣 API、monitoring 或 cost panel，Foxconn 軟體部門可以賣 governance、evidence、dispatch readiness、quota policy 與 Day-2 accountability，這才是 attach rate 與年約收入來源。</p>
                 </div>
               </div>
 
               <div className="p-4 bg-white rounded-xl border border-cyan-100">
-                <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">標準化會讓底層能力越來越 commodity，但也因此更凸顯上層營運治理的重要性；真正把 Redfish、OpenTelemetry、SSDF 轉成續約收入的人，不是硬體團隊，而是軟體部門。</span></p>
+                <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">標準化會讓底層能力越來越 commodity，但也因此更凸顯上層營運治理的重要性；真正把 Redfish、OpenTelemetry、OpenCost、SSDF 轉成續約收入的人，不是硬體團隊，而是軟體部門。</span></p>
               </div>
             </div>
 
