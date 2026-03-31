@@ -1430,6 +1430,12 @@ structuralAdvantages: {
 					revenueLogic: '專案費 + baseline refresh / acceptance 年費'
 				},
 				{
+					name: 'Factory Truth Evidence Pack',
+					gap: '多數供應商能交付機器，卻很少有人把 burn-in 結果、serial-level 韌體 / 驅動基線、site acceptance 證據、RMA-ready 記錄與 Day-2 incident timeline 接成同一份可驗證交付物。',
+					whyItWins: '這是 Foxconn 最有資格主張的服務切口：把工廠真相變成現場維運、RCA、RMA 與管理層信任都用得上的證據鏈。它不只縮短故障收斂時間，也讓軟體部門看起來像 factory-to-service accountability owner，而不是 another dashboard team。',
+					revenueLogic: '交付專案費 + quarterly evidence refresh / incident review 年約'
+				},
+				{
 					name: 'Brownfield Integration & Fleet Baseline',
 					gap: '大型客戶通常已有 BMC、DCIM、告警、維護窗口與權限流程；新 AI 叢集若不能接進去，就會卡在跨團隊整合。',
 					whyItWins: '這不是 generic platform 能輕易取代的工作，因為它要求對現場資產、流程與變更風險負責。',

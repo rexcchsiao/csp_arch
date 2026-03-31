@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Target, Trophy, Shield, Zap, TrendingUp, Users, Lightbulb, CheckCircle, AlertTriangle, ExternalLink, BarChart3, Layers, Gauge, HelpCircle } from 'lucide-react';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { softwareDifferentiation } from './software-differentiation.js';
-import { customerDecisionCriteria } from './executive-brief.js';
+import { customerDecisionCriteria, softwareRevenueOwnershipMap } from './executive-brief.js';
 import { competitiveSources } from './competitive-sources.js';
 
 const CompetitiveLandscapeView = () => {
@@ -165,6 +165,32 @@ const CompetitiveLandscapeView = () => {
                 <div>
                   <h3 className="text-lg font-black text-emerald-900">軟體部門最值得被投資的原因：它能把一次性交機翻成跨年度收入</h3>
                   <p className="text-sm text-emerald-800 mt-1 font-medium">如果老闆只記得一件事，應該是這件：軟體部門不是多做幾個功能，而是把硬體 attach 到更多預算 owner，並把交付、升級、遠端運維與治理風險變成可續約的年約收入。</p>
+                </div>
+              </div>
+
+              <div className="mb-5 p-5 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100">
+                <div className="flex items-start gap-3 mb-4">
+                  <Layers className="w-5 h-5 text-emerald-600 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-emerald-900">{softwareRevenueOwnershipMap.headline}</h4>
+                    <p className="text-xs text-emerald-800 mt-1">{softwareRevenueOwnershipMap.coreInsight}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {softwareRevenueOwnershipMap.budgetMap.map((item, idx) => (
+                    <div key={idx} className="p-4 bg-white rounded-2xl border border-emerald-100">
+                      <h5 className="text-sm font-black text-emerald-800 mb-3">{item.buyer}</h5>
+                      <div className="space-y-2 text-xs text-slate-700">
+                        <p><span className="font-bold text-slate-500">他們其實在買：</span>{item.whatTheyActuallyPayFor}</p>
+                        <p><span className="font-bold text-emerald-700">Foxconn 可賣：</span>{item.foxconnOffer}</p>
+                        <p><span className="font-bold text-blue-700">為什麼會續約：</span>{item.whyTheyRenew}</p>
+                        <p><span className="font-bold text-slate-500">董事會價值：</span>{item.boardLevelValue}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 p-4 bg-white rounded-xl border border-emerald-100">
+                  <p className="text-sm font-semibold text-emerald-900">{softwareRevenueOwnershipMap.boardMessage}</p>
                 </div>
               </div>
 

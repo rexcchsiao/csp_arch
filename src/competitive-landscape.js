@@ -277,6 +277,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
       source: 'https://www.hpe.com/us/en/private-cloud-ai.html',
     },
     {
+      name: 'Remote Diagnostics & Dispatch Readiness',
+      targetCustomer: '跨站點 AI 機房、大型 CSP、電信商與希望降低 truck-roll 成本的服務營運團隊',
+      monetization: '年度 readiness 訂閱 + 事件治理 / runbook 顧問費',
+      budgetOwner: 'Service Delivery / Field Service / Operations',
+      renewalDriver: '備品策略、dispatch matrix、值班流程、runbook 與新機型 serviceability 規則都會持續更新',
+      painSolved: '把「每次夜間告警都要先派人進機房」改成「先遠端收斂 probable cause、確認是否真的要出勤、以及該帶哪些備品」，直接降低 truck roll、誤派工與維修窗口延誤。',
+      whyUnique: 'Foxconn 同時碰得到 BMC / GPU 遙測、硬體料件、現場維修流程與 Day-2 runbook，較有機會把 remote triage、備品命中率與 dispatch readiness 做成單一可問責服務，而不是把責任切散在監控、硬體支援與現場團隊之間。',
+      evidence: 'NVIDIA Mission Control 已把 AI factory operations、autonomous recovery 與 building management integration 放進官方敘事；Dell AI Factory 也把 lifecycle support 與 end-to-end delivery 放到採購前台。這代表客戶正在為「先遠端縮小故障範圍，再決定怎麼派工」這種 serviceability 結果付錢。',
+      source: 'https://www.nvidia.com/en-us/data-center/mission-control/',
+    },
+    {
       name: 'Factory-to-Operations Handoff Assurance',
       targetCustomer: '需要快速交機、快速驗收、且不想讓工廠交付與營運團隊斷線的大型 CSP / Enterprise AI 專案',
       monetization: '交付附加服務費 + 年度 baseline refresh / acceptance 顧問費',
@@ -380,6 +391,13 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         boardOutcome: '從一次性交機，變成可續約的服務收入'
       },
       {
+        service: 'Remote Diagnostics & Dispatch Readiness',
+        budgetOwner: 'Service Delivery / Field Service / Operations',
+        trigger: '夜間故障、跨站點 dispatch、備品命中率與 truck-roll 成本開始吃掉 AI 機房 OPEX',
+        recurringReason: '備品策略、dispatch matrix、季度 readiness review、runbook 與新機型 serviceability 規則都會持續更新',
+        boardOutcome: '把 serviceability OPEX 變成可被採購與續約的軟體服務，讓軟體部門直接對 MTTR、truck-roll reduction 與 first-time-fix rate 負責'
+      },
+      {
         service: 'Factory-to-Operations Handoff Assurance',
         budgetOwner: 'PMO / Infrastructure Delivery / Platform Operations',
         trigger: '新 AI 叢集交機後，需要把工廠預載、現場驗收、權限移交與 Day-2 baseline 接成一致流程',
@@ -475,9 +493,17 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         foxconnPlay: 'Foxconn 應把 Portable AI Workload Exit Layer 講成採購保險：把模型 artifact、runtime、policy、observability 與部署包標準化，讓客戶保留 on-prem / edge / cloud 的切換能力，也讓軟體部門能切進 portability governance 與 workload certification 預算。',
         sourceLabel: 'Red Hat OpenShift AI',
         source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+      },
+      {
+        title: 'Trustworthy AI Operations Is Becoming a Buying Gate',
+        marketSignal: 'NIST AI RMF 已把 trustworthiness considerations 直接放進 AI products, services, and systems 的 design、development、use 與 evaluation；這代表大型企業與受監管客戶正在把 AI 治理與風險控制視為正式營運要求，而不是 POC 附加題。',
+        buyerQuestion: '如果模型來源、操作紀錄、更新證據與風險責任講不清楚，這套 AI 基礎設施真的能過內部批准、資安審查與採購委員會嗎？',
+        foxconnPlay: 'Foxconn 應把軟體部門定位成 Trustworthy AI Operations owner：把 model provenance、air-gap content governance、runtime evidence、rollback discipline 與 audit export 包成正式服務，讓軟體部門不只對 deployment 負責，也對「這套 AI 能不能被長期、安全、可稽核地營運」負責。',
+        sourceLabel: 'NIST AI Risk Management Framework',
+        source: 'https://www.nist.gov/itl/ai-risk-management-framework'
       }
     ],
-    boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、可延後擴建，以及有人能持續把 GPU economics 與 Day-2 結果一起管好；這些都屬於軟體部門。'
+    boardMessage: '董事會該記住的一句話：市場正在核准的不是更多功能，而是更快上線、更穩營運、可延後擴建，以及有人能持續把 GPU economics、治理風險與 Day-2 結果一起管好；這些都屬於軟體部門。'
   },
   // Messaging for leadership
   executiveSummary: {

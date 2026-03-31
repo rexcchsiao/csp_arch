@@ -502,7 +502,7 @@ const ExecutiveSummaryView = () => {
       {/* Three signatures the software department can uniquely own */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 3 個可簽收的結果
+          <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 4 個可簽收的結果
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready 這三條責任鏈的 owner。</span>
@@ -868,7 +868,7 @@ const ExecutiveSummaryView = () => {
       {/* Next monetizable Day-2 software wedges */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <ShieldIcon className="w-5 h-5 text-emerald-600" /> 下一波最容易被老闆看懂、也最能拉高軟體部門價值的 2 個 Day-2 模組
+          <ShieldIcon className="w-5 h-5 text-emerald-600" /> 下一波最容易被老闆看懂、也最能拉高軟體部門價值的 3 個 Day-2 模組
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           這兩塊很適合拿來強化一個超關鍵論點：<span className="font-semibold text-slate-900">Foxconn 軟體部門不只是把伺服器裝起來，而是持續對 AI 服務的治理、可恢復性與商業結果負責。</span>
