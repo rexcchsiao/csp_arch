@@ -48,6 +48,7 @@ const App = () => {
       'Factory Truth Evidence Pack',
       'Remote Diagnostics & Dispatch Readiness',
       'Service Availability Assurance',
+      'Inference Cost Control',
       'AI Recovery & Evidence Assurance',
       'Model Provenance & Audit Evidence Pack',
       'Firmware Provenance & Attested Update Governance'
