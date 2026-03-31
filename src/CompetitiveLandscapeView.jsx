@@ -427,6 +427,32 @@ const CompetitiveLandscapeView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-rose-200 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-rose-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-rose-900">董事會最該問的不是「功能做了多少」，而是「少了軟體部門，案子會卡死在哪」</h3>
+                  <p className="text-sm text-rose-800 mt-1 font-medium">這段很適合拿來補強簡報的說服力：它把軟體部門的價值從「加值功能」翻成「沒有就可能過不了採購 / 上不了線 / 不敢擴大」的 deal blocker。這種語言，老闆通常更有感。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareDifferentiation.procurementDisqualifiers.items.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                    <h4 className="text-sm font-black text-rose-800 mb-3">{item.title}</h4>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">為什麼會卡單：</span>{item.whyItKillsDeals}</p>
+                      <p><span className="font-bold text-rose-700">Foxconn 該補上的軟體責任：</span>{item.foxconnImplication}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 p-4 bg-rose-50 rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">一句話給董事會：<span className="text-slate-700">硬體規格讓 Foxconn 有資格進場，但 Deployment Assurance、Lifecycle / Availability owner、Governance layer 與 Factory-to-Operations handoff owner，才決定案子能不能真的成交、真的上線、也真的續約。</span></p>
+              </div>
+            </div>
+
             <div className="p-6 bg-cyan-50 rounded-2xl border border-cyan-200">
               <div className="flex items-start gap-3 mb-4">
                 <Layers className="w-6 h-6 text-cyan-600 mt-1" />
