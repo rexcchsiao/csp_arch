@@ -6,7 +6,7 @@ import { customerSuccessScenarios, executiveSummary } from './customer-success-s
 import { softwareDifferentiation } from './software-differentiation';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
-import { aiSupplyChainSecurity, modelPerformanceMonitoring, aiInfrastructureSecurity, aiFactoryOS, investmentDecisionChecklist } from './executive-brief.js';
+import { aiSupplyChainSecurity, modelPerformanceMonitoring, aiInfrastructureSecurity, aiFactoryOS, investmentDecisionChecklist, softwareRevenueOwnershipMap } from './executive-brief.js';
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis.js';
 
 const ExecutiveSummaryView = () => {
@@ -509,7 +509,7 @@ const ExecutiveSummaryView = () => {
           這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready、warranty-ready 這四條責任鏈的 owner。</span>
           只要管理層記住這四個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理、night-shift serviceability 與 serial-level service accountability 的核心價值。
         </p>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           {softwareSignatureMoments.map((item) => (
             <div key={item.title} className="rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
               <p className="text-xs font-black uppercase tracking-widest text-indigo-600 mb-2">Board-signable software outcome</p>
@@ -522,8 +522,26 @@ const ExecutiveSummaryView = () => {
             </div>
           ))}
         </div>
+        <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
+          <p className="text-xs font-black uppercase tracking-widest text-indigo-600 mb-2">Why the fourth ready matters</p>
+          <p className="text-sm font-black text-slate-900 mb-3">Warranty-ready 讓 Foxconn 的 factory truth 變成真正可續約的 serviceability wedge</p>
+          <div className="grid md:grid-cols-3 gap-4 text-xs text-slate-700 leading-relaxed">
+            <div className="rounded-xl border border-white/80 bg-white p-4">
+              <p className="font-bold text-slate-500 mb-2">沒有這層時，客戶最怕什麼？</p>
+              <p>夜間事故、RCA、RMA 與保固判定時，burn-in、韌體矩陣、site acceptance 與換件紀錄散在不同團隊，最後只能靠人海拼證據，MTTR 與 first-time-fix rate 一起被拖慢。</p>
+            </div>
+            <div className="rounded-xl border border-white/80 bg-white p-4">
+              <p className="font-bold text-indigo-700 mb-2">Foxconn 軟體部門把什麼收斂起來？</p>
+              <p>把 serial-level factory baseline、incident timeline、dispatch evidence 與 warranty-ready history 接成單一 service ledger，讓工廠真相能一路延伸到 Day-2 service accountability。</p>
+            </div>
+            <div className="rounded-xl border border-white/80 bg-white p-4">
+              <p className="font-bold text-emerald-700 mb-2">董事會為什麼要在意？</p>
+              <p>這不是 another dashboard，而是把 Foxconn 最不容易被複製的工廠優勢翻成高毛利 attach service：更少扯皮、更快 RMA / RCA、也更像會被續約的 serviceability owner。</p>
+            </div>
+          </div>
+        </div>
         <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
-          <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任與夜班維運責任一起交給 Foxconn。這三個 ready，才是軟體部門最值錢的地方。</span></p>
+          <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任、夜班維運責任，甚至 warranty / RCA 證據責任一起交給 Foxconn。這四個 ready，才是軟體部門最值錢的地方。</span></p>
         </div>
       </div>
 
@@ -874,6 +892,33 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-fuchsia-100 bg-white p-4">
           <p className="text-sm font-semibold text-fuchsia-900">給管理層的一句話：<span className="text-slate-700">硬體部門把設備交出去；軟體部門把交機後的 deployment、upgrade、governance 與 renewal 責任收斂成可持續經營的產品線。若沒有獨立 mandate，最容易被犧牲掉的，正是最有毛利的那一層。</span></p>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+          <div className="mb-4">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Why software gets its own P&amp;L</p>
+            <h4 className="text-lg font-black text-emerald-950">軟體部門最值得被投資的原因：它能把一次性交機翻成跨年度收入</h4>
+            <p className="text-sm text-slate-700 mt-2 leading-relaxed">
+              這裡想讓老闆一眼看懂的，不是又多了一張功能表，而是<span className="font-semibold text-emerald-900">同一批伺服器交出去之後，軟體部門還能繼續進入不同 buyer 的年度預算</span>。
+              只要 Foxconn 能把 deployment、remote ops、capacity assurance、治理與 audit evidence 產品化，軟體就不再只是 support cost，而會變成把硬體 attach 到更多年度收入的引擎。更重要的是，當 NVIDIA 已把 AI factory operations、HPE 已把 continuous service availability 講成正式採購語言，Foxconn 若還把這些能力包在硬體 support 裡，就等於主動放棄最容易續約、也最容易被管理層看見價值的那層收入。
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {softwareRevenueOwnershipMap.budgetMap.map((item) => (
+              <div key={item.buyer} className="rounded-2xl border border-emerald-200 bg-white p-4">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-500 mb-2">Budget owner map</p>
+                <p className="text-sm font-black text-slate-900 mb-3">{item.buyer}</p>
+                <div className="space-y-2 text-xs leading-relaxed text-slate-700">
+                  <p><span className="font-bold text-slate-500">他們其實在買：</span>{item.whatTheyActuallyPayFor}</p>
+                  <p><span className="font-bold text-emerald-700">Foxconn 可賣：</span>{item.foxconnOffer}</p>
+                  <p><span className="font-bold text-blue-700">為什麼會續約：</span>{item.whyTheyRenew}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+            <p className="text-sm font-semibold text-emerald-900">一句話版本：<span className="text-slate-700">{softwareRevenueOwnershipMap.boardMessage}</span></p>
+          </div>
         </div>
       </div>
 
