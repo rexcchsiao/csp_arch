@@ -911,6 +911,11 @@ structuralAdvantages: {
         detail: '硬體報價常被壓回 BOM 與交機價格；軟體部門則更適合用 attach rate、SLA tier、baseline refresh、季度 review 與年度續約來設計價格與毛利結構。若兩者混在一起，最容易發生的就是軟體價值被業務當成贈品送掉。',
         boardWhyItMatters: '管理層若不給軟體部門獨立報價與續約 mandate，再好的 Day-2 能力也很難形成可見 P&L；最後 Foxconn 看到的只會是更高交付成本，而不是更高附加價值收入。',
       },
+      {
+        title: '預算線不同',
+        detail: '硬體通常吃的是一次性的 CapEx；軟體部門真正切入的是 Platform / SRE 的 lifecycle 預算、Data Center Operations 的 remote service 預算、Facilities 的 capacity assurance 預算，以及 Compliance / AI governance 的證據與稽核預算。',
+        boardWhyItMatters: '這代表軟體部門不是在替硬體加幾個功能，而是在替 Foxconn 打開原本進不去的多條 Day-2 預算線。若沒有獨立 mandate，這些可續約收入最終只會被當成硬體成交時的免費配菜。',
+      },
     ],
     boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。',
   },
