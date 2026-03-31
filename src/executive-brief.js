@@ -222,6 +222,27 @@ export const executiveBrief = {
       competitiveAdvantage: "L9-L10 firmware integration enables 15-25% energy reduction and gives Foxconn a credible path to sell facility-aware capacity assurance before customers commit to new retrofit CAPEX"
     }
   ],
+
+  // Why this must be a software department mandate—not a hardware support add-on
+  softwareDepartmentMandate: {
+    headline: "Why the Software Department Must Have Its Own Mandate",
+    coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive.",
+    reasons: [
+      {
+        point: "Different buyer, different budget",
+        explanation: "Hardware wins the CapEx conversation. Software wins the Day-2 OpEx conversation around uptime, quota governance, lifecycle risk, audit evidence, and brownfield operations. If software is priced as bundled support, Foxconn forfeits the budgets that actually renew annually."
+      },
+      {
+        point: "Different KPI",
+        explanation: "A hardware team is measured on shipment, BOM, and acceptance. A software department should be measured on attachment rate, handoff time, remote resolution coverage, lifecycle-governance adoption, and renewal signals. Without a separate mandate, the highest-margin work gets hidden inside delivery cost."
+      },
+      {
+        point: "Different renewal logic",
+        explanation: "Customers do not renew because a dashboard still exists. They renew because someone keeps owning deployment assurance, service availability, capacity events, dispatch readiness, update governance, and audit evidence. Those are software-department responsibilities, and they are exactly what turns one-time hardware deals into 3-5 year revenue streams."
+      }
+    ],
+    boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware."
+  },
   
   // Execution Roadmap - Key Milestones
   roadmap: {
@@ -740,6 +761,98 @@ export const talentStrategy = {
 
 // Technical Validation - Third-Party Benchmarks & Standards Compliance (Added 2026-03-20 by CoCo)
 // Addresses "Can Foxconn actually deliver?" concern with measurable technical criteria
+// Talent Retention Strategy - Preventing Turnover of Key Engineers (Added 2026-03-30 by CoCo)
+// Board concern: "How do you prevent Google/NVIDIA from poaching your best people after you train them?"
+export const talentRetention = {
+  headline: "Talent Retention: Keeping Top Software Engineers",
+  coreInsight: "Software engineers don't leave for money alone—they leave for impact, growth, and autonomy. Foxconn's retention strategy targets all three.",
+  retentionPillars: [
+    {
+      pillar: "Equity & Financial Incentives",
+      mechanisms: [
+        "Stock options tied to software revenue milestones (not hardware volume)",
+        "Retention bonuses: 20% of annual compensation vesting annually over 4 years",
+        "Performance bonuses: 15-25% of base salary tied to product milestones (Remote Ops MVP, RAG GA)",
+        "Profit sharing: 5% of software revenue allocated to team bonus pool"
+      ],
+      differentiation: "Unlike pure hardware roles, software team compensation tied to software P&L success"
+    },
+    {
+      pillar: "Technical Challenge & Impact",
+      mechanisms: [
+        "Founding team narrative: 'Build from zero to one' vs. 'Optimize legacy systems'",
+        "Full-stack ownership: Engineers own L9-L12 stack, not just narrow slices",
+        "Customer visibility: Direct engagement with CSP customers, seeing real-world impact",
+        "Hardware synergy: Work on problems pure software companies cannot (800V power, BMC, firmware integration)"
+      ],
+      differentiation: "Google/NVIDIA engineers work on mature products; Foxconn engineers build the category"
+    },
+    {
+      pillar: "Career Growth",
+      mechanisms: [
+        "Dual-track career ladder: Technical (L9→L12 architect) and Management (Lead→VP)",
+        "Fast-track promotion: 2-3 year cycle to senior roles (vs. 4-5 year at tech giants)",
+        "Leadership opportunities: First 50 hires become future team leads and managers",
+        "External visibility: Conference speaking, open-source contributions, patent filings"
+      ],
+      differentiation: "At Google, you're one of 10,000 engineers. At Foxconn Software, you're one of the founding 50."
+    },
+    {
+      pillar: "Culture & Flexibility",
+      mechanisms: [
+        "Remote-first: Work from anywhere policy for software roles (global talent pool)",
+        "20% innovation time: Dedicated time for passion projects and skill development",
+        "Agile processes: Software team operates on software timelines, not hardware timelines",
+        "Separate evaluation criteria: Software KPIs (deployment frequency, uptime, customer satisfaction) vs. hardware KPIs (units shipped, cost reduction)"
+      ],
+      differentiation: "Software-first culture within hardware company: best of both worlds"
+    },
+    {
+      pillar: "Continuous Learning",
+      mechanisms: [
+        "Conference budget: NT$ 200K/FTE/year for conferences (KubeCon, GTC, re:Invent)",
+        "Certification sponsorship: CKA, RHCE, NVIDIA certifications fully funded",
+        "Internal tech talks: Weekly knowledge sharing across L9-L12 stack",
+        "Rotation program: Engineers rotate between Remote Ops, RAG, and firmware teams"
+      ],
+      differentiation: "Learning budget 2-3x industry average; skill growth as retention tool"
+    }
+  ],
+  riskScenarios: [
+    {
+      scenario: "Google offers 30% higher base salary",
+      response: "Counter with equity upside (software revenue tie-in), founding team narrative, and faster career growth. Money alone rarely retains top talent if other pillars are strong.",
+      prevention: "Regular compensation benchmarking (quarterly), proactive equity refresh grants at 2-year mark"
+    },
+    {
+      scenario: "NVIDIA poaches key L9-L10 firmware engineer",
+      response: "Ensure no single point of failure: pair programming, documentation requirements, cross-training. If departure occurs, promote from within and accelerate external hire.",
+      prevention: "Stay interviews (quarterly), early warning system (reduced engagement, increased PTO usage)"
+    },
+    {
+      scenario: "Startup offers CTO role to founding team member",
+      response: "Acknowledge ambition, explore internal entrepreneurship (spin-out opportunity for RAG module), or support transition with alumni network benefits.",
+      prevention: "Create internal startup-like autonomy, fast-track promotion to 'Principal Engineer' or 'Fellow' track"
+    }
+  ],
+  retentionMetrics: {
+    year1: { target: "<15% attrition rate", measurement: "Annualized voluntary turnover rate", benchmark: "Industry average: 13-15% for software" },
+    year2: { target: "<12% attrition rate", measurement: "Track by team, role, and manager; identify hotspots early", benchmark: "Top quartile: <10% for high-performing teams" },
+    year3: { target: "<10% attrition rate", measurement: "Alumni network engagement (boomerang hire potential)", benchmark: "Elite retention: <8% for core team" }
+  },
+  exitInterviewInsights: {
+    tracking: "All departing engineers complete exit interview with Software Product Lead (not direct manager)",
+    commonThemes: "Track patterns: compensation, growth, culture, technical challenge",
+    actionPlan: "Quarterly review of exit themes; implement fixes within 30 days"
+  },
+  alumniNetwork: {
+    strategy: "Maintain relationships with departing engineers (boomerang hire pipeline)",
+    mechanism: "Quarterly alumni newsletter, invitation to company events, referral bonus program",
+    target: "10-15% of new hires from alumni referrals or boomerang employees"
+  },
+  boardMessage: "Retention is not about golden handcuffs—it's about creating an environment where top engineers don't want to leave. Foxconn's advantage: founding team narrative, hardware+software synergy, and rapid career growth. Combined with competitive equity and culture, we can retain talent even when tech giants come knocking."
+};
+
 export const technicalValidation = {
   headline: "Technical Validation: Measurable Proof Points",
   coreInsight: "Software differentiation is not marketing—it's quantifiable performance improvements validated by industry standards.",
@@ -2327,7 +2440,21 @@ export const customerDecisionCriteria = {
       winningArgument: "Foxconn Remote Ops includes L9-L10 firmware access for deep diagnostics that pure software vendors cannot replicate."
     },
     {
-      criterion: "4. Multi-Vendor Support",
+      criterion: "4. Brownfield Integration",
+      weight: "15%",
+      description: "Ability to integrate with existing infrastructure, workflows, and facility constraints",
+      foxconnScore: "10/10",
+      foxconnDetail: "Works with existing power/cooling, legacy monitoring, maintenance windows, and multi-year hardware",
+      competitorScores: {
+        hpe: "5/10 (requires HPE hardware)",
+        dell: "5/10 (requires Dell hardware)",
+        nvidia: "3/10 (DGX-only)",
+        quanta: "4/10 (hardware-only, no software)"
+      },
+      winningArgument: "Foxconn integrates with the customer's existing datacenter, facility limits, and operating workflows without rip-and-replace. This is exactly why the software department becomes the accountable owner of deployment success, not just a feature team."
+    },
+    {
+      criterion: "5. Multi-Vendor Support",
       weight: "12%",
       description: "Ability to manage NVIDIA + AMD + future GPUs",
       foxconnScore: "10/10",
@@ -2339,20 +2466,6 @@ export const customerDecisionCriteria = {
         quanta: "5/10 (NVIDIA-only, no software layer)"
       },
       winningArgument: "Only Foxconn provides true vendor-neutral software. NVIDIA won't optimize for AMD. HPE/Dell won't prioritize AMD equally."
-    },
-    {
-      criterion: "5. Brownfield Integration",
-      weight: "15%",
-      description: "Ability to integrate with existing infrastructure",
-      foxconnScore: "10/10",
-      foxconnDetail: "Works with existing power/cooling, legacy monitoring, multi-year hardware",
-      competitorScores: {
-        hpe: "5/10 (requires HPE hardware)",
-        dell: "5/10 (requires Dell hardware)",
-        nvidia: "3/10 (DGX-only)",
-        quanta: "4/10 (hardware-only, no software)"
-      },
-      winningArgument: "Foxconn integrates with customer's existing datacenter (power, cooling, monitoring) without rip-and-replace. Competitors require greenfield or their own hardware."
     },
     {
       criterion: "6. Energy Efficiency",
@@ -2581,6 +2694,42 @@ export const postBoardActionItems = {
 // Board Presentation Deck Outline - Slide-by-Slide Structure (Added 2026-03-22 by CoCo)
 // Purpose: Map existing content into 12-slide board presentation flow
 // Usage: Create PowerPoint/Keynote deck using this structure; each slide references existing data
+export const softwareRevenueOwnershipMap = {
+  headline: 'Software Revenue Ownership Map: Why Software Needs Its Own P&L',
+  coreInsight: 'The software department should not be evaluated like an IT support function. Hardware wins CapEx approval once; software wins the Day-2 OpEx budgets that renew every year because multiple customer teams depend on it after the servers arrive.',
+  budgetMap: [
+    {
+      buyer: 'Platform Engineering / SRE',
+      whatTheyActuallyPayFor: 'Lifecycle governance, change safety, rollback discipline, quota policy, and uptime accountability',
+      foxconnOffer: 'Lifecycle Control Tower + tenant governance + service availability reviews',
+      whyTheyRenew: 'Upgrades, maintenance windows, priority policies, and incident reviews recur every quarter — this is operating discipline, not a one-time feature.',
+      boardLevelValue: 'Turns software from hidden delivery cost into recurring operational control revenue.'
+    },
+    {
+      buyer: 'Data Center Operations / Field Service',
+      whatTheyActuallyPayFor: 'Remote diagnostics, dispatch readiness, truck-roll reduction, and evidence packs for faster RCA',
+      foxconnOffer: 'Remote Ops Platform + remote diagnostics + dispatch-readiness workflows',
+      whyTheyRenew: 'Every new cluster, incident pattern, spare-parts rule, and support SLA creates ongoing work customers do not want to rebuild themselves.',
+      boardLevelValue: 'Lets Foxconn monetize serviceability outcomes, not just monitoring dashboards.'
+    },
+    {
+      buyer: 'Facilities / Capacity Planning',
+      whatTheyActuallyPayFor: 'Power/cooling coordination, brownfield capacity assurance, and deferred retrofit decisions',
+      foxconnOffer: 'Facility-aware capacity assurance + energy optimization suite + 800V-aware control hooks',
+      whyTheyRenew: 'Capacity constraints, seasonal load shifts, and rack-density changes are continuous operational issues, especially once AI clusters grow.',
+      boardLevelValue: 'Moves software into budgets that directly influence CAPEX timing and datacenter efficiency.'
+    },
+    {
+      buyer: 'CISO / Compliance / AI Governance',
+      whatTheyActuallyPayFor: 'Model provenance, audit evidence, air-gap operations, runtime assurance, and sovereign AI controls',
+      foxconnOffer: 'RAG Appliance governance layer + AI supply chain security + audit/export workflows',
+      whyTheyRenew: 'Model updates, audits, regulatory changes, and evidence requests create annual compliance work that customers must keep funding.',
+      boardLevelValue: 'Opens a second software budget line beyond infrastructure — risk and governance, where price pressure is lower.'
+    }
+  ],
+  boardMessage: 'This is why software must have its own P&L. If these services are bundled as free support, Foxconn gives away the only part of the stack that can renew annually, defend gross margin, and expand from one hardware order into multiple customer budgets.'
+};
+
 export const boardPresentationOutline = {
   title: "Software Differentiation Strategy: Board Presentation Deck",
   totalSlides: 12,
