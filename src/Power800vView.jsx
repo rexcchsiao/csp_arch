@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Zap, TrendingUp, Shield, Award, Clock, Target, CheckCircle, ExternalLink, AlertTriangle, BarChart3 } from 'lucide-react'
-import { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, roadmap } from './800v-power-architecture'
+import { power800vContext, power800vSoftwareModules, marketOpportunity, servicePackaging, competitiveAnalysis, customerProcurementSignals, roadmap } from './800v-power-architecture'
 
 const Power800vView = () => {
   const [activeSection, setActiveSection] = useState('modules')
@@ -9,6 +9,7 @@ const Power800vView = () => {
     { id: 'context', label: '市場背景', icon: <BarChart3 className="w-4 h-4" /> },
     { id: 'modules', label: '10 大軟體著力點', icon: <Zap className="w-4 h-4" /> },
     { id: 'market', label: '市場機會', icon: <TrendingUp className="w-4 h-4" /> },
+    { id: 'signals', label: '採購訊號', icon: <Shield className="w-4 h-4" /> },
     { id: 'competitive', label: '競爭對手分析', icon: <Award className="w-4 h-4" /> },
     { id: 'roadmap', label: '開發時程', icon: <Clock className="w-4 h-4" /> }
   ]
@@ -218,6 +219,65 @@ const Power800vView = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'signals' && (
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+              <div className="flex items-start gap-3">
+                <Shield className="w-5 h-5 text-amber-600 mt-0.5" />
+                <div>
+                  <h3 className="text-lg font-black text-amber-900 mb-2">{customerProcurementSignals.headline}</h3>
+                  <p className="text-sm text-slate-700 leading-6 mb-3">{customerProcurementSignals.whyItMatters}</p>
+                  <div className="rounded-xl border border-amber-200 bg-white/80 p-3 text-sm text-slate-700">
+                    <span className="font-black text-amber-700">董事會該看懂：</span> 800V 若只被講成電源或液冷規格，最後很容易被當成硬體附帶功能；一旦被翻成 RFP 關鍵字、PUE 保證、evidence pack 與 brownfield 容量評估，它就會變成軟體部門可被採購、可續約的服務責任。
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              {customerProcurementSignals.signals.map((item) => (
+                <div key={item.signal} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="p-2 bg-orange-100 rounded-lg">
+                      <AlertTriangle className="w-4 h-4 text-orange-600" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-black text-slate-900">{item.signal}</p>
+                      <p className="text-xs text-slate-500 mt-1">{item.buyerTitle}</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 ml-11">
+                    <div className="rounded-xl border border-red-100 bg-red-50 p-3">
+                      <p className="text-xs font-bold text-red-700 mb-1">買方原話</p>
+                      <p className="text-xs text-slate-700 leading-5">{item.buyerQuote}</p>
+                    </div>
+
+                    <div className="rounded-xl border border-green-100 bg-green-50 p-3">
+                      <p className="text-xs font-bold text-green-700 mb-1">Foxconn 應怎麼回</p>
+                      <p className="text-xs text-slate-700 leading-5">{item.foxconnResponse}</p>
+                    </div>
+
+                    <div className="rounded-xl border border-blue-100 bg-blue-50 p-3">
+                      <p className="text-xs font-bold text-blue-700 mb-1">對軟體部門的戰略價值</p>
+                      <p className="text-xs text-slate-700 leading-5">{item.strategicValue}</p>
+                    </div>
+
+                    <div className="text-xs text-slate-500">
+                      <span className="font-semibold text-slate-600">來源：</span> {item.source}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5">
+              <h4 className="text-sm font-black text-cyan-900 mb-2">這頁真正強化了什麼論點？</h4>
+              <p className="text-sm text-slate-700 leading-6">{customerProcurementSignals.competitiveInsight} 這讓 800V 論述從「未來可能有機會」變成「客戶已經開始用這種語言下單與發 RFP」；也因此更能支撐軟體部門不是在做 embedded feature，而是在接 <span className="font-bold text-cyan-800">capacity assurance、remote evidence、PUE guarantee 與 brownfield rollout</span> 這些可被老闆理解、可被市場定價的責任。</p>
             </div>
           </div>
         )}
