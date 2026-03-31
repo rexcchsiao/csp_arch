@@ -199,8 +199,8 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">董事會真正該批准的，是 3 條可被驗收、也可被續約的責任鏈</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                <h3 className="text-lg font-black text-slate-900 mb-3">董事會真正該批准的，是 4 條可被驗收、也可被續約的責任鏈</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 交機到可營運的 handoff</p>
                     <p className="leading-relaxed">把 factory pre-load、site acceptance、baseline 建立、observability 與 Day-2 runbook 接成同一條責任鏈，賣的是更快上線與更少推責，不只是安裝支援。</p>
@@ -211,27 +211,35 @@ const App = () => {
                   </div>
                   <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">3. 升級與治理的持續 owner</p>
-                    <p className="leading-relaxed">把版本矩陣、maintenance window、air-gap update discipline、quota / showback 與 audit evidence 做成持續治理服務，直接把硬體案延伸成 Day-2 年約收入。</p>
+                    <p className="leading-relaxed">把版本矩陣、maintenance window、air-gap update discipline、audit evidence 與 rollout discipline 做成持續治理服務，直接把硬體案延伸成 Day-2 年約收入。</p>
+                  </div>
+                  <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">4. 共享算力治理與成本 guardrails</p>
+                    <p className="leading-relaxed">把 quota、showback / chargeback、priority policy 與 GPU 預算護欄做成正式治理層，讓共享 AI 叢集不只是能跑，而是能被 FinOps、平台團隊與 BU owner 接受與續買。</p>
                   </div>
                 </div>
                 <div className="rounded-xl border border-blue-100 bg-white p-4">
-                  <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 這 3 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
+                  <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 與 shared-cluster governance 這 4 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why Foxconn can own this uniquely</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">Foxconn 最該強調的，不只是「我們也能做軟體」，而是我們能把工廠、交機、維修與 Day-2 資料接成別人較難複製的責任鏈</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 軟體能吃到 factory truth，不只是 runtime signals</p>
                     <p className="leading-relaxed">Foxconn 不只看得到機房告警，還有機會把 burn-in、golden image、出廠韌體矩陣、site acceptance 與 Day-2 incident evidence 接在一起。這讓軟體部門賣的不是 another monitoring layer，而是從工廠到現場都能被追溯的 handoff 與 RCA 責任鏈。</p>
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
-                    <p className="font-black text-slate-900 mb-1">2. 軟體能把 service loop 關起來，而不是只交工具</p>
+                    <p className="font-black text-slate-900 mb-1">2. 軟體能把 serial-level 證據包做成保固與 RCA 加速器</p>
+                    <p className="leading-relaxed">當 burn-in 結果、韌體基線、換件歷史、site acceptance 與 incident timeline 能被串成同一份 evidence pack，Foxconn 賣的就不只是監控，而是更快的 warranty 判定、更少錯換料與更少跨團隊扯皮。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 軟體能把 service loop 關起來，而不是只交工具</p>
                     <p className="leading-relaxed">很多平台供應商能賣 control plane，但不一定能把故障證據、備品判斷、dispatch readiness、現場維修窗口與下一版 baseline refresh 接成同一個 service loop。Foxconn 若由軟體部門承接，賣的是更少白跑、更快 RCA、更高 first-time-fix rate。</p>
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
-                    <p className="font-black text-slate-900 mb-1">3. 這條責任鏈最容易長成年約，而不是一次性交付</p>
+                    <p className="font-black text-slate-900 mb-1">4. 這條責任鏈最容易長成年約，而不是一次性交付</p>
                     <p className="leading-relaxed">只要軟體部門的角色被定義成 baseline owner、incident evidence owner、upgrade governance owner，收入邏輯就會從交機專案，延伸成季度 review、年度 SLA、evidence refresh 與 lifecycle renewal。這正是硬體最難自己長出來的高毛利層。</p>
                   </div>
                 </div>

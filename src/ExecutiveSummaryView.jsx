@@ -505,8 +505,8 @@ const ExecutiveSummaryView = () => {
           <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 4 個可簽收的結果
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-          這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready 這三條責任鏈的 owner。</span>
-          只要管理層記住這三個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理與 night-shift serviceability 的核心價值。
+          這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready、warranty-ready 這四條責任鏈的 owner。</span>
+          只要管理層記住這四個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理、night-shift serviceability 與 serial-level service accountability 的核心價值。
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {softwareSignatureMoments.map((item) => (
