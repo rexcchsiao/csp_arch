@@ -13,6 +13,16 @@
 
 **Key Decision:** Invest NT$ 65M/year for 50-80 person software team → Year 3: NT$ 750M software revenue, 20-25% gross margin, 11.5x ROI.
 
+### Why This Budget Survives Procurement Review
+
+This is no longer Foxconn inventing a software story after the hardware sale. Public market leaders now frame AI infrastructure in explicitly software-and-operations terms:
+
+- **NVIDIA Mission Control** is positioned as AI factory operations software, not just cluster monitoring. That shifts the buying language toward lifecycle operations, autonomous recovery, and building-management coordination.
+- **HPE Private Cloud AI** sells "deploy AI in days, not months," plus built-in observability and continuous service availability. That means buyers are approving faster time-to-revenue and lower Day-2 risk, not just server specs.
+- **NIST SSDF** explicitly connects secure software development practices to acquisition and supplier evaluation. For regulated and sovereign AI projects, update provenance, approval records, rollback evidence, and auditability are becoming procurement gates.
+
+**Leadership implication:** If competitors and standards bodies are already moving budget conversations toward operations, governance, and evidence, Foxconn's software department should be positioned as the owner of those outcomes—not as an accessory to hardware delivery.
+
 ---
 
 ## 1. Competitive Landscape Matrix
