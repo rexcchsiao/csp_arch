@@ -206,6 +206,13 @@ const App = () => {
                     當客戶開始追問 BIOS / BMC / driver / image 的來源、簽章、批准流程與回滾證據時，被採購的已不是「管理工具」，而是可被稽核的更新治理。這正是軟體部門最能把硬體交付延伸成年度治理收入的位置。
                   </p>
                 </div>
+                <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-2">Board takeaway 06</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">AI operating model 正在變成正式預算語言</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    從 Nutanix 的 cloud operating model、VAST 的 AI OS，到 OpenCost 已把 showback / chargeback 與 GPU 成本可視化標準化，市場正在把共享 GPU 的成本秩序、token economics 與 tenant guardrail 當成正式治理能力來買。這讓軟體部門不只碰到維運預算，也能直接切進 Platform / FinOps / BU owner 的長期預算線。
+                  </p>
+                </div>
               </div>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
