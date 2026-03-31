@@ -697,6 +697,31 @@ const App = () => {
                   <p className="text-sm font-semibold text-teal-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門最值錢的地方，不是幫硬體補功能，而是把同一張 server PO 延伸成多個預算 owner 都願意續買的 Day-2 營運責任。</span></p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">CFO / budget gatekeeper lens</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">如果要讓 CFO 支持軟體部門，答案不能只是「功能比較完整」，而必須是「風險更可控、預算更可預測」</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  很多 AI 基礎建設案最後不是卡在 GPU 規格，而是卡在財務與營運問題：<span className="font-semibold text-slate-900">共享 GPU 成本到底怎麼分、推論費用會不會一路失控、事故發生時要不要一直派人、以及升級失敗後誰來吞 downtime 與重工成本</span>。
+                  這些問題若沒有軟體部門承接，就會變成硬體出貨後才爆開的隱性 OPEX；一旦由軟體部門把 quota、showback、budget guardrail、remote diagnostics 與 recovery evidence 接成治理服務，CFO 看到的就不再是「加一層軟體成本」，而是「把原本不可預測的 AI OPEX 變成可管理的營運模型」。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 mb-4 text-sm text-slate-700">
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. 能不能把 AI OPEX 壓進月度預算？</p>
+                    <p className="leading-relaxed">當 OpenCost、Red Hat、Nutanix 都已把 cost visibility / token cost control 講成正式語言，CFO 真正要問的是：誰負責 showback、chargeback、quota、例外審批與 runaway inference spend？這本質上是軟體治理題，不是硬體規格題。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. 出事時能不能少花現場維運費？</p>
+                    <p className="leading-relaxed">如果沒有 remote diagnostics、dispatch readiness 與 evidence pack，很多故障都會直接演變成 truck roll、錯帶料與長時間停機。軟體部門真正替 CFO 省下的，是持續性的 field-service OPEX 與 downtime 損失，不只是一次性導入工時。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. 能不能把 AI 從 demo 變成可續批的營運模式？</p>
+                    <p className="leading-relaxed">只要軟體部門能交付 deployment assurance、cost governance、recovery evidence 與 lifecycle control，管理層就更容易把 AI 預算從 PoC 性質，升級成年度擴容與續約預算。這也是軟體部門最直接放大 attach rate 與毛利的地方。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-emerald-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">CFO 不會因為「功能很多」批准軟體部門；CFO 會因為軟體部門讓 AI 成本更可預測、事故 OPEX 更可控、擴容預算更敢放大，才願意把它當成正式產品線。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Operating mandate</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">如果軟體部門真的要被批准，管理層就該用 Day-2 KPI 管它，而不是沿用硬體 KPI</h3>
