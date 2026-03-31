@@ -240,6 +240,15 @@ const App = () => {
               <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">Market validation</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">這不是 Foxconn 自說自話：市場領先者已經在賣「軟體化營運結果」</h3>
+                <div className="rounded-xl border border-violet-100 bg-white/90 p-4 mb-4 text-sm text-slate-700 leading-relaxed">
+                  <p className="font-black text-slate-900 mb-2">更值得老闆注意的是：這些能力已經開始進入正式採購 / supplier evaluation 語言</p>
+                  <p className="mb-3">
+                    這不是只有產品行銷文案在變漂亮而已。<span className="font-semibold text-slate-900">NIST Secure Software Development Framework (SSDF) 已明確把 secure software development 的 common vocabulary 拉進 software purchasers 的 acquisition / supplier evaluation 場景</span>；
+                    EU AI Act 與 NIST AI RMF 也把 technical documentation、logging、record-keeping、持續監控與可問責治理拉進正式營運要求。
+                    這代表客戶最後真的會問的，不只是「有沒有平台」，而是 <span className="font-semibold text-slate-900">更新鏈與 evidence 鏈是否可被驗證、誰對 model / firmware / image provenance 背責、以及事故後能不能交出 audit-ready 的紀錄與恢復證據</span>。
+                  </p>
+                  <p className="text-sm font-semibold text-violet-900">對管理層的翻譯：<span className="text-slate-700">軟體部門開始直接影響的，已不是 only engineering preference，而是案子能不能通過採購、資安、法遵與供應商審查。這會讓軟體價值更像 board-level risk control，而不是附屬功能。</span></p>
+                </div>
                 <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
                   <div className="rounded-xl border border-violet-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">NVIDIA Mission Control</p>
@@ -576,6 +585,10 @@ const App = () => {
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Factory Truth Evidence Pack</p>
                     <p className="leading-relaxed">把 serial-level burn-in 結果、出廠韌體矩陣、golden image、site acceptance baseline 與 Day-2 incident timeline 接成可交付的 RCA / RMA-ready evidence，賣的是更快責任收斂、更少錯換料與更高 first-time-fix rate。</p>
+                  </div>
+                  <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Factory Asset Memory / Warranty Evidence Ledger</p>
+                    <p className="leading-relaxed">把每台機器從出廠 burn-in、韌體基線、site acceptance、換件歷史到 incident / RMA 證據做成序號級 service ledger，賣的是更快 warranty 判定、更少跨團隊扯皮，以及把工廠真相延伸成 Day-2 service accountability。</p>
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">Capacity Assurance / Power-Cooling Governance</p>
