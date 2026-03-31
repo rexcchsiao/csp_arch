@@ -43,19 +43,28 @@ const App = () => {
     competitiveSources.standards.find((item) => item.name === 'OpenCost'),
     competitiveSources.standards.find((item) => item.name === 'NIST Secure Software Development Framework (SSDF)')
   ].filter(Boolean)
-  const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
-    [
-      'Factory-to-Operations Handoff Assurance',
-      'Factory Truth Evidence Pack',
-      'Factory Asset Memory / Warranty Evidence Ledger',
-      'Remote Diagnostics & Dispatch Readiness',
-      'Service Availability Assurance',
-      'Inference Cost Control',
-      'AI Recovery & Evidence Assurance',
-      'Model Provenance & Audit Evidence Pack',
-      'Firmware Provenance & Attested Update Governance'
-    ].includes(row.service)
-  ))
+  const budgetOwnerRows = [
+    {
+      service: 'Commissioning & Handoff Assurance',
+      budgetOwner: 'Infrastructure Delivery / PMO / Program Management',
+      whyNow: 'NVIDIA Mission Control 把 cluster deployment 與 building management integration 放進 AI factory operations；Vertiv 也把 retrofit designs / reference designs 與 data hall readiness 做成正式採購語言，代表客戶在上線前就已經願意為 commissioning discipline、handoff readiness 與 brownfield 導入風險付錢。',
+      renewalDriver: '每次新場域上線、新機櫃擴容、GPU 世代切換、golden image 更新與 site acceptance 演練，都會重複觸發同一套 baseline、驗收與 handoff 工作。',
+      boardOutcome: '把原本藏在交機成本裡的 commissioning / handoff 變成軟體部門可持續承接的 revenue wedge，讓 Foxconn 從 Day-0 就開始吃到 attach service，而不是等故障發生後才進場。'
+    },
+    ...softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
+      [
+        'Factory-to-Operations Handoff Assurance',
+        'Factory Truth Evidence Pack',
+        'Factory Asset Memory / Warranty Evidence Ledger',
+        'Remote Diagnostics & Dispatch Readiness',
+        'Service Availability Assurance',
+        'Inference Cost Control',
+        'AI Recovery & Evidence Assurance',
+        'Model Provenance & Audit Evidence Pack',
+        'Firmware Provenance & Attested Update Governance'
+      ].includes(row.service)
+    ))
+  ]
   const softwareBoundaryCards = [
     {
       doNotOwn: '不要跟客戶搶 AI 應用層與 developer portal 主導權',
@@ -677,7 +686,7 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-teal-200 bg-teal-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-teal-700 mb-2">Budget-owner translation</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">同一套 AI 伺服器，軟體部門其實是在打開 5 條不同預算線，不只是附加功能費</h3>
+                <h3 className="text-lg font-black text-slate-900 mb-3">同一套 AI 伺服器，軟體部門其實是在打開 6 條不同預算線，不只是附加功能費</h3>
                 <p className="text-sm text-slate-700 leading-relaxed mb-4">
                   最能證明軟體部門價值的，不是功能做得多，而是能把同一批硬體翻成 Infrastructure、SRE / Platform、Delivery PMO、Service Delivery 都願意付錢的結果。這代表軟體部門不是硬體附屬支援，而是把單次交機延伸成跨部門、跨年度收入的預算轉譯層。
                 </p>
