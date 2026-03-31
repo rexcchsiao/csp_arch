@@ -443,8 +443,8 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
     boardMessage: '一旦軟體部門能對應到不同預算 owner，Foxconn 賣的就不只是 server BOM，而是跨部門、跨年度、可續約的營運能力。'
   },
   procurementLanguageShift: {
-    headline: '現在客戶核准的，其實是 3 種軟體結果，不是再一張功能清單',
-    summary: '從 NVIDIA Mission Control 與 Red Hat OpenShift AI 的官方語言來看，市場已經把 AI 基礎建設的採購重心放在 speed-to-value、operational control、以及 accountable operations。這剛好是軟體部門最能被定價、也最能把硬體放大的位置。',
+    headline: '現在客戶核准的，其實是幾種可被問責的營運結果，不是再一張功能清單',
+    summary: '從 NVIDIA Mission Control、Red Hat OpenShift AI 到 OpenCost / OpenTelemetry 的市場語言來看，AI 基礎建設的採購重心已經從「看得到多少指標」移到 speed-to-value、operational control、cost governance 與 accountable operations。這剛好是軟體部門最能被定價、也最能把硬體放大的位置。',
     cards: [
       {
         title: 'Speed-to-Value',
@@ -461,6 +461,14 @@ NVIDIA's tools are excellent for NVIDIA-centric deployments. Foxconn's value is 
         foxconnPlay: '把 Lifecycle Control Tower、Remote Ops 與 Tenant Governance 串成 Day-2 治理層，讓軟體部門直接對穩定營運與資源治理結果負責。',
         sourceLabel: 'NVIDIA Mission Control',
         source: 'https://www.nvidia.com/en-us/data-center/mission-control/'
+      },
+      {
+        title: 'Cost Visibility Is Commodity; Governance Is What Gets Budget',
+        marketSignal: 'OpenCost 已把 GPU / container showback 與 chargeback 的成本可視化做成標準化、vendor-neutral 敘事；這代表「看得到花多少錢」正在快速商品化。真正還缺的，是誰來把 runaway inference spend、tenant quota、budget guardrail 與例外處理接成治理責任。',
+        buyerQuestion: '如果成本儀表板大家都能做，為什麼我要另外買 Foxconn 軟體？',
+        foxconnPlay: 'Foxconn 不該停在 cost dashboard，而要把 Tenant Governance、showback / chargeback、quota policy、budget exception workflow 與 inference optimization 講成 AI cost-governance service。這會讓軟體部門切進 FinOps / Platform 預算，賣的是「共享 GPU 經濟秩序」而不是 another report。',
+        sourceLabel: 'OpenCost',
+        source: 'https://opencost.io/'
       },
       {
         title: 'Accountable Operations',
