@@ -32,6 +32,7 @@ const ExecutiveSummaryView = () => {
   const redfishSource = competitiveSources.standards?.find((source) => source.name.includes('Redfish'));
   const openBmcSource = competitiveSources.standards?.find((source) => source.name.includes('OpenBMC'));
   const openTelemetrySource = competitiveSources.standards?.find((source) => source.name.includes('OpenTelemetry'));
+  const openCostSource = competitiveSources.standards?.find((source) => source.name.includes('OpenCost'));
   const nistSsdfSource = competitiveSources.standards?.find((source) => source.name.includes('NIST Secure Software Development Framework'));
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
@@ -790,6 +791,62 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-sky-100 bg-white p-4">
           <p className="text-sm font-semibold text-sky-900">給管理層的一句話：<span className="text-slate-700">如果客戶現在連機房 readiness 都願意花錢評估，Foxconn 軟體部門就不該只在交機後才出現。最聰明的打法，是把 AI Retrofit Readiness Assessment 做成前導 wedge，先吃下擴容決策權，再延伸到容量治理、變更治理與年度續約。</span></p>
+        </div>
+      </div>
+
+      {/* Why cost visibility alone is no longer enough */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <DollarSign className="w-5 h-5 text-emerald-600" /> 成本可視化正在變成基本盤，真正值錢的是誰替 GPU / token 成本負責
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一段很適合補強軟體部門的 <span className="font-semibold text-slate-900">CFO / FinOps 價值主張</span>。
+          因為市場已經不只在談 observability，連 <span className="font-semibold text-slate-900">OpenCost 這種 vendor-neutral 成本可視化能力都愈來愈標準化</span>，代表「看得到 GPU / K8s 花了多少錢」本身很快就會變成 commodity。
+          真正還能收費、也更值得由軟體部門承接的，是誰把這些成本訊號翻成 <span className="font-semibold text-emerald-700">quota policy、showback / chargeback、budget guardrail、tenant exception workflow 與 inference optimization</span>。
+          換句話說，Foxconn 不該只賣 cost dashboard，而該賣「共享 AI 成本秩序」的 owner。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Market signal</p>
+            <p className="text-sm font-black text-slate-900 mb-3">成本可視化正在標準化</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">OpenCost：</span>{openCostSource?.keyFeature}</p>
+              <p><span className="font-bold text-amber-700">代表什麼：</span>看得到 GPU / K8s / custom-priced on-prem 成本，已不再是只有少數平台商才做得到的高門檻能力。</p>
+              <p><span className="font-bold text-emerald-700">所以價值上移：</span>誰能把成本資料變成政策、配額、責任邊界與預算控制，誰才更容易被持續付費。</p>
+            </div>
+            {openCostSource?.url && (
+              <a
+                href={openCostSource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:underline"
+              >
+                <ExternalLink className="w-3 h-3" />
+                官方來源
+              </a>
+            )}
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Why buyers will fund software</p>
+            <p className="text-sm font-black text-slate-900 mb-3">因為共享 AI 成本失控會直接踩到 CFO</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">市場語言已經變了：</span>{nutanixAgenticAISource?.keyFeature || 'Nutanix 已把 GPU utilization 與 token cost optimization 放進 AI operating model。'}</p>
+              <p><span className="font-bold text-blue-700">Red Hat 也在講：</span>{openshiftAISource?.keyFeature || 'OpenShift AI 聚焦 model lifecycle、monitoring、self-service 與 inferencing cost control。'}</p>
+              <p><span className="font-bold text-emerald-700">採購翻譯：</span>客戶買的不是「知道成本多少」，而是「誰來防止 runaway inference spend、誰來界定每個租戶該負多少責任」。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Foxconn software wedge</p>
+            <p className="text-sm font-black text-slate-900 mb-3">把 cost visibility 升級成 Cost Governance Assurance</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">軟體部門該賣的是：</span>quota policy、showback / chargeback、tenant budget guardrail、approval workflow、batch / cache / quantization tuning 與 FinOps review。</p>
+              <p><span className="font-bold text-emerald-700">為什麼值錢：</span>這會讓軟體部門直接進入 CFO / FinOps / platform budget，而不只是當工程團隊的附屬工具。</p>
+              <p><span className="font-bold text-blue-700">董事會語言：</span>我們不是只幫客戶把 AI 跑起來，而是幫客戶把共享 GPU 與 token 成本變成可管理、可對帳、可續約的營運模式。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">當成本可視化愈來愈標準化，軟體部門真正該守住的高毛利位置，就會是 Cost Governance Assurance——不是告訴客戶花了多少錢，而是替客戶守住「誰能花、能花多少、超支時誰負責」。</span></p>
         </div>
       </div>
 
