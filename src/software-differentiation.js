@@ -1855,6 +1855,14 @@ structuralAdvantages: {
 				targetCustomer: '大型 CSP、企業 AI 專案、需要快速交機與快速驗收的資料中心團隊'
 			},
 			{
+				name: 'Factory Asset Memory / Warranty Evidence Ledger',
+				description: '把每台 AI 伺服器從 burn-in、serial-level 韌體/驅動基線、site acceptance、換件歷史到 incident / RMA 證據，整理成可追溯的序號級 service ledger，讓保固判定、備品準備、dispatch readiness 與 RCA 不再散落在工廠、支援與現場團隊之間',
+				pricing: 'NT$ 350K-1.4M/案 + 年度 evidence ledger 維護 / warranty review / dispatch readiness 續約費',
+				margin: '70-80%',
+				differentiation: '這是 Foxconn 最難被純平台商或一般 OEM/ODM 複製的服務切口：把工廠真相延伸成 Day-2 保固問責、RMA 判定與 first-time-fix 提升的軟體責任鏈，直接把製造優勢翻成可續約的營運服務',
+				targetCustomer: '大型 CSP、跨站點資料中心營運團隊、高敏感產業與重視 warranty / serviceability 的企業客戶'
+			},
+			{
 				name: 'Brownfield Integration & Fleet Baseline 服務',
 				description: '將新 AI 叢集接入既有 Redfish / OpenBMC / DCIM / 告警流程，建立跨新舊設備的一致資產、版本、權限與維護基線',
 				pricing: 'NT$ 300K-1.5M/案 + 年度維護/擴充費',
