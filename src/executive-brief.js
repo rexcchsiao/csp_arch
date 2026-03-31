@@ -226,7 +226,7 @@ export const executiveBrief = {
   // Why this must be a software department mandate—not a hardware support add-on
   softwareDepartmentMandate: {
     headline: "Why the Software Department Must Have Its Own Mandate",
-    coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive.",
+    coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive. That is the difference between one hardware budget line and 4-5 renewable software budget lines tied to Day-2 accountability.",
     reasons: [
       {
         point: "Different buyer, different budget",
@@ -237,11 +237,15 @@ export const executiveBrief = {
         explanation: "A hardware team is measured on shipment, BOM, and acceptance. A software department should be measured on attachment rate, handoff time, remote resolution coverage, lifecycle-governance adoption, and renewal signals. Without a separate mandate, the highest-margin work gets hidden inside delivery cost."
       },
       {
+        point: "Different budget surface area",
+        explanation: "The software department is how Foxconn reaches buyers beyond central procurement: Platform Engineering pays for lifecycle control, Operations pays for remote diagnostics and dispatch readiness, Facilities pays for capacity assurance, and Compliance/CISO teams pay for provenance, audit evidence, and sovereign-AI governance. Keeping software under hardware leaves those budgets unclaimed."
+      },
+      {
         point: "Different renewal logic",
         explanation: "Customers do not renew because a dashboard still exists. They renew because someone keeps owning deployment assurance, service availability, capacity events, dispatch readiness, update governance, and audit evidence. Those are software-department responsibilities, and they are exactly what turns one-time hardware deals into 3-5 year revenue streams."
       }
     ],
-    boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware."
+    boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware. The software department is the mechanism that converts one server sale into multiple renewable budget relationships."
   },
   
   // Execution Roadmap - Key Milestones
@@ -2696,8 +2700,15 @@ export const postBoardActionItems = {
 // Usage: Create PowerPoint/Keynote deck using this structure; each slide references existing data
 export const softwareRevenueOwnershipMap = {
   headline: 'Software Revenue Ownership Map: Why Software Needs Its Own P&L',
-  coreInsight: 'The software department should not be evaluated like an IT support function. Hardware wins CapEx approval once; software wins the Day-2 OpEx budgets that renew every year because multiple customer teams depend on it after the servers arrive.',
+  coreInsight: 'The software department should not be evaluated like an IT support function. Hardware wins CapEx approval once; software wins the Day-0, Day-1, and Day-2 budgets that renew because multiple customer teams depend on it after the servers arrive. That is how Foxconn expands from one hardware order into several software-owned revenue lines.',
   budgetMap: [
+    {
+      buyer: 'PMO / Infrastructure Delivery',
+      whatTheyActuallyPayFor: 'Factory-to-operations handoff, commissioning evidence, baseline validation, site acceptance, and faster time-to-production',
+      foxconnOffer: 'Commissioning & Handoff Assurance + commissioning evidence pack + baseline refresh services',
+      whyTheyRenew: 'Every new site, rack expansion, hardware generation, and golden-image change forces the customer to repeat acceptance, baseline, and handoff work that no one wants to rebuild from scratch.',
+      boardLevelValue: 'Makes software the owner of time-to-revenue at the exact moment hardware turns into a production-ready service, instead of leaving commissioning value trapped inside delivery cost.'
+    },
     {
       buyer: 'Platform Engineering / SRE',
       whatTheyActuallyPayFor: 'Lifecycle governance, change safety, rollback discipline, quota policy, and uptime accountability',
@@ -2714,17 +2725,17 @@ export const softwareRevenueOwnershipMap = {
     },
     {
       buyer: 'Facilities / Capacity Planning',
-      whatTheyActuallyPayFor: 'Power/cooling coordination, brownfield capacity assurance, and deferred retrofit decisions',
-      foxconnOffer: 'Facility-aware capacity assurance + energy optimization suite + 800V-aware control hooks',
-      whyTheyRenew: 'Capacity constraints, seasonal load shifts, and rack-density changes are continuous operational issues, especially once AI clusters grow.',
-      boardLevelValue: 'Moves software into budgets that directly influence CAPEX timing and datacenter efficiency.'
+      whatTheyActuallyPayFor: 'Power/cooling coordination, brownfield capacity assurance, AI retrofit readiness, and deferred CAPEX decisions',
+      foxconnOffer: 'Facility-aware capacity assurance + AI retrofit readiness assessment + energy optimization suite',
+      whyTheyRenew: 'Capacity constraints, seasonal load shifts, rack-density changes, and phased retrofit decisions are continuous operational issues once AI clusters start scaling.',
+      boardLevelValue: 'Moves software into budgets that directly influence CAPEX timing, brownfield expansion speed, and datacenter efficiency.'
     },
     {
       buyer: 'CISO / Compliance / AI Governance',
-      whatTheyActuallyPayFor: 'Model provenance, audit evidence, air-gap operations, runtime assurance, and sovereign AI controls',
-      foxconnOffer: 'RAG Appliance governance layer + AI supply chain security + audit/export workflows',
-      whyTheyRenew: 'Model updates, audits, regulatory changes, and evidence requests create annual compliance work that customers must keep funding.',
-      boardLevelValue: 'Opens a second software budget line beyond infrastructure — risk and governance, where price pressure is lower.'
+      whatTheyActuallyPayFor: 'Model provenance, firmware / image update governance, audit evidence, air-gap operations, runtime assurance, and sovereign AI controls',
+      foxconnOffer: 'RAG Appliance governance layer + firmware provenance / attested update governance + audit/export workflows',
+      whyTheyRenew: 'Model updates, firmware baselines, audits, regulatory changes, and evidence requests create recurring governance work that customers must keep funding.',
+      boardLevelValue: 'Opens a second software budget line beyond infrastructure — risk, governance, and procurement assurance, where price pressure is lower.'
     }
   ],
   boardMessage: 'This is why software must have its own P&L. If these services are bundled as free support, Foxconn gives away the only part of the stack that can renew annually, defend gross margin, and expand from one hardware order into multiple customer budgets.'

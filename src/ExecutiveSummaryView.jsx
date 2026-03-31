@@ -408,6 +408,14 @@ const ExecutiveSummaryView = () => {
       bg: 'bg-amber-50 border-amber-100',
     },
   ];
+  const executiveBudgetServices = [
+    'Factory-to-Operations Handoff Assurance',
+    'Lifecycle Control Tower',
+    'Remote Diagnostics & Dispatch Readiness',
+    'Service Availability Assurance',
+    'Firmware Provenance & Attested Update Governance',
+    'Inference Cost Control',
+  ].map((service) => (softwareDifferentiation.serviceOfferings?.budgetMap?.rows || []).find((row) => row.service === service)).filter(Boolean);
   const softwareSignatureMoments = [
     {
       title: 'Service-ready',
@@ -1696,7 +1704,7 @@ const ExecutiveSummaryView = () => {
         </div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
-          {softwareDifferentiation.serviceOfferings.budgetMap.rows.slice(0, 6).map((row) => (
+          {executiveBudgetServices.map((row) => (
             <div key={row.service} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
               <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Budget approval map</p>
               <p className="text-sm font-black text-slate-900 mb-3">{row.service}</p>

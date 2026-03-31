@@ -1179,6 +1179,14 @@ structuralAdvantages: {
 				source: 'https://www.lenovo.com/us/en/servers-storage/solutions/ai/'
 			},
 			{
+				company: 'NIST AI Risk Management Framework',
+				proof: 'NIST AI RMF 明確把 trustworthiness considerations 納入 AI products、services、systems 的 design、development、use 與 evaluation，且已補充 generative AI profile。這代表大型企業與受監管客戶已開始用正式框架語言評估 AI 風險，而不是只把 AI 當成一般 IT 工具採購。',
+				buyerTranslation: '這讓採購、法遵與內控團隊有了明確依據去追問：誰負責模型治理、變更記錄、風險控制、證據輸出與持續營運責任。也就是說，治理與責任鏈本身已經變成正式的採購審查項，不再只是加分題。',
+				foxconnPlay: 'Foxconn 應把 software department 定位成 trustworthy AI operations 的 owner：用 lifecycle governance、model provenance、audit evidence、recoverability 與 air-gap operating discipline，直接回應管理層與採購委員會最在意的風險問題。這會讓軟體部門更像「風險與營運責任的承接者」，而不是硬體交付後的附屬功能。',
+				sourceLabel: 'NIST AI RMF',
+				source: 'https://www.nist.gov/itl/ai-risk-management-framework'
+			},
+			{
 				company: 'Dell AI Factory',
 				proof: 'Dell 官方直接把 AI Factory 定位成從 infrastructure、data 到 lifecycle support 的 end-to-end 交付敘事，賣點不是單一伺服器，而是整體導入與持續營運結果。',
 				buyerTranslation: '這代表客戶在核准預算時，真正想買的是「誰能對整條交付鏈負責」，包括部署風險、跨團隊協調、以及後續生命周期支援，而不是只買硬體規格。',
@@ -1460,6 +1468,12 @@ structuralAdvantages: {
 					gap: '多數供應商能交付機器，卻很少有人把 burn-in 結果、serial-level 韌體 / 驅動基線、site acceptance 證據、RMA-ready 記錄與 Day-2 incident timeline 接成同一份可驗證交付物。',
 					whyItWins: '這是 Foxconn 最有資格主張的服務切口：把工廠真相變成現場維運、RCA、RMA 與管理層信任都用得上的證據鏈。它不只縮短故障收斂時間，也讓軟體部門看起來像 factory-to-service accountability owner，而不是 another dashboard team。',
 					revenueLogic: '交付專案費 + quarterly evidence refresh / incident review 年約'
+				},
+				{
+					name: 'Factory Asset Memory / Warranty Evidence Ledger',
+					gap: '大型 AI 叢集一旦跨批次交機、跨站點換件、跨團隊維修，最容易失控的是每台機器的 burn-in、韌體基線、site acceptance、換件歷史與 incident / RMA 證據散落在不同系統，導致 warranty 判定慢、責任歸屬模糊、first-time-fix rate 被拖垮。',
+					whyItWins: '這把 Foxconn 最難被純平台商複製的 factory truth，進一步做成序號級 service ledger：不只幫客戶看見問題，而是更快判斷保固、帶對備品、縮短 RCA / RMA 與夜間 serviceability 扯皮。對董事會來說，這比 another dashboard 更像可續約、可問責、可放大硬體 attach rate 的軟體服務。',
+					revenueLogic: '交付專案費 + 年度 evidence ledger 維護 / warranty review / dispatch readiness 續約費'
 				},
 				{
 					name: 'Brownfield Integration & Fleet Baseline',
@@ -1748,6 +1762,13 @@ structuralAdvantages: {
 				name: 'Factory Truth Evidence Pack 健檢包',
 				why: '把 burn-in 結果、serial-level 韌體矩陣、golden image、site acceptance baseline 與 incident timeline 先整理成 RCA / RMA-ready evidence；這是 Foxconn 最有資格賣、但多數競品較難完整承接的 factory-to-service 差異化服務',
 				revenue: 'NT$ 200K-650K/案 + evidence refresh / quarterly review 年費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
+				name: 'Factory Asset Memory / Warranty Evidence Ledger 健檢包',
+				why: '先把每台機器的 burn-in、serial-level 韌體基線、site acceptance、換件歷史與 incident / RMA 證據整理成可追溯的序號級 service ledger；這能直接回應大型 CSP 與高敏感客戶最痛的保固判定、dispatch readiness 與 first-time-fix 問題，也是 Foxconn 最難被複製的 factory-to-service 差異化切口',
+				revenue: 'NT$ 250K-800K/案 + evidence ledger 維護 / warranty review 年費',
 				margin: '70%+',
 				timeToMarket: '2-6 週',
 			},
