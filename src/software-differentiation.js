@@ -113,6 +113,13 @@ export const softwareDifferentiation = {
       softwareSolution: 'Firmware Provenance & Attested Update Governance：把韌體 / 映像來源、簽章驗證、版本基線、批准流程、fleet-level audit trail 與 rollback evidence 做成可被稽核的持續治理服務',
       valueAmplification: '把原本容易被視為硬體附帶責任的更新風險，翻成 CIO / CISO / Compliance 願意正式買單的軟體服務，讓軟體部門直接切進高敏感客戶的治理預算',
     },
+    {
+      id: 'pp15',
+      problem: '交機後最容易失控的不是功能缺不缺，而是 burn-in / 韌體基線 / 到站驗收證據散落在工廠、支援與現場團隊之間',
+      impact: '一旦 AI 叢集在上線初期發生異常，客戶常要花大量時間回頭追 serial-level 配置、burn-in 結果、golden image 與驗收紀錄；若沒有軟體層把工廠真相接成可用證據鏈，RCA、RMA、dispatch 與責任歸屬都會被拖慢',
+      softwareSolution: 'Factory Truth Evidence Pack：把 burn-in 結果、serial-level 韌體 / 驅動基線、site acceptance telemetry、golden image、incident timeline 與 RMA-ready evidence 接成可交付的 Day-2 證據服務',
+      valueAmplification: '把 Foxconn 最獨特的製造與交付優勢，翻成更快 RCA、更高 first-time-fix、更少錯換料與更容易續約的軟體服務，讓軟體部門成為 factory-to-service accountability 的 owner',
+    },
   ],
 
   // Competitive differentiation vs. other server vendors
@@ -194,6 +201,12 @@ export const softwareDifferentiation = {
       foxconn: '把 BIOS / BMC / driver / container image 的來源、簽章驗證、批准流程、版本基線、rollback evidence 與 fleet-level audit trail 做成持續治理服務',
       competitors: '多數 OEM/ODM 仍把更新鏈視為硬體附帶責任，較少把 provenance、attestation、approval 與稽核證據包裝成可獨立報價的軟體能力',
       whyItMatters: '一旦客戶開始追問供應鏈風險、主權 AI、資安與稽核責任，真正能過採購關卡的，不是規格表，而是誰能持續替更新鏈與回滾證據背書；這種責任邊界最適合由軟體部門承接',
+    },
+    {
+      category: 'Factory truth / evidence chain',
+      foxconn: '把工廠 burn-in、serial-level 韌體 / 驅動基線、golden image、site acceptance telemetry 與 incident timeline 接成 Factory Truth Evidence Pack，直接支援 RCA、dispatch readiness 與 RMA 判斷',
+      competitors: '多數 OEM/ODM 即使擁有製造能力，也較少把工廠證據、現場驗收與 Day-2 incident evidence 做成單一可交付的軟體責任鏈',
+      whyItMatters: '這是 Foxconn 最難被複製的軟體切口：把製造現場的真相延伸到交機後的營運問責，讓客戶買到的不只是機器，而是更快收斂根因、更少錯換料與更清楚的責任邊界',
     },
   ],
 
