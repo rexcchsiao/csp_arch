@@ -273,6 +273,32 @@ const App = () => {
                   <p className="text-xs text-slate-500 mt-3">這一排的作用不是增加內容，而是讓老闆在總覽頁就能直接點回官方頁，降低「這只是內部主張」的質疑。</p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-teal-200 bg-teal-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-teal-700 mb-2">Why software becomes a board-level function</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">軟體部門之所以不能只是附屬功能，是因為它開始直接打進 3 個原本硬體比較碰不到的決策桌</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  這段很適合讓老闆快速理解：市場已經不是只由硬體採購拍板，而是由 <span className="font-semibold text-slate-900">上線速度、持續可用性、治理與可稽核性</span> 共同決定。
+                  也因此，軟體部門真正值錢的地方，不是做更多 feature，而是讓 Foxconn 從單一設備供應商，升級成跨部門都願意編列預算的營運 owner。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-teal-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. CIO / CTO：批准的是更快上線，不是更多整合工時</p>
+                    <p className="leading-relaxed">HPE 已把 deploy AI in days, not months 與 pre-configured validated platform 當成正式採購語言。這代表管理層核准的，是 time-to-revenue 與 deployment risk transfer；Foxconn 若由軟體部門承接 handoff、baseline 與 Day-2 接手，硬體價值才更容易被放大成可交付結果。</p>
+                  </div>
+                  <div className="rounded-xl border border-teal-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. COO / SRE：批准的是持續可用性與夜間責任收斂</p>
+                    <p className="leading-relaxed">NVIDIA Mission Control 與 HPE 都已把 cluster lifecycle、predict problems、continuous service availability 放進產品語言。這代表客戶正式在買的是誰能對 maintenance window、remote diagnostics、rollback 與 incident recovery 背責，而不是 another monitoring layer。</p>
+                  </div>
+                  <div className="rounded-xl border border-teal-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. CISO / Compliance：批准的是 evidence、provenance 與 recoverability</p>
+                    <p className="leading-relaxed">當 EU AI Act、NIST AI RMF、NIST SSDF 這類要求把 technical documentation、logging、provenance 與 secure update governance 拉進正式語言後，很多案子真正卡住的不是模型能不能跑，而是誰能交出可被稽核的證據鏈。這正是軟體部門最能打開的新預算線。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-teal-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-teal-900">董事會該記住的一句話：<span className="text-slate-700">硬體部門通常只打進採購桌；軟體部門一旦成立，Foxconn 就能同時對接上線速度、持續可用性與治理證據這 3 類決策桌，這也是它更像高毛利產品線、而不是附屬支援功能的原因。</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">What the market still leaves unsolved</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">真正還沒被補滿的，不是 another dashboard，而是 5 條沒人想完全承接的責任鏈</h3>
