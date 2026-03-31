@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { executiveBrief, softwareDepartmentScorecard } from './executive-brief.js';
 import { softwareDifferentiation, financialImpactCalculator, softwareMoatSummary } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
+import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
 
@@ -336,6 +337,41 @@ const SoftwareDifferentiationView = () => {
               </div>
               <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
                 <p className="text-sm font-semibold text-blue-900">董事會一句話：連 NVIDIA、HPE、Dell、Red Hat 都已經把 lifecycle、continuous availability、air-gapped operations 與 end-to-end handoff 擺到產品前台，Foxconn 若不把軟體部門獨立出來承接這些責任，就只會被看成可替換的硬體供應商。</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-rose-200 shadow-sm">
+              <h4 className="text-lg font-black text-rose-900 mb-2">為什麼是現在：每延一季，流失的不只是案子，還有 attach rate 與定價權</h4>
+              <p className="text-sm text-slate-700 mb-4">這一塊把「不投資軟體的代價」從抽象風險，翻成管理層看得懂的季度時間軸。重點不是渲染焦慮，而是把窗口期說清楚：軟體若晚一年成形，市場會先把 Foxconn 重新歸類成硬體供應商，之後就算追上功能，也更難追回定價權與人才吸引力。</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                {competitiveLandscape.riskTimeline.milestones.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h5 className="text-sm font-black text-rose-800">{item.quarter}</h5>
+                      <span className="text-[11px] font-bold text-rose-600 whitespace-nowrap">窗口期節點</span>
+                    </div>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-emerald-700">如果現在投資：</span>{item.ifInvest}</p>
+                      <p><span className="font-bold text-rose-700">如果繼續延：</span>{item.ifDelay}</p>
+                      <p><span className="font-bold text-slate-500">市場後果：</span>{item.marketImpact}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-xs font-black text-emerald-800 mb-2">現在做的結果</p>
+                  <p className="text-sm font-semibold text-emerald-900">2027 前把軟體 attach rate、案例與續約邏輯先建立起來</p>
+                  <p className="text-xs text-slate-700 mt-2">先把市場認知從「Foxconn 賣伺服器」改成「Foxconn 願意對 Day-2 結果負責」。</p>
+                </div>
+                <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                  <p className="text-xs font-black text-rose-800 mb-2">再等等的代價</p>
+                  <p className="text-sm font-semibold text-rose-900">先被重新貼上 commodity vendor 標籤，再用更高成本追回來</p>
+                  <p className="text-xs text-slate-700 mt-2">失去的不是單一功能，而是 attach rate、續約收入、人才吸引力與董事會對軟體 P&amp;L 的信心。</p>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-rose-50 rounded-xl border border-rose-100">
+                <p className="text-sm font-semibold text-rose-900">{competitiveLandscape.riskTimeline.boardMessage}</p>
               </div>
             </div>
 
