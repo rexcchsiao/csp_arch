@@ -45,6 +45,7 @@ const App = () => {
   const budgetOwnerRows = softwareDifferentiation.serviceOfferings.budgetMap.rows.filter((row) => (
     [
       'Factory-to-Operations Handoff Assurance',
+      'Factory Truth Evidence Pack',
       'Remote Diagnostics & Dispatch Readiness',
       'Service Availability Assurance',
       'AI Recovery & Evidence Assurance',

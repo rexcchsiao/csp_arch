@@ -1560,6 +1560,13 @@ structuralAdvantages: {
 					boardOutcome: '把交機速度直接翻成 time-to-revenue，並讓軟體部門站上交付成敗的關鍵位置'
 				},
 				{
+					service: 'Factory Truth Evidence Pack',
+					budgetOwner: 'Quality / PMO / Service Delivery / RMA Operations',
+					whyNow: '當 AI 伺服器進入大規模交機與跨站點維運後，客戶最怕的是 burn-in、出廠韌體矩陣、site acceptance 與夜間事故證據分散在工廠、支援與現場團隊之間，導致 RCA、RMA 與責任歸屬拉長',
+					renewalDriver: '每次新批次交機、韌體基線更新、site acceptance 演練、重大事故回顧與 RMA 政策調整，都需要刷新 serial-level baseline、evidence template 與 handoff discipline，天然適合做成年度 refresh / quarterly review',
+					boardOutcome: '把 Foxconn 最獨特的工廠真相與 Day-2 incident evidence 接成可交付服務，直接降低錯換料、縮短 RCA / RMA 時間，並讓軟體部門站上最難被複製的 factory-to-service 責任鏈'
+				},
+				{
 					service: 'Remote Diagnostics & Dispatch Readiness',
 					budgetOwner: 'Operations / Field Service / Service Delivery',
 					whyNow: '大型 CSP 與跨站點機房最痛的是夜間故障、跨城 dispatch、備品命中率與 truck-roll 成本；若不能先遠端縮小問題，現場維修效率會被吃掉',
@@ -1614,7 +1621,7 @@ structuralAdvantages: {
 					whyNow: '資料不能上雲、需在地化與稽核的 AI 專案快速增加',
 					renewalDriver: '知識庫擴充、權限治理、離線更新與稽核證據會持續發生',
 					boardOutcome: '切入雲廠不擅長服務的高附加價值市場'
-				},
+				}
 			],
 			boardMessage: '軟體部門最值得投資的地方，是它能把同一套硬體 attach 到不同部門預算，並把收入型態從一次性 BOM 變成跨年度續約。'
 		},
@@ -1695,6 +1702,13 @@ structuralAdvantages: {
 				name: 'Factory-to-Operations 驗收與 Baseline 服務',
 				why: '直接利用 Foxconn 的工廠預載、burn-in、golden image 與 site acceptance 能力，把交機與 Day-2 baseline 接成同一條服務鏈',
 				revenue: 'NT$ 250K-800K/案 + baseline refresh 年費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
+				name: 'Factory Truth Evidence Pack 健檢包',
+				why: '把 burn-in 結果、serial-level 韌體矩陣、golden image、site acceptance baseline 與 incident timeline 先整理成 RCA / RMA-ready evidence；這是 Foxconn 最有資格賣、但多數競品較難完整承接的 factory-to-service 差異化服務',
+				revenue: 'NT$ 200K-650K/案 + evidence refresh / quarterly review 年費',
 				margin: '70%+',
 				timeToMarket: '2-6 週',
 			},
