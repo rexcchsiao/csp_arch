@@ -162,6 +162,7 @@ const SourceReferencesView = () => {
               這一頁是幫董事會回答一個很常見、也很容易把軟體價值砍掉的問題：
               <span className="font-semibold text-slate-900">「既然 Redfish、OpenBMC、OpenTelemetry 都是標準或開源，為什麼還需要軟體部門？」</span>
               答案很簡單：標準只負責把資料與控制面暴露出來，<span className="font-semibold text-slate-900">真正能被客戶買單的，是疊在上面的 change governance、maintenance workflow、rollback discipline、dispatch readiness、showback / chargeback、以及 SLA / 稽核可交代的營運結果</span>。
+              更重要的是，現在連 <span className="font-semibold text-slate-900">OpenTelemetry、OpenCost、Redfish、OpenBMC、NIST SSDF</span> 這類標準 / 開源 / 採購語言都在快速成熟，代表「蒐集訊號、看到成本、遵守基本更新紀律」本身正在商品化；真正還能形成高毛利 attach 與續約的，就會是 <span className="font-semibold text-slate-900">誰能把這些 commodity 訊號翻成可執行的 upgrade governance、tenant budget guardrail、firmware provenance、evidence pack 與 CFO / CISO / SRE 都能接受的責任鏈</span>。
               換句話說，沒有軟體部門，Foxconn 只有「可讀取的訊號」；有軟體部門，Foxconn 才有「可續約的服務能力」，也才有能力把共享 GPU / inference 成本治理做成 CFO 看得懂、願意續約的營運責任。 
             </p>
           </div>
