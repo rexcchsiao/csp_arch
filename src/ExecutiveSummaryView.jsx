@@ -365,7 +365,22 @@ const ExecutiveSummaryView = () => {
   const dispatchBudgetRow = softwareDifferentiation.serviceOfferings?.budgetMap?.rows?.find((item) => item.service === 'Remote Diagnostics & Dispatch Readiness');
   const dispatchQuickWin = softwareDifferentiation.serviceOfferings?.quickWins?.services?.find((item) => item.name === 'Remote Diagnostics / Dispatch Readiness 健檢');
   const retrofitReadinessService = softwareDifferentiation.serviceOfferings?.offerings?.find((item) => item.name === 'AI Retrofit Readiness Assessment');
-  const marketBuyingLanguageVectors = (softwareDifferentiation.marketBuyingLanguage?.vectors || []).slice(0, 6);
+  const executiveProcurementDisqualifiers = [
+    '沒有 Deployment Assurance，硬體到貨不等於可上線',
+    '沒有 Factory-to-Operations accountable owner，案子最容易卡在最後交接灰區',
+    '沒有 Lifecycle / Availability owner，客戶會懷疑誰對停機與升級失敗負責',
+    '沒有 Remote Evidence / Dispatch Readiness owner，大型 CSP 會懷疑夜間故障到底誰先把問題收斂',
+    '沒有 firmware provenance / attested update governance owner，主權與高敏感客戶會擔心誰替韌體與更新風險背書',
+    '沒有 AI recoverability / evidence owner，管理層會擔心 AI 出事後沒人能把服務與信任救回來',
+  ].map((title) => (softwareDifferentiation.procurementDisqualifiers?.items || []).find((item) => item.title === title)).filter(Boolean);
+  const marketBuyingLanguageVectors = [
+    'Speed-to-Value',
+    'Single Accountable Owner',
+    'Continuous Service Availability',
+    'Capacity Deferral',
+    'Resilience & Recoverability',
+    'AI Operating Model',
+  ].map((label) => (softwareDifferentiation.marketBuyingLanguage?.vectors || []).find((item) => item.label === label)).filter(Boolean);
   const budgetOwnerSignals = [
     {
       label: 'Deployment / PMO 預算',
@@ -410,6 +425,12 @@ const ExecutiveSummaryView = () => {
       owner: '夜班運維與現場服務責任鏈',
       meaning: '把 remote diagnostics、evidence pack、備品判斷與維修窗口協調接起來，先遠端縮小故障範圍，再決定是否真的要 truck roll。',
       budgetLogic: '這讓軟體部門直接對 OPEX、SLA 與 first-time-fix rate 產生可定價價值。'
+    },
+    {
+      title: 'Warranty-ready',
+      owner: '序號級 factory truth 與保固責任鏈',
+      meaning: '把 burn-in 結果、出廠韌體矩陣、site acceptance baseline、換件歷史與 incident timeline 串成 serial-level service ledger，讓客戶在 RCA、RMA 與保固判定時不用再跨團隊拼證據。',
+      budgetLogic: '這把 Foxconn 最獨特的 factory truth 轉成可被報價的 serviceability 與 warranty evidence 能力，直接強化高毛利 attach service 與 Day-2 續約理由。'
     },
   ];
 
@@ -502,6 +523,49 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
           <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任與夜班維運責任一起交給 Foxconn。這三個 ready，才是軟體部門最值錢的地方。</span></p>
+        </div>
+      </div>
+
+      {/* Factory truth as a board-level software wedge */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <ShieldIcon className="w-5 h-5 text-teal-600" /> Foxconn 最不容易被複製的軟體價值：把 factory truth 變成可收費的服務證據鏈
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一塊很適合直接強化「為什麼一定要是軟體部門」的論點，因為它不是 another platform feature，而是 <span className="font-semibold text-slate-900">只有同時站在工廠、韌體、交機、現場維運與 RMA 責任交界的人，才比較有資格做好的 serial-level evidence service</span>。
+          對客戶來說，真正痛的常不是看不到告警，而是夜間事故發生後，沒有人能快速把 burn-in 結果、出廠韌體矩陣、site acceptance baseline、最近變更與換件歷史收斂成同一條 RCA / RMA-ready timeline。這正好把 Foxconn 的 factory advantage 翻成軟體部門可被定價、也可被續約的 Day-2 責任。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-teal-100 bg-teal-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-teal-600 mb-2">What makes this special</p>
+            <p className="text-sm font-black text-slate-900 mb-3">Factory truth is a Foxconn-native advantage</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">別人常停在：</span>設備狀態、告警與監控畫面。</p>
+              <p><span className="font-bold text-teal-700">Foxconn 可以往前接：</span>burn-in、golden image、serial-level 韌體基線、site acceptance 與後續 incident timeline。</p>
+              <p><span className="font-bold text-emerald-700">所以軟體部門賣的是：</span>把工廠真相變成現場維運、RCA、RMA 與 warranty 判定都能共用的證據鏈。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-teal-100 bg-teal-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-teal-600 mb-2">Why customers pay for it</p>
+            <p className="text-sm font-black text-slate-900 mb-3">因為它直接縮短故障收斂與保固扯皮時間</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">客戶真痛點：</span>半夜事故發生後，要先跨工廠、現場、支援與平台團隊去拼證據，MTTR 與 first-time-fix rate 都會被吃掉。</p>
+              <p><span className="font-bold text-teal-700">可量化價值：</span>更快收斂 probable cause、更少錯換料、更少白跑機房，也更容易在 RMA / 保固判定時少扯皮。</p>
+              <p><span className="font-bold text-emerald-700">董事會翻譯：</span>軟體部門不是在多做報表，而是在降低 serviceability OPEX 與 warranty friction。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-teal-100 bg-teal-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-teal-600 mb-2">Commercial logic</p>
+            <p className="text-sm font-black text-slate-900 mb-3">這是很自然的 attach + renewal service</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">首次收費：</span>交機時交付 Commissioning Evidence Pack / Factory Truth baseline。</p>
+              <p><span className="font-bold text-blue-700">續約理由：</span>每次新批次交機、韌體基線更新、site acceptance 演練、重大事故回顧與 RMA policy 調整，都需要 evidence refresh。</p>
+              <p><span className="font-bold text-emerald-700">對軟體部門的意義：</span>把 Foxconn 最獨特的工廠優勢，翻成高毛利、難替代、也最像 service owner 的收入線。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-teal-100 bg-white p-4">
+          <p className="text-sm font-semibold text-teal-900">給管理層的一句話：<span className="text-slate-700">別人可以賣 AI server management；Foxconn 更該賣的是把 serial-level factory truth、現場驗收與 Day-2 incident evidence 接成單一責任鏈。這種價值越早由軟體部門產品化，就越能把硬體優勢變成更高 attach rate 與更穩的續約理由。</span></p>
         </div>
       </div>
 
@@ -1051,7 +1115,7 @@ const ExecutiveSummaryView = () => {
           這四題如果沒有明確的軟體 owner，就很容易讓 Foxconn 退回成「設備供應商」，而不是能拿 attach rate 與年約收入的解決方案夥伴。
         </p>
         <div className="grid md:grid-cols-2 gap-4">
-          {(softwareDifferentiation.procurementDisqualifiers?.items || []).slice(0, 6).map((item) => (
+          {executiveProcurementDisqualifiers.map((item) => (
             <div key={item.title} className="rounded-2xl border border-red-100 bg-red-50 p-5">
               <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-2">Procurement disqualifier</p>
               <p className="text-sm font-black text-slate-900 mb-3">{item.title}</p>
