@@ -1599,6 +1599,13 @@ structuralAdvantages: {
 					boardOutcome: '把 Foxconn 最獨特的工廠真相與 Day-2 incident evidence 接成可交付服務，直接降低錯換料、縮短 RCA / RMA 時間，並讓軟體部門站上最難被複製的 factory-to-service 責任鏈'
 				},
 				{
+					service: 'Factory Asset Memory / Warranty Evidence Ledger',
+					budgetOwner: 'Service Delivery / Warranty Operations / Quality',
+					whyNow: '大型 AI 叢集一旦跨批次交機、跨站點換件、跨團隊維修，最容易失控的是每台機器的 burn-in、韌體基線、換件歷史、site acceptance 與 incident / RMA 證據散落在不同系統，導致 warranty 判定慢、責任歸屬模糊、first-time-fix rate 被拖垮',
+					renewalDriver: '只要機器仍在保固、仍有換件、仍要季度健康檢查或事故回顧，就需要持續刷新 serial-level asset history、evidence ledger、RMA template 與 dispatch-ready baseline，天然適合做成年度續約與季度 review',
+					boardOutcome: '把 Foxconn 的製造、保固與現場維修知識做成序號級軟體資產，讓軟體部門不只支援監控，而是直接縮短 warranty / RMA 判定時間、提高 first-time-fix rate，並把保固問責變成可續約服務'
+				},
+				{
 					service: 'Remote Diagnostics & Dispatch Readiness',
 					budgetOwner: 'Operations / Field Service / Service Delivery',
 					whyNow: '大型 CSP 與跨站點機房最痛的是夜間故障、跨城 dispatch、備品命中率與 truck-roll 成本；若不能先遠端縮小問題，現場維修效率會被吃掉',
