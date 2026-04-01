@@ -431,6 +431,13 @@ structuralAdvantages: {
         source: 'https://www.nutanix.com/solutions/ai'
       },
       {
+        company: 'FinOps Foundation Personas',
+        proof: 'FinOps Foundation 明確把雲端/AI 成本治理定義成跨 Finance、Engineering、ITAM、ITFM/TBM、Security、ITSM 等多方協作的 operating model，代表成本與治理早已不是單一平台團隊自己的事。',
+        takeaway: '這是一個很強的董事會訊號：AI 基礎設施真正會不會被核准、會不會持續擴容，愈來愈取決於軟體部門能不能把 showback / chargeback、quota policy、service availability、upgrade risk 與 audit evidence 包成跨部門都看得懂的共識包。這也讓軟體部門的價值從「做工具」升級成「降低 buying committee 摩擦、加速成交與續約」。',
+        sourceLabel: 'FinOps Foundation Personas',
+        source: 'https://www.finops.org/framework/personas/'
+      },
+      {
         company: 'VAST AI OS',
         proof: 'VAST 官方直接用「AI needs its own operating system」來定位產品，並主打 build, deploy, and operate AI at enterprise scale、unified data infrastructure、以及降低 fragmented tools 帶來的 operational complexity。',
         takeaway: '這是一個很強的市場訊號：連資料基礎設施廠商都不再只賣 storage / performance，而是把自己包成 AI 的 operating system。Foxconn 若只講硬體規格會很吃虧；更好的說法是由軟體部門把 server delivery、brownfield fit、lifecycle governance 與 remote service accountability，包成更貼近機房 reality 的 AI operating layer。',
@@ -559,6 +566,14 @@ structuralAdvantages: {
         source: 'https://www.vertiv.com/en-us/solutions/ai-hub/'
       },
       {
+        title: '真正會過採購的不是單點 feature，而是跨 buying committee 的共同證據包',
+        evidence: 'FinOps Foundation 明確把 FinOps 定義為跨 Finance、Engineering、ITAM、ITFM/TBM、Security、ITSM 等多方協作的 operating model；這代表 AI 基礎設施採購已不是單一平台團隊自己拍板，而是多部門共同要求成本、治理、可用性與問責證據。',
+        whyStillOpen: '多數供應商仍用產品頁或功能表跟單一技術窗口對話，卻沒有把 quota / showback、service availability、rollback evidence、audit export、facility capacity 與 dispatch readiness 組成同一份 board-ready / procurement-ready evidence pack。於是客戶明明喜歡方案，最後卻卡在「每個部門都只看到自己的一半風險」。',
+        foxconnPlay: '把 Buying Committee Evidence Pack 做成軟體部門的標準 attach service：同時交付 Platform / SRE 看得懂的 lifecycle 與 SLA 證據、Facilities 看得懂的 capacity / power 風險摘要、FinOps 看得懂的 showback / budget guardrail、以及 Compliance 看得懂的 provenance / audit 匯出。這會把軟體部門從功能供應者升級成跨部門採購共識的 owner。',
+        sourceLabel: 'FinOps Foundation Personas',
+        source: 'https://www.finops.org/framework/personas/'
+      },
+      {
         title: '受監管 AI 專案真正會卡在 model provenance / audit evidence，而不只是模型能不能跑',
         evidence: 'EU AI Act 已把 technical documentation、logging、record-keeping、instructions for use 與 post-market monitoring 納入正式法規語言；Red Hat 也特別為 disconnected environments 提供獨立安裝與維運文件，側面證明離線 AI 的難點在持續治理與證據鏈。',
         whyStillOpen: '很多供應商能把模型或 RAG 環境裝起來，卻沒有把「模型來源、離線鏡像、更新紀錄、操作日誌、稽核匯出包」接成可被法遵、資安與內控接受的營運責任。結果常變成：AI 能 demo，但一進採購或稽核流程就卡住。',
@@ -589,6 +604,14 @@ structuralAdvantages: {
         foxconnPlay: '把 Inference Cost Control 做成 attach service：由軟體部門整合 runtime、scheduler、GPU telemetry 與 FinOps 規則，賣的是「更低 token 成本、更可預測的月費、更少因推論 OPEX 失控而被迫縮案」。這樣 Foxconn 就不是只賣 AI server，而是賣能長期跑得起的 AI 經營模型。',
         sourceLabel: 'Nutanix Agentic AI + Red Hat OpenShift AI',
         source: 'https://www.nutanix.com/solutions/ai'
+      },
+      {
+        title: '模型上線後的 quality drift 很真實，但少有人把 continuous assurance 做成可續約服務',
+        evidence: 'NIST AI RMF 已把 govern / map / measure / manage 放進 AI 營運框架；Red Hat OpenShift AI 也把 model serving、monitoring 與 lifecycle management 放進核心敘事。這說明企業不是只要把模型部署上線，而是需要持續監測品質、風險與變化。',
+        whyStillOpen: '很多供應商能把模型部署到 production，卻沒有把 drift detection、feedback loop、retraining trigger、root-cause analysis 與 business-owner 可讀的 evidence 接成同一條 Day-2 責任鏈。結果常變成：AI 先成功 demo，但準確率與使用者信任在幾個月內慢慢滑落，直到投訴或 KPI 惡化才被發現。',
+        foxconnPlay: '把 Model Performance Monitoring & Drift Governance 做成 attach service：由軟體部門持續追蹤品質基線、漂移訊號、回訓門檻與 incident evidence，賣的是「少一次 AI 品質失控、少一次緊急回退、少一次因 AI 失準而丟掉內部信任」。這會讓 Foxconn 從基礎設施供應商升級成 AI 營運結果的 owner。',
+        sourceLabel: 'NIST AI RMF + Red Hat OpenShift AI',
+        source: 'https://www.nist.gov/itl/ai-risk-management-framework'
       },
       {
         title: 'AI resilience 預算正在浮上檯面，但少有人承接 AI-specific recoverability',
@@ -938,8 +961,13 @@ structuralAdvantages: {
         detail: '硬體通常吃的是一次性的 CapEx；軟體部門真正切入的是 Platform / SRE 的 lifecycle 預算、Data Center Operations 的 remote service 預算、Facilities 的 capacity assurance 預算，以及 Compliance / AI governance 的證據與稽核預算。',
         boardWhyItMatters: '這代表軟體部門不是在替硬體加幾個功能，而是在替 Foxconn 打開原本進不去的多條 Day-2 預算線。若沒有獨立 mandate，這些可續約收入最終只會被當成硬體成交時的免費配菜。',
       },
+      {
+        title: '共識包裝能力不同',
+        detail: '真正的 AI 基礎設施採購，很少只靠單一技術窗口拍板；Platform / SRE 要看 SLA 與升級風險，Facilities 要看 power / cooling 與 retrofit 影響，FinOps 要看 showback / quota 與月費可預測性，Compliance 要看 provenance / audit evidence。這些材料若沒有被同一個 owner 包成共識包，交易就很容易卡在最後一哩。',
+        boardWhyItMatters: '軟體部門的價值之一，就是把這些跨部門證據包產品化，替 Foxconn 降低交易摩擦、提高 attach rate，並讓「軟體有沒有 own 採購共識」變成可管理、可續約、可擴張的能力。',
+      },
     ],
-    boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理與續約責任收斂成可持續經營的產品線。',
+    boardMessage: '董事會該記住的一句話：硬體部門把設備交出去，軟體部門把交機後的部署、升級、治理、跨部門採購共識與續約責任收斂成可持續經營的產品線。',
   },
 
   // Strategic ask - what we need from leadership
@@ -1463,8 +1491,8 @@ structuralAdvantages: {
 			]
 		}, 
 		uniqueServiceWedge: {
-			headline: '最值得先賣的，不是 another platform，而是 7 個別人最容易失手的服務缺口',
-			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 7 個服務切口最能讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係、跨部門預算入口與續約 owner 的部門。',
+			headline: '最值得先賣的，不是 another platform，而是 11 個別人最容易失手的服務缺口',
+			coreInsight: '市場上不缺 dashboard、也不缺單點管理工具；真正還缺的是誰願意對交機後的營運結果負責。這 11 個服務切口剛好對應 AI server 市場最常沒有真正 owner 的 4 類痛點：commissioning / handoff、night-shift serviceability、shared-cluster governance、以及 provenance / evidence accountability。這能更清楚讓老闆看見：軟體部門不是成本中心，而是把硬體 attach 成年度收入與續約關係、跨部門預算入口與續約 owner 的部門。',
 			wedges: [
 				{
 					name: 'Factory-to-Operations Handoff Assurance',
@@ -1513,6 +1541,12 @@ structuralAdvantages: {
 					gap: '共享 GPU 叢集最容易失控的，不是 scheduler 有沒有跑，而是 quota、priority、showback、approval workflow 與 SLA 例外處理沒被產品化。',
 					whyItWins: '這直接對應平台團隊、FinOps、部門主管之間最常吵的治理問題，也最容易從附加功能變成年約服務。',
 					revenueLogic: '治理專案費 + 年度 quota / policy / showback 維運費'
+				},
+				{
+					name: 'Model Performance Monitoring & Drift Governance',
+					gap: '很多方案能把模型或 RAG 服務上線，卻沒有把品質基線、drift detection、feedback loop、retraining trigger 與 incident evidence 做成持續可問責的服務。',
+					whyItWins: '這格最能證明軟體部門不是交機後就消失，而是持續替客戶守住 AI 品質、使用者信任與內部 KPI。對董事會來說，這比 another monitoring widget 更像會續約的 Day-2 營運責任。',
+					revenueLogic: '健康檢查專案費 + 年度 monitoring / drift review / retraining governance 續約費'
 				},
 				{
 					name: 'Model Provenance & Audit Evidence Service',
