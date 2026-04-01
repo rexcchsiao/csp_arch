@@ -917,6 +917,28 @@ const App = () => {
                     <p className="leading-relaxed">只要軟體部門能交付 deployment assurance、cost governance、recovery evidence 與 lifecycle control，管理層就更容易把 AI 預算從 PoC 性質，升級成年度擴容與續約預算。這也是軟體部門最直接放大 attach rate 與毛利的地方。</p>
                   </div>
                 </div>
+                <div className="rounded-2xl border border-emerald-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-3">External proof that GPU economics is now formal operating-model language</p>
+                  <div className="grid md:grid-cols-2 gap-3 text-sm text-slate-700">
+                    {competitiveSources.standards.filter((item) => (
+                      item.name === 'OpenCost' || item.name === 'FinOps Foundation Personas'
+                    )).map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-xl border border-emerald-100 bg-emerald-50/70 p-4 hover:bg-emerald-50 transition-colors"
+                      >
+                        <p className="font-black text-slate-900 mb-1">{item.name}</p>
+                        <p className="text-xs leading-relaxed mb-2">{item.keyFeature}</p>
+                        <p className="text-[11px] text-slate-600 leading-relaxed mb-2">{item.ourAdvantage}</p>
+                        <p className="text-[11px] font-semibold text-emerald-700">Verified {item.lastVerified}</p>
+                      </a>
+                    ))}
+                  </div>
+                  <p className="text-xs text-slate-500 mt-3">這組來源很好用，因為它把「共享 GPU 成本治理」從內部主張，變成有官方 operating-model 與標準工具背書的採購語言：客戶不只是想看成本，而是想知道誰對 showback / chargeback、tenant quota、budget guardrail 與 inference OPEX 負責。</p>
+                </div>
                 <div className="rounded-xl border border-emerald-100 bg-white p-4">
                   <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">CFO 不會因為「功能很多」批准軟體部門；CFO 會因為軟體部門讓 AI 成本更可預測、事故 OPEX 更可控、擴容預算更敢放大，才願意把它當成正式產品線。</span></p>
                 </div>
