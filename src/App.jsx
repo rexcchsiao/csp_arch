@@ -103,6 +103,26 @@ const App = () => {
       foxconnAngle: 'Foxconn 可把 L9-L10 電力/韌體訊號直接接到 L11-L12 叢集治理，讓軟體部門賣的是 capacity assurance、facility-aware workload governance 與可續約的 Day-2 服務。'
     }
   ]
+  const softwareOwnedAssets = [
+    {
+      asset: '1. Factory baseline ledger',
+      ownerWhy: '只有軟體部門適合持續維護 burn-in、serial-level 韌體 / 映像基線、site acceptance 與 handoff evidence，因為這不是一次性交機文件，而是之後每次 RCA、RMA、升級與續約都會回頭使用的數位責任資產。',
+      ifNoSoftwareDept: '若散在工廠、PM、FAE 與 field service，資料很快就會斷裂，最後誰也說不清楚哪個版本何時交付、哪次 incident 與哪份 baseline 有關。',
+      boardMeaning: '這會直接決定 Foxconn 能不能把 factory truth 變成 Day-2 可續約服務，而不是只留在交機當下。'
+    },
+    {
+      asset: '2. Remote evidence & dispatch workflow',
+      ownerWhy: '只有軟體部門能把 BMC / GPU / OS / workload 訊號、自動時間線、runbook、dispatch readiness 與 rollback policy 做成一套持續演進的遠端營運流程。',
+      ifNoSoftwareDept: '若只交給售後支援，能力通常停在 break/fix；客戶買不到可被 SLA、季度 review 與年約續費管理的 serviceability。',
+      boardMeaning: '這會決定 Foxconn 賣的是 another support team，還是更少 truck roll、更快 RCA 的 operating line。'
+    },
+    {
+      asset: '3. Upgrade / governance approval memory',
+      ownerWhy: '只有軟體部門適合長期維護版本矩陣、air-gap 內容、簽章 / 批准紀錄、回滾證據與 audit export，因為這些資料會在每一次 maintenance window 與合規審查被反覆使用。',
+      ifNoSoftwareDept: '若沒有專責 owner，升級與治理價值很容易被算成專案雜工，報價與續約都留不下來。',
+      boardMeaning: '這會直接影響軟體部門能不能站上 CIO / CISO / Compliance 預算，而不是只留在硬體附送支援。'
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -887,6 +907,27 @@ const App = () => {
                 </div>
                 <div className="rounded-xl border border-indigo-100 bg-white p-4">
                   <p className="text-sm font-semibold text-indigo-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門一旦成立，評分標準就不該再是出貨與 BOM，而是 attach rate、handoff speed、remote resolution 與 renewal；只有這樣，軟體價值才不會被算成附送支援。</span></p>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">Software-owned operating assets</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">更能說服董事會的版本：軟體部門真正擁有的，不是幾個功能，而是 3 份會持續增值的營運資產</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  這段的重點，是把「為什麼一定要有軟體部門」從抽象能力講成 <span className="font-semibold text-slate-900">誰要長期維護、誰能持續拿來報價、誰能在事故與續約時拿得出來的數位資產</span>。
+                  只要這些資產被拆散在工廠、PM、FAE 或 field service，價值就很容易斷掉；只有放在軟體部門，才會變成可累積、可產品化、可續約的 operating memory。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  {softwareOwnedAssets.map((item) => (
+                    <div key={item.asset} className="rounded-xl border border-violet-100 bg-white/90 p-4">
+                      <p className="font-black text-slate-900 mb-2">{item.asset}</p>
+                      <p className="leading-relaxed mb-2"><span className="font-semibold text-violet-700">為什麼該由軟體部門持有：</span>{item.ownerWhy}</p>
+                      <p className="leading-relaxed mb-2"><span className="font-semibold text-slate-900">如果沒有專責部門：</span>{item.ifNoSoftwareDept}</p>
+                      <p className="leading-relaxed"><span className="font-semibold text-violet-900">對董事會的意義：</span>{item.boardMeaning}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-violet-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-violet-900">董事會該記住的一句話：<span className="text-slate-700">硬體交出去之後，真正會留下來持續創造 attach rate、RCA 速度、治理可信度與續約收入的，是這 3 份 software-owned operating assets；沒有軟體部門，這些資產就只會散成文件與人力經驗，難以長成產品線。</span></p>
                 </div>
               </div>
               <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 mb-6">
