@@ -263,6 +263,32 @@ const App = () => {
                   <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 與 shared-cluster governance 這 4 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
               </div>
+              <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Lifecycle view the board can approve</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">用 4 個階段看軟體部門：它不是做平台而已，而是在整個客戶生命週期持續接住風險</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Stage 1｜Commissioning</p>
+                    <p className="leading-relaxed">從出廠預載、burn-in、site acceptance 到 baseline 建立，軟體部門先把「硬體交機」翻成「客戶真的接得住的可營運狀態」。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Stage 2｜Governance</p>
+                    <p className="leading-relaxed">把版本矩陣、quota、showback、air-gap content lifecycle、power / cooling policy 與 audit evidence 接成正式治理層，讓 AI 不只是能跑，而是能被持續放大。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Stage 3｜Incident & Recovery</p>
+                    <p className="leading-relaxed">遇到夜間故障、設施事件或資料毀損時，軟體部門負責 remote diagnostics、dispatch readiness、rollback 與 evidence pack，把 outage 風險收斂成可行動流程。</p>
+                  </div>
+                  <div className="rounded-xl border border-sky-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">Stage 4｜Renewal</p>
+                    <p className="leading-relaxed">季度健康檢查、availability review、baseline refresh、compliance evidence 與容量治理，讓同一筆硬體訂單延伸成 3-5 年的軟體與服務收入。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-sky-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-sky-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門的價值，不是把伺服器包一層 UI，而是從 commissioning、governance、incident 到 renewal，持續把客戶原本要自己承擔的風險，變成 Foxconn 可被定價、可被續約的責任鏈。</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">Why Foxconn can own this uniquely</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">Foxconn 最該強調的，不只是「我們也能做軟體」，而是我們能把工廠、交機、維修與 Day-2 資料接成別人較難複製的責任鏈</h3>
