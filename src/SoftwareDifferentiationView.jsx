@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { executiveBrief, softwareDepartmentScorecard } from './executive-brief.js';
+import { executiveBrief, softwareDepartmentScorecard, softwareRevenueOwnershipMap } from './executive-brief.js';
 import { softwareDifferentiation, financialImpactCalculator, softwareMoatSummary } from './software-differentiation.js';
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
 import { competitiveLandscape } from './competitive-landscape.js';
@@ -1080,6 +1080,27 @@ const SoftwareDifferentiationView = () => {
               </div>
               <div className="mt-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100">
                 <p className="text-sm font-semibold text-cyan-900">{softwareDifferentiation.serviceOfferings.buyingCommitteeMap.boardMessage}</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-200 shadow-sm">
+              <h4 className="text-lg font-black text-emerald-900 mb-2">{softwareRevenueOwnershipMap.headline}</h4>
+              <p className="text-sm text-slate-700 mb-4">{softwareRevenueOwnershipMap.coreInsight}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareRevenueOwnershipMap.budgetMap.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-white rounded-2xl border border-emerald-100">
+                    <h5 className="text-sm font-black text-emerald-800 mb-3">{item.buyer}</h5>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">客戶真正編列的預算：</span>{item.whatTheyActuallyPayFor}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 該賣的服務：</span>{item.foxconnOffer}</p>
+                      <p><span className="font-bold text-blue-700">為什麼會續約：</span>{item.whyTheyRenew}</p>
+                      <p><span className="font-bold text-amber-700">董事會該看到的價值：</span>{item.boardLevelValue}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-emerald-900 rounded-xl text-white">
+                <p className="text-sm font-semibold text-emerald-100">{softwareRevenueOwnershipMap.boardMessage}</p>
               </div>
             </div>
 
