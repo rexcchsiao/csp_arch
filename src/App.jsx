@@ -500,6 +500,32 @@ const App = () => {
                 </div>
               </div>
 
+              <div className="rounded-2xl border border-slate-300 bg-slate-900 p-5 mb-6 text-white">
+                <p className="text-xs font-black uppercase tracking-widest text-cyan-300 mb-2">P&amp;L translation</p>
+                <h3 className="text-lg font-black mb-3">如果不把軟體部門當獨立產品線，最容易發生的不是少幾個 feature，而是 4 種價值一起被送掉</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <p className="font-black mb-2">1. 報價被打回硬體附送</p>
+                    <p className="text-slate-200 leading-relaxed">只要軟體沒有獨立 owner 與 SKU，deployment assurance、remote ops、upgrade governance 很容易在 closing 階段被業務當成成交 sweetener 一起送掉。</p>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <p className="font-black mb-2">2. KPI 會被出貨數掩蓋</p>
+                    <p className="text-slate-200 leading-relaxed">若仍沿用硬體 KPI，管理層最後只看得到 server shipment，看不到 handoff speed、remote resolution、renewal 與 attach rate 到底有沒有真的變好。</p>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <p className="font-black mb-2">3. 預算桌打不進去</p>
+                    <p className="text-slate-200 leading-relaxed">沒有獨立軟體 mandate，Foxconn 很難正面對接 Platform、SRE、Compliance、FinOps 與 Facilities 預算，最後仍只被當成硬體供應商。</p>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <p className="font-black mb-2">4. 年約邏輯長不出來</p>
+                    <p className="text-slate-200 leading-relaxed">baseline refresh、availability review、air-gap content lifecycle、evidence support 這些本來最適合做成年約；若部門不獨立，就容易全部退化成一次性交付成本。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-cyan-400/30 bg-cyan-400/10 p-4 mt-4">
+                  <p className="text-sm font-semibold text-cyan-100">董事會一句話版本：<span className="text-slate-200">獨立軟體部門不是為了多一個組織圖方塊，而是為了守住報價權、KPI 可見性、跨部門預算入口與年約續費邏輯；少了這層，很多 Day-2 價值最後都只會被算成硬體附送支援。</span></p>
+                </div>
+              </div>
+
               <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">What procurement is really scoring now</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">從 NVIDIA、HPE、Red Hat 的官方語言來看，採購正在評估的是營運結果，不是功能數量</h3>
