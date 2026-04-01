@@ -4,6 +4,7 @@ import { softwareDifferentiation, financialImpactCalculator, softwareMoatSummary
 import { leadershipDecisionMatrix } from './leadership-decision-matrix';
 import { competitiveLandscape } from './competitive-landscape.js';
 import { competitiveSources } from './competitive-sources.js';
+import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis.js';
 import { Zap, TrendingUp, Shield, Target, Users, BarChart3, AlertTriangle, CheckCircle, Award, Layers, Gauge, Lightbulb, ExternalLink, Trophy, Cpu, Factory, MessageSquare } from 'lucide-react';
 
 const SoftwareDifferentiationView = () => {
@@ -337,6 +338,41 @@ const SoftwareDifferentiationView = () => {
               </div>
               <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
                 <p className="text-sm font-semibold text-blue-900">董事會一句話：連 NVIDIA、HPE、Dell、Red Hat 都已經把 lifecycle、continuous availability、air-gapped operations 與 end-to-end handoff 擺到產品前台，Foxconn 若不把軟體部門獨立出來承接這些責任，就只會被看成可替換的硬體供應商。</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-cyan-200 shadow-sm">
+              <h4 className="text-lg font-black text-cyan-900 mb-2">最常被問的 objection：Hyperscaler / CSP 都有自己的軟體團隊，為什麼還要買 Foxconn？</h4>
+              <p className="text-sm text-slate-700 mb-4">這一段直接處理老闆與客戶最常丟出的質疑。重點不是說客戶不會做，而是把「能做」和「應不應該自己做」分開：大型客戶真正不想自己長期扛的，是那些高成本、低差異化、但出事代價很高的 Day-2 基礎設施責任。</p>
+              <div className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100 mb-4">
+                <h5 className="text-sm font-black text-cyan-800 mb-2">{hyperscalerGapAnalysis.coreInsight.headline}</h5>
+                <p className="text-sm text-slate-700 mb-3">{hyperscalerGapAnalysis.coreInsight.reality}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700">
+                  <div className="p-4 bg-white rounded-xl border border-cyan-100">
+                    <p className="font-bold text-cyan-700 mb-1">Foxconn 的價值定位</p>
+                    <p>{hyperscalerGapAnalysis.coreInsight.foxconnValue}</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-xl border border-cyan-100">
+                    <p className="font-bold text-cyan-700 mb-1">經濟學理由</p>
+                    <p>{hyperscalerGapAnalysis.coreInsight.economicLogic}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {hyperscalerGapAnalysis.gapAnalysis.map((item, idx) => (
+                  <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h5 className="text-sm font-black text-cyan-800 mb-3">{item.gap}</h5>
+                    <div className="space-y-2 text-xs text-slate-700">
+                      <p><span className="font-bold text-slate-500">Hyperscaler 常見做法：</span>{item.hyperscalerApproach}</p>
+                      <p><span className="font-bold text-amber-700">客戶痛點：</span>{item.customerPain}</p>
+                      <p><span className="font-bold text-emerald-700">Foxconn 解法：</span>{item.foxconnSolution}</p>
+                      <p><span className="font-bold text-blue-700">商業影響：</span>{item.businessImpact}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100">
+                <p className="text-sm font-semibold text-cyan-900">管理層一句話：大型客戶不是不會做，而是不想自己長期背 hybrid / brownfield / evidence / dispatch 這些高成本、低差異化、但又必須有人負責的 Day-2 責任；這正是軟體部門最能被定價的位置。</p>
               </div>
             </div>
 
