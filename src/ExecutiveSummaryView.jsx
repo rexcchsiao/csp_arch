@@ -33,6 +33,7 @@ const ExecutiveSummaryView = () => {
   const openBmcSource = competitiveSources.standards?.find((source) => source.name.includes('OpenBMC'));
   const openTelemetrySource = competitiveSources.standards?.find((source) => source.name.includes('OpenTelemetry'));
   const openCostSource = competitiveSources.standards?.find((source) => source.name.includes('OpenCost'));
+  const finopsFoundationSource = competitiveSources.standards?.find((source) => source.name.includes('FinOps Foundation Personas'));
   const nistSsdfSource = competitiveSources.standards?.find((source) => source.name.includes('NIST Secure Software Development Framework'));
   const hpePrivateCloudAISource = competitiveSources.hpe?.find((source) => source.name.includes('Private Cloud AI'));
   const disconnectedSource = competitiveSources.enterprisePlatforms?.find((source) => source.name.includes('Disconnected Environments'));
@@ -101,6 +102,14 @@ const ExecutiveSummaryView = () => {
       foxconnMove: 'Push tenant governance, GPU showback, and quota policy as the layer that makes shared AI infrastructure financially governable.',
       source: openshiftAISource?.name || 'Red Hat OpenShift AI',
       sourceUrl: openshiftAISource?.url,
+    },
+    {
+      criterion: 'Shared GPU economics is now a cross-functional buying issue, not just a platform metric',
+      marketSignal: 'The FinOps Foundation explicitly defines cost governance as a cross-functional operating model spanning Finance, Engineering, ITAM, ITFM/TBM, Security, and ITSM—not a dashboard owned by one platform team.',
+      whyItChangesProcurement: 'This means GPU showback, token-cost control, tenant quota, and budget guardrails increasingly need to satisfy multiple budget owners at once. Once that happens, software starts shaping buying-committee consensus instead of merely exposing usage data.',
+      foxconnMove: 'Frame Foxconn software as the owner of shared-AI economics after delivery: GPU showback / chargeback, quota policy, exception workflow, and budget guardrails that Finance and platform teams can both sign off on.',
+      source: finopsFoundationSource?.name || 'FinOps Foundation Personas',
+      sourceUrl: finopsFoundationSource?.url,
     },
     {
       criterion: 'Neutral integration becomes a board-level differentiator',
