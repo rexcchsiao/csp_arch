@@ -56,6 +56,7 @@ const App = () => {
         'Factory-to-Operations Handoff Assurance',
         'Factory Truth Evidence Pack',
         'Factory Asset Memory / Warranty Evidence Ledger',
+        'AI Retrofit Readiness Assessment',
         'Remote Diagnostics & Dispatch Readiness',
         'Service Availability Assurance',
         'Inference Cost Control',

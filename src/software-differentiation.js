@@ -1620,6 +1620,13 @@ structuralAdvantages: {
 					boardOutcome: '把 Foxconn 的製造、保固與現場維修知識做成序號級軟體資產，讓軟體部門不只支援監控，而是直接縮短 warranty / RMA 判定時間、提高 first-time-fix rate，並把保固問責變成可續約服務'
 				},
 				{
+					service: 'AI Retrofit Readiness Assessment',
+					budgetOwner: 'Facilities / Data Center Capacity Planning / Infrastructure Delivery',
+					whyNow: 'Vertiv 已把 retrofit-ready、whitespace readiness、70kW-142kW rack density 與 energy optimization 做成正式 AI 採購語言，代表客戶現在會在擴建前先問：現有 brownfield 機房能不能先承接下一波 AI 機櫃，而不是直接重做機房。',
+					renewalDriver: '每次新 rack density 評估、液冷導入、power cap 調整、分階段擴容與 site readiness review，都需要重跑容量基線、風險假設與 retrofit roadmap，天然適合做成季度 reassessment 與年度顧問續約。',
+					boardOutcome: '把原本容易落在機電顧問或一次性建置討論裡的 brownfield readiness，翻成軟體部門可持續承接的容量治理與擴容節奏服務，讓 Foxconn 從「賣更多機器」升級成「幫客戶延後 CAPEX、降低 retrofit 失誤、提高 AI 上線勝率」的 owner。'
+				},
+				{
 					service: 'Remote Diagnostics & Dispatch Readiness',
 					budgetOwner: 'Operations / Field Service / Service Delivery',
 					whyNow: '大型 CSP 與跨站點機房最痛的是夜間故障、跨城 dispatch、備品命中率與 truck-roll 成本；若不能先遠端縮小問題，現場維修效率會被吃掉',
