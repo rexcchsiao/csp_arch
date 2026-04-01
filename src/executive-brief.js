@@ -66,11 +66,11 @@ export const executiveBrief = {
     },
     {
       rank: 5,
-      painPoint: "Sovereign AI Compliance",
-      currentReality: "EU AI Act, GDPR, PDPA mandate data residency; public cloud prohibited for sensitive workloads",
-      foxconnSolution: "Sovereign AI-in-a-Box: air-gapped RAG appliance with compliance audit trail",
-      quantifiedImpact: "Enables $50B+ sovereign AI market; 3-week deployment vs. 12-week custom build",
-      monetizableService: "RAG Appliance + Sovereign AI compliance package: NT$ 30M+ per deployment"
+      painPoint: "Factory Truth / Warranty Evidence Gap",
+      currentReality: "After delivery, burn-in results, serial-level firmware baselines, site-acceptance telemetry, spare-part history, and early incident evidence are usually scattered across factory, field service, and customer teams—slowing RCA, RMA approval, and first-time-fix rates.",
+      foxconnSolution: "Factory Truth Evidence Pack + Warranty Evidence Ledger: connect manufacturing baseline, acceptance data, incident timeline, and dispatch/RMA-ready evidence into one software-owned accountability chain",
+      quantifiedImpact: "Faster RCA and dispatch decisions, fewer wrong-part swaps, and a clearer owner for post-delivery accountability—turning Foxconn's factory advantage into a renewable Day-2 service moat rather than a one-time delivery artifact",
+      monetizableService: "Factory Truth Evidence Pack / Warranty Evidence Ledger: NT$ 0.35-1.4M per project + annual evidence refresh / readiness retainer"
     }
   ],
   boardMessage: "These 5 pain points represent NT$ 1.5B+ opportunity by 2028. Each is addressed by monetizable software services with 60-75% gross margin. Without software, Foxconn cannot solve these problems—and customers will turn to HPE, Dell, or NVIDIA for complete solutions.",
@@ -186,6 +186,13 @@ export const executiveBrief = {
       capabilities: ["Factory pre-load validation", "Site acceptance baseline", "Golden image / firmware matrix evidence pack", "Day-2 runbook handoff", "Baseline refresh for future expansions"],
       pricingModel: "Project-based: NT$ 0.3-1.2M per deployment + annual baseline refresh / acceptance retainer",
       competitiveAdvantage: "Turns the gray zone between server delivery and stable operations into a billable, accountable software-led service that shortens time-to-revenue and reduces post-installation blame loops"
+    },
+    {
+      name: "Factory Truth Evidence Pack & Warranty Ledger",
+      targetCustomer: "Large CSPs, multi-site datacenter operators, and regulated enterprises that need faster RCA, cleaner warranty decisions, and fewer truck rolls after deployment",
+      capabilities: ["Burn-in and serial-level baseline export", "Site-acceptance telemetry record", "Incident timeline and evidence pack", "Dispatch-readiness checklist", "Warranty / RMA-ready evidence ledger"],
+      pricingModel: "Project-based: NT$ 0.35-1.4M per deployment + annual evidence refresh / readiness retainer",
+      competitiveAdvantage: "Converts Foxconn's factory truth into a software-owned Day-2 accountability product—something pure software vendors and most OEM/ODMs cannot easily replicate because they do not control both manufacturing evidence and post-delivery service workflows"
     },
     {
       name: "Service Availability Assurance",
@@ -2788,7 +2795,7 @@ export const boardPresentationOutline = {
     { slide: 1, title: "Title Slide", content: "Software Differentiation Strategy: From Hardware Commodity to AI Solutions Partner", speaker: "CEO or Software Product Lead", duration: "1 min", sourceData: "executiveBrief.title" },
     { slide: 2, title: "The 30-Second Elevator Pitch", content: "Problem: 40-60% GPU idle time, 2-4 week deployment. Solution: 85%+ utilization, 2-hour deployment. Ask: NT$ 65M/year. Return: NT$ 750M Year 3, 11.5x ROI.", speaker: "CEO", duration: "2 min", sourceData: "executiveBrief.elevatorPitch" },
     { slide: 3, title: "Why 2026 is the Inflection Point", content: "4 trends: GPU supply normalization, Sovereign AI regulations ($50B market), Energy cost crisis (power = 40% TCO), Hyperscaler vertical integration", speaker: "Software Product Lead", duration: "4 min", sourceData: "executiveBrief.whyNow" },
-    { slide: 4, title: "Top 5 Unsolved Pain Points (Customer Voices)", content: "Show real customer quotes + quantified impact: GPU stranded capital, deployment delays, remote ops gap, energy crisis, sovereign AI compliance", speaker: "Software Product Lead", duration: "5 min", sourceData: "executiveBrief.top5UnsolvedPainPoints + customerVoices" },
+    { slide: 4, title: "Top 5 Unsolved Pain Points (Customer Voices)", content: "Show real customer quotes + quantified impact: GPU stranded capital, deployment delays, remote ops gap, energy crisis, factory truth / warranty evidence gap", speaker: "Software Product Lead", duration: "5 min", sourceData: "executiveBrief.top5UnsolvedPainPoints + customerVoices" },
     { slide: 5, title: "Competitive Reality Check", content: "NVIDIA Mission Control GA, HPE Private Cloud AI, Dell AI Factory. OEM/ODM competitors (Quanta/Wistron) announcing software partnerships. Window: 12-18 months.", speaker: "Software Product Lead", duration: "4 min", sourceData: "competitiveLandscape.competitiveUrgency + executiveBrief.competitiveReality" },
     { slide: 6, title: "Foxconn's 4 Defensible Moats", content: "L9-L12 full-stack capability, Neutral architecture (NVIDIA+AMD), Brownfield integration, Day-2 operational accountability", speaker: "CTO or Software Product Lead", duration: "4 min", sourceData: "executiveBrief.defensibleMoats + whyFoxconnWillSucceed" },
     { slide: 7, title: "Product Portfolio & Pricing", content: "Remote Ops Platform (Bronze/Silver/Gold: NT$ 1-15M/year), RAG Appliance (NT$ 8-30M one-time + 20%/yr). Path to NT$ 750M Year 3.", speaker: "Software Product Lead", duration: "5 min", sourceData: "README.md Service Tiers & Pricing section" },
