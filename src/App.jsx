@@ -792,8 +792,30 @@ const App = () => {
                     </div>
                   ))}
                 </div>
-                <div className="rounded-xl border border-teal-100 bg-white p-4">
+                <div className="rounded-xl border border-teal-100 bg-white p-4 mb-4">
                   <p className="text-sm font-semibold text-teal-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門最值錢的地方，不是幫硬體補功能，而是把同一張 server PO 延伸成多個預算 owner 都願意續買的 Day-2 營運責任。</span></p>
+                </div>
+                <div className="rounded-2xl border border-teal-100 bg-white/90 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-700 mb-3">Why this must be a software department mandate</p>
+                  <h4 className="text-base font-black text-slate-900 mb-3">這些收入不能散在 PM / FAE / field service，因為只有軟體部門才接得住 4 種持續 owner 責任</h4>
+                  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700">
+                    <div className="rounded-xl border border-teal-100 bg-teal-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">1. 要有產品化 owner</p>
+                      <p className="leading-relaxed">若 handoff、upgrade、remote diagnostics 只是專案支援或 FAE 加值，能力很容易跟人走，報價也容易被當成交付附送。只有軟體部門才適合把它做成 SKU、SLA 與可續約服務。</p>
+                    </div>
+                    <div className="rounded-xl border border-teal-100 bg-teal-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">2. 要有跨站點資料閉環</p>
+                      <p className="leading-relaxed">factory baseline、site acceptance、incident evidence、rollback 記錄與季度 review 需要長期維護同一份數位責任鏈。這不是一次性交機文件，而是持續營運資料產品。</p>
+                    </div>
+                    <div className="rounded-xl border border-teal-100 bg-teal-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">3. 要有正式 KPI 與 P&amp;L</p>
+                      <p className="leading-relaxed">管理層若看不到 attach rate、remote resolution、renewal 與 governance adoption，這些價值最後就會被算回硬體成本。獨立軟體部門才能把收入、毛利與續約訊號清楚攤開。</p>
+                    </div>
+                    <div className="rounded-xl border border-teal-100 bg-teal-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">4. 要有季度續約節奏</p>
+                      <p className="leading-relaxed">客戶明年續買的不是某位工程師的熱心，而是 baseline refresh、availability review、air-gap content update 與 audit evidence 這些固定節奏。這種年約邏輯只能由軟體部門穩定經營。</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 mb-6">
