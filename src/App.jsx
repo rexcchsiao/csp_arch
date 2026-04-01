@@ -213,6 +213,13 @@ const App = () => {
                     從 Nutanix 的 cloud operating model、VAST 的 AI OS，到 OpenCost 已把 showback / chargeback 與 GPU 成本可視化標準化，市場正在把共享 GPU 的成本秩序、token economics 與 tenant guardrail 當成正式治理能力來買。這讓軟體部門不只碰到維運預算，也能直接切進 Platform / FinOps / BU owner 的長期預算線。
                   </p>
                 </div>
+                <div className="rounded-2xl border border-lime-100 bg-lime-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-lime-700 mb-2">Board takeaway 07</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">Foxconn 最獨特的軟體價值，在於把 factory truth 變成 Day-2 問責</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    NVIDIA、HPE、Dell 都在賣 deployment 與 lifecycle；但最少人能把 burn-in、serial-level 韌體基線、site acceptance 與 incident timeline 接成同一份 evidence pack。這條 factory-to-operations 證據鏈最能證明：Foxconn 軟體部門賣的不是 another dashboard，而是更快 warranty 判定、更少錯派工與更快 RCA 的可續約責任服務。
+                  </p>
+                </div>
               </div>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
@@ -378,6 +385,11 @@ const App = () => {
                   <p className="font-black text-slate-900 mb-1">5. AI 供應鏈安全與 model provenance，誰敢簽字負責？</p>
                   <p className="text-sm text-slate-700 leading-relaxed">受監管 AI 專案真正會卡住的，常不是模型能不能跑，而是模型從哪裡來、訓練/匯入資料是否可追溯、離線內容有沒有版本證據、出事時能不能交出 AI BOM 與 audit evidence。這種需求天然不是硬體附屬功能，而是軟體部門才能產品化的治理服務，也更容易切進法遵、資安與 CIO 預算。</p>
                   <p className="text-xs text-slate-500 mt-2">可對應的外部語言：EU AI Act 的 technical documentation / logging / record-keeping 要求，以及企業對 model provenance、AI BOM、離線內容版本紀律的採購門檻。</p>
+                </div>
+                <div className="rounded-xl border border-sky-100 bg-white/90 p-4 mb-4">
+                  <p className="font-black text-slate-900 mb-1">6. 交機後第一個月出事時，誰能把 factory truth 翻成可用的 RCA / warranty evidence？</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">很多 AI 專案真正拖慢的不是看不到告警，而是 burn-in、serial-level 韌體 / 驅動基線、site acceptance 與換件歷史散落在工廠、支援與現場團隊之間。少了這條證據鏈，夜間故障、RMA 判定與 dispatch readiness 都會慢一拍，最後客戶感受到的不是缺功能，而是沒有人能快速把責任收斂。</p>
+                  <p className="text-xs text-slate-500 mt-2">這是 Foxconn 最值得產品化的空位：把 factory truth 接成 evidence pack / asset memory / warranty ledger，讓軟體部門直接對更快 RCA、更少錯換料與更高 first-time-fix rate 負責。</p>
                 </div>
                 <div className="rounded-xl border border-sky-100 bg-white p-4">
                   <p className="text-sm font-semibold text-sky-900">董事會該記住的一句話：<span className="text-slate-700">如果市場真正缺的是責任鏈 owner，而 Foxconn 剛好最有資格把 factory、firmware、brownfield、remote ops、shared-cluster governance 與 AI evidence governance 接起來，那軟體部門賣的就不是功能，而是別人最難完整承接的營運責任。</span></p>
