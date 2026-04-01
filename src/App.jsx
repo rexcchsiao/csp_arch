@@ -533,8 +533,25 @@ const App = () => {
                     <p className="leading-relaxed">當底層能力更開放，Foxconn 更應把軟體部門定位成 operating layer owner：把標準化硬體與成本訊號，翻成可治理、可問責、可續約的 Day-2 服務結果，直接對接 SRE、Platform 與 FinOps 預算。</p>
                   </div>
                 </div>
-                <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+                <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4 mb-4">
                   <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">開放標準沒有削弱軟體部門，反而把價值從「設備可管理 / 成本可視化」推向「營運可問責 / 預算可治理」；沒有軟體部門，Foxconn 只能提供訊號，有軟體部門，Foxconn 才能提供結果。</span></p>
+                </div>
+                <div className="rounded-2xl border border-emerald-100 bg-white/90 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-3">What standards still do not solve</p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700">
+                    <div className="rounded-xl border border-emerald-100 bg-emerald-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">1. 誰能批准 maintenance window 與 rollback？</p>
+                      <p className="leading-relaxed">Redfish / OpenBMC 讓設備更可控，但不會替客戶決定哪個站點先升級、遇到異常何時停止 rollout、以及誰要對 rollback 結果背責。這正是軟體部門能產品化的 change governance。</p>
+                    </div>
+                    <div className="rounded-xl border border-emerald-100 bg-emerald-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">2. 誰替共享 GPU 成本失控負責？</p>
+                      <p className="leading-relaxed">OpenCost 只能把 GPU / K8s 成本算得更清楚，卻不會幫客戶決定 tenant quota、例外審批、showback 規則與 token / inference 預算護欄。這是 CFO / Platform team 真正會追問的治理層。</p>
+                    </div>
+                    <div className="rounded-xl border border-emerald-100 bg-emerald-50/70 p-4">
+                      <p className="font-black text-slate-900 mb-1">3. 出事後誰交得出 audit-ready evidence？</p>
+                      <p className="leading-relaxed">OpenTelemetry、SSDF 與各種標準只提供共同語言，不會自動產出 firmware provenance、變更批准紀錄、incident timeline 與 recovery evidence pack。真正能過 supplier evaluation 的，還是那個願意把證據鏈維護成服務的軟體 owner。</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
