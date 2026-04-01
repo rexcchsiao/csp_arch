@@ -682,6 +682,7 @@ structuralAdvantages: {
       'Remote Ops 降低運維成本 (效率提升)',
       'RAG 一體機開創新增收 (市場擴張)',
       '能源優化降低 TCO 15-25% (競爭力)',
+      '軟體打開交機後的 Platform / SRE / Facilities / Compliance / FinOps 預算線 (續約飛輪)',
     ],
     callToAction: '投資軟體部門，不是成本，是讓硬體價值最大化的必要槓桿。',
     why2026: '2026 是轉折點：GPU 供應正常化，競爭從「誰有 GPU」轉向「誰能用得最好」。軟體是用戶體驗的最後一哩路，也是溢價的關鍵。',
@@ -1340,7 +1341,7 @@ structuralAdvantages: {
 		boardMessage: '董事會該記住的一句話：AI 專案最貴的延誤，常常不是少一台 GPU，而是沒有人對「交機後怎麼穩定接手營運」負全責；這正是軟體部門最值得被定價的位置。'
 	},
 	marketBuyingLanguage: {
-		headline: '市場現在在用什麼語言買單：不是功能清單，而是 4 種可核准的結果',
+		headline: '市場現在在用什麼語言買單：不是功能清單，而是 10 種可核准的結果',
 		coreInsight: '外部官方頁面已經很一致：HPE 賣 deploy AI in days、full stack visibility；Red Hat 賣 lifecycle、monitoring、self-service、cost control；Lenovo 賣 productivity、agility、trust。這些都不是功能名詞，而是管理層會核准預算的結果語言。Foxconn 若要凸顯軟體部門價值，就該把自己的論述也翻成這種採購語言。',
 		vectors: [
 			{

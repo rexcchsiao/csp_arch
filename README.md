@@ -139,6 +139,9 @@ Hardware margins compress to 5-8% (commoditization trap). Software creates:
 - **20-25% gross margin** (vs. 10-15% hardware-only)
 - **Recurring revenue** (subscription/subscription-like models)
 - **Customer lock-in** (switching costs increase retention)
+- **Post-delivery budget access** (Platform Engineering, SRE, Facilities, Compliance, and FinOps budgets that hardware alone cannot win)
+
+**Board-level translation:** hardware usually wins one CapEx line once; software wins the Day-0 / Day-1 / Day-2 operating budgets that renew because someone must keep deployment, upgrades, availability, capacity, evidence, and cost governance under control.
 
 **OEM/ODM Competitive Reality:**
 - Quanta/Wistron/Gigabyte: 10-20 person software teams, hardware-focused

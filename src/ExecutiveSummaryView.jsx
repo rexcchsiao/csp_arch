@@ -465,6 +465,33 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Why software gets its own renewable budget lines */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <DollarSign className="w-5 h-5 text-emerald-600" /> 軟體部門真正值錢的地方：把一次硬體訂單翻成多條可續約預算線
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          如果董事會只記得一件事，應該就是這個：<span className="font-semibold text-slate-900">硬體通常只贏一次 CapEx，軟體部門贏的是交機後會反覆續約的 Day-0 / Day-1 / Day-2 預算。</span>
+          真正讓 Foxconn 從 commodity supplier 變成 strategic partner 的，不是再多一個功能，而是能把 deployment、lifecycle、remote serviceability、capacity assurance 與 governance 變成不同 buyer 願意持續編列的 operating budget。
+        </p>
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+          {softwareRevenueOwnershipMap.budgetMap.slice(0, 4).map((item) => (
+            <div key={item.buyer} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">Renewable budget line</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.buyer}</p>
+              <div className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">他們會為什麼付錢：</span>{item.whatTheyActuallyPayFor}</p>
+                <p><span className="font-bold text-emerald-700">Foxconn 該賣什麼：</span>{item.foxconnOffer}</p>
+                <p><span className="font-bold text-blue-700">為什麼這會續約：</span>{item.whyTheyRenew}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">若軟體沒有自己的 mandate 與 P&amp;L，Foxconn 最容易送掉的，正是這些最會續約、最能保護毛利、也最能把硬體價值放大的預算線。</span></p>
+        </div>
+      </div>
+
       {/* Why the market is already buying operations expertise as software */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
