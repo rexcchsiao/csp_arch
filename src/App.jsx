@@ -15,7 +15,7 @@ import Power800vView from './Power800vView'
 import BuildVsBuyView from './BuildVsBuyView'
 import { buildVsBuyAnalysis } from './build-vs-buy'
 import { softwareDifferentiation } from './software-differentiation'
-import { competitiveLandscape, competitiveUrgency } from './competitive-landscape'
+import { competitiveUrgency } from './competitive-landscape'
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis'
 import { competitiveSources } from './competitive-sources'
 
@@ -40,6 +40,8 @@ const App = () => {
     competitiveSources.nvidia[1],
     competitiveSources.hpe[1],
     competitiveSources.dell[0],
+    competitiveSources.schneider[0],
+    competitiveSources.vertiv[0],
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'VAST AI OS'),
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
     competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
@@ -243,6 +245,13 @@ const App = () => {
                   <p className="text-sm font-black text-slate-900 mb-2">Foxconn 最獨特的軟體價值，在於把 factory truth 變成 Day-2 問責</p>
                   <p className="text-xs text-slate-700 leading-relaxed">
                     NVIDIA、HPE、Dell 都在賣 deployment 與 lifecycle；但最少人能把 burn-in、serial-level 韌體基線、site acceptance 與 incident timeline 接成同一份 evidence pack。這條 factory-to-operations 證據鏈最能證明：Foxconn 軟體部門賣的不是 another dashboard，而是更快 warranty 判定、更少錯派工與更快 RCA 的可續約責任服務。
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-amber-700 mb-2">Board takeaway 08</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">Remote evidence & dispatch readiness，把售後成本翻成可續約 software revenue</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    大型 CSP 真正在意的，常不是有沒有再多一張監控畫面，而是半夜出事時能不能先遠端收集證據、縮小 probable cause、判斷該不該派人與該帶哪些備品。只要 Foxconn 軟體部門接住這條 evidence-to-dispatch 責任鏈，價值就會從 break/fix 支援升級成更少 truck roll、更高 first-time-fix rate、也更容易續約的 Day-2 serviceability 服務。
                   </p>
                 </div>
               </div>
