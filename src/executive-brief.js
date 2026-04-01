@@ -3525,27 +3525,6 @@ export const aiWorkloadPortability = {
   boardMessage: 'AI workload portability is the difference between "AI infrastructure" and "AI utility." Customers pay premium for reliability (99.9% SLA) and flexibility (vendor neutrality). Foxconn L9-L12 integration enables hardware-assisted failover, live migration, and multi-vendor support that pure software vendors (HPE, Dell) and hyperscalers cannot replicate. This is NT$ 100-150M Year 3 revenue at 70-75% gross margin, and it transforms Foxconn from hardware vendor to reliability partner.'
 };
 
-// Export all constants at the end of the file
-export default {
-  executiveBrief,
-  boardFAQ,
-  first90DayDashboard,
-  modelPerformanceMonitoring,
-  aiSupplyChainSecurity,
-  aiInfrastructureSecurity,
-  featureParityMatrix,
-  competitiveResponsePlaybook,
-  customerTestimonialTemplate,
-  channelStrategy,
-  boardResolutionTemplate,
-  postBoardActionItems,
-  boardPresentationOutline,
-  pilotProgramGuarantee,
-  messagingHierarchy,
-  decisionTriggers,
-  odmSoftwareWindow, boardPresentationReadiness
-};
-
 // Board Investment Decision Checklist - Quick Validation Framework (Added 2026-03-27 by CoCo)
 // Purpose: Give board members a simple 5-question checklist to validate investment thesis
 // Format: Yes/No questions with objective criteria; 4+ "Yes" = Strong buy signal
@@ -5046,4 +5025,26 @@ export const customerFacingOnePager = {
   salesNote: 'This one-pager is designed for: (1) Initial prospect meetings (leave-behind), (2) Follow-up emails after discovery calls, (3) Conference booth handouts, (4) Email signature attachment for sales team. Print as A4 PDF or distribute digitally. Do not use for board presentations — use executive-brief.js board materials for that audience.',
   version: '1.0 (2026-03-30)',
   boardMessage: 'This customer-facing one-pager translates technical capabilities into business outcomes that CFOs and operations leaders understand. It focuses on ROI, risk reduction, and time-to-value — not features. The 90-day pilot guarantee reduces adoption barriers and demonstrates execution confidence.'
+};
+
+// Export all constants at the true end of the file (avoid TDZ on boardPresentationReadiness)
+export default {
+  executiveBrief,
+  boardFAQ,
+  first90DayDashboard,
+  modelPerformanceMonitoring,
+  aiSupplyChainSecurity,
+  aiInfrastructureSecurity,
+  featureParityMatrix,
+  competitiveResponsePlaybook,
+  customerTestimonialTemplate,
+  channelStrategy,
+  boardResolutionTemplate,
+  postBoardActionItems,
+  boardPresentationOutline,
+  pilotProgramGuarantee,
+  messagingHierarchy,
+  decisionTriggers,
+  odmSoftwareWindow,
+  boardPresentationReadiness,
 };

@@ -15,7 +15,7 @@ import Power800vView from './Power800vView'
 import BuildVsBuyView from './BuildVsBuyView'
 import { buildVsBuyAnalysis } from './build-vs-buy'
 import { softwareDifferentiation } from './software-differentiation'
-import { competitiveLandscape } from './competitive-landscape'
+import { competitiveLandscape, competitiveUrgency } from './competitive-landscape'
 import { hyperscalerGapAnalysis } from './hyperscaler-gap-analysis'
 import { competitiveSources } from './competitive-sources'
 
@@ -23,7 +23,11 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const { responsibilitySplit } = buildVsBuyAnalysis
   const { cards: mandateCards, boardMessage: mandateBoardMessage } = softwareDifferentiation.softwareDepartmentMandateSummary
-  const urgencySignals = competitiveLandscape.competitiveUrgency.slice(0, 3)
+  const urgencySignals = competitiveUrgency.competitorMoves2026.slice(0, 3).map((item) => ({
+    competitor: item.competitor,
+    action: item.move,
+    foxconnResponse: item.implication,
+  }))
   const hyperscalerGaps = hyperscalerGapAnalysis.gapAnalysis.filter((item) => (
     [
       'Gap 1: 混合雲/本地部署能力',
