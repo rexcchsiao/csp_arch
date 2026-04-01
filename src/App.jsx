@@ -49,6 +49,7 @@ const App = () => {
     competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
     competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework'),
     competitiveSources.standards.find((item) => item.name === 'OpenCost'),
+    competitiveSources.standards.find((item) => item.name === 'FinOps Foundation Personas'),
     competitiveSources.standards.find((item) => item.name === 'NIST Secure Software Development Framework (SSDF)')
   ].filter(Boolean)
   const budgetOwnerRows = [
