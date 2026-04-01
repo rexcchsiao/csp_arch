@@ -466,6 +466,32 @@ const ExecutiveSummaryView = () => {
       budgetLogic: '這把 Foxconn 最獨特的 factory truth 轉成可被報價的 serviceability 與 warranty evidence 能力，直接強化高毛利 attach service 與 Day-2 續約理由。'
     },
   ];
+  const unsolvedPainToServiceMap = [
+    {
+      pain: '硬體到了，但 factory baseline、site acceptance 與 Day-2 handoff 仍散在不同團隊',
+      whyItStaysUnsolved: '多數競品強在 platform 或 turnkey 敘事，但較少真正對 commissioning evidence 與 handoff readiness 做單一 owner。',
+      foxconnService: 'Factory-to-Operations Handoff Assurance / Commissioning Evidence Pack',
+      boardWhyItMatters: '把交機速度翻成 time-to-revenue，也把「可上線」做成第一筆可收費軟體服務。',
+    },
+    {
+      pain: '半夜事故時，客戶真正缺的是先遠端收斂 probable cause、再判斷要不要派人',
+      whyItStaysUnsolved: '很多方案能監控與告警，但不一定承接 evidence pack、dispatch readiness、spare-part alignment 與 remote RCA 責任。',
+      foxconnService: 'Remote Diagnostics & Dispatch Readiness / Factory Truth Evidence Pack',
+      boardWhyItMatters: '把 truck-roll avoidance、first-time-fix rate 與 SLA 壓力，翻成高毛利 Day-2 年約。',
+    },
+    {
+      pain: '主權 AI / 高敏感客戶最後常卡在 firmware、image、model artifact 的 provenance 與 audit evidence',
+      whyItStaysUnsolved: '標準與法規已把證據鏈推進採購語言，但 OEM/ODM 很少把 attested updates、air-gap content lifecycle 與 audit export 做成正式服務。',
+      foxconnService: 'Firmware Provenance & Attested Update Governance / Model Provenance & Audit Evidence Pack',
+      boardWhyItMatters: '讓軟體部門直接切進 CIO / CISO / Compliance 預算，而不只是維運預算。',
+    },
+    {
+      pain: '共享 GPU cluster 建起來後，最難的是 quota、showback、budget guardrail 與例外流程',
+      whyItStaysUnsolved: '成本可視化正在標準化，但誰對 shared AI economics 與 tenant discipline 負責，常仍落在客戶自己補洞。',
+      foxconnService: 'Tenant Governance & GPU Service Guardrails / Inference Cost Control',
+      boardWhyItMatters: '把軟體部門帶進 Platform / FinOps / BU owner 的跨年度預算線。',
+    },
+  ];
 
   return (
     <div className="space-y-8">
@@ -516,6 +542,49 @@ const ExecutiveSummaryView = () => {
         </div>
       </div>
 
+      {/* Why the software department survives CFO review better than feature teams */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <DollarSign className="w-5 h-5 text-emerald-600" /> 為什麼這筆預算比較像可核准的經營投資，而不是另一個功能專案
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一段是專門幫董事會與 CFO 收斂重點的：<span className="font-semibold text-slate-900">如果軟體部門只是多做幾個 feature，它很容易被視為成本；但如果它負責縮短 handoff、降低 truck roll、以及把工廠證據變成 Day-2 accountability，它就會更像能保毛利、延後 CAPEX、也能帶來續約的經營投資。</span>
+          市場訊號其實已經很一致：NVIDIA、HPE、Dell、甚至設施供應商都在把 AI 基礎設施賣成 operating model，而不是裸硬體。Foxconn 最該做的，就是把這個 operating model 翻成自己最有資格收費的三條責任線。
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">1. Faster revenue recognition</p>
+            <p className="text-sm font-black text-slate-900 mb-3">縮短交機到可營運時間，比多一個功能更容易被核准</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">CFO 會看的：</span>交機後多久開始產出，而不是多了幾個管理頁面。</p>
+              <p><span className="font-bold text-emerald-700">Foxconn 該賣的：</span>Factory-to-Operations Handoff Assurance、Commissioning Evidence Pack、可重複的 production-ready baseline。</p>
+              <p><span className="font-bold text-blue-700">市場佐證：</span>HPE 已直接把 deploy AI in days / production deployment in hours 當成正式 buying language。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">2. Lower night-shift OPEX</p>
+            <p className="text-sm font-black text-slate-900 mb-3">能少派錯人、少白跑機房，就更像經營改善而不是 IT 工具</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">Operations 會看的：</span>dispatch readiness、first-time-fix rate、維護窗口與遠端收斂能力。</p>
+              <p><span className="font-bold text-emerald-700">Foxconn 該賣的：</span>Remote Diagnostics、Evidence Pack、Dispatch Readiness 與 serial-level factory truth。</p>
+              <p><span className="font-bold text-blue-700">市場佐證：</span>NVIDIA Mission Control 與 Dell AI Factory 都已把 Day-2 operations / lifecycle support 變成正式採購語言。</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">3. Renewable governance revenue</p>
+            <p className="text-sm font-black text-slate-900 mb-3">真正會續約的，不是 console，而是治理與證據責任</p>
+            <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+              <p><span className="font-bold text-slate-500">管理層會看的：</span>誰對 lifecycle、audit evidence、firmware provenance、shared GPU economics 持續負責。</p>
+              <p><span className="font-bold text-emerald-700">Foxconn 該賣的：</span>Lifecycle Control Tower、attested updates、tenant governance、capacity assurance 與 evidence refresh。</p>
+              <p><span className="font-bold text-blue-700">市場佐證：</span>Red Hat、Nutanix、Dell 與 NIST / EU AI Act 相關語言都在把治理與可稽核性推進正式預算對話。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4">
+          <p className="text-sm font-semibold text-emerald-900">給管理層的一句話：<span className="text-slate-700">Foxconn 軟體部門最值得投資的地方，不是 feature completeness，而是它能把 time-to-revenue、night-shift OPEX、與治理責任這三條最像經營數字的風險線，變成可被核准、可被報價、也可被續約的收入線。</span></p>
+        </div>
+      </div>
+
       {/* Why the market is already buying operations expertise as software */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
@@ -556,6 +625,33 @@ const ExecutiveSummaryView = () => {
         </div>
         <div className="mt-4 rounded-xl border border-cyan-100 bg-white p-4">
           <p className="text-sm font-semibold text-cyan-900">給管理層的一句話：<span className="text-slate-700">如果市場已經願意為「營運專業 delivered as software」付錢，Foxconn 軟體部門就不該再被描述成支援功能，而應該被定義成把交機、升級、治理與 night-shift 風險接住的 operations line。</span></p>
+        </div>
+      </div>
+
+      {/* Four unsolved pains the software department can uniquely turn into budget */}
+      <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
+          <Target className="w-5 h-5 text-rose-600" /> AI server 市場還沒被好好承接的 4 個痛點，正是軟體部門最值錢的地方
+        </h3>
+        <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+          這一段是把整份論述再收斂成最容易被管理層記住的版本：<span className="font-semibold text-slate-900">不是每個軟體功能都值得投資，但那些會拖慢上線、拉高夜間 OPEX、卡住採購審查、或讓共享 GPU 成本失控的痛點，通常最值得由軟體部門承接。</span>
+          也就是說，Foxconn 不需要證明自己能做 every feature；更重要的是證明自己能把市場還沒被完整 productize 的責任鏈，翻成可簽收、可報價、也可續約的服務。
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {unsolvedPainToServiceMap.map((item) => (
+            <div key={item.pain} className="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+              <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-2">Unsolved pain → software service</p>
+              <p className="text-sm font-black text-slate-900 mb-3">{item.pain}</p>
+              <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p><span className="font-bold text-slate-500">為什麼市場還沒完全補上：</span>{item.whyItStaysUnsolved}</p>
+                <p><span className="font-bold text-rose-700">Foxconn 該賣什麼：</span>{item.foxconnService}</p>
+                <p><span className="font-bold text-emerald-700">董事會為什麼要在意：</span>{item.boardWhyItMatters}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-xl border border-rose-100 bg-white p-4">
+          <p className="text-sm font-semibold text-rose-900">給管理層的一句話：<span className="text-slate-700">軟體部門最該投資的，不是 another console，而是這 4 種最容易讓案子卡住、也最容易讓客戶願意持續付費的責任鏈：handoff、night-shift diagnostics、provenance / audit evidence、以及 shared GPU economics。</span></p>
         </div>
       </div>
 

@@ -235,6 +235,32 @@ export const executiveBrief = {
   softwareDepartmentMandate: {
     headline: "Why the Software Department Must Have Its Own Mandate",
     coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams once; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive. In practice, this is how Foxconn monetizes the hardest unsolved Day-2 pain points in the AI server market—deployment handoff, service availability, dispatch readiness, brownfield capacity governance, and audit / provenance evidence—instead of giving them away as bundled support. That is the difference between one hardware budget line and 4-5 renewable software budget lines tied to Day-2 accountability.",
+    boardScorecard: [
+      {
+        metric: "Software attachment rate",
+        whyItMatters: "Proves software is being bought as a product line instead of being buried inside hardware discounting.",
+        year1Target: "5% of AI server orders",
+        year3Target: "20% of AI server orders"
+      },
+      {
+        metric: "Factory-to-Operations handoff time",
+        whyItMatters: "Measures whether Foxconn is truly shrinking the gray zone between hardware delivery and production readiness.",
+        year1Target: "<3 days from delivery to software-ready baseline",
+        year3Target: "<2 hours for standard configurations"
+      },
+      {
+        metric: "Remote resolution coverage",
+        whyItMatters: "Shows whether the software department is actually reducing truck rolls, MTTR, and night-shift service cost.",
+        year1Target: "50% of incidents resolved remotely",
+        year3Target: "70% of incidents resolved remotely"
+      },
+      {
+        metric: "Renewable Day-2 revenue coverage",
+        whyItMatters: "Tracks whether hardware POs are expanding into annual software / SLA / governance revenue instead of ending at acceptance.",
+        year1Target: "NT$ 30M recurring software/services revenue",
+        year3Target: "NT$ 350M recurring software/services revenue"
+      }
+    ],
     reasons: [
       {
         point: "Different buyer, different budget",
