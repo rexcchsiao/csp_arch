@@ -168,6 +168,31 @@ const CompetitiveLandscapeView = () => {
                 </div>
               </div>
 
+              <div className="mb-5 p-5 bg-gradient-to-r from-emerald-50 to-lime-50 rounded-2xl border border-emerald-100">
+                <div className="flex items-start gap-3 mb-4">
+                  <Target className="w-5 h-5 text-emerald-600 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-emerald-900">Board-level translation：硬體通常只拿下一次 CapEx，軟體部門才能持續吃到 Day-0 / Day-1 / Day-2 預算</h4>
+                    <p className="text-xs text-emerald-800 mt-1">真正會讓軟體部門被看見的，不是「功能比較多」，而是它把 Foxconn 從一次性交機，往 Platform Engineering、SRE、Facilities、Compliance 與 FinOps 的持續預算線延伸。這代表軟體不是附屬功能，而是把硬體價值放大成多年度營運收入的入口。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+                  {[
+                    { owner: 'Platform Engineering', budget: 'deployment / lifecycle 預算', why: '要有人接住 baseline、版本矩陣與 Day-2 handoff' },
+                    { owner: 'SRE / Operations', budget: 'availability / remote ops 預算', why: '要有人對 uptime、MTTR、夜間故障分流負責' },
+                    { owner: 'Facilities', budget: 'capacity / power-cooling 預算', why: '要有人把 power cap、cooling event 與 workload 治理接起來' },
+                    { owner: 'Compliance / CISO', budget: 'audit / evidence 預算', why: '要有人持續交 provenance、更新證據與稽核包' },
+                    { owner: 'FinOps / BU owner', budget: 'showback / token cost 預算', why: '要有人治理 shared GPU 與 inference spend' },
+                  ].map((item) => (
+                    <div key={item.owner} className="p-4 bg-white rounded-2xl border border-emerald-100">
+                      <p className="text-xs font-black text-emerald-700 mb-2">{item.owner}</p>
+                      <p className="text-xs font-bold text-slate-900 mb-2">{item.budget}</p>
+                      <p className="text-xs text-slate-600">{item.why}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="mb-5 p-5 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100">
                 <div className="flex items-start gap-3 mb-4">
                   <Layers className="w-5 h-5 text-emerald-600 mt-0.5" />
