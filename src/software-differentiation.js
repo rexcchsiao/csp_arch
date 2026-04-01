@@ -1417,6 +1417,14 @@ structuralAdvantages: {
 				source: 'https://www.nutanix.com/solutions/ai'
 			},
 			{
+				label: 'Procurement-Ready Governance',
+				marketSignal: 'NIST SSDF 已明確把 secure software development practices 與 common vocabulary 連到 software purchasers 的 acquisition language；Redfish 則把安全硬體管理標準化，但不替 fleet-level 批准流程、回滾證據與更新責任背書。',
+				buyerQuestion: '這套 AI 基礎設施能不能在採購、資安與法遵 review 時，清楚回答 firmware / image 來源、簽章、批准、回滾與 audit trail 到底由誰負責？',
+				foxconnTranslation: '把軟體部門定位成 Procurement Assurance / Firmware Provenance owner：把來源驗證、版本基線、批准流程、rollback evidence 與 audit-ready 更新紀錄包成正式交付，讓 Foxconn 不只交機，而是直接幫案子通過最後的 supplier-evaluation 關卡。',
+				sourceLabel: 'NIST SSDF + DMTF Redfish',
+				source: 'https://csrc.nist.gov/Projects/ssdf'
+			},
+			{
 				label: 'Governed & Recoverable Data',
 				marketSignal: 'NetApp 官方把 AI 基礎建設直接寫成 unified foundation for the AI factory，並強調 built-in governance、simple secure inferencing，以及 cyber-resilient / recoverable data。',
 				buyerQuestion: '如果模型 artifact、向量資料、registry 或推論服務出事，誰能同時保住資料治理、恢復速度與稽核可信度？',

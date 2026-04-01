@@ -174,6 +174,14 @@ const ExecutiveSummaryView = () => {
       source: nutanixAgenticAISource?.name || netappAISource?.name || 'Nutanix Agentic AI / NetApp AI infrastructure and data management',
       sourceUrl: nutanixAgenticAISource?.url || netappAISource?.url,
     },
+    {
+      criterion: 'Firmware provenance and update evidence are becoming procurement gates',
+      marketSignal: 'NIST SSDF explicitly connects secure software practices to software acquisition language, while Redfish standardizes manageable hardware interfaces but does not answer who owns signed updates, rollback evidence, and fleet-level audit trails.',
+      whyItChangesProcurement: 'This shifts software from “nice-to-have tooling” into a deal-enablement layer: if no one can prove update provenance, approval flow, and rollback discipline, regulated and sovereign AI deals can stall late in security or procurement review.',
+      foxconnMove: 'Position Foxconn software as the owner of firmware provenance and attested update governance: signed content, approval workflow, rollback evidence, and audit-ready fleet history tied directly to delivered AI servers.',
+      source: nistSsdfSource?.name || redfishSource?.name || 'NIST SSDF / DMTF Redfish',
+      sourceUrl: nistSsdfSource?.url || redfishSource?.url,
+    },
   ];
   const marketWhitespace = [
     {
@@ -381,6 +389,7 @@ const ExecutiveSummaryView = () => {
     'Capacity Deferral',
     'Resilience & Recoverability',
     'AI Operating Model',
+    'Procurement-Ready Governance',
   ].map((label) => (softwareDifferentiation.marketBuyingLanguage?.vectors || []).find((item) => item.label === label)).filter(Boolean);
   const budgetOwnerSignals = [
     {
@@ -428,6 +437,12 @@ const ExecutiveSummaryView = () => {
       owner: '治理與證據責任鏈',
       meaning: '把 air-gap content lifecycle、model provenance、權限治理、更新紀錄與 audit evidence 做成正式交付物，讓受監管客戶敢簽。',
       budgetLogic: '這讓軟體部門進入 compliance / sovereign AI 預算，而不只是 IT 工具預算。'
+    },
+    {
+      title: 'Procurement-ready',
+      owner: '採購 / 資安 / 法遵關卡責任鏈',
+      meaning: '把 firmware provenance、attested update governance、來源簽章、版本基線、批准流程與 rollback evidence 做成正式 supplier-evaluation 證據，讓案子不會在最後的採購審查被卡住。',
+      budgetLogic: '這讓軟體部門不只影響 Day-2 營運，還直接影響案子能不能過採購、CISO 與法遵 review，強化獨立 P&L 的正當性。'
     },
     {
       title: 'Dispatch-ready',
@@ -538,11 +553,11 @@ const ExecutiveSummaryView = () => {
       {/* Three signatures the software department can uniquely own */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
         <h3 className="text-lg font-black text-slate-900 mb-3 flex items-center gap-2">
-          <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 4 個可簽收的結果
+          <Award className="w-5 h-5 text-indigo-600" /> 軟體部門最該被記住的，不是功能清單，而是 5 個可簽收的結果
         </h3>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-          這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、dispatch-ready、warranty-ready 這四條責任鏈的 owner。</span>
-          只要管理層記住這四個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理、night-shift serviceability 與 serial-level service accountability 的核心價值。
+          這段是把整份簡報再往董事會語言收斂一層：<span className="font-semibold text-slate-900">真正值得投資的，不是 another dashboard，而是 Foxconn 軟體部門能不能成為 service-ready、audit-ready、procurement-ready、dispatch-ready、warranty-ready 這五條責任鏈的 owner。</span>
+          只要管理層記住這五個簽收時刻，就比較不會把軟體誤解成附屬功能，而會看見它其實在承接交機、治理、supplier-evaluation、night-shift serviceability 與 serial-level service accountability 的核心價值。
         </p>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           {softwareSignatureMoments.map((item) => (
@@ -576,7 +591,7 @@ const ExecutiveSummaryView = () => {
           </div>
         </div>
         <div className="mt-4 rounded-xl border border-indigo-100 bg-white p-4">
-          <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任、夜班維運責任，甚至 warranty / RCA 證據責任一起交給 Foxconn。這四個 ready，才是軟體部門最值錢的地方。</span></p>
+          <p className="text-sm font-semibold text-indigo-900">給管理層的一句話：<span className="text-slate-700">硬體讓客戶完成採購，軟體部門讓客戶敢在交機後把上線責任、治理責任、採購 / 合規關卡、夜班維運責任，甚至 warranty / RCA 證據責任一起交給 Foxconn。這五個 ready，才是軟體部門最值錢的地方。</span></p>
         </div>
       </div>
 
