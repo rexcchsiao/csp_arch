@@ -40,10 +40,12 @@ const App = () => {
     competitiveSources.nvidia[1],
     competitiveSources.hpe[1],
     competitiveSources.dell[0],
+    competitiveSources.dell.find((item) => item.name === 'Dell AI Solutions – Cyber Resilience for AI'),
     competitiveSources.schneider[0],
     competitiveSources.vertiv[0],
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'VAST AI OS'),
     competitiveSources.enterprisePlatforms.find((item) => item.name === 'Nutanix Agentic AI'),
+    competitiveSources.enterprisePlatforms.find((item) => item.name === 'Red Hat OpenShift AI'),
     competitiveSources.regulations.find((item) => item.name === 'EU AI Act (official EU text / implementation portal)'),
     competitiveSources.regulations.find((item) => item.name === 'NIST AI Risk Management Framework'),
     competitiveSources.standards.find((item) => item.name === 'OpenCost'),
@@ -257,8 +259,8 @@ const App = () => {
               </div>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
-                <h3 className="text-lg font-black text-slate-900 mb-3">董事會真正該批准的，是 4 條可被驗收、也可被續約的責任鏈</h3>
-                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700 mb-4">
+                <h3 className="text-lg font-black text-slate-900 mb-3">董事會真正該批准的，是 5 條可被驗收、也可被續約的責任鏈</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-4 text-sm text-slate-700 mb-4">
                   <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">1. 交機到可營運的 handoff</p>
                     <p className="leading-relaxed">把 factory pre-load、site acceptance、baseline 建立、observability 與 Day-2 runbook 接成同一條責任鏈，賣的是更快上線與更少推責，不只是安裝支援。</p>
@@ -274,6 +276,10 @@ const App = () => {
                   <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">4. 共享算力治理與成本 guardrails</p>
                     <p className="leading-relaxed">把 quota、showback / chargeback、priority policy 與 GPU 預算護欄做成正式治理層，讓共享 AI 叢集不只是能跑，而是能被 FinOps、平台團隊與 BU owner 接受與續買。</p>
+                  </div>
+                  <div className="rounded-xl border border-blue-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">5. warranty-ready 的 factory truth 證據鏈</p>
+                    <p className="leading-relaxed">把 burn-in、serial-level 韌體基線、site acceptance、換件紀錄與 incident timeline 接成可交付的 service ledger，讓客戶買到的是更快 RCA / RMA、較少錯派工，以及 Foxconn 最難被複製的 Day-2 serviceability 能力。</p>
                   </div>
                 </div>
                 <div className="rounded-xl border border-blue-100 bg-white/90 p-4 mb-4">

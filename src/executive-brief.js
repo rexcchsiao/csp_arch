@@ -226,7 +226,7 @@ export const executiveBrief = {
   // Why this must be a software department mandate—not a hardware support add-on
   softwareDepartmentMandate: {
     headline: "Why the Software Department Must Have Its Own Mandate",
-    coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive. That is the difference between one hardware budget line and 4-5 renewable software budget lines tied to Day-2 accountability.",
+    coreInsight: "The board should not treat software as an attachment to server delivery. Hardware gets approved by procurement and infrastructure teams once; the software department is what gets Foxconn into Platform Engineering, SRE, Operations, FinOps, Compliance, and Facilities budgets after the servers arrive. In practice, this is how Foxconn monetizes the hardest unsolved Day-2 pain points in the AI server market—deployment handoff, service availability, dispatch readiness, brownfield capacity governance, and audit / provenance evidence—instead of giving them away as bundled support. That is the difference between one hardware budget line and 4-5 renewable software budget lines tied to Day-2 accountability.",
     reasons: [
       {
         point: "Different buyer, different budget",
@@ -243,9 +243,13 @@ export const executiveBrief = {
       {
         point: "Different renewal logic",
         explanation: "Customers do not renew because a dashboard still exists. They renew because someone keeps owning deployment assurance, service availability, capacity events, dispatch readiness, update governance, and audit evidence. Those are software-department responsibilities, and they are exactly what turns one-time hardware deals into 3-5 year revenue streams."
+      },
+      {
+        point: "Different proof asset",
+        explanation: "Foxconn has one software wedge most competitors cannot match: turning factory truth into service evidence. Burn-in results, serial-level firmware baselines, site-acceptance telemetry, incident timelines, and warranty / RMA-ready evidence are uniquely valuable when they are productized into Day-2 serviceability workflows. If that evidence chain is left inside manufacturing or support silos, Foxconn loses one of the strongest reasons customers would pay the software department after delivery."
       }
     ],
-    boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware. The software department is the mechanism that converts one server sale into multiple renewable budget relationships."
+    boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware. The software department is the mechanism that converts one server sale into multiple renewable budget relationships by owning the attach services customers struggle to justify internally: commissioning and handoff assurance, service availability reviews, remote evidence / dispatch readiness, brownfield capacity governance, factory-truth / warranty-evidence workflows, and compliance-ready audit evidence."
   },
   
   // Execution Roadmap - Key Milestones
