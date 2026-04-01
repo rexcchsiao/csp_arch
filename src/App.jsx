@@ -548,6 +548,23 @@ const App = () => {
                     <p className="text-slate-200 leading-relaxed">baseline refresh、availability review、air-gap content lifecycle、evidence support 這些本來最適合做成年約；若部門不獨立，就容易全部退化成一次性交付成本。</p>
                   </div>
                 </div>
+                <div className="rounded-xl border border-amber-400/30 bg-amber-400/10 p-4 mt-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-200 mb-3">What this team is NOT</p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-200">
+                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                      <p className="font-black text-white mb-1">不是 another all-purpose AI platform team</p>
+                      <p className="leading-relaxed">不需要跟 hyperscaler 或純軟體平台商比誰 portal 更大、feature 更多；那樣最容易變成高成本、低勝率、也難報價的消耗戰。</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                      <p className="font-black text-white mb-1">不是硬體交機後的附送支援</p>
+                      <p className="leading-relaxed">如果軟體部門只被定位成售後支援，Remote Ops、governance、evidence pack 與 cost guardrail 都很容易被稀釋成免費服務，價值看不到也留不住。</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                      <p className="font-black text-white mb-1">而是 3 條可被續約的責任鏈 owner</p>
+                      <p className="leading-relaxed">最該被批准的是 commissioning / handoff、lifecycle / incident governance、以及 shared-cluster cost / policy guardrails。這三條責任鏈最容易形成 attach rate、年約與管理層可見 KPI。</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="rounded-xl border border-cyan-400/30 bg-cyan-400/10 p-4 mt-4">
                   <p className="text-sm font-semibold text-cyan-100">董事會一句話版本：<span className="text-slate-200">獨立軟體部門不是為了多一個組織圖方塊，而是為了守住報價權、KPI 可見性、跨部門預算入口與年約續費邏輯；少了這層，很多 Day-2 價值最後都只會被算成硬體附送支援。</span></p>
                 </div>
