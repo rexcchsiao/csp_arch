@@ -1,7 +1,7 @@
 // Board-Ready Executive Brief - 1-Page Summary for C-Level Decision Makers
 // Purpose: Provide a single, printable document that captures the entire software investment case
 // Usage: Board meetings, executive briefings, investor conversations
-// Last updated: 2026-03-21 by CoCo
+// Last updated: 2026-04-02 by CoCo
 
 export const executiveBrief = {
   title: "Software Differentiation Strategy: From Hardware Commodity to AI Solutions Partner",
@@ -15,15 +15,16 @@ export const executiveBrief = {
     solution: "Foxconn software stack transforms idle GPUs into 85%+ utilization, 2-hour deployment, and 70% remote fix rate. Same hardware, 2x business output.",
     ask: "Invest NT$ 65M/year for 50-80 person software team.",
     return: "Year 3: NT$ 750M software revenue, 20-25% gross margin (vs. 10-15% hardware-only). ROI: 11.5x. Payback: 18-24 months.",
+    budgetExpansion: "A software department is not just another feature team. It is how one hardware PO turns into 4-5 renewable budget lines across Platform Engineering, Operations, Facilities, FinOps, and Compliance after delivery.",
     riskOfInaction: "By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity."
   },
   
   // The Core Argument in One Sentence
-  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only. This is the difference between strategic partner and commodity supplier.",
+  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only, plus 4-5 renewable Day-2 budget lines beyond the original hardware deal. This is the difference between strategic partner and commodity supplier.",
   // The "Killing Argument" - One-Liner for Board Members to Repeat
   killingArgument: {
     headline: "The One-Liner Every Board Member Should Remember",
-    statement: "Hardware gets us invited to the bid. Software wins the deal—and determines whether we're a strategic partner (20-25% margin) or a commodity supplier (5-8% margin).",
+    statement: "Hardware gets us invited to the bid. Software wins the deal, captures the Day-2 budget, and determines whether we're a strategic partner (20-25% margin) or a commodity supplier (5-8% margin).",
     whyItMatters: "By 2028, customers won't ask 'Does Foxconn have software?' They'll ask 'Why doesn't Foxconn's software do X?' The question is no longer IF software matters, but HOW FAST we can ship it.",
     historicalPrecedent: "Quanta's AI server business (2024-2025): No software differentiation → 8-12% hardware margins → lost strategic accounts to NVIDIA DGX Cloud and hyperscaler one-stop solutions.",
     foxconnAdvantage: "Only OEM/ODM with full-stack L9-L12 capability, neutral architecture (NVIDIA+AMD), and brownfield integration. Competitors can copy features, but cannot replicate hardware+software synergy without destroying their existing business models.",
@@ -250,6 +251,40 @@ export const executiveBrief = {
       }
     ],
     boardMessage: "If Foxconn wants software-level margin, software-level renewal, and software-level strategic control, it must run software as a product line with its own pricing, KPIs, and accountability—not as a free add-on to move hardware. The software department is the mechanism that converts one server sale into multiple renewable budget relationships by owning the attach services customers struggle to justify internally: commissioning and handoff assurance, service availability reviews, remote evidence / dispatch readiness, brownfield capacity governance, factory-truth / warranty-evidence workflows, and compliance-ready audit evidence."
+  },
+  
+  // Budget expansion logic - the clearest board-level proof that software deserves its own department
+  renewableBudgetMap: {
+    headline: "One Hardware Deal, Five Renewable Budget Lines",
+    coreInsight: "The strongest reason to give software its own mandate is not feature count; it is budget multiplication. Hardware typically wins one CapEx line. Software turns the same deployment into 5 different Day-2 budget owners who renew for different reasons.",
+    budgetLines: [
+      {
+        budgetOwner: "PMO / Infrastructure Delivery",
+        whatTheyBuy: "Commissioning, handoff assurance, site acceptance baseline, and faster time-to-production",
+        whyItRenews: "Every site expansion, new rack, and golden-image change reopens the same handoff risk"
+      },
+      {
+        budgetOwner: "Platform Engineering / SRE",
+        whatTheyBuy: "Lifecycle control, rollback discipline, service availability review, and quota governance",
+        whyItRenews: "Upgrades, maintenance windows, and shared-cluster policy are recurring operational problems, not one-time setup work"
+      },
+      {
+        budgetOwner: "Operations / Field Service",
+        whatTheyBuy: "Remote diagnostics, dispatch readiness, RCA-ready evidence, and truck-roll reduction",
+        whyItRenews: "Every incident, new hardware generation, and spare-parts policy update creates fresh serviceability work"
+      },
+      {
+        budgetOwner: "Facilities / Capacity Planning",
+        whatTheyBuy: "Power-cooling governance, brownfield capacity assurance, and AI retrofit readiness",
+        whyItRenews: "Rack density, seasonal load, and power-cap constraints keep changing long after the hardware PO is closed"
+      },
+      {
+        budgetOwner: "Compliance / CISO / AI Governance",
+        whatTheyBuy: "Firmware provenance, audit evidence, sovereign-AI controls, and model / image lifecycle governance",
+        whyItRenews: "Audits, version changes, and regulatory requirements create an ongoing evidence-refresh obligation"
+      }
+    ],
+    boardMessage: "This is the board-level proof that software is not an accessory. If Foxconn keeps software buried under hardware, these 5 renewable budget lines either go unclaimed or get given away as free support."
   },
   
   // Execution Roadmap - Key Milestones
