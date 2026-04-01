@@ -1743,6 +1743,15 @@ structuralAdvantages: {
 					boardWhyItMatters: '軟體部門因此不只賣 infra availability，還能賣 shared capacity economics。',
 					sourceLabel: 'Red Hat OpenShift AI + Nutanix Agentic AI',
 					source: 'https://www.redhat.com/en/products/ai/openshift-ai'
+				},
+				{
+					buyer: 'Quality / Warranty / Field Service',
+					whatTheyApprove: '交機後第一個月的故障責任、保固判定、RMA 證據與跨站點 dispatch readiness 是否有人持續維護',
+					trigger: 'Dell 與 HPE 都已把 lifecycle support、validated delivery 與 continuous service availability 拉進 AI factory / private AI 敘事，代表客戶不只在買「裝得起來」，而是在買誰能對交機後的責任鏈與 serviceability 結果背書。',
+					softwareHook: 'Factory Truth Evidence Pack、Factory Asset Memory / Warranty Evidence Ledger、Remote Diagnostics & Dispatch Readiness',
+					boardWhyItMatters: '這讓軟體部門不只吃 Platform / SRE 預算，還能把原本散在品質、保固與現場維修的責任，收斂成可續約、可問責的 serviceability 與 warranty evidence 產品線。',
+					sourceLabel: 'Dell AI Factory + HPE Private Cloud AI',
+					source: 'https://www.dell.com/en-us/ai-factory'
 				}
 			],
 			boardMessage: '董事會該記住的一句話：硬體部門通常只打進採購桌；軟體部門一旦成立，就能同時打進營運、治理、設施、財務與平台團隊的預算桌，這就是 attach rate 與續約率會被放大的根本原因。'
