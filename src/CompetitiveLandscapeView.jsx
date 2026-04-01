@@ -159,6 +159,50 @@ const CompetitiveLandscapeView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-violet-200 shadow-sm">
+              <div className="flex items-start gap-3 mb-4">
+                <Target className="w-6 h-6 text-violet-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-black text-violet-900">市場現在真正會核准的，不是功能清單，而是可問責的營運結果</h3>
+                  <p className="text-sm text-violet-800 mt-1 font-medium">把採購語言講清楚，軟體部門就不再像附屬功能，而像是替 Foxconn 打開更多預算線的 owner。</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
+                {softwareDifferentiation.marketBuyingLanguage.vectors.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="p-4 bg-violet-50 rounded-2xl border border-violet-100">
+                    <p className="text-xs font-bold text-violet-600 uppercase tracking-wide mb-2">{item.label}</p>
+                    <p className="text-xs text-slate-700 mb-2"><span className="font-bold text-slate-500">客戶在問：</span>{item.buyerQuestion}</p>
+                    <p className="text-xs text-slate-700"><span className="font-bold text-violet-700">Foxconn 該怎麼回答：</span>{item.foxconnTranslation}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="p-5 bg-gradient-to-r from-violet-50 to-indigo-50 rounded-2xl border border-violet-100">
+                <div className="flex items-start gap-3 mb-3">
+                  <TrendingUp className="w-5 h-5 text-violet-600 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-black text-violet-900">軟體部門的收入飛輪要怎麼開始轉</h4>
+                    <p className="text-xs text-violet-800 mt-1">先從低阻力、可見 ROI 的服務切入，再逐步把客戶帶進年度 SLA 與治理續約。</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+                  {softwareDifferentiation.serviceLadder.stages.map((stage, idx) => (
+                    <div key={idx} className="p-4 bg-white rounded-2xl border border-violet-100">
+                      <p className="text-xs font-black text-violet-700 mb-2">{stage.stage}</p>
+                      <p className="text-xs font-semibold text-slate-900 mb-2">{stage.focus}</p>
+                      <p className="text-xs text-slate-700 mb-2">{stage.revenueLogic}</p>
+                      <p className="text-[11px] text-slate-600">{stage.offerings.slice(0, 2).join('、')}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4 p-4 bg-white rounded-xl border border-violet-100">
+                <p className="text-sm font-semibold text-violet-900">一句話總結：先用 deployment / baseline / upgrade 這種客戶已經會買單的小服務進場，再把 Remote Ops、Lifecycle、Governance 做成年約，軟體部門就不只是支援團隊，而是 ARR 的引擎。</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm">
               <div className="flex items-start gap-3 mb-4">
                 <TrendingUp className="w-6 h-6 text-emerald-600 mt-1" />
@@ -256,6 +300,49 @@ const CompetitiveLandscapeView = () => {
 
               <div className="mt-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
                 <p className="text-sm font-semibold text-emerald-900">管理層該記住的一句話：<span className="text-slate-700">真正值得投資的，不是 another dashboard，而是讓軟體部門把 deployment、lifecycle、remote ops 與治理風險收斂成可被報價、可被續約、也可被董事會追蹤的收入責任。</span></p>
+              </div>
+
+              <div className="mt-6 p-6 bg-white rounded-2xl border border-amber-200 shadow-sm">
+                <div className="flex items-start gap-3 mb-4">
+                  <HelpCircle className="w-6 h-6 text-amber-600 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-black text-amber-900">為什麼大型 CSP / Hyperscaler 也會為軟體部門買單？</h3>
+                    <p className="text-sm text-amber-800 mt-1 font-medium">因為他們通常不是缺 control plane，而是不想自己長期扛 handoff、升級、brownfield 設施協調與夜間故障 serviceability 這幾種高風險責任。</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
+                  {softwareDifferentiation.hyperscalerBuyTriggers.patterns.map((item, idx) => (
+                    <div key={idx} className="p-4 bg-amber-50 rounded-2xl border border-amber-100">
+                      <p className="text-xs font-black text-amber-700 mb-2">{item.title}</p>
+                      <p className="text-xs text-slate-700 mb-2"><span className="font-bold text-slate-500">客戶不想自己扛：</span>{item.whatHyperscalersAvoid}</p>
+                      <p className="text-xs text-slate-700"><span className="font-bold text-amber-700">Foxconn 可承接：</span>{item.foxconnValue}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-5 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-100">
+                  <h4 className="text-sm font-black text-amber-900 mb-3">最容易被聽懂、也最容易被採購的 serviceability 論點</h4>
+                  <p className="text-xs text-slate-700 mb-3"><span className="font-bold text-slate-500">市場缺口：</span>{softwareDifferentiation.marketWhiteSpace.gaps.find((gap) => gap.title.includes('Remote triage / truck-roll avoidance'))?.whyStillOpen}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div className="p-4 bg-white rounded-2xl border border-amber-100">
+                      <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-2">客戶真正的 OPEX 痛點</p>
+                      <p className="text-xs text-slate-700">半夜出事時，最貴的往往不是看不到告警，而是要先派人到現場才能確認是否真的要換件、該帶什麼料、會不會影響 SLA。</p>
+                    </div>
+                    <div className="p-4 bg-white rounded-2xl border border-amber-100">
+                      <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-2">軟體部門可賣的結果</p>
+                      <p className="text-xs text-slate-700">先遠端收斂 evidence、縮小 probable cause、同步備品與維修窗口，把 truck roll 從 default action 變成最後手段。</p>
+                    </div>
+                    <div className="p-4 bg-white rounded-2xl border border-amber-100">
+                      <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-2">為什麼這比 dashboard 值錢</p>
+                      <p className="text-xs text-slate-700">因為它直接對應更少誤派工、更高 first-time-fix、更短 MTTR，這些都是 COO、Service Delivery 與大型 CSP 願意正式編列預算的語言。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-100">
+                  <p className="text-sm font-semibold text-amber-900">一句話翻譯給老闆：<span className="text-slate-700">Hyperscaler 不是不會寫平台，而是不想自己長期對 handoff、change window、facility event 與 night-shift dispatch 背責；軟體部門的價值，就是把這些責任收斂成可定價、可續約的服務。</span></p>
+                </div>
               </div>
             </div>
 
@@ -582,9 +669,14 @@ const CompetitiveLandscapeView = () => {
                   <p className="text-xs text-slate-700">一旦提案能回答 audit、recoverability、AI BOM、sovereign operation 與 attested update governance，Foxconn 就能切進原本硬體案較難碰到的治理與資安預算。</p>
                 </div>
                 <div className="p-4 bg-white rounded-2xl border border-rose-100">
+                  <p className="text-xs font-bold text-rose-600 uppercase tracking-wide mb-2">再往前一步的續約線</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">AI quality drift / continuous assurance 會把軟體部門帶進業務 KPI 預算</p>
+                  <p className="text-xs text-slate-700">真正成熟的企業 AI 會開始追問：模型上線後準確率誰盯？品質漂移誰先發現？何時該 retrain、何時該 rollback？這讓軟體部門不只賣治理與資安，也能賣持續品質保證與 AI 營運責任。</p>
+                </div>
+                <div className="p-4 bg-white rounded-2xl border border-rose-100">
                   <p className="text-xs font-bold text-rose-600 uppercase tracking-wide mb-2">對董事會最有感的差異</p>
                   <p className="text-sm font-black text-slate-900 mb-2">軟體部門從維運工具升級成 trustworthy AI operations owner</p>
-                  <p className="text-xs text-slate-700">這會把軟體的角色從「幫硬體補功能」升級成「替 Foxconn 承接 AI 治理、證據鏈與續約責任」，更容易被視為高毛利的戰略資產。</p>
+                  <p className="text-xs text-slate-700">這會把軟體的角色從「幫硬體補功能」升級成「替 Foxconn 承接 AI 治理、證據鏈、品質漂移與續約責任」，更容易被視為高毛利的戰略資產。</p>
                 </div>
               </div>
 
