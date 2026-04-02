@@ -257,6 +257,13 @@ const App = () => {
                     大型 CSP 真正在意的，常不是有沒有再多一張監控畫面，而是半夜出事時能不能先遠端收集證據、縮小 probable cause、判斷該不該派人與該帶哪些備品。只要 Foxconn 軟體部門接住這條 evidence-to-dispatch 責任鏈，價值就會從 break/fix 支援升級成更少 truck roll、更高 first-time-fix rate、也更容易續約的 Day-2 serviceability 服務。
                   </p>
                 </div>
+                <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-indigo-700 mb-2">Board takeaway 09</p>
+                  <p className="text-sm font-black text-slate-900 mb-2">軟體也在成交前創造價值：它縮短的是 buying committee 內耗</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    當 Platform / SRE、Facilities、FinOps、Compliance 同時參與 AI 採購時，真正拖慢案子的常不是規格，而是沒有人把 lifecycle 風險、power / cooling 約束、showback 規則與 audit evidence 包成同一份共識材料。軟體部門若能把這份 buying committee evidence pack 產品化，就不只是在交機後創造價值，而是在成交前先替 Foxconn 提高過件率、attach rate 與報價正當性。
+                  </p>
+                </div>
               </div>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">What the board is really approving</p>
