@@ -303,6 +303,27 @@ const App = () => {
                 <div className="rounded-xl border border-blue-100 bg-white p-4">
                   <p className="text-sm font-semibold text-blue-900">董事會一句話版本：<span className="text-slate-700">如果 Foxconn 軟體部門沒有被授權去承接 handoff、incident、lifecycle 與 shared-cluster governance 這 4 條責任鏈，很多價值就只會停在 demo；一旦承接起來，硬體才有機會長成可被續約、可被問責、也更難被替換的服務。</span></p>
                 </div>
+                <div className="rounded-xl border border-blue-100 bg-white/90 p-4 mt-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-700 mb-3">A cleaner board test: what must be owned as software, not buried in project delivery</p>
+                  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-700">
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">Factory baseline memory</p>
+                      <p className="leading-relaxed">如果 burn-in、golden image、serial-level 韌體基線、site acceptance 與 handoff 證據要在 6-12 個月後的 RCA / RMA / 擴容案仍能被調用，這就不是交機文件，而是要被軟體部門長期維護的 operating asset。</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">Remote evidence & dispatch workflow</p>
+                      <p className="leading-relaxed">如果半夜故障時需要同一套 evidence pack、dispatch readiness、rollback 與 maintenance-window 判斷持續演進，這就不是售後支援熱心幫忙，而是軟體部門該擁有的可續約 service loop。</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">Upgrade / governance memory</p>
+                      <p className="leading-relaxed">如果版本矩陣、air-gap 內容、簽章 / 批准紀錄、回滾證據與 audit export 要成為下次續約與 supplier evaluation 的正式資產，它就不能散在 PM / FAE / field service，而必須是軟體部門的 mandate。</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-4">
+                      <p className="font-black text-slate-900 mb-1">Buying-committee evidence memory</p>
+                      <p className="leading-relaxed">如果同一案要同時回答 Platform / SRE 的 SLA 與升級風險、Facilities 的 power / cooling 約束、FinOps 的 quota / budget guardrail、以及 Compliance 的 provenance / audit export，這份共識包就不該是售前臨時拼湊，而該是軟體部門持續維護的 procurement asset。</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Lifecycle view the board can approve</p>
