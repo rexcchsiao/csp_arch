@@ -325,6 +325,35 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5 mb-6">
+                <p className="text-xs font-black uppercase tracking-widest text-cyan-700 mb-2">Where software gets paid first</p>
+                <h3 className="text-lg font-black text-slate-900 mb-3">更容易讓董事會買單的版本：軟體部門不是等交機後才創造價值，而是從 Day-0 就開始把風險翻成收入</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                  很多管理層會直覺把軟體想成「交機後再加上去的管理工具」，但市場已經不是這樣付錢。
+                  真正能被報價、也最容易續約的，是 <span className="font-semibold text-slate-900">commissioning、night-shift serviceability、以及治理證據</span> 這三條責任鏈。
+                  這段如果講清楚，老闆會更容易理解：軟體部門不是成本中心，而是把單次 server PO 往前延伸到交付、往後延伸到年約的 revenue owner。
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-slate-700 mb-4">
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">1. Day-0｜Commissioning revenue</p>
+                    <p className="leading-relaxed mb-2">客戶在機櫃上電前，就已經在為 factory pre-load、burn-in、site acceptance、baseline 建立與 handoff readiness 付錢。</p>
+                    <p className="leading-relaxed"><span className="font-semibold text-cyan-700">軟體部門的角色：</span>把這段包成 Commissioning / Handoff Assurance，讓 Foxconn 從第一天就不是只交設備，而是交可驗收、可接手的 operating state。</p>
+                  </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">2. Day-2｜Night-shift serviceability revenue</p>
+                    <p className="leading-relaxed mb-2">大型 CSP 真正願意續約的，常不是多一張監控畫面，而是半夜出事時誰能先遠端收證據、縮小 probable cause、再決定是否派工與該帶哪些備品。</p>
+                    <p className="leading-relaxed"><span className="font-semibold text-cyan-700">軟體部門的角色：</span>把 Remote Evidence Pack、dispatch readiness、rollback 與 RCA timeline 做成正式 SLA 服務，直接對 MTTR、truck-roll reduction 與 first-time-fix rate 負責。</p>
+                  </div>
+                  <div className="rounded-xl border border-cyan-100 bg-white/90 p-4">
+                    <p className="font-black text-slate-900 mb-1">3. Day-365｜Governance renewal revenue</p>
+                    <p className="leading-relaxed mb-2">只要 shared GPU、air-gap 更新、model / firmware provenance、audit evidence 與 cost guardrail 還在，客戶就會持續需要同一個 owner 來維護治理秩序。</p>
+                    <p className="leading-relaxed"><span className="font-semibold text-cyan-700">軟體部門的角色：</span>把 baseline refresh、attested updates、quota / showback 與 evidence export 做成季度 review 與年約收入，直接打進 Platform、FinOps、Compliance 與 Facilities 預算。</p>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-cyan-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-cyan-900">董事會該記住的一句話：<span className="text-slate-700">軟體部門最值錢的地方，不是交機後補一層 UI，而是從 commissioning、night-shift serviceability 到 governance renewal，持續把客戶原本得自己扛的風險，翻成 Foxconn 可報價、可驗收、也可續約的收入責任鏈。</span></p>
+                </div>
+              </div>
               <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 mb-6">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Lifecycle view the board can approve</p>
                 <h3 className="text-lg font-black text-slate-900 mb-3">用 4 個階段看軟體部門：它不是做平台而已，而是在整個客戶生命週期持續接住風險</h3>
