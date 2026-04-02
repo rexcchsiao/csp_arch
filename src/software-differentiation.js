@@ -1555,6 +1555,12 @@ structuralAdvantages: {
 					revenueLogic: '治理健檢專案費 + 年度 evidence refresh / audit support 續約費'
 				},
 				{
+					name: 'Buying Committee Evidence Pack',
+					gap: '很多供應商能回答單一技術窗口的問題，卻沒有把 Platform / SRE 的 lifecycle 風險、Facilities 的 capacity 風險、FinOps 的 showback / budget guardrail，以及 Compliance 的 provenance / audit evidence 包成同一份 board-ready / procurement-ready 共識包。',
+					whyItWins: '這直接把軟體部門從功能供應者升級成「幫客戶降低採購摩擦、提高過件率」的 owner，也更容易讓老闆看懂軟體不是成本，而是加速成交與續約的部門。',
+					revenueLogic: '售前/導入顧問專案費 + 年度 evidence refresh / QBR / procurement support 續約費'
+				},
+				{
 					name: 'Firmware Provenance & Attested Update Governance',
 					gap: '很多 AI 伺服器方案能把模型與叢集裝起來，卻沒有把 BIOS / BMC / 驅動 / 容器映像的來源、簽章、版本基線、批准流程、回滾與 fleet-level audit trail 接成單一責任鏈。',
 					whyItWins: '這能把原本容易被視為硬體附帶責任的更新風險，翻成 CIO / CISO / Compliance 願意核准的軟體治理服務；也讓 Foxconn 更像長期營運風險 owner，而不是只在交機時出現。',
@@ -1703,6 +1709,13 @@ structuralAdvantages: {
 					whyNow: '受監管 AI 專案開始被要求說清楚模型來源、離線鏡像、更新紀錄、操作日誌與技術文件；若沒有 evidence owner，專案常在採購或稽核流程卡住',
 					renewalDriver: '模型版本、離線內容、權限與稽核格式會隨法規與內控要求持續更新，天然適合做成年度 evidence refresh / audit support',
 					boardOutcome: '把「AI 能 demo 但過不了稽核」的風險，轉成可被採購、可續約的治理服務收入'
+				},
+				{
+					service: 'Buying Committee Evidence Pack',
+					budgetOwner: 'CIO Office / PMO / Sales Engineering / Procurement',
+					whyNow: 'AI 基礎設施案子愈來愈不是單一技術窗口拍板；Platform / SRE、Facilities、FinOps、Compliance 與採購委員會都會各自追問不同風險。若沒有同一份 cross-functional evidence pack，方案很容易卡在最後一哩。',
+					renewalDriver: '每次新 site、擴容、季度業務回顧、供應商評估與重大升級，都需要重新整理 lifecycle / SLA、capacity、cost governance 與 audit evidence，天然適合做成 evidence refresh / QBR / procurement support 年約。',
+					boardOutcome: '把軟體部門從「做工具的人」升級成「降低 buying committee 摩擦、加速過件與續約」的 owner，直接放大 attach rate 與成交勝率'
 				},
 				{
 					service: 'Tenant Governance & GPU Service Guardrails',
@@ -1895,6 +1908,13 @@ structuralAdvantages: {
 				timeToMarket: '2-6 週',
 			},
 			{
+				name: 'Buying Committee Evidence Pack 健檢包',
+				why: '直接把 Platform / SRE 的 lifecycle / SLA 證據、Facilities 的 power / capacity 風險摘要、FinOps 的 quota / showback / budget guardrail，以及 Compliance 的 provenance / audit 匯出整理成同一份 board-ready / procurement-ready 共識包；很適合用既有 baseline、evidence template 與季度 review 內容快速包成顧問式服務',
+				revenue: 'NT$ 250K-850K/案 + 年度 evidence refresh / QBR / procurement support 續約費',
+				margin: '70%+',
+				timeToMarket: '2-6 週',
+			},
+			{
 				name: 'Firmware Provenance / Attested Update Governance 健檢包',
 				why: '把 BIOS / BMC / 驅動 / 容器映像更新鏈做成可交付治理：先盤點來源、簽章、版本基線、批准流程、回滾與稽核證據，再用既有 Redfish / 韌體維運資產快速包成顧問式服務，直接回應主權 AI 與高敏感客戶對供應鏈風險的疑慮',
 				revenue: 'NT$ 250K-750K/案 + 年度 attestation review / evidence refresh 續約費',
@@ -2000,6 +2020,14 @@ structuralAdvantages: {
 				margin: '65-75%',
 				differentiation: '不是泛用備份，而是把 AI 特有的 artifact、向量資料、模型版本與服務信任恢復做成標準服務；直接對應 Dell 已公開強調的 Cyber Resilience for AI 採購語言',
 				targetCustomer: '大型 CSP、金融、製造、政府與任何將 AI 服務視為關鍵營運系統的客戶'
+			},
+			{
+				name: 'Buying Committee Evidence Pack',
+				description: '把 Platform / SRE 看的 lifecycle / SLA 證據、Facilities 看的 rack power / capacity 風險、FinOps 看的 quota / showback / budget guardrail、以及 Compliance 看的 provenance / audit 匯出，整理成同一份 board-ready / procurement-ready 共識包，讓 AI 基礎設施提案不再卡在跨部門各說各話。',
+				pricing: 'NT$ 300K-1.1M/案 + 年度 evidence refresh / QBR / procurement support 續約費',
+				margin: '70-80%',
+				differentiation: '不是再做一套 portal，而是把 Foxconn 已有的 deployment、lifecycle、capacity、cost governance 與 audit evidence，翻成 buying committee 都看得懂的共同決策材料；這會直接放大 attach rate、縮短決策週期，也更能凸顯軟體部門在成交前就能創造價值。',
+				targetCustomer: '大型 CSP、金融與受監管產業、大型企業 AI 平台案、需要經過採購委員會 / PMO / CIO review 的專案'
 			},
 			{
 				name: 'Tenant Governance & GPU Service Guardrails',
