@@ -574,6 +574,74 @@ const SoftwareDifferentiationView = () => {
               </div>
             </div>
 
+            <div className="p-6 bg-white rounded-2xl border border-fuchsia-200 shadow-sm">
+              <h3 className="text-xl font-black text-fuchsia-900 mb-2">最值得先講清楚的 3 條高毛利年約切口</h3>
+              <p className="text-sm text-slate-700 mb-4">如果管理層只記得一件事，應該是：軟體部門最值錢的，不是再做一個 dashboard，而是接住那些每年都會重來一次、而且每次都有人願意編列預算的 Day-2 風險。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-5 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
+                  <h4 className="text-sm font-black text-fuchsia-800 mb-3">Factory-to-Operations Handoff</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">未被解決的痛：</span>硬體到貨不等於可營運；baseline、驗收、runbook 與 Day-2 owner 常常分散在不同團隊。</p>
+                    <p><span className="font-bold text-emerald-700">為什麼能年約：</span>每次新站點、擴容、golden image refresh 與驗收都會重新打開同一個 handoff 風險。</p>
+                    <p><span className="font-bold text-blue-700">對董事會的意義：</span>把交機後最容易推責的灰色地帶，變成軟體部門可以被定價、也可以被問責的服務。</p>
+                  </div>
+                </div>
+                <div className="p-5 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
+                  <h4 className="text-sm font-black text-fuchsia-800 mb-3">Shared GPU Governance</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">未被解決的痛：</span>共享叢集最常失控的不是 scheduler，而是 quota、priority、showback、chargeback 與 SLA 例外沒有人真正負責。</p>
+                    <p><span className="font-bold text-emerald-700">為什麼能年約：</span>每次新模型、租戶上線、預算週期與共享算力爭用，都會重新打開治理需求。</p>
+                    <p><span className="font-bold text-blue-700">對董事會的意義：</span>讓軟體部門直接切進 Platform、FinOps 與 BU 預算，而不只是替硬體加價。</p>
+                  </div>
+                </div>
+                <div className="p-5 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
+                  <h4 className="text-sm font-black text-fuchsia-800 mb-3">Provenance & Evidence Services</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">未被解決的痛：</span>regulated AI 專案最常卡在 model / firmware provenance、audit export、變更紀錄與恢復證據無法被同一個 owner 持續維護。</p>
+                    <p><span className="font-bold text-emerald-700">為什麼能年約：</span>每次審計、版本更新、模型刷新與事件回顧，都需要重新生成與維護 evidence pack。</p>
+                    <p><span className="font-bold text-blue-700">對董事會的意義：</span>把法遵與風險證據從一次性文件，變成可續約、可被正式編列的軟體服務。</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-fuchsia-50 rounded-xl border border-fuchsia-100">
+                <p className="text-sm font-semibold text-fuchsia-900">一句話總結：真正值得投資的軟體，不是 another tool，而是那些每一季都會重新發生、且客戶不想自己長期扛的營運責任。</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white rounded-2xl border border-cyan-200 shadow-sm">
+              <h3 className="text-xl font-black text-cyan-900 mb-2">董事會最該先畫清楚的 3 條軟體部門邊界</h3>
+              <p className="text-sm text-slate-700 mb-4">如果不先把邊界講清楚，軟體部門最容易被拖回低毛利、低定價權、又難形成續約的工作。真正該守住的，不只是功能範圍，而是哪些責任值得被軟體部門獨立擁有、獨立報價、獨立看 P&amp;L。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100">
+                  <h4 className="text-sm font-black text-cyan-800 mb-3">不要變成 generic platform team</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">常見陷阱：</span>功能 breadth 愈做愈多，卻沒有哪一段 Day-2 風險真正由我們負責。</p>
+                    <p><span className="font-bold text-emerald-700">應該擁有：</span>handoff、lifecycle、capacity、governance、evidence 這些可被問責的營運責任。</p>
+                    <p><span className="font-bold text-blue-700">P&amp;L 意義：</span>這樣賣的是風險轉移與結果，不是 another portal，因此比較容易形成 attach rate 與續約。</p>
+                  </div>
+                </div>
+                <div className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100">
+                  <h4 className="text-sm font-black text-cyan-800 mb-3">不要被硬體成交時當贈品送掉</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">常見陷阱：</span>軟體價值被包進交機支援、驗收或售後協助，最後看起來像成本而不是收入。</p>
+                    <p><span className="font-bold text-emerald-700">應該擁有：</span>baseline refresh、availability review、upgrade governance、evidence refresh 這種每年都會重開的服務項。</p>
+                    <p><span className="font-bold text-blue-700">P&amp;L 意義：</span>只有把 recurring scope 講清楚，管理層才看得到軟體部門不是一次性交付成本，而是 ARR 與高毛利服務來源。</p>
+                  </div>
+                </div>
+                <div className="p-5 bg-cyan-50 rounded-2xl border border-cyan-100">
+                  <h4 className="text-sm font-black text-cyan-800 mb-3">不要沿用硬體 KPI 來管軟體</h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <p><span className="font-bold text-slate-500">常見陷阱：</span>只看出貨、BOM、專案結案，結果軟體團隊自然會優先做 demo feature。</p>
+                    <p><span className="font-bold text-emerald-700">應該擁有：</span>software attachment rate、handoff time、remote resolution coverage、renewal signals 這類 Day-2 指標。</p>
+                    <p><span className="font-bold text-blue-700">P&amp;L 意義：</span>這會把軟體部門從「支援單位」拉成「放大硬體價值與續約收入的產品線」。</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100">
+                <p className="text-sm font-semibold text-cyan-900">一句話總結：軟體部門真正該守住的，不是功能領土，而是那些一旦失手就會直接影響上線速度、SLA、採購過件率與續約收入的責任邊界。</p>
+              </div>
+            </div>
+
             <div className="p-6 bg-white rounded-2xl border border-blue-200 shadow-sm">
               <h3 className="text-xl font-black text-blue-900 mb-2">{softwareDifferentiation.serviceLadder.headline}</h3>
               <p className="text-sm text-slate-700 mb-4">{softwareDifferentiation.serviceLadder.coreInsight}</p>
