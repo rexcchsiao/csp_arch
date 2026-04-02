@@ -132,6 +132,28 @@ const App = () => {
       boardMeaning: '這會直接影響軟體部門能不能站上 CIO / CISO / Compliance 預算，而不是只留在硬體附送支援。'
     }
   ]
+  const boardScorecard = [
+    {
+      metric: 'Software attachment rate',
+      target: '新 AI server 案中，有多少案子同時帶進 deployment assurance、remote ops、governance 或 evidence 服務',
+      whyBoardCares: '這是最直接的「軟體是否真的在放大硬體 ASP 與毛利」指標；如果 attach rate 不上升，表示軟體價值仍停在簡報，還沒進報價。'
+    },
+    {
+      metric: 'Factory-to-operations handoff time',
+      target: '從機櫃到站 / 上電，到 baseline 建立、site acceptance 完成、交由客戶 Day-2 owner 接手所需時間',
+      whyBoardCares: '這直接決定 time-to-revenue，也最能驗證軟體部門是否把 Foxconn 的工廠與交付優勢翻成可被客戶感知的上線速度。'
+    },
+    {
+      metric: 'Remote resolution coverage',
+      target: '有多少 incident 能先遠端收斂 probable cause、判斷是否 dispatch、並交出 RCA-ready evidence，而不是一律先派人進場',
+      whyBoardCares: '這是大型 CSP 最願意續約的 Day-2 指標，會直接影響 truck-roll OPEX、first-time-fix rate 與 serviceability 信任。'
+    },
+    {
+      metric: 'Renewal-quality governance usage',
+      target: '季度 availability review、baseline refresh、air-gap content update、showback / chargeback review、audit evidence refresh 的採用率與續約率',
+      whyBoardCares: '這能驗證軟體部門賣的是不是可持續營運責任，而不是一次性交付後就消失的專案工時。'
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
@@ -1061,6 +1083,19 @@ const App = () => {
                       <p className="text-xs leading-relaxed text-indigo-900">{card.boardWhyItMatters}</p>
                     </div>
                   ))}
+                </div>
+                <div className="rounded-2xl border border-indigo-100 bg-white/90 p-4 mb-4">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-700 mb-3">Board scorecard</p>
+                  <h4 className="text-base font-black text-slate-900 mb-3">如果董事會真的批准軟體部門，季度檢查最好盯這 4 個指標，而不是只看功能做了多少</h4>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+                    {boardScorecard.map((item) => (
+                      <div key={item.metric} className="rounded-xl border border-indigo-100 bg-indigo-50/70 p-4">
+                        <p className="font-black text-slate-900 mb-2">{item.metric}</p>
+                        <p className="leading-relaxed mb-2"><span className="font-semibold text-indigo-700">怎麼看：</span>{item.target}</p>
+                        <p className="leading-relaxed"><span className="font-semibold text-slate-900">為什麼董事會該看：</span>{item.whyBoardCares}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="rounded-xl border border-indigo-100 bg-white p-4">
                   <p className="text-sm font-semibold text-indigo-900">董事會該記住的一句話：<span className="text-slate-700">{mandateBoardMessage}</span></p>
