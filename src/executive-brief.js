@@ -15,17 +15,17 @@ export const executiveBrief = {
     solution: "Foxconn software stack transforms idle GPUs into 85%+ utilization, 2-hour deployment, and 70% remote fix rate. Same hardware, 2x business output.",
     ask: "Invest NT$ 65M/year for 50-80 person software team.",
     return: "Year 3: NT$ 750M software revenue, 20-25% gross margin (vs. 10-15% hardware-only). ROI: 11.5x. Payback: 18-24 months.",
-    budgetExpansion: "A software department is not just another feature team. It is how one hardware PO turns into 4-5 renewable budget lines across Platform Engineering, Operations, Facilities, FinOps, and Compliance after delivery.",
+    budgetExpansion: "A software department is not just another feature team. It is how one hardware PO turns into 5-6 renewable budget lines across Infrastructure Delivery, Platform Engineering, Operations, Facilities, FinOps, and Compliance after delivery.",
     riskOfInaction: "By 2028, become commodity supplier at 5-8% margin, losing NT$ 1.5B+ opportunity."
   },
   
   // The Core Argument in One Sentence
-  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only, plus 4-5 renewable Day-2 budget lines beyond the original hardware deal. This is the difference between strategic partner and commodity supplier.",
+  coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only, plus 5-6 renewable Day-2 budget lines beyond the original hardware deal. This is the difference between strategic partner and commodity supplier.",
 
   // Board-level budget expansion logic — the clearest reason software deserves its own department
   budgetExpansionProof: {
-    headline: "Why the software department deserves its own P&L: one server PO can expand into five renewable budgets",
-    coreInsight: "A hardware order usually gets approved once by procurement. The software department is what keeps Foxconn inside the account after delivery — by owning the Day-2 risks that platform, operations, facilities, finance, and compliance teams each fund separately.",
+    headline: "Why the software department deserves its own P&L: one server PO can expand into six renewable budgets",
+    coreInsight: "A hardware order usually gets approved once by procurement. The software department is what keeps Foxconn inside the account after delivery — by owning the Day-2 risks that infrastructure delivery, platform, operations, facilities, finance, and compliance teams each fund separately.",
     budgetLines: [
       {
         owner: "Infrastructure Delivery / PMO",
@@ -50,6 +50,12 @@ export const executiveBrief = {
         budget: "Capacity Assurance / Power-Cooling Governance",
         whyTheyPay: "They need someone to translate rack power, cooling events, and brownfield constraints into workload-safe operating policy.",
         renewableTrigger: "Every density increase, seasonal load swing, and retrofit decision changes the facility risk profile."
+      },
+      {
+        owner: "FinOps / BU Owner / Shared GPU Platform Owner",
+        budget: "Inference Cost Control + Showback / Chargeback Governance",
+        whyTheyPay: "They need tenant-level GPU cost visibility, quota discipline, budget guardrails, and a defensible answer when token / inference spend starts to drift above plan.",
+        renewableTrigger: "Every new model rollout, tenant onboarding, budget cycle, and shared-cluster policy exception reopens the same cost-governance work."
       },
       {
         owner: "Compliance / CISO / AI Governance",
@@ -328,8 +334,8 @@ export const executiveBrief = {
   
   // Budget expansion logic - the clearest board-level proof that software deserves its own department
   renewableBudgetMap: {
-    headline: "One Hardware Deal, Five Renewable Budget Lines",
-    coreInsight: "The strongest reason to give software its own mandate is not feature count; it is budget multiplication. Hardware typically wins one CapEx line. Software turns the same deployment into 5 different Day-2 budget owners who renew for different reasons.",
+    headline: "One Hardware Deal, Six Renewable Budget Lines",
+    coreInsight: "The strongest reason to give software its own mandate is not feature count; it is budget multiplication. Hardware typically wins one CapEx line. Software turns the same deployment into 6 different Day-2 budget owners who renew for different reasons.",
     budgetLines: [
       {
         budgetOwner: "PMO / Infrastructure Delivery",
@@ -350,6 +356,11 @@ export const executiveBrief = {
         budgetOwner: "Facilities / Capacity Planning",
         whatTheyBuy: "Power-cooling governance, brownfield capacity assurance, and AI retrofit readiness",
         whyItRenews: "Rack density, seasonal load, and power-cap constraints keep changing long after the hardware PO is closed"
+      },
+      {
+        budgetOwner: "FinOps / BU Owner / Shared GPU Platform Owner",
+        whatTheyBuy: "Inference cost control, quota policy, showback / chargeback, and tenant budget guardrails",
+        whyItRenews: "Every new model, cost spike, budget cycle, and shared-cluster exception forces renewed work on AI economics and accountability"
       },
       {
         budgetOwner: "Compliance / CISO / AI Governance",
