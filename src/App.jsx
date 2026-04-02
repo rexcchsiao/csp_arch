@@ -537,15 +537,15 @@ const App = () => {
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">真正值錢的是把訊號變成責任</p>
-                    <p className="leading-relaxed">客戶最後買單的不是 API、dashboard 或 cost panel，而是誰能把訊號接成 maintenance window、rollback、dispatch readiness、RCA / evidence pack、GPU quota、showback policy 與 SLA / 預算 guardrail。</p>
+                    <p className="leading-relaxed">客戶最後買單的不是 API、dashboard 或 cost panel，而是誰能把訊號接成 maintenance window、rollback、dispatch readiness、RCA / evidence pack、factory truth / warranty evidence、GPU quota、showback policy 與 SLA / 預算 guardrail。</p>
                   </div>
                   <div className="rounded-xl border border-emerald-100 bg-white/90 p-4">
                     <p className="font-black text-slate-900 mb-1">這正是軟體部門最該佔的位置</p>
-                    <p className="leading-relaxed">當底層能力更開放，Foxconn 更應把軟體部門定位成 operating layer owner：把標準化硬體與成本訊號，翻成可治理、可問責、可續約的 Day-2 服務結果，直接對接 SRE、Platform 與 FinOps 預算。</p>
+                    <p className="leading-relaxed">當底層能力更開放，Foxconn 更應把軟體部門定位成 operating layer owner：把標準化硬體與成本訊號，翻成可治理、可問責、可續約的 Day-2 服務結果，直接對接 SRE、Platform、FinOps、Facilities 與 Compliance 預算，並把 Foxconn 的製造基線變成別人難複製的軟體服務。</p>
                   </div>
                 </div>
                 <div className="mt-4 rounded-xl border border-emerald-100 bg-white p-4 mb-4">
-                  <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">開放標準沒有削弱軟體部門，反而把價值從「設備可管理 / 成本可視化」推向「營運可問責 / 預算可治理」；沒有軟體部門，Foxconn 只能提供訊號，有軟體部門，Foxconn 才能提供結果。</span></p>
+                  <p className="text-sm font-semibold text-emerald-900">董事會該記住的一句話：<span className="text-slate-700">開放標準沒有削弱軟體部門，反而把價值從「設備可管理 / 成本可視化」推向「營運可問責 / 預算可治理 / 製造證據可續約」；沒有軟體部門，Foxconn 只能提供訊號，有軟體部門，Foxconn 才能把 factory truth 變成可收費、可續約的結果。</span></p>
                 </div>
                 <div className="rounded-2xl border border-emerald-100 bg-white/90 p-5">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-700 mb-3">What standards still do not solve</p>
