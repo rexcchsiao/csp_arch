@@ -21,6 +21,46 @@ export const executiveBrief = {
   
   // The Core Argument in One Sentence
   coreThesis: "Without software, Foxconn becomes a contract manufacturer for hyperscalers at 5-8% margin. Software creates the moat: 20-25% gross margin vs. 10-15% hardware-only, plus 4-5 renewable Day-2 budget lines beyond the original hardware deal. This is the difference between strategic partner and commodity supplier.",
+
+  // Board-level budget expansion logic — the clearest reason software deserves its own department
+  budgetExpansionProof: {
+    headline: "Why the software department deserves its own P&L: one server PO can expand into five renewable budgets",
+    coreInsight: "A hardware order usually gets approved once by procurement. The software department is what keeps Foxconn inside the account after delivery — by owning the Day-2 risks that platform, operations, facilities, finance, and compliance teams each fund separately.",
+    budgetLines: [
+      {
+        owner: "Infrastructure Delivery / PMO",
+        budget: "Commissioning & Handoff Assurance",
+        whyTheyPay: "They need hardware delivery to become production-ready service, not another 2-4 week integration project.",
+        renewableTrigger: "Every new site, rack expansion, golden-image refresh, and acceptance cycle reopens the same handoff risk."
+      },
+      {
+        owner: "Platform Engineering / SRE",
+        budget: "Lifecycle Control Tower + Service Availability Assurance",
+        whyTheyPay: "They need one owner for upgrades, rollback discipline, maintenance windows, uptime reviews, and remote recovery evidence.",
+        renewableTrigger: "Every quarter brings new driver / firmware / CUDA / Kubernetes changes and new SLA risk."
+      },
+      {
+        owner: "Operations / Field Service",
+        budget: "Remote Diagnostics & Dispatch Readiness",
+        whyTheyPay: "They want fewer truck rolls, faster RCA, better spare-part accuracy, and clearer night-shift accountability.",
+        renewableTrigger: "Each incident, new hardware generation, and runbook update creates recurring serviceability work."
+      },
+      {
+        owner: "Facilities / Capacity Planning",
+        budget: "Capacity Assurance / Power-Cooling Governance",
+        whyTheyPay: "They need someone to translate rack power, cooling events, and brownfield constraints into workload-safe operating policy.",
+        renewableTrigger: "Every density increase, seasonal load swing, and retrofit decision changes the facility risk profile."
+      },
+      {
+        owner: "Compliance / CISO / AI Governance",
+        budget: "Firmware Provenance, Audit Evidence, and Sovereign AI Governance",
+        whyTheyPay: "They need evidence that updates, models, artifacts, and operating changes remain traceable, reviewable, and audit-ready.",
+        renewableTrigger: "Every audit, version refresh, and regulated AI deployment creates ongoing evidence-maintenance work."
+      }
+    ],
+    boardTakeaway: "This is why software should not be buried inside hardware margin: it is the mechanism that converts a one-time equipment sale into multiple renewable operating budgets."
+  },
+
   // The "Killing Argument" - One-Liner for Board Members to Repeat
   killingArgument: {
     headline: "The One-Liner Every Board Member Should Remember",
